@@ -13,8 +13,9 @@
     },
     {
       "manuscript_asset": "fig05_second_stage_numerics.pdf",
-      "manuscript_asset_sha256": "fb4ef17dc5a9fd0012dcb5084f2725de43b18fcf62dcaa826a52c580fc0abc95",
+      "manuscript_asset_sha256": "57cd29d74e7dcd77b2e626272780029972a55c11649bf2879c01b5324144a57e",
       "plotting_sources": [
+        "figures/plot_final_figure_fonts.py",
         "figures/historical/build_numerics_figure.py",
         "figures/historical/build_evidence_figures.py"
       ],
@@ -23,8 +24,10 @@
         "figures/source_data/fig05_residuals.csv",
         "figures/source_data/fig05_source_data.json"
       ],
-      "status": "historical_source",
-      "scope": "335 recorded objective points and 38 recorded residual checks; supplied JSON can be passed to the historical --source-data argument with explicit environment paths."
+      "status": "portable_typography_redraw_executed",
+      "scope": "335 recorded objective points and 38 recorded residual checks; supplied JSON can be passed to the historical --source-data argument with explicit environment paths. Version 1.0.1 increases body text size; scientific PDF paths agree at 0.001 pt, with no new observations.",
+      "v1_0_0_manuscript_asset_sha256": "fb4ef17dc5a9fd0012dcb5084f2725de43b18fcf62dcaa826a52c580fc0abc95",
+      "current_export": "figures/generated/v1.0.1/fig05_second_stage_numerics.pdf"
     },
     {
       "manuscript_asset": "fig06_wrong_answer_sensitivity.png",
@@ -126,8 +129,9 @@
     },
     {
       "manuscript_asset": "fig18_mechanism_controls.pdf",
-      "manuscript_asset_sha256": "c5eec787d955797ca9135c34aa265654893c1c73e74be0e824c3b80093119ede",
+      "manuscript_asset_sha256": "ef16ccc717a61424200c217052f5e7f8c15f0accf021f6289f4158b1061fd45b",
       "plotting_sources": [
+        "figures/plot_final_figure_fonts.py",
         "figures/historical/plot_mechanisms_v5.py",
         "figures/historical/evidence_gate.py"
       ],
@@ -136,13 +140,16 @@
         "evidence/v5/mechanisms/summary.json",
         "evidence/v5/mechanisms/RESULTS_READY.json"
       ],
-      "status": "historical_source",
-      "scope": "Original guarded paired mechanism plotting source; no new fitting."
+      "status": "portable_typography_redraw_executed",
+      "scope": "Original guarded paired mechanism plotting source; no new fitting. Version 1.0.1 increases body text size; scientific PDF paths agree at 0.001 pt, with no new observations.",
+      "v1_0_0_manuscript_asset_sha256": "c5eec787d955797ca9135c34aa265654893c1c73e74be0e824c3b80093119ede",
+      "current_export": "figures/generated/v1.0.1/fig18_mechanism_controls.pdf"
     },
     {
       "manuscript_asset": "fig19_reuters_holdout.pdf",
-      "manuscript_asset_sha256": "febccac5cb6838da6563fc95aa525efc02f6d9b89beac2157eb3bd9a6d587c2b",
+      "manuscript_asset_sha256": "dad7b71ac37a37fafb02bcb4af86cee8104a295502aea71543c683f3aebcb8c6",
       "plotting_sources": [
+        "figures/plot_final_figure_fonts.py",
         "figures/historical/plot_holdout.py"
       ],
       "data_sources": [
@@ -150,13 +157,16 @@
         "evidence/v6/multilingual_holdout/per_run.csv",
         "evidence/v6/multilingual_holdout/evaluation.json"
       ],
-      "status": "historical_source",
-      "scope": "Full 4-panel source table; same-source samples, not independent-source validation."
+      "status": "portable_typography_redraw_executed",
+      "scope": "Full 4-panel source table; same-source samples, not independent-source validation. Version 1.0.1 increases body text size; scientific PDF paths agree at 0.001 pt, with no new observations.",
+      "v1_0_0_manuscript_asset_sha256": "febccac5cb6838da6563fc95aa525efc02f6d9b89beac2157eb3bd9a6d587c2b",
+      "current_export": "figures/generated/v1.0.1/fig19_reuters_holdout.pdf"
     },
     {
       "manuscript_asset": "fig20_mass_transfer.pdf",
-      "manuscript_asset_sha256": "c2c1bd56006d5bab0a44612a66db7c6b4eb3e64762c0d5f173f63ecdf756b0c1",
+      "manuscript_asset_sha256": "73402b03c89591732c83d791b48917059f5538459e8887b880f322b5c6940474",
       "plotting_sources": [
+        "figures/plot_final_figure_fonts.py",
         "provenance/original_sources/figures/report_and_plot_mass_transfer.py.txt"
       ],
       "data_sources": [
@@ -164,8 +174,10 @@
         "evidence/v6/selection_mass_diagnostic/figure_source.csv",
         "evidence/v6/selection_mass_diagnostic/paired_change_summary.csv"
       ],
-      "status": "historical_source",
-      "scope": "Original mass-transfer analysis/plotting source retained as a record; exact intervention and eligible paired differences preserved."
+      "status": "portable_typography_redraw_executed",
+      "scope": "Original mass-transfer analysis/plotting source retained as a record; exact intervention and eligible paired differences preserved. Version 1.0.1 increases body text size; scientific PDF paths agree at 0.001 pt, with no new observations.",
+      "v1_0_0_manuscript_asset_sha256": "c2c1bd56006d5bab0a44612a66db7c6b4eb3e64762c0d5f173f63ecdf756b0c1",
+      "current_export": "figures/generated/v1.0.1/fig20_mass_transfer.pdf"
     },
     {
       "manuscript_asset": "fig21_allocation_new10_acc.pdf",

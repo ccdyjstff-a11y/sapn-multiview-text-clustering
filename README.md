@@ -8,7 +8,7 @@ This directory provides directly inspectable Python sources, result tables, pred
 |---|---|
 | `common/` | Frozen common-candidate solver used by the main ten-seed allocation study. All queried endpoints can compare simplex vertices, including eta=0 view blocks. |
 | `benchmark/` | Gated historical SAPN benchmark runner, CMVNMF/MVCHSS paper-based Python implementations, FSSMSC acquisition/adaptation bridge, and source-data preparation. External author code is obtained separately. |
-| `baselines/` | Own PCBG and SSA training adapters, patch generators and control sources, with original hashes and explicit historical-path dependencies. These are not certified portable MATLAB training entry points. |
+| `baselines/` | Historical adapters plus new portable PCBG condition and SSA single-fit entries in `baselines/portable/`. Exact author code remains external; validation scope is documented for each entry. |
 | `tools/run_tie_sensitivity.py` | Posthoc three-rule tie sensitivity with identity-checked reuse, missing-final training and global-seal scoring; executed validation is planning/relocation/dry-run/stored-state replay. |
 | `tools/run_common_study.py` | Full five-corpus, ten-seed orchestration and an explicitly separate two-corpus extension preset, with a study seal before scoring. |
 | `primary_predictions/` | All 210 original primary predictions, mapping and independent external-label rescoring, covering five methods and seven corpora at two budgets. PCBG and SSA-SNMF extensions are separate. |
@@ -158,7 +158,7 @@ This checks paid-query/CV BER, selection and scheduler evidence. It does not rer
 
 ## Redraw the scientific figures
 
-See [the complete figure-to-data/source map](figures/README.md). The analytical reference-risk plot (figure 13), main allocation plot (figure 21) and two-corpus extension plot (figure 22) have portable entries and executed numeric/export checks. Historical generators for the remaining figures are preserved with source identities and their original dependencies; their presence is not a new portability certification. No raw data or training is needed for these three redraws.
+See [the complete figure-to-data/source map](figures/README.md). The analytical reference-risk plot (figure 13), main allocation plot (figure 21) and two-corpus extension plot (figure 22) have portable entries and executed numeric/export checks. Version 1.0.1 also supplies the four typography redraws documented below. Historical generators for the other figures are preserved with source identities and their original dependencies; their presence is not a new portability certification. No raw data or training is needed for these three redraws.
 
 ## Release status
 
@@ -166,4 +166,14 @@ The archive used for extraction has SHA256 `3e0e1c75574678d0c0a2026afe98a7b9ab58
 
 ## Repository and version
 
-Browse the code and evidence at https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering. The release tag is `v1.0.0`; use its full commit SHA to identify the exact version. See [CITATION.md](CITATION.md) for citation boundaries and [RIGHTS.md](RIGHTS.md) for rights status.
+Browse the code and evidence at https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering. The release tag is `v1.0.1`; use its full commit SHA to identify the exact version. See [CITATION.md](CITATION.md) for citation boundaries and [RIGHTS.md](RIGHTS.md) for rights status.
+
+## Version 1.0.1 portability and typography update
+
+The fitted model, selection rules and historical experimental results are unchanged. This patch adds:
+
+- [Portable native PCBG](baselines/portable/pcbg/README.md), covering preparation, query-only CV selection, a selected final fit, sealing and external-label scoring. One real 3Sources condition, seed 23 and Q=160, reproduces all seven historical fit outputs and its selected coefficient and metrics.
+- [Portable SSA-SNMF](baselines/portable/ssa/README.md), covering identity-checked reconstruction of the original private runtime, label-free MAT preparation and individual MATLAB fits. The exact executed scope is in its VALIDATION.json; this is not a rerun of the full 18-configuration benchmark.
+- [Portable typography redraws](figures/qa/final_typography/README.md) for four supplementary figures. All 849 scientific PDF paths retain their geometry and style at 0.001 pt precision. Changes improve body-text legibility at manuscript width without changing data or results.
+
+All original failures and incomplete comparison cells remain. New launchers use explicit paths and bounded execution; they do not reproduce the historical memory-suspension scheduler or provide new independent performance observations. Obtain external author code and raw corpora under their original terms. No additional software license is granted by this patch. The immutable v1.0.0 tag remains available for the preceding release.

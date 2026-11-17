@@ -35,3 +35,7 @@ These scripts preserve their historical research-directory assumptions and proto
 ## SSA-SNMF historical grouped adapter
 
 The own-source grouped training adapter and patch-generation closure are included and documented in `ssa_historical/README.md`. Its manifest binds 33 unchanged own-source files, including the minimal and formal patch generators, grouped controller and own MATLAB workers. Historical-path and runtime-input limitations are explicit. Generated author derivatives are excluded. The directly runnable compact evidence replay remains `reproduction_ssa/source/replay_ssa_compact.py` and has an executed verification record under `validation/`. It checks paid-query BER, selections, scheduler and retained outputs, not full-factor qualification or evaluation-set metrics.
+
+## Portable entries added in v1.0.1
+
+The historical folders above remain unchanged as provenance. Their directory assumptions no longer need to be reconstructed by hand to prepare native PCBG conditions or individual SSA fits. Use [portable/pcbg/README.md](portable/pcbg/README.md) and [portable/ssa/README.md](portable/ssa/README.md). Each entry identifies exact external sources, separates paid relation inputs from evaluation labels, refuses accidental overwrite, and records executed validation. PCBG has an end-to-end single-condition check; SSA has runtime/input equivalence and declared single-fit checks. Neither changes historical benchmark results or claims all-corpus retraining.

@@ -1,0 +1,1249 @@
+{
+  "status": "PASS",
+  "case": "3Sources_s23_Q160_c9_final",
+  "config": {
+    "beta": 0.2,
+    "lam": 0.3,
+    "kap": 0.8
+  },
+  "n": 169,
+  "known_k": 6,
+  "historical_mat_sha256": "c40d2608e5d56441c2a2130b405aa8a4d7116fbf1f411d7b0cc080d138f3c830",
+  "new_mat_sha256": "1cc7755d56968a3888d338eacaa3c1651b9230c74bafe71ee6e551ffbde86f51",
+  "new_worker_summary_sha256": "b19a3bffb0a325485d44783c58cd3ddaa481d772ddc68dbc04aeb20042a7e398",
+  "actual_iterations": 500,
+  "native_fit_seconds": 3.9249577,
+  "worker_status": "RETURNED_FINITE",
+  "benchmark_contract_met": true,
+  "exact_compared_leaves": 230,
+  "mismatches": [],
+  "checks": [
+    {
+      "field": "V_star",
+      "shape": [
+        169,
+        6
+      ],
+      "equal": true
+    },
+    {
+      "field": "pred",
+      "shape": [
+        169
+      ],
+      "equal": true
+    },
+    {
+      "field": "label",
+      "shape": [
+        169
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/profile",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/author_commit",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/n",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/views",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/known_k",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/seed",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/ML_count",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/CL_count",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/kap",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/beta",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/lam",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/knn",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/alpha",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/gam",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/et",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/maxitr",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/parameters/stop_abs_delta",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/actual_iterations",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/stop_reason",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/objective",
+      "shape": [
+        500
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/objective_delta",
+      "shape": [
+        500
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/first_delta_is_infinite_by_author_initialization",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/graph_before_clear_NaN_Inf",
+      "shape": [
+        3,
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/before_clear_S_Stilde_V_W_NaN_Inf",
+      "shape": [
+        500,
+        3,
+        4,
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/before_clear_Theta_NaN_Inf",
+      "shape": [
+        500,
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/residual_columns",
+      "shape": [
+        4
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/residuals",
+      "shape": [
+        500,
+        4
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/initial_CL_nonzeros",
+      "shape": [
+        3
+      ],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/final_CL_max_abs",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/actual_clusters",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/finite_nonnegative_state",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/objective_all_finite",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/full_class_truth_used",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/clustering_scores_computed",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/operational_contract",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "diagnostics/operational_contract_note",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/all_finite",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/all_shapes_valid",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/nonnegative_where_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/all_membership_rows_positive",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/minimum_consensus_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/minimum_consensus_entry",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/S_tilde/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/V/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/W/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/M/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/D_M/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/0/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/1/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/L_M/2/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Theta/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/shape",
+      "shape": [
+        2
+      ],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/finite_real",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/expected_shape",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/minimum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/maximum",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/nonnegative_required",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/nonnegative",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/matrices/Z/minimum_row_mass",
+      "shape": [],
+      "equal": true
+    },
+    {
+      "field": "state_checks/prediction_matches_state",
+      "shape": [],
+      "equal": true
+    }
+  ],
+  "scope": "A real fixed historical configuration refit from fresh-source prepared feature arrays and public paid queries. All retained membership/partition/iteration diagnostics/terminal checks compared. No new statistical observation or benchmark and no new full-grid selection.",
+  "executed_wrapper_sha256": "da068745062fd72485aeff7470ec58889d034d36d9ef1f68af3c16d3270d458f"
+}

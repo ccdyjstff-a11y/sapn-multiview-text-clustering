@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "scope": "One real 3Sources condition, seed23 Q160: six CV fits plus selected final, query-only selection, seal, external-label scoring; historical arrays and scores reproduced. No paper results changed.",
+  "input_qa": {
+    "status": "PASS",
+    "source_author_files_verified": 28,
+    "public_archive_preparation": "submission_completion_20261117/main_instance_reproduction/prepared; original 2026-11-17 download, not a fresh download in this subtask",
+    "all_mat_payloads_equal_to_historical": [
+      {
+        "case": "3Sources_s23_Q160_c0_f0",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c0_f1",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c0_final",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c1_f0",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c1_f1",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c1_final",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c2_f0",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c2_f1",
+        "all_fields_equal": true
+      },
+      {
+        "case": "3Sources_s23_Q160_c2_final",
+        "all_fields_equal": true
+      }
+    ],
+    "traversal_rejected": true,
+    "training_labels_read": false
+  },
+  "historical_protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+  "author_commit": "8e1f97e21848dc8d9c9440750ff7a1526142d2ab",
+  "portable_source_sha256": "8b6ef11fecd8292187a7af7e209f6b09cc153e80c32437b29159b2cd0060fd72",
+  "identity_sha256": "401774abc217d5e86703508dd694b103585072e2492c99175616de88f6c768f8",
+  "worker_sha256": "46083587398223803bcfc9519eb27742907b52f4022c169509c5b067dcb55fd1",
+  "bridge_sha256": "1a373677a9a3e03a016c99af3b62bc953b97b39c35d9bcd3d0ba2afeb1e817f8",
+  "matlab_fits": [
+    {
+      "case": "3Sources_s23_Q160_c0_f0",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c0_f1",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c1_f0",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c1_f1",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c1_final",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c2_f0",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    },
+    {
+      "case": "3Sources_s23_Q160_c2_f1",
+      "fields_compared": 16,
+      "all_native_arrays_exact": true,
+      "eligible": true,
+      "matlab_version": "25.1.0.2973910 (R2025a) Update 1"
+    }
+  ],
+  "selected_candidate": 1,
+  "selected_anchor_rate": 0.1,
+  "cv_BER": [
+    [
+      0.38725490196078427,
+      0.2638888888888889
+    ],
+    [
+      0.5098039215686274,
+      0.12698412698412698
+    ],
+    [
+      0.5196078431372549,
+      0.16666666666666666
+    ]
+  ],
+  "scores": {
+    "ACC": 0.4322033898305085,
+    "NMI": 0.28687157506623195,
+    "ARI": 0.1535158852280329
+  },
+  "plan_sha256": "48058498b40c17f91f4c0444f2522809b6eb3f66241fab2e01c3ea377f4110af",
+  "seal_sha256": "eb4fe5503f7973421574e96d34658e629d413e9344314792a7339f8adcd2bce2",
+  "score_receipt_sha256": "0591e57b74662a7a7615e81a1405f003f3ae99c4631bafa18d8d361a930fc0e3",
+  "fresh_download_claimed": false,
+  "public_data_download_date": "2026-11-17T09:22:42.952969Z",
+  "limits": "No complete seven-corpus rerun; original suspend/resume/global scheduling not replayed; timings are new wall-clock receipts; old source/input hashes retained; no new scientific outcome claimed."
+}

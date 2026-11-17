@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "scope": "Preparation, typed input and refusal checks; no MATLAB fit or class scoring",
+  "checks": [
+    {
+      "name": "private_preparation",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "refuse_public_runtime",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "valid_double_input",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "historical_mat_numeric_types",
+      "passed": true
+    },
+    {
+      "name": "refuse_class_packet",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_public_input",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_input_overwrite",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_zero_row",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "plan_without_matlab",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "refuse_public_fit",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_invalid_parameter",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_invalid_time_limit",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "refuse_runtime_mutation",
+      "exit_code": 1,
+      "passed": true
+    }
+  ],
+  "script_sha256": "da068745062fd72485aeff7470ec58889d034d36d9ef1f68af3c16d3270d458f"
+}

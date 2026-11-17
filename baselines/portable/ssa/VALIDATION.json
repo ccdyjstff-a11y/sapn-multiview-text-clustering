@@ -1,0 +1,69 @@
+{
+  "status": "PASS_WITH_STATED_SCOPE",
+  "date": "2026-11-17",
+  "source_sha256": "822ae95ca9e10bd56de8a13f173c09bfd8b677722686b3a7b676d450bc7db21d",
+  "test_source_sha256": "46b68c967e02ee6f348f28d243958840a891a13b43091bf11da265008a2542fb",
+  "prepare": {
+    "runtime_files_exact_to_historical": 9,
+    "report": "PREPARATION_IDENTITY_QA.json"
+  },
+  "inputs": {
+    "fresh_public_prepared_3Sources_plus_public_paid_stream": true,
+    "conditions": "seed23 Q160 folds0/1/final",
+    "exact_fields": [
+      "X",
+      "c",
+      "ML",
+      "CL",
+      "seed"
+    ],
+    "numeric_types_match": true,
+    "report": "INPUT_EQUIVALENCE_QA.json"
+  },
+  "synthetic_fit": {
+    "n": 24,
+    "views": 3,
+    "known_k": 3,
+    "status": "RETURNED_FINITE",
+    "benchmark_contract_met": true,
+    "iterations": 500,
+    "native_fit_seconds": 0.3445682
+  },
+  "real_fixed_candidate_fit": {
+    "case": "3Sources_s23_Q160_c9_final",
+    "config": {
+      "beta": 0.2,
+      "lam": 0.3,
+      "kap": 0.8
+    },
+    "n": 169,
+    "status": "RETURNED_FINITE",
+    "benchmark_contract_met": true,
+    "iterations": 500,
+    "compared_leaves_exact": 230,
+    "report": "REAL_FIT_REPLAY_QA.json",
+    "executed_wrapper_sha256": "da068745062fd72485aeff7470ec58889d034d36d9ef1f68af3c16d3270d458f"
+  },
+  "post_fit_wrapper_hardening": {
+    "scope": "Runtime manifest entry closure, output containment at execute, post-fit manifest/launcher bindings, Windows executable-header validation. No generated numerical code or algorithm changed. Optimizer not repeated after this wrapper-only hardening.",
+    "python_refusal_checks": 15,
+    "python_smoke_source_sha256": "87eb7206a7e25f1522847213cc9648c544ec47d29b1b3488e357b1f122f46b15",
+    "current_executable_header_refusal_passed": true,
+    "current_source_sha256": "822ae95ca9e10bd56de8a13f173c09bfd8b677722686b3a7b676d450bc7db21d",
+    "timeout_branch": "Added bounded child-process wait and task PID/creation-time cleanup; reviewed, not deliberately exercised against MATLAB. This does not certify OS-level process-creation latency."
+  },
+  "initial_attempts_excluded": [
+    "Sandbox MATLAB startup failed before fitting",
+    "Initial helper encoded scalar integer fields; author MATLAB rejected mixed classes. Corrected helper uses exact historical doubles and passed real-input comparison",
+    "Malformed-executable test stalled during OS process creation; only its task Python process was terminated after checking it had no children. Added preflight header rejection and verified explicit failure receipt"
+  ],
+  "not_claimed": [
+    "Full new 18-candidate SSA selection or seven-corpus rerun",
+    "New independent performance data",
+    "Full-model convergence or full dense-state archive",
+    "Redistribution permission for author code"
+  ],
+  "full_class_labels_loaded": false,
+  "ACC_NMI_ARI_computed": false,
+  "historical_results_changed": false
+}

@@ -48,3 +48,13 @@ Paths in the table are relative to the release root. Figure 00 is a programmatic
 For the portable derivatives, only input/output paths, imports and QA integration were adjusted; the original numerical formulas and drawing coordinates are retained. The figure 21 drawing-function AST and figure 13 analytical-function AST were checked against their originals. Figure 22 reuses the post-seal script drawing block and reads its saved CSVs instead of rerunning report generation. See `QA_NOTES.md`, `RENDER_RELOCATION_QA.json`, `qa/EXPORT_BOUNDS.json` and `GENERATED_ARTIFACTS.json` for executed checks and their limits.
 
 Generated SVG/PDF/PNG files are research-owned figures and QA overlays; the packaging allowlist binds each approved artifact by SHA256. No blanket permission for unrelated PDF or image content is used.
+
+## Typography update in v1.0.1
+
+Four additional assets (05, 18, 19 and 20) now have an executed portable redraw:
+
+```text
+python -B -I figures/plot_final_figure_fonts.py --release-root . --output ../sapn-font-redraw
+```
+
+This command uses existing public numeric sources and the local alignment checker. The new exports are in `figures/generated/v1.0.1/`; `FIGURE_MAP.json` binds their current and preceding manuscript identities. The historical generators listed above remain untouched. See `figures/qa/final_typography/` for exact scientific-path preservation, embedded-font and collision checks. Main plot text in the four revised figures is at least 8.16 pt at 166 mm width; smaller mathematical scripts are reported separately. This is a presentation update, not a new experiment.

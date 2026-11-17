@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "figure": "fig05_second_stage_numerics.pdf",
+      "old_sha256": "fb4ef17dc5a9fd0012dcb5084f2725de43b18fcf62dcaa826a52c580fc0abc95",
+      "new_sha256": "57cd29d74e7dcd77b2e626272780029972a55c11649bf2879c01b5324144a57e",
+      "scientific_paths_old": 44,
+      "scientific_paths_new": 44,
+      "path_precision_pt": 0.001,
+      "scientific_path_geometry_and_style_identical": true,
+      "paths_missing": 0,
+      "paths_added": 0,
+      "spans_below_8pt_at_166mm": [
+        {
+          "text": "t",
+          "size_pt": 5.8752811243196685
+        },
+        {
+          "text": "0",
+          "size_pt": 5.8752811243196685
+        },
+        {
+          "text": "−3",
+          "size_pt": 5.8752811243196685
+        },
+        {
+          "text": "−2",
+          "size_pt": 5.8752811243196685
+        },
+        {
+          "text": "−3",
+          "size_pt": 5.8752811243196685
+        }
+      ],
+      "fonts_embedded": true,
+      "text_returncode": 0,
+      "collision_returncode": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      }
+    },
+    {
+      "figure": "fig18_mechanism_controls.pdf",
+      "old_sha256": "c5eec787d955797ca9135c34aa265654893c1c73e74be0e824c3b80093119ede",
+      "new_sha256": "ef16ccc717a61424200c217052f5e7f8c15f0accf021f6289f4158b1061fd45b",
+      "scientific_paths_old": 140,
+      "scientific_paths_new": 140,
+      "path_precision_pt": 0.001,
+      "scientific_path_geometry_and_style_identical": true,
+      "paths_missing": 0,
+      "paths_added": 0,
+      "spans_below_8pt_at_166mm": [],
+      "fonts_embedded": true,
+      "text_returncode": 0,
+      "collision_returncode": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      }
+    },
+    {
+      "figure": "fig19_reuters_holdout.pdf",
+      "old_sha256": "febccac5cb6838da6563fc95aa525efc02f6d9b89beac2157eb3bd9a6d587c2b",
+      "new_sha256": "dad7b71ac37a37fafb02bcb4af86cee8104a295502aea71543c683f3aebcb8c6",
+      "scientific_paths_old": 525,
+      "scientific_paths_new": 525,
+      "path_precision_pt": 0.001,
+      "scientific_path_geometry_and_style_identical": true,
+      "paths_missing": 0,
+      "paths_added": 0,
+      "spans_below_8pt_at_166mm": [],
+      "fonts_embedded": true,
+      "text_returncode": 0,
+      "collision_returncode": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      }
+    },
+    {
+      "figure": "fig20_mass_transfer.pdf",
+      "old_sha256": "c2c1bd56006d5bab0a44612a66db7c6b4eb3e64762c0d5f173f63ecdf756b0c1",
+      "new_sha256": "73402b03c89591732c83d791b48917059f5538459e8887b880f322b5c6940474",
+      "scientific_paths_old": 140,
+      "scientific_paths_new": 140,
+      "path_precision_pt": 0.001,
+      "scientific_path_geometry_and_style_identical": true,
+      "paths_missing": 0,
+      "paths_added": 0,
+      "spans_below_8pt_at_166mm": [],
+      "fonts_embedded": true,
+      "text_returncode": 0,
+      "collision_returncode": 0,
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      }
+    }
+  ],
+  "limitation": "PDF paths compared at 0.001 pt. This checks existing rendered scientific marks directly; it does not infer fresh experimental evidence.",
+  "visual_review": {
+    "all_four_final_renders_opened": true,
+    "panels_inspected": 12,
+    "fonts_at_166mm": "Body text >=8.16 pt; 5.88 pt mathematical scripts in numerical plot only",
+    "clipping_or_overlap": "None after re-spacing holdout legend and mechanism titles",
+    "data_paths_verified": 849
+  },
+  "source_style_audit": "20 pass, 0 fail; one warning for no TIFF, accepted because vector PDF is authoritative and PNG is a preview"
+}

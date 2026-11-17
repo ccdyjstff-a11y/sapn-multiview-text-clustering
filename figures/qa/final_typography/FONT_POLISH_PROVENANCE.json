@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "script_sha256": "faf4c8fa2201372668d19f08505aaff79e06ee8efa0b6981dc0a4da54d9aea52",
+  "purpose": "Typography-only revision of four unchanged supplementary quantitative figures",
+  "backend": "Python Matplotlib",
+  "matplotlib": "3.10.9",
+  "numpy": "2.2.6",
+  "data_sources": [
+    {
+      "path": "figures/source_data/fig05_source_data.json",
+      "sha256": "80c1e6f77424e6cc172a0c08c2fa7157e6011feb568abfab95ad21a8d460b479"
+    },
+    {
+      "path": "evidence/v5/mechanisms/per_run.csv",
+      "sha256": "9557ede4529449992860a935211be301e31bbb97dacde16edff5b901ad4fdeae"
+    },
+    {
+      "path": "evidence/v6/multilingual_holdout/figures/reuters_holdout_source_data.csv",
+      "sha256": "a01e6cc17e75aad0c7502c114253780a0e1adfce5ba328fac1e86b78538a8c3f"
+    },
+    {
+      "path": "evidence/v6/selection_mass_diagnostic/figure_delta_source.csv",
+      "sha256": "6afffcbe1d89cc5a66bda3367582620547a6299c7dfc4dd2453df808ad662de1"
+    }
+  ],
+  "no_fitting_or_model_selection": true,
+  "exclusions": 0,
+  "uncertainty": "Original sample SD; original per-run trajectories where applicable",
+  "original_axes_dimensions_and_data_ranges_retained": true,
+  "body_text_at_166mm": "At least 8 pt; mathematical scripts can be smaller",
+  "outputs": [
+    {
+      "path": "fig05_second_stage_numerics.pdf",
+      "sha256": "57cd29d74e7dcd77b2e626272780029972a55c11649bf2879c01b5324144a57e"
+    },
+    {
+      "path": "fig18_mechanism_controls.pdf",
+      "sha256": "ef16ccc717a61424200c217052f5e7f8c15f0accf021f6289f4158b1061fd45b"
+    },
+    {
+      "path": "fig19_reuters_holdout.pdf",
+      "sha256": "dad7b71ac37a37fafb02bcb4af86cee8104a295502aea71543c683f3aebcb8c6"
+    },
+    {
+      "path": "fig20_mass_transfer.pdf",
+      "sha256": "73402b03c89591732c83d791b48917059f5538459e8887b880f322b5c6940474"
+    }
+  ],
+  "qa": "FONT_POLISH_QA.json",
+  "visual_review": "All four final plots inspected panel by panel; actual PDF scientific paths verified against original figures"
+}

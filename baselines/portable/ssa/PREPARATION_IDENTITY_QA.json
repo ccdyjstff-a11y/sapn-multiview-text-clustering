@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scope": "9 generated runtime/worker files are byte-identical to actual historical formal code; no fitting implied",
+  "comparisons": [
+    {
+      "file": "ssa_formal_worker.m",
+      "sha256": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+      "original_sha256": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\Cost_function.m",
+      "sha256": "9f737332e11b820134c04cff84d41f44ff65c3159629436ab3a4fac0a6b31019",
+      "original_sha256": "9f737332e11b820134c04cff84d41f44ff65c3159629436ab3a4fac0a6b31019",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\Create_KNNgraph.m",
+      "sha256": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+      "original_sha256": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\normalization.m",
+      "sha256": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641",
+      "original_sha256": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\NormalizationK.m",
+      "sha256": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+      "original_sha256": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\ssa_formal_profile.m",
+      "sha256": "61eb6b27666dbed835f5aa7efcbcb603d9bc571cc392ebfe01169299a319a908",
+      "original_sha256": "61eb6b27666dbed835f5aa7efcbcb603d9bc571cc392ebfe01169299a319a908",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\Update_Teta.m",
+      "sha256": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+      "original_sha256": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\Update_V_v.m",
+      "sha256": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+      "original_sha256": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+      "byte_identical": true
+    },
+    {
+      "file": "private_generated\\Update_W_v.m",
+      "sha256": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34",
+      "original_sha256": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34",
+      "byte_identical": true
+    }
+  ]
+}

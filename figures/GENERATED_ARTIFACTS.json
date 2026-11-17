@@ -90,6 +90,78 @@
       "sha256": "f9abbf52b86d812cdc8d804a36b7eb74b1351e0f6c1f583e2a7c4e8e3d32fbb9",
       "bytes": 105679,
       "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig05_second_stage_numerics.pdf",
+      "sha256": "57cd29d74e7dcd77b2e626272780029972a55c11649bf2879c01b5324144a57e",
+      "bytes": 22382,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig05_second_stage_numerics.png",
+      "sha256": "621df00283bc1b39496a76c6197acbfae3b747af7486e2c76c6df777778cce3e",
+      "bytes": 400145,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig05_second_stage_numerics.svg",
+      "sha256": "ee556096cfba68fbf7bc30232cafda3de102f0a56744bf0db848a090217ecf53",
+      "bytes": 42757,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig18_mechanism_controls.pdf",
+      "sha256": "ef16ccc717a61424200c217052f5e7f8c15f0accf021f6289f4158b1061fd45b",
+      "bytes": 48743,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig18_mechanism_controls.png",
+      "sha256": "d1aab8af63d3ea6af9e517365b19f39012c578b7eb1da892ed5d122a289afd28",
+      "bytes": 341719,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig18_mechanism_controls.svg",
+      "sha256": "93de01b62d078ddc4318a809459361cee6dc7bc411a071c31011572b67428c97",
+      "bytes": 55124,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig19_reuters_holdout.pdf",
+      "sha256": "dad7b71ac37a37fafb02bcb4af86cee8104a295502aea71543c683f3aebcb8c6",
+      "bytes": 64639,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig19_reuters_holdout.png",
+      "sha256": "88d05e9ab72dacbd5cc5050247a27c0ba128b942bfb38d34ca4a5ae476847860",
+      "bytes": 492197,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig19_reuters_holdout.svg",
+      "sha256": "e5ee8e498616b42b84cd092dfeb8a5d1bdb1752d69a312ffe1fe451afbbfc79e",
+      "bytes": 157792,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig20_mass_transfer.pdf",
+      "sha256": "73402b03c89591732c83d791b48917059f5538459e8887b880f322b5c6940474",
+      "bytes": 47699,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig20_mass_transfer.png",
+      "sha256": "016a322dc261e195de57ecce1da8c9cb4e84949192a5eb37eeac6057b785cfeb",
+      "bytes": 336590,
+      "role": "Research-owned typography-only redraw from existing public data"
+    },
+    {
+      "file": "figures/generated/v1.0.1/fig20_mass_transfer.svg",
+      "sha256": "e67c1f77c645c223ca8036dc85e946f0397e5680ecf4dba5d0aae854abab6190",
+      "bytes": 50208,
+      "role": "Research-owned typography-only redraw from existing public data"
     }
   ]
 }

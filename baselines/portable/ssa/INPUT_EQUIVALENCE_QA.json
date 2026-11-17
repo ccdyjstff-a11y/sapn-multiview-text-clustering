@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "3Sources seed23 Q160. Rebuilt from freshly public-source prepared views and publicly exported paid stream, not copied historical MAT arrays. No fitting or labels read.",
+  "cases": [
+    {
+      "fold": "0",
+      "field_equal": {
+        "X": true,
+        "c": true,
+        "ML": true,
+        "CL": true,
+        "seed": true
+      },
+      "all_equal": true,
+      "training_pairs": 43
+    },
+    {
+      "fold": "1",
+      "field_equal": {
+        "X": true,
+        "c": true,
+        "ML": true,
+        "CL": true,
+        "seed": true
+      },
+      "all_equal": true,
+      "training_pairs": 43
+    },
+    {
+      "fold": "final",
+      "field_equal": {
+        "X": true,
+        "c": true,
+        "ML": true,
+        "CL": true,
+        "seed": true
+      },
+      "all_equal": true,
+      "training_pairs": 160
+    }
+  ]
+}

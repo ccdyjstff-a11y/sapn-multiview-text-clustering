@@ -12,4 +12,4 @@ The original local code-release archive has SHA256 `685523823e1af72b452833f2d738
 
 Repository: https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering
 
-Release tag: `v1.0.0`. For exact reproducibility, record the full commit SHA shown by GitHub for this tag. No DOI has been assigned.
+Release tag: `v1.0.1`. For exact reproducibility, record the full commit SHA shown by GitHub for this tag. No DOI has been assigned.

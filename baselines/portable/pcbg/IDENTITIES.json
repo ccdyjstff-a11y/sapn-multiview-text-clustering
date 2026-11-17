@@ -1,0 +1,234 @@
+{
+  "author_repository": "https://github.com/YWJ-Best/PCBG",
+  "author_commit": "8e1f97e21848dc8d9c9440750ff7a1526142d2ab",
+  "author_files": [
+    {
+      "path": "ClusteringMeasureTao/ClusteringMeasureTao.m",
+      "sha256": "f21ba89192d01fb3188b35a24676dbcc013472690a4fba87407d6be1edbd6c99",
+      "bytes": 1747
+    },
+    {
+      "path": "ClusteringMeasureTao/accuracy.m",
+      "sha256": "8c1d8b662faeb56363441df2989454bab328ad774b2a0e9b8ea0665c0b8d81bd",
+      "bytes": 851
+    },
+    {
+      "path": "ClusteringMeasureTao/hungarian.m",
+      "sha256": "6cb9b4a7ba2d669568830f7c23a15eb85623f25619eb737fd3e6a807554d69dd",
+      "bytes": 9229
+    },
+    {
+      "path": "ClusteringMeasureTao/macroFbeta.m",
+      "sha256": "f38fc867c14e46f1109f50f58869d1377f9f3efa2d7a360222b95a1ac702ae38",
+      "bytes": 589
+    },
+    {
+      "path": "ClusteringMeasureTao/micro_macro_PR.m",
+      "sha256": "e8b1639ba4030d2bfcfcb3b4f0e423b25f98a48868eba26ad98189919c2d50b9",
+      "bytes": 1048
+    },
+    {
+      "path": "ClusteringMeasureTao/nmi.m",
+      "sha256": "5297d3736dc8a504ecbd1055e38e3e2e5774256766cc742f3a047440d2597abe",
+      "bytes": 1893
+    },
+    {
+      "path": "ClusteringMeasureTao/purity.m",
+      "sha256": "eccaf39ca1eb6adbf450568079575bf9ae6058331b58bb445919d2a329ec5031",
+      "bytes": 904
+    },
+    {
+      "path": "Label_propagation_edit.m",
+      "sha256": "51a51340127f8228231d47046b3b792b0c8a73f981476107a5f09dd68a476ace",
+      "bytes": 907
+    },
+    {
+      "path": "Optimal_integration4.m",
+      "sha256": "f96f09fc51f863a3b8af9a3a03628866e5842c54d1979adf586bfabb84a442fa",
+      "bytes": 4650
+    },
+    {
+      "path": "PCBG.m",
+      "sha256": "e7c4c9847b43807ee86099f20b8ac140f652b7d5bbc48370766f5753ef791358",
+      "bytes": 6040
+    },
+    {
+      "path": "README.md",
+      "sha256": "612d08f2474dcf156d65386bafc30658f511c8a382c566260e69bb40258718ee",
+      "bytes": 2954
+    },
+    {
+      "path": "SolveY_bestYU.m",
+      "sha256": "54987872d7b7c7c6cb684eb4b30d7c1da6c3937b241623ccdeb7191cbd43d44a",
+      "bytes": 1375
+    },
+    {
+      "path": "Solve_yk.m",
+      "sha256": "cf5ae9d5d6cb251948476e45a0f23cf19c14fffda8747a293f4e7393e5180552",
+      "bytes": 681
+    },
+    {
+      "path": "funs/EProjSimplex_new.m",
+      "sha256": "7aaf8b6a727b702a0e80d95214e3fbed9990b8bc414840c16b36badf3a43bf5f",
+      "bytes": 633
+    },
+    {
+      "path": "funs/L2_distance_1.m",
+      "sha256": "ccc022f09624f6b6fdc9efdcd1b46b76b4033394a0035e487dea1e2db768fc91",
+      "bytes": 514
+    },
+    {
+      "path": "funs/SimplexQP_acc.m",
+      "sha256": "b35c11a61be8a242e603663a5b3dc1e9ef1ffe95236db608e4411fd650633943",
+      "bytes": 1481
+    },
+    {
+      "path": "funs/SpectralClustering.m",
+      "sha256": "607001bb515c0cc83230c4a8a83d27b3fb3a5daa3b40f02c9d5432d45ef35146",
+      "bytes": 1283
+    },
+    {
+      "path": "funs/VDA.m",
+      "sha256": "51de07b33eb825f088279f6870630af1d6b24f6e12ce5498df0cdd3d833d111b",
+      "bytes": 528
+    },
+    {
+      "path": "funs/eig1.m",
+      "sha256": "97a5ffe5c3c59430f969fc853d37605747934d0aa7e18d7e44acde30fcb69b35",
+      "bytes": 539
+    },
+    {
+      "path": "funs/graphgen_anchor.m",
+      "sha256": "27eba09873bc5985278716aff9aac65b1d5d63f719d3387b23ca4af32b1cb74e",
+      "bytes": 1214
+    },
+    {
+      "path": "funs/litekmeans.m",
+      "sha256": "6271749c8366188109038ef6a7c806a060b153a3dc3c74f707924a8ab71711c5",
+      "bytes": 16579
+    },
+    {
+      "path": "funsYU/BipartiteGraph_YU.m",
+      "sha256": "9d863330b1bdde11b1bd7f56cb5e4ccfa59f80e6ce118b4d1e7ade39a2828386",
+      "bytes": 2847
+    },
+    {
+      "path": "funsYU/Generation_of_Paired_Constraints.m",
+      "sha256": "b90ecf0aec1f07bd5ab291425add7adfe00ac3e6340138d63d3ad87ec8a7d5e1",
+      "bytes": 2371
+    },
+    {
+      "path": "funsYU/Generation_of_Paired_Constraints_new.m",
+      "sha256": "34dd5934a1c219a321ee63771f03ce5443fa52f6b6f817a4ea34fd9e1b8d2393",
+      "bytes": 1571
+    },
+    {
+      "path": "funsYU/Organize_PCsYU.m",
+      "sha256": "0c90d6a64e278502dc93f24b3ac28616ec345bf9c6652c421908a002dfadb015",
+      "bytes": 4696
+    },
+    {
+      "path": "funsYU/Paired_constraint_validation.m",
+      "sha256": "e43bd24346de4113659aaa24a893a2c5c06bd7164668c81256b2a136d74cf86b",
+      "bytes": 898
+    },
+    {
+      "path": "funsYU/Precondition.m",
+      "sha256": "97239a956765ed3372cbdd09b50db8b4815ef9d3a67a58af771798bb01874769",
+      "bytes": 838
+    },
+    {
+      "path": "run_cluster.m",
+      "sha256": "803b253d0739ab793fc704a2a772fba1ea7c4e8ec56b6e50d91ded6005e1631f",
+      "bytes": 3516
+    }
+  ],
+  "author_manifest_sha256": "ed4b2323dd92f2f52cd8f8304e3bd458a4fee1f3cd6bd8d7ea5f54e29cee49df",
+  "historical_protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+  "worker_sha256": "46083587398223803bcfc9519eb27742907b52f4022c169509c5b067dcb55fd1",
+  "bridge_sha256": "1a373677a9a3e03a016c99af3b62bc953b97b39c35d9bcd3d0ba2afeb1e817f8",
+  "dataset_identities": {
+    "3Sources": {
+      "n": 169,
+      "k": 6,
+      "views": 3,
+      "shapes": [
+        [
+          169,
+          3560
+        ],
+        [
+          169,
+          3631
+        ],
+        [
+          169,
+          3068
+        ]
+      ],
+      "canonical_feature_sha256": [
+        "f1a6399d23255ad4801aeb227f64601a78f0c32a87f438481c9093a495cf660b",
+        "f765ea45cb2c1bae152b051d0da366da761ca7c8637afbfe4308b12d05aece53",
+        "a1a1104b7e3c4917505cb193f3da8bb4ea486c3a0652b245672dbc1e92849456"
+      ]
+    },
+    "BBC": {
+      "n": 2225,
+      "k": 5,
+      "views": 2,
+      "shapes": [
+        [
+          2225,
+          4817
+        ],
+        [
+          2225,
+          4818
+        ]
+      ],
+      "canonical_feature_sha256": [
+        "1bc16b8e91bfb3a00190296a312bf4007207f31746e24b570b205611c030ef58",
+        "5bd2640702863e9eac904af844e3c0b41b2c4ad6c8d157c723236c0d7fc59c89"
+      ]
+    },
+    "Cora": {
+      "n": 2708,
+      "k": 7,
+      "views": 2,
+      "shapes": [
+        [
+          2708,
+          1433
+        ],
+        [
+          2708,
+          2708
+        ]
+      ],
+      "canonical_feature_sha256": [
+        "305748bd5f22e134a04477e850f673d479172ee32311282ea1c79a14e9ce9d97",
+        "e5e066ead9bd197d8377061da239e9143e55a8943604c8faf26e0ee8581f7d57"
+      ]
+    },
+    "CiteSeer": {
+      "n": 3312,
+      "k": 6,
+      "views": 2,
+      "shapes": [
+        [
+          3312,
+          3703
+        ],
+        [
+          3312,
+          3312
+        ]
+      ],
+      "canonical_feature_sha256": [
+        "012b07100992a8bd060d2289a209c69fa6ff846c77aee7f02d8aa764b9fc9ac9",
+        "1db077f7c16c89eb6a5caa9bdeffe5a3a61af0f92b68759279914a9db0557839"
+      ]
+    }
+  },
+  "scope": "Native scientific options, paid queries and checked unchanged worker. New portable execution has its own receipts and is not a byte replay of original resource scheduling."
+}
