@@ -1,0 +1,295 @@
+"""Pure presentation of verified v4 evidence; no fitting, scoring or fallback.
+
+The manuscript calls build_results(load_all_verified()) once. The CLI writes
+tokens and complete, explicitly grouped plot/CSV records only after that gate.
+"""
+from pathlib import Path
+import argparse
+import csv
+import json
+import sys
+import numpy as np
+from load_verified_evidence import (load_all_verified, PendingEvidence, require,
+    DATASETS, DEVELOPMENT, MAIN_METHODS, METHOD_NAMES, DATASET_NAMES, METRICS, sha)
+
+ROOT=Path(__file__).resolve().parent
+PAIR_METHODS=['without_consensus_pair','without_private_pair','without_all_pair','without_ML','without_CL']
+REFERENCE_METHODS=['graph-only-CV','fixed-CV','fixed-half-CV']
+CLUSTER_METRICS=['ACC','NMI','ARI']
+SHORT={
+ 'fixed-CV':('Fixed-CV','固定选参'), 'graph-only-CV':('Graph-only','仅图'),
+ 'fixed-half-CV':('Fixed-half','固定半参考'),
+ 'without_consensus_pair':('w/o consensus pairs','去共识关系'),
+ 'without_private_pair':('w/o view-specific pairs','去视图特有关系'),
+ 'without_all_pair':('w/o all pairs','去全部关系'),
+ 'without_ML':('w/o must-link','去正约束'), 'without_CL':('w/o cannot-link','去负约束'),
+ 'without_correction_graph':('w/o correction graph','去修正图项')}
+
+
+def name(method,zh=False):
+    if method in SHORT:return SHORT[method][int(zh)]
+    if method=='MVCHSS':return r'MVCHSS$^\dagger$'
+    if method=='FSSMSC':return r'FSSMSC$^\ddagger$'
+    return method
+
+
+def dsname(ds):return DATASET_NAMES[ds]['en']
+
+
+def pm(mean,sd):
+    return '--' if mean is None else f'${mean:.2f}\\pm {sd:.2f}$' if sd is not None else f'${mean:.2f}$'
+
+
+def signed(x):return f'{x:+.2f}'
+
+
+def longtable(header,rows,caption,label,columns,group_size=None):
+    h=' & '.join(header)+r'\\'
+    return '\n'.join([r'\begingroup\small',r'\setlength{\tabcolsep}{4pt}',
+        r'\begin{longtable}{'+columns+'}',r'\caption{'+caption+r'}\label{'+label+r'}\\',
+        r'\toprule',h,r'\midrule\endfirsthead',r'\toprule',h,r'\midrule\endhead',
+        r'\bottomrule\endfoot',*[' & '.join(map(str,row))+
+            (r'\\*' if group_size and (i+1)%group_size else r'\\')
+            for i,row in enumerate(rows)],
+        r'\end{longtable}',r'\endgroup'])
+
+
+def compact_table(header,rows,caption,label,columns):
+    """Keep the small diagnostic table intact; numerical contents are unchanged."""
+    return '\n'.join([r'\begin{table}[htbp]\centering\small',
+        r'\setlength{\tabcolsep}{4pt}',r'\caption{'+caption+r'}\label{'+label+'}',
+        r'\begin{tabular}{'+columns+r'}\toprule',' & '.join(header)+r'\\',
+        r'\midrule',*[' & '.join(map(str,row))+r'\\' for row in rows],
+        r'\bottomrule\end{tabular}',r'\end{table}'])
+
+
+def cell_map(group):return {(c['dataset'],c['Q'],c['method']):c for c in group['cells']}
+def pair_map(group):return {(c['dataset'],c['Q'],c['comparison']):c for c in group['paired']}
+
+
+def absolute_table(group,datasets,methods,budget,zh,label,caption):
+    lookup=cell_map(group);rows=[]
+    for ds in datasets:
+        for i,m in enumerate(methods):
+            c=lookup[(ds,budget,m)]
+            rows.append([dsname(ds) if i==0 else '',name(m,zh),
+                *[pm(c['metrics'][metric]['primary_mean_percent'],c['metrics'][metric]['primary_sd_percent']) for metric in CLUSTER_METRICS],
+                f"{c['eligible']}/{c['planned']}"])
+    return longtable(['数据' if zh else 'Corpus','方法' if zh else 'Method','ACC','NMI','ARI','合格' if zh else 'Eligible'],rows,caption,label,'llrrrr',group_size=len(methods))
+
+
+def paired_table(group,methods,budgets,zh,label,caption,direction=1):
+    lookup=pair_map(group);rows=[]
+    for ds in DEVELOPMENT:
+        for Q in budgets:
+            for method in methods:
+                c=lookup[(ds,Q,method)]
+                values=[]
+                for metric in CLUSTER_METRICS:
+                    m=c['metrics'][metric]
+                    values.append(pm(None if m['mean_pp'] is None else direction*m['mean_pp'],m['sd_pp']))
+                rows.append([dsname(ds),Q,name(method,zh),*values,f"{c['paired_eligible']}/{c['planned']}"])
+    return longtable(['数据' if zh else 'Corpus','$Q$','对照' if zh else 'Control',
+        '$\Delta$ACC','$\Delta$NMI','$\Delta$ARI','合格配对' if zh else 'Eligible pairs'],rows,caption,label,'lrlrrrr')
+
+
+def effect_summary(group,method,Q,metric='ACC',direction=1):
+    items=[p for p in group['paired'] if p['comparison']==method and p['Q']==Q]
+    full=[(p['dataset'],direction*p['metrics'][metric]['mean_pp']) for p in items if p['metrics'][metric]['primary_eligible']]
+    return dict(planned=len(items),complete=len(full),positive=sum(v>1e-10 for _,v in full),
+        negative=sum(v < -1e-10 for _,v in full),ties=sum(abs(v)<=1e-10 for _,v in full),
+        lower=min((v for _,v in full),default=None),upper=max((v for _,v in full),default=None),values=full)
+
+
+def effects_range(e,zh=False):
+    if not e['complete']:return '无完整单元' if zh else 'no complete cells'
+    return f"{signed(e['lower'])} 至 {signed(e['upper'])}" if zh else f"{signed(e['lower'])} to {signed(e['upper'])}"
+
+
+def budget_effects(group,methods=('SAPN-MV',),low=0,high=400):
+    records=group['records'];lookup={(r['dataset'],r['seed'],r['Q'],r['method']):r for r in records};out=[]
+    for ds,method in sorted({(r['dataset'],r['method']) for r in records if r['method'] in methods}):
+        seeds=sorted({r['seed'] for r in records if (r['dataset'],r['method'])==(ds,method)})
+        pairs=[(lookup[(ds,s,low,method)],lookup[(ds,s,high,method)]) for s in seeds]
+        for a,b in pairs:
+            require(a['evaluation_objects_identity']==b['evaluation_objects_identity'],'Budget comparison evaluation-object mismatch')
+        eligible=all(a['eligible'] and b['eligible'] for a,b in pairs);metrics={}
+        for metric in METRICS:
+            deltas=[None if a['metrics_raw'][metric] is None or b['metrics_raw'][metric] is None else
+                100*(b['metrics_raw'][metric]-a['metrics_raw'][metric]) for a,b in pairs]
+            complete=eligible and all(v is not None for v in deltas)
+            metrics[metric]=dict(deltas_pp=deltas,mean_pp=float(np.mean(deltas)) if complete else None,
+                sd_pp=float(np.std(deltas,ddof=1)) if complete else None,eligible=complete,
+                positive_seeds=sum(v>1e-10 for v in deltas) if complete else None,
+                negative_seeds=sum(v < -1e-10 for v in deltas) if complete else None)
+        out.append(dict(dataset=ds,method=method,seeds=seeds,from_Q=low,to_Q=high,metrics=metrics))
+    return out
+
+
+def status_table(evidence,zh):
+    rows=[]
+    for c in evidence['unified_status']:
+        rows.append([c['method'],('验证' if c['phase']=='validation' else '最终') if zh else c['phase'],
+            c['attempts'],c['terminal_available'],c['eligible'],c['exception_or_invalid'],
+            '--' if c['cap_or_nonstationary'] is None else c['cap_or_nonstationary'],
+            '--' if c['inner_cap_fits'] is None else c['inner_cap_fits']])
+    caption=('统一三个种子比较的逻辑拟合计数。终态表示存在合法可评估输出，合格遵循各方法声明的准则。SAPN/CMVNMF 的“上限或未驻定”列为数值准则未通过数；FSSMSC 为完成作者预算但未达到外层变化阈值的次数，末列为出现作者内层迭代提示的拟合数。该提示在第20或21步触发，不能单独证明内层未收敛；这些输出仍可操作性合格。MVCHSS 按固定日程完成判定，上限列不适用。这些计数不是可直接比较的 KKT 收敛率，也不是独立统计样本数。' if zh else
+      'Logical fit counts in the unified three-seed comparison. Terminal denotes a valid evaluable output; eligibility follows each declared criterion. Cap/nonstationary counts denote unmet numerical checks for SAPN/CMVNMF and an unmet outer change tolerance after the author budget for FSSMSC. Its last column counts fits with an author inner-iteration warning, triggered at iteration 20 or 21 regardless of the final ratio change. These warnings alone do not certify inner nonconvergence; outputs may remain operationally eligible. MVCHSS uses a fixed schedule, so the cap column is inapplicable. These counts are neither comparable KKT convergence rates nor independent statistical replicates.')
+    return compact_table(['方法' if zh else 'Method','阶段' if zh else 'Phase','计划' if zh else 'Planned',
+        '终态' if zh else 'Terminal','合格' if zh else 'Eligible','异常' if zh else 'Invalid',
+        '上限/未驻定' if zh else 'Cap/nonstat.','内层提示' if zh else 'Inner warning'],rows,caption,'tab:extension-status','llrrrrrr')
+
+
+def prose(e,zh):
+    main=e['main'];rep=e['new_repetition'];ag=e['ag_confirmation'];t={}
+    main_pairs=pair_map(main);rep_pairs=pair_map(rep)
+    mv=effect_summary(main,'MVCHSS',400);fss_summary=effect_summary(main,'FSSMSC',400)
+    ag_mv=main_pairs[('AGNews_TitleDescription_2000',400,'MVCHSS')]['metrics']['ACC']
+    news_mv=main_pairs[('20NG_SubjectBody_2000',400,'MVCHSS')]['metrics']['ACC']
+    cora={m:main_pairs[('Cora',400,m)]['metrics']['ACC'] for m in ['SAPN-EQ','CMVNMF','MVCHSS']}
+    fss_final=next(c for c in e['unified_status'] if c['method']=='FSSMSC' and c['phase']=='final')
+    t['UNIFIED_COMPARISON_RESULTS']=(f"统一 $Q=400$ 比较呈现明确的语料差异：SAPN-MV 的平均 ACC 在 {mv['positive']}/{mv['complete']} 个语料上高于 MVCHSS，在 {fss_summary['positive']}/{fss_summary['complete']} 个语料上高于 FSSMSC。20NG 上相对 MVCHSS 的配对 ACC 差值为 {pm(news_mv['mean_pp'],news_mv['sd_pp'])} 个百分点；但 AG News 上低于 MVCHSS {-ag_mv['mean_pp']:.2f} 个百分点，Cora 上分别低于 SAPN-EQ、CMVNMF 和 MVCHSS {-cora['SAPN-EQ']['mean_pp']:.2f}、{-cora['CMVNMF']['mean_pp']:.2f} 和 {-cora['MVCHSS']['mean_pp']:.2f} 个百分点。Cora 和 AG News 对 MVCHSS 的劣势同时见于 NMI 和 ARI。FSSMSC 按作者原生 30 轮预算运行，{fss_final['cap_or_nonstationary']}/{fss_final['attempts']} 个最终合法终态未达到其外层变化阈值；操作性合格不代表驻定。表中结果比较的是声明实现及选参协议下的表现，不支持普遍优越性。" if zh else
+        f"The unified $Q=400$ results depend on the corpus. SAPN-MV has higher mean ACC than MVCHSS on {mv['positive']}/{mv['complete']} corpora and FSSMSC on {fss_summary['positive']}/{fss_summary['complete']}. On 20NG, the paired ACC difference from MVCHSS is {pm(news_mv['mean_pp'],news_mv['sd_pp'])} percentage points; on AG News, SAPN-MV trails MVCHSS by {-ag_mv['mean_pp']:.2f} percentage points. On Cora, it trails SAPN-EQ, CMVNMF and MVCHSS by {-cora['SAPN-EQ']['mean_pp']:.2f}, {-cora['CMVNMF']['mean_pp']:.2f} and {-cora['MVCHSS']['mean_pp']:.2f} points, respectively; the Cora and AG News deficits against MVCHSS also occur in NMI and ARI. FSSMSC uses the author's native 30-round budget: {fss_final['cap_or_nonstationary']}/{fss_final['attempts']} valid final states miss its outer change tolerance, so operational eligibility does not establish stationarity. These results characterize the declared implementations and selection protocols, without establishing universal superiority.")
+
+    gains=budget_effects(rep);valid=[g for g in gains if g['metrics']['ACC']['eligible']]
+    vals=[g['metrics']['ACC']['mean_pp'] for g in valid];positive=sum(v>1e-10 for v in vals)
+    span=('无完整单元' if zh else 'no complete cells') if not vals else (f'{min(vals):+.2f} 至 {max(vals):+.2f}' if zh else f'{min(vals):+.2f} to {max(vals):+.2f}')
+    npos=sum(g['metrics']['ACC']['positive_seeds'] for g in valid);nseeds=sum(len(g['seeds']) for g in valid)
+    bbc_gain=next(g for g in gains if g['dataset']=='BBC')['metrics']['ACC']
+    t['SUPERVISION_REPETITION_RESULTS']=(f"在 {len(valid)} 个既有开发语料上，新增七种子重复支持了预算增加后的平均收益：SAPN-MV 从 $Q=0$ 到 $Q=400$ 的平均 ACC 变化为 {span} 个百分点，{positive}/{len(valid)} 个语料均值为正，{npos}/{nseeds} 个合格种子配对上升。增益幅度和种子稳定性随语料变化；例如 BBC 为 {pm(bbc_gain['mean_pp'],bbc_gain['sd_pp'])} 个百分点。图~\\ref{{fig:repetition-budget}} 同时保留中间预算和 SAPN-EQ/CMVNMF 对照。这是已用语料上的随机化重复证据，不能替代新领域验证。" if zh else
+        f"Seven new seeds on {len(valid)} previously used development corpora support a positive mean response to additional queries. From $Q=0$ to $Q=400$, SAPN-MV mean ACC changes by {span} percentage points, with positive means on {positive}/{len(valid)} corpora and increases in {npos}/{nseeds} eligible seed pairs. Magnitude and seed stability vary: the BBC change is {pm(bbc_gain['mean_pp'],bbc_gain['sd_pp'])} points. Figure~\\ref{{fig:repetition-budget}} retains the intermediate budget and SAPN-EQ/CMVNMF controls. These randomizations assess repeatability on existing corpora, without adding new domains.")
+    eq_effect=effect_summary(rep,'SAPN-EQ',400)
+    eq_diffs={ds:rep_pairs[(ds,400,'SAPN-EQ')]['metrics']['ACC']['mean_pp']
+              for ds in ['BBC','Reuters','Cora']}
+    t['SUPERVISION_REPETITION_RESULTS']+=(
+        f" 在相同七种子的 $Q=400$ 比较中，SAPN-MV 的平均 ACC 仅在 {eq_effect['positive']}/{eq_effect['complete']} 个语料（3Sources、CiteSeer）高于 SAPN-EQ；BBC、Reuters-local 和 Cora 则分别低 {-eq_diffs['BBC']:.2f}、{-eq_diffs['Reuters']:.2f} 和 {-eq_diffs['Cora']:.2f} 个百分点。因此预算收益不等于保留独立视图相对完整拼接流程的普遍优势。"
+        if zh else
+        f" At $Q=400$ in the same seven-seed comparison, SAPN-MV has higher mean ACC than SAPN-EQ on only {eq_effect['positive']}/{eq_effect['complete']} corpora (3Sources and CiteSeer); it trails by {-eq_diffs['BBC']:.2f}, {-eq_diffs['Reuters']:.2f} and {-eq_diffs['Cora']:.2f} points on BBC, Reuters-local and Cora. The query-budget benefit thus does not establish a general advantage of separate views over the complete concatenation pipeline.")
+    agg=budget_effects(ag)[0]['metrics']['ACC'];agdiff=next(p for p in ag['paired'] if p['comparison']=='fixed-CV' and p['Q']==400)['metrics']['ACC']
+    t['AG_LONG_CONFIRMATION_RESULTS']=(f"单列报告的原 AG News 十种子确认中，SAPN-MV 的 $Q=400-0$ 配对 ACC 变化为 {pm(agg['mean_pp'],agg['sd_pp'])} 个百分点；相对公平选参固定参考的 $Q=400$ 差值为 {pm(agdiff['mean_pp'],agdiff['sd_pp'])}。两者的种子间变异均大于平均差值。种子 101--103 也进入统一主表，不能再次计为独立新增运行。" if zh else
+        f"In the separately reported original ten-seed AG News confirmation, the paired SAPN-MV ACC change for $Q=400-0$ is {pm(agg['mean_pp'],agg['sd_pp'])} percentage points; its $Q=400$ difference from CV-selected fixed reference is {pm(agdiff['mean_pp'],agdiff['sd_pp'])}. Seed variation exceeds the mean difference in both comparisons. Seeds 101--103 also enter the unified table and are not additional independent runs.")
+
+    losses=[effect_summary(rep,m,400,'ACC',-1) for m in PAIR_METHODS]
+    counts=', '.join(f"{s['negative']}/{s['complete']}" for s in losses)
+    contrary={metric:sum(effect_summary(rep,m,400,metric,-1)['positive'] for m in PAIR_METHODS) for metric in ['NMI','ARI']}
+    cl=rep_pairs[('3Sources',400,'without_CL')]
+    t['PAIR_REPETITION_RESULTS']=(f"固定完整模型所选系数后，去除关系损失通常降低 ACC，但各指标并不一致。依次移除共识、视图特有、全部关系、正约束和负约束项后，平均 ACC 下降的完整语料单元数为 {counts}。其中 3Sources 的去负约束单元仅 {cl['paired_eligible']}/{cl['planned']} 个种子配对合格，不提供合并主均值；负约束结论只覆盖其余完整语料。去项后的平均 NMI 和 ARI 分别在 {contrary['NMI']} 和 {contrary['ARI']} 个完整单元上升。该结果支持固定参数下的条件性组件解释，不能证明精简模型重新调参后仍会更差。" if zh else
+        f"At the full-model selected coefficient, relation-loss removals generally reduce ACC, with mixed effects across metrics. Removing the consensus, view-specific, all-pair, must-link and cannot-link losses decreases mean ACC on {counts} complete corpora, respectively. The 3Sources cannot-link removal has only {cl['paired_eligible']}/{cl['planned']} eligible seed pairs and no pooled primary mean, so that comparison covers only the remaining complete corpora. Mean NMI and ARI increase after removal in {contrary['NMI']} and {contrary['ARI']} complete cells. These are conditional component effects at retained parameters; they do not establish that reduced models would remain worse after retuning.")
+
+    refs=[]
+    for Q in [160,400]:
+        fixed=effect_summary(rep,'fixed-CV',Q);graph=effect_summary(rep,'graph-only-CV',Q)
+        if zh:refs.append(f"$Q={Q}$ 时，覆盖率规则减联合选参固定参考的平均 ACC 差值为 {effects_range(fixed,True)} 个百分点，{fixed['positive']}/{fixed['complete']} 个语料均值为正；相对仅图对照则为 {graph['positive']}/{graph['complete']}。")
+        else:refs.append(f"At $Q={Q}$, coverage minus jointly selected fixed reference ranges from {effects_range(fixed)} ACC percentage points, with positive means on {fixed['positive']}/{fixed['complete']} corpora; against graph-only, the corresponding count is {graph['positive']}/{graph['complete']}.")
+    refs.append('因此覆盖率规则未表现出对两类公平对照的一致优势。固定半参考及 NMI/ARI 的配对结果同时保留，避免将参考项的作用与其强度选值混为一谈。' if zh else
+        'Coverage therefore shows no consistent advantage over these fair controls. The fixed-half and paired NMI/ARI results remain visible, separating the role of the reference component from the choice of its strength.')
+    t['REFERENCE_REPETITION_RESULTS']=' '.join(refs)
+    corrs=[effect_summary(rep,'without_correction_graph',Q,'ACC',-1) for Q in [160,400]]
+    t['CORRECTION_REPETITION_RESULTS']=(f"参考修正图项的条件性效应较小且随指标变化。去项减完整模型的平均 ACC 差值在 $Q=160$ 为 {effects_range(corrs[0],True)} 个百分点，在 $Q=400$ 为 {effects_range(corrs[1],True)} 个百分点；两预算分别有 {corrs[0]['negative']}/{corrs[0]['complete']} 和 {corrs[1]['negative']}/{corrs[1]['complete']} 个语料均值下降。七种子差值及 NMI/ARI 均保留在图表中。这些干预固定参考强度和已选系数。" if zh else
+        f"The reference-correction graph term has small, metric-dependent conditional effects. Mean ACC differences, removal minus full model, range from {effects_range(corrs[0])} percentage points at $Q=160$ and {effects_range(corrs[1])} at $Q=400$, with decreases on {corrs[0]['negative']}/{corrs[0]['complete']} and {corrs[1]['negative']}/{corrs[1]['complete']} corpora. The tables and figures retain all seven seed differences and NMI/ARI. These interventions hold the reference strength and selected coefficient fixed.")
+    nmi_counter=[effect_summary(rep,'without_correction_graph',Q,'NMI',-1) for Q in [160,400]]
+    ncounter=sum(x['positive'] for x in nmi_counter)
+    if ncounter:
+        t['CORRECTION_REPETITION_RESULTS']+=(f"去项后平均 NMI 在 {ncounter} 个完整语料--预算单元上升，因而不能将该项描述为普遍有益。" if zh else
+            f" Mean NMI increases after removal in {ncounter} complete corpus--budget cells, precluding a claim of uniform benefit.")
+
+    cells=[c for c in rep['cells'] if c['method']=='SAPN-MV' and c['Q']==400]
+    valid=[c for c in cells if c['metrics']['training_BER']['primary_eligible'] and c['metrics']['unqueried_BER']['primary_eligible']]
+    train=[c['metrics']['training_BER']['primary_mean_percent'] for c in valid];unq=[c['metrics']['unqueried_BER']['primary_mean_percent'] for c in valid]
+    if valid:
+        t['RELATION_REPETITION_RESULTS']=(f"在 $Q=400$ 的 {len(valid)} 个完整开发语料单元中，SAPN-MV 的平均训练 BER 为 {min(train):.2f}--{max(train):.2f}\\%，未查询对象关系 BER 为 {min(unq):.2f}--{max(unq):.2f}\\%。两者基于不同关系集合，且后者在所有方法间使用相同评估对；满足已查询关系不能直接等同于关系泛化。" if zh else
+          f"Across {len(valid)} complete development cells at $Q=400$, mean SAPN-MV training BER ranges from {min(train):.2f} to {max(train):.2f}\\%, while unqueried-object relation BER ranges from {min(unq):.2f} to {max(unq):.2f}\\%. The latter uses identical evaluation pairs across methods. Agreement with queried relations therefore does not directly measure relation generalization.")
+    else:t['RELATION_REPETITION_RESULTS']='没有完整单元可支持主要 BER 汇总；终态与分母保留于数据表。' if zh else 'No complete cell supports a primary BER summary; terminal outputs and denominators remain in the data tables.'
+    finals=[c for c in e['unified_status'] if c['phase']=='final'];counts=', '.join(f"{c['method']} {c['eligible']}/{c['attempts']}" for c in finals)
+    fss=next(c for c in finals if c['method']=='FSSMSC')
+    t['OPERATIONAL_STATUS_RESULTS']=(f"统一比较的最终合格次数为 {counts}。FSSMSC 的作者原生 30 轮日程产生了 {fss['terminal_available']} 个可评估终态，其中 {fss['cap_or_nonstationary']} 个未达外层变化阈值，{fss['inner_cap_fits']} 次拟合出现至少一次作者内层迭代提示。按预定规则保留终态不等于驻定认证，提示本身也不等于内层未收敛判定。验证阶段、异常及提示触发规则见表~\\ref{{tab:extension-status}}。" if zh else
+        f"Final eligible counts are {counts}. FSSMSC's native 30-round schedule produces {fss['terminal_available']} evaluable final states; {fss['cap_or_nonstationary']} miss its outer change tolerance and {fss['inner_cap_fits']} fits contain an author inner-iteration warning. Retention under the declared operational rule does not certify stationarity, and warnings alone do not certify inner nonconvergence. Validation-stage counts, invalid outputs and warning triggers appear in Table~\\ref{{tab:extension-status}}.")
+
+    recent=[effect_summary(main,m,Q) for m in ['MVCHSS','FSSMSC'] for Q in [160,400]]
+    better=sum(s['positive'] for s in recent);complete=sum(s['complete'] for s in recent)
+    fixed=[effect_summary(rep,'fixed-CV',Q) for Q in [160,400]]
+    fixedbetter=sum(s['positive'] for s in fixed);fixedcomplete=sum(s['complete'] for s in fixed)
+    graph400=effect_summary(rep,'graph-only-CV',400)
+    if not fixedcomplete:
+        interpretation='固定参考比较缺少完整合格单元，不能判断覆盖率规则的相对表现。' if zh else 'No complete eligible fixed-reference comparison supports a conclusion about relative coverage performance.'
+    elif not fixedbetter:
+        interpretation='这些完整单元中，覆盖率规则的平均 ACC 均未高于选参固定参考。' if zh else 'Coverage has no higher mean ACC than the selected fixed reference in these complete cells.'
+    else:
+        interpretation='这些计数来自相关比较单元，不能视为独立研究的胜出率。' if zh else 'These counts summarize related comparison cells, not win rates across independent studies.'
+    t['ABSTRACT_RESULTS']=(f"$Q=400$ 时，SAPN-MV 的平均 ACC 在 {mv['positive']}/{mv['complete']} 个语料上高于 MVCHSS，但在 AG News 上低 {-ag_mv['mean_pp']:.2f} 个百分点。五个既有开发语料的七新种子中，$Q=400-0$ 平均 ACC 增加 {span} 个百分点，{npos}/{nseeds} 个种子配对上升。参考对照结果混合：覆盖率规则的平均 ACC 在 {fixedbetter}/{fixedcomplete} 个单元高于公平选参固定参考，而在 $Q=400$ 仅 {graph400['positive']}/{graph400['complete']} 个语料高于仅图对照。" if zh else
+        f"At $Q=400$, SAPN-MV has higher mean ACC than MVCHSS on {mv['positive']}/{mv['complete']} corpora, but trails it by {-ag_mv['mean_pp']:.2f} percentage points on AG News. Seven new seeds on five existing development corpora yield mean ACC gains of {span} points from zero to 400 queries, with {npos}/{nseeds} seed pairs improving. Reference comparisons are mixed: coverage has higher mean ACC than fairly selected fixed reference in {fixedbetter}/{fixedcomplete} cells and than graph-only on only {graph400['positive']}/{graph400['complete']} corpora at $Q=400$.")
+    t['DISCUSSION_NEW']=(f"新增重复最清楚地支持了既有语料上的预算收益；统一比较则显示方法间的排序依赖语料，尤其是 Cora 和 AG News 的反例。覆盖率规则相对公平选参固定参考有 {fixedbetter}/{fixedcomplete} 个较高 ACC 均值，但 $Q=400$ 相对仅图对照仅为 {graph400['positive']}/{graph400['complete']}，因此其作用不能概括为稳定性能优势。覆盖率配置评估三个关系系数，固定参考评估 27 个联合设置；这说明候选配置较少，不等于测得计算时间更短。固定参数去项只支持对当前目标的条件解释，参考修正效应也较小；精简模型重新选参后的比较仍未由这些干预回答。" if zh else
+        f"The new randomizations most clearly support a budget response on existing corpora; the unified comparison shows corpus-dependent method rankings, including the Cora and AG News counterexamples. Coverage has higher mean ACC than fairly selected fixed reference in {fixedbetter}/{fixedcomplete} cells, but than graph-only on only {graph400['positive']}/{graph400['complete']} corpora at $Q=400$, limiting a claim of consistent performance benefit. Coverage evaluates three relation coefficients versus 27 joint fixed-reference settings, establishing fewer candidate configurations without demonstrating shorter runtime. Fixed-parameter removals support conditional interpretations of the fitted objective, with small reference-correction effects; these interventions leave the performance of retuned reduced models unresolved.")
+    t['CONCLUSION_RESULTS']=(f"七新种子在五个既有开发语料上复现了 $Q=400-0$ 的正平均 ACC 收益（{span} 个百分点），而统一基线比较中的 Cora 和 AG News 反例限定了方法优势的适用范围。公平参考比较结果混合，参考修正图项的作用较小且依赖指标；组件结论限于已测语料及保留参数的单项去除实验。" if zh else
+        f"Seven new seeds reproduce positive mean ACC gains from zero to 400 queries on five existing development corpora ({span} percentage points), while the Cora and AG News counterexamples bound the unified baseline results. Fair reference comparisons are mixed, and reference-correction effects are small and metric-dependent. Component conclusions remain conditional on the tested corpora and isolated removals with retained parameters.")
+    return t
+
+
+def build_results(evidence):
+    """Pure API requested by the manuscript builder: no loading or rescoring."""
+    require(evidence.get('status')=='ALL_REQUIRED_EVIDENCE_VERIFIED','build_results needs complete verified evidence')
+    result={}
+    for language in ['en','zh']:
+        zh=language=='zh';t=prose(evidence,zh)
+        caption=('统一三种子比较，$Q=400$。ACC/NMI/ARI 乘以100，报告均值与样本标准差；未全部合格的单元不报告主要均值。每种方法在相同关系预算内采用其声明的验证网格，作者实现的适配见正文及附录。' if zh else
+            'Unified three-seed comparison at $Q=400$. ACC/NMI/ARI are multiplied by 100 and reported as mean and sample standard deviation. Incomplete eligible cells have no primary mean. Each method uses its declared within-budget validation grid and implementation qualifications.')
+        qualification=(r' $\dagger$：MVCHSS 作者更新映射的输入域扩展；$\ddagger$：FSSMSC 作者映射的成对输入聚类适配，采用原生迭代上限，未认证论文正交约束或驻定性。合格准则因方法而异。20NG 种子43无合格验证折，使用预定默认值。' if zh else
+            r' $\dagger$: MVCHSS author-map domain extension. $\ddagger$: FSSMSC author-map pair-input clustering adapter at the native cap, without certification of paper orthogonality or stationarity. Eligibility is method-specific. 20NG seed 43 uses prespecified defaults because no validation fold is eligible.')
+        caption+=qualification
+        t['UNIFIED_MAIN_TABLE']=absolute_table(evidence['main'],DATASETS,MAIN_METHODS,400,zh,'tab:unified',caption)
+        caption=('统一三种子比较在 $Q=160$ 的完整聚类指标（乘以100），均值与样本标准差。$Q=400$ 已完整列于主表，不重复列示。所有逐种子聚类指标、BER、失败状态及分母均见配套 CSV。' if zh else
+            'Complete clustering metrics at $Q=160$ for the unified three-seed comparison, multiplied by 100, as mean and sample standard deviation. The complete $Q=400$ table appears in the main text. Per-seed metrics, BER, failures and denominators are supplied in the accompanying CSV.')
+        caption+=qualification
+        t['UNIFIED_FULL_TABLES']=absolute_table(evidence['main'],DATASETS,MAIN_METHODS,160,zh,'tab:unified-low-budget',caption)
+        caption=('新增七种子（201--207）在 $Q=400$ 的绝对聚类指标（乘以100），均值与样本标准差。未与原有三个种子混合；$Q=0,160$ 的完整逐种子数据另存 CSV。' if zh else
+            'Absolute clustering metrics at $Q=400$ for the seven new seeds (201--207), multiplied by 100, as mean and sample standard deviation. These are not pooled with the original three seeds; complete $Q=0,160$ records are supplied as CSV.')
+        absolute=absolute_table(evidence['new_repetition'],DEVELOPMENT,MAIN_METHODS[:3],400,zh,'tab:repetition-primary',caption)
+        caption=('新增七种子参考对照的配对均差与样本标准差（百分点），方向为 SAPN-MV 减去对照。每种方法使用预算内查询验证选择参数；合格配对不足7时不计算主要均值。' if zh else
+            'Paired mean differences and sample standard deviations for seven new seeds, in percentage points, oriented as SAPN-MV minus each reference control. Each configuration uses its own within-budget parameter selection; incomplete seven-pair cells have no primary mean.')
+        refs=paired_table(evidence['new_repetition'],REFERENCE_METHODS,[160,400],zh,'tab:repetition-reference',caption)
+        caption=('新增七种子独立关系损失去项的配对均差与样本标准差（百分点），方向为去项减去完整模型；其余输入及完整模型所选系数固定。' if zh else
+            'Paired mean differences and sample standard deviations for isolated relation-loss removals on seven new seeds, in percentage points. Direction is removal minus the full model; remaining inputs and the full-model selected coefficient are fixed.')
+        pairs=paired_table(evidence['new_repetition'],PAIR_METHODS,[400],zh,'tab:repetition-pair-removals',caption,-1)
+        caption=('新增七种子参考修正图项去除的配对均差与样本标准差（百分点），方向为去项减去完整模型；仅去除所述项，保留原选参。' if zh else
+            'Paired mean differences and sample standard deviations for removal of the reference-correction graph term on seven new seeds, in percentage points. Direction is removal minus the full model; the original selected parameters are retained.')
+        correction=paired_table(evidence['new_repetition'],['without_correction_graph'],[160,400],zh,'tab:repetition-correction',caption,-1)
+        t['REPETITION_FULL_TABLES']='\n\n'.join([absolute,refs,pairs,correction])
+        t['EXTENSION_STATUS_TABLE']=status_table(evidence,zh)
+        result[language]=t
+    result['_source_data']=plot_source_data(evidence)
+    result['_source_hashes']=dict(evidence['source_hashes'])
+    result['_source_hashes'][str(Path(__file__).resolve())]=sha(__file__)
+    return result
+
+
+def plot_source_data(evidence):
+    groups={}
+    for key in ['main','original_budget_curves','new_repetition','ag_confirmation']:
+        group=evidence[key];rows=[]
+        for r in group['records']:
+            row={name:r[name] for name in ['dataset','seed','Q','method','eligible','status','prediction_sha256','query_prefix_identity','evaluation_objects_identity','evaluation_pairs_identity']}
+            row.update({m+'_percent':None if r['metrics_raw'][m] is None else 100*r['metrics_raw'][m] for m in METRICS});rows.append(row)
+        groups[key]=dict(records_percent=rows,cells=group['cells'],paired_effects=group.get('paired',[]))
+    groups['new_repetition']['budget_effects']=budget_effects(evidence['new_repetition'],MAIN_METHODS[:3])
+    return dict(schema='sapn_v4_plot_sources/1',unit='percent for absolute metric columns; percentage points for differences',
+        warning='Do not multiply *_percent or *_pp again. Groups overlap in recorded predictions and must not be pooled.',
+        groups=groups,unified_status=evidence['unified_status'],dataset_names=DATASET_NAMES,method_names=METHOD_NAMES)
+
+
+def write_outputs(result):
+    tokens={k:v for k,v in result.items() if k!='_source_data'}
+    (ROOT/'extension_results_tokens.json').write_text(json.dumps(tokens,ensure_ascii=False,indent=2),encoding='utf-8')
+    (ROOT/'extension_plot_sources.json').write_text(json.dumps(result['_source_data'],ensure_ascii=False,indent=2),encoding='utf-8')
+    records=[dict(group=group,**row) for group,data in result['_source_data']['groups'].items() for row in data['records_percent']]
+    with (ROOT/'extension_all_records.csv').open('w',encoding='utf-8-sig',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(records[0]));writer.writeheader();writer.writerows(records)
+    manifest=dict(status='COMPLETE_VERIFIED_RESULTS_ONLY',source_hashes=result['_source_hashes'],
+        outputs={name:sha(ROOT/name) for name in ['extension_results_tokens.json','extension_plot_sources.json','extension_all_records.csv']})
+    (ROOT/'EXTENSION_RESULT_SOURCE_MANIFEST.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+
+
+if __name__=='__main__':
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    try:write_outputs(build_results(load_all_verified()))
+    except PendingEvidence as exc:
+        print('PENDING_EVIDENCE:',exc,file=sys.stderr);sys.exit(2)

@@ -1,0 +1,7 @@
+{
+  "dataset": "3Sources",
+  "format": "3sources_original_zip",
+  "source": "3sources.zip",
+  "expected_sha256": "dea0ab41c48f1a50dbce855f7f9f783dd57bb0a3a3636f53f0c665678fb48659",
+  "output": "prepared"
+}

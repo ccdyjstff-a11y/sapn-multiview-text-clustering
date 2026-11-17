@@ -1,0 +1,10 @@
+{
+  "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\selection_stability\\selection_policy_index_900.csv",
+  "source_sha256": "80e0cfebd9a6128885c2ba4fba37cc571c4973264d98e4809ed6257750c72b79",
+  "files": {
+    "selection_policy_counts_18.csv": "3b770fd32058bdcd1ee1684302666a5c16977c516e73df5db6a54ea6840dc177",
+    "selection_policy_counts_en.tex": "99fd62432b10db6ef034d6f48f7b60d32ede47b117a0c4b9c4fa7292a8d57b6c",
+    "selection_policy_counts_zh.tex": "baab8f25862c16b495d803ca2c4e9e38c4f1aada7d93c6a7543c0e91fa24c23a"
+  },
+  "test_scores_used": false
+}

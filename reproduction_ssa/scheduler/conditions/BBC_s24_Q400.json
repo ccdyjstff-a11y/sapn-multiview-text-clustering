@@ -1,0 +1,1077 @@
+{
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "condition": {
+    "condition_id": "BBC_s24_Q400",
+    "group_index": 2,
+    "seed_index": 1,
+    "corpus": "BBC",
+    "Q": 400,
+    "seed": 24,
+    "status": "COMPUTED_COMPLETE_UNCOMMITTED",
+    "committed": false,
+    "selection": {
+      "status": "SELECTED",
+      "index": 5,
+      "rule": "minimum_balanced_pair_error",
+      "valid_candidates": 18,
+      "decided_candidates": 18,
+      "candidates": [
+        {
+          "index": 0,
+          "status": "VALID",
+          "mean_BER": 0.501984126984127,
+          "scores": [
+            0.5277777777777778,
+            0.47619047619047616
+          ]
+        },
+        {
+          "index": 1,
+          "status": "VALID",
+          "mean_BER": 0.5247252747252746,
+          "scores": [
+            0.5396825396825397,
+            0.5097680097680097
+          ]
+        },
+        {
+          "index": 2,
+          "status": "VALID",
+          "mean_BER": 0.5033577533577533,
+          "scores": [
+            0.5079365079365079,
+            0.4987789987789988
+          ]
+        },
+        {
+          "index": 3,
+          "status": "VALID",
+          "mean_BER": 0.4741300366300366,
+          "scores": [
+            0.4662698412698413,
+            0.481990231990232
+          ]
+        },
+        {
+          "index": 4,
+          "status": "VALID",
+          "mean_BER": 0.4438339438339438,
+          "scores": [
+            0.4444444444444444,
+            0.4432234432234432
+          ]
+        },
+        {
+          "index": 5,
+          "status": "VALID",
+          "mean_BER": 0.43292124542124544,
+          "scores": [
+            0.4226190476190476,
+            0.4432234432234432
+          ]
+        },
+        {
+          "index": 6,
+          "status": "VALID",
+          "mean_BER": 0.5322802197802198,
+          "scores": [
+            0.5496031746031746,
+            0.5149572649572649
+          ]
+        },
+        {
+          "index": 7,
+          "status": "VALID",
+          "mean_BER": 0.521596459096459,
+          "scores": [
+            0.5337301587301587,
+            0.5094627594627594
+          ]
+        },
+        {
+          "index": 8,
+          "status": "VALID",
+          "mean_BER": 0.501984126984127,
+          "scores": [
+            0.5277777777777778,
+            0.47619047619047616
+          ]
+        },
+        {
+          "index": 9,
+          "status": "VALID",
+          "mean_BER": 0.4539835164835165,
+          "scores": [
+            0.44246031746031744,
+            0.4655067155067155
+          ]
+        },
+        {
+          "index": 10,
+          "status": "VALID",
+          "mean_BER": 0.49671855921855923,
+          "scores": [
+            0.5337301587301587,
+            0.4597069597069597
+          ]
+        },
+        {
+          "index": 11,
+          "status": "VALID",
+          "mean_BER": 0.48282967032967034,
+          "scores": [
+            0.5337301587301587,
+            0.43192918192918195
+          ]
+        },
+        {
+          "index": 12,
+          "status": "VALID",
+          "mean_BER": 0.5172466422466422,
+          "scores": [
+            0.5634920634920635,
+            0.471001221001221
+          ]
+        },
+        {
+          "index": 13,
+          "status": "VALID",
+          "mean_BER": 0.5177808302808302,
+          "scores": [
+            0.5257936507936508,
+            0.5097680097680097
+          ]
+        },
+        {
+          "index": 14,
+          "status": "VALID",
+          "mean_BER": 0.5046550671550671,
+          "scores": [
+            0.5496031746031746,
+            0.4597069597069597
+          ]
+        },
+        {
+          "index": 15,
+          "status": "VALID",
+          "mean_BER": 0.5106837606837606,
+          "scores": [
+            0.5674603174603174,
+            0.45390720390720396
+          ]
+        },
+        {
+          "index": 16,
+          "status": "VALID",
+          "mean_BER": 0.5049603174603174,
+          "scores": [
+            0.5337301587301587,
+            0.47619047619047616
+          ]
+        },
+        {
+          "index": 17,
+          "status": "VALID",
+          "mean_BER": 0.5078601953601953,
+          "scores": [
+            0.5337301587301587,
+            0.481990231990232
+          ]
+        }
+      ]
+    },
+    "cv": [
+      {
+        "case_id": "BBC_s24_Q400_c0_f0",
+        "candidate": 0,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c0_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5277777777777778,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c0_f0.json",
+            "sha256": "46029d5198b6b6cfc98b7c66f950e48a8a3ba893e06f50e6611ad52687647e69"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c1_f0",
+        "candidate": 1,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c1_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5396825396825397,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c1_f0.json",
+            "sha256": "a9648e94bf171a94292b64eafead1c61bb84e56bfabc744982f4a163d6b0d946"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c2_f0",
+        "candidate": 2,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c2_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5079365079365079,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c2_f0.json",
+            "sha256": "983735266c8821b9b0f1c7ea2e38b937ff68a95ddd9fb43723c3195ba104e9e8"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c3_f0",
+        "candidate": 3,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c3_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4662698412698413,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c3_f0.json",
+            "sha256": "d51f02a3647163a88cf4c82af743b440094cd57a7a6c72ddb50c2937a460d984"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c4_f0",
+        "candidate": 4,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c4_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4444444444444444,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c4_f0.json",
+            "sha256": "932d9d785c87e432198cc016bf283093903c3314047d071df443a93a89f1b5d7"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c5_f0",
+        "candidate": 5,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c5_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4226190476190476,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c5_f0.json",
+            "sha256": "82181ed60b5dc3b68f848f05c3544f56f8761214c0cbd61787d25c13f09edc38"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c6_f0",
+        "candidate": 6,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c6_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5496031746031746,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c6_f0.json",
+            "sha256": "a6ed1d46940af7d5bdb32a2016f7d4590333791ce66132e629a1917bc33554aa"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c7_f0",
+        "candidate": 7,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c7_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5337301587301587,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c7_f0.json",
+            "sha256": "21f298397e6899dab4c2c1a2c8473ad1d9e3f1b942fda37dcbb926b54832096a"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c8_f0",
+        "candidate": 8,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c8_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5277777777777778,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c8_f0.json",
+            "sha256": "9a0e86e400329bfb1d57169c5baa62f4753f13b44770eb7ef89597685650b9e5"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c9_f0",
+        "candidate": 9,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c9_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.44246031746031744,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c9_f0.json",
+            "sha256": "aefe35a334331708bd34e1e5cd8c678c190735f680c9c0dcf68789f64fa2443f"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c10_f0",
+        "candidate": 10,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c10_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5337301587301587,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c10_f0.json",
+            "sha256": "2ae2c9a520384a946ae7edaff89295bc650aa295d7ddc849f5bb17416a2ce833"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c11_f0",
+        "candidate": 11,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c11_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5337301587301587,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c11_f0.json",
+            "sha256": "afc539ae4d8d5191ba4ae8a0ea0542384d2ba5e06273c502065eb699c93b5836"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c12_f0",
+        "candidate": 12,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c12_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5634920634920635,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c12_f0.json",
+            "sha256": "27ed00d116e3f9180f29f8670fe88e6f579f84885187332daa23e2a319d4350b"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c13_f0",
+        "candidate": 13,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c13_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5257936507936508,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c13_f0.json",
+            "sha256": "0dc5f70c916aa4809007facf5f2e2f5ee95421e0f8c459e8682e03fabb3e9448"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c14_f0",
+        "candidate": 14,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c14_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5496031746031746,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c14_f0.json",
+            "sha256": "8a968b80b20d0cebb2f88e787d53c18dab1d2cd427fedc38ebc5703f59cfe74f"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c15_f0",
+        "candidate": 15,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c15_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5674603174603174,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c15_f0.json",
+            "sha256": "15dd78ff1fd6c050698ff07c984e7839a98deaa37544f8949c075fc94e2280ce"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c16_f0",
+        "candidate": 16,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c16_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5337301587301587,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c16_f0.json",
+            "sha256": "3a4aa5a89ee6fcb216b6c2a4dbff36992aea668796c536737d536739b917562c"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c17_f0",
+        "candidate": 17,
+        "fold": 0,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c17_f0",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5337301587301587,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c17_f0.json",
+            "sha256": "2d9dcc5a5f23a0cd33901c28466d740b2367701e1699989f48cd388ca2032bf8"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c0_f1",
+        "candidate": 0,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c0_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.47619047619047616,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c0_f1.json",
+            "sha256": "c3d681f3b612717839daae864c94b60c850609f9122c5edb79d294fe00b2e772"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c1_f1",
+        "candidate": 1,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c1_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5097680097680097,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c1_f1.json",
+            "sha256": "b509dae64dda0dd81db3199f33f2f3c14ff1622b2f30b9b42926058d3d8f6e30"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c2_f1",
+        "candidate": 2,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c2_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4987789987789988,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c2_f1.json",
+            "sha256": "04d59ea16ea3d1bce5ce606b831a2fd298c8520ea264b0304105ecb52876eec0"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c3_f1",
+        "candidate": 3,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c3_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.481990231990232,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c3_f1.json",
+            "sha256": "34f59ebf65f823b3d08172e75eb45181f567f221f3c3efb3df78676be33bcb5c"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c4_f1",
+        "candidate": 4,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c4_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4432234432234432,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c4_f1.json",
+            "sha256": "10cf4bd381753d6e8c36e9f7b7472cc182bb3cc45f70e860f397295ab91cdd58"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c5_f1",
+        "candidate": 5,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c5_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4432234432234432,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c5_f1.json",
+            "sha256": "4d3a91e09ddabe1ebb6268998d69c63ccb066241a9e0bc7841bfadb94a397d77"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c6_f1",
+        "candidate": 6,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c6_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5149572649572649,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c6_f1.json",
+            "sha256": "65846733b7d515a62a3a8ec751425813cc2c41b30930ae86b500ae2968bab715"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c7_f1",
+        "candidate": 7,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c7_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5094627594627594,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c7_f1.json",
+            "sha256": "23fa20c4328b65ef7eba2bfbfbd8b6dc107d687991dce6391eec404f22cff438"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c8_f1",
+        "candidate": 8,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c8_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.47619047619047616,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c8_f1.json",
+            "sha256": "2ba4bbd128f6bf99c786430ab987939f1c3ba0728bc5edc9bf0b09fb41f08755"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c9_f1",
+        "candidate": 9,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c9_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4655067155067155,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c9_f1.json",
+            "sha256": "d911b89882fa8a29427323ed0fbd2c9f8933860333763db18736fec3828bbc18"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c10_f1",
+        "candidate": 10,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c10_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4597069597069597,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c10_f1.json",
+            "sha256": "2c4796af6de786ded8b652b7f6839970f79b7ae8cb3849cb4d04069097c8daaf"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c11_f1",
+        "candidate": 11,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c11_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.43192918192918195,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c11_f1.json",
+            "sha256": "a754c2dd584c054e924b1090b2243c1f8d217ce362d530d075da79eb67f4c7c9"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c12_f1",
+        "candidate": 12,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c12_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.471001221001221,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c12_f1.json",
+            "sha256": "9853957c4cc2dc4d91069966c85ba728a8981aef585e42e8102a2fda93ee157b"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c13_f1",
+        "candidate": 13,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c13_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.5097680097680097,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c13_f1.json",
+            "sha256": "2f363cb8d2811fc142a8bc2540bab55b467add5cc03b3c74b606eb298ddf1cbc"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c14_f1",
+        "candidate": 14,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c14_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.4597069597069597,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c14_f1.json",
+            "sha256": "aafa2b2e5f4decf577f7a22d9d51266d2158fbe5ef4b0a3f3ef2ba48f2fe66dd"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c15_f1",
+        "candidate": 15,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c15_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.45390720390720396,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c15_f1.json",
+            "sha256": "d0c467e5d2eb6fbda180a2c60555e3f2bb0bccaac87409e03e96ac9abaf27b98"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c16_f1",
+        "candidate": 16,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c16_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.47619047619047616,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c16_f1.json",
+            "sha256": "3cabffd9e102b056dc5d2032bf5f11e56586525cb894c5b2aaeb1b71e9e49227"
+          }
+        }
+      },
+      {
+        "case_id": "BBC_s24_Q400_c17_f1",
+        "candidate": 17,
+        "fold": 1,
+        "attempted": true,
+        "status": "ELIGIBLE",
+        "trigger_case": null,
+        "result": {
+          "case_id": "BBC_s24_Q400_c17_f1",
+          "status": "ELIGIBLE",
+          "attempted": true,
+          "execution_complete": true,
+          "cleanup_complete": true,
+          "eligible": true,
+          "validation_BER": 0.481990231990232,
+          "irreversible_local_failure": false,
+          "reason": "QUALIFIED_RETURN",
+          "evidence_ref": {
+            "kind": "NATIVE_DECISION",
+            "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c17_f1.json",
+            "sha256": "ad99ffbea08e636d21cd24ec7623a6e6fcf17c17f5c1be59dbd73e8246b883e2"
+          }
+        }
+      }
+    ],
+    "final": {
+      "case_id": "BBC_s24_Q400_c5_final",
+      "candidate": 5,
+      "fold": "final",
+      "attempted": true,
+      "status": "ELIGIBLE",
+      "trigger_case": null,
+      "result": {
+        "case_id": "BBC_s24_Q400_c5_final",
+        "status": "ELIGIBLE",
+        "attempted": true,
+        "execution_complete": true,
+        "cleanup_complete": true,
+        "eligible": true,
+        "validation_BER": null,
+        "irreversible_local_failure": false,
+        "reason": "QUALIFIED_RETURN",
+        "evidence_ref": {
+          "kind": "NATIVE_DECISION",
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\decisions\\BBC_s24_Q400_c5_final.json",
+          "sha256": "8019c92cb1265242e18bc2858d8ef889459710276276fd498915743dfa768700"
+        }
+      }
+    }
+  },
+  "persistence_semantics": "Atomic complete-condition payload; acknowledgement belongs to controller ledger."
+}

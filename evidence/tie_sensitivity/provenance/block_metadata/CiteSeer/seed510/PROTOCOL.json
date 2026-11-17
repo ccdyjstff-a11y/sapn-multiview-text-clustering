@@ -1,0 +1,80 @@
+{
+  "version": "portable_allocation_v1",
+  "seed": 510,
+  "budgets": [
+    160,
+    400
+  ],
+  "n": 3312,
+  "k": 6,
+  "views": 2,
+  "dataset": "CiteSeer",
+  "methods": [
+    "full",
+    "consensus-only",
+    "views-only"
+  ],
+  "logical_methods": [
+    "full-CV",
+    "consensus-only-CV",
+    "views-only-CV",
+    "consensus-only-at-full-lambda",
+    "views-only-at-full-lambda"
+  ],
+  "lambda_grid_default_first": [
+    20.0,
+    2.0,
+    200.0
+  ],
+  "eta": {
+    "full": 0.5,
+    "consensus-only": 0.0,
+    "views-only": 1.0
+  },
+  "config": {
+    "mu": 0.001,
+    "lambda_c": 0.2,
+    "lambda_r": "auto",
+    "lambda_g": 0.0,
+    "gamma": 2.0,
+    "negative_loss": "overlap",
+    "private_simplex": "endpoints",
+    "geometry_weight": 0.1,
+    "reference_strength": "coverage",
+    "supervision_weighting": "fixed",
+    "reliability": "none",
+    "endpoint_interval": 5,
+    "tol_J": 1e-05,
+    "tol_kkt": 0.001
+  },
+  "prepared_file_sha256": {
+    "metadata.json": "96d84fb1cc382f4f074feb94bed2cde4f9d78482eba5f87b59fe3b9372b32318",
+    "X0.npz": "e49a076506f02dec603bbb58514e3d2de22a8d1dba1eabecd3bf5279b6d63a4e",
+    "X1.npz": "b99365a38904b06217f019bd08fec36e3fbd383f994b2540fed1af21967ddb47",
+    "MV_graph.npz": "34665caa9bb87be19bd1a436429670df036331bd3c6d3fa4357e1bb3d609f0da"
+  },
+  "paid_query_sha256": "1b3616f978efbcd524c9cf9bb16085aaa308044755528079084a221ce9683317",
+  "source_sha256": {
+    "allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+    "allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+    "CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+    "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+    "allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+    "run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+    "score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+    "SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+  },
+  "software": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "selection": "Original same eligible node-disjoint two-fold mean BER; every fold converged; [20,2,200]; 1e-12 default-first ties; no Q/Qf scaling.",
+  "solver": "Unmodified fit_allocation factory: 200/1000/4000 stages, original tolerances and endpoint schedule.",
+  "boundary": "Only nonnegative views, known k, graph, initialization and paid relationship answers enter fitting. No class vector accepted. Separate score command requires every requested logical final and validation artifact sealed.",
+  "final_logical_records": 10,
+  "maximum_validation_fits": 36,
+  "maximum_final_fits": 10
+}

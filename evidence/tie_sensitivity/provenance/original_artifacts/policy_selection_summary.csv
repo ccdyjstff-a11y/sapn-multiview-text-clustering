@@ -1,0 +1,4 @@
+﻿policy,selections,changed_from_primary,logical_finals,missing_logical_finals,missing_unique_fits
+primary_default,300,0,500,0,0
+sensitivity_min,300,86,500,127,85
+sensitivity_max,300,100,500,128,87

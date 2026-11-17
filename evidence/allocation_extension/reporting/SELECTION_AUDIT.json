@@ -1,0 +1,222 @@
+{
+  "selections": 30,
+  "eligible_folds": {
+    "2": 30
+  },
+  "ties": 7,
+  "fallbacks": 0,
+  "unique_final_fits": 39,
+  "cv_fits": 180,
+  "choices": [
+    {
+      "file": "runs/20NG/seed1101/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 3
+    },
+    {
+      "file": "runs/20NG/seed1101/Q400_full_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1101/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 2
+    },
+    {
+      "file": "runs/20NG/seed1102/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1102/Q400_full_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1102/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1103/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 3
+    },
+    {
+      "file": "runs/20NG/seed1103/Q400_full_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1103/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 3
+    },
+    {
+      "file": "runs/20NG/seed1104/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1104/Q400_full_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1104/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 2
+    },
+    {
+      "file": "runs/20NG/seed1105/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 3
+    },
+    {
+      "file": "runs/20NG/seed1105/Q400_full_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/20NG/seed1105/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 2
+    },
+    {
+      "file": "runs/AGNews/seed1101/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1101/Q400_full_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1101/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 200.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1102/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1102/Q400_full_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1102/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1103/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1103/Q400_full_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1103/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 20.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1104/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1104/Q400_full_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1104/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1105/Q400_consensus-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1105/Q400_full_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    },
+    {
+      "file": "runs/AGNews/seed1105/Q400_views-only_selection.json",
+      "folds": 2,
+      "value": 2.0,
+      "rule": "minimum_balanced_pair_error",
+      "best_tie_size": 1
+    }
+  ]
+}

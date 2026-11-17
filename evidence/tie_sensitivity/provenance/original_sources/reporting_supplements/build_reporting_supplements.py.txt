@@ -1,0 +1,89 @@
+"""Report frozen primary absolute metrics and evaluation-pair denominators."""
+from pathlib import Path
+import os,sys
+sys.dont_write_bytecode=True
+for k in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS','NUMEXPR_NUM_THREADS']:os.environ[k]='1'
+import json,csv,hashlib,statistics,collections
+import numpy as np
+OUT=Path(__file__).resolve().parent
+ROOT=OUT.parent
+ORIGINAL=ROOT.parents[1]/'review_revision_v9/allocation_repeat'
+METRICS=['ACC','NMI','ARI','BER_train','BER_unqueried']
+DATA=['3Sources','BBC','Reuters','Cora','CiteSeer']
+METHODS=['full-CV','consensus-only-CV','views-only-CV','consensus-only-at-full-lambda','views-only-at-full-lambda']
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def csvsave(name,rows):
+    with (OUT/name).open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+def tex_table(rows,lang):
+    names={'full-CV':'Full CV','consensus-only-CV':'Consensus CV','views-only-CV':'Views CV',
+        'consensus-only-at-full-lambda':r'Consensus $\lambda_F$','views-only-at-full-lambda':r'Views $\lambda_F$'}
+    caption=('Absolute metrics for the original common-candidate allocation study. Each row summarizes ten seeds (504--513), as mean $\pm$ sample SD after multiplication by 100. CV denotes independent selection; $\lambda_F$ controls retain the original Full-selected coefficient. Higher ACC/NMI/ARI and lower BER are better. These are the frozen primary results, not the added tie-policy sensitivity results.' if lang=='en' else '原共同候选分配研究的绝对指标。每行汇总种子504--513的十次运行，所有指标乘100后报告均值与样本标准差。CV表示独立选参，$\lambda_F$控制保留原Full所选系数。ACC/NMI/ARI越高越好，BER越低越好。此表仅包含冻结的主要结果，不包含新增并列政策敏感性结果。')
+    lines=[r'\begingroup\small',r'\setlength{\tabcolsep}{3pt}',r'\begin{longtable}{llrrrrrr}',r'\caption{'+caption+r'}\label{tab:allocation-primary-absolute}\\',r'\toprule',r'Corpus & Method & $Q$ & ACC & NMI & ARI & Train BER & Pool-excluded BER\\',r'\midrule\endfirsthead',r'\toprule',r'Corpus & Method & $Q$ & ACC & NMI & ARI & Train BER & Pool-excluded BER\\',r'\midrule\endhead',r'\bottomrule\endfoot']
+    for r in rows:
+        cells=[f"${r[m+'_mean_percent']:.2f}\\pm{r[m+'_sample_SD_percent']:.2f}$" for m in METRICS]
+        lines.append(' & '.join([r['dataset'].replace('Reuters','Reuters-local'),names[r['method']],str(r['budget']),*cells])+r'\\')
+    lines.extend([r'\end{longtable}',r'\endgroup'])
+    return '\n'.join(lines)+'\n'
+def main():
+    assert (ROOT/'INDEX_FREEZE.json').exists()
+    source=ORIGINAL/'postseal_evaluation/all_logical_evaluation.json'
+    records=read(source);manifest=read(ORIGINAL/'postseal_evaluation/EVALUATION_MANIFEST.json')
+    assert sha(source)==manifest['files'][source.name]
+    assert len(records)==500 and all(r['converged'] and r['status']=='ok' for r in records)
+    lookup={(r['dataset'],r['seed'],r['budget'],r['method']):r for r in records}
+    wide=[];long=[];pairrows=[];source_hashes={str(source):sha(source)}
+    for ds in DATA:
+        for q in [160,400]:
+            for method in METHODS:
+                runs=[lookup[ds,s,q,method] for s in range(504,514)]
+                row=dict(dataset=ds,budget=q,method=method,eligible=10,planned=10)
+                for m in METRICS:
+                    values=[100*float(r[m]) for r in runs]
+                    mean,sd=statistics.mean(values),statistics.stdev(values)
+                    row[m+'_mean_percent']=mean;row[m+'_sample_SD_percent']=sd
+                    long.append(dict(dataset=ds,budget=q,method=method,metric=m,eligible=10,planned=10,
+                        mean_percent=mean,sample_SD_percent=sd,source_file=str(source),source_sha256=sha(source)))
+                wide.append(row)
+        for s in range(504,514):
+            block=ORIGINAL/'runs'/ds/f'seed{s}'
+            epfile=block/'postseal_evaluation_pairs.npz';im=read(block/'EVALUATION_MANIFEST.json')
+            assert sha(epfile)==im['evaluation_pairs_sha256']
+            with np.load(block/'inputs.npz',allow_pickle=False) as z:test=z['test'].copy()
+            with np.load(epfile,allow_pickle=False) as z:ep=z['pairs'].copy();ea=z['answers'].copy()
+            assert len(ep)==min(10000,len(test)*(len(test)-1)//2)==im['pair_count']
+            assert len(np.unique(ep,axis=0))==len(ep) and np.all(ep[:,0]<ep[:,1]) and np.isin(ep,test).all()
+            assert len(ea)==len(ep) and np.isin(ea,[-1,1]).all()
+            pos=int(np.sum(ea==1));neg=int(np.sum(ea==-1))
+            pairrows.append(dict(dataset=ds,seed=s,evaluation_objects=len(test),unordered_possible_pairs=len(test)*(len(test)-1)//2,
+                sampled_pairs=len(ep),positive_pairs=pos,negative_pairs=neg,both_signs_present=pos>0 and neg>0,
+                sampling_seed=s+51000,budgets_and_methods_share_pairs=True,source_npz=str(epfile),source_npz_sha256=sha(epfile),
+                source_manifest_sha256=sha(block/'EVALUATION_MANIFEST.json')))
+            source_hashes[str(epfile)]=sha(epfile)
+            local=read(block/'evaluation.json');assert sha(block/'evaluation.json')==im['evaluation_sha256']
+            for r in local:
+                original=lookup[ds,s,r['budget'],r['method']]
+                assert all(r[m]==original[m] for m in METRICS)
+    csvsave('primary_absolute_50_wide.csv',wide)
+    csvsave('primary_absolute_250_long.csv',long)
+    csvsave('primary_absolute_independent_30_wide.csv',[r for r in wide if r['method'].endswith('-CV')])
+    csvsave('pool_excluded_pair_counts_50.csv',pairrows)
+    summaries=[]
+    for ds in DATA:
+        a=[r for r in pairrows if r['dataset']==ds]
+        summaries.append(dict(dataset=ds,blocks=10,evaluation_objects=a[0]['evaluation_objects'],sampled_pairs=a[0]['sampled_pairs'],
+            positive_min=min(r['positive_pairs'] for r in a),positive_max=max(r['positive_pairs'] for r in a),
+            negative_min=min(r['negative_pairs'] for r in a),negative_max=max(r['negative_pairs'] for r in a)))
+    csvsave('pool_excluded_pair_counts_summary_5.csv',summaries)
+    for lang in ['en','zh']:(OUT/f'primary_absolute_{lang}.tex').write_text(tex_table(wide,lang),encoding='utf-8')
+    (OUT/'pool_excluded_BER_en.tex').write_text('For each corpus and seed, pool-excluded relation BER uses a fixed uniform sample without replacement of unordered pairs from evaluation objects. The pair count is $\\min\\{10000,\\binom{n_{\\rm eval}}{2}\\}$ and the sampling seed is the run seed plus 51000. The same pairs are used across budgets and methods. The sampler retains first occurrences from an independent uniform pair stream. BER averages the must-link and cannot-link error rates; if either sign is absent, BER is undefined (stored as None), rather than zero. All 50 saved evaluation-pair sets contain both signs. Counts and source hashes are provided in the accompanying table. Pairs can share endpoints and are not independent experimental replicates; uncertainty summaries remain at the run level.\n',encoding='utf-8')
+    (OUT/'pool_excluded_BER_zh.tex').write_text('对每个语料和种子，查询池外关系BER使用评估对象全部无序对的固定均匀无放回样本，数量为$\\min\\{10000,\\binom{n_{\\rm eval}}{2}\\}$，采样种子为运行种子加51000。同一对集合供两个预算和全部方法共同使用。采样器保留独立均匀成对抽样流中每个无序对的首次出现。BER为必连与不可连错误率的平均；若任一符号缺失，BER未定义并保存为None，不记为零。现有50个评估对集合均含两种符号，具体分母和源文件哈希随表提供。不同关系可以共享端点，不构成独立实验重复，不确定性仍按运行汇总。\n',encoding='utf-8')
+    receipt=dict(primary_absolute_groups=50,metric_rows=250,independent_CV_groups=30,seed_count_each=10,
+        pair_blocks=50,both_signs_all=all(r['both_signs_present'] for r in pairrows),source_hashes=source_hashes,
+        selection_index_freeze_sha256=sha(ROOT/'INDEX_FREEZE.json'),no_new_fitting=True,no_new_evaluation=True,
+        original_primary_records_unchanged=True,source_scoring_code_sha256=sha(ORIGINAL/'portable_common_draft/score_allocation.py'))
+    (OUT/'SUPPLEMENT_AUDIT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (OUT/'SUPPLEMENT_FREEZE.json').write_text(json.dumps({p.name:sha(p) for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='SUPPLEMENT_FREEZE.json'},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(groups=50,metric_rows=250,pair_sets=50,counts=summaries),ensure_ascii=False,indent=2))
+if __name__=='__main__':main()

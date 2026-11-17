@@ -1,0 +1,7 @@
+﻿allocation,budget,selections,best_BER_ties,selected_default,selected_default_among_tied_best,default_fallbacks,eligible_folds_min,eligible_folds_max,selections_with_two_eligible_folds,BER_tie_tolerance
+full,160,50,27,30,27,0,2,2,50,1e-12
+full,400,50,5,16,5,0,2,2,50,1e-12
+consensus-only,160,50,31,36,30,0,2,2,50,1e-12
+consensus-only,400,50,10,13,10,0,2,2,50,1e-12
+views-only,160,50,28,36,28,0,2,2,50,1e-12
+views-only,400,50,11,17,8,0,2,2,50,1e-12

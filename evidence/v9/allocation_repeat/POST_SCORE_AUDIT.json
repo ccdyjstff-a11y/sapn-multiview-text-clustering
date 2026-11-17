@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "phase": "POST_SCORE",
+  "complete_scope": true,
+  "all500_logical_metrics_recomputed": true,
+  "all400_ACC_pairs_checked": true,
+  "all40_ACC_summaries_checked": true,
+  "independent_auditor": "submission_content_gate",
+  "protocol_sha256": "5dda7be9d18a85df7caf2f1bd0d1c4e626de45425b6e1a949f84a64e959e92ce",
+  "global_seal_sha256": "4b1ddbc35956cbd2073f7466d8e8fceeed5db43f92cef529c95f64a6b0be274a",
+  "evaluation_manifest_sha256": "8c7b31bc3e6fb4f6aa9def9fb95c594696423dea39cb42ba87865d5c1d324cb9",
+  "evaluation_sha256": "4a1ccd50f746822bf577869fc669cb3752582999137a12fcdf880e31c3f8fb54",
+  "paired_contrasts_sha256": "f8b17bc081e5a5e9c28a745a4623774f19890c366963795fccd2b2b16675c810",
+  "plan_sha256": "34c2d273d5509c4993fae8d9e2761000374f4918d3df83cbc6329b7ce026eb15",
+  "details_sha256": "cca6e985fcf4ba7c5c17889d36ac53f8c70d0ecfcb4da8abb57f5f00de9f0a3f",
+  "all200_metric_summaries_checked": true,
+  "all2000_metric_pairs_checked": true,
+  "all_CSVs_checked": true,
+  "all_failures_retained": true,
+  "original_test_masks_checked": true,
+  "sources_inputs_outputs_unchanged": true,
+  "planned_logical": 500,
+  "unique_predictions_recomputed": 386,
+  "eligible_logical": 500,
+  "scored_logical": 500,
+  "missing_logical": 0,
+  "block_status_counts": {
+    "complete": 50
+  },
+  "complete_ACC_summaries": 40,
+  "numeric_max_errors": {
+    "block_metrics": 4.440892098500626e-16,
+    "logical_metrics": 4.440892098500626e-16,
+    "contrasts": 6.661338147750939e-14,
+    "CSV": 0.0
+  },
+  "no_old_seed_pooling": true,
+  "no_p_values": true,
+  "inference": "Ten fixed new seeds on five already examined corpora. Descriptive within-corpus repeat; not new-corpus confirmation.",
+  "utc": "2026-10-24T08:34:42.093399+00:00"
+}

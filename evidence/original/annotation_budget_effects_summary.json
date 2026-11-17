@@ -1,0 +1,1118 @@
+{
+  "cells": [
+    {
+      "dataset": "3Sources",
+      "method": "MV-free",
+      "total_queries": 0,
+      "mean_ACC": 61.01694915254237,
+      "sd_ACC": 1.4678396674312553,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MV-free",
+      "total_queries": 160,
+      "mean_ACC": 78.53107344632768,
+      "sd_ACC": 7.056494913444522,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MV-free",
+      "total_queries": 400,
+      "mean_ACC": 85.02824858757062,
+      "sd_ACC": 5.768524818266145,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ-original-free",
+      "total_queries": 0,
+      "mean_ACC": 66.38418079096046,
+      "sd_ACC": 18.76565387598008,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "mean_ACC": 79.37853107344633,
+      "sd_ACC": 9.061590357257314,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "mean_ACC": 86.4406779661017,
+      "sd_ACC": 11.864406779661019,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "mean_ACC": 62.71186440677966,
+      "sd_ACC": 0.8474576271186436,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "mean_ACC": 65.25423728813558,
+      "sd_ACC": 3.389830508474571,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "mean_ACC": 64.12429378531073,
+      "sd_ACC": 3.914239113149999,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCSC",
+      "total_queries": 0,
+      "mean_ACC": 64.97175141242938,
+      "sd_ACC": 3.528247456722255,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "mean_ACC": 67.51412429378531,
+      "sd_ACC": 7.874214612862345,
+      "final_nonconverged": 1
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "mean_ACC": 60.16949152542372,
+      "sd_ACC": 7.532368150267443,
+      "final_nonconverged": 1
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV-free",
+      "total_queries": 0,
+      "mean_ACC": 80.92485549132948,
+      "sd_ACC": 8.304061533547882,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV-free",
+      "total_queries": 160,
+      "mean_ACC": 81.6741597088418,
+      "sd_ACC": 8.39873107462196,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV-free",
+      "total_queries": 400,
+      "mean_ACC": 85.67758509955041,
+      "sd_ACC": 9.023935068323379,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ-original-free",
+      "total_queries": 0,
+      "mean_ACC": 79.38342967244701,
+      "sd_ACC": 9.236727969213344,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "mean_ACC": 81.75979447655747,
+      "sd_ACC": 9.781148475142238,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "mean_ACC": 83.5367159066581,
+      "sd_ACC": 9.637407486664783,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "mean_ACC": 66.17426675230143,
+      "sd_ACC": 17.53575749429376,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "mean_ACC": 82.87304645686149,
+      "sd_ACC": 7.491726954334289,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "mean_ACC": 83.0871333761507,
+      "sd_ACC": 9.327017960247069,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCSC",
+      "total_queries": 0,
+      "mean_ACC": 27.617212588310853,
+      "sd_ACC": 0.3575956559299945,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "mean_ACC": 27.210447441661312,
+      "sd_ACC": 0.41291589642444715,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "mean_ACC": 26.675230143438238,
+      "sd_ACC": 1.1848507045190932,
+      "final_nonconverged": 1
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV-free",
+      "total_queries": 0,
+      "mean_ACC": 47.18253968253968,
+      "sd_ACC": 1.6423969909980047,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV-free",
+      "total_queries": 160,
+      "mean_ACC": 48.41269841269841,
+      "sd_ACC": 3.6154691999660615,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV-free",
+      "total_queries": 400,
+      "mean_ACC": 53.57142857142858,
+      "sd_ACC": 2.2712838128974937,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ-original-free",
+      "total_queries": 0,
+      "mean_ACC": 48.05555555555555,
+      "sd_ACC": 6.315510786375027,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "mean_ACC": 49.285714285714285,
+      "sd_ACC": 6.4318774567810015,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "mean_ACC": 50.3968253968254,
+      "sd_ACC": 6.8027494330475236,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "mean_ACC": 41.11111111111111,
+      "sd_ACC": 0.4811252243246898,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "mean_ACC": 37.1031746031746,
+      "sd_ACC": 3.9561322797990917,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "mean_ACC": 45.75396825396825,
+      "sd_ACC": 3.0452309591983595,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCSC",
+      "total_queries": 0,
+      "mean_ACC": 23.412698412698415,
+      "sd_ACC": 0.299596604574236,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "mean_ACC": 22.46031746031746,
+      "sd_ACC": 0.5498573992282151,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "mean_ACC": 21.865079365079367,
+      "sd_ACC": 0.18184824186332557,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV-free",
+      "total_queries": 0,
+      "mean_ACC": 42.73909985935302,
+      "sd_ACC": 2.5433391448699183,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV-free",
+      "total_queries": 160,
+      "mean_ACC": 45.20042194092827,
+      "sd_ACC": 1.5458176044043068,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV-free",
+      "total_queries": 400,
+      "mean_ACC": 47.20464135021098,
+      "sd_ACC": 1.2800275421425753,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ-original-free",
+      "total_queries": 0,
+      "mean_ACC": 49.929676511954995,
+      "sd_ACC": 1.7700891316746648,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "mean_ACC": 52.83052039381153,
+      "sd_ACC": 1.488363854662225,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "mean_ACC": 55.52039381153305,
+      "sd_ACC": 0.7465145480155418,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "mean_ACC": 46.817862165963426,
+      "sd_ACC": 3.2415619251746306,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "mean_ACC": 49.15611814345991,
+      "sd_ACC": 6.213563698563153,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "mean_ACC": 54.922644163150494,
+      "sd_ACC": 2.6817601920771232,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCSC",
+      "total_queries": 0,
+      "mean_ACC": 44.26863572433192,
+      "sd_ACC": 0.5335439840187577,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "mean_ACC": 44.88396624472574,
+      "sd_ACC": 0.5704986195354431,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "mean_ACC": 38.18565400843882,
+      "sd_ACC": 6.510455889696512,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV-free",
+      "total_queries": 0,
+      "mean_ACC": 51.91256830601092,
+      "sd_ACC": 1.3466053906942133,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV-free",
+      "total_queries": 160,
+      "mean_ACC": 52.919183203911416,
+      "sd_ACC": 0.8097732657636504,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV-free",
+      "total_queries": 400,
+      "mean_ACC": 53.781995973540404,
+      "sd_ACC": 0.9707442526164887,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ-original-free",
+      "total_queries": 0,
+      "mean_ACC": 44.8375035950532,
+      "sd_ACC": 1.0692730195583138,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "mean_ACC": 47.25337935001437,
+      "sd_ACC": 1.2639053660660735,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "mean_ACC": 49.482312338222606,
+      "sd_ACC": 1.7938414914833327,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "mean_ACC": 42.88179465056083,
+      "sd_ACC": 0.5608283002588408,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "mean_ACC": 44.06097210238712,
+      "sd_ACC": 1.6620813967511212,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "mean_ACC": 42.39286741443774,
+      "sd_ACC": 0.5146830649460229,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCSC",
+      "total_queries": 0,
+      "mean_ACC": 55.92464768478573,
+      "sd_ACC": 0.47323792556526967,
+      "final_nonconverged": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "mean_ACC": 49.03652574058096,
+      "sd_ACC": 11.692970104038041,
+      "final_nonconverged": 1
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "mean_ACC": 54.45786597641645,
+      "sd_ACC": 1.2668469651560017,
+      "final_nonconverged": 0
+    }
+  ],
+  "changes": [
+    {
+      "dataset": "3Sources",
+      "method": "MV-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        12.711864406779668,
+        13.559322033898304,
+        26.27118644067798
+      ],
+      "mean_delta_pp": 17.51412429378532,
+      "sd_delta_pp": 7.59566647443433,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MV-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        22.88135593220339,
+        17.796610169491522,
+        31.35593220338984
+      ],
+      "mean_delta_pp": 24.011299435028253,
+      "sd_delta_pp": 6.849918448012516,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        10.169491525423737,
+        0.0,
+        28.813559322033896
+      ],
+      "mean_delta_pp": 12.994350282485877,
+      "sd_delta_pp": 14.613013736019843,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        15.254237288135599,
+        -1.6949152542372872,
+        46.610169491525426
+      ],
+      "mean_delta_pp": 20.056497175141246,
+      "sd_delta_pp": 24.507990086716354,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        -1.6949152542372872,
+        6.779661016949142,
+        2.542372881355938
+      ],
+      "mean_delta_pp": 2.5423728813559308,
+      "sd_delta_pp": 4.237288135593214,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -1.6949152542372872,
+        0.0,
+        5.932203389830498
+      ],
+      "mean_delta_pp": 1.4124293785310702,
+      "sd_delta_pp": 4.004928496824238,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.0,
+        -0.8474576271186436,
+        8.47457627118645
+      ],
+      "mean_delta_pp": 2.5423728813559356,
+      "sd_delta_pp": 5.154883500252733,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -6.779661016949156,
+        -8.474576271186443,
+        0.8474576271186436
+      ],
+      "mean_delta_pp": -4.802259887005651,
+      "sd_delta_pp": 4.965648539900268,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        -0.0642260757867632,
+        1.9267822736030809,
+        0.38535645472060764
+      ],
+      "mean_delta_pp": 0.7493042175123085,
+      "sd_delta_pp": 1.0442088116683517,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        2.0552344251766215,
+        8.863198458574175,
+        3.3397559409120134
+      ],
+      "mean_delta_pp": 4.752729608220936,
+      "sd_delta_pp": 3.6172454310414146,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        1.8625561978163176,
+        2.3121387283236885,
+        2.9543994861913916
+      ],
+      "mean_delta_pp": 2.376364804110466,
+      "sd_delta_pp": 0.5487478320692032,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        4.688503532434169,
+        2.8901734104046284,
+        4.881181759794472
+      ],
+      "mean_delta_pp": 4.15328623421109,
+      "sd_delta_pp": 1.0981219099321016,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        32.30571612074503,
+        16.377649325626194,
+        1.4129736673089184
+      ],
+      "mean_delta_pp": 16.69877970456005,
+      "sd_delta_pp": 15.448874639072878,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        18.047527296082208,
+        29.54399486191393,
+        3.1470777135516954
+      ],
+      "mean_delta_pp": 16.91286662384928,
+      "sd_delta_pp": 13.234987716851464,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        -0.770712909441233,
+        -0.2569043031470777,
+        -0.19267822736031093
+      ],
+      "mean_delta_pp": -0.40676514664954055,
+      "sd_delta_pp": 0.31681970856237845,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        0.0,
+        -2.569043031470777,
+        -0.2569043031470777
+      ],
+      "mean_delta_pp": -0.9419824448726182,
+      "sd_delta_pp": 1.4149185734839054,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        2.857142857142854,
+        -1.547619047619044,
+        2.3809523809523796
+      ],
+      "mean_delta_pp": 1.23015873015873,
+      "sd_delta_pp": 2.417380065161589,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        4.8809523809523725,
+        7.380952380952387,
+        6.904761904761912
+      ],
+      "mean_delta_pp": 6.38888888888889,
+      "sd_delta_pp": 1.327438784418876,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.8333333333333286,
+        1.0714285714285765,
+        1.7857142857142847
+      ],
+      "mean_delta_pp": 1.23015873015873,
+      "sd_delta_pp": 0.4956347617776512,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        1.4285714285714306,
+        2.3809523809523867,
+        3.214285714285708
+      ],
+      "mean_delta_pp": 2.341269841269842,
+      "sd_delta_pp": 0.8935182737458455,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        -6.547619047619051,
+        1.0714285714285765,
+        -6.547619047619051
+      ],
+      "mean_delta_pp": -4.007936507936509,
+      "sd_delta_pp": 4.398859193825725,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        4.285714285714285,
+        8.333333333333329,
+        1.309523809523803
+      ],
+      "mean_delta_pp": 4.642857142857139,
+      "sd_delta_pp": 3.525498308324012,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        -1.5476190476190474,
+        -1.3095238095238102,
+        0.0
+      ],
+      "mean_delta_pp": -0.9523809523809526,
+      "sd_delta_pp": 0.8333333333333334,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -2.023809523809522,
+        -1.4285714285714306,
+        -1.1904761904761898
+      ],
+      "mean_delta_pp": -1.5476190476190474,
+      "sd_delta_pp": 0.42923229469809293,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        1.5295358649789037,
+        3.6392405063291164,
+        2.215189873417721
+      ],
+      "mean_delta_pp": 2.461322081575247,
+      "sd_delta_pp": 1.0761734136992198,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        2.4789029535864984,
+        5.3797468354430364,
+        5.537974683544306
+      ],
+      "mean_delta_pp": 4.465541490857947,
+      "sd_delta_pp": 1.7222974543637113,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        2.6371308016877606,
+        3.322784810126578,
+        2.742616033755283
+      ],
+      "mean_delta_pp": 2.9008438818565403,
+      "sd_delta_pp": 0.3691983122362836,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        4.483122362869196,
+        6.592827004219416,
+        5.696202531645575
+      ],
+      "mean_delta_pp": 5.5907172995780625,
+      "sd_delta_pp": 1.0588006276310558,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.0,
+        12.447257383966253,
+        -5.432489451476798
+      ],
+      "mean_delta_pp": 2.3382559774964853,
+      "sd_delta_pp": 9.166347008874771,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        9.124472573839668,
+        13.449367088607602,
+        1.74050632911392
+      ],
+      "mean_delta_pp": 8.104781997187063,
+      "sd_delta_pp": 5.920657203840493,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.6329113924050702,
+        0.4746835443038009,
+        0.7383966244725713
+      ],
+      "mean_delta_pp": 0.6153305203938141,
+      "sd_delta_pp": 0.1327326729126337,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -13.502109704641342,
+        -5.116033755274259,
+        0.36919831223628563
+      ],
+      "mean_delta_pp": -6.082981715893105,
+      "sd_delta_pp": 6.986024462717125,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.3451251078515938,
+        0.8628127696289951,
+        1.8119068162208691
+      ],
+      "mean_delta_pp": 1.006614897900486,
+      "sd_delta_pp": 0.7438893963978988,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        1.0353753235547885,
+        1.3373597929249428,
+        3.235547886108712
+      ],
+      "mean_delta_pp": 1.8694276675294812,
+      "sd_delta_pp": 1.192691072173938,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ-original-free",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        2.4590163934426243,
+        2.2001725625539237,
+        2.588438308886971
+      ],
+      "mean_delta_pp": 2.415875754961173,
+      "sd_delta_pp": 0.19769524136996833,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ-original-free",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        4.8317515099223485,
+        3.8395168248490066,
+        5.26315789473685
+      ],
+      "mean_delta_pp": 4.644808743169402,
+      "sd_delta_pp": 0.7299994332181263,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.25884383088869356,
+        2.9767040552200186,
+        0.3019844693701472
+      ],
+      "mean_delta_pp": 1.1791774518262865,
+      "sd_delta_pp": 1.556853138900167,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -0.3451251078515938,
+        -0.647109577221741,
+        -0.47454702329594056
+      ],
+      "mean_delta_pp": -0.4889272361230918,
+      "sd_delta_pp": 0.1515049432391827,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCSC",
+      "total_queries": 160,
+      "paired_deltas_pp": [
+        0.0,
+        -0.12942191544433967,
+        -20.53494391716997
+      ],
+      "mean_delta_pp": -6.888121944204769,
+      "sd_delta_pp": 11.818671667298473,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCSC",
+      "total_queries": 400,
+      "paired_deltas_pp": [
+        -0.47454702329594767,
+        -1.1647972389991423,
+        -2.7610008628127645
+      ],
+      "mean_delta_pp": -1.466781708369285,
+      "sd_delta_pp": 1.1727590352949209,
+      "positive_seeds": 0
+    }
+  ],
+  "increment_differences": [
+    {
+      "dataset": "3Sources",
+      "mean_increment_difference_pp": 3.9548022598870056,
+      "sd_increment_difference_pp": 17.66158082750348,
+      "paired_differences_pp": [
+        7.627118644067792,
+        19.49152542372881,
+        -15.254237288135585
+      ],
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "BBC",
+      "mean_increment_difference_pp": 0.5994433740098467,
+      "sd_increment_difference_pp": 4.685569917122265,
+      "paired_differences_pp": [
+        -2.633269107257547,
+        5.973025048169546,
+        -1.541425818882459
+      ],
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "Reuters",
+      "mean_increment_difference_pp": 4.047619047619048,
+      "sd_increment_difference_pp": 0.8333333333333341,
+      "paired_differences_pp": [
+        3.452380952380942,
+        5.0,
+        3.690476190476204
+      ],
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "Cora",
+      "mean_increment_difference_pp": -1.1251758087201154,
+      "sd_increment_difference_pp": 0.9261299009188385,
+      "paired_differences_pp": [
+        -2.0042194092826975,
+        -1.2130801687763793,
+        -0.15822784810126933
+      ],
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "CiteSeer",
+      "mean_increment_difference_pp": -2.7753810756399204,
+      "sd_increment_difference_pp": 0.9154900225710081,
+      "paired_differences_pp": [
+        -3.79637618636756,
+        -2.502157031924064,
+        -2.0276100086281375
+      ],
+      "positive_seeds": 0
+    }
+  ],
+  "sealed_blocks": {
+    "balanced_selection/3Sources/seed23": "2fa73ccb55a1014b299e6148ec24f50b88eb9e0073656b20024863aa584099ea",
+    "balanced_selection/3Sources/seed24": "ace506c6433d02824e9d6d9f2bd63c321d06094b3ca81afe599644e29023464c",
+    "balanced_selection/3Sources/seed25": "24b6124c004bf9143afc606aaa4511c836e4ca48235dd056481b9ebfc790a8c2",
+    "balanced_selection/BBC/seed23": "1d14164cb238f506f6ac90f8b0a6130012996870ac21c392039b296c16973701",
+    "balanced_selection/BBC/seed24": "9de1cad848225aebe3ed92409ad32cf8393eaeba7506600ee4c5f31edf21ece3",
+    "balanced_selection/BBC/seed25": "e0e486ac1f8ce8a74ac80c9254470295ad2ca33ab6f2676d2fc3a8157d65ebff",
+    "balanced_selection/Cora/seed23": "3eafb719624f3774be5ef967cd2e62029195e293a659b1160229b9aa9273270b",
+    "balanced_selection/Cora/seed24": "ef8f5daa4cbd54d550d3de8f074dc5729fa3bcfaf6f3e7b4bccda14c3930b675",
+    "balanced_selection/Cora/seed25": "a82dbbd28b4840c900223ed970e55b2a7bd31139c78b891eb7f8de34e857ae78",
+    "balanced_selection/CiteSeer/seed23": "8bac13445ec464f9d138f368bac6d2fe8a37cd228ec579723a8f72ec7403805f",
+    "balanced_selection/CiteSeer/seed24": "faa8d1758904277b3760f9efd986f37d6090c7e609f650958b8e28f4a94dcce9",
+    "balanced_selection/CiteSeer/seed25": "a01a987e7706097adabcdbf12af8cc867b6633cee0cd7fff00cf5629a7fc5cf4",
+    "balanced_selection/Reuters/seed23": "5c4d8a5413e9ae9fe2b46c79d72ef9823b6f5b4f2959092def4fe01382de77ce",
+    "balanced_selection/Reuters/seed24": "5f3f92e6ca09369f0720fb8e1c1778526daade34dc3cfce49c58b37d9899cfa1",
+    "balanced_selection/Reuters/seed25": "cd7ad2dfc9f89801a0b69f1b351b562478fe2ad4574e85748b68653cd6c09ad2",
+    "native_original/3Sources/seed23": "3d6e7808fa3678e7348be592d45e957e211a54ec38c69db88fcb87435b7a919f",
+    "native_original/3Sources/seed24": "ccd44b81fff5cee8f2eb3395fbc1e4196246618e1f676eade883bc03ebb94575",
+    "native_original/3Sources/seed25": "cd089d65cca90ba2da4762cec5dc2bfe13929f13af88e869f6103adf22147fa9",
+    "native_original/BBC/seed23": "ed36a5b1651acd158561268bf7c03a30fe02977516d7a58a33d57f8187142a7f",
+    "native_original/BBC/seed24": "9905cf1a4d7d7fb42b1d02d2da100df4da10d0f976690f09b08e7ee250ed3fa3",
+    "native_original/BBC/seed25": "c856d0728a83cd404fd49d3a40205ae15eadb97a5cbb2777412f02d322550f87",
+    "native_original/Cora/seed23": "52333d6afad17f240d14ead615c82df798ce74562f30e229a197122cafa242da",
+    "native_original/Cora/seed24": "0bf28a1582ecedc99ef49b6a4b045d7d6bec26d5f1fb933d319237b152c48397",
+    "native_original/Cora/seed25": "a4696c880768043a7296944715d8971786c741f36f2eb7b8ed798e41a8f8f618",
+    "native_original/CiteSeer/seed23": "c0152145fdf46869613117daf4f0582851c77cb40e561779dbbae53e7c2d254f",
+    "native_original/CiteSeer/seed24": "beeebdb58e0ad4d4c0dd964044cf6dc686ba1c4fff720201e363808b514a33f7",
+    "native_original/CiteSeer/seed25": "3e6c7183f8ea86ccd274f5be6904a2688a8ec971d12515f8ffc161a9f5d01a59",
+    "native_original/Reuters/seed23": "d62b918a83cbfa7c6282c3c9d22a78bdd03fdda7538358c6e939798d0c6e78cd",
+    "native_original/Reuters/seed24": "583fd5e54b539c97bc132b504604e100fb05e7f913f971aef265dce52829a63d",
+    "native_original/Reuters/seed25": "09ca3f91a5d86a5f4a76b68a82864da9e26df2a6fc59fb878a1773d44a14874e",
+    "published_selection/3Sources/seed23": "fa2c0705e905f6bd31309f423b59a84a90348f5023c4bc24cc198577e304de71",
+    "published_selection/3Sources/seed24": "a801904145a6567ccf1163823e728ce271a322890c79a86f292086b7fae3517e",
+    "published_selection/3Sources/seed25": "95271fe8a082640e6f81db626ffdadaf76a19006acdff7a5aecb38d2a1f3e10e",
+    "published_selection/BBC/seed23": "dfa55dd2c1b1bf631e0018911a4fa3e5a6f4b283aa9f5940d508073fa8ccf8ea",
+    "published_selection/BBC/seed24": "3caf12f4fee8250301b8daa51574d3a0a0982d749224ba6174cfcff3976b87af",
+    "published_selection/BBC/seed25": "c60116eef06a52fb52f75a7ab05b7964352579a6392a12903447448b6b346f5e",
+    "published_selection/Cora/seed23": "c35d6cf31fb5fdcee186745badb7610b87bf32087f303fa8de016864b93eed4f",
+    "published_selection/Cora/seed24": "7c8ffc48eced6e2038bfa80dd0fcc8c2aa5da8d46a101e8f3a38f0e879352aed",
+    "published_selection/Cora/seed25": "d749bc6fb26097f4e4fb26ed83eefe136d7e2c9ae7ca28e97b3a4f1a7427fa1c",
+    "published_selection/CiteSeer/seed23": "e6ed275caab5d3509b26e381422a1b32ec5ef5d189338c3c7a094c4a1773167e",
+    "published_selection/CiteSeer/seed24": "425551fa50eb488b7f4a497e9cf87cb43b45a3489139028eb140a47a7fa174a1",
+    "published_selection/CiteSeer/seed25": "19c9a5922c85e6ecafa46a28f1b0f41a3fb5282e0a1f229a9567a3aad178fad6",
+    "published_selection/Reuters/seed23": "b0c199bb08a04d6e429ad48b82610d16e830fc2be75f22278634405582186abc",
+    "published_selection/Reuters/seed24": "0f7c8f60b96df87b5fc2e27843a282579d3ab971a3c55051a0a382fba41fd7bb",
+    "published_selection/Reuters/seed25": "7b2d930ce5acef22b1d0a484c80c1be0d9f5f90c95dd18c7ec667347378c87d2"
+  },
+  "source_hashes": {
+    "balanced_selection_summary.json": "aa940eabbe1657b0606514685346e19d71a4cf52139ba7d92573abcd6b7dc8af",
+    "native_original_summary.json": "e4490e9060491fbb36d90cc8a087c886583c9812abe74c772a650c97869de533",
+    "published_selection_summary.json": "56d28e848edbb8b9d303492336cfbb387a2a8783c06253401af8df1525417645",
+    "paper_tables/development_tables.json": "fd6801eb3e1aec4e6b9e9a616495dae807ed839e32e2ca39b7991066e01245ca"
+  },
+  "source_sha256": "f8512442fa940b2b7bee76ce1ae328cb4ae6215c99b10826d2ccfd52eeaa6c72",
+  "scope": "Complete development only, no fits/tuning/confirmation reads. Q is total paid queries. Paired changes describe within-budget-selected pipelines, not causal identification; failures retained, three seeds descriptive."
+}

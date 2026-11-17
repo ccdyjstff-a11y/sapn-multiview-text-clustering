@@ -1,0 +1,18 @@
+{
+  "url": "http://qwone.com/~jason/20Newsgroups/20news-bydate.tar.gz",
+  "checked_utc": "2026-11-17T09:39:45.140930+00:00",
+  "expected_sha256": "8f1b2514ca22a5ade8fbb9cfa5727df95fa587f4c87b786e15c759fa66d95610",
+  "training_performed": false,
+  "preparation_performed": false,
+  "included_in_release": false,
+  "resolved_url": "http://qwone.com/~jason/20Newsgroups/20news-bydate.tar.gz",
+  "http_status": 200,
+  "content_type": "application/x-gzip",
+  "advertised_bytes": "14464277",
+  "status": "downloaded",
+  "bytes": 14464277,
+  "sha256": "8f1b2514ca22a5ade8fbb9cfa5727df95fa587f4c87b786e15c759fa66d95610",
+  "local_file": "20news-bydate_http.tar.gz",
+  "matches_frozen_archive": true,
+  "elapsed_seconds": 9.3279999999977
+}

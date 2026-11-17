@@ -1,0 +1,43 @@
+[
+  {
+    "dataset": "BBC",
+    "url": "https://mlg.ucd.ie/files/datasets/bbc.zip",
+    "status": "request_failed",
+    "error": "<urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1017)>"
+  },
+  {
+    "dataset": "Cora",
+    "url": "https://lig-membres.imag.fr/grimal/data/Cora.tar.gz",
+    "resolved_url": "https://lig-membres.imag.fr/grimal/data/Cora.tar.gz",
+    "status": "downloaded",
+    "bytes": 237550,
+    "sha256": "52e28f37d39751366b46b859cb2bc0ec3757a222552cc24423763fb38509001c",
+    "checked_utc": "2026-11-17T08:51:29.619559+00:00",
+    "matches_local_original": true
+  },
+  {
+    "dataset": "CiteSeer",
+    "url": "https://lig-membres.imag.fr/grimal/data/CiteSeer.tar.gz",
+    "resolved_url": "https://lig-membres.imag.fr/grimal/data/CiteSeer.tar.gz",
+    "status": "downloaded",
+    "bytes": 413805,
+    "sha256": "a8a73135322e9269d760ede375c4d7ffab8a5f26f88b278381c55d6ef393738a",
+    "checked_utc": "2026-11-17T08:51:29.252107+00:00",
+    "matches_local_original": true
+  },
+  {
+    "dataset": "BBC",
+    "checked_date": "2026-11-17",
+    "url": "http://mlg.ucd.ie/files/datasets/bbc.zip",
+    "resolved_url": "http://mlg.ucd.ie/files/datasets/bbc.zip",
+    "status": "downloaded",
+    "bytes": 884338,
+    "sha256": "976a091f7579f65c20b2738829e63a6cbae988ca7af1d7a4dfadefcefd460ca6",
+    "member_sha256": {
+      "bbc.classes": "b477f844381858f5b180d63a08410992e64e919b05f6405ffef778b77f201b5e",
+      "bbc.docs": "602095cdbaf75e5e38216ff5e46e5add909c85d5dbdfa5d853453c360ba42cea",
+      "bbc.mtx": "5d4e5355bdd03b6c6a1eebb8223b5bd864e0ae651c496c135265432c9c471efb",
+      "bbc.terms": "6cb78478185343a0c07500dc270e3a4546b538a3b007c83e128c09ff3197d458"
+    }
+  }
+]

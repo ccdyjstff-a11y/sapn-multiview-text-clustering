@@ -1,0 +1,136 @@
+{
+  "Cora": {
+    "status": "EXACT_MATCH",
+    "checks": {
+      "linqs_content_equals_grimal": true,
+      "linqs_cites_sym_sum_equals_grimal": true,
+      "linqs_labels_plus_one_equal_grimal": true,
+      "grimal_content_equals_prepared": true,
+      "grimal_cites_equals_prepared": true,
+      "linqs_labels_equal_prepared": true
+    },
+    "archive_sha256": "0d4ed463d1627bb7f3e8420effe8f5545fd492ae8f88dab44ce86cee7b26d7e8",
+    "source_url": "https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz",
+    "n": 2708,
+    "documents_matched_by_id": 2708,
+    "raw_directed_lines": 5429,
+    "represented_directed_lines": 5429,
+    "citations_with_absent_content_ids": 0,
+    "omitted_citation_endpoints": [],
+    "original_unique_pairs": 5429,
+    "files_sha256": {
+      "outputs\\SAPN_Text_v4_2_submission\\data\\Cora\\Cora\\documents-mapping.txt": "f37f0f9742d44d5bb365b7a93b5e87d2ed0096605ba6eb9a8b6ac1e1cf02fd47",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\Cora\\Cora\\labels.txt": "88a03f4675a8eb653d619628372c60bb273d28c149739c21886965515390c936",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\Cora\\Cora\\cora_content.mtx": "5455d2e7edee11cff496b2dec78cd7776dc760663e78f93fb8481b04703fe9d9",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\Cora\\Cora\\cora_cites.mtx": "7ad25843b7cb12e7f27ef592cf03491ea808b6f6d9cf546a0e4fed1501e8069f",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\Cora\\Cora\\cora_act.txt": "f6c8f67591eb746e283b9bf70ef3d5aa10a985c2b33ea22bb1bfd088cb85f37b",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\X0.npz": "72ec8923797a0a8931742c00abc13ab14eceec24fa4ac8f0aba5b7779092900a",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\X1.npz": "1dbddda5fb25dcd9d4d675ddd41b0070ab7408fe649917f2597796b80dc5b16c",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\y.npy": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf"
+    },
+    "reconstruction": "Reorder original LINQS content by saved Grimal documents-mapping IDs; match label names to one-based Grimal IDs and zero-based prepared IDs; retain citation edges with both IDs present, then sum directed adjacency and transpose.",
+    "boundary": "Exact numerical provenance, not independent re-annotation; omissions in original citation data are disclosed."
+  },
+  "CiteSeer": {
+    "status": "EXACT_MATCH",
+    "checks": {
+      "linqs_content_equals_grimal": true,
+      "linqs_cites_sym_sum_equals_grimal": true,
+      "linqs_labels_plus_one_equal_grimal": true,
+      "grimal_content_equals_prepared": true,
+      "grimal_cites_equals_prepared": true,
+      "linqs_labels_equal_prepared": true
+    },
+    "archive_sha256": "b02ee7b5d83130f8fd45b59017a76fdae3e998629a1904c2c5e07343a9664685",
+    "source_url": "https://linqs-data.soe.ucsc.edu/public/lbc/citeseer.tgz",
+    "n": 3312,
+    "documents_matched_by_id": 3312,
+    "raw_directed_lines": 4732,
+    "represented_directed_lines": 4715,
+    "citations_with_absent_content_ids": 17,
+    "omitted_citation_endpoints": [
+      [
+        "197556",
+        "282608"
+      ],
+      [
+        "296568",
+        "ghani01hypertext"
+      ],
+      [
+        "38137",
+        "315153"
+      ],
+      [
+        "95786",
+        "haarslev99description"
+      ],
+      [
+        "bertelsen99dynamics",
+        "nielsen00designing"
+      ],
+      [
+        "flach99database",
+        "flach99firstorder"
+      ],
+      [
+        "khardon99relational",
+        "cumby00relational"
+      ],
+      [
+        "kohrs99improving",
+        "kohrs99using"
+      ],
+      [
+        "kohrs99using",
+        "kohrs99improving"
+      ],
+      [
+        "raisamo99evaluating",
+        "cassell02mack"
+      ],
+      [
+        "raisamo99evaluating",
+        "stocky02conveying"
+      ],
+      [
+        "ramampiaro00supporting",
+        "wang01process"
+      ],
+      [
+        "schnattinger98qualitybased",
+        "hahn98ontology"
+      ],
+      [
+        "tobies99pspace",
+        "lutz99complexity"
+      ],
+      [
+        "ware00reaching",
+        "293457"
+      ],
+      [
+        "ware00reaching",
+        "gabbard97taxonomy"
+      ],
+      [
+        "weng95shoslifn",
+        "chen98learningbased"
+      ]
+    ],
+    "original_unique_pairs": 4715,
+    "files_sha256": {
+      "outputs\\SAPN_Text_v4_2_submission\\data\\CiteSeer\\CiteSeer\\documents-mapping.txt": "7b18acd65c1fb3541daa0b27750d19b4723ad4a1fc72c5dd83c62ed18a1d0f3d",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\CiteSeer\\CiteSeer\\labels.txt": "075608d8f4de7d4187ea4e4a2008294da7deec032a6b576c5e128fc6c6cffae8",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\CiteSeer\\CiteSeer\\citeseer_content.mtx": "834cd973a0726db7ad709851a553a89128d62ddc1aa7a2fc089a4b66ce01a5ff",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\CiteSeer\\CiteSeer\\citeseer_cites.mtx": "db51ab231d96b0db44309d1592c93914c7ebc64c182634e86087007b2cd05e54",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\CiteSeer\\CiteSeer\\citeseer_act.txt": "9cbb1063fe78ec6d4b922a2072e6658906fc8a8e392b7a0ea6d037ddc21fcaac",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\X0.npz": "e49a076506f02dec603bbb58514e3d2de22a8d1dba1eabecd3bf5279b6d63a4e",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\X1.npz": "b99365a38904b06217f019bd08fec36e3fbd383f994b2540fed1af21967ddb47",
+      "outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\y.npy": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6"
+    },
+    "reconstruction": "Reorder original LINQS content by saved Grimal documents-mapping IDs; match label names to one-based Grimal IDs and zero-based prepared IDs; retain citation edges with both IDs present, then sum directed adjacency and transpose.",
+    "boundary": "Exact numerical provenance, not independent re-annotation; omissions in original citation data are disclosed."
+  },
+  "auditor_sha256": "c495d147ed64c48ffd1b950494e8b4e2c58d16f0b438280a6ee29eaa89ad0fc7"
+}

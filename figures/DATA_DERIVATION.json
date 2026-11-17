@@ -1,0 +1,51 @@
+{
+  "files": [
+    {
+      "file": "figures/source_data/fig05_source_data.json",
+      "source": "submission_revision_v4/figures/figure_sources.json",
+      "source_sha256": "a358150e40ebe52ff1a6bc6fa0020fc3240b1782c49c2831859f2a6da655a521",
+      "sha256": "80c1e6f77424e6cc172a0c08c2fa7157e6011feb568abfab95ad21a8d460b479",
+      "transform": "Extract named figure data and scientific caption/transformations; omit workstation-path fields"
+    },
+    {
+      "file": "figures/source_data/fig05_objectives.csv",
+      "source": "submission_revision_v4/figures/figure_sources.json#fig05",
+      "source_sha256": "a358150e40ebe52ff1a6bc6fa0020fc3240b1782c49c2831859f2a6da655a521",
+      "sha256": "2a20616dc90a524861e537d21edf7dfd334cbda377dd0957fae5d9b68bdb6375",
+      "rows": 335,
+      "transform": "Flatten existing recorded values only; no fit, rescore, selection or excluded observation"
+    },
+    {
+      "file": "figures/source_data/fig05_residuals.csv",
+      "source": "submission_revision_v4/figures/figure_sources.json#fig05",
+      "source_sha256": "a358150e40ebe52ff1a6bc6fa0020fc3240b1782c49c2831859f2a6da655a521",
+      "sha256": "7f0044c1631aa74257096e0dd0e00e28ba9de601f3e9dc583923549cc7dc3013",
+      "rows": 38,
+      "transform": "Flatten existing recorded values only; no fit, rescore, selection or excluded observation"
+    },
+    {
+      "file": "figures/source_data/fig06_paired_changes.csv",
+      "source": "submission_revision_v4/figures/figure_sources.json#fig06",
+      "source_sha256": "a358150e40ebe52ff1a6bc6fa0020fc3240b1782c49c2831859f2a6da655a521",
+      "sha256": "139a927498da92d3a2c1cf6e8ed909663ba82d00682ae02db17c6db7e6331231",
+      "rows": 60,
+      "transform": "Flatten existing recorded values only; no fit, rescore, selection or excluded observation"
+    },
+    {
+      "file": "figures/source_data/fig08_reference_strengths.csv",
+      "source": "evidence/original/coverage_location_control_v2/summary.json#cells",
+      "source_sha256": "4cb390f8f9f51fa4af617f25ed080c6ea290b69afc047e6d42de81939f5a3c65",
+      "sha256": "77943ed9f6a35fdabc4d71a1917b5b1a94a0ac4b2a9705331f72d3aae634eacd",
+      "rows": 30,
+      "transform": "Flatten existing recorded values only; no fit, rescore, selection or excluded observation"
+    },
+    {
+      "file": "figures/source_data/fig08_paired_ACC.csv",
+      "source": "evidence/original/coverage_location_control_v2/summary.json#paired",
+      "source_sha256": "4cb390f8f9f51fa4af617f25ed080c6ea290b69afc047e6d42de81939f5a3c65",
+      "sha256": "d86a1cfdde4117facb5a59ea8065648f9fadd7af5759afb3ce7211e72a218225",
+      "rows": 30,
+      "transform": "Flatten existing recorded values only; no fit, rescore, selection or excluded observation"
+    }
+  ]
+}

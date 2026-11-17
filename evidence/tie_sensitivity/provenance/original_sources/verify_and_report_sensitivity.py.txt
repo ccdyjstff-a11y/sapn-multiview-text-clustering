@@ -1,0 +1,160 @@
+"""Independent raw-prediction metric and summary check; generate bounded prose."""
+from pathlib import Path
+import os,sys
+sys.dont_write_bytecode=True
+for k in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS','NUMEXPR_NUM_THREADS']:os.environ[k]='1'
+import json,csv,hashlib,math,statistics,collections
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+
+ROOT=Path(__file__).resolve().parent
+EVAL=ROOT/'evaluation';OUT=ROOT/'verification';TEXT=ROOT/'text_and_tables'
+ORIGINAL=ROOT.parents[1]/'review_revision_v9/allocation_repeat'
+MS=['ACC','NMI','ARI','BER_train','BER_unqueried']
+POLICIES=['primary_default','sensitivity_min','sensitivity_max']
+OTHERS=['consensus-only-CV','views-only-CV','consensus-only-at-full-lambda','views-only-at-full-lambda']
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def csvread(p):
+    with Path(p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+def csvsave(p,rr):
+    with p.open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(rr[0]));w.writeheader();w.writerows(rr)
+def raw_metric_check(y,pred,test,qp,qa,ep,ea):
+    true,lab=y[test],pred[test]
+    _,a=np.unique(true,return_inverse=True);_,b=np.unique(lab,return_inverse=True)
+    tab=np.zeros((a.max()+1,b.max()+1),dtype=np.int64);np.add.at(tab,(a,b),1)
+    n=int(tab.sum());ar=tab.sum(1);bc=tab.sum(0)
+    i,j=linear_sum_assignment(-tab);acc=float(tab[i,j].sum()/n)
+    mi=sum((int(tab[i,j])/n)*math.log(int(tab[i,j])*n/(int(ar[i])*int(bc[j]))) for i,j in zip(*np.nonzero(tab)))
+    ht=-sum((int(v)/n)*math.log(int(v)/n) for v in ar if v)
+    hp=-sum((int(v)/n)*math.log(int(v)/n) for v in bc if v)
+    nmi=1. if ht+hp==0 else 2*mi/(ht+hp)
+    pair=lambda v:int(v)*(int(v)-1)/2
+    nij=sum(pair(v) for v in tab.flat);ra=sum(pair(v) for v in ar);cb=sum(pair(v) for v in bc)
+    expected=ra*cb/pair(n);denom=.5*(ra+cb)-expected
+    ari=1. if denom==0 else (nij-expected)/denom
+    def relation(x,ans):
+        positive=np.flatnonzero(ans==1);negative=np.flatnonzero(ans==-1)
+        if not len(positive) or not len(negative):return None
+        wrong_pos=sum(pred[x[t,0]]!=pred[x[t,1]] for t in positive)
+        wrong_neg=sum(pred[x[t,0]]==pred[x[t,1]] for t in negative)
+        return .5*(wrong_pos/len(positive)+wrong_neg/len(negative))
+    return dict(ACC=acc,NMI=nmi,ARI=ari,BER_train=relation(qp,qa),BER_unqueried=relation(ep,ea))
+def main():
+    for name,digest in read(EVAL/'EVALUATION_FREEZE.json').items():assert sha(EVAL/name)==digest
+    OUT.mkdir(exist_ok=True);TEXT.mkdir(exist_ok=True)
+    fits=csvread(EVAL/'unique_fit_metrics_558.csv');logical=csvread(EVAL/'logical_metrics_1500.csv')
+    paired=csvread(EVAL/'paired_five_metrics_6000.csv');summary=csvread(EVAL/'paired_summary_600.csv')
+    cache={};raw_max={m:0. for m in MS};checked=0
+    for r in fits:
+        if r['status']!='ok':continue
+        ds,seed,q=r['dataset'],int(r['seed']),int(r['budget'])
+        if (ds,seed) not in cache:
+            block=ORIGINAL/'runs'/ds/f'seed{seed}'
+            y=np.load(ORIGINAL/'postseal_evaluation'/f'{ds}_labels.npy',allow_pickle=False)
+            with np.load(block/'inputs.npz',allow_pickle=False) as z:test=z['test'].copy();qp=z['pairs'].copy();qa=z['answers'].copy()
+            with np.load(block/'postseal_evaluation_pairs.npz',allow_pickle=False) as z:ep=z['pairs'].copy();ea=z['answers'].copy()
+            cache[ds,seed]=(y,test,qp,qa,ep,ea)
+        y,test,qp,qa,ep,ea=cache[ds,seed]
+        assert sha(r['prediction_path'])==r['prediction_sha256']
+        with np.load(r['prediction_path'],allow_pickle=False) as z:pred=z['labels'].copy()
+        mm=raw_metric_check(y,pred,test,qp[:q],qa[:q],ep,ea)
+        for m in MS:
+            if mm[m] is None:assert r[m]==''
+            else:raw_max[m]=max(raw_max[m],abs(mm[m]-float(r[m])))
+        checked+=1
+    assert max(raw_max.values())<1e-12,raw_max
+    lookup={(r['policy'],r['dataset'],int(r['seed']),int(r['budget']),r['logical_method']):r for r in logical}
+    points={(r['policy'],r['dataset'],int(r['seed']),int(r['budget']),r['comparator'],r['metric']):r for r in paired}
+    summary_errors=[];independent=[]
+    for s in summary:
+        policy,ds,q,other,m=s['policy'],s['dataset'],int(s['budget']),s['comparator'],s['metric']
+        diffs=[];eligible=[]
+        for seed in range(504,514):
+            a=lookup[policy,ds,seed,q,'full-CV'];b=lookup[policy,ds,seed,q,other]
+            v=100*(float(a[m])-float(b[m])) if a[m]!='' and b[m]!='' else None
+            ok=a['eligible']=='True' and b['eligible']=='True' and v is not None
+            p=points[policy,ds,seed,q,other,m]
+            assert (p['eligible']=='True')==ok
+            if v is None:assert p['Full_minus_control_pp']==''
+            else:assert abs(v-float(p['Full_minus_control_pp']))<1e-12
+            diffs.append(v);eligible.append(ok)
+        assert sum(eligible)==int(s['eligible_pairs'])
+        if all(eligible):
+            w=sum(v>1e-12 for v in diffs);t=sum(abs(v)<=1e-12 for v in diffs);l=sum(v< -1e-12 for v in diffs)
+            if m.startswith('BER'):w,l=l,w
+            for key,val in [('mean_pp',statistics.mean(diffs)),('sample_SD_pp',statistics.stdev(diffs)),('median_pp',statistics.median(diffs))]:
+                summary_errors.append(abs(val-float(s[key])))
+            assert [w,t,l]==[int(s[k]) for k in ['wins','ties','losses']]
+            independent.append(dict(policy=policy,dataset=ds,budget=q,comparator=other,metric=m,
+                mean_pp=statistics.mean(diffs),sample_SD_pp=statistics.stdev(diffs),median_pp=statistics.median(diffs),wins=w,ties=t,losses=l))
+    assert max(summary_errors,default=0)<1e-12
+    headlines=csvread(EVAL/'ACC_headlines_6.csv');h={(r['policy'],r['branch']):r for r in headlines}
+    for key,headline in h.items():
+        policy,branch=key
+        group=[r for r in independent if r['policy']==policy and r['metric']=='ACC' and
+            (r['comparator'].endswith('-CV') if branch=='independent_CV' else r['comparator'].endswith('-at-full-lambda'))]
+        assert len(group)==int(headline['complete_contrasts'])
+        assert sum(r['mean_pp']>1e-12 for r in group)==int(headline['positive_mean'])
+        assert sum(abs(r['mean_pp'])<1 for r in group)==int(headline['abs_mean_below_1pp'])
+        assert sum(r['wins']>5 for r in group)==int(headline['majority_seed_wins'])
+    ref={(r['dataset'],r['budget'],r['comparator'],r['metric']):r for r in independent if r['policy']=='primary_default'}
+    reversal_rows=[]
+    for r in independent:
+        if r['policy']=='primary_default':continue
+        p=ref[r['dataset'],r['budget'],r['comparator'],r['metric']]
+        if (r['mean_pp']>1e-12 and p['mean_pp']< -1e-12) or (r['mean_pp']< -1e-12 and p['mean_pp']>1e-12):
+            reversal_rows.append(dict(r,primary_mean_pp=p['mean_pp']))
+    if reversal_rows:csvsave(OUT/'independent_sign_reversals.csv',reversal_rows)
+    csvsave(OUT/'independent_summaries_600.csv',independent)
+    report=dict(verified_raw_prediction_fits=checked,raw_metric_max_absolute_errors=raw_max,
+        paired_points_verified=len(points),complete_summaries_verified=len(independent),summary_max_error=max(summary_errors,default=0),
+        headline_rows_verified=len(headlines),evidence_freeze_sha256=sha(EVAL/'EVALUATION_FREEZE.json'),
+        independent_implementation='Manual contingency MI, entropy, ARI and relation-rate calculations; independent summary reconstruction.',
+        pass_all=True,scoring_or_selection_changed=False)
+    (OUT/'VERIFICATION.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    acc={(r['policy'],r['dataset'],r['budget'],r['comparator']):r for r in independent if r['metric']=='ACC'}
+    changes=read(ROOT/'INDEX_SUMMARY.json')['policy_summary']
+    changed={r['policy']:r['changed_from_primary'] for r in changes}
+    get=lambda p,b:int(h[p,b]['positive_mean'])
+    min_i,max_i=get('sensitivity_min','independent_CV'),get('sensitivity_max','independent_CV')
+    min_f,max_f=get('sensitivity_min','policy_Full_lambda'),get('sensitivity_max','policy_Full_lambda')
+    acc_reversals=[r for r in reversal_rows if r['metric']=='ACC']
+    independent_reversals=[r for r in acc_reversals if r['comparator'].endswith('-CV')]
+    majority_positive=all(v>10 for v in [get('primary_default','independent_CV'),min_i,max_i])
+    exact_count_stable=min_i==max_i==get('primary_default','independent_CV')
+    conclusion=dict(exact_independent_ACC_positive_count_stable=exact_count_stable,
+        majority_of_independent_ACC_contrast_means_positive_under_all_rules=majority_positive,
+        independent_ACC_sign_reversals_across_two_sensitivity_rules=len(independent_reversals),
+        all_ACC_sign_reversals_across_two_sensitivity_rules=len(acc_reversals),
+        interpretation_scope='Only specified min/max rules within original best-CV tie sets, not all rules or other coefficients.',
+        no_p_values=True,not_independent_confirmation=True)
+    (TEXT/'CONCLUSION.json').write_text(json.dumps(conclusion,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    en=('We performed a post hoc sensitivity analysis of the frozen common-candidate allocation study, after its original test results were known. Within each original best-validation-BER tie set (tolerance $10^{-12}$), choosing the smallest or largest relation coefficient changed '+str(changed['sensitivity_min'])+' and '+str(changed['sensitivity_max'])+' of 300 selections, respectively. The original default-first results remain primary. Across the 20 independent-selection ACC contrasts, Full had a positive mean difference in '+str(min_i)+' and '+str(max_i)+' contrasts under the smallest- and largest-coefficient rules, compared with 19 under the original rule. The corresponding counts for controls using each policy\'s Full-selected coefficient were '+str(min_f)+' and '+str(max_f)+', compared with 19 originally. All three policies retain the same data, query streams, eligible folds and coefficient grid. This analysis describes dependence on tie breaking within existing corpora; it supplies neither independent confirmation nor a test-based choice of a preferred policy.\n')
+    zh=('在已知原评估结果后，我们对冻结的共同候选分配研究进行事后敏感性分析。在原最佳验证BER并列集合内（容差$10^{-12}$），分别选择最小与最大关系系数，改变了300次选择中的'+str(changed['sensitivity_min'])+'次与'+str(changed['sensitivity_max'])+'次。原默认优先结果仍为主要结果。在20项独立选参ACC比较中，两种替代规则分别有'+str(min_i)+'项与'+str(max_i)+'项Full平均差为正，原规则为19项；采用各政策Full所选系数的控制分别有'+str(min_f)+'项与'+str(max_f)+'项为正，原规则为19项。三套政策保留相同数据、查询流、有效折和系数网格。这些结果描述既有语料内对并列取舍的依赖，不构成独立确认，也不用于根据测试分数选择有利政策。\n')
+    en+=('The exact 19-of-20 positive-mean count was preserved under both specified alternatives. ' if exact_count_stable else 'The exact 19-of-20 positive-mean count depended on the tie rule. ')
+    en+=('A majority of the independent-selection ACC mean contrasts remained positive under all three rules. ' if majority_positive else 'A majority of positive independent-selection ACC mean contrasts was not retained under every rule. ')
+    en+='These sign counts do not establish uniform improvement across runs, metrics, or untested tie rules.\n'
+    zh+=('两种指定替代规则均保留了19/20项正均值这一精确计数。' if exact_count_stable else '19/20项正均值这一精确计数依赖并列规则。')
+    zh+=('不过，三套规则下独立选参的ACC均值对比均以正差为多数。' if majority_positive else '并非每套规则都保留独立选参ACC均值对比以正差为多数的情形。')
+    zh+='这些符号计数不确立逐运行、多指标或未经测试规则下的普遍改善。\n'
+    (TEXT/'sensitivity_results_en.tex').write_text(en,encoding='utf-8');(TEXT/'sensitivity_results_zh.tex').write_text(zh,encoding='utf-8')
+    labels={'consensus-only-CV':'Consensus CV','views-only-CV':'Views CV','consensus-only-at-full-lambda':r'Consensus $\lambda_F$','views-only-at-full-lambda':r'Views $\lambda_F$'}
+    for lang in ['en','zh']:
+        caption=('Post hoc tie-policy sensitivity. Entries are Full-minus-control ACC differences in percentage points, mean $\\pm$ sample SD over ten paired seeds. Original default-first selection remains primary. Matched controls use the Full coefficient selected separately under each policy.' if lang=='en' else '事后并列政策敏感性。差值为Full减控制的ACC百分点，报告十个配对种子的均值与样本标准差。原默认优先仍为主要结果；同系数控制使用各政策各自选中的Full系数。')
+        lines=[r'\begingroup\small',r'\begin{longtable}{lrlrrr}',r'\caption{'+caption+r'}\label{tab:allocation-tie-sensitivity}\\',r'\toprule',r'Corpus & $Q$ & Comparator & Primary & Min $\lambda$ & Max $\lambda$\\',r'\midrule\endfirsthead',r'\toprule',r'Corpus & $Q$ & Comparator & Primary & Min $\lambda$ & Max $\lambda$\\',r'\midrule\endhead',r'\bottomrule\endfoot']
+        for ds in ['3Sources','BBC','Reuters','Cora','CiteSeer']:
+            for q in [160,400]:
+                for other in OTHERS:
+                    cells=[]
+                    for p in POLICIES:
+                        r=acc.get((p,ds,q,other));cells.append('--' if r is None else f"${r['mean_pp']:+.2f}\\pm{r['sample_SD_pp']:.2f}$")
+                    lines.append(' & '.join([ds.replace('Reuters','Reuters-local'),str(q),labels[other],*cells])+r'\\')
+        lines.extend([r'\end{longtable}',r'\endgroup'])
+        (TEXT/f'sensitivity_ACC_{lang}.tex').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    for folder,name in [(OUT,'VERIFICATION_FREEZE.json'),(TEXT,'TEXT_TABLE_FREEZE.json')]:
+        (folder/name).write_text(json.dumps({p.name:sha(p) for p in sorted(folder.iterdir()) if p.is_file() and p.name!=name},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(verification=report,headlines=headlines,ACC_sign_reversal_count=sum(r['metric']=='ACC' for r in reversal_rows)),ensure_ascii=False,indent=2))
+
+if __name__=='__main__':main()

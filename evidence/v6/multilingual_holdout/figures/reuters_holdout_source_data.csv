@@ -1,0 +1,226 @@
+﻿panel,sample,seed,series,value,units,eligible
+a,1,401,Full,52.5,ACC percent,True
+a,1,402,Full,51.3095238095238,ACC percent,True
+a,1,403,Full,50.71428571428571,ACC percent,True
+a,1,401,SAPN-EQ,59.285714285714285,ACC percent,True
+a,1,402,SAPN-EQ,48.095238095238095,ACC percent,True
+a,1,403,SAPN-EQ,49.523809523809526,ACC percent,True
+a,1,401,CMVNMF,51.07142857142857,ACC percent,True
+a,1,402,CMVNMF,49.166666666666664,ACC percent,True
+a,1,403,CMVNMF,49.642857142857146,ACC percent,True
+a,1,401,NoCorr,52.61904761904762,ACC percent,True
+a,1,402,NoCorr,51.547619047619044,ACC percent,True
+a,1,403,NoCorr,50.83333333333333,ACC percent,True
+a,2,401,Full,54.64285714285714,ACC percent,True
+a,2,402,Full,55.11904761904762,ACC percent,True
+a,2,403,Full,55.714285714285715,ACC percent,True
+a,2,401,SAPN-EQ,58.92857142857143,ACC percent,True
+a,2,402,SAPN-EQ,57.02380952380952,ACC percent,True
+a,2,403,SAPN-EQ,53.57142857142857,ACC percent,True
+a,2,401,CMVNMF,54.166666666666664,ACC percent,True
+a,2,402,CMVNMF,45.714285714285715,ACC percent,True
+a,2,403,CMVNMF,56.785714285714285,ACC percent,True
+a,2,401,NoCorr,55.11904761904762,ACC percent,True
+a,2,402,NoCorr,55.35714285714286,ACC percent,True
+a,2,403,NoCorr,55.47619047619048,ACC percent,True
+a,3,401,Full,52.142857142857146,ACC percent,True
+a,3,402,Full,51.547619047619044,ACC percent,True
+a,3,403,Full,52.261904761904766,ACC percent,True
+a,3,401,SAPN-EQ,52.261904761904766,ACC percent,True
+a,3,402,SAPN-EQ,51.42857142857142,ACC percent,True
+a,3,403,SAPN-EQ,51.547619047619044,ACC percent,True
+a,3,401,CMVNMF,51.78571428571429,ACC percent,True
+a,3,402,CMVNMF,51.3095238095238,ACC percent,True
+a,3,403,CMVNMF,52.023809523809526,ACC percent,True
+a,3,401,NoCorr,52.023809523809526,ACC percent,True
+a,3,402,NoCorr,51.42857142857142,ACC percent,True
+a,3,403,NoCorr,52.142857142857146,ACC percent,True
+a,4,401,Full,51.78571428571429,ACC percent,True
+a,4,402,Full,54.285714285714285,ACC percent,True
+a,4,403,Full,52.5,ACC percent,True
+a,4,401,SAPN-EQ,46.19047619047619,ACC percent,True
+a,4,402,SAPN-EQ,55.11904761904762,ACC percent,True
+a,4,403,SAPN-EQ,55.11904761904762,ACC percent,True
+a,4,401,CMVNMF,52.261904761904766,ACC percent,True
+a,4,402,CMVNMF,53.57142857142857,ACC percent,True
+a,4,403,CMVNMF,53.57142857142857,ACC percent,True
+a,4,401,NoCorr,51.78571428571429,ACC percent,True
+a,4,402,NoCorr,54.166666666666664,ACC percent,True
+a,4,403,NoCorr,52.38095238095239,ACC percent,True
+a,5,401,Full,49.642857142857146,ACC percent,True
+a,5,402,Full,49.76190476190476,ACC percent,True
+a,5,403,Full,50.95238095238095,ACC percent,True
+a,5,401,SAPN-EQ,50.11904761904762,ACC percent,True
+a,5,402,SAPN-EQ,50.11904761904762,ACC percent,True
+a,5,403,SAPN-EQ,49.166666666666664,ACC percent,True
+a,5,401,CMVNMF,49.642857142857146,ACC percent,True
+a,5,402,CMVNMF,50.0,ACC percent,True
+a,5,403,CMVNMF,49.404761904761905,ACC percent,True
+a,5,401,NoCorr,49.76190476190476,ACC percent,True
+a,5,402,NoCorr,49.88095238095238,ACC percent,True
+a,5,403,NoCorr,50.83333333333333,ACC percent,True
+b,1,401,Full,56.07142857142857,ACC percent,True
+b,1,402,Full,54.166666666666664,ACC percent,True
+b,1,403,Full,54.761904761904766,ACC percent,True
+b,1,401,SAPN-EQ,63.095238095238095,ACC percent,True
+b,1,402,SAPN-EQ,49.404761904761905,ACC percent,True
+b,1,403,SAPN-EQ,51.78571428571429,ACC percent,True
+b,1,401,CMVNMF,38.80952380952381,ACC percent,True
+b,1,402,CMVNMF,49.523809523809526,ACC percent,True
+b,1,403,CMVNMF,38.57142857142858,ACC percent,True
+b,1,401,NoCorr,55.47619047619048,ACC percent,True
+b,1,402,NoCorr,55.35714285714286,ACC percent,True
+b,1,403,NoCorr,54.88095238095239,ACC percent,True
+b,2,401,Full,57.85714285714286,ACC percent,True
+b,2,402,Full,60.357142857142854,ACC percent,True
+b,2,403,Full,60.476190476190474,ACC percent,True
+b,2,401,SAPN-EQ,60.476190476190474,ACC percent,True
+b,2,402,SAPN-EQ,58.92857142857143,ACC percent,True
+b,2,403,SAPN-EQ,55.35714285714286,ACC percent,True
+b,2,401,CMVNMF,53.45238095238095,ACC percent,True
+b,2,402,CMVNMF,49.88095238095238,ACC percent,True
+b,2,403,CMVNMF,55.00000000000001,ACC percent,True
+b,2,401,NoCorr,57.97619047619048,ACC percent,True
+b,2,402,NoCorr,60.476190476190474,ACC percent,True
+b,2,403,NoCorr,60.476190476190474,ACC percent,True
+b,3,401,Full,55.595238095238095,ACC percent,True
+b,3,402,Full,54.4047619047619,ACC percent,True
+b,3,403,Full,57.38095238095238,ACC percent,True
+b,3,401,SAPN-EQ,54.166666666666664,ACC percent,True
+b,3,402,SAPN-EQ,54.761904761904766,ACC percent,True
+b,3,403,SAPN-EQ,55.35714285714286,ACC percent,True
+b,3,401,CMVNMF,52.142857142857146,ACC percent,True
+b,3,402,CMVNMF,51.42857142857142,ACC percent,True
+b,3,403,CMVNMF,52.85714285714286,ACC percent,True
+b,3,401,NoCorr,55.714285714285715,ACC percent,True
+b,3,402,NoCorr,54.285714285714285,ACC percent,True
+b,3,403,NoCorr,55.35714285714286,ACC percent,True
+b,4,401,Full,54.52380952380952,ACC percent,True
+b,4,402,Full,58.333333333333336,ACC percent,True
+b,4,403,Full,57.26190476190476,ACC percent,True
+b,4,401,SAPN-EQ,47.38095238095238,ACC percent,True
+b,4,402,SAPN-EQ,57.85714285714286,ACC percent,True
+b,4,403,SAPN-EQ,57.97619047619048,ACC percent,True
+b,4,401,CMVNMF,40.714285714285715,ACC percent,True
+b,4,402,CMVNMF,50.0,ACC percent,True
+b,4,403,CMVNMF,51.90476190476191,ACC percent,True
+b,4,401,NoCorr,55.00000000000001,ACC percent,True
+b,4,402,NoCorr,58.333333333333336,ACC percent,True
+b,4,403,NoCorr,57.49999999999999,ACC percent,True
+b,5,401,Full,50.95238095238095,ACC percent,True
+b,5,402,Full,49.76190476190476,ACC percent,True
+b,5,403,Full,54.285714285714285,ACC percent,True
+b,5,401,SAPN-EQ,50.71428571428571,ACC percent,True
+b,5,402,SAPN-EQ,50.476190476190474,ACC percent,True
+b,5,403,SAPN-EQ,52.142857142857146,ACC percent,True
+b,5,401,CMVNMF,48.92857142857142,ACC percent,True
+b,5,402,CMVNMF,48.80952380952381,ACC percent,True
+b,5,403,CMVNMF,52.261904761904766,ACC percent,True
+b,5,401,NoCorr,50.95238095238095,ACC percent,True
+b,5,402,NoCorr,49.76190476190476,ACC percent,True
+b,5,403,NoCorr,54.52380952380952,ACC percent,True
+c,1,401,Full minus SAPN-EQ,-7.023809523809521,percentage points,True
+c,1,402,Full minus SAPN-EQ,4.761904761904756,percentage points,True
+c,1,403,Full minus SAPN-EQ,2.9761904761904767,percentage points,True
+c,1,401,Full minus CMVNMF,17.261904761904763,percentage points,True
+c,1,402,Full minus CMVNMF,4.642857142857137,percentage points,True
+c,1,403,Full minus CMVNMF,16.190476190476193,percentage points,True
+c,1,401,Full minus NoCorr,0.5952380952380931,percentage points,True
+c,1,402,Full minus NoCorr,-1.1904761904761973,percentage points,True
+c,1,403,Full minus NoCorr,-0.11904761904761862,percentage points,True
+c,2,401,Full minus SAPN-EQ,-2.6190476190476097,percentage points,True
+c,2,402,Full minus SAPN-EQ,1.4285714285714235,percentage points,True
+c,2,403,Full minus SAPN-EQ,5.1190476190476115,percentage points,True
+c,2,401,Full minus CMVNMF,4.404761904761911,percentage points,True
+c,2,402,Full minus CMVNMF,10.476190476190473,percentage points,True
+c,2,403,Full minus CMVNMF,5.476190476190467,percentage points,True
+c,2,401,Full minus NoCorr,-0.11904761904761862,percentage points,True
+c,2,402,Full minus NoCorr,-0.11904761904761862,percentage points,True
+c,2,403,Full minus NoCorr,0.0,percentage points,True
+c,3,401,Full minus SAPN-EQ,1.4285714285714346,percentage points,True
+c,3,402,Full minus SAPN-EQ,-0.357142857142867,percentage points,True
+c,3,403,Full minus SAPN-EQ,2.0238095238095166,percentage points,True
+c,3,401,Full minus CMVNMF,3.452380952380951,percentage points,True
+c,3,402,Full minus CMVNMF,2.9761904761904767,percentage points,True
+c,3,403,Full minus CMVNMF,4.523809523809518,percentage points,True
+c,3,401,Full minus NoCorr,-0.11904761904761862,percentage points,True
+c,3,402,Full minus NoCorr,0.11904761904761862,percentage points,True
+c,3,403,Full minus NoCorr,2.0238095238095166,percentage points,True
+c,4,401,Full minus SAPN-EQ,7.14285714285714,percentage points,True
+c,4,402,Full minus SAPN-EQ,0.4761904761904745,percentage points,True
+c,4,403,Full minus SAPN-EQ,-0.7142857142857229,percentage points,True
+c,4,401,Full minus CMVNMF,13.809523809523805,percentage points,True
+c,4,402,Full minus CMVNMF,8.333333333333337,percentage points,True
+c,4,403,Full minus CMVNMF,5.357142857142849,percentage points,True
+c,4,401,Full minus NoCorr,-0.4761904761904856,percentage points,True
+c,4,402,Full minus NoCorr,0.0,percentage points,True
+c,4,403,Full minus NoCorr,-0.23809523809523725,percentage points,True
+c,5,401,Full minus SAPN-EQ,0.23809523809523725,percentage points,True
+c,5,402,Full minus SAPN-EQ,-0.7142857142857117,percentage points,True
+c,5,403,Full minus SAPN-EQ,2.1428571428571352,percentage points,True
+c,5,401,Full minus CMVNMF,2.023809523809522,percentage points,True
+c,5,402,Full minus CMVNMF,0.9523809523809545,percentage points,True
+c,5,403,Full minus CMVNMF,2.0238095238095166,percentage points,True
+c,5,401,Full minus NoCorr,0.0,percentage points,True
+c,5,402,Full minus NoCorr,0.0,percentage points,True
+c,5,403,Full minus NoCorr,-0.23809523809523725,percentage points,True
+d,1,401,Full,3.57142857142857,percentage points,True
+d,1,402,Full,2.857142857142858,percentage points,True
+d,1,403,Full,4.047619047619055,percentage points,True
+d,1,401,SAPN-EQ,3.809523809523807,percentage points,True
+d,1,402,SAPN-EQ,1.3095238095238104,percentage points,True
+d,1,403,SAPN-EQ,2.261904761904765,percentage points,True
+d,1,401,CMVNMF,-12.261904761904757,percentage points,True
+d,1,402,CMVNMF,0.3571428571428614,percentage points,True
+d,1,403,CMVNMF,-11.071428571428571,percentage points,True
+d,1,401,NoCorr,2.857142857142858,percentage points,True
+d,1,402,NoCorr,3.809523809523818,percentage points,True
+d,1,403,NoCorr,4.047619047619055,percentage points,True
+d,2,401,Full,3.214285714285725,percentage points,True
+d,2,402,Full,5.23809523809523,percentage points,True
+d,2,403,Full,4.761904761904756,percentage points,True
+d,2,401,SAPN-EQ,1.5476190476190421,percentage points,True
+d,2,402,SAPN-EQ,1.904761904761909,percentage points,True
+d,2,403,SAPN-EQ,1.7857142857142905,percentage points,True
+d,2,401,CMVNMF,-0.7142857142857117,percentage points,True
+d,2,402,CMVNMF,4.166666666666669,percentage points,True
+d,2,403,CMVNMF,-1.7857142857142794,percentage points,True
+d,2,401,NoCorr,2.857142857142858,percentage points,True
+d,2,402,NoCorr,5.1190476190476115,percentage points,True
+d,2,403,NoCorr,4.999999999999993,percentage points,True
+d,3,401,Full,3.452380952380951,percentage points,True
+d,3,402,Full,2.857142857142858,percentage points,True
+d,3,403,Full,5.1190476190476115,percentage points,True
+d,3,401,SAPN-EQ,1.904761904761898,percentage points,True
+d,3,402,SAPN-EQ,3.3333333333333437,percentage points,True
+d,3,403,SAPN-EQ,3.809523809523818,percentage points,True
+d,3,401,CMVNMF,0.3571428571428559,percentage points,True
+d,3,402,CMVNMF,0.11904761904761862,percentage points,True
+d,3,403,CMVNMF,0.8333333333333304,percentage points,True
+d,3,401,NoCorr,3.6904761904761885,percentage points,True
+d,3,402,NoCorr,2.857142857142858,percentage points,True
+d,3,403,NoCorr,3.214285714285714,percentage points,True
+d,4,401,Full,2.7380952380952284,percentage points,True
+d,4,402,Full,4.047619047619055,percentage points,True
+d,4,403,Full,4.761904761904756,percentage points,True
+d,4,401,SAPN-EQ,1.1904761904761862,percentage points,True
+d,4,402,SAPN-EQ,2.7380952380952395,percentage points,True
+d,4,403,SAPN-EQ,2.857142857142858,percentage points,True
+d,4,401,CMVNMF,-11.547619047619051,percentage points,True
+d,4,402,CMVNMF,-3.57142857142857,percentage points,True
+d,4,403,CMVNMF,-1.6666666666666607,percentage points,True
+d,4,401,NoCorr,3.214285714285714,percentage points,True
+d,4,402,NoCorr,4.166666666666674,percentage points,True
+d,4,403,NoCorr,5.1190476190476115,percentage points,True
+d,5,401,Full,1.3095238095238049,percentage points,True
+d,5,402,Full,0.0,percentage points,True
+d,5,403,Full,3.3333333333333326,percentage points,True
+d,5,401,SAPN-EQ,0.5952380952380931,percentage points,True
+d,5,402,SAPN-EQ,0.3571428571428559,percentage points,True
+d,5,403,SAPN-EQ,2.9761904761904825,percentage points,True
+d,5,401,CMVNMF,-0.7142857142857173,percentage points,True
+d,5,402,CMVNMF,-1.1904761904761918,percentage points,True
+d,5,403,CMVNMF,2.857142857142858,percentage points,True
+d,5,401,NoCorr,1.1904761904761862,percentage points,True
+d,5,402,NoCorr,-0.11904761904761862,percentage points,True
+d,5,403,NoCorr,3.6904761904761885,percentage points,True

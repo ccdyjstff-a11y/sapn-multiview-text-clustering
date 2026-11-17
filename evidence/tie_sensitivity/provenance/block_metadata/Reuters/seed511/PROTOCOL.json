@@ -1,0 +1,83 @@
+{
+  "version": "portable_allocation_v1",
+  "seed": 511,
+  "budgets": [
+    160,
+    400
+  ],
+  "n": 1200,
+  "k": 6,
+  "views": 5,
+  "dataset": "Reuters",
+  "methods": [
+    "full",
+    "consensus-only",
+    "views-only"
+  ],
+  "logical_methods": [
+    "full-CV",
+    "consensus-only-CV",
+    "views-only-CV",
+    "consensus-only-at-full-lambda",
+    "views-only-at-full-lambda"
+  ],
+  "lambda_grid_default_first": [
+    20.0,
+    2.0,
+    200.0
+  ],
+  "eta": {
+    "full": 0.5,
+    "consensus-only": 0.0,
+    "views-only": 1.0
+  },
+  "config": {
+    "mu": 0.001,
+    "lambda_c": 0.2,
+    "lambda_r": "auto",
+    "lambda_g": 0.0,
+    "gamma": 2.0,
+    "negative_loss": "overlap",
+    "private_simplex": "endpoints",
+    "geometry_weight": 0.1,
+    "reference_strength": "coverage",
+    "supervision_weighting": "fixed",
+    "reliability": "none",
+    "endpoint_interval": 5,
+    "tol_J": 1e-05,
+    "tol_kkt": 0.001
+  },
+  "prepared_file_sha256": {
+    "metadata.json": "5b4b24e391f24b10c03b01287aabec4334e4febb1a75a835ba7a465872e8cf45",
+    "X0.npz": "7ceed98b5699dc6698384e406e55efefb2f621683ddc4b39fee59f5057b2f8a4",
+    "X1.npz": "72c0e5d5ecf9501d850e5e12047a2190aa697c0c4ea5db14a0aee2c01388253b",
+    "X2.npz": "ab0424020ff4ede5f804600755be153ab65c068bff14c1c37e459d418dc86ef6",
+    "X3.npz": "3bdacb4bbdce5cf0f4800e58dd3ae6190da2f63b820469f8f48c38b1cb426948",
+    "X4.npz": "5de1c560559bab8bd8d18e8f0a4fad96ed97a583c5be1182fa9ba0e89aaab503",
+    "MV_graph.npz": "ff28a28bfd3b5d259bd9c37d84e556f1c24df51cbafb424d220c9e7018262ee4"
+  },
+  "paid_query_sha256": "5d05afbdf6c43eb4217ad216a74ba74c7849e87c820f9e099fad5749625ba3ac",
+  "source_sha256": {
+    "allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+    "allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+    "CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+    "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+    "allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+    "run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+    "score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+    "SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+  },
+  "software": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "selection": "Original same eligible node-disjoint two-fold mean BER; every fold converged; [20,2,200]; 1e-12 default-first ties; no Q/Qf scaling.",
+  "solver": "Unmodified fit_allocation factory: 200/1000/4000 stages, original tolerances and endpoint schedule.",
+  "boundary": "Only nonnegative views, known k, graph, initialization and paid relationship answers enter fitting. No class vector accepted. Separate score command requires every requested logical final and validation artifact sealed.",
+  "final_logical_records": 10,
+  "maximum_validation_fits": 36,
+  "maximum_final_fits": 10
+}

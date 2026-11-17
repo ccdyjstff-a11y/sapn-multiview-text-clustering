@@ -1,0 +1,1430 @@
+{
+  "status": "DRAFT_SOURCE_ONLY_NOT_FROZEN_NOT_AUTHORIZED_TO_RUN",
+  "question": "Does equal nominal supervision mass allocated to consensus and views remain useful under identical endpoint candidates and independent query-only selection on ten previously unused randomizations?",
+  "datasets": [
+    "3Sources",
+    "BBC",
+    "Reuters",
+    "Cora",
+    "CiteSeer"
+  ],
+  "input_catalog": {
+    "3Sources": {
+      "n": 169,
+      "k": 6,
+      "views": 3,
+      "features": [
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_3Sources\\X0.npz",
+          "sha256": "2b33d42004ddaa2bd85d84c2e3b895683f067fc55f65b21464cdd028d8a31bcc"
+        },
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_3Sources\\X1.npz",
+          "sha256": "e5317f8c96551de0fcf64a46ef467a72a6fc39410ba3da9009de617ac61cf528"
+        },
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_3Sources\\X2.npz",
+          "sha256": "aeadc8076f1a0897c1588609b6edfac5491b2383401109132837b91c971cc6b9"
+        }
+      ],
+      "graph": {
+        "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\results\\3Sources\\geometry_graph.npz",
+        "sha256": "18fc3750ad16a5c3a50ccb810f90f208793608a0a54148938198d8bfc77cea2f"
+      },
+      "oracle_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_3Sources\\y.npy",
+      "oracle_sha256": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1"
+    },
+    "BBC": {
+      "n": 2225,
+      "k": 5,
+      "views": 2,
+      "features": [
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_BBC\\X0.npz",
+          "sha256": "de63f206c6cfda0bc8a8fba3920f59cff2848ed42aa91078bcd85c38c04314ad"
+        },
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_BBC\\X1.npz",
+          "sha256": "9911d5863649f35492bf9fcf3bddb571e0b8dab6707f728bd097c38268fb93a6"
+        }
+      ],
+      "graph": {
+        "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\results\\BBC\\geometry_graph.npz",
+        "sha256": "9bdc8f9fc9976ffc239ee1316299b9ae4deec30897fcc836f4e192ad3dfca635"
+      },
+      "oracle_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_BBC\\y.npy",
+      "oracle_sha256": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11"
+    },
+    "Reuters": {
+      "n": 1200,
+      "k": 6,
+      "views": 5,
+      "features": [
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_MVC_v2\\data\\Reuters-1200.mat",
+          "sha256": "cf549b72a66d7418a639a940899993c052bab9ec868fd493451cf85cd0d81d14"
+        }
+      ],
+      "graph": {
+        "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\reuters_development\\geometry_graph.npz",
+        "sha256": "ff28a28bfd3b5d259bd9c37d84e556f1c24df51cbafb424d220c9e7018262ee4"
+      },
+      "oracle_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_MVC_v2\\data\\Reuters-1200.mat",
+      "oracle_sha256": "cf549b72a66d7418a639a940899993c052bab9ec868fd493451cf85cd0d81d14"
+    },
+    "Cora": {
+      "n": 2708,
+      "k": 7,
+      "views": 2,
+      "features": [
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\X0.npz",
+          "sha256": "72ec8923797a0a8931742c00abc13ab14eceec24fa4ac8f0aba5b7779092900a"
+        },
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\X1.npz",
+          "sha256": "1dbddda5fb25dcd9d4d675ddd41b0070ab7408fe649917f2597796b80dc5b16c"
+        }
+      ],
+      "graph": {
+        "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\results\\Cora\\geometry_graph.npz",
+        "sha256": "0d68183511c9547ef28d4a0c1dee13c3c1908a883daf502130e054408b82041a"
+      },
+      "oracle_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora\\y.npy",
+      "oracle_sha256": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf"
+    },
+    "CiteSeer": {
+      "n": 3312,
+      "k": 6,
+      "views": 2,
+      "features": [
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\X0.npz",
+          "sha256": "e49a076506f02dec603bbb58514e3d2de22a8d1dba1eabecd3bf5279b6d63a4e"
+        },
+        {
+          "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\X1.npz",
+          "sha256": "b99365a38904b06217f019bd08fec36e3fbd383f994b2540fed1af21967ddb47"
+        }
+      ],
+      "graph": {
+        "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\results\\CiteSeer\\geometry_graph.npz",
+        "sha256": "34665caa9bb87be19bd1a436429670df036331bd3c6d3fa4357e1bb3d609f0da"
+      },
+      "oracle_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer\\y.npy",
+      "oracle_sha256": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6"
+    }
+  },
+  "new_seeds": [
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513
+  ],
+  "old_seeds_descriptive_only": [
+    501,
+    502,
+    503
+  ],
+  "budgets": [
+    160,
+    400
+  ],
+  "methods": {
+    "full": 0.5,
+    "consensus-only": 0.0,
+    "views-only": 1.0
+  },
+  "lambda_grid_default_first": [
+    20.0,
+    2.0,
+    200.0
+  ],
+  "query_design": {
+    "pool_fraction": 0.3,
+    "pool_seed_offset": 21000,
+    "stream_seed_offset": 31000,
+    "fold_seed_offset": 41000,
+    "evaluation_pair_offset": 51000,
+    "nested_budget_prefix": true,
+    "total_distinct_answers_per_block": 400,
+    "no_answer_sign_balancing": true,
+    "folds": "Original two-fold node-disjoint eligibility and default-first tie/fallback; all paid answers available to final fit; no Q/Qf scaling"
+  },
+  "scope": {
+    "blocks": 50,
+    "corpus_seed_budget_conditions": 100,
+    "logical_finals": 500,
+    "maximum_CV_fits": 1800,
+    "minimum_unique_final_fits_if_all_blocks_execute": 300,
+    "maximum_unique_final_fits": 500,
+    "maximum_unique_optimization_tasks": 2300,
+    "maximum_factory_zero_iteration_reconstructions": 4600,
+    "maximum_optimization_stage_entrypoints": 6900,
+    "explanation": "One optimization task calls the original factory: two max_iter=0 reconstructions plus two stages, with a third continuation only when required. CV count falls if folds are ineligible; same-signature logical finals reuse one unique fit."
+  },
+  "statistics": {
+    "primary": "20 within-corpus/budget paired ACC differences, Full-CV minus each single-level independently CV-selected method; ten new seeds only",
+    "secondary": "20 matched-new-Full-lambda controls plus NMI/ARI and paid/unqueried BER; all 500 logical rows and selections retained",
+    "summaries": "All ten paired points, mean, sample SD, median, range, wins/ties/losses and eligible denominator",
+    "complete_primary": "All 10 paired outcomes numerically eligible and finite; otherwise Incomplete, with available raw outcomes retained",
+    "p_values": "Not planned; no stars or significance claims. Do not activate a test after inspecting new scores.",
+    "old_seeds": "Report separately by solver AND selection policy. Old native results differ in solver; old common diagnostic uses native-selected lambdas, whereas new repeats select lambdas under the common solver. Do not pool either old result with new10 into a single13-seed mean. No extra old3 CV is planned just to permit pooling.",
+    "generalization": "Repeated randomizations conditional on five fixed development corpora, known k, transductive features and simulated answers; not independent new-corpus confirmation"
+  },
+  "source_plan": {
+    "unchanged_portable_files": [
+      "allocation_models.py",
+      "query_protocol.py",
+      "init_warm.py",
+      "allocation_io.py",
+      "run_allocation.py",
+      "score_allocation.py"
+    ],
+    "only_solver_change": "Use qualified common allocation_core.py and its CORE_DERIVATION.json; rebuild source provenance truthfully",
+    "package_sha256": {
+      "allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+      "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+      "allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+      "run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+      "score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+      "allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+      "CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+      "SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+    },
+    "source_builder_sha256": "8130e75aa633e490d22f5c6404594133ba4feebb0a4ec7710801bb84a99fc0b4",
+    "qualification_gap": "Old portable real equivalence was only original-core 3Sources/501/Q160. New global wrapper/source package still needs independent qualification before freeze."
+  },
+  "orchestration_needed": {
+    "prepare": "After whole-study freeze only: export original feature values and frozen MV graph once per corpus; separate paid-answer oracle step per seed; warm init inside original runner",
+    "single_worker": "One lightweight dispatcher, exclusive study lock, isolated original CLI per block; BLAS=1, 3GiB launch/resume,2GiB pause; own-child cleanup/receipts",
+    "resume": "Reuse only complete hash-verified original portable fit terminals; block restart preflight rejects identity/partial state without diagnostics or failure receipt. No silent partial-state refit.",
+    "failure": "Retain every planned condition; no replacement seed. Explicit block/fit failures remain in all500 ledger; incomplete groups are not silently summarized.",
+    "seal": "Validate all50 blocks, all500 logical outcomes, all CV/selection/input/source artifacts; global seal after last scheduled terminal",
+    "score": "Independent PRE_SCORE PASS bound to global protocol+seal before any new benchmark metric. The unchanged per-block scoring CLI must be invoked only by a global-gated outer scorer."
+  },
+  "runtime": {
+    "old_CV_seconds": 2617.313406699919,
+    "old_final_seconds": 1358.0789044000558,
+    "scaled_CV_fit_minutes": 145.40630037221774,
+    "scaled_final_fit_minutes": 75.44882802222533,
+    "total_at_old_reuse_ratio_fit_minutes": 220.85512839444306,
+    "total_with_500_finals_at_old_mean_fit_minutes": 242.9694400561298,
+    "caveat": "Not a wall-time guarantee or upper bound. Common candidates, folds, initialization, convergence, source I/O and memory waits can change cost. Original peak RSS unmeasured; new dispatcher should log sampled child RSS."
+  },
+  "stop_rules": {
+    "before_start": "Launch only if corrected solver qualification and global wrapper audit pass and manuscript still needs new-randomization evidence of independent CV allocation. No numeric ACC trigger.",
+    "after_freeze": "Complete planned scope irrespective of score direction; no new seeds beyond513, lambda grid changes, corpus deletion or extra eta values.",
+    "safety": "Infrastructure failure causes explicit pause/failed terminal; no score-based stopping or silent seed replacement.",
+    "completion": "Once all500 outcomes sealed, independently audited, scored and raw paired tables independently recomputed, close this repeat study; do not add repeats because conclusions are weak."
+  },
+  "block_commands": [
+    {
+      "dataset": "3Sources",
+      "seed": 504,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed504.npz",
+        "--seed",
+        "504",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed504"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 505,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed505.npz",
+        "--seed",
+        "505",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed505"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 506,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed506.npz",
+        "--seed",
+        "506",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed506"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 507,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed507.npz",
+        "--seed",
+        "507",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed507"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 508,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed508.npz",
+        "--seed",
+        "508",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed508"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 509,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed509.npz",
+        "--seed",
+        "509",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed509"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 510,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed510.npz",
+        "--seed",
+        "510",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed510"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 511,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed511.npz",
+        "--seed",
+        "511",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed511"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 512,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed512.npz",
+        "--seed",
+        "512",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed512"
+      ]
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 513,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\3Sources",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\3Sources\\seed513.npz",
+        "--seed",
+        "513",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\3Sources\\seed513"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 504,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed504.npz",
+        "--seed",
+        "504",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed504"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 505,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed505.npz",
+        "--seed",
+        "505",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed505"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 506,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed506.npz",
+        "--seed",
+        "506",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed506"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 507,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed507.npz",
+        "--seed",
+        "507",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed507"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 508,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed508.npz",
+        "--seed",
+        "508",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed508"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 509,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed509.npz",
+        "--seed",
+        "509",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed509"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 510,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed510.npz",
+        "--seed",
+        "510",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed510"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 511,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed511.npz",
+        "--seed",
+        "511",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed511"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 512,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed512.npz",
+        "--seed",
+        "512",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed512"
+      ]
+    },
+    {
+      "dataset": "BBC",
+      "seed": 513,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\BBC",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\BBC\\seed513.npz",
+        "--seed",
+        "513",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\BBC\\seed513"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 504,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed504.npz",
+        "--seed",
+        "504",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed504"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 505,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed505.npz",
+        "--seed",
+        "505",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed505"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 506,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed506.npz",
+        "--seed",
+        "506",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed506"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 507,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed507.npz",
+        "--seed",
+        "507",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed507"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 508,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed508.npz",
+        "--seed",
+        "508",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed508"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 509,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed509.npz",
+        "--seed",
+        "509",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed509"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 510,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed510.npz",
+        "--seed",
+        "510",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed510"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 511,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed511.npz",
+        "--seed",
+        "511",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed511"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 512,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed512.npz",
+        "--seed",
+        "512",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed512"
+      ]
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 513,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Reuters",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Reuters\\seed513.npz",
+        "--seed",
+        "513",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Reuters\\seed513"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 504,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed504.npz",
+        "--seed",
+        "504",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed504"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 505,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed505.npz",
+        "--seed",
+        "505",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed505"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 506,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed506.npz",
+        "--seed",
+        "506",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed506"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 507,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed507.npz",
+        "--seed",
+        "507",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed507"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 508,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed508.npz",
+        "--seed",
+        "508",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed508"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 509,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed509.npz",
+        "--seed",
+        "509",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed509"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 510,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed510.npz",
+        "--seed",
+        "510",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed510"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 511,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed511.npz",
+        "--seed",
+        "511",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed511"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 512,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed512.npz",
+        "--seed",
+        "512",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed512"
+      ]
+    },
+    {
+      "dataset": "Cora",
+      "seed": 513,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\Cora",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\Cora\\seed513.npz",
+        "--seed",
+        "513",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\Cora\\seed513"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 504,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed504.npz",
+        "--seed",
+        "504",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed504"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 505,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed505.npz",
+        "--seed",
+        "505",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed505"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 506,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed506.npz",
+        "--seed",
+        "506",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed506"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 507,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed507.npz",
+        "--seed",
+        "507",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed507"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 508,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed508.npz",
+        "--seed",
+        "508",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed508"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 509,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed509.npz",
+        "--seed",
+        "509",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed509"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 510,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed510.npz",
+        "--seed",
+        "510",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed510"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 511,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed511.npz",
+        "--seed",
+        "511",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed511"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 512,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed512.npz",
+        "--seed",
+        "512",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed512"
+      ]
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 513,
+      "budgets": [
+        160,
+        400
+      ],
+      "logical_finals": 10,
+      "command": [
+        "D:/MVC/envs/mvc/python.exe",
+        "-I",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py",
+        "--prepared-directory",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\prepared\\CiteSeer",
+        "--paid-queries",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\paid_queries\\CiteSeer\\seed513.npz",
+        "--seed",
+        "513",
+        "--budgets",
+        "160,400",
+        "--output",
+        "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\runs\\CiteSeer\\seed513"
+      ]
+    }
+  ]
+}

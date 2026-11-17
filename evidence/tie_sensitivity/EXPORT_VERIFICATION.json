@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "new_prediction_files": 172,
+  "reused_prediction_references": 386,
+  "all_reused_release_predictions_hash_verified": true,
+  "unique_final_fits": 558,
+  "choices": 900,
+  "logical_records": 1500,
+  "paired_points": 6000,
+  "summary_groups": 600,
+  "canonicalization_checks": {
+    "logical_metrics_1500.csv": 1500,
+    "unique_fit_metrics_558.csv": 558
+  },
+  "raw_features_included": false,
+  "full_class_truth_vectors_included": false,
+  "full_optimizer_states_included": false,
+  "prediction_npz_keys": [
+    "labels (predicted cluster IDs)",
+    "H",
+    "P (paid positive pairs)",
+    "N (paid negative pairs)"
+  ],
+  "original_R2_report_hash_unchanged": true,
+  "scoring_code_frozen_before_new_scores_verified": true,
+  "final_seal_sha256": "e354d24b19b675625ddcd2a6aba4cf12bc3aaf71bca4efe0530ecdc81d1bf744",
+  "evaluation_freeze_sha256": "afa67e00b70a94d725d0ba5712630b54966e5af1de0d27c11a5aed2ab2d580dd",
+  "independent_verification_sha256": "33f7c93f0760877a1bd05df7e1269172a810c5ad731ffd65e41bc05605079d3d",
+  "omitted_sealed_members": 242,
+  "included_sealed_members": 586
+}

@@ -1,0 +1,67 @@
+"""Compare the real relocated main-study replay with its sealed original."""
+from pathlib import Path
+import json,hashlib
+import numpy as np
+from scipy import sparse
+
+ROOT=Path(__file__).resolve().parent
+R=ROOT/'main_instance_reproduction';NEW=R/'fit'
+OLD=ROOT.parent/'review_revision_v9/allocation_repeat/runs/3Sources/seed504'
+def read(p):return json.loads(Path(p).read_text('utf8'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+assert read(R/'EXECUTION_COMPLETED.json')['source_files_unchanged']
+assert (NEW/'GLOBAL_PREDICTIONS_SEALED.json').exists()
+checks=[];arrays=0
+for p in sorted(NEW.glob('Q160*.npz')):
+    old=OLD/p.name
+    assert old.is_file(),p
+    with np.load(p,allow_pickle=False) as a,np.load(old,allow_pickle=False) as b:
+        assert a.files==b.files
+        for key in a.files:
+            assert np.array_equal(a[key],b[key]),(p.name,key)
+            arrays+=1
+    checks.append(dict(file=p.name,elementwise_equal=True,serialized_equal=sha(p)==sha(old)))
+inputs=[]
+with np.load(NEW/'inputs.npz',allow_pickle=False) as a,np.load(OLD/'inputs.npz',allow_pickle=False) as b:
+    assert a.files==b.files
+    for key in a.files:
+        assert np.array_equal(a[key],b[key]),('inputs',key)
+        inputs.append(key)
+graph_equal=(sparse.load_npz(NEW/'used_graph.npz')-sparse.load_npz(OLD/'used_graph.npz')).nnz==0
+assert graph_equal
+ignored={'seconds','identity_sha256'}
+def numeric(x):
+    if isinstance(x,dict):return {k:numeric(v) for k,v in x.items() if k not in ignored}
+    if isinstance(x,list):return [numeric(v) for v in x]
+    return x
+diag=[]
+for p in sorted(NEW.glob('Q160*_diagnostics.json')):
+    assert numeric(read(p))==numeric(read(OLD/p.name)),p.name
+    diag.append(p.name)
+selections=[]
+for p in sorted(NEW.glob('*_selection.json')):
+    assert numeric(read(p))==numeric(read(OLD/p.name)),p.name
+    d=read(p);selections.append(dict(file=p.name,index=d['index'],value=d['value'],eligible_folds=d['eligible_folds']))
+metrics=['ACC','NMI','ARI','BER_train','BER_unqueried'];newrows=read(NEW/'evaluation.json');oldrows=[r for r in read(OLD/'evaluation.json') if r['budget']==160]
+assert len(newrows)==len(oldrows)==5
+maxdiff=0.
+for r in newrows:
+    o=next(x for x in oldrows if x['method']==r['method'])
+    assert numeric(r)==numeric(o),(r['method'],'record')
+    for m in metrics:maxdiff=max(maxdiff,abs(r[m]-o[m]))
+with np.load(NEW/'inputs.npz',allow_pickle=False) as q:
+    y=np.load(R/'prepared/labels_FOR_ORACLE_AND_SEALED_SCORING_ONLY.npy',allow_pickle=False)
+    assert np.array_equal(q['answers'],np.where(y[q['pairs'][:,0]]==y[q['pairs'][:,1]],1,-1))
+report=dict(status='PASS',corpus='3Sources',seed=504,budget=160,
+    raw_source=read(R/'PUBLIC_SOURCE.json'),preparation=read(R/'PREPARATION_IDENTITY.json'),
+    fit_files=len(checks),fit_array_checks=arrays,all_fit_arrays_elementwise_equal=True,
+    all_serialized_predictions_and_states_equal=all(x['serialized_equal'] for x in checks),
+    input_arrays_equal=inputs,rebuilt_graph_equal=True,
+    diagnostics_equal=len(diag),diagnostic_exclusions=sorted(ignored),
+    selections=selections,logical_final_results=5,eligible_final_results=sum(r['converged'] for r in newrows),
+    metric_values=25,max_metric_difference=maxdiff,checks=checks,
+    protocol_sha256=sha(R/'PROTOCOL.json'),script_sha256=sha(__file__),
+    source_files_unchanged=True,
+    scope='Fresh public archive -> rebuilt matrices -> fresh warm start and graph -> 18 validation fits and 4 unique final fits -> 5 sealed logical finals -> all five metrics. Exact identities are within the recorded numerical environment. This reproduces one existing main-study instance and does not add independent performance observations.')
+(R/'VERIFICATION.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
+print(json.dumps({k:v for k,v in report.items() if k not in ['checks','preparation']},ensure_ascii=False,indent=2))

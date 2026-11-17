@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "beec01f12054ec92588930012bf0d88c9129a8e938a13ca31938f12bd9c4691b",
+  "inputs_sha256": "cc907560c99d26e85f63628cc7e6a48d70be5075ee78dba9cefc9df81e361a01",
+  "graph_sha256": "338ed3eb0e196cfa468faef3159e1725751e3797bfa446b543fd53a4899bb6b2",
+  "initialization": "original warm_init, max_iter=200",
+  "warnings": [
+    "Maximum number of iterations 200 reached. Increase it to improve convergence."
+  ],
+  "label_vector_stored": false
+}

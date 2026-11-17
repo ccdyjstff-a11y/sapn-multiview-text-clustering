@@ -1,0 +1,4213 @@
+{
+  "status": "PASS",
+  "scope": "Historical prediction rescoring, not optimizer rerunning",
+  "predictions": 210,
+  "metric_comparisons": 630,
+  "max_abs_error": 1.1102230246251565e-16,
+  "manifest_sha256": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd",
+  "scorer_sha256": "6e17694bc31e3710d8361f662335b73d4ba323bd64d93bcc3dcf7cf0e0e967db",
+  "records": [
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7288135593220338,
+        "NMI": 0.666349657499675,
+        "ARI": 0.6133465686642656
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8305084745762712,
+        "NMI": 0.7978753655323659,
+        "ARI": 0.7625336749105204
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8983050847457628,
+        "NMI": 0.8144656109339208,
+        "ARI": 0.8316347329800244
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9491525423728814,
+        "NMI": 0.8903226815762362,
+        "ARI": 0.8938074013023335
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.6186440677966102,
+        "NMI": 0.4728943068221274,
+        "ARI": 0.43371753179024475
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.6186440677966102,
+        "NMI": 0.47810112053774967,
+        "ARI": 0.4380342037162891
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7627118644067796,
+        "NMI": 0.6139648713275283,
+        "ARI": 0.6364853525163263
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8050847457627118,
+        "NMI": 0.7652704809774158,
+        "ARI": 0.7276119058298496
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7457627118644068,
+        "NMI": 0.6733100211718057,
+        "ARI": 0.6854139756538007
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7288135593220338,
+        "NMI": 0.7016135277580913,
+        "ARI": 0.6405601076393084
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.6864406779661016,
+        "NMI": 0.5739028277687199,
+        "ARI": 0.5417303373201371
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.6186440677966102,
+        "NMI": 0.5046740053690724,
+        "ARI": 0.4488176898435949
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.864406779661017,
+        "NMI": 0.7805398242095066,
+        "ARI": 0.8256024007186362
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9152542372881356,
+        "NMI": 0.8200647393037077,
+        "ARI": 0.8475177778965941
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7372881355932204,
+        "NMI": 0.6801809901714725,
+        "ARI": 0.6645425923766539
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9152542372881356,
+        "NMI": 0.8115478565038011,
+        "ARI": 0.8481200693222346
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.652542372881356,
+        "NMI": 0.5905478218236554,
+        "ARI": 0.5216944322741119
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.6864406779661016,
+        "NMI": 0.6267920049347939,
+        "ARI": 0.543858080929625
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7360308285163777,
+        "NMI": 0.6392559514146496,
+        "ARI": 0.5929838902881606
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7572254335260116,
+        "NMI": 0.6684872276537482,
+        "ARI": 0.60722601199622
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7347463070006423,
+        "NMI": 0.6813884516571246,
+        "ARI": 0.5603314523367314
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7630057803468208,
+        "NMI": 0.7256890892886697,
+        "ARI": 0.638075196667606
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8664097623635196,
+        "NMI": 0.6894932266002112,
+        "ARI": 0.6938889695034698
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7238278741168914,
+        "NMI": 0.5507982713051262,
+        "ARI": 0.5117529516381241
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8105330764290302,
+        "NMI": 0.6576616039542648,
+        "ARI": 0.629658398108205
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8798972382787412,
+        "NMI": 0.710731811966651,
+        "ARI": 0.7235533520537659
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7925497752087347,
+        "NMI": 0.6739020242532808,
+        "ARI": 0.6627055147746408
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.798330122029544,
+        "NMI": 0.6835067650506518,
+        "ARI": 0.6755016033913724
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.7424534360950545,
+        "NMI": 0.6397655654566711,
+        "ARI": 0.603253475402651
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8741168914579319,
+        "NMI": 0.7056460213144469,
+        "ARI": 0.7072696689967118
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9036608863198459,
+        "NMI": 0.7603995090927508,
+        "ARI": 0.7837692493190773
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9332048811817598,
+        "NMI": 0.8178557371472793,
+        "ARI": 0.8476949697139756
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9254977520873474,
+        "NMI": 0.7998155564096764,
+        "ARI": 0.82901338989925
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.9447655748233783,
+        "NMI": 0.8462265863615012,
+        "ARI": 0.8740758991447044
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8773281952472703,
+        "NMI": 0.7156047170072414,
+        "ARI": 0.7181000448253552
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.8946692357096981,
+        "NMI": 0.7416906138123139,
+        "ARI": 0.7593027890236428
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.49404761904761907,
+        "NMI": 0.33185165555525364,
+        "ARI": 0.21109638569635752
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5142857142857142,
+        "NMI": 0.3529886503635528,
+        "ARI": 0.23301514926500727
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.42738095238095236,
+        "NMI": 0.2666804255327143,
+        "ARI": 0.16530627096122305
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.43333333333333335,
+        "NMI": 0.2919737245976411,
+        "ARI": 0.17491074963194286
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3464285714285714,
+        "NMI": 0.23701621858114405,
+        "ARI": 0.07479683016056235
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.45476190476190476,
+        "NMI": 0.2868222378130622,
+        "ARI": 0.19031783422909554
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.444047619047619,
+        "NMI": 0.2867187845091163,
+        "ARI": 0.1806497611493543
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5333333333333333,
+        "NMI": 0.35362504743683243,
+        "ARI": 0.2629819572361327
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.555952380952381,
+        "NMI": 0.3240118784288769,
+        "ARI": 0.2586657237918097
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.569047619047619,
+        "NMI": 0.328207369836294,
+        "ARI": 0.2709972287165072
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4166666666666667,
+        "NMI": 0.23848502344840913,
+        "ARI": 0.15655909213613955
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.48928571428571427,
+        "NMI": 0.2907131166516701,
+        "ARI": 0.20668729585652695
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5142857142857142,
+        "NMI": 0.3526304466101178,
+        "ARI": 0.23853805974217826
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5595238095238095,
+        "NMI": 0.37629536594171054,
+        "ARI": 0.28888039583100145
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.49523809523809526,
+        "NMI": 0.3133963313001247,
+        "ARI": 0.22158790215565954
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5095238095238095,
+        "NMI": 0.3255922950378092,
+        "ARI": 0.23923172952705957
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.35,
+        "NMI": 0.20713331214197736,
+        "ARI": 0.06763656896658105
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.42857142857142855,
+        "NMI": 0.25713273081346866,
+        "ARI": 0.18243580808605694
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4694092827004219,
+        "NMI": 0.23561970156677256,
+        "ARI": 0.19070649277341428
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.47890295358649787,
+        "NMI": 0.25928584237635344,
+        "ARI": 0.19820606416305372
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5453586497890295,
+        "NMI": 0.3161501243869752,
+        "ARI": 0.23463009520400988
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5638185654008439,
+        "NMI": 0.34016030214271736,
+        "ARI": 0.25908559481560456
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.46360759493670883,
+        "NMI": 0.30456361979111146,
+        "ARI": 0.21060780621469627
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5548523206751055,
+        "NMI": 0.3323998202492077,
+        "ARI": 0.22258959198722544
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.439873417721519,
+        "NMI": 0.21777393543876306,
+        "ARI": 0.16134347809134422
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4572784810126582,
+        "NMI": 0.24239504847849153,
+        "ARI": 0.1816266823883382
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5179324894514767,
+        "NMI": 0.29346623581463294,
+        "ARI": 0.18577298453506322
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5506329113924051,
+        "NMI": 0.32490652907190937,
+        "ARI": 0.2247484188147575
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5627637130801688,
+        "NMI": 0.3340063454584085,
+        "ARI": 0.2561357536018329
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5727848101265823,
+        "NMI": 0.3392687717986709,
+        "ARI": 0.26621705535199897
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4467299578059072,
+        "NMI": 0.22693524540520035,
+        "ARI": 0.16965303660151518
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.479957805907173,
+        "NMI": 0.24567793522630077,
+        "ARI": 0.19262309818560908
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5216244725738397,
+        "NMI": 0.2904473307902469,
+        "ARI": 0.20566526853108053
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5511603375527426,
+        "NMI": 0.3216457990976926,
+        "ARI": 0.24031538689284887
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.44831223628691985,
+        "NMI": 0.2635032990883893,
+        "ARI": 0.17231008411493756
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.520042194092827,
+        "NMI": 0.31617334436653644,
+        "ARI": 0.19566285834740513
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5379637618636756,
+        "NMI": 0.2936259122510642,
+        "ARI": 0.2695421349650599
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5448662640207075,
+        "NMI": 0.3022178871146137,
+        "ARI": 0.2814136232510187
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.47756686798964626,
+        "NMI": 0.23166130235508278,
+        "ARI": 0.2057315782723543
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5012942191544435,
+        "NMI": 0.2623002678139663,
+        "ARI": 0.23751109398492065
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4257981018119068,
+        "NMI": 0.21418327430049686,
+        "ARI": 0.14020993321907574
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4197584124245039,
+        "NMI": 0.20688213182473025,
+        "ARI": 0.13685618225090096
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5220017256255393,
+        "NMI": 0.2732947355381929,
+        "ARI": 0.24321629909032805
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5267471958584987,
+        "NMI": 0.29523041524961613,
+        "ARI": 0.2596796361199233
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.45815358067299394,
+        "NMI": 0.2242689778475301,
+        "ARI": 0.1742980526060441
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4745470232959448,
+        "NMI": 0.24301570216171237,
+        "ARI": 0.19056850309497558
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4585849870578085,
+        "NMI": 0.22081343697643363,
+        "ARI": 0.18913312869588517
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.42234685073339084,
+        "NMI": 0.205776217993027,
+        "ARI": 0.1345829466981904
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5276100086281277,
+        "NMI": 0.2798553847174794,
+        "ARI": 0.2538426840894177
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5418464193270061,
+        "NMI": 0.30961262639510445,
+        "ARI": 0.27325895404437767
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4818809318377912,
+        "NMI": 0.23164621312946615,
+        "ARI": 0.20965078290752995
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.50862812769629,
+        "NMI": 0.2587716140586305,
+        "ARI": 0.23977896502458637
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4374460742018982,
+        "NMI": 0.221639949607997,
+        "ARI": 0.15284686868318068
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.4296807592752373,
+        "NMI": 0.2155509062787188,
+        "ARI": 0.14681829732216853
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.3481340021142738,
+        "ARI": 0.18134714032856403
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.21714285714285714,
+        "NMI": 0.26252101612879064,
+        "ARI": 0.02465385773908051
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.27214285714285713,
+        "NMI": 0.3224021894689699,
+        "ARI": 0.07606484363173015
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.35,
+        "NMI": 0.37239631182344435,
+        "ARI": 0.17791580721643116
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.21642857142857144,
+        "NMI": 0.27057987093281427,
+        "ARI": 0.032091605956741376
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 41,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.28285714285714286,
+        "NMI": 0.3307196776633546,
+        "ARI": 0.09831258899175076
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3514285714285714,
+        "NMI": 0.3463827347965439,
+        "ARI": 0.17676443664182812
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.25142857142857145,
+        "NMI": 0.2966767695544267,
+        "ARI": 0.0457905207516898
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.28785714285714287,
+        "NMI": 0.2652826769393839,
+        "ARI": 0.11530917256616961
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.3462489231600182,
+        "ARI": 0.14831483469881518
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.255,
+        "NMI": 0.2996898903393161,
+        "ARI": 0.04635240512670976
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 42,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.29214285714285715,
+        "NMI": 0.2680744295629317,
+        "ARI": 0.11709668716464713
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3628571428571429,
+        "NMI": 0.37379949319973005,
+        "ARI": 0.2004907369511349
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.22857142857142856,
+        "NMI": 0.2709662741350451,
+        "ARI": 0.03448365135205178
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3,
+        "NMI": 0.25824813492816723,
+        "ARI": 0.10734831829166569
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.36714285714285716,
+        "NMI": 0.3869732631669997,
+        "ARI": 0.20765453484164392
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.2292857142857143,
+        "NMI": 0.27492479103249007,
+        "ARI": 0.0344592411275698
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 43,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.27127184335646953,
+        "ARI": 0.12106356783520185
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.515,
+        "NMI": 0.18705311329155408,
+        "ARI": 0.15180012012578453
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3385714285714286,
+        "NMI": 0.09075596997531095,
+        "ARI": 0.022311907763741694
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.34214285714285714,
+        "NMI": 0.07926960182058093,
+        "ARI": 0.04208853703814014
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.21317705057149167,
+        "ARI": 0.20432646281705205
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.34785714285714286,
+        "NMI": 0.0968219204001567,
+        "ARI": 0.02753958314058299
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 101,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.425,
+        "NMI": 0.11459980902848226,
+        "ARI": 0.10699558453173505
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.45785714285714285,
+        "NMI": 0.16154779145344772,
+        "ARI": 0.16173244413585783
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.09367072584756125,
+        "ARI": 0.018697065495625463
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.47928571428571426,
+        "NMI": 0.15408635515454547,
+        "ARI": 0.1556841563420062
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.535,
+        "NMI": 0.22903642006357894,
+        "ARI": 0.23006647624886778
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.09860837223934478,
+        "ARI": 0.0219515336797774
+      },
+      "max_abs_error": 3.469446951953614e-18
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 102,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.39071428571428574,
+        "NMI": 0.12434805379911817,
+        "ARI": 0.04262430606684658
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5221428571428571,
+        "NMI": 0.27686975616949977,
+        "ARI": 0.2380789757929444
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.3464285714285714,
+        "NMI": 0.09107847924160198,
+        "ARI": 0.021295511098736952
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.48214285714285715,
+        "NMI": 0.18124102128429323,
+        "ARI": 0.16622221913950885
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.35378337588831593,
+        "ARI": 0.29005376122203763
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.36,
+        "NMI": 0.10659010118910171,
+        "ARI": 0.028399945937530285
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "seed": 103,
+      "eligible": true,
+      "status": "stationarity_eligible",
+      "metrics": {
+        "ACC": 0.48,
+        "NMI": 0.18204222698245845,
+        "ARI": 0.16632331682303259
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7033898305084746,
+        "NMI": 0.5976600055399391,
+        "ARI": 0.5583963424189685
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7372881355932204,
+        "NMI": 0.5963180072715601,
+        "ARI": 0.6260020771140832
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6864406779661016,
+        "NMI": 0.5375474075207024,
+        "ARI": 0.5076491860404847
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6864406779661016,
+        "NMI": 0.5389675452896331,
+        "ARI": 0.5073512777342627
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6101694915254238,
+        "NMI": 0.5002449387260798,
+        "ARI": 0.47078875106524004
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7203389830508474,
+        "NMI": 0.6381295646464299,
+        "ARI": 0.5867226793034276
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30956968529222867,
+        "NMI": 0.0696332092738483,
+        "ARI": 0.06024610801962169
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.271034039820167,
+        "NMI": 0.02610341693898922,
+        "ARI": 0.02005972778152132
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3590237636480411,
+        "NMI": 0.06635677332139928,
+        "ARI": 0.0595380065806606
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3230571612074502,
+        "NMI": 0.05980431196215673,
+        "ARI": 0.05187016313778685
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.33140655105973027,
+        "NMI": 0.05042653001686039,
+        "ARI": 0.04231401886637385
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.32048811817597944,
+        "NMI": 0.05430641038452707,
+        "ARI": 0.04600367698188088
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.34523809523809523,
+        "NMI": 0.12044718058183462,
+        "ARI": 0.08512053902800494
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.38333333333333336,
+        "NMI": 0.16760846473720223,
+        "ARI": 0.12347439308102628
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.36904761904761907,
+        "NMI": 0.1354752293314339,
+        "ARI": 0.09804673646005395
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.35595238095238096,
+        "NMI": 0.1237875451734605,
+        "ARI": 0.08624775859371525
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3238095238095238,
+        "NMI": 0.09391594869127555,
+        "ARI": 0.06580247018793486
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30833333333333335,
+        "NMI": 0.08166248495695046,
+        "ARI": 0.055952754758080744
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.5221518987341772,
+        "NMI": 0.3218994768733716,
+        "ARI": 0.24898583499539484
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.5263713080168776,
+        "NMI": 0.3398350109324297,
+        "ARI": 0.26204660003144076
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.510548523206751,
+        "NMI": 0.3234545881110566,
+        "ARI": 0.25483849576204404
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.49841772151898733,
+        "NMI": 0.31314796792193156,
+        "ARI": 0.24456428329081623
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.45622362869198313,
+        "NMI": 0.32113736632748574,
+        "ARI": 0.2374839179658921
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.48470464135021096,
+        "NMI": 0.3095704808889674,
+        "ARI": 0.24895350884535497
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.2993960310612597,
+        "NMI": 0.06926948144024923,
+        "ARI": 0.05175378152870662
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3300258843830889,
+        "NMI": 0.08361446011606545,
+        "ARI": 0.06871826872654749
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30414150129421913,
+        "NMI": 0.06196013078436538,
+        "ARI": 0.04902235546156749
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.31924072476272647,
+        "NMI": 0.07378462671859165,
+        "ARI": 0.05893113810841406
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3628127696289905,
+        "NMI": 0.11878550522735172,
+        "ARI": 0.09689273198757405
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3369283865401208,
+        "NMI": 0.1147953920473462,
+        "ARI": 0.0907908474831035
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 41,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.19714285714285715,
+        "NMI": 0.17772557423981128,
+        "ARI": 0.056061594518960124
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 41,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.2092857142857143,
+        "NMI": 0.19530454168017122,
+        "ARI": 0.06216506192704319
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 42,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.1957142857142857,
+        "NMI": 0.1841908991359421,
+        "ARI": 0.054056456458368894
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 42,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.19214285714285714,
+        "NMI": 0.1867326035209474,
+        "ARI": 0.0548540979883331
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 43,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.2057142857142857,
+        "NMI": 0.18468700043923408,
+        "ARI": 0.05675773767429388
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 43,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.20357142857142857,
+        "NMI": 0.1799182585125865,
+        "ARI": 0.056384931435621635
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 101,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.745,
+        "NMI": 0.4052177204495457,
+        "ARI": 0.44401190225803977
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 101,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7521428571428571,
+        "NMI": 0.413069113228525,
+        "ARI": 0.4540908489028579
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 102,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6985714285714286,
+        "NMI": 0.35184274374331936,
+        "ARI": 0.37887735444451515
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 102,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6914285714285714,
+        "NMI": 0.35449604929735656,
+        "ARI": 0.3784156394487814
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "seed": 103,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.6857142857142857,
+        "NMI": 0.33910886746929614,
+        "ARI": 0.3562486613405549
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "seed": 103,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7107142857142857,
+        "NMI": 0.37028811990696886,
+        "ARI": 0.39560084150206865
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7033898305084746,
+        "NMI": 0.5729671646093716,
+        "ARI": 0.5914604534417374
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7288135593220338,
+        "NMI": 0.5022010630670276,
+        "ARI": 0.5656237301909792
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.8050847457627118,
+        "NMI": 0.666622667017727,
+        "ARI": 0.6891652429576066
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.5508474576271186,
+        "NMI": 0.39603977874295676,
+        "ARI": 0.3392685951966324
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7711864406779662,
+        "NMI": 0.6415444237913314,
+        "ARI": 0.625347486950912
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.7288135593220338,
+        "NMI": 0.590814166574909,
+        "ARI": 0.5075434224478043
+      },
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.271034039820167,
+        "NMI": 0.03173763761607476,
+        "ARI": 0.01437878910485045
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30057803468208094,
+        "NMI": 0.0365587852157358,
+        "ARI": 0.026841368364707536
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.42132305716120744,
+        "NMI": 0.19807327274352882,
+        "ARI": 0.14758770554742073
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.32113037893384716,
+        "NMI": 0.06962740728889899,
+        "ARI": 0.035818850484431564
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3622350674373796,
+        "NMI": 0.1104213174658928,
+        "ARI": 0.07375784980698934
+      },
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.27681438664097624,
+        "NMI": 0.03140112790998127,
+        "ARI": 0.020173634830657514
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3011904761904762,
+        "NMI": 0.1696395095365419,
+        "ARI": 0.06042620279027058
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30238095238095236,
+        "NMI": 0.171181156605245,
+        "ARI": 0.06700165885493152
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3523809523809524,
+        "NMI": 0.18405195276895658,
+        "ARI": 0.11377072718494084
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.36547619047619045,
+        "NMI": 0.19820438583285746,
+        "ARI": 0.09763601165105644
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3476190476190476,
+        "NMI": 0.22915963190663913,
+        "ARI": 0.11807900721085547
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.2904761904761905,
+        "NMI": 0.1622172324580815,
+        "ARI": 0.059756493358925876
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3575949367088608,
+        "NMI": 0.14749147710979663,
+        "ARI": 0.023165072751390053
+      },
+      "max_abs_error": 3.469446951953614e-18
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.4129746835443038,
+        "NMI": 0.2224557262933441,
+        "ARI": 0.16779402865108842
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.40189873417721517,
+        "NMI": 0.17366915160331112,
+        "ARI": 0.09187663909011357
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.31223628691983124,
+        "NMI": 0.09663573357693325,
+        "ARI": 0.03654124538016716
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.33860759493670883,
+        "NMI": 0.15739638652366952,
+        "ARI": 0.04011316333321424
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.5606540084388185,
+        "NMI": 0.3402595654038757,
+        "ARI": 0.29209242145648334
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.25668679896462465,
+        "NMI": 0.03333562711268108,
+        "ARI": 0.02407824537617234
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 23,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.29465056082830027,
+        "NMI": 0.0822604696509428,
+        "ARI": 0.02392122593637235
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.4055220017256255,
+        "NMI": 0.13095077613095008,
+        "ARI": 0.11148701622688724
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 24,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3201035375323555,
+        "NMI": 0.07994313403738387,
+        "ARI": 0.07027796235251299
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.21527178602243313,
+        "NMI": 0.003277677746720037,
+        "ARI": -5.709568421307031e-05
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 25,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.24288179465056084,
+        "NMI": 0.025266069088787646,
+        "ARI": 0.015187143451078144
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 41,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.17,
+        "NMI": 0.1664963022596214,
+        "ARI": 0.041273846789200166
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 41,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.09285714285714286,
+        "NMI": 0.10101356931949998,
+        "ARI": 0.001301552733665715
+      },
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 42,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.15571428571428572,
+        "NMI": 0.14051724555869693,
+        "ARI": 0.017818360179595562
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 42,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.1757142857142857,
+        "NMI": 0.15014675340668576,
+        "ARI": 0.0382365551329433
+      },
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 43,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.135,
+        "NMI": 0.13378581097839357,
+        "ARI": 0.011318046484304494
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 43,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.165,
+        "NMI": 0.15261292651715022,
+        "ARI": 0.033184561474500815
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 101,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.3057142857142857,
+        "NMI": 0.020838447005192974,
+        "ARI": 0.011679875924323013
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 101,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.2907142857142857,
+        "NMI": 0.008318506715060974,
+        "ARI": 0.004018844024322699
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 102,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.28,
+        "NMI": 0.017743084523568205,
+        "ARI": 0.002696174560777941
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 102,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.047079830458865754,
+        "ARI": 0.009706779899435641
+      },
+      "max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "seed": 103,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.29642857142857143,
+        "NMI": 0.009463337476555573,
+        "ARI": 0.008818893852269177
+      },
+      "max_abs_error": 0.0
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "seed": 103,
+      "eligible": true,
+      "status": "operational_completed",
+      "metrics": {
+        "ACC": 0.29,
+        "NMI": 0.008951851379029976,
+        "ARI": 0.00530122672968468
+      },
+      "max_abs_error": 8.673617379884035e-19
+    }
+  ],
+  "table_cells": [
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 28.666666666666668,
+        "NMI": 28.19776671121737,
+        "ARI": 9.957411149652183
+      },
+      "sample_sd_percent": {
+        "ACC": 1.396667559624998,
+        "NMI": 3.5184907292164826,
+        "ARI": 2.0745073074078735
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 29.28571428571429,
+        "NMI": 29.00219835275853,
+        "ARI": 11.215761466386658
+      },
+      "sample_sd_percent": {
+        "ACC": 1.0375599318809954,
+        "NMI": 3.5281476651612134,
+        "ARI": 1.2153089626089528
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 15.357142857142856,
+        "NMI": 14.693311959890396,
+        "ARI": 2.3470084484366738
+      },
+      "sample_sd_percent": {
+        "ACC": 1.7598121421078456,
+        "NMI": 1.7273292672205611,
+        "ARI": 1.5757346974968622
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 14.45238095238095,
+        "NMI": 13.4591083081112,
+        "ARI": 2.4240889780369943
+      },
+      "sample_sd_percent": {
+        "ACC": 4.506420212236281,
+        "NMI": 2.91051125278898,
+        "ARI": 2.0025996806350457
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 19.952380952380953,
+        "NMI": 18.220115793832914,
+        "ARI": 5.5625262883874305
+      },
+      "sample_sd_percent": {
+        "ACC": 0.5408484138857397,
+        "NMI": 0.3883898326116594,
+        "ARI": 0.14025045538998407
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 20.166666666666668,
+        "NMI": 18.73184679045684,
+        "ARI": 5.780136378366596
+      },
+      "sample_sd_percent": {
+        "ACC": 0.8728715609439699,
+        "NMI": 0.7709854423740565,
+        "ARI": 0.38558084594180286
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 23.23809523809524,
+        "NMI": 27.672135327275413,
+        "ARI": 3.4976009947607363
+      },
+      "sample_sd_percent": {
+        "ACC": 1.7457431218879402,
+        "NMI": 1.779029440254384,
+        "ARI": 1.057692977981392
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 23.357142857142858,
+        "NMI": 28.17315174348735,
+        "ARI": 3.7634417403673646
+      },
+      "sample_sd_percent": {
+        "ACC": 1.9639610121239304,
+        "NMI": 1.570340570384036,
+        "ARI": 0.7642244861936335
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 34.833333333333336,
+        "NMI": 35.61054100368492,
+        "ARI": 18.620077130717565
+      },
+      "sample_sd_percent": {
+        "ACC": 1.6293440105643415,
+        "NMI": 1.5348523334045652,
+        "ARI": 1.2585810734682792
+      }
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 35.095238095238095,
+        "NMI": 36.85394993834874,
+        "ARI": 17.79617255856301
+      },
+      "sample_sd_percent": {
+        "ACC": 1.5735915849388877,
+        "NMI": 2.0634297150589203,
+        "ARI": 2.9669876720887807
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 65.25423728813558,
+        "NMI": 54.57816521381676,
+        "ARI": 49.90474337948313
+      },
+      "sample_sd_percent": {
+        "ACC": 3.389830508474571,
+        "NMI": 6.3668577706644065,
+        "ARI": 5.745743158808955
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 64.12429378531073,
+        "NMI": 53.652237694720526,
+        "ARI": 47.69033248298363
+      },
+      "sample_sd_percent": {
+        "ACC": 3.914239113149999,
+        "NMI": 7.929680860430587,
+        "ARI": 5.823465820755785
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 75.98870056497175,
+        "NMI": 62.70447518061432,
+        "ARI": 63.53243944500853
+      },
+      "sample_sd_percent": {
+        "ACC": 5.17805163271846,
+        "NMI": 4.848214773088029,
+        "ARI": 4.961058844662475
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 66.94915254237289,
+        "NMI": 49.63516694616311,
+        "ARI": 47.08119159451386
+      },
+      "sample_sd_percent": {
+        "ACC": 10.274877672018766,
+        "NMI": 9.751885506398793,
+        "ARI": 11.756302336212594
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 66.66666666666666,
+        "NMI": 54.51507839289071,
+        "ARI": 51.22780931748977
+      },
+      "sample_sd_percent": {
+        "ACC": 4.965648539900266,
+        "NMI": 4.915060844171518,
+        "ARI": 4.398684577967301
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 71.4689265536723,
+        "NMI": 59.1138372402541,
+        "ARI": 57.33586780505912
+      },
+      "sample_sd_percent": {
+        "ACC": 2.589025816359238,
+        "NMI": 4.9783511163453555,
+        "ARI": 6.0443779212438065
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 79.37853107344633,
+        "NMI": 72.2652207425733,
+        "ARI": 72.71971003368263
+      },
+      "sample_sd_percent": {
+        "ACC": 9.061590357257314,
+        "NMI": 7.958692324475532,
+        "ARI": 9.10456917929788
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 86.4406779661017,
+        "NMI": 80.11613552793762,
+        "ARI": 79.41625260879589
+      },
+      "sample_sd_percent": {
+        "ACC": 11.864406779661019,
+        "NMI": 9.478235985379246,
+        "ARI": 13.497077569170543
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 78.53107344632768,
+        "NMI": 68.69514510122367,
+        "ARI": 69.1811440633076
+      },
+      "sample_sd_percent": {
+        "ACC": 7.056494913444522,
+        "NMI": 8.517704593292134,
+        "ARI": 11.644254626209467
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 85.02824858757062,
+        "NMI": 79.44035286044965,
+        "ARI": 77.92211195456547
+      },
+      "sample_sd_percent": {
+        "ACC": 5.768524818266145,
+        "NMI": 2.756162050973038,
+        "ARI": 6.1670151981
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 43.452380952380956,
+        "NMI": 13.819899275313988,
+        "ARI": 12.133163750655171
+      },
+      "sample_sd_percent": {
+        "ACC": 8.001700499540938,
+        "NMI": 5.280955226013839,
+        "ARI": 6.882851459072836
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 43.1904761904762,
+        "NMI": 14.033002993668632,
+        "ARI": 10.53144024738714
+      },
+      "sample_sd_percent": {
+        "ACC": 4.504155299940975,
+        "NMI": 3.6451167413624086,
+        "ARI": 6.186663959961393
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 29.40476190476191,
+        "NMI": 1.6014956335105583,
+        "ARI": 0.773164811245671
+      },
+      "sample_sd_percent": {
+        "ACC": 1.3021437060833623,
+        "NMI": 0.5881164805881881,
+        "ARI": 0.4589477096728522
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 29.47619047619047,
+        "NMI": 2.1450062850985567,
+        "ARI": 0.6342283551147674
+      },
+      "sample_sd_percent": {
+        "ACC": 0.7637626158259733,
+        "NMI": 2.2198288719883403,
+        "ARI": 0.298345489474622
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 70.97619047619048,
+        "NMI": 36.53897772207204,
+        "ARI": 39.30459726810366
+      },
+      "sample_sd_percent": {
+        "ACC": 3.1186840936828593,
+        "NMI": 3.5074730185981906,
+        "ARI": 4.556488693209214
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 71.8095238095238,
+        "NMI": 37.928442747761686,
+        "ARI": 40.9369109951236
+      },
+      "sample_sd_percent": {
+        "ACC": 3.1022813637489324,
+        "NMI": 3.0305133509035382,
+        "ARI": 3.9671882278836206
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 33.85714285714286,
+        "NMI": 9.183505835482473,
+        "ARI": 2.076816145270137
+      },
+      "sample_sd_percent": {
+        "ACC": 0.7857142857142811,
+        "NMI": 0.15978921786616515,
+        "ARI": 0.1864227559264242
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 34.785714285714285,
+        "NMI": 10.06734646095344,
+        "ARI": 2.5963687585963555
+      },
+      "sample_sd_percent": {
+        "ACC": 1.2142857142857153,
+        "NMI": 0.5201230032832623,
+        "ARI": 0.3501155560780807
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 49.833333333333336,
+        "NMI": 20.849022030483386,
+        "ARI": 18.387051335152893
+      },
+      "sample_sd_percent": {
+        "ACC": 3.5234877587973203,
+        "NMI": 6.057599404315784,
+        "ARI": 4.720784696697186
+      }
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 55.73809523809524,
+        "NMI": 26.53322821744622,
+        "ARI": 24.148223342931914
+      },
+      "sample_sd_percent": {
+        "ACC": 1.9382473322794602,
+        "NMI": 7.701023882935528,
+        "ARI": 4.398899927205244
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 82.87304645686149,
+        "NMI": 68.16211696880413,
+        "ARI": 67.17474965771585
+      },
+      "sample_sd_percent": {
+        "ACC": 7.491726954334289,
+        "NMI": 3.852753803448806,
+        "ARI": 6.054021179803499
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 83.0871333761507,
+        "NMI": 66.6044968810629,
+        "ARI": 65.94418032194929
+      },
+      "sample_sd_percent": {
+        "ACC": 9.327017960247069,
+        "NMI": 10.142067898869527,
+        "ARI": 13.05214888667837
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 35.1530721472918,
+        "NMI": 11.34107426084988,
+        "ARI": 7.857478148642017
+      },
+      "sample_sd_percent": {
+        "ACC": 7.571416281138588,
+        "NMI": 8.320810282253657,
+        "ARI": 6.673496818051347
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 29.950760008563478,
+        "NMI": 4.586244013820536,
+        "ARI": 2.7611284559932208
+      },
+      "sample_sd_percent": {
+        "ACC": 2.217737959936656,
+        "NMI": 2.0742000987755773,
+        "ARI": 0.7850972641910432
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 33.333333333333336,
+        "NMI": 6.2138837537369325,
+        "ARI": 5.403271115555206
+      },
+      "sample_sd_percent": {
+        "ACC": 2.4783277304527607,
+        "NMI": 1.0274598227125609,
+        "ARI": 1.0154859114645467
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 30.485977306786555,
+        "NMI": 4.673804642855767,
+        "ARI": 3.9311189300396348
+      },
+      "sample_sd_percent": {
+        "ACC": 2.9322093510401515,
+        "NMI": 1.8080311973750665,
+        "ARI": 1.6928319258387812
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 81.75979447655747,
+        "NMI": 71.83686774400273,
+        "ARI": 68.40167856702074
+      },
+      "sample_sd_percent": {
+        "ACC": 9.781148475142238,
+        "NMI": 7.06343204061649,
+        "ARI": 13.5602815580929
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 83.5367159066581,
+        "NMI": 75.18074802336076,
+        "ARI": 72.92175664012277
+      },
+      "sample_sd_percent": {
+        "ACC": 9.637407486664783,
+        "NMI": 8.444562049640671,
+        "ARI": 12.68390176719217
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 81.6741597088418,
+        "NMI": 68.57723548205551,
+        "ARI": 66.88038459051477
+      },
+      "sample_sd_percent": {
+        "ACC": 8.39873107462196,
+        "NMI": 6.528094000109704,
+        "ARI": 10.123753191162027
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 85.67758509955041,
+        "NMI": 73.23582589225596,
+        "ARI": 72.61581112546538
+      },
+      "sample_sd_percent": {
+        "ACC": 9.023935068323379,
+        "NMI": 7.699685261770321,
+        "ARI": 12.025563805633768
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 44.06097210238712,
+        "NMI": 21.88788869616425,
+        "ARI": 16.07299768660472
+      },
+      "sample_sd_percent": {
+        "ACC": 1.6620813967511212,
+        "NMI": 0.40874643093447044,
+        "ARI": 2.5396403483221976
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 42.39286741443774,
+        "NMI": 20.9403085365492,
+        "ARI": 13.941914209041997
+      },
+      "sample_sd_percent": {
+        "ACC": 0.5146830649460229,
+        "NMI": 0.5352806538314233,
+        "ARI": 0.6507881650518929
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 29.249352890422774,
+        "NMI": 5.58546936634504,
+        "ARI": 4.51693886396155
+      },
+      "sample_sd_percent": {
+        "ACC": 10.005187442273911,
+        "NMI": 6.674905453634384,
+        "ARI": 5.868687645997468
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 28.58786310037389,
+        "NMI": 6.248989092570478,
+        "ARI": 3.6462110579987823
+      },
+      "sample_sd_percent": {
+        "ACC": 3.935110491537401,
+        "NMI": 3.2257591280137126,
+        "ARI": 2.9609203341883847
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 32.21167673281565,
+        "NMI": 8.333837248398877,
+        "ARI": 6.588962299261605
+      },
+      "sample_sd_percent": {
+        "ACC": 3.532355197860336,
+        "NMI": 3.0914900396845244,
+        "ARI": 2.6884191406940174
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 32.87316652286454,
+        "NMI": 9.073149296066777,
+        "ARI": 7.281341810602168
+      },
+      "sample_sd_percent": {
+        "ACC": 0.891457218281787,
+        "NMI": 2.141167521694427,
+        "ARI": 1.6319863868613433
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 47.25337935001437,
+        "NMI": 22.919216444402633,
+        "ARI": 19.656013792864282
+      },
+      "sample_sd_percent": {
+        "ACC": 1.2639053660660735,
+        "NMI": 0.4263611335373173,
+        "ARI": 1.9378864090190973
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 49.482312338222606,
+        "NMI": 25.46958613447697,
+        "ARI": 22.26195207014942
+      },
+      "sample_sd_percent": {
+        "ACC": 1.7938414914833327,
+        "NMI": 1.0268029910232581,
+        "ARI": 2.778014771330713
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 52.919183203911416,
+        "NMI": 28.225867750224552,
+        "ARI": 25.553370604826853
+      },
+      "sample_sd_percent": {
+        "ACC": 0.8097732657636504,
+        "NMI": 1.0376466103133666,
+        "ARI": 1.324413360982199
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 53.781995973540404,
+        "NMI": 30.235364291977806,
+        "ARI": 27.145073780510653
+      },
+      "sample_sd_percent": {
+        "ACC": 0.9707442526164887,
+        "NMI": 0.719206657278205,
+        "ARI": 1.0979243308608664
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 49.15611814345991,
+        "NMI": 30.069108811263643,
+        "ARI": 21.30178813104889
+      },
+      "sample_sd_percent": {
+        "ACC": 6.213563698563153,
+        "NMI": 3.541069419065183,
+        "ARI": 4.19647716865834
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 54.922644163150494,
+        "NMI": 32.928064547147166,
+        "ARI": 22.81565018955432
+      },
+      "sample_sd_percent": {
+        "ACC": 2.6817601920771232,
+        "NMI": 1.1859453214157725,
+        "ARI": 3.560500727687406
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 36.60337552742616,
+        "NMI": 15.951900507892574,
+        "ARI": 5.171829172490596
+      },
+      "sample_sd_percent": {
+        "ACC": 3.2478490123081527,
+        "NMI": 1.3217291425267057,
+        "ARI": 3.579565743104793
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 42.862165963431785,
+        "NMI": 21.978367509138433,
+        "ARI": 16.5475898495913
+      },
+      "sample_sd_percent": {
+        "ACC": 12.494583621210587,
+        "NMI": 12.183389410065658,
+        "ARI": 12.779135805702722
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 49.630801687763714,
+        "NMI": 32.21638104373047,
+        "ARI": 24.71027495744437
+      },
+      "sample_sd_percent": {
+        "ACC": 3.519557092975289,
+        "NMI": 0.11810094721592788,
+        "ARI": 0.882920441759174
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 50.31645569620253,
+        "NMI": 32.085115324777625,
+        "ARI": 25.185479738920396
+      },
+      "sample_sd_percent": {
+        "ACC": 2.1235044450630154,
+        "NMI": 1.6537525292834472,
+        "ARI": 0.9095106160231592
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 52.83052039381153,
+        "NMI": 30.002123033061835,
+        "ARI": 20.868944942338455
+      },
+      "sample_sd_percent": {
+        "ACC": 1.488363854662225,
+        "NMI": 1.4049354593626466,
+        "ARI": 2.456854835519302
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 55.52039381153305,
+        "NMI": 32.89042101041064,
+        "ARI": 24.138313350773696
+      },
+      "sample_sd_percent": {
+        "ACC": 0.7465145480155418,
+        "NMI": 0.9883460728785706,
+        "ARI": 1.7193471902250896
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 45.20042194092827,
+        "NMI": 22.677629413691196,
+        "ARI": 17.390100248875786
+      },
+      "sample_sd_percent": {
+        "ACC": 1.5458176044043068,
+        "NMI": 0.8923944828559326,
+        "ARI": 1.5135407772480027
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 47.20464135021098,
+        "NMI": 24.911960869371523,
+        "ARI": 19.08186149123337
+      },
+      "sample_sd_percent": {
+        "ACC": 1.2800275421425753,
+        "NMI": 0.8955923560261172,
+        "ARI": 0.8435703581835391
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 37.1031746031746,
+        "NMI": 22.754485139051017,
+        "ARI": 9.966416375442765
+      },
+      "sample_sd_percent": {
+        "ACC": 3.9561322797990917,
+        "NMI": 1.7692160631345226,
+        "ARI": 4.940234803895057
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "CMVNMF",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 45.75396825396825,
+        "NMI": 27.822269509273365,
+        "ARI": 19.314697939055986
+      },
+      "sample_sd_percent": {
+        "ACC": 3.0452309591983595,
+        "NMI": 1.8367761962462563,
+        "ARI": 1.2370800763442575
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 33.37301587301587,
+        "NMI": 19.428369807071252,
+        "ARI": 9.742531239535564
+      },
+      "sample_sd_percent": {
+        "ACC": 2.828059651205848,
+        "NMI": 3.1051210937382807,
+        "ARI": 3.211449677127521
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "FSSMSC",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 31.944444444444443,
+        "NMI": 17.720092496539465,
+        "ARI": 7.479805462163795
+      },
+      "sample_sd_percent": {
+        "ACC": 4.030660083721573,
+        "NMI": 1.873357975234062,
+        "ARI": 2.010727024546848
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 34.6031746031746,
+        "NMI": 11.661278620151469,
+        "ARI": 8.298991522533123
+      },
+      "sample_sd_percent": {
+        "ACC": 2.262948798314803,
+        "NMI": 2.10432979123932,
+        "ARI": 1.6227379492642018
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MVCHSS",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 34.92063492063492,
+        "NMI": 12.435283162253773,
+        "ARI": 8.855830214427408
+      },
+      "sample_sd_percent": {
+        "ACC": 3.795236103642105,
+        "NMI": 4.297577831376639,
+        "ARI": 3.382006607146028
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 49.285714285714285,
+        "NMI": 30.136287842057197,
+        "ARI": 21.518663230289743
+      },
+      "sample_sd_percent": {
+        "ACC": 6.4318774567810015,
+        "NMI": 3.0501260038718727,
+        "ARI": 4.700775521126853
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 50.3968253968254,
+        "NMI": 31.525779649058148,
+        "ARI": 22.837990262516985
+      },
+      "sample_sd_percent": {
+        "ACC": 6.8027494330475236,
+        "NMI": 2.0206945760978527,
+        "ARI": 4.895379940360645
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 160,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 48.41269841269841,
+        "NMI": 32.37336288914959,
+        "ARI": 21.00947355292967
+      },
+      "sample_sd_percent": {
+        "ACC": 3.6154691999660615,
+        "NMI": 3.3697382211594107,
+        "ARI": 2.8957145159457043
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "SAPN-MV",
+      "Q": 400,
+      "planned": 3,
+      "eligible": 3,
+      "complete": true,
+      "mean_percent": {
+        "ACC": 53.57142857142858,
+        "NMI": 36.09696879140319,
+        "ARI": 26.16258341107138
+      },
+      "sample_sd_percent": {
+        "ACC": 2.2712838128974937,
+        "NMI": 1.3276240264652237,
+        "ARI": 2.795730219313558
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "protocol_sha256": "b2782feafd5acb5b8dfeb69f00843d2b1e7f68e38b991622aeffb382747eb5c4",
+  "original_selections": 300,
+  "policies": [
+    "primary_default",
+    "sensitivity_min",
+    "sensitivity_max"
+  ],
+  "original_best_ties": 112,
+  "cv_predictions_replayed": 1800,
+  "logical_finals": 1500,
+  "unique_final_requirements": 558,
+  "verified_reuse_unique_fits": 386,
+  "missing_unique_fits": 172,
+  "policy_summary": [
+    {
+      "policy": "primary_default",
+      "selections": 300,
+      "changed_from_primary": 0,
+      "logical_finals": 500,
+      "missing_logical_finals": 0,
+      "missing_unique_fits": 0
+    },
+    {
+      "policy": "sensitivity_min",
+      "selections": 300,
+      "changed_from_primary": 86,
+      "logical_finals": 500,
+      "missing_logical_finals": 127,
+      "missing_unique_fits": 85
+    },
+    {
+      "policy": "sensitivity_max",
+      "selections": 300,
+      "changed_from_primary": 100,
+      "logical_finals": 500,
+      "missing_logical_finals": 128,
+      "missing_unique_fits": 87
+    }
+  ],
+  "runtime_estimates": [
+    {
+      "dataset": "3Sources",
+      "missing_unique_fits": 0,
+      "estimated_minutes_median": 0.0,
+      "estimated_minutes_p90": 0.0
+    },
+    {
+      "dataset": "BBC",
+      "missing_unique_fits": 46,
+      "estimated_minutes_median": 7.869153845008016,
+      "estimated_minutes_p90": 9.443605584340014
+    },
+    {
+      "dataset": "Reuters",
+      "missing_unique_fits": 33,
+      "estimated_minutes_median": 8.402850275837409,
+      "estimated_minutes_p90": 11.498050922822245
+    },
+    {
+      "dataset": "Cora",
+      "missing_unique_fits": 47,
+      "estimated_minutes_median": 8.049636353343764,
+      "estimated_minutes_p90": 14.265192484168608
+    },
+    {
+      "dataset": "CiteSeer",
+      "missing_unique_fits": 46,
+      "estimated_minutes_median": 9.568615325009159,
+      "estimated_minutes_p90": 12.234720575164344
+    }
+  ],
+  "estimated_serial_minutes_median": 33.89025579919835,
+  "estimated_serial_minutes_p90": 47.44156956649526,
+  "runtime_caveat": "Historical original selected final durations by dataset,budget,allocation; changed lambda and current contention may differ. Excludes loading/serialization not in recorded seconds.",
+  "new_fits_run": 0,
+  "test_scores_read": false,
+  "posthoc_sensitivity": true,
+  "primary_preserved": true
+}

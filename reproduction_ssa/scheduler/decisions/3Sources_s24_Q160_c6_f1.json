@@ -1,0 +1,21 @@
+{
+  "original_receipt_status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+  "launcher_dispatched": true,
+  "matlab_started": true,
+  "terminal_attempt_lifecycle": true,
+  "worker_returned": true,
+  "consecutive_resource_caps": 0,
+  "previous_resource_cap_case": null,
+  "disposition": "ELIGIBLE",
+  "reason": "QUALIFIED_RETURN",
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "case_id": "3Sources_s24_Q160_c6_f1",
+  "receipt_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\runs\\3Sources_s24_Q160_c6_f1\\repeat1\\launcher_receipt.json",
+  "receipt_sha256": "1399048a0bdcd0d22fa515d5743b4c01ea16c5065d04c31c818173848f2576f8",
+  "finite_partition_retained": true,
+  "validation_BER": 0.30714285714285716,
+  "numerical_eligible": true,
+  "decision_utc": "2026-10-27T06:19:16.095493+00:00"
+}

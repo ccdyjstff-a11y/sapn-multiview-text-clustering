@@ -1,0 +1,31 @@
+{
+  "schema": "agnews-verified-mirror-input-v1",
+  "author_source_repository": "https://github.com/zhangxiangxiao/Crepe",
+  "mirror_url": "https://s3.amazonaws.com/fast-ai-nlp/ag_news_csv.tgz",
+  "mirror_url_primary_definition": "https://raw.githubusercontent.com/fastai/fastai/master/fastai/data/external.py",
+  "mirror_archive_sha256": "9a8c300eabb45750237fcc669f61cb8a3448f3ef6f6098e1ce340e444f6872be",
+  "mirror_archive_bytes": 11784419,
+  "equivalent_original_archive_sha256": "4e2fc37d369e6e317a8b62d0d2f11d379f8c3dde60c07c35a46b069a246498ad",
+  "regular_members": {
+    "ag_news_csv/train.csv": {
+      "bytes": 29470338,
+      "sha256": "76a0a2d2f92b286371fe4d4044640910a04a803fdd2538e0f3f29a5c6f6b672e"
+    },
+    "ag_news_csv/test.csv": {
+      "bytes": 1857427,
+      "sha256": "521465c2428ed7f02f8d6db6ffdd4b5447c1c701962353eb2c40d548c3c85699"
+    },
+    "ag_news_csv/classes.txt": {
+      "bytes": 31,
+      "sha256": "612dbfa932f07a6ed837295a7d5746ce7412e7bb4bc32ba919fdb3cda3a1b9b5"
+    },
+    "ag_news_csv/readme.txt": {
+      "bytes": 1795,
+      "sha256": "779c2e6bbf93dd810d9c7b318006daef7a4bfc34062002461d251dc10fb9f58c"
+    }
+  },
+  "unchanged_base_preparer_sha256": "bf87074a2ee082b00b55d2101e24ccdca9ff7961810c695c4a0e15d1b6dd4e62",
+  "field_identities_sha256": "b6e215168c7e9ef0ee23c3dbc0222a21f4499b71f5fbbbb1343b0693054a2049",
+  "verified_date": "2026-11-17",
+  "boundary": "The containers differ. Every regular member name, size and content was compared with the verified historical original; the original preparer remains unchanged."
+}

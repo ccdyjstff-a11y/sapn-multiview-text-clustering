@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "archive_members_verified": 3301,
+  "primary_predictions_verified": 210,
+  "logical_allocation_predictions_verified": 500,
+  "unique_allocation_predictions": 386,
+  "paired_values": 2000,
+  "metric_groups": 200,
+  "directions": 40,
+  "selections": 300,
+  "positive_mean_independent": 19,
+  "positive_mean_matched": 19,
+  "independent_abs_mean_below_one_pp": 14,
+  "best_BER_ties": 112,
+  "raw_label_rescoring": false,
+  "training_performed": false
+}

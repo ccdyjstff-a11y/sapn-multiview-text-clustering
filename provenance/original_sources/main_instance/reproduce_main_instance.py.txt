@@ -1,0 +1,59 @@
+"""Real isolated main-study replay from fresh public 3Sources input.
+
+This is a fixed one-block numerical reproduction, not an added performance seed.
+No archived initialization or graph is supplied to the fit.
+"""
+from pathlib import Path
+import json,hashlib,shutil,subprocess,sys,os,urllib.request,datetime
+
+ROOT=Path(__file__).resolve().parent
+RUN=ROOT/'main_instance_reproduction'
+RELEASE=ROOT/'release_repository'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def put(p,obj):p.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf8')
+def cmd(args,name):
+    env=os.environ.copy()
+    for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS']:env[k]='1'
+    with (RUN/(name+'.log')).open('w',encoding='utf8') as f:
+        p=subprocess.run([str(x) for x in args],cwd=RUN,env=env,stdout=f,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
+    if p.returncode:raise RuntimeError((name,p.returncode))
+    print('COMPLETE',name,flush=True)
+assert not RUN.exists(),'Fresh study directory required'
+RUN.mkdir()
+for folder in ['benchmark','common']:
+    shutil.copytree(RELEASE/folder,RUN/folder,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+source_ids={p.relative_to(RUN).as_posix():sha(p) for folder in ['benchmark','common'] for p in sorted((RUN/folder).rglob('*')) if p.is_file()}
+query=RELEASE/'evidence/v9/allocation_repeat/paid_queries/3Sources/seed504.npz'
+shutil.copy2(query,RUN/'paid_queries.npz')
+protocol=dict(study='main_instance_reproduction',frozen_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    corpus='3Sources',seed=504,budget=160,branch='English release common-candidate',
+    sources=source_ids,paid_queries_sha256=sha(RUN/'paid_queries.npz'),
+    fits='all 18 CV plus requested logical finals, exact original stages/tolerances, no retries or replacement seeds',
+    input='fresh original public 3sources.zip, same preparer; no archived warm start or graph',
+    score_gate='one prespecified block must be sealed before scoring',
+    boundary='Numerical reproduction of an existing main-study instance, not an additional independent experiment')
+put(RUN/'PROTOCOL.json',protocol)
+archive=RUN/'3sources.zip';url='http://mlg.ucd.ie/files/datasets/3sources.zip'
+with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SAPN reproducibility verification'}),timeout=60) as r:
+    archive.write_bytes(r.read())
+expected='dea0ab41c48f1a50dbce855f7f9f783dd57bb0a3a3636f53f0c665678fb48659'
+assert sha(archive)==expected
+put(RUN/'PUBLIC_SOURCE.json',dict(url=url,bytes=archive.stat().st_size,sha256=sha(archive),accessed_utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+put(RUN/'prepare.json',dict(dataset='3Sources',format='3sources_original_zip',source='3sources.zip',expected_sha256=expected,output='prepared'))
+cmd([sys.executable,'-X','utf8','-B',RUN/'benchmark/prepare_data.py','--config',RUN/'prepare.json'],'prepare')
+# Original primary inputs for identity checks only; training still uses rebuilt data.
+import numpy as np
+from scipy import sparse
+old=ROOT.parent/'review_revision_v9/allocation_repeat/prepared/3Sources'
+print('OLD_INPUT',str(old),flush=True)
+checks=[]
+for v in range(3):
+    a=sparse.load_npz(RUN/'prepared'/f'X{v}.npz');b=sparse.load_npz(old/f'X{v}.npz')
+    eq=a.shape==b.shape and (a-b).nnz==0
+    checks.append(dict(view=v,shape=list(a.shape),elementwise_equal=eq));assert eq
+put(RUN/'PREPARATION_IDENTITY.json',dict(status='PASS',views=checks))
+cmd([sys.executable,'-X','utf8','-B','-I',RUN/'common/run_allocation.py','--prepared-directory',RUN/'prepared','--paid-queries',RUN/'paid_queries.npz','--seed','504','--budgets','160','--output',RUN/'fit'],'train')
+assert (RUN/'fit/GLOBAL_PREDICTIONS_SEALED.json').is_file()
+cmd([sys.executable,'-X','utf8','-B','-I',RUN/'common/score_allocation.py','--output',RUN/'fit','--labels',RUN/'prepared/labels_FOR_ORACLE_AND_SEALED_SCORING_ONLY.npy'],'score')
+put(RUN/'EXECUTION_COMPLETED.json',dict(status='FINISHED_PENDING_COMPARISON',protocol_sha256=sha(RUN/'PROTOCOL.json'),source_files_unchanged=all(sha(RUN/k)==v for k,v in source_ids.items())))
+print('DONE: fixed main-study instance prepared, fitted, sealed and scored',flush=True)

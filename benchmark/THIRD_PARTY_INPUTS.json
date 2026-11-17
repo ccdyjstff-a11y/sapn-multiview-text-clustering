@@ -1,0 +1,40 @@
+{
+  "FSSMSC": {
+    "repo": "https://github.com/linghm/FSSMSC",
+    "commit": "064f9cba06b30d7b152eb046e909a028e386ded7",
+    "paper_doi": "10.1186/s13662-025-04011-w",
+    "license_status": "No repository-wide license was present in the inspected author checkout; author code and generated derivatives are not redistributed here. Retrieve from the author and check applicable terms.",
+    "required_files": [
+      {
+        "path": "FSSMSC_bound.m",
+        "url": "https://raw.githubusercontent.com/linghm/FSSMSC/064f9cba06b30d7b152eb046e909a028e386ded7/FSSMSC_bound.m",
+        "bytes": 2939,
+        "sha256": "821aabc40ef95dcc059cdb797c7858f63206057bbce47e9262e8c26729992905"
+      },
+      {
+        "path": "litekmeans.m",
+        "url": "https://raw.githubusercontent.com/linghm/FSSMSC/064f9cba06b30d7b152eb046e909a028e386ded7/litekmeans.m",
+        "bytes": 14870,
+        "sha256": "344f436bd30a76f10700e8bc6acf22a9916618b05c4e73e57c8dd6e7829f745f"
+      },
+      {
+        "path": "normr.m",
+        "url": "https://raw.githubusercontent.com/linghm/FSSMSC/064f9cba06b30d7b152eb046e909a028e386ded7/normr.m",
+        "bytes": 99,
+        "sha256": "89fd382f1d4377cc26a16b866d56ef6544ef298fc78dcdbe0b4f675f39694601"
+      },
+      {
+        "path": "unit_row.m",
+        "url": "https://raw.githubusercontent.com/linghm/FSSMSC/064f9cba06b30d7b152eb046e909a028e386ded7/unit_row.m",
+        "bytes": 112,
+        "sha256": "9a40a4e753dc35bfb27dda3ffdddda166d4f1b66c6ad672ddb279983f2b1980b"
+      },
+      {
+        "path": "v1_trace_ratio_optim.m",
+        "url": "https://raw.githubusercontent.com/linghm/FSSMSC/064f9cba06b30d7b152eb046e909a028e386ded7/v1_trace_ratio_optim.m",
+        "bytes": 767,
+        "sha256": "2d3e227c2c014619a6eceae31a59546dd65f31657404060c8edbd1d8fc81962d"
+      }
+    ]
+  }
+}

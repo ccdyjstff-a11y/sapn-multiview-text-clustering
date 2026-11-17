@@ -1,0 +1,311 @@
+{
+  "status": "PASS",
+  "corpus": "3Sources",
+  "seed": 504,
+  "budget": 160,
+  "raw_source": {
+    "url": "http://mlg.ucd.ie/files/datasets/3sources.zip",
+    "bytes": 425989,
+    "sha256": "dea0ab41c48f1a50dbce855f7f9f783dd57bb0a3a3636f53f0c665678fb48659",
+    "accessed_utc": "2026-11-17T09:22:42.952969+00:00"
+  },
+  "preparation": {
+    "status": "PASS",
+    "views": [
+      {
+        "view": 0,
+        "shape": [
+          169,
+          3560
+        ],
+        "elementwise_equal": true
+      },
+      {
+        "view": 1,
+        "shape": [
+          169,
+          3631
+        ],
+        "elementwise_equal": true
+      },
+      {
+        "view": 2,
+        "shape": [
+          169,
+          3068
+        ],
+        "elementwise_equal": true
+      }
+    ]
+  },
+  "fit_files": 44,
+  "fit_array_checks": 440,
+  "all_fit_arrays_elementwise_equal": true,
+  "all_serialized_predictions_and_states_equal": true,
+  "input_arrays_equal": [
+    "pool",
+    "test",
+    "pairs",
+    "answers",
+    "H0",
+    "Hv0",
+    "Hv1",
+    "Hv2"
+  ],
+  "rebuilt_graph_equal": true,
+  "diagnostics_equal": 22,
+  "diagnostic_exclusions": [
+    "identity_sha256",
+    "seconds"
+  ],
+  "selections": [
+    {
+      "file": "Q160_consensus-only_selection.json",
+      "index": 1,
+      "value": 2.0,
+      "eligible_folds": 2
+    },
+    {
+      "file": "Q160_full_selection.json",
+      "index": 1,
+      "value": 2.0,
+      "eligible_folds": 2
+    },
+    {
+      "file": "Q160_views-only_selection.json",
+      "index": 2,
+      "value": 200.0,
+      "eligible_folds": 2
+    }
+  ],
+  "logical_final_results": 5,
+  "eligible_final_results": 5,
+  "metric_values": 25,
+  "max_metric_difference": 0.0,
+  "checks": [
+    {
+      "file": "Q160_consensus-only_c0_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c0_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c0_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c0_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_final.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c1_final_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c2_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c2_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c2_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_consensus-only_c2_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c0_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c0_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c0_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c0_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_final.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c1_final_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c2_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c2_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c2_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_full_c2_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c0_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c0_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c0_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c0_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_final.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c1_final_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_f0.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_f0_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_f1.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_f1_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_final.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    },
+    {
+      "file": "Q160_views-only_c2_final_state.npz",
+      "elementwise_equal": true,
+      "serialized_equal": true
+    }
+  ],
+  "protocol_sha256": "95d62dc781d189e6f9b975dae79fac1c87bf6909ca767149a6310b2ce8e0f0d5",
+  "script_sha256": "7219d765a374ec109b1b4ffd747f2fb1768271a90416d29c65afc6cf9b7356ca",
+  "source_files_unchanged": true,
+  "scope": "Fresh public archive -> rebuilt matrices -> fresh warm start and graph -> 18 validation fits and 4 unique final fits -> 5 sealed logical finals -> all five metrics. Exact identities are within the recorded numerical environment. This reproduces one existing main-study instance and does not add independent performance observations."
+}

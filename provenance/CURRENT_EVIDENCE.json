@@ -1,0 +1,32 @@
+[
+  {
+    "release_file": "evidence/current/acc_directions_40_verified.csv",
+    "source_file": "review_packet/evidence/acc_directions_40_verified.csv",
+    "sha256": "ef4acbe8533349347a89f37bbed221f585340824573155327f6d915bfa7494e2"
+  },
+  {
+    "release_file": "evidence/current/five_metrics_200_long.csv",
+    "source_file": "review_packet/evidence/five_metrics_200_long.csv",
+    "sha256": "8378edbc52de623d24885ebe1e6173a9ee5aada78a9a3bdc22f0ca2fc7ff10b3"
+  },
+  {
+    "release_file": "evidence/current/five_metrics_40_wide.csv",
+    "source_file": "review_packet/evidence/five_metrics_40_wide.csv",
+    "sha256": "51fedb77fd4041eb083baf3b811186fe5e19208667f65fb94a757c98247de96e"
+  },
+  {
+    "release_file": "evidence/current/five_metrics_paired_2000.csv",
+    "source_file": "review_packet/evidence/five_metrics_paired_2000.csv",
+    "sha256": "40e0e10f0e545ad600bb01d7da75c04d3f67c881bd017d919c0a5581709be822"
+  },
+  {
+    "release_file": "evidence/current/selection_runs_300_verified.csv",
+    "source_file": "review_packet/evidence/selection_runs_300_verified.csv",
+    "sha256": "0df0c729f73987140f2b1ad9cb4338f5bb8516db2ff6fea6dfee556e867474fc"
+  },
+  {
+    "release_file": "evidence/current/selection_summary_6_verified.csv",
+    "source_file": "review_packet/evidence/selection_summary_6_verified.csv",
+    "sha256": "b5ee89867495e61dda0c3632c407b87faad0b7f4b5ba882159bfe372d6dee781"
+  }
+]

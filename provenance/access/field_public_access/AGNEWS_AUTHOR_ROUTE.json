@@ -1,0 +1,43 @@
+{
+  "checked_date": "2026-11-17",
+  "author_repository": "https://github.com/zhangxiangxiao/Crepe",
+  "author_dataset_link": "http://goo.gl/JyCnZq",
+  "resolved_folder_url": "https://drive.google.com/drive/folders/0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M",
+  "archive_entry": {
+    "id": "0Bz8a_Dbh9QhbUDNpeUdjb0wxRms",
+    "title": "ag_news_csv.tar.gz",
+    "mime_type": "application/x-gzip",
+    "size": "11784327",
+    "url": "https://drive.google.com/file/d/0Bz8a_Dbh9QhbUDNpeUdjb0wxRms/view?usp=drivesdk&resourcekey=0-Q5sv-6rQnLTJArwcASJJow",
+    "file_or_folder": "file",
+    "created_time": "2015-09-09T20:06:21.213Z",
+    "modified_time": "2015-09-09T20:06:21.213Z",
+    "parent_ids": null,
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": true,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "connector_raw_response": {
+    "status": "complete_raw_file_stream_returned",
+    "file_name": "ag_news_csv.tar.gz",
+    "file_size_bytes": 11784327,
+    "id": "0Bz8a_Dbh9QhbUDNpeUdjb0wxRms",
+    "parent_ids": [
+      "0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M"
+    ],
+    "created_time": "2015-09-09T20:06:21.213Z",
+    "modified_time": "2015-09-09T20:06:21.213Z",
+    "downloaded_locally": false,
+    "sha256_verified": false
+  },
+  "local_transfer_scope": "Python and Node transfers of the temporary platform artifact failed in this environment. The temporary signed URL is deliberately omitted.",
+  "alternative_inline_response": {
+    "status": "failed",
+    "reason": "Google Drive fetch with inline base64 returned Transport closed"
+  },
+  "anonymous_direct_download_verified": false,
+  "note": "A dated author-linked listing and connector response do not guarantee future availability, anonymous network access, or original archive SHA256 equality."
+}

@@ -1,0 +1,31 @@
+{
+  "declared_utc": "2026-10-15T05:42:12.574918+00:00",
+  "experiment_protocol_sha256": "6ff7d0517b8fae18501b86ff728d45415989d445ebf0fa95dc2d7e830e523b36",
+  "timing": "Before global prediction seal and before any AG clustering evaluation score. Training already running.",
+  "dataset": "Fixed 2000-document AG News title/description corpus",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+  ],
+  "primary_endpoint": "ACC on unqueried objects at Q=400",
+  "comparisons": [
+    "SAPN-MV minus SAPN-EQ",
+    "SAPN-MV minus CMVNMF",
+    "SAPN-MV minus fixed-CV"
+  ],
+  "descriptive": "All ten paired seed differences; mean and sample SD. Retain every prespecified seed.",
+  "test": "Two-sided exact paired sign-flip test of the absolute mean difference, enumerating all 2^10 sign assignments; inclusive tail within 1e-12 percentage points.",
+  "assumptions": "Tests conditional on this fixed corpus and prespecified seed-generating procedure, under within-pair exchangeability of the two algorithm outcomes. Not a test over independent corpora; no universal algorithm dominance inference.",
+  "multiplicity": "Holm adjustment across exactly these three ACC comparisons, family alpha .05. Report all three raw and adjusted p values, regardless of direction.",
+  "other_endpoints": "NMI, ARI, Q=0/160 and BER are descriptive; no further significance tests.",
+  "failures": "Only perform a comparison test if all ten paired final predictions meet their declared numerical eligibility; otherwise report test not performed with count, and retain terminal descriptive scores separately.",
+  "no_selection": "Neither statistics nor evaluation labels change the model, grid, seeds, data, or candidate selection."
+}

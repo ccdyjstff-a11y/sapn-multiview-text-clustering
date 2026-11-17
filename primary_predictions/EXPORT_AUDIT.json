@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "predictions": 210,
+  "metric_comparisons": 630,
+  "max_abs_error": 1.1102230246251565e-16,
+  "manifest_sha256": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd",
+  "exporter_sha256": "1c5794f36502a4c676fe85268f1f39c239f3689087f4178db2efeb4155c23e08",
+  "source_table_sha256": "f63c11998d0c6adc6d0d0a8fafa62026c5138e50fa0d05ca46d180b1271548c0",
+  "note": "Rescoring is distinct from numerical refitting. Eligibility and historical implementation qualifications are unchanged."
+}

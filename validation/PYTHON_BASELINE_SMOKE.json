@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic interface execution, not new corpus performance or author-code equivalence",
+  "methods": [
+    "CMVNMF",
+    "MVCHSS"
+  ],
+  "commands": [
+    {
+      "phase": "prepare",
+      "returncode": 0,
+      "stdout": "PREPARED Synthetic 60 2\n",
+      "stderr": ""
+    },
+    {
+      "phase": "oracle",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "phase": "train",
+      "returncode": 0,
+      "stdout": "FINAL CMVNMF 100 True\nFINAL MVCHSS 100 True\nSEALED 2\n",
+      "stderr": ""
+    },
+    {
+      "phase": "score",
+      "returncode": 0,
+      "stdout": "SCORED 2\n",
+      "stderr": ""
+    }
+  ],
+  "fit_diagnostics": [
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c0_f0/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c0_f1/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c1_f0/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c1_f1/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c2_f0/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_c2_f1/diagnostics.json"
+    },
+    {
+      "method": "CMVNMF",
+      "eligible": true,
+      "path": "Q100_CMVNMF_final/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c0_f0/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c0_f1/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c1_f0/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c1_f1/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c2_f0/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_c2_f1/diagnostics.json"
+    },
+    {
+      "method": "MVCHSS",
+      "eligible": true,
+      "path": "Q100_MVCHSS_final/diagnostics.json"
+    }
+  ],
+  "evaluation_records": 2,
+  "MATLAB_launched": false,
+  "third_party_code_downloaded": false
+}

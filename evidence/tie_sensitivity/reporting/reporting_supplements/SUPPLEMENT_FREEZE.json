@@ -1,0 +1,13 @@
+{
+  "build_reporting_supplements.py": "b7331261546c81eace90cc368d92d968c24ef4efd2a5baaa4b553771ce4a9892",
+  "pool_excluded_BER_en.tex": "45e8e0c1267d1a4ec0ef01bbe2eaffdaafffc7bfd18bff4dff53999b4420b17d",
+  "pool_excluded_BER_zh.tex": "85f81dc7eb4ab57995939a2d5f245a089443d92bb3eeab3d8e97b0cb64a7e660",
+  "pool_excluded_pair_counts_50.csv": "d6b5d7cd65a777bfcce9adbdd9ca6917f970c37f3a93058f9392b39cf7c53f80",
+  "pool_excluded_pair_counts_summary_5.csv": "6f9e18db784d51429f5c731041a9a456159fe143870ce6cba24cd51a8b4be79c",
+  "primary_absolute_250_long.csv": "6c1286382ed58520f6bf0c6a254821364f3ef7ac0ba39892e40e3739833a1ea3",
+  "primary_absolute_50_wide.csv": "a972e5df8a4ad14f1b63b427be8e62b6ed1e4a883906ff731d4f37b2f17410f7",
+  "primary_absolute_en.tex": "895896e0999db90b78b3804b194426a5f71e08ddbdd4c7484fc057d54ab89f9e",
+  "primary_absolute_independent_30_wide.csv": "27be60dc137173d26520232c2796a0f3e658b879b169263f2851e88664078007",
+  "primary_absolute_zh.tex": "a6818a8abd079c9698b41000486d4bc10a3f92cad3d75df95f53134072b2bd32",
+  "SUPPLEMENT_AUDIT.json": "18c9fd399f8d7ce68cfef1145a98640e1efedd1409e231336f0eb11e66d698aa"
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "DRAFT ONLY: independent 504–513 repeat with qualified common endpoint candidates. No scientific protocol frozen or input generated.",
+  "copies": [
+    {
+      "file": "allocation_models.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\allocation_models.py",
+      "sha256": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "query_protocol.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\query_protocol.py",
+      "sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "init_warm.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\init_warm.py",
+      "sha256": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "allocation_io.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\allocation_io.py",
+      "sha256": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "run_allocation.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\run_allocation.py",
+      "sha256": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "score_allocation.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\reproduction\\allocation\\score_allocation.py",
+      "sha256": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "allocation_core.py",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\common_endpoint_candidates\\allocation_core_common.py",
+      "sha256": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+      "copied_byte_identical": true
+    },
+    {
+      "file": "CORE_DERIVATION.json",
+      "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\common_endpoint_candidates\\CORE_DERIVATION.json",
+      "sha256": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+      "copied_byte_identical": true
+    }
+  ],
+  "original_portable_runner_sha256": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+  "common_core_qualification_sha256": "f60ecc186bb43ae395a74f27023c8a232dafd39885564a3141ef175726ce5313",
+  "frozen_study_protocol_sha256": "dad6d68c3af888ce603c1b82cc17d9454ba08614899e1146b0d03ebdd5d4ec26",
+  "software": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  }
+}

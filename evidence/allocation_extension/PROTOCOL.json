@@ -1,0 +1,75 @@
+{
+  "study": "allocation_extension_20261117",
+  "frozen_utc": "2026-11-17T08:28:28.508352+00:00",
+  "datasets": [
+    "20NG",
+    "AGNews"
+  ],
+  "seeds": [
+    1101,
+    1102,
+    1103,
+    1104,
+    1105
+  ],
+  "budgets": [
+    400
+  ],
+  "inputs": {
+    "20NG": {
+      "n": 2000,
+      "k": 20,
+      "views": 2,
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\confirmation_data\\prepared_20NG_SubjectBody_2000",
+      "hashes": {
+        "metadata.json": "6889034106fc8326e41d695e17365f4eb60a8fcb9d8a9a93e65e3c2accb5d6a9",
+        "y.npy": "c6d84814a3240b7fe873151238c4f562341b040fdd9e900b76f098fa2d74c213",
+        "X0.npz": "41efa61f6dff050ab7b53d69ea2830e97b807a34c710e2ec6dd9a550282ac00d",
+        "X1.npz": "a4d7fc2bbed7c8f59e1a5ecf0a530eb85aa899077a29869c9759efab720ab750"
+      }
+    },
+    "AGNews": {
+      "n": 2000,
+      "k": 4,
+      "views": 2,
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\agnews_confirmation_v1\\prepared_AGNews_TitleDescription_2000",
+      "hashes": {
+        "metadata.json": "01c0329c8cece73992ac06f0a523f2855a67900fdec55ee9c1ed95c2dd803f45",
+        "y.npy": "bfafb3e09aaa229db2fe589145e0dc767a7d0af44e27776dc28fcbbaa3fe401c",
+        "X0.npz": "dddb84333dde08d5afe1bc3fbddd386c9dc47b23e67faf1473a5fc027ad25938",
+        "X1.npz": "be79a015c698be853d1e4c90083de58ab3c60771fca6a7931adaac18562d9218"
+      }
+    }
+  },
+  "sources": {
+    "allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+    "allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+    "allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+    "CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+    "init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+    "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+    "score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+    "SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+  },
+  "wrapper_sha256": "7565bf4d780a6b6086af60ee820e950629f427e73cb1843d47689c842868be5b",
+  "allocation": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "lambdas_default_first": [
+    20.0,
+    2.0,
+    200.0
+  ],
+  "candidates": "common endpoint candidates, unchanged verified portable source",
+  "sampling": "30% label-blind pool seed+21000; unique uniform unordered query stream seed+31000; no replacement seeds",
+  "selection": "unchanged two node-disjoint eligible folds; mean BER; default-first ties; training rejects full class vector",
+  "primary": "Within each corpus, Full-CV minus consensus-only-CV and views-only-CV ACC on non-pool objects; report all five points, mean/sample SD, median and win/tie/loss",
+  "secondary": "Full-selected lambda controls and NMI, ARI, BER_train, BER_unqueried; all retained irrespective of sign; no inferential p-values",
+  "gate": "All ten blocks accounted for and sealed before any extension evaluation; failures retained and incomplete conditions not represented by a reduced complete-case mean",
+  "boundary": "These corpora were previously used in overall model evaluation. This is a prospectively specified allocation extension on known benchmarks, not a never-seen independent dataset test or a new model selection stage.",
+  "compute": "One worker, one BLAS thread; start a block only with >=3 GiB available RAM; original 200/1000/4000 iteration schedule and tolerances unchanged",
+  "completion": "Ten planned corpus/seed blocks, 50 logical final records; maximum 180 CV fits and 50 final fits before exact duplicate reuse; no data-dependent extensions"
+}

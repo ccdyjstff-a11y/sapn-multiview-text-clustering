@@ -1,0 +1,42 @@
+{
+  "report_file": "validation/PRIMARY_REAL_RESCORE_630.json",
+  "source_record": "audit/PRIMARY_REAL_RESCORE_630.json",
+  "report_sha256": "1ceb89316d3dc8ff9796a1cf57540bd2270ef6e5e0b939edb11ca993ca727d8f",
+  "source_byte_identical": true,
+  "scorer_sha256": "6e17694bc31e3710d8361f662335b73d4ba323bd64d93bcc3dcf7cf0e0e967db",
+  "prediction_manifest_sha256": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd",
+  "predictions": 210,
+  "metric_comparisons": 630,
+  "label_partition_identities": {
+    "3Sources": {
+      "n": 169,
+      "ordered_class_partition_sha256": "3ba77c8dbd0869934651956cd3312f759ce8fad4d0e0a365f7ffb1fff11e57b9"
+    },
+    "BBC": {
+      "n": 2225,
+      "ordered_class_partition_sha256": "72c1e49295d015b314b881119f22b823809f1e306dcb02cf22e36d7967901852"
+    },
+    "Reuters": {
+      "n": 1200,
+      "ordered_class_partition_sha256": "35eec843ba1d03b7a250feec3642189f38453010c6abd67844f14b7f908fb0ca"
+    },
+    "Cora": {
+      "n": 2708,
+      "ordered_class_partition_sha256": "a406c7cab3a97108da6967180ac12844966e619144b6f95665ff0497d3198b5a"
+    },
+    "CiteSeer": {
+      "n": 3312,
+      "ordered_class_partition_sha256": "cb085a63c2ee30c592e657cca45ddc1728a9ee3ba4e5c5d5d8d8ac00801b67c9"
+    },
+    "20NG_SubjectBody_2000": {
+      "n": 2000,
+      "ordered_class_partition_sha256": "062e5dfd174559cc1aed10a67838639aea0bb5a828317ebe68a998fe11813577"
+    },
+    "AGNews_TitleDescription_2000": {
+      "n": 2000,
+      "ordered_class_partition_sha256": "143cfdb0f701f726c0005f442b1ca9fc1570f4cee6d7d7e416c9746f8d6f014a"
+    }
+  },
+  "label_files_or_local_map_distributed": false,
+  "scope": "Actual external-label rescoring; includes the 60 field-corpus predictions already counted within 210; no additional training or independent outcomes"
+}

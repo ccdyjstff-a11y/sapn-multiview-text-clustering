@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-28T14:19:27.449556+00:00",
+  "scope": "Independent reconstruction from saved selection matrices, query-only fold data, and 500 frozen logical ACC records; no fitting, new scoring from true labels, parameter changes, or significance tests.",
+  "selection": {
+    "records": 300,
+    "group_summary_rows": 6,
+    "CV_records": 1800,
+    "best_BER_ties": 112,
+    "default_fallbacks": 0,
+    "selected_default_including_valid_choices": 148,
+    "selected_default_among_tied_best": 108,
+    "two_eligible_folds": 300,
+    "original_selection_replay_mismatches": 0,
+    "BER_tie_tolerance_raw": 1e-12
+  },
+  "paired_ACC": {
+    "contrasts": 40,
+    "pairs": 400,
+    "eligible_per_contrast": 10,
+    "orientation": "Full minus control",
+    "unit": "percentage points",
+    "tie_rule": "abs(difference) <= 1e-12; wins > 1e-12; losses < -1e-12",
+    "changed_counts_versus_original_exact_zero_rule": 0,
+    "maximum_summary_difference_pp": 8.881784197001252e-16
+  },
+  "source_and_review_integrity": {
+    "consumed_packet_files_hashed": 355,
+    "consumed_inputs_unchanged": true,
+    "R2_frozen_outputs_unchanged": true
+  },
+  "latex_structural_checks": {
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "braces_environments_table_columns_and_cross_references": "PASS",
+    "compiled_or_paginated": false
+  },
+  "limitations": [
+    "Not an independent raw-label metric verification.",
+    "No confidence intervals, p-values, or new selection policies were created.",
+    "Counts are descriptive; observations share corpora, budgets, and Full runs."
+  ]
+}

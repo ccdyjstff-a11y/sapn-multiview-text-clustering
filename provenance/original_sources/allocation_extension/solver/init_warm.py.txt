@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+预对齐 warm-start（路线 A）：
+  1) 对每个视图单独做 NMF，得到视图软聚类 W_v (n×k)
+  2) 在拼接特征上做 NMF 得到参考 W_ref
+  3) 用归一化列的点积相关矩阵 + 匈牙利匹配，把每个视图的簇排列对齐到参考
+  4) 对齐后平均、逐列归一化，得到共识 H 的初值 (k×n)
+also_hv=True 时同时返回对齐后的各视图 Hv 初值 (k×n 列表)。
+"""
+import numpy as np
+from sklearn.decomposition import NMF
+from scipy.optimize import linear_sum_assignment
+
+
+def _nmf(X, k, seed, max_iter=400):
+    m = NMF(n_components=k, init="random", random_state=seed,
+            max_iter=max_iter)
+    return m.fit_transform(X)
+
+
+def _align(W, ref):
+    Wn = W / (np.linalg.norm(W, axis=0, keepdims=True) + 1e-12)
+    rn = ref / (np.linalg.norm(ref, axis=0, keepdims=True) + 1e-12)
+    C = Wn.T @ rn                       # C[r,c]：视图簇r 与 参考簇c 的相关
+    row, col = linear_sum_assignment(-C)
+    Wa = np.zeros_like(W)
+    for r, c in zip(row, col):
+        Wa[:, c] = W[:, r]
+    return Wa
+
+
+def warm_init(Xs, k, seed, also_hv=False, max_iter=400):
+    # 用首个视图 NMF 作对齐参考（省掉高维 hstack NMF），共 V 次 NMF
+    ref = _nmf(Xs[0], k, seed, max_iter=max_iter)
+    aligned = [ref]
+    for X in Xs[1:]:
+        aligned.append(_align(_nmf(X, k, seed, max_iter=max_iter), ref))
+    H0 = np.mean(aligned, axis=0)
+    H0 = H0 / (H0.sum(axis=1, keepdims=True) + 1e-12)
+    if also_hv:
+        hv = [(W / (W.sum(axis=1, keepdims=True) + 1e-12)).T
+              for W in aligned]
+        return H0.T, hv
+    return H0.T

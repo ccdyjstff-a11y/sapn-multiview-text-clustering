@@ -1,0 +1,54 @@
+{
+  "scope": "English runnable copy of the frozen common-candidate allocation solver. Historical records are immutable evidence, not current source bindings.",
+  "archive_sha256": "3e0e1c75574678d0c0a2026afe98a7b9ab58bc283eac453544e1d3673b044179",
+  "copies": [
+    {
+      "file": "allocation_core.py",
+      "source": "provenance/original_sources/common/allocation_core.py.txt",
+      "sha256": "f62a2b55893d03c17a6f46b3d15982a2054d734eb846671620c5fb795e8c9d46",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "allocation_io.py",
+      "source": "provenance/original_sources/common/allocation_io.py.txt",
+      "sha256": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "allocation_models.py",
+      "source": "provenance/original_sources/common/allocation_models.py.txt",
+      "sha256": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "init_warm.py",
+      "source": "provenance/original_sources/common/init_warm.py.txt",
+      "sha256": "8c238d3c86594f411ba1d0c8444749817b3fbf61558c302c79628a5ebf764af8",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "query_protocol.py",
+      "source": "provenance/original_sources/common/query_protocol.py.txt",
+      "sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "run_allocation.py",
+      "source": "provenance/original_sources/common/run_allocation.py.txt",
+      "sha256": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "score_allocation.py",
+      "source": "provenance/original_sources/common/score_allocation.py.txt",
+      "sha256": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+      "copied_byte_identical": false
+    },
+    {
+      "file": "CORE_DERIVATION.json",
+      "source": "provenance/historical_common/CORE_DERIVATION.json",
+      "sha256": "c11177b758d41b6ebfe9902e7b46079a32bd6a76d60fc1492dc0d9aef8fa3a38",
+      "copied_byte_identical": false
+    }
+  ]
+}

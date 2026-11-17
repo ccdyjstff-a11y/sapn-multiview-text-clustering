@@ -1,0 +1,9 @@
+{
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "case_id": "3Sources_s25_Q400_c13_f0",
+  "input_sha256": "615c565a9ad7e1b43589f9e2fe581ffc60aaa61f7a4f55e28f99d6c2cca0ac3e",
+  "dispatched_utc": "2026-10-27T05:43:24.338498+00:00",
+  "ordinal": 88
+}

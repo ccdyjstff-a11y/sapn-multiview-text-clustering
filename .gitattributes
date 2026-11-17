@@ -1,0 +1,7 @@
+# Preserve all retained bytes, including original LF and CRLF records.
+* -text
+*.npz binary
+*.npy binary
+*.png binary
+*.pdf binary
+*.zip binary

@@ -1,0 +1,12 @@
+{
+  "global_seal_sha256": "c0556b30ce29db99df670d220543f52f85ef80449975b8ad36bef247b93d12cd",
+  "labels_sha256": "c6d84814a3240b7fe873151238c4f562341b040fdd9e900b76f098fa2d74c213",
+  "evaluation_sha256": "55ffee17063223feb2ce2a9d1675691ce1df8d46cfa3043878da2fb8671a1a85",
+  "test_count": 1400,
+  "evaluation_pairs_sha256": "5c489a6db2d0936c89285f895f25aa7c41ec84d1811de41585ec024c6d68eae8",
+  "pair_count": 10000,
+  "scoring_source_sha256": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+  "eligible": 5,
+  "logical_records": 5,
+  "interpretation": "Fixed original selections and Full-lambda controls. Terminal scores for nonconverged runs are retained with eligibility false. No oracle coefficient selection."
+}

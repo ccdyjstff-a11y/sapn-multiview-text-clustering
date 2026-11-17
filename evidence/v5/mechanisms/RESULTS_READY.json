@@ -1,0 +1,14 @@
+{
+  "ready": true,
+  "status": "PASS",
+  "audit_sha256": "ff582c76b2c63cf3bd834345881ba6ff25f2c37d0a8ed587613764b5d0246ecd",
+  "summary": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\final_improvement_v5\\mechanisms\\summary.json",
+  "per_run_csv": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\final_improvement_v5\\mechanisms\\per_run.csv",
+  "summary_sha256": "9716d93602c67e8ae3cdf40736284f529f87723813239fb7971a9b93b4cf93d9",
+  "per_run_sha256": "9557ede4529449992860a935211be301e31bbb97dacde16edff5b901ad4fdeae",
+  "protocol_sha256": "0b9f2108b952027711ea87929b5cdecdfcc7a1f452f77d56432c0e8df7783b4e",
+  "global_seal_sha256": "cf16dfbbe2e7b98e331ccd5c006e75031b55c0f6a9e4d067eaa372ca28287cb7",
+  "global_predictions_sha256": "cf16dfbbe2e7b98e331ccd5c006e75031b55c0f6a9e4d067eaa372ca28287cb7",
+  "weight_diagnostics_sha256": "53635546c5867aeefe895c9fe98c7ca804629899a2a021c96687e499cfd85647",
+  "note": "Read failures and denominators. No new-corpus or universal superiority inference."
+}

@@ -1,0 +1,10 @@
+{
+  "method": "full",
+  "eta": 0.5,
+  "lambda_pair": 2.0,
+  "seed": 508,
+  "protocol_sha256": "cde78c7ad10fcd74dc77266b197526169866b5f3010256ea729e704e479b59ba",
+  "input_sha256": "450a7d3e0fe3ef519d5050d6ca2446fe2baa9bae5fb1d71fbc259fa4dadeed39",
+  "P": "9c77e511e49cb0f29ee0299f08fa169c1d54e4cf8a3e1309c3d129f57f8048b0",
+  "N": "2976a0a294076fb6f687fa8b58ad927756bf262cf3354c2a54ead3d0fabb5543"
+}

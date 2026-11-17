@@ -1,0 +1,171 @@
+{
+  "new_fits_run": 0,
+  "optimizer_called": false,
+  "train_executed": false,
+  "train_dry_run_executed": true,
+  "score_replay_executed": true,
+  "ast_parse": true,
+  "plan_summary": {
+    "choices": 900,
+    "logical_finals": 1500,
+    "unique_final_requirements": 558,
+    "verified_reuse_unique_fits": 386,
+    "missing_unique_fits": 172,
+    "cv_predictions_replayed": 1800,
+    "historical_blocks": 50,
+    "new_fits_run": 0,
+    "test_scores_read": false,
+    "posthoc": true,
+    "primary_preserved": true
+  },
+  "choices_comparison": {
+    "rows": 900,
+    "common_fields": [
+      "allocation",
+      "budget",
+      "changed_from_primary",
+      "dataset",
+      "eligible_folds",
+      "mean_validation_BER",
+      "policy",
+      "primary_lambda",
+      "seed",
+      "selected_candidate",
+      "selected_lambda",
+      "source_selection_sha256",
+      "tie_count",
+      "tied_candidates",
+      "tied_lambdas"
+    ],
+    "equal_cells": 13500
+  },
+  "targets_comparison": {
+    "rows": 1500,
+    "common_fields": [
+      "allocation",
+      "budget",
+      "candidate",
+      "dataset",
+      "expected_stem",
+      "fit_id",
+      "graph_sha256",
+      "inputs_sha256",
+      "lambda_pair",
+      "logical_method",
+      "policy",
+      "seed",
+      "source_protocol_sha256",
+      "status"
+    ],
+    "equal_cells": 21000
+  },
+  "exact_missing_and_reuse_id_sets": true,
+  "relocated_relative_directory": "relocated_2b4bd1c6e075",
+  "relocated_byte_equal_plan_artifacts": [
+    "PLAN.json",
+    "PLAN_SUMMARY.json",
+    "selection_policy_index_900.csv",
+    "candidate_cv_index_900.csv",
+    "logical_final_targets_1500.csv",
+    "verified_reuse_fits.csv",
+    "missing_fits.csv"
+  ],
+  "linked_existing_files": 793,
+  "linked_existing_finals": 172,
+  "logical_metric_comparisons": 7500,
+  "logical_metrics_max_abs_error": 0.0,
+  "paired_comparison": {
+    "rows": 6000,
+    "common_fields": [
+      "Full_minus_control_pp",
+      "budget",
+      "comparator",
+      "control_fit_id",
+      "dataset",
+      "eligible",
+      "full_fit_id",
+      "metric",
+      "policy",
+      "seed"
+    ],
+    "equal_cells": 60000
+  },
+  "summary_comparison": {
+    "rows": 600,
+    "common_fields": [
+      "budget",
+      "comparator",
+      "complete",
+      "dataset",
+      "eligible_pairs",
+      "losses",
+      "maximum_pp",
+      "mean_pp",
+      "median_pp",
+      "metric",
+      "minimum_pp",
+      "planned_pairs",
+      "policy",
+      "positive_difference_better",
+      "sample_SD_pp",
+      "ties",
+      "wins"
+    ],
+    "equal_cells": 10200
+  },
+  "all_linked_sources_unchanged_after_replay": true,
+  "adapter_sha256": "28d2ab9aa95e18d2af09747ee4ebeaeb605e7be5221fb2908a881e6d8b48ca49",
+  "validation_date": "2026-11-17",
+  "real_train_executed": false,
+  "fresh_release_historical_fit_executed": false,
+  "numerical_core_modified": false,
+  "phase_scope": "Actual original-data planning and stored-state scoring replay; train dry-run only; no new optimizer execution",
+  "software": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "common_source_sha256": {
+    "allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+    "allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+    "CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+    "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+    "allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+    "run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+    "score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+    "SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+  },
+  "validation_harness_sha256": "f97edca33b983b2b311637487e8b38d5cdc755197787ccbe00e7dcee2f5ef3d4",
+  "original_completed_sensitivity_seal_sha256": "e354d24b19b675625ddcd2a6aba4cf12bc3aaf71bca4efe0530ecdc81d1bf744",
+  "original_evaluation_freeze_sha256": "afa67e00b70a94d725d0ba5712630b54966e5af1de0d27c11a5aed2ab2d580dd",
+  "replay_global_seal_sha256": "9c2b7247ba0a281a5c358ced7ed3d68676cb6a5dc21edb0fd20ad3624de454d8",
+  "replay_evaluation_freeze_sha256": "e944a46c8857eca8e7e439512ba93dfa404db7515c5e3eab28f99da1f13357cb",
+  "plan_freeze_sha256": "95c1ac06fc2ad87e98654cbce8d0ae626cc7fae17ae71e4e0b9419d785e68d09",
+  "validation_log_sha256": {
+    "help_plan.txt": "4aa79bb108f481663ba302ae4bfa51bb8d934d55204320e54b0dfff0f924ad00",
+    "help_root.txt": "b43dec9cd19f7ae563c9ab95ac28f812fe6a3dd38c9b7673c3a08ce1e9b83a97",
+    "help_score.txt": "a9cefa96ef510e17834c10330537265ea3fee1e329941a1ab0b2ad9bef80177b",
+    "help_train.txt": "be5399e519267a078fabd36291f5c3e9b79c00c3b1d94c886540de03edb930c0",
+    "reject_plan_labels.txt": "831b6f08e481d6d96582367076de38309d155f00d6353a2de27a277ee052f8e4",
+    "reject_score_without_seal.txt": "571840757a35ddb2c022deb90d7f34cfd852edf3baa21ee2708bc86285796db7",
+    "reject_train_labels.txt": "831b6f08e481d6d96582367076de38309d155f00d6353a2de27a277ee052f8e4",
+    "relocated_plan.txt": "7e46c55b1dcb25365e9b4f05f0288b6607057d64bd585d6e1aa045e415d6986e",
+    "train_dry_run.txt": "eb91517db9846d07ef870eb61683f33c72820a270bc9772311350344e67683a1"
+  },
+  "release_files": [
+    "run_tie_sensitivity.py",
+    "README.md",
+    "validate_adapter.py",
+    "VALIDATION_REPORT.json",
+    "VALIDATION.md",
+    "SHA256SUMS.json"
+  ],
+  "exclude_from_release": [
+    "validation/",
+    "validation_original/",
+    "validation_data_map.json",
+    "validation_labels_map.json"
+  ]
+}

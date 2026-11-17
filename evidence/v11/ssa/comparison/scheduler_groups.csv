@@ -1,0 +1,15 @@
+dataset,Q,logical_CV,logical_final,attempted_CV,attempted_final,pruned_CV,predispatch_global_stop_slots,not_attempted_after_stop_slots,unsupported_final,committed_conditions,primary_eligible_final,complete_three_seed_primary,resource_cap_attempts,resource_stop_triggers,deadline_stop_triggers,group_memory_guard_status,group_memory_guard_threshold_bytes,group_memory_wait_seconds
+20NG,160,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,
+20NG,400,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,
+3Sources,160,108,3,108,3,0,0,0,0,3,3,True,0,0,0,READY,3221225472,60.39000000001397
+3Sources,400,108,3,108,3,0,0,0,0,3,3,True,0,0,0,READY,3221225472,60.35900000005495
+AGNews,160,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,
+AGNews,400,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,
+BBC,160,108,3,0,0,0,1,110,0,0,0,False,0,1,0,GROUP_MEMORY_WAIT_CAP,4831838208,1800.015000000014
+BBC,400,108,3,108,3,0,0,0,0,3,3,True,0,0,0,READY,4831838208,60.32799999997951
+CiteSeer,160,108,3,0,0,0,0,111,0,0,0,False,0,0,0,,,
+CiteSeer,400,108,3,0,0,0,0,111,0,0,0,False,0,0,0,,,
+Cora,160,108,3,0,0,0,0,111,0,0,0,False,0,0,0,,,
+Cora,400,108,3,0,0,0,0,111,0,0,0,False,0,0,0,,,
+Reuters,160,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,
+Reuters,400,0,3,0,0,0,0,0,3,0,0,False,0,0,0,,,

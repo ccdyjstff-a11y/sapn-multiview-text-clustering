@@ -1,0 +1,173 @@
+"""Score all frozen tie-policy finals only after the complete final seal exists."""
+from pathlib import Path
+import os,sys
+sys.dont_write_bytecode=True
+for k in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS','NUMEXPR_NUM_THREADS']:os.environ[k]='1'
+import csv,json,hashlib,statistics,collections,math
+from datetime import datetime,timezone
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+from sklearn.metrics import normalized_mutual_info_score,adjusted_rand_score
+
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/'evaluation'
+ORIGINAL=ROOT.parents[1]/'review_revision_v9/allocation_repeat'
+METRICS=['ACC','NMI','ARI','BER_train','BER_unqueried']
+POLICIES=['primary_default','sensitivity_min','sensitivity_max']
+DATA=['3Sources','BBC','Reuters','Cora','CiteSeer']
+METHODS=['full-CV','consensus-only-CV','views-only-CV','consensus-only-at-full-lambda','views-only-at-full-lambda']
+CACHE={}
+def sha(p):
+    p=Path(p)
+    if p not in CACHE:
+        h=hashlib.sha256()
+        with p.open('rb') as f:
+            for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
+        CACHE[p]=h.hexdigest()
+    return CACHE[p]
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def rows(p):
+    with Path(p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+def save(name,v):
+    p=OUT/name;t=json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n'
+    if p.exists():assert p.read_text(encoding='utf-8')==t
+    else:p.write_text(t,encoding='utf-8')
+def csvsave(name,rr):
+    p=OUT/name
+    assert not p.exists(),('Existing immutable evaluation',p)
+    with p.open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(dict.fromkeys(k for r in rr for k in r)));w.writeheader();w.writerows(rr)
+def ber(pred,pairs,answers):
+    pos=answers==1;neg=answers==-1
+    if not pos.any() or not neg.any():return None
+    same=pred[pairs[:,0]]==pred[pairs[:,1]]
+    return float(.5*np.mean(~same[pos])+.5*np.mean(same[neg]))
+def metrics(pred,y,test,qp,qa,ep,ea):
+    yt,zt=y[test],pred[test]
+    _,a=np.unique(yt,return_inverse=True);_,b=np.unique(zt,return_inverse=True)
+    t=np.zeros((a.max()+1,b.max()+1),int);np.add.at(t,(a,b),1);i,j=linear_sum_assignment(-t)
+    return dict(ACC=float(t[i,j].sum()/len(test)),NMI=float(normalized_mutual_info_score(yt,zt,average_method='arithmetic')),
+        ARI=float(adjusted_rand_score(yt,zt)),BER_train=ber(pred,qp,qa),BER_unqueried=ber(pred,ep,ea))
+def summarize(v,eligible):
+    n=sum(eligible);complete=len(v)==10 and n==10 and all(x is not None and math.isfinite(x) for x in v)
+    result=dict(eligible_pairs=n,planned_pairs=10,complete=complete,mean_pp=None,sample_SD_pp=None,median_pp=None,
+        minimum_pp=None,maximum_pp=None,wins=None,ties=None,losses=None)
+    if complete:result.update(mean_pp=statistics.mean(v),sample_SD_pp=statistics.stdev(v),median_pp=statistics.median(v),
+        minimum_pp=min(v),maximum_pp=max(v),wins=sum(x>1e-12 for x in v),ties=sum(abs(x)<=1e-12 for x in v),losses=sum(x< -1e-12 for x in v))
+    return result
+def main():
+    assert (ROOT/'ALL_FINALS_SEALED.json').exists(),'All final states must be sealed before evaluation'
+    seal=read(ROOT/'ALL_FINALS_SEALED.json')
+    assert seal['new_fits']==172 and seal['reused_unique']==386 and seal['logical_records']==1500 and not seal['test_scores_read']
+    assert seal['protocol_sha256']==sha(ROOT/'PROTOCOL.md') and seal['index_freeze_sha256']==sha(ROOT/'INDEX_FREEZE.json')
+    for name,digest in read(ROOT/'INDEX_FREEZE.json')['artifacts'].items():assert sha(ROOT/name)==digest
+    for name,digest in seal['files'].items():assert sha(ROOT/name)==digest,('New final seal mismatch',name)
+    assert seal['records_sha256']==sha(ROOT/'NEW_FIT_RECORDS.json') and seal['reused_index_sha256']==sha(ROOT/'verified_reuse_fits.csv')
+    reuse={r['fit_id']:r for r in rows(ROOT/'verified_reuse_fits.csv')}
+    new={r['fit_id']:r for r in read(ROOT/'NEW_FIT_RECORDS.json')}
+    for r in reuse.values():assert sha(r['state_path'])==r['state_sha256'] and sha(r['prediction_path'])==r['prediction_sha256']
+    invariant_checks=0
+    for r in new.values():
+        if r['status']!='ok':continue
+        ds,seed,q,method=r['dataset'],r['seed'],r['budget'],r['allocation']
+        reference=next(v for v in reuse.values() if v['dataset']==ds and int(v['seed'])==seed and int(v['budget'])==q and v['allocation']==method)
+        old=read(reference['diagnostics_path'])
+        current=read(Path(r['output_block'])/(r['stem']+'_diagnostics.json'))
+        assert current['invariants']==old['invariants'],('Reference/graph/domain invariants changed',r['fit_id'])
+        assert current['parameter']==r['lambda_pair'] and current['method']==method
+        invariant_checks+=1
+    targets=rows(ROOT/'logical_final_targets_1500.csv');assert len(targets)==1500
+    unique={r['fit_id']:r for r in targets};assert len(unique)==558
+    OUT.mkdir(exist_ok=True)
+    save('PRE_SCORE_GATE.json',dict(final_seal_sha256=sha(ROOT/'ALL_FINALS_SEALED.json'),
+        index_freeze_sha256=sha(ROOT/'INDEX_FREEZE.json'),all558_final_sources_hash_checked=True,
+        new_final_reference_graph_domain_invariant_checks=invariant_checks,
+        scope='Fixed original, min and max tie choices. No choices changed by test outcomes.',scoring_source_sha256=sha(__file__)))
+    # Test labels and relationship answers are first accessed below this gate.
+    allfits=[];byfit={};sources={}
+    for ds in DATA:
+        labelpath=ORIGINAL/'postseal_evaluation'/f'{ds}_labels.npy';y=np.load(labelpath,allow_pickle=False)
+        sources[str(labelpath)]=sha(labelpath)
+        for seed in range(504,514):
+            block=ORIGINAL/'runs'/ds/f'seed{seed}';em=read(block/'EVALUATION_MANIFEST.json')
+            assert sha(labelpath)==em['labels_sha256']
+            epfile=block/'postseal_evaluation_pairs.npz';assert sha(epfile)==em['evaluation_pairs_sha256']
+            sources[str(epfile)]=sha(epfile)
+            with np.load(epfile,allow_pickle=False) as z:ep=z['pairs'].copy();ea=z['answers'].copy()
+            with np.load(block/'inputs.npz',allow_pickle=False) as z:test=z['test'].copy();pairs=z['pairs'].copy();answers=z['answers'].copy()
+            for fit_id,r in unique.items():
+                if r['dataset']!=ds or int(r['seed'])!=seed:continue
+                q=int(r['budget']);stem=r['expected_stem']
+                path=Path(reuse[fit_id]['prediction_path']) if fit_id in reuse else Path(new[fit_id]['output_block'])/(stem+'.npz')
+                diagpath=Path(reuse[fit_id]['diagnostics_path']) if fit_id in reuse else Path(new[fit_id]['output_block'])/(stem+('_diagnostics.json' if new[fit_id]['status']=='ok' else '_FAILURE.json'))
+                d=read(diagpath);values={m:None for m in METRICS}
+                if d['status']=='ok':
+                    assert sha(path)==d['prediction_sha256']
+                    with np.load(path,allow_pickle=False) as z:
+                        pred=z['labels'].copy();H=z['H']
+                        assert np.array_equal(pred,H.argmax(axis=0)) and np.isfinite(H).all()
+                        assert H.min()>=-1e-12 and np.max(abs(H.sum(axis=0)-1))<1e-10
+                        assert np.array_equal(z['P'],pairs[:q][answers[:q]==1]) and np.array_equal(z['N'],pairs[:q][answers[:q]==-1])
+                    values=metrics(pred,y,test,pairs[:q],answers[:q],ep,ea)
+                scored=dict(fit_id=fit_id,dataset=ds,seed=seed,budget=q,allocation=r['allocation'],lambda_pair=float(r['lambda_pair']),
+                    origin='reused_original' if fit_id in reuse else 'new_missing_final',eligible=d['status']=='ok' and d['converged'],
+                    status=d['status'],prediction_path=str(path),prediction_sha256=sha(path) if path.exists() else None,**values)
+                byfit[fit_id]=scored;allfits.append(scored)
+    logical=[]
+    for r in targets:
+        s=byfit[r['fit_id']]
+        logical.append(dict(policy=r['policy'],logical_method=r['logical_method'],**s))
+    lookup={(r['policy'],r['dataset'],r['seed'],r['budget'],r['logical_method']):r for r in logical}
+    original=read(ORIGINAL/'postseal_evaluation/all_logical_evaluation.json')
+    primary_err=max(abs(lookup['primary_default',r['dataset'],r['seed'],r['budget'],r['method']][m]-r[m]) for r in original for m in METRICS)
+    assert primary_err<1e-12
+    points=[];summaries=[]
+    for policy in POLICIES:
+        for ds in DATA:
+            for q in [160,400]:
+                for comparator in METHODS[1:]:
+                    for metric in METRICS:
+                        values=[];eligible=[]
+                        for seed in range(504,514):
+                            a=lookup[policy,ds,seed,q,'full-CV'];b=lookup[policy,ds,seed,q,comparator]
+                            v=None if a[metric] is None or b[metric] is None else 100*(a[metric]-b[metric])
+                            ok=a['eligible'] and b['eligible'] and v is not None
+                            values.append(v);eligible.append(ok)
+                            points.append(dict(policy=policy,dataset=ds,seed=seed,budget=q,comparator=comparator,metric=metric,
+                                Full_minus_control_pp=v,eligible=ok,full_fit_id=a['fit_id'],control_fit_id=b['fit_id']))
+                        s=summarize(values,eligible)
+                        if metric.startswith('BER') and s['wins'] is not None:s['wins'],s['losses']=s['losses'],s['wins']
+                        summaries.append(dict(policy=policy,dataset=ds,budget=q,comparator=comparator,metric=metric,
+                            positive_difference_better=not metric.startswith('BER'),**s))
+    assert len(logical)==1500 and len(points)==6000 and len(summaries)==600
+    headlines=[]
+    for policy in POLICIES:
+        for branch in ['independent_CV','policy_Full_lambda']:
+            group=[s for s in summaries if s['policy']==policy and s['metric']=='ACC' and
+                (s['comparator'].endswith('-CV') if branch=='independent_CV' else s['comparator'].endswith('-at-full-lambda'))]
+            complete=[s for s in group if s['complete']]
+            headlines.append(dict(policy=policy,branch=branch,planned_contrasts=20,complete_contrasts=len(complete),
+                positive_mean=sum(s['mean_pp']>1e-12 for s in complete),zero_mean=sum(abs(s['mean_pp'])<=1e-12 for s in complete),
+                negative_mean=sum(s['mean_pp']< -1e-12 for s in complete),abs_mean_below_1pp=sum(abs(s['mean_pp'])<1 for s in complete),
+                majority_seed_wins=sum(s['wins']>5 for s in complete),mean_delta_min=min(s['mean_pp'] for s in complete),mean_delta_max=max(s['mean_pp'] for s in complete)))
+    ref={(s['dataset'],s['budget'],s['comparator'],s['metric']):s for s in summaries if s['policy']=='primary_default'}
+    changes=[]
+    for s in summaries:
+        if s['policy']=='primary_default':continue
+        p=ref[s['dataset'],s['budget'],s['comparator'],s['metric']]
+        changes.append(dict(policy=s['policy'],dataset=s['dataset'],budget=s['budget'],comparator=s['comparator'],metric=s['metric'],
+            primary_mean_pp=p['mean_pp'],sensitivity_mean_pp=s['mean_pp'],
+            change_in_mean_contrast_pp=s['mean_pp']-p['mean_pp'] if s['complete'] and p['complete'] else None,
+            strict_sign_reversal=(s['mean_pp']>1e-12 and p['mean_pp']< -1e-12) or (s['mean_pp']< -1e-12 and p['mean_pp']>1e-12) if s['complete'] and p['complete'] else None))
+    csvsave('unique_fit_metrics_558.csv',allfits);csvsave('logical_metrics_1500.csv',logical)
+    csvsave('paired_five_metrics_6000.csv',points);csvsave('paired_summary_600.csv',summaries)
+    csvsave('ACC_headlines_6.csv',headlines);csvsave('changes_from_primary_400.csv',changes)
+    save('SCORING_AUDIT.json',dict(final_seal_sha256=sha(ROOT/'ALL_FINALS_SEALED.json'),source_hashes=sources,
+        unique_fits=558,logical_records=1500,paired_values=6000,summary_groups=600,
+        eligible_unique=sum(r['eligible'] for r in allfits),complete_summary_groups=sum(r['complete'] for r in summaries),
+        primary_metrics_max_absolute_error=primary_err,no_choice_changed_after_scoring=True,
+        original_results_preserved=True,posthoc=True,independent_confirmation=False,p_values_computed=False))
+    save('EVALUATION_FREEZE.json',{p.name:sha(p) for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='EVALUATION_FREEZE.json'})
+    print(json.dumps(headlines,ensure_ascii=False,indent=2))
+
+if __name__=='__main__':main()

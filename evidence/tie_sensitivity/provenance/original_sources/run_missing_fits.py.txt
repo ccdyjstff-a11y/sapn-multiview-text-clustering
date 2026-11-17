@@ -1,0 +1,109 @@
+"""Execute only frozen missing complete-query finals, without score access."""
+from pathlib import Path
+import os,sys
+sys.dont_write_bytecode=True
+for k in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS','NUMEXPR_NUM_THREADS','VECLIB_MAXIMUM_THREADS','BLIS_NUM_THREADS']:
+    os.environ[k]='1'
+import csv,json,hashlib,time,traceback,collections
+from datetime import datetime,timezone
+import psutil,numpy as np
+from scipy import sparse
+from threadpoolctl import threadpool_limits
+
+ROOT=Path(__file__).resolve().parent
+ORIGINAL=ROOT.parents[1]/'review_revision_v9/allocation_repeat'
+PACKAGE=ORIGINAL/'portable_common_draft'
+sys.path.insert(0,str(PACKAGE))
+from run_allocation import fit
+from allocation_io import terminal
+from query_protocol import signed_pairs
+
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open('rb') as f:
+        for block in iter(lambda:f.read(1024*1024),b''):h.update(block)
+    return h.hexdigest()
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def put(p,v,immutable=False):
+    p=Path(p);p.parent.mkdir(parents=True,exist_ok=True)
+    t=json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n'
+    if immutable and p.exists():assert p.read_text(encoding='utf-8')==t
+    else:p.write_text(t,encoding='utf-8')
+def now():return datetime.now(timezone.utc).isoformat()
+def guard(event,args):
+    if event!='open' or not isinstance(args[0],(str,bytes,os.PathLike)):return
+    p=Path(os.fsdecode(args[0])).resolve()
+    banned={'evaluation.json','labels.npy','y.npy','truth.npy','all_logical_evaluation.json','all500_logical.csv','postseal_evaluation_pairs.npz'}
+    if p.name in banned or 'postseal_evaluation' in p.parts:raise PermissionError('No outcome access while fitting: '+str(p))
+    mode=args[1] if len(args)>1 else None;flags=args[2] if len(args)>2 else 0
+    writes=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or (isinstance(flags,int) and flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC))
+    if writes and not p.is_relative_to(ROOT):raise PermissionError('Original research is read-only: '+str(p))
+
+def main():
+    sys.addaudithook(guard)
+    index=read(ROOT/'INDEX_FREEZE.json')
+    for name,digest in index['artifacts'].items():assert sha(ROOT/name)==digest,('Frozen index changed',name)
+    with (ROOT/'missing_fits.csv').open(encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
+    assert len(rows)==172
+    auth=read(ROOT/'FIT_EXECUTION_AUTHORIZATION.json')
+    assert auth['missing_fits_sha256']==sha(ROOT/'missing_fits.csv') and auth['worker_sha256']==sha(__file__)
+    assert auth['new_fits_authorized'] and auth['maximum_new_fits']==172
+    groups=collections.defaultdict(list)
+    for r in rows:groups[(r['dataset'],int(r['seed']))].append(r)
+    progress=[];started=time.monotonic()
+    put(ROOT/'FIT_PROGRESS.json',dict(status='running',started_utc=now(),planned=172,completed=0,pid=os.getpid()))
+    for (ds,seed),needed in groups.items():
+        while psutil.virtual_memory().available<3*1024**3:
+            print('WAIT_MEMORY',ds,seed,round(psutil.virtual_memory().available/1024**3,2),flush=True);time.sleep(10)
+        original=ORIGINAL/'runs'/ds/f'seed{seed}'
+        out=ROOT/'fits'/ds/f'seed{seed}';out.mkdir(parents=True,exist_ok=True)
+        p=read(original/'PROTOCOL.json')
+        for name,digest in p['source_sha256'].items():assert sha(PACKAGE/name)==digest
+        for name,digest in p['prepared_file_sha256'].items():assert sha(ORIGINAL/'prepared'/ds/name)==digest
+        for name in ['PROTOCOL.json','inputs.npz','used_graph.npz']:
+            target=out/name
+            if target.exists():assert sha(target)==sha(original/name)
+            else:target.write_bytes((original/name).read_bytes())
+        put(out/'STABILITY_ORIGIN.json',dict(original_block=str(original),
+            sensitivity_protocol_sha256=sha(ROOT/'PROTOCOL.md'),index_freeze_sha256=sha(ROOT/'INDEX_FREEZE.json'),
+            exact_original_protocol_for_fit_identity=True),immutable=True)
+        X=[sparse.load_npz(ORIGINAL/'prepared'/ds/f'X{v}.npz').tocsr() for v in range(p['views'])]
+        L=sparse.load_npz(out/'used_graph.npz')
+        with np.load(out/'inputs.npz',allow_pickle=False) as z:
+            H0=z['H0'].copy();Hv0=[z[f'Hv{v}'].copy() for v in range(p['views'])]
+            pairs=z['pairs'].copy();answers=z['answers'].copy()
+        for r in needed:
+            q=int(r['budget']);method=r['allocation'];value=float(r['lambda_pair']);stem=r['expected_stem']
+            assert sha(out/'inputs.npz')==r['inputs_sha256'] and sha(out/'used_graph.npz')==r['graph_sha256']
+            P,N=signed_pairs(pairs[:q],answers[:q])
+            identity=out/(stem+'_identity.json')
+            if identity.exists():
+                assert (out/(stem+'_diagnostics.json')).exists() or (out/(stem+'_FAILURE.json')).exists(),('Orphan must be retained, no retry',identity)
+                _,d,_=terminal(out,stem,method,value,P,N,p)
+            else:
+                with threadpool_limits(limits=1):_,d=fit(out,stem,method,value,X,L,p['k'],H0,Hv0,P,N,seed,p)
+                _,d,_=terminal(out,stem,method,value,P,N,p)
+            progress.append(dict(fit_id=r['fit_id'],dataset=ds,seed=seed,budget=q,allocation=method,
+                lambda_pair=value,stem=stem,output_block=str(out),status=d['status'],converged=d['converged'],
+                seconds=d['seconds'],diagnostics_sha256=sha(out/(stem+('_diagnostics.json' if d['status']=='ok' else '_FAILURE.json')))))
+            put(ROOT/'FIT_PROGRESS.json',dict(status='running',planned=172,completed=len(progress),pid=os.getpid(),
+                last_fit=r['fit_id'],elapsed_minutes=(time.monotonic()-started)/60,eligible=sum(v['converged'] for v in progress)))
+            print('PROGRESS',len(progress),'/172',r['fit_id'],d['converged'],flush=True)
+        del X,L,H0,Hv0,pairs,answers
+    assert len(progress)==172
+    put(ROOT/'NEW_FIT_RECORDS.json',progress,immutable=True)
+    # Bind both new and reused complete-query finals before any added evaluation.
+    with (ROOT/'verified_reuse_fits.csv').open(encoding='utf-8-sig',newline='') as f:reused=list(csv.DictReader(f))
+    for r in reused:
+        assert sha(r['state_path'])==r['state_sha256'] and sha(r['prediction_path'])==r['prediction_sha256']
+    files={str(p.relative_to(ROOT)):sha(p) for p in (ROOT/'fits').rglob('*') if p.is_file()}
+    put(ROOT/'ALL_FINALS_SEALED.json',dict(protocol_sha256=sha(ROOT/'PROTOCOL.md'),index_freeze_sha256=sha(ROOT/'INDEX_FREEZE.json'),
+        authorization_sha256=sha(ROOT/'FIT_EXECUTION_AUTHORIZATION.json'),records_sha256=sha(ROOT/'NEW_FIT_RECORDS.json'),
+        reused_index_sha256=sha(ROOT/'verified_reuse_fits.csv'),new_fits=172,new_eligible=sum(r['converged'] for r in progress),
+        reused_unique=386,logical_records=1500,files=files,sealed_at_utc=now(),test_scores_read=False),immutable=True)
+    put(ROOT/'FIT_PROGRESS.json',dict(status='complete_sealed',planned=172,completed=172,eligible=sum(r['converged'] for r in progress),
+        elapsed_minutes=(time.monotonic()-started)/60,seal_sha256=sha(ROOT/'ALL_FINALS_SEALED.json')))
+    print('ALL_FINALS_SEALED',len(progress),flush=True)
+
+if __name__=='__main__':
+    main()

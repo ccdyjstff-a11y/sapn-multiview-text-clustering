@@ -1,0 +1,223 @@
+"""Read-only source audit and tie-policy index. This script cannot fit models."""
+from pathlib import Path
+import os, sys
+sys.dont_write_bytecode = True
+for key in ['OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'OMP_NUM_THREADS', 'NUMEXPR_NUM_THREADS']:
+    os.environ[key] = '1'
+import csv, hashlib, json, math, statistics, collections
+from datetime import datetime, timezone
+import numpy as np
+
+OUT = Path(__file__).resolve().parent
+MAIN = OUT.parents[1]
+ORIGINAL = MAIN / 'review_revision_v9/allocation_repeat'
+PACKAGE = ORIGINAL / 'portable_common_draft'
+sys.path.insert(0, str(PACKAGE))
+from allocation_io import terminal, array_digest
+from query_protocol import signed_pairs, balanced_pair_error, select_configuration
+
+DATA = ['3Sources', 'BBC', 'Reuters', 'Cora', 'CiteSeer']
+SEEDS = list(range(504, 514))
+BUDGETS = [160, 400]
+METHODS = ['full', 'consensus-only', 'views-only']
+POLICIES = ['primary_default', 'sensitivity_min', 'sensitivity_max']
+VALUES = [20., 2., 200.]
+ETAS = {'full': .5, 'consensus-only': 0., 'views-only': 1.}
+READ_HASHES = {}
+
+def sha(p):
+    p = Path(p)
+    if p not in READ_HASHES:
+        h = hashlib.sha256()
+        with p.open('rb') as f:
+            for block in iter(lambda: f.read(1024 * 1024), b''):
+                h.update(block)
+        READ_HASHES[p] = h.hexdigest()
+    return READ_HASHES[p]
+
+def read(p):
+    return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+
+def save_json(name, obj):
+    p = OUT / name
+    payload = json.dumps(obj, ensure_ascii=False, indent=2, allow_nan=False) + '\n'
+    if p.exists():
+        assert p.read_text(encoding='utf-8') == payload, ('Frozen output differs', p)
+    else:
+        p.write_text(payload, encoding='utf-8')
+
+def save_csv(name, rows):
+    import io
+    fields = list(dict.fromkeys(k for row in rows for k in row))
+    stream = io.StringIO(newline='')
+    w = csv.DictWriter(stream, fieldnames=fields)
+    w.writeheader(); w.writerows(rows)
+    p = OUT / name
+    if p.exists():
+        assert p.read_text(encoding='utf-8-sig').replace('\r\n', '\n') == stream.getvalue().replace('\r\n', '\n')
+    else:
+        with p.open('w', encoding='utf-8-sig', newline='') as f:
+            f.write(stream.getvalue())
+
+def source_guard(event, args):
+    if event != 'open' or not isinstance(args[0], (str, bytes, os.PathLike)):
+        return
+    p = Path(os.fsdecode(args[0])).resolve()
+    if p.name in {'evaluation.json', 'labels.npy', 'y.npy', 'truth.npy', 'all_logical_evaluation.json', 'all500_logical.csv'} or 'postseal_evaluation' in p.parts:
+        raise PermissionError('Selection-only stage cannot read test labels/results: ' + str(p))
+    mode = args[1] if len(args) > 1 else None
+    flags = args[2] if len(args) > 2 else 0
+    writes = (isinstance(mode, str) and any(c in mode for c in 'wax+')) or (isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC))
+    if writes and not p.is_relative_to(OUT):
+        raise PermissionError('Output confined to selection_stability: ' + str(p))
+
+def main():
+    sys.addaudithook(source_guard)
+    protocol_sha = sha(OUT / 'PROTOCOL.md')
+    freeze = OUT / 'PROTOCOL_FREEZE.json'
+    if freeze.exists():
+        assert read(freeze)['protocol_sha256'] == protocol_sha
+    else:
+        save_json('PROTOCOL_FREEZE.json', dict(protocol_sha256=protocol_sha,
+            frozen_at_utc=datetime.now(timezone.utc).isoformat(), original_protocol_sha256=sha(ORIGINAL/'GLOBAL_PROTOCOL.json'),
+            primary_results_already_known=True, posthoc_sensitivity=True, new_fits_authorized=False))
+    global_seal = read(ORIGINAL / 'GLOBAL_PREDICTIONS_SEALED.json')
+    def sealed(p):
+        rel = str(p.relative_to(ORIGINAL))
+        assert global_seal['files'][rel] == sha(p), ('Original sealed member mismatch', rel)
+        return sha(p)
+    choices, candidates, targets, unique, reuse, missing = [], [], [], {}, [], []
+    durations = collections.defaultdict(list)
+    block_cache = {}
+    verified_cv = 0
+    for ds in DATA:
+        for seed in SEEDS:
+            block = ORIGINAL / 'runs' / ds / f'seed{seed}'
+            protocol = read(block/'PROTOCOL.json'); sealed(block/'PROTOCOL.json')
+            for name, digest in protocol['source_sha256'].items():
+                assert sha(PACKAGE/name) == digest
+            for name, digest in protocol['prepared_file_sha256'].items():
+                assert sha(ORIGINAL/'prepared'/ds/name) == digest
+            assert protocol['lambda_grid_default_first'] == VALUES
+            inp_sha = sealed(block/'inputs.npz'); graph_sha = sealed(block/'used_graph.npz')
+            manifest = read(block/'RUN_INPUT_MANIFEST.json'); sealed(block/'RUN_INPUT_MANIFEST.json')
+            assert manifest['inputs_sha256'] == inp_sha and manifest['graph_sha256'] == graph_sha
+            assert manifest['protocol_sha256'] == sha(block/'PROTOCOL.json')
+            with np.load(block/'inputs.npz', allow_pickle=False) as inp:
+                pairs, answers = inp['pairs'].copy(), inp['answers'].copy()
+            block_cache[ds,seed] = (block, protocol, pairs, answers)
+            for q in BUDGETS:
+                selected = {}
+                query = read(block/f'Q{q}_query.json'); sealed(block/f'Q{q}_query.json')
+                folds = query['folds']
+                assert query['input_sha256'] == inp_sha and len(folds) == 2
+                for method in METHODS:
+                    selection_path = block/f'Q{q}_{method}_selection.json'
+                    s = read(selection_path); sealed(selection_path)
+                    scores = np.asarray(s['scores'], float)
+                    assert scores.shape == (3, len(folds)) and s['eligible_folds'] == len(folds)
+                    for cv in s['cv']:
+                        ci, fi = cv['candidate'], cv['fold']
+                        pred_path = block/(cv['stem']+'.npz')
+                        assert sealed(pred_path) == cv['prediction_sha256']
+                        assert cv['status'] == 'ok' and cv['converged']
+                        with np.load(pred_path, allow_pickle=False) as pred:
+                            validation = np.asarray(folds[fi]['validation'], int)
+                            raw = balanced_pair_error(pred['labels'], pairs[:q][validation], answers[:q][validation])
+                        assert raw == cv['raw_BER'] and raw == scores[ci,fi]
+                        verified_cv += 1
+                    default_index, rule = select_configuration(scores)
+                    assert default_index == s['index'] and s['value'] == VALUES[default_index] and rule == s['rule']
+                    means = np.where(np.all(np.isfinite(scores), axis=1), np.mean(scores, axis=1), np.inf)
+                    tied = np.flatnonzero(abs(means-means.min()) <= 1e-12).tolist()
+                    assert tied
+                    selected[method] = {'primary_default':default_index,
+                        'sensitivity_min':min(tied,key=lambda i:VALUES[i]),
+                        'sensitivity_max':max(tied,key=lambda i:VALUES[i])}
+                    for ci in range(3):
+                        candidates.append(dict(dataset=ds,seed=seed,budget=q,allocation=method,candidate=ci,
+                            lambda_pair=VALUES[ci],mean_validation_BER=float(means[ci]),best_tie=ci in tied,
+                            fold0_BER=float(scores[ci,0]),fold1_BER=float(scores[ci,1]),
+                            source_selection=str(selection_path),source_selection_sha256=sha(selection_path)))
+                    for policy in POLICIES:
+                        ci=selected[method][policy]
+                        choices.append(dict(dataset=ds,seed=seed,budget=q,allocation=method,policy=policy,
+                            selected_candidate=ci,selected_lambda=VALUES[ci],primary_lambda=s['value'],
+                            changed_from_primary=ci!=default_index,eligible_folds=len(folds),
+                            tied_candidates='|'.join(map(str,tied)),tied_lambdas='|'.join(str(VALUES[i]) for i in tied),
+                            tie_count=len(tied),mean_validation_BER=float(means[ci]),source_selection_sha256=sha(selection_path)))
+                for policy in POLICIES:
+                    logical = [(m,selected[m][policy],m+'-CV') for m in METHODS]
+                    logical += [(m,selected['full'][policy],m+'-at-full-lambda') for m in METHODS[1:]]
+                    for method,ci,logical_method in logical:
+                        key = (ds,seed,q,method,ci)
+                        stem = f'Q{q}_{method}_c{ci}_final'
+                        fit_id = f'{ds}/seed{seed}/{stem}'
+                        row = dict(dataset=ds,seed=seed,budget=q,allocation=method,candidate=ci,lambda_pair=VALUES[ci],
+                            fit_id=fit_id,source_block=str(block),expected_stem=stem,inputs_sha256=inp_sha,
+                            graph_sha256=graph_sha,source_protocol_sha256=sha(block/'PROTOCOL.json'))
+                        targets.append(dict(policy=policy,logical_method=logical_method,**row))
+                        unique[key]=row
+            # Durations only, without reading any clustering scores.
+            for f in block.glob('*_final_diagnostics.json'):
+                d=read(f); sealed(f)
+                q=int(f.name.split('_')[0][1:])
+                durations[ds,q,d['method']].append(float(d['seconds']))
+    assert len(choices)==900 and len(targets)==1500 and verified_cv==1800
+    for (ds,seed,q,method,ci), row in sorted(unique.items()):
+        block,p,pairs,answers=block_cache[ds,seed]
+        P,N=signed_pairs(pairs[:q],answers[:q]); stem=row['expected_stem']
+        row.update(P_sha256=array_digest(P),N_sha256=array_digest(N),query_count=len(P)+len(N))
+        files=[block/(stem+s) for s in ['_identity.json','_diagnostics.json','_state.npz','.npz']]
+        if all(f.exists() for f in files):
+            for f in files: sealed(f)
+            _,d,_=terminal(block,stem,method,VALUES[ci],P,N,p)
+            assert d['status']=='ok' and d['converged']
+            row.update(status='verified_reuse',state_path=str(files[2]),state_sha256=sha(files[2]),
+                prediction_path=str(files[3]),prediction_sha256=sha(files[3]),identity_sha256=sha(files[0]),
+                diagnostics_path=str(files[1]),seconds_original=d['seconds'])
+            reuse.append(dict(row))
+        else:
+            assert not any(f.exists() for f in files), ('Partial final artifacts',row)
+            seconds=durations[ds,q,method]
+            row.update(status='missing_fit',estimated_seconds_median=statistics.median(seconds),
+                estimated_seconds_p90=float(np.quantile(seconds,.9)),estimate_source_final_count=len(seconds))
+            missing.append(dict(row))
+    for row in targets:
+        key=(row['dataset'],row['seed'],row['budget'],row['allocation'],row['candidate'])
+        row['status']=unique[key]['status']
+    by_dataset=[]
+    for ds in DATA:
+        m=[r for r in missing if r['dataset']==ds]
+        by_dataset.append(dict(dataset=ds,missing_unique_fits=len(m),
+            estimated_minutes_median=sum(r['estimated_seconds_median'] for r in m)/60,
+            estimated_minutes_p90=sum(r['estimated_seconds_p90'] for r in m)/60))
+    policy_summary=[]
+    for policy in POLICIES:
+        c=[r for r in choices if r['policy']==policy]
+        t=[r for r in targets if r['policy']==policy]
+        policy_summary.append(dict(policy=policy,selections=len(c),changed_from_primary=sum(r['changed_from_primary'] for r in c),
+            logical_finals=len(t),missing_logical_finals=sum(r['status']=='missing_fit' for r in t),
+            missing_unique_fits=len({r['fit_id'] for r in t if r['status']=='missing_fit'})))
+    save_csv('candidate_cv_index_900.csv',candidates)
+    save_csv('selection_policy_index_900.csv',choices)
+    save_csv('logical_final_targets_1500.csv',targets)
+    save_csv('verified_reuse_fits.csv',reuse)
+    save_csv('missing_fits.csv',missing)
+    save_csv('runtime_estimate_by_dataset.csv',by_dataset)
+    save_csv('policy_selection_summary.csv',policy_summary)
+    save_json('INDEX_SUMMARY.json',dict(protocol_sha256=protocol_sha,original_selections=300,policies=POLICIES,
+        original_best_ties=sum(r['tie_count']>1 for r in choices if r['policy']=='primary_default'),
+        cv_predictions_replayed=verified_cv,logical_finals=len(targets),unique_final_requirements=len(unique),
+        verified_reuse_unique_fits=len(reuse),missing_unique_fits=len(missing),policy_summary=policy_summary,
+        runtime_estimates=by_dataset,estimated_serial_minutes_median=sum(r['estimated_seconds_median'] for r in missing)/60,
+        estimated_serial_minutes_p90=sum(r['estimated_seconds_p90'] for r in missing)/60,
+        runtime_caveat='Historical original selected final durations by dataset,budget,allocation; changed lambda and current contention may differ. Excludes loading/serialization not in recorded seconds.',
+        new_fits_run=0,test_scores_read=False,posthoc_sensitivity=True,primary_preserved=True))
+    save_json('SOURCE_BINDINGS.json',{str(p):h for p,h in sorted(READ_HASHES.items(),key=lambda x:str(x[0])) if p.is_relative_to(ORIGINAL)})
+    artifacts=[p for p in OUT.iterdir() if p.is_file() and p.name not in {'INDEX_FREEZE.json'}]
+    save_json('INDEX_FREEZE.json',dict(artifacts={p.name:sha(p) for p in sorted(artifacts)},new_fits_run=0))
+    print(json.dumps(read(OUT/'INDEX_SUMMARY.json'),ensure_ascii=False,indent=2))
+
+if __name__=='__main__':
+    main()

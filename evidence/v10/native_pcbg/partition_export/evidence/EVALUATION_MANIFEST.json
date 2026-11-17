@@ -1,0 +1,13 @@
+{
+  "status": "SCORED_PENDING_POST_SCORE_AUDIT",
+  "global_seal_sha256": "b128a99de7c23f8b8f61fde8db2d1283d26926d247485102a9ce519d92075c60",
+  "pre_score_audit_sha256": "3b6b853a8078f8f88aa8b8d984b7c5674cf1f474f5dc6b3284740180db8dfaf9",
+  "evaluation_sha256": "213c535f22ab4fe9ba8290e58ee9a58a807e62203a1a41f31663d4c25719eb18",
+  "summary_sha256": "8daaefdec3a868e8d421c107f7a7efdaeba16789d259907079e79b1748ef59a4",
+  "labels_sha256": {
+    "3Sources": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1",
+    "BBC": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11",
+    "Cora": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf",
+    "CiteSeer": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6"
+  }
+}

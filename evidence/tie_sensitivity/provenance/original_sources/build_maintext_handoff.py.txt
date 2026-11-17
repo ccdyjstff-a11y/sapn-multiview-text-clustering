@@ -1,0 +1,88 @@
+"""Presentation of verified frozen summaries; no fitting, selection, or rescoring."""
+from pathlib import Path
+import csv,json,hashlib
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/'maintext_handoff'
+PS=['primary_default','sensitivity_min','sensitivity_max']
+DATA=['3Sources','BBC','Reuters','Cora','CiteSeer']
+COMP=['consensus-only-CV','views-only-CV','consensus-only-at-full-lambda','views-only-at-full-lambda']
+CODE=dict(zip(COMP,['C-I','V-I','C-F','V-F']))
+MS=['ACC','NMI','ARI','BER_train','BER_unqueried']
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def rows(p):
+    with Path(p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+def write(name,rr,fields=None):
+    with (OUT/name).open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=fields or list(rr[0]));w.writeheader();w.writerows(rr)
+def number(x):return None if x=='' else float(x)
+def sign(x):return None if x is None else 1 if x>1e-12 else -1 if x< -1e-12 else 0
+def main():
+    assert read(ROOT/'verification/VERIFICATION.json')['pass_all']
+    for folder,name in [('evaluation','EVALUATION_FREEZE.json'),('verification','VERIFICATION_FREEZE.json')]:
+        for member,digest in read(ROOT/folder/name).items():assert sha(ROOT/folder/member)==digest
+    s=rows(ROOT/'evaluation/paired_summary_600.csv')
+    index={(r['policy'],r['dataset'],int(r['budget']),r['comparator'],r['metric']):r for r in s}
+    wide=[];direction=[];five=[]
+    for ds in DATA:
+        for q in [160,400]:
+            for other in COMP:
+                branch='independent_CV' if other.endswith('-CV') else 'policy_Full_lambda'
+                r=dict(dataset=ds,budget=q,comparator=other,control_code=CODE[other],control_branch=branch)
+                primary=number(index['primary_default',ds,q,other,'ACC']['mean_pp'])
+                for policy in PS:
+                    a=index[policy,ds,q,other,'ACC']
+                    for k in ['mean_pp','sample_SD_pp','median_pp','eligible_pairs','planned_pairs','wins','ties','losses']:
+                        r[policy+'_'+{'wins':'positive','ties':'zero','losses':'negative'}.get(k,k)]=a[k]
+                    value=number(a['mean_pp'])
+                    if policy!='primary_default' and value is not None and primary is not None and sign(value)!=sign(primary):
+                        direction.append(dict(dataset=ds,budget=q,comparator=other,control_code=CODE[other],control_branch=branch,
+                            policy=policy,primary_mean_pp=primary,sensitivity_mean_pp=value,primary_sign=sign(primary),sensitivity_sign=sign(value),
+                            change_in_contrast_mean_pp=None if value is None or primary is None else value-primary))
+                    metricrow=dict(policy=policy,dataset=ds,budget=q,comparator=other,control_code=CODE[other],control_branch=branch)
+                    for m in MS:
+                        a=index[policy,ds,q,other,m]
+                        metricrow[m+'_mean_pp']=number(a['mean_pp']);metricrow[m+'_sample_SD_pp']=number(a['sample_SD_pp'])
+                    worse=[m for m in ['NMI','ARI','BER_unqueried'] if metricrow[m+'_mean_pp'] is not None and
+                        (metricrow[m+'_mean_pp']>1e-12 if m.startswith('BER') else metricrow[m+'_mean_pp']< -1e-12)]
+                    metricrow['ACC_positive_other_evaluation_metrics_worse']='|'.join(worse) if value is not None and value>1e-12 else ''
+                    five.append(metricrow)
+                wide.append(r)
+    OUT.mkdir(exist_ok=True)
+    write('ACC_rule_comparison_40_wide.csv',wide)
+    fields=['dataset','budget','comparator','control_code','control_branch','policy','primary_mean_pp','sensitivity_mean_pp','primary_sign','sensitivity_sign','change_in_contrast_mean_pp']
+    write('ACC_direction_changes_from_primary.csv',direction,fields)
+    write('five_metric_means_120_wide.csv',five)
+    core=[r for r in five if r['dataset']=='CiteSeer' and r['budget']==400 and r['control_branch']=='independent_CV']
+    write('CiteSeer_Q400_prespecified_counterexample_6.csv',core)
+    tradeoffs=[r for r in five if r['ACC_positive_other_evaluation_metrics_worse']]
+    write('all_ACC_positive_metric_tradeoffs.csv',tradeoffs,list(five[0]))
+    heads=rows(ROOT/'evaluation/ACC_headlines_6.csv');write('ACC_positive_mean_counts_6.csv',heads)
+    for lang in ['en','zh']:
+        cap=('Tie-rule sensitivity of all 40 ACC contrasts. Entries show mean $\\pm$ sample SD in percentage points; the second line gives positive/zero/negative counts for ten paired seeds. Differences are Full minus control. C-I/V-I are independently selected consensus-only/views-only controls; C-F/V-F retain each policy\'s Full-selected coefficient. Original default-first results remain primary. Ties use a $10^{-12}$ pp tolerance.' if lang=='en' else '全部40项ACC对比的并列规则敏感性。每格首行是百分点差值的均值与样本标准差，次行为十个配对种子的正/零/负计数。差值为Full减控制。C-I/V-I为独立选参的仅共识/仅视图控制，C-F/V-F保留各政策Full所选系数。原默认优先仍为主要结果，差值绝对值不超过$10^{-12}$个百分点记为零。')
+        lines=[r'\begingroup\small',r'\setlength{\tabcolsep}{4pt}',r'\begin{longtable}{lrlrrr}',r'\caption{'+cap+r'}\label{tab:allocation-tie-sensitivity-counts}\\',r'\toprule',r'Corpus & $Q$ & Control & Primary & Min $\lambda$ & Max $\lambda$\\',r'\midrule\endfirsthead',r'\toprule',r'Corpus & $Q$ & Control & Primary & Min $\lambda$ & Max $\lambda$\\',r'\midrule\endhead',r'\bottomrule\endfoot']
+        for r in wide:
+            cells=[]
+            for p in PS:
+                m=number(r[p+'_mean_pp']);sd=number(r[p+'_sample_SD_pp'])
+                count='/'.join(r[p+'_'+k] for k in ['positive','zero','negative'])
+                cells.append('--' if m is None else r'\shortstack{'+f'${m:+.2f}\\pm{sd:.2f}$'+r'\\{\scriptsize '+count+'}}')
+            lines.append(' & '.join([r['dataset'].replace('Reuters','Reuters-local'),str(r['budget']),r['control_code'],*cells])+r'\\')
+        lines.extend([r'\end{longtable}',r'\endgroup'])
+        (OUT/f'ACC_rule_comparison_40_{lang}.tex').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    text=['# 主文整合结果索引','', '这是事后敏感性分析，primary保留。全部拟合先封存，后统一评分与独立核验；不构成独立确认。','',
+        '## 20项正均值计数','', '| 政策 | 控制类型 | 正 / 零 / 负均值 | 完整 / 计划 |','|---|---|---|---|']
+    for r in heads:text.append('| '+' | '.join([r['policy'],r['branch'],r['positive_mean']+' / '+r['zero_mean']+' / '+r['negative_mean'],r['complete_contrasts']+' / '+r['planned_contrasts']])+' |')
+    text+=['','## 相对primary方向改变','', '零均值容差为1e-12个百分点。完整名单见 ACC_direction_changes_from_primary.csv。','',
+        '| 语料 | Q | 控制 | 替代规则 | primary均值 | 替代均值 |','|---|---:|---|---|---:|---:|']
+    for r in direction:text.append('| '+' | '.join([r['dataset'],str(r['budget']),r['control_code'],r['policy'],f"{r['primary_mean_pp']:+.6f}" if r['primary_mean_pp'] is not None else 'NA',f"{r['sensitivity_mean_pp']:+.6f}" if r['sensitivity_mean_pp'] is not None else 'NA'])+' |')
+    text+=['','## CiteSeer Q400既定反例','', '| 政策 | 控制 | ACC | NMI | ARI | 训练BER | 池外BER |','|---|---|---:|---:|---:|---:|---:|']
+    for r in core:text.append('| '+' | '.join([r['policy'],r['control_code'],*[f"{r[m+'_mean_pp']:+.6f}" if r[m+'_mean_pp'] is not None else 'NA' for m in MS]])+' |')
+    text+=['','五指标差值均为100乘Full减控制，BER正差表示更差。all_ACC_positive_metric_tradeoffs.csv列出全部ACC正均值但NMI、ARI或池外BER变差的组，避免只呈现一个有利例子。','',
+        '主文可用已核验的 text_and_tables/sensitivity_results_en.tex 和 _zh.tex；SI优先用本目录40行并排ACC表。全部600组五指标及6000个配对值继续保存在evaluation，不需全部放入正文。']
+    (OUT/'MAIN_TEXT_HANDOFF.md').write_text('\n'.join(text)+'\n',encoding='utf-8')
+    (OUT/'HANDOFF_FREEZE.json').write_text(json.dumps({'verified_summary_sha256':sha(ROOT/'evaluation/paired_summary_600.csv'),
+        'verification_sha256':sha(ROOT/'verification/VERIFICATION.json'),'display_source_sha256':sha(__file__),
+        'files':{p.name:sha(p) for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='HANDOFF_FREEZE.json'}},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({'ACC_groups':len(wide),'five_metric_groups':len(five),'direction_changes':len(direction),'ACC_tradeoff_groups':len(tradeoffs)},ensure_ascii=False))
+if __name__=='__main__':main()

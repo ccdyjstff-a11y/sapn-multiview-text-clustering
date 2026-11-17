@@ -1,0 +1,262 @@
+{
+  "scored_utc": "2026-10-12T15:29:24.245102+00:00",
+  "scorer_sha256": "46fc6b6512d39ef20bc21a79ba67e381f4a123b09ead0d9d897fcd02853b422d",
+  "protocol_sha256": "cde6f3301025df4e181a8446b506ecefc53844d22d6e99e29a1f6263a18d53dd",
+  "audit_sha256": "a797d0d3049718a2af81c29339ddd0c075a2132df277b481f2771265b24cadea",
+  "raw_sha256": "cf549b72a66d7418a639a940899993c052bab9ec868fd493451cf85cd0d81d14",
+  "all_seals_before_scoring": {
+    "23": {
+      "sha256": "ce350248ca0ca9317b226fb2e82a0958275be17572f4f1ccf1e35243d69a217d",
+      "sealed_utc": "2026-10-12T11:17:16.418758+00:00"
+    },
+    "24": {
+      "sha256": "cd041dcad44264551a6b26d59b23de3d57d3fa36b60b2cdad6d72b4233ce5129",
+      "sealed_utc": "2026-10-12T13:28:27.637688+00:00"
+    },
+    "25": {
+      "sha256": "031ee821f6c354f0295e6ef999f85095a78bc3c724b1ab415194b34d6f72820f",
+      "sealed_utc": "2026-10-12T15:20:53.606100+00:00"
+    }
+  },
+  "metric_source_hashes": {
+    "score_closest_baselines_3sources_v1.py": "81d47acdbd4bcc2887950beee3aace88ffe9d265ed3ad27c8e56b783d66aa4e9",
+    "verify_closest_baselines_scoring_v1.py": "eee26824bc6d881ea6b6db91d945e3d9c52eca5a5dc43a0258a6bd8c3098a08f"
+  },
+  "independent_metric_max_error": 2.7755575615628914e-16,
+  "rows": [
+    {
+      "seed": 23,
+      "Q": 0,
+      "selected_index": 0,
+      "beta": 150.0,
+      "reason": "no_eligible_folds_default",
+      "eligible_folds": 0,
+      "scores": [
+        [],
+        [],
+        []
+      ],
+      "ACC": 0.3404761904761905,
+      "NMI": 0.09514225484017054,
+      "ARI": 0.06860152543711082,
+      "selected_restart": 0,
+      "state_sha256": "87f044ea36e106c9b5daf1b77d13af1909518504e435b38454c9737611c24904"
+    },
+    {
+      "seed": 23,
+      "Q": 160,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.48888888888888893,
+          0.5378787878787878
+        ],
+        [
+          0.5444444444444444,
+          0.46464646464646464
+        ],
+        [
+          0.5111111111111111,
+          0.5202020202020202
+        ]
+      ],
+      "ACC": 0.34523809523809523,
+      "NMI": 0.12044718058183462,
+      "ARI": 0.08512053902800494,
+      "selected_restart": 0,
+      "state_sha256": "956b7b68475ecc98571cd1bd06541e6ef40a71a5e300d5f24e9faccfb5324eb4"
+    },
+    {
+      "seed": 23,
+      "Q": 400,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.4808768656716418,
+          0.5833333333333334
+        ],
+        [
+          0.4808768656716418,
+          0.5055555555555555
+        ],
+        [
+          0.4822761194029851,
+          0.5111111111111111
+        ]
+      ],
+      "ACC": 0.38333333333333336,
+      "NMI": 0.16760846473720223,
+      "ARI": 0.12347439308102628,
+      "selected_restart": 0,
+      "state_sha256": "910dada623cb33c9b018ee1efc9ceef096ecb43dbc88932bb14c8b4fb7f5f883"
+    },
+    {
+      "seed": 24,
+      "Q": 0,
+      "selected_index": 0,
+      "beta": 150.0,
+      "reason": "no_eligible_folds_default",
+      "eligible_folds": 0,
+      "scores": [
+        [],
+        [],
+        []
+      ],
+      "ACC": 0.2988095238095238,
+      "NMI": 0.08517793344877582,
+      "ARI": 0.05327859550858396,
+      "selected_restart": 4,
+      "state_sha256": "5f96ad86b66b1995f4646976db3ab681ed5fc95c069933adc5b519c097065ac2"
+    },
+    {
+      "seed": 24,
+      "Q": 160,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.4722222222222222,
+          0.4903846153846154
+        ],
+        [
+          0.2777777777777778,
+          0.3493589743589744
+        ],
+        [
+          0.4444444444444444,
+          0.532051282051282
+        ]
+      ],
+      "ACC": 0.36904761904761907,
+      "NMI": 0.1354752293314339,
+      "ARI": 0.09804673646005395,
+      "selected_restart": 3,
+      "state_sha256": "e4f7575714b66448212972268b7b40432db954bcdf210ec3afa15978b3583f7c"
+    },
+    {
+      "seed": 24,
+      "Q": 400,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.4272655007949126,
+          0.4633333333333333
+        ],
+        [
+          0.31875993640699524,
+          0.43666666666666665
+        ],
+        [
+          0.39785373608903024,
+          0.4116666666666667
+        ]
+      ],
+      "ACC": 0.35595238095238096,
+      "NMI": 0.1237875451734605,
+      "ARI": 0.08624775859371525,
+      "selected_restart": 3,
+      "state_sha256": "742a2b39f608822b80ba2e122b24f3b47108a3f9fff5f238bfc7478e9690e3d7"
+    },
+    {
+      "seed": 25,
+      "Q": 0,
+      "selected_index": 0,
+      "beta": 150.0,
+      "reason": "no_eligible_folds_default",
+      "eligible_folds": 0,
+      "scores": [
+        [],
+        [],
+        []
+      ],
+      "ACC": 0.32857142857142857,
+      "NMI": 0.12182936826440534,
+      "ARI": 0.08343686069611213,
+      "selected_restart": 1,
+      "state_sha256": "db3f8798bb28fbd0988aed9a42f233b56a9fc6ab7663e8a612b6208ea828e417"
+    },
+    {
+      "seed": 25,
+      "Q": 160,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.4791666666666667,
+          0.6774193548387097
+        ],
+        [
+          0.3194444444444444,
+          0.6129032258064516
+        ],
+        [
+          0.5763888888888888,
+          0.5201612903225806
+        ]
+      ],
+      "ACC": 0.3238095238095238,
+      "NMI": 0.09391594869127555,
+      "ARI": 0.06580247018793486,
+      "selected_restart": 4,
+      "state_sha256": "f1ed157589b534cd3bd0a72a729964d7b7f96445b32f0cf591264e0762e51e04"
+    },
+    {
+      "seed": 25,
+      "Q": 400,
+      "selected_index": 1,
+      "beta": 50.0,
+      "reason": "minimum_balanced_pair_error",
+      "eligible_folds": 2,
+      "scores": [
+        [
+          0.46695402298850575,
+          0.4847560975609756
+        ],
+        [
+          0.40445402298850575,
+          0.4664634146341463
+        ],
+        [
+          0.5039511494252874,
+          0.4725609756097561
+        ]
+      ],
+      "ACC": 0.30833333333333335,
+      "NMI": 0.08166248495695046,
+      "ARI": 0.055952754758080744,
+      "selected_restart": 4,
+      "state_sha256": "0915d4e936612abb38a12d630a7c673189c29c7841798991182c61854b13e83d"
+    }
+  ],
+  "summary": [
+    {
+      "Q": 0,
+      "ACC_mean": 0.3226190476190476,
+      "ACC_std": 0.021461614734904707
+    },
+    {
+      "Q": 160,
+      "ACC_mean": 0.3460317460317461,
+      "ACC_std": 0.022629487983148025
+    },
+    {
+      "Q": 400,
+      "ACC_mean": 0.34920634920634924,
+      "ACC_std": 0.03795236103642106
+    }
+  ],
+  "scope": "Later-added Reuters development comparison, author-map fixed schedule and objective-only starts. No SAPN retuning or untouched-confirmation claim."
+}

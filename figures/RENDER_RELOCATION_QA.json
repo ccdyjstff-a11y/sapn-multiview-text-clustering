@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "skill_and_standalone_geometry_gates_exercised": true,
+  "standalone_plotters_require_no_installed_skill": true,
+  "PNG_bytes_equal_between_helpers": true,
+  "PNG_sha256": {
+    "fig13_reference_filter_risk": "51a10c44e2c5d65e6b8844f5e1eb2abc447d9af76fe4ba32331d009681cd3c92",
+    "fig21_allocation_new10_acc": "2f3cc8b9338b627d58a19e7afecadf2a4075cb9d5756212f74ec8829b7928290"
+  },
+  "fig21_PNG_matches_frozen_paper": true,
+  "no_model_training": true,
+  "extension": {
+    "status": "PASS_NUMERIC_AND_PNG_IDENTITY",
+    "plotter_sha256": "48395a6e094132d86bf9bff83595dae8e552015db2b84a317499adf28c4a1f5b",
+    "preview_sha256": "1463175ef816e97fb4633d9589173b43f0a8651904749da73ba75c30645777af",
+    "frozen_paper_preview_sha256": "1463175ef816e97fb4633d9589173b43f0a8651904749da73ba75c30645777af",
+    "preview_bytes_identical": true,
+    "ACC_points": 40,
+    "groups": 8,
+    "seeds_per_group": 5,
+    "source_style_audit_disposition": "Three generic style flags retained from frozen drawing: DejaVu Sans outside generic font allowlist, path-based SVG text, 260dpi preview. PDF text and geometry pass. No journal-compliance claim."
+  }
+}

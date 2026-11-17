@@ -1,0 +1,8 @@
+{
+  "final_seal_sha256": "e354d24b19b675625ddcd2a6aba4cf12bc3aaf71bca4efe0530ecdc81d1bf744",
+  "index_freeze_sha256": "6d9e2309bbdd2a8fe77e8801609f567b1cf97997f737da29809f32e828fef862",
+  "all558_final_sources_hash_checked": true,
+  "new_final_reference_graph_domain_invariant_checks": 172,
+  "scope": "Fixed original, min and max tie choices. No choices changed by test outcomes.",
+  "scoring_source_sha256": "9113c14e83acd12b06ad15434d244d0deff704484cca44b1a1c7b36581341729"
+}

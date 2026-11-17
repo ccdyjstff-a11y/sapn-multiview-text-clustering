@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "figures/plot_allocation_acc.py",
+      "sha256": "4cc219d34cca49679a0591ad927b247a0e701df6377a0ed1442f88e3e2428c9f",
+      "original_file": "provenance/original_sources/figures/plot_allocation_acc.py.txt",
+      "original_sha256": "e6bf6054848860aa0884a427f0b96732b006068695c0dbccf7c6ee606145de6f",
+      "unchanged_function_AST": [
+        "draw_figure"
+      ]
+    },
+    {
+      "file": "figures/plot_reference_risk.py",
+      "sha256": "e25528636416db1509e7883b62056311e79baf6ef9eb064796a8520da77cc063",
+      "original_file": "provenance/original_sources/figures/build_reference_risk_figure.py.txt",
+      "original_sha256": "11e03c6c2e406f66cf323e2b39020c7d1798457efce32e47e67f760a4fc0f0c4",
+      "unchanged_function_AST": [
+        "response",
+        "threshold",
+        "numerical_checks"
+      ]
+    }
+  ]
+}

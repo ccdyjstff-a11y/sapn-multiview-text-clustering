@@ -1,0 +1,10 @@
+{
+  "method": "consensus-only",
+  "eta": 0.0,
+  "lambda_pair": 200.0,
+  "seed": 1101,
+  "protocol_sha256": "16f8891bebd75d474abdfdc6f31639e00edb68cc9bf327324da703f553281e6f",
+  "input_sha256": "39033e39df43d963de865530ab030188edcf6ff9533fffbcbcb957fb9e27ebea",
+  "P": "18f255a7d922c7e63cce7af596fc03bc4a5fa5b7ab9266a6903b3bbee7b79952",
+  "N": "98f88d8d0f58b305842e036f8a0f77f90788f6748ec7f1061b9de131eafd872d"
+}

@@ -1,0 +1,146 @@
+"""Generate descriptive tables and a two-panel paired sensitivity figure."""
+from pathlib import Path
+import sys,os,json,csv,hashlib,statistics,itertools,collections
+sys.dont_write_bytecode=True
+for key in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS']:os.environ[key]='1'
+ROOT=Path(__file__).resolve().parent
+MAIN=ROOT.parents[1]
+sys.path.insert(0,str(MAIN/'submission_revision_v4/qa_dependencies'))
+sys.path.insert(0,'C:/Users/LENOVO/.codex/skills/nature-figure/scripts')
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+from audit_panel_alignment import require_matplotlib_panel_alignment
+
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def write(p,x):Path(p).write_text(json.dumps(x,indent=2),encoding='utf-8')
+def csv_write(p,rows):
+    with Path(p).open('w',newline='',encoding='utf-8-sig') as f:
+        w=csv.DictWriter(f,fieldnames=list(dict.fromkeys(k for r in rows for k in r)));w.writeheader();w.writerows(rows)
+
+def run():
+    gate=read(ROOT/'VERIFIED_RESULTS_READY.json');assert gate['status']=='PASS'
+    for path,digest in gate['files'].items():assert sha(path)==digest,path
+    audit=read(ROOT/'INDEPENDENT_VERIFICATION.json')
+    for path,digest in audit['files'].items():assert sha(path)==digest,path
+    p=read(ROOT/'GLOBAL_PROTOCOL.json');ev=read(ROOT/'evaluation.json');summary=read(ROOT/'summary.json');table=[]
+    for g in summary['groups']:
+        rr=[r for r in ev if (r['dataset'],r['budget'],r['method'])==(g['dataset'],g['budget'],g['method'])]
+        row=dict(dataset=g['dataset'],budget=g['budget'],method=g['method'],planned=3,
+            eligible_new=sum(r['converged'] for r in rr),eligible_pairs=g['eligible_pairs'],failed_pairs=3-g['eligible_pairs'],
+            exceptions=sum(r['status']!='ok' for r in rr),nonconverged=sum(r['status']=='ok' and not r['converged'] for r in rr),
+            reused=sum(r['source_kind']!='new_final_fit' for r in rr),lambda_switches=g['switched'],
+            lambda_increased=sum(r['selected_lambda']>r['old_selected_lambda'] for r in rr),
+            lambda_decreased=sum(r['selected_lambda']<r['old_selected_lambda'] for r in rr),
+            lambda_switch_directions='; '.join(f'{key}: {count}' for key,count in sorted(collections.Counter(
+                f"{r['old_selected_lambda']:g}->{r['selected_lambda']:g}" for r in rr if r['lambda_switched']).items())) or 'none')
+        for m in ['ACC','NMI','ARI']:
+            for prefix in ['', 'old_', 'new_minus_old_']:
+                field=(prefix+m+'_pp') if prefix=='new_minus_old_' else prefix+m
+                for stat in ['mean','sd']:row[field+'_'+stat]=g['statistics'][field][stat] if g['complete'] else None
+        table.append(row)
+    write(ROOT/'paired_change_summary.json',table);csv_write(ROOT/'paired_change_summary.csv',table)
+    switch_summary={}
+    for method in ['all_methods','full','no-correction']:
+        rr=ev if method=='all_methods' else [r for r in ev if r['method']==method]
+        switch_summary[method]=dict(planned=len(rr),changed=sum(r['lambda_switched'] for r in rr),
+            increased=sum(r['selected_lambda']>r['old_selected_lambda'] for r in rr),
+            decreased=sum(r['selected_lambda']<r['old_selected_lambda'] for r in rr),
+            directions=dict(collections.Counter(f"{r['old_selected_lambda']:g}->{r['selected_lambda']:g}" for r in rr if r['lambda_switched'])))
+    write(ROOT/'selection_switch_summary.json',switch_summary)
+    contrasts=read(ROOT/'paired_method_contrasts.json');contrast_summary=[]
+    for ds,Q in itertools.product(p['datasets'],p['budgets']):
+        rr=[r for r in contrasts if (r['dataset'],r['budget'])==(ds,Q)]
+        assert len(rr)==3
+        row=dict(dataset=ds,budget=Q,planned=3,eligible=sum(r['eligible'] for r in rr))
+        for procedure,m in itertools.product(['old','new'],['ACC','NMI','ARI']):
+            key=f'{procedure}_full_minus_nocorr_{m}_pp';values=[r[key] for r in rr]
+            row[key+'_mean']=statistics.mean(values) if row['eligible']==3 else None
+            row[key+'_sd']=statistics.stdev(values) if row['eligible']==3 else None
+        contrast_summary.append(row)
+    write(ROOT/'paired_method_contrast_summary.json',contrast_summary)
+    csv_write(ROOT/'paired_method_contrast_summary.csv',contrast_summary)
+    source=[{key:r[key] for key in ['dataset','seed','budget','method','selected_lambda','old_selected_lambda','source_kind','status','converged','paired_eligible','ACC','old_ACC','new_minus_old_ACC_pp']} for r in ev]
+    csv_write(ROOT/'figure_delta_source.csv',source)
+    assert len(source)==60
+    conditions=list(itertools.product(p['datasets'],p['budgets']))
+    positions=np.array([i+(i//2)*.4 for i in range(10)],float)
+    colors={160:'#377E9A',400:'#328467'}
+    finite=[abs(r['new_minus_old_ACC_pp']) for r in source if r['new_minus_old_ACC_pp'] is not None]
+    for g in table:
+        if g['new_minus_old_ACC_pp_mean'] is not None:finite.append(abs(g['new_minus_old_ACC_pp_mean'])+g['new_minus_old_ACC_pp_sd'])
+    lim=max([1.]+finite)*1.12
+    plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','DejaVu Sans'],
+        'font.size':7,'axes.titlesize':8,'axes.labelsize':7,'xtick.labelsize':7,'ytick.labelsize':7,
+        'svg.fonttype':'none','pdf.fonttype':42,'axes.spines.top':False,'axes.spines.right':False,
+        'axes.spines.left':False,'axes.linewidth':.6,'legend.frameon':False})
+    fig,axes=plt.subplots(1,2,figsize=(183/25.4,145/25.4),sharex=True,sharey=True)
+    fig.subplots_adjust(left=.19,right=.975,bottom=.13,top=.87,wspace=.19)
+    point_counts=[]
+    for ci,(method,title) in enumerate([('full','Full'),('no-correction','No correction smoothing')]):
+        ax=axes[ci];points=0;missing=0
+        ax.axvline(0,color='#777777',lw=.65,zorder=1)
+        for i,(ds,Q) in enumerate(conditions):
+            rr=sorted([r for r in source if (r['dataset'],r['budget'],r['method'])==(ds,Q,method)],key=lambda x:x['seed']);assert len(rr)==3
+            values=[]
+            for offset,r in zip([-.24,-.08,.08],rr):
+                val=r['new_minus_old_ACC_pp']
+                if val is None:missing+=1;continue
+                ax.scatter([val],[positions[i]+offset],s=11,marker='o' if r['paired_eligible'] else 'x',
+                    facecolor='#92989D' if r['paired_eligible'] else 'none',edgecolor='#92989D',linewidths=.6,alpha=.75,zorder=2)
+                points+=1;values.append(val)
+            if all(r['paired_eligible'] for r in rr):
+                ax.errorbar(statistics.mean(values),positions[i]+.26,xerr=statistics.stdev(values),fmt='D',markersize=3.4,
+                    color=colors[Q],elinewidth=.8,capsize=2,capthick=.7,zorder=3)
+            ax.axhline(positions[i],color='#ECEFF1',linewidth=.45,zorder=0)
+        ax.set_xlim(-lim,lim);ax.set_ylim(positions[-1]+.55,-.55);ax.set_yticks(positions)
+        ax.set_yticklabels([f"{'Reuters-local' if ds=='Reuters' else ds} | {Q}" for ds,Q in conditions])
+        ax.tick_params(axis='y',length=0);ax.set_xlabel('Scaled CV − original CV ACC (pp)')
+        ax.set_title(title,pad=10);ax.text(-.065,1.025,chr(97+ci),transform=ax.transAxes,fontweight='bold',fontsize=8)
+        point_counts.append(dict(method=method,individual_points=points,missing_scores=missing))
+    handles=[Line2D([0],[0],marker='o',color='none',markerfacecolor='#92989D',markeredgecolor='#92989D',markersize=3,label='Paired seed'),
+        Line2D([0],[0],marker='D',color=colors[160],markersize=3,label='Q = 160: mean ± sample SD'),
+        Line2D([0],[0],marker='D',color=colors[400],markersize=3,label='Q = 400: mean ± sample SD')]
+    fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.55,.97),ncol=3,fontsize=6.5,handlelength=1.4,columnspacing=1.2)
+    fig.canvas.draw()
+    require_matplotlib_panel_alignment(fig,json_out=ROOT/'selection_mass_effect.alignment.json',
+        overlay_svg=ROOT/'selection_mass_effect.alignment.svg',tolerance_pt=1.5,gutter_tolerance_pt=1.5,strict=True)
+    fig.savefig(ROOT/'selection_mass_effect.pdf')
+    fig.savefig(ROOT/'selection_mass_effect.svg')
+    fig.savefig(ROOT/'selection_mass_effect.png',dpi=600)
+    fig.savefig(ROOT/'selection_mass_effect.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'});plt.close(fig)
+    write(ROOT/'FIGURE_MANIFEST.json',dict(width_mm=183,height_mm=145,point_counts=point_counts,total_source_records=60,
+        uncertainty='Paired-seed sample SD; means only for complete 3/3 eligible cells',direction='Scaled CV minus original CV, ACC percentage points',
+        source_sha256=sha(ROOT/'figure_delta_source.csv'),script_sha256=sha(Path(__file__)),
+        files={str(ROOT/f'selection_mass_effect.{ext}'):sha(ROOT/f'selection_mass_effect.{ext}') for ext in ['pdf','svg','png','tiff']},
+        post_hoc=True,independent_confirmation=False,visual_QA_pending=True))
+    caption=('Post hoc sensitivity to validation-to-final relationship coefficient mass. '
+        'Each point is the paired change in ACC after replacing the original CV coefficient by lambda_candidate × Q/Q_train during fold training; '
+        'the final coefficient remains lambda_candidate. Panels show Full (a) and NoCorr (b). '
+        'Positive differences favor the scaled CV procedure. Gray points retain three existing seeds per corpus–budget cell; '
+        'diamonds and horizontal bars show the mean and one sample standard deviation for three eligible pairs. '
+        'Vertical offsets separate seed points and means for visibility and do not encode an additional variable. '
+        'Both procedures use the same answers, folds and final-query inputs; the new rule changes selection only. '
+        'This same-seed follow-up was motivated by previous results and review, and is not independent confirmation. '
+        'The scaling matches relationship coefficient mass, not coverage, endpoint domains or realized losses.')
+    (ROOT/'figure_caption_en.txt').write_text(caption,encoding='utf-8')
+    lines=['# 事后关系系数总量迁移诊断 / Post hoc coefficient-mass transport diagnostic','',
+        f"全部计划条件保留：{len(ev)}/60 个终态记录，{summary['eligible']}/60 个终态通过原数值资格，{summary['eligible_CV_fits']}/360 个新折内拟合合格；{summary['lambda_switches']}/60 次最终系数选择改变。新增最终拟合 {summary['new_final_fits']} 次，其余为精确身份匹配的原终态复用。",'',
+        f"All 60 planned final records were retained; {summary['eligible']}/60 final outcomes and {summary['eligible_CV_fits']}/360 newly fitted validation outcomes met the original numerical criteria. The selected final coefficient changed in {summary['lambda_switches']}/60 conditions. There were {summary['new_final_fits']} new final fits; other final artifacts were reused only after exact identity checks.",'',
+        '训练关系占完整预算的18.75%–30%，因此事先固定的共同缩放为3.333–5.333。下表为校准CV流程减原CV流程，单位为百分点；均值±样本标准差来自三个相同种子。此研究在既有结果和R2-M1审稿意见后提出，并非新语料或独立确认。',
+        'The training folds contain 18.75%–30% of the complete query budget, yielding predetermined common scale factors of 3.333–5.333. Changes below are scaled-CV minus original-CV, in percentage points, reported as the mean ± sample SD over the same three seeds. The study was initiated after the existing outcomes and reviewer concern R2-M1; it is not new-corpus or independent confirmation.','',
+        '| Corpus | Q | Method | ΔACC | ΔNMI | ΔARI | Eligible | λ changes (up/down) | Directions |','|---|---:|---|---:|---:|---:|---:|---:|---|']
+    for r in table:
+        vals=[]
+        for m in ['ACC','NMI','ARI']:
+            mean=r[f'new_minus_old_{m}_pp_mean'];sd=r[f'new_minus_old_{m}_pp_sd'];vals.append('incomplete' if mean is None else f'{mean:+.2f} ± {sd:.2f}')
+        lines.append(f"| {r['dataset']} | {r['budget']} | {r['method']} | {' | '.join(vals)} | {r['eligible_pairs']}/3 | {r['lambda_switches']} ({r['lambda_increased']}/{r['lambda_decreased']}) | {r['lambda_switch_directions']} |")
+    lines += ['', '该干预只匹配关系系数总量，保留折内原ML/CL比例；它不匹配覆盖率、端点域、各符号分别的系数总量或真实损失。新旧流程使用相同最终输入且只因选参改变而产生最终状态差异，不能把该结果归因于单个模型项，也不能以本次测试ACC选择新比例。',
+        'The intervention matches only total relationship coefficient mass while preserving the original within-fold ML/CL ratio. It does not match coverage, endpoint domains, sign-specific mass or realized loss. Both pipelines have identical final-query inputs; final-state differences arise through selected coefficients. These results cannot isolate an individual model term or justify choosing a new scale from test ACC.']
+    (ROOT/'RESULTS_ZH_EN.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    print('TABLES AND FIGURE EXPORTED; VISUAL QA REQUIRED',flush=True)
+
+if __name__=='__main__':run()

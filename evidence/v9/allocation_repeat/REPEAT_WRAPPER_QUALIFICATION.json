@@ -1,0 +1,89 @@
+{
+  "status": "PASS_SYNTHETIC_STATIC_REPEAT_WRAPPER",
+  "utc": "2026-10-23T13:54:27.886811+00:00",
+  "wrapper_source_bindings": {
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\repeat_study.py": "2e9d88d51984e6c70bc1f1048b110b9a72ed191a78e671324c616b15e4b935c0",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\repeat_worker.py": "b192c55a54a4832e9dcdb92d5fc86be220d1c05a8ed4131e224ce0b7014fe5d1",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\qualify_repeat_wrapper.py": "ba862e231b9beeabe85fa57e8934638ebbbbc466d7743ca3516e92add4bf9d14"
+  },
+  "portable_source_bindings": {
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\allocation_models.py": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\init_warm.py": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\allocation_io.py": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\run_allocation.py": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\score_allocation.py": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\allocation_core.py": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\CORE_DERIVATION.json": "1123a3149e14ab9ac88861e70155ae42358964ee2c4a1d2d75594cf1c08a2d60",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\allocation_repeat\\portable_common_draft\\SOURCE_PROVENANCE.json": "89601e7f96a2c3438f734b6ed7af640aace768585346e5ef72ce628fd9de2226"
+  },
+  "plan_sha256": "150c57abcf6a1edfaf4c7a9b82700c8709345811b7cbdd74b75dde5037a26067",
+  "resource_helper_sha256": "5919f693e7e071b0225e5b0efa4dbafec35b6faf98fd91dcce334c54859f48cb",
+  "source_scope": {
+    "blocks": 50,
+    "logical_outcomes": 500,
+    "new_seeds": [
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "unchanged_portable_files": 6
+  },
+  "global_gate": {
+    "status": "PASS",
+    "mock_blocks": 50,
+    "mock_failure_rows": 500,
+    "actual_model_calls": 0,
+    "missing_block_rejected": true,
+    "missing_independent_gate_rejected": true,
+    "changed_global_seal_rejected": true,
+    "failed_outcomes_never_invent_predictions": true
+  },
+  "cancellation": {
+    "status": "PASS",
+    "owned_child_reaped": true,
+    "lock_released_after_child_exit": true,
+    "receipt_and10_missing_rows_retained": true,
+    "existing_partial_failure_artifact_retained": true,
+    "actual_model_calls": 0
+  },
+  "tiny_portable": {
+    "status": "PASS",
+    "synthetic_n": 18,
+    "synthetic_k": 2,
+    "budgets": [
+      16,
+      28
+    ],
+    "logical_rows": 10,
+    "CV_tasks": 36,
+    "unique_final_tasks": 6,
+    "optimized_tasks": 42,
+    "reused_logical_finals": 4,
+    "all_sources_unchanged": true,
+    "eligible_folds": {
+      "16": 2,
+      "28": 2
+    },
+    "synthetic_pool_nodes": 8,
+    "synthetic_pool_fraction_differs_from_real_protocol": true,
+    "same_signature_reuse_checked": true,
+    "complete_block_reexecution_rejected": true,
+    "orphan_fit_rejected": true,
+    "oracle_open_blocked": true,
+    "new_real_metrics_computed": false
+  },
+  "light_parent_no_numpy": true,
+  "real_queries_generated": 0,
+  "real_initializations_generated": 0,
+  "real_optimization_tasks": 0,
+  "new_real_metrics_read": false,
+  "limitation": "Synthetic portable integration and mock500 failure ledger only. No new real-data run, freeze or independent authorization. Independent PRE_FREEZE audit still required."
+}

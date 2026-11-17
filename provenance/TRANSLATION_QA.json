@@ -1,0 +1,192 @@
+{
+  "scope": "Comments and docstrings only; runtime error strings deliberately unchanged. Full AST changes where __doc__ changes.",
+  "files": [
+    {
+      "file": "common/allocation_core.py",
+      "archive_member": "reproduction_common_candidates/allocation_core.py",
+      "original_sha256": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+      "release_sha256": "f62a2b55893d03c17a6f46b3d15982a2054d734eb846671620c5fb795e8c9d46",
+      "documentation_edits": 19,
+      "docstrings_changed": 7,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": false
+    },
+    {
+      "file": "common/allocation_io.py",
+      "archive_member": "reproduction_common_candidates/allocation_io.py",
+      "original_sha256": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+      "release_sha256": "a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "common/allocation_models.py",
+      "archive_member": "reproduction_common_candidates/allocation_models.py",
+      "original_sha256": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+      "release_sha256": "4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "common/init_warm.py",
+      "archive_member": "reproduction_common_candidates/init_warm.py",
+      "original_sha256": "bc1e22ce4d843ffeffaf929f7456052a2cc65e8e8336d94ebfa67389787289b5",
+      "release_sha256": "8c238d3c86594f411ba1d0c8444749817b3fbf61558c302c79628a5ebf764af8",
+      "documentation_edits": 3,
+      "docstrings_changed": 1,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": false
+    },
+    {
+      "file": "common/query_protocol.py",
+      "archive_member": "reproduction_common_candidates/query_protocol.py",
+      "original_sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "release_sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "common/run_allocation.py",
+      "archive_member": "reproduction_common_candidates/run_allocation.py",
+      "original_sha256": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+      "release_sha256": "a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "common/score_allocation.py",
+      "archive_member": "reproduction_common_candidates/score_allocation.py",
+      "original_sha256": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+      "release_sha256": "7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/sapn_text_research.py",
+      "archive_member": "reproduction/sapn_text_research.py",
+      "original_sha256": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+      "release_sha256": "024ba042ea9f5a8e2bc462f5e0fb006e078b3fe8a22cfa19635f66e2af18b2cb",
+      "documentation_edits": 20,
+      "docstrings_changed": 8,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": false
+    },
+    {
+      "file": "benchmark/sapn_text_paper.py",
+      "archive_member": "reproduction/sapn_text_paper.py",
+      "original_sha256": "cab973e3e9dd330387b9873d5d43d78d684043085a6a3682284e8db85fa86595",
+      "release_sha256": "fabe3e5ef85b0d280de8ba5b704d99f19529ed5e58a1f5b8b775db2e2de71ebb",
+      "documentation_edits": 19,
+      "docstrings_changed": 7,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": false
+    },
+    {
+      "file": "benchmark/reproduce.py",
+      "archive_member": "reproduction/reproduce.py",
+      "original_sha256": "e723179fef86091184b40054eb9dd4ddd15746d67b0712121dda94e30e34c9ec",
+      "release_sha256": "e723179fef86091184b40054eb9dd4ddd15746d67b0712121dda94e30e34c9ec",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/prepare_data.py",
+      "archive_member": "reproduction/prepare_data.py",
+      "original_sha256": "92de08e3fe76481e00dff1ccec03d04b751288035868e01a379d59769ae52c4d",
+      "release_sha256": "92de08e3fe76481e00dff1ccec03d04b751288035868e01a379d59769ae52c4d",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/verify_original_sources.py",
+      "archive_member": "reproduction/verify_original_sources.py",
+      "original_sha256": "46d81bcd902c34df742bcec49301aae0a986ae84cdd11152a96f846099f73c46",
+      "release_sha256": "46d81bcd902c34df742bcec49301aae0a986ae84cdd11152a96f846099f73c46",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/prepare_field_corpora.py",
+      "archive_member": "reproduction/prepare_field_corpora.py",
+      "original_sha256": "bf87074a2ee082b00b55d2101e24ccdca9ff7961810c695c4a0e15d1b6dd4e62",
+      "release_sha256": "bf87074a2ee082b00b55d2101e24ccdca9ff7961810c695c4a0e15d1b6dd4e62",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/portable_budget_runner.py",
+      "archive_member": "reproduction/portable_budget_runner.py",
+      "original_sha256": "bb0a626537afa19645159f9763d1f8c9baf9ca8929f51d509cbf1f4caf79abba",
+      "release_sha256": "bb0a626537afa19645159f9763d1f8c9baf9ca8929f51d509cbf1f4caf79abba",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/query_protocol.py",
+      "archive_member": "reproduction/query_protocol.py",
+      "original_sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "release_sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "benchmark/portable_score_sealed.py",
+      "archive_member": "reproduction/portable_score_sealed.py",
+      "original_sha256": "3aff0b5916125681cde486a68d17f52c03173d5213a9b625fe417a3d4b480de1",
+      "release_sha256": "3aff0b5916125681cde486a68d17f52c03173d5213a9b625fe417a3d4b480de1",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    },
+    {
+      "file": "primary_predictions/rescore.py",
+      "archive_member": "primary_predictions/rescore.py",
+      "original_sha256": "6e17694bc31e3710d8361f662335b73d4ba323bd64d93bcc3dcf7cf0e0e967db",
+      "release_sha256": "6e17694bc31e3710d8361f662335b73d4ba323bd64d93bcc3dcf7cf0e0e967db",
+      "documentation_edits": 0,
+      "docstrings_changed": 0,
+      "executable_AST_equal": true,
+      "noncomment_nondoc_tokens_equal": true,
+      "full_AST_equal": true
+    }
+  ]
+}

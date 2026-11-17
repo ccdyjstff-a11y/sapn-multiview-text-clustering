@@ -1,0 +1,269 @@
+{
+  "passed": true,
+  "final_fits": 36,
+  "cv_fits": 96,
+  "cv_nonconverged": 0,
+  "final_nonconverged": 0,
+  "continuations": 29,
+  "queries": [
+    {
+      "seed": 41,
+      "total_queries": 0,
+      "positive": 0,
+      "negative": 0,
+      "eligible_folds": 0
+    },
+    {
+      "seed": 41,
+      "total_queries": 160,
+      "positive": 9,
+      "negative": 151,
+      "eligible_folds": 2
+    },
+    {
+      "seed": 41,
+      "total_queries": 400,
+      "positive": 16,
+      "negative": 384,
+      "eligible_folds": 2
+    },
+    {
+      "seed": 42,
+      "total_queries": 0,
+      "positive": 0,
+      "negative": 0,
+      "eligible_folds": 0
+    },
+    {
+      "seed": 42,
+      "total_queries": 160,
+      "positive": 10,
+      "negative": 150,
+      "eligible_folds": 2
+    },
+    {
+      "seed": 42,
+      "total_queries": 400,
+      "positive": 18,
+      "negative": 382,
+      "eligible_folds": 2
+    },
+    {
+      "seed": 43,
+      "total_queries": 0,
+      "positive": 0,
+      "negative": 0,
+      "eligible_folds": 0
+    },
+    {
+      "seed": 43,
+      "total_queries": 160,
+      "positive": 1,
+      "negative": 159,
+      "eligible_folds": 0
+    },
+    {
+      "seed": 43,
+      "total_queries": 400,
+      "positive": 10,
+      "negative": 390,
+      "eligible_folds": 0
+    }
+  ],
+  "summaries": [
+    {
+      "method": "SAPN-original-MV",
+      "total_queries": 0,
+      "selected_values": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 32.785714285714285,
+      "sd_ACC": 0.9367769320431418,
+      "mean_NMI": 32.584036322036035,
+      "sd_NMI": 0.7186732765521915,
+      "mean_ARI": 15.106193262332942,
+      "sd_ARI": 0.9115520072765295
+    },
+    {
+      "method": "SAPN-original-MV",
+      "total_queries": 160,
+      "selected_values": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 34.833333333333336,
+      "sd_ACC": 1.6293440105643415,
+      "mean_NMI": 35.61054100368492,
+      "sd_NMI": 1.5348523334045652,
+      "mean_ARI": 18.620077130717565,
+      "sd_ARI": 1.2585810734682792
+    },
+    {
+      "method": "SAPN-original-MV",
+      "total_queries": 400,
+      "selected_values": [
+        20.0,
+        200.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 35.095238095238095,
+      "sd_ACC": 1.5735915849388877,
+      "mean_NMI": 36.85394993834874,
+      "sd_NMI": 2.0634297150589203,
+      "mean_ARI": 17.79617255856301,
+      "sd_ARI": 2.9669876720887807
+    },
+    {
+      "method": "SAPN-original-EQ",
+      "total_queries": 0,
+      "selected_values": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 23.380952380952383,
+      "sd_ACC": 1.5848989752992984,
+      "mean_NMI": 27.63863296097856,
+      "sd_NMI": 1.6912435653539262,
+      "mean_ARI": 3.6579217582944783,
+      "sd_ARI": 1.1779471012608551
+    },
+    {
+      "method": "SAPN-original-EQ",
+      "total_queries": 160,
+      "selected_values": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 23.23809523809524,
+      "sd_ACC": 1.7457431218879402,
+      "mean_NMI": 27.672135327275413,
+      "sd_NMI": 1.779029440254384,
+      "mean_ARI": 3.4976009947607363,
+      "sd_ARI": 1.057692977981392
+    },
+    {
+      "method": "SAPN-original-EQ",
+      "total_queries": 400,
+      "selected_values": [
+        200.0,
+        2.0,
+        20.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 23.357142857142858,
+      "sd_ACC": 1.9639610121239304,
+      "mean_NMI": 28.17315174348735,
+      "sd_NMI": 1.570340570384036,
+      "mean_ARI": 3.7634417403673646,
+      "sd_ARI": 0.7642244861936335
+    },
+    {
+      "method": "CMVNMF",
+      "total_queries": 0,
+      "selected_values": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 28.857142857142858,
+      "sd_ACC": 2.341942330107857,
+      "mean_NMI": 26.176773045673656,
+      "sd_NMI": 1.3925823821161472,
+      "mean_ARI": 11.115419436036332,
+      "sd_ARI": 1.0774318558634133
+    },
+    {
+      "method": "CMVNMF",
+      "total_queries": 160,
+      "selected_values": [
+        100.0,
+        1.0,
+        1.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 28.666666666666668,
+      "sd_ACC": 1.396667559624998,
+      "mean_NMI": 28.19776671121737,
+      "sd_NMI": 3.5184907292164826,
+      "mean_ARI": 9.957411149652183,
+      "sd_ARI": 2.0745073074078735
+    },
+    {
+      "method": "CMVNMF",
+      "total_queries": 400,
+      "selected_values": [
+        100.0,
+        1.0,
+        1.0
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 29.28571428571429,
+      "sd_ACC": 1.0375599318809954,
+      "mean_NMI": 29.00219835275853,
+      "sd_NMI": 3.5281476651612134,
+      "mean_ARI": 11.215761466386658,
+      "sd_ARI": 1.2153089626089528
+    },
+    {
+      "method": "MVCSC",
+      "total_queries": 0,
+      "selected_values": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 8.785714285714285,
+      "sd_ACC": 0.2575393768188562,
+      "mean_NMI": 8.619627958777288,
+      "sd_NMI": 1.0170745499038578,
+      "mean_ARI": 0.060500996559210284,
+      "sd_ARI": 0.037004565913114205
+    },
+    {
+      "method": "MVCSC",
+      "total_queries": 160,
+      "selected_values": [
+        0.001,
+        0.001,
+        0.01
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 8.785714285714286,
+      "sd_ACC": 0.3976974544878581,
+      "mean_NMI": 8.688110847846156,
+      "sd_NMI": 1.115418861302697,
+      "mean_ARI": 0.06759953420179494,
+      "sd_ARI": 0.03081462466158002
+    },
+    {
+      "method": "MVCSC",
+      "total_queries": 400,
+      "selected_values": [
+        0.1,
+        0.01,
+        0.01
+      ],
+      "nonconverged": 0,
+      "mean_ACC": 8.64285714285714,
+      "sd_ACC": 0.3113499245386194,
+      "mean_NMI": 8.234394932059738,
+      "sd_NMI": 0.6807605129838642,
+      "mean_ARI": 0.05675100609086492,
+      "sd_ARI": 0.030641186072859004
+    }
+  ],
+  "protocol_sha256": "12fb7c30393c841ec08735c6c7536dba47ba6d78ff952334964d3e582eed932c",
+  "evaluation_sha256": "a8807891be6408d85b9d7f07b59f1b01265c0fc6503fd04436dd7b1d9f9fddea"
+}

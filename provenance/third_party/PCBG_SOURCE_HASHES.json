@@ -1,0 +1,212 @@
+{
+  "status": "ALL_TEXT_FILES_MATCH_GIT_BLOB_IDENTITIES",
+  "repository": "https://github.com/YWJ-Best/PCBG",
+  "commit": "8e1f97e21848dc8d9c9440750ff7a1526142d2ab",
+  "discovered_date": "2026-10-23",
+  "files": [
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\ClusteringMeasureTao.m",
+      "git_blob_sha1": "9ace46525b9a2440e1148000cbe6da2e128d9a55",
+      "sha256": "f21ba89192d01fb3188b35a24676dbcc013472690a4fba87407d6be1edbd6c99",
+      "bytes": 1747,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\accuracy.m",
+      "git_blob_sha1": "ff6d77702bc89f6cad8b99fa279edac07f129054",
+      "sha256": "8c1d8b662faeb56363441df2989454bab328ad774b2a0e9b8ea0665c0b8d81bd",
+      "bytes": 851,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\hungarian.m",
+      "git_blob_sha1": "505aebad6320903c45b2445f04d6a6abc2976dbb",
+      "sha256": "6cb9b4a7ba2d669568830f7c23a15eb85623f25619eb737fd3e6a807554d69dd",
+      "bytes": 9229,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\macroFbeta.m",
+      "git_blob_sha1": "7b83ffdece0c871d714bcf866c13fac87cf4e8e0",
+      "sha256": "f38fc867c14e46f1109f50f58869d1377f9f3efa2d7a360222b95a1ac702ae38",
+      "bytes": 589,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\micro_macro_PR.m",
+      "git_blob_sha1": "78f9850bc9185963816f91da97f444d841ae05fb",
+      "sha256": "e8b1639ba4030d2bfcfcb3b4f0e423b25f98a48868eba26ad98189919c2d50b9",
+      "bytes": 1048,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\nmi.m",
+      "git_blob_sha1": "e782766e4c8cb500f466ac23211f01b27dcb32ee",
+      "sha256": "5297d3736dc8a504ecbd1055e38e3e2e5774256766cc742f3a047440d2597abe",
+      "bytes": 1893,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\ClusteringMeasureTao\\purity.m",
+      "git_blob_sha1": "c4551d4d94ed757488f90a434eca8560a250503a",
+      "sha256": "eccaf39ca1eb6adbf450568079575bf9ae6058331b58bb445919d2a329ec5031",
+      "bytes": 904,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\Label_propagation_edit.m",
+      "git_blob_sha1": "b8a2ffc5cbc882835d3cf3feb5367278432ca932",
+      "sha256": "51a51340127f8228231d47046b3b792b0c8a73f981476107a5f09dd68a476ace",
+      "bytes": 907,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\Optimal_integration4.m",
+      "git_blob_sha1": "61916501d007b78aa11eae67cb98350474565b60",
+      "sha256": "f96f09fc51f863a3b8af9a3a03628866e5842c54d1979adf586bfabb84a442fa",
+      "bytes": 4650,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\PCBG.m",
+      "git_blob_sha1": "6e6e6b82bdd042119557fdbaf8be73f70947c3af",
+      "sha256": "e7c4c9847b43807ee86099f20b8ac140f652b7d5bbc48370766f5753ef791358",
+      "bytes": 6040,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\README.md",
+      "git_blob_sha1": "a6d5483e6d6ea7be274e6d429ab928136810325b",
+      "sha256": "612d08f2474dcf156d65386bafc30658f511c8a382c566260e69bb40258718ee",
+      "bytes": 2954,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\SolveY_bestYU.m",
+      "git_blob_sha1": "2d8ed737bc3d173d81903df91485e09f0eea8247",
+      "sha256": "54987872d7b7c7c6cb684eb4b30d7c1da6c3937b241623ccdeb7191cbd43d44a",
+      "bytes": 1375,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\Solve_yk.m",
+      "git_blob_sha1": "de6fe902c80a11d140f06db2f790e5f4e5340e13",
+      "sha256": "cf5ae9d5d6cb251948476e45a0f23cf19c14fffda8747a293f4e7393e5180552",
+      "bytes": 681,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\EProjSimplex_new.m",
+      "git_blob_sha1": "cb8beb95d685cba42122752119033fc834967ee1",
+      "sha256": "7aaf8b6a727b702a0e80d95214e3fbed9990b8bc414840c16b36badf3a43bf5f",
+      "bytes": 633,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\L2_distance_1.m",
+      "git_blob_sha1": "f6bdefe40aa5cf8f125be532542d29b916c88e6c",
+      "sha256": "ccc022f09624f6b6fdc9efdcd1b46b76b4033394a0035e487dea1e2db768fc91",
+      "bytes": 514,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\SimplexQP_acc.m",
+      "git_blob_sha1": "2d7f74caa8ddbcf3a121acb7454da022fb4bdff7",
+      "sha256": "b35c11a61be8a242e603663a5b3dc1e9ef1ffe95236db608e4411fd650633943",
+      "bytes": 1481,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\SpectralClustering.m",
+      "git_blob_sha1": "69c900932327f972b199c7180b15d4d20ee982fc",
+      "sha256": "607001bb515c0cc83230c4a8a83d27b3fb3a5daa3b40f02c9d5432d45ef35146",
+      "bytes": 1283,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\VDA.m",
+      "git_blob_sha1": "085c075ca144d94af2958756c0815d91a609f377",
+      "sha256": "51de07b33eb825f088279f6870630af1d6b24f6e12ce5498df0cdd3d833d111b",
+      "bytes": 528,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\eig1.m",
+      "git_blob_sha1": "353f0a42b5902d7bee55534aa5726cbade2235a3",
+      "sha256": "97a5ffe5c3c59430f969fc853d37605747934d0aa7e18d7e44acde30fcb69b35",
+      "bytes": 539,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\graphgen_anchor.m",
+      "git_blob_sha1": "8144761d59eadc04f29f17dc0a3b24a72d47642e",
+      "sha256": "27eba09873bc5985278716aff9aac65b1d5d63f719d3387b23ca4af32b1cb74e",
+      "bytes": 1214,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funs\\litekmeans.m",
+      "git_blob_sha1": "454e0efdc85b682bf45c895f48b7802082179e76",
+      "sha256": "6271749c8366188109038ef6a7c806a060b153a3dc3c74f707924a8ab71711c5",
+      "bytes": 16579,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\BipartiteGraph_YU.m",
+      "git_blob_sha1": "794e9876d9d1341bb13dfefc248ffff63064bb20",
+      "sha256": "9d863330b1bdde11b1bd7f56cb5e4ccfa59f80e6ce118b4d1e7ade39a2828386",
+      "bytes": 2847,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\Generation_of_Paired_Constraints.m",
+      "git_blob_sha1": "9bd38abdf62d3cdcbf5c24403cebeb1180195f7e",
+      "sha256": "b90ecf0aec1f07bd5ab291425add7adfe00ac3e6340138d63d3ad87ec8a7d5e1",
+      "bytes": 2371,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\Generation_of_Paired_Constraints_new.m",
+      "git_blob_sha1": "d29922d9b272d114f52cae32c80c236fc37df4cf",
+      "sha256": "34dd5934a1c219a321ee63771f03ce5443fa52f6b6f817a4ea34fd9e1b8d2393",
+      "bytes": 1571,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\Organize_PCsYU.m",
+      "git_blob_sha1": "5193056ba683e2d88f6d389210ef22633b163065",
+      "sha256": "0c90d6a64e278502dc93f24b3ac28616ec345bf9c6652c421908a002dfadb015",
+      "bytes": 4696,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\Paired_constraint_validation.m",
+      "git_blob_sha1": "5048519fb6c49f3fd3b890bcad93ea9199803588",
+      "sha256": "e43bd24346de4113659aaa24a893a2c5c06bd7164668c81256b2a136d74cf86b",
+      "bytes": 898,
+      "source_encoding": "gbk"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\funsYU\\Precondition.m",
+      "git_blob_sha1": "81aa3e715eefad075186099f6b101b80a8007d5f",
+      "sha256": "97239a956765ed3372cbdd09b50db8b4815ef9d3a67a58af771798bb01874769",
+      "bytes": 838,
+      "source_encoding": "utf-8"
+    },
+    {
+      "path": "third_party\\PCBG_8e1f97e\\run_cluster.m",
+      "git_blob_sha1": "73336fb210aa486a9094779de00cdcbb9f338212",
+      "sha256": "803b253d0739ab793fc704a2a772fba1ea7c4e8ec56b6e50d91ded6005e1631f",
+      "bytes": 3516,
+      "source_encoding": "gbk"
+    }
+  ],
+  "excluded": [
+    "all .mat datasets",
+    "figure PNG"
+  ],
+  "license_metadata": null,
+  "distribution": "local research audit snapshot only; do not add third-party source to submission package",
+  "training_performed": false,
+  "matlab_scripts_executed": false
+}

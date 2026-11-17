@@ -1,0 +1,17 @@
+{
+  "status": "READY",
+  "n": 169,
+  "threshold_bytes": 3221225472,
+  "required_stable_seconds": 60,
+  "total_wait_cap_seconds": 1800,
+  "elapsed_seconds": 60.39000000001397,
+  "observations": 119,
+  "native_fit_started": false,
+  "launcher_dispatched": false,
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "corpus": "3Sources",
+  "Q": 160,
+  "end_utc": "2026-10-27T05:55:12.624377+00:00"
+}

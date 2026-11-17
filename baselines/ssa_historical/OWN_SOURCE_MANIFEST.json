@@ -1,0 +1,286 @@
+{
+  "scope": "Own historical adapter, patch-generator and control source; not a portable training certification",
+  "files": [
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/adapter_policy.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/adapter_policy.py",
+      "sha256": "8a524d78c81f14343a493c022057db0e56f270dae7713598d56cceaab0cc9fd9",
+      "bytes": 5389,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/controller_core.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/controller_core.py",
+      "sha256": "9c3f1ae8e7efab9935d4043aa1008a576d15889e20e3c74e2108032a10641b22",
+      "bytes": 13846,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/formal_common.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/formal_common.py",
+      "sha256": "507f0f35b891b74d100a562d132f754cf8b50b63d3eb8209120928bf70dc4f9c",
+      "bytes": 9086,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/owned_processes.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/owned_processes.py",
+      "sha256": "bb88287cd283afcdd5bff2d34a50c5d8a100bec872540da0e9d310d941fdde4c",
+      "bytes": 1252,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/phase_clock.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/phase_clock.py",
+      "sha256": "69eba419df9e4987f3bae818495b2998a8b467672e55045655b64800b086c853",
+      "bytes": 6833,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/prepare_grouped.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/prepare_grouped.py",
+      "sha256": "ad99b29321f3555a11bf0e82bb0c3437e2541f69554e584ac92795da204c07eb",
+      "bytes": 12862,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/query_protocol.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/query_protocol.py",
+      "sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "bytes": 4085,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/run_clock_qualification.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/run_clock_qualification.py",
+      "sha256": "37ba44428260a3505f6be00d059e9da4bebe87437f378ba9335da9369d1ec0ae",
+      "bytes": 19966,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/run_grouped.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/run_grouped.py",
+      "sha256": "8ef280649290605627e1915adf2ab1f31a1886b11b9a44e978853fd74dd987b6",
+      "bytes": 15349,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/ssa_clock_bridge.m",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/ssa_clock_bridge.m",
+      "sha256": "5ad327da9f1af8c5ca56771d129568c52946f9391355ef58ca70572038807300",
+      "bytes": 1949,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/ssa_formal_worker.m",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/ssa_formal_worker.m",
+      "sha256": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+      "bytes": 11159,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/successor_gate.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/successor_gate.py",
+      "sha256": "88c92949c97d5bf83e46c915616fd2ddaf6075d31f48ac4bc1cf5871f2ad3418",
+      "bytes": 3496,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_grouped_v2/test_grouped_policy.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_grouped_v2/test_grouped_policy.py",
+      "sha256": "915d28905c21ae889fcb414da31c9c4dcdad62f7c05a9444b71b0439a47149bc",
+      "bytes": 16131,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/formal_common.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/formal_common.py",
+      "sha256": "ecbf91deca948950f2bebbc86ff34bfbef8eb48c5e626a08d90b3e9b54e7ad27",
+      "bytes": 8944,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/owned_processes.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/owned_processes.py",
+      "sha256": "bb88287cd283afcdd5bff2d34a50c5d8a100bec872540da0e9d310d941fdde4c",
+      "bytes": 1252,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/phase_clock.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/phase_clock.py",
+      "sha256": "69eba419df9e4987f3bae818495b2998a8b467672e55045655b64800b086c853",
+      "bytes": 6833,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/prepare_formal.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/prepare_formal.py",
+      "sha256": "6c7464c37b9a96a750c19e27921650f5c0fe534705fd43065087e406f7201963",
+      "bytes": 9557,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/prepare_worker.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/prepare_worker.py",
+      "sha256": "95ce71634b65265ff33ebc024d76c348fb6563a3d65a45c953066ddf4bffe07d",
+      "bytes": 4452,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/query_protocol.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/query_protocol.py",
+      "sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "bytes": 4085,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/run_clock_qualification.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/run_clock_qualification.py",
+      "sha256": "c4d2166e48066e99502929e0b301977592db47f02e9042472d570a7514d91433",
+      "bytes": 19165,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/run_formal.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/run_formal.py",
+      "sha256": "0b1f377062b686c6069310940c28874a84d97a58ee53ce08306c61d4684dd51e",
+      "bytes": 11085,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/ssa_clock_bridge.m",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/ssa_clock_bridge.m",
+      "sha256": "5ad327da9f1af8c5ca56771d129568c52946f9391355ef58ca70572038807300",
+      "bytes": 1949,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_formal_v1/ssa_formal_worker.m",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_formal_v1/ssa_formal_worker.m",
+      "sha256": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+      "bytes": 11159,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_minimal_qualification/prepare_profile.py",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_minimal_qualification/prepare_profile.py",
+      "sha256": "35a5511b6dda3d715a1356ea836241294423b0be47b4bfcd656c1a651e1c8789",
+      "bytes": 12311,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/ssa_minimal_qualification/run_ssa_synthetic_qualification.m",
+      "packaged_path": "historical_tree/review_revision_v10/ssa_minimal_qualification/run_ssa_synthetic_qualification.m",
+      "sha256": "c56882104a93861efea7e3afb1c8ef3d335141f6ae94be5260417d7c6384ff3f",
+      "bytes": 3865,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    },
+    {
+      "source_relative_path": "review_revision_v10/runtime_transition/retirement_review/closure_verifier.py",
+      "packaged_path": "historical_tree/review_revision_v10/runtime_transition/retirement_review/closure_verifier.py",
+      "sha256": "b1dabe9a131232b6ef2f05af0d93b51ddb99078f7351cf04ed5252fdacba5b40",
+      "bytes": 23568,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/runtime_transition/retirement_review/retirement_evidence.py",
+      "packaged_path": "historical_tree/review_revision_v10/runtime_transition/retirement_review/retirement_evidence.py",
+      "sha256": "7d986f02f736abcda9e5fdb1c7783c1d6012c73dbf81da48de6095147c74e387",
+      "bytes": 30270,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v10/runtime_transition/future_controller_core/controller_core.py",
+      "packaged_path": "historical_tree/review_revision_v10/runtime_transition/future_controller_core/controller_core.py",
+      "sha256": "9c3f1ae8e7efab9935d4043aa1008a576d15889e20e3c74e2108032a10641b22",
+      "bytes": 13846,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v9/baseline_gap/native_formal_v1/phase_clock.py",
+      "packaged_path": "historical_tree/review_revision_v9/baseline_gap/native_formal_v1/phase_clock.py",
+      "sha256": "69eba419df9e4987f3bae818495b2998a8b467672e55045655b64800b086c853",
+      "bytes": 6833,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v9/baseline_gap/native_formal_v1/owned_processes.py",
+      "packaged_path": "historical_tree/review_revision_v9/baseline_gap/native_formal_v1/owned_processes.py",
+      "sha256": "bb88287cd283afcdd5bff2d34a50c5d8a100bec872540da0e9d310d941fdde4c",
+      "bytes": 1252,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v9/baseline_gap/native_formal_v1/query_protocol.py",
+      "packaged_path": "historical_tree/review_revision_v9/baseline_gap/native_formal_v1/query_protocol.py",
+      "sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+      "bytes": 4085,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v9/baseline_gap/native_formal_v1/run_clock_qualification.py",
+      "packaged_path": "historical_tree/review_revision_v9/baseline_gap/native_formal_v1/run_clock_qualification.py",
+      "sha256": "32de777ba9beaed80b70f751abc558e3a027934633cad96e43c0ca0d062af1ef",
+      "bytes": 18700,
+      "byte_identical": true,
+      "python_syntax_parsed": true
+    },
+    {
+      "source_relative_path": "review_revision_v9/baseline_gap/native_formal_v1/pcbg_clock_bridge.m",
+      "packaged_path": "historical_tree/review_revision_v9/baseline_gap/native_formal_v1/pcbg_clock_bridge.m",
+      "sha256": "1a373677a9a3e03a016c99af3b62bc953b97b39c35d9bcd3d0ba2afeb1e817f8",
+      "bytes": 1960,
+      "byte_identical": true,
+      "python_syntax_parsed": false
+    }
+  ],
+  "own_source_file_count": 33,
+  "english_only_CJK_scan_passed": true,
+  "python_AST_parse_passed": true,
+  "matlab_executed": false,
+  "training_executed": false,
+  "network_used": false,
+  "private_generated_copied": false,
+  "download_manifest": {
+    "source_relative_path": "review_revision_v6/literature_followup/SSA_download_manifest.json",
+    "sha256": "03c5ebb2484f7f346576e7b90eb089cb0c11816288390441c14df7e163cd7d92"
+  },
+  "excluded_runtime_material": [
+    "External author source and private_generated outputs",
+    "Feature and paid-query MAT/NPZ inputs",
+    "Frozen batch protocols, closure receipts and environment qualification records",
+    "MATLAB executable, licensing and original environment paths"
+  ]
+}

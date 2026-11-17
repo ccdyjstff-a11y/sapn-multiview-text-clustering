@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "actual_archive_sha256": "9a8c300eabb45750237fcc669f61cb8a3448f3ef6f6098e1ce340e444f6872be",
+  "equivalent_original_archive_sha256": "4e2fc37d369e6e317a8b62d0d2f11d379f8c3dde60c07c35a46b069a246498ad",
+  "regular_members_exact": true,
+  "scientific_identity": {
+    "prepared_sha256": "c08f8fbacd42a0f3e883d6b39842e4277e2ae0699641d475ff3b7f001e99208a",
+    "labels": {
+      "shape": [
+        2000
+      ],
+      "dtype": "int64",
+      "sha256": "143cfdb0f701f726c0005f442b1ca9fc1570f4cee6d7d7e416c9746f8d6f014a"
+    },
+    "matrices": [
+      {
+        "shape": [
+          2000,
+          1795
+        ],
+        "indptr": {
+          "shape": [
+            2001
+          ],
+          "dtype": "int32",
+          "sha256": "a37b914b63c26eff665b5815d064cb4e513a045dbc0a568397bdc4961a5e80e8"
+        },
+        "indices": {
+          "shape": [
+            7669
+          ],
+          "dtype": "int32",
+          "sha256": "15f5baf03643eccafcd9c4354de5b096d4222e265f8fb0b0f0f510db8e2a0323"
+        },
+        "data": {
+          "shape": [
+            7669
+          ],
+          "dtype": "float64",
+          "sha256": "7877b61f1f8009d86e68bdc6eac951dc607d7be96d508308be00170560ef4d8c"
+        }
+      },
+      {
+        "shape": [
+          2000,
+          4592
+        ],
+        "indptr": {
+          "shape": [
+            2001
+          ],
+          "dtype": "int32",
+          "sha256": "8ad099e8d0acf64e1a9098ebae9efe3281a4f6daf0beef15150f3bd47a61de29"
+        },
+        "indices": {
+          "shape": [
+            31696
+          ],
+          "dtype": "int32",
+          "sha256": "a013b68efe5ca6bb592c548d35ec795f896c539638a0ec9906b9f81a06b9c281"
+        },
+        "data": {
+          "shape": [
+            31696
+          ],
+          "dtype": "float64",
+          "sha256": "c53d7a53312f029da660dadd54c897d6f34befcd75042f99c8962c574c4d026c"
+        }
+      }
+    ],
+    "sample_provenance_sha256": "09592c43d1aa2535661d9bc9d425e99d66fc2a14b3181737d07c765413c3633c",
+    "vocabularies_sha256": "fbd2c9e853fe801b6288da41a84e84cff01761c1417ccc2f63e8afcc1e371eba"
+  },
+  "scientific_identity_exact": true,
+  "historical_scientific_metadata_equal": true,
+  "direct_reference_comparison": {
+    "ordered_labels_equal": true,
+    "ordered_source_ids_and_provenance_equal": true,
+    "ordered_vocabularies_equal": true,
+    "idf_values_equal": true,
+    "deduplication_exclusions_equal": true,
+    "views": [
+      {
+        "view": 0,
+        "shape": [
+          2000,
+          1795
+        ],
+        "all_ordered_values_equal": true,
+        "maximum_absolute_error": 0.0,
+        "csr_indptr_equal": true,
+        "csr_indices_equal": true,
+        "csr_data_equal": true
+      },
+      {
+        "view": 1,
+        "shape": [
+          2000,
+          4592
+        ],
+        "all_ordered_values_equal": true,
+        "maximum_absolute_error": 0.0,
+        "csr_indptr_equal": true,
+        "csr_indices_equal": true,
+        "csr_data_equal": true
+      }
+    ],
+    "passed": true
+  },
+  "base_preparer_unchanged": true,
+  "base_preparer_sha256": "bf87074a2ee082b00b55d2101e24ccdca9ff7961810c695c4a0e15d1b6dd4e62",
+  "identity_manifest_sha256": "b6e215168c7e9ef0ee23c3dbc0222a21f4499b71f5fbbbb1343b0693054a2049",
+  "mirror_identity_sha256": "241108307726c8ca7331faff728a76a63cf1b66905800c88ba094f19e646877d",
+  "adapter_sha256": "31ac33e8828cb7aa2626efa5b55db8e0f8ce260fced18b3ded82f29b801bb293",
+  "versions": {
+    "python": "3.10.22",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2"
+  },
+  "isolated": true,
+  "numerical_thread_limit": 1,
+  "elapsed_seconds": 13.982391400000779,
+  "trained_models": 0,
+  "file_hashes": {
+    "deduplication_exclusions.json": "2d71b1ff8e9998956029de7468a5442960444f9d3a00fdd2783377fd03901bb5",
+    "idf_values.json": "344fe86a6a15dadb95f03ae4c14ec08d2263b0a46e1781cd4679522331453bed",
+    "metadata.json": "6d7328f6ff3f7519528364af23c8d3fa1f0d10a2480da973d5b0612a44c017bc",
+    "sample_provenance.json": "2598739b5a7a9fe10f3637023665300f9c503f2281d360849966b759581283dc",
+    "vocabularies.json": "52bed222dd3f66a6a2836c21fe50e27b56a895f099cc72a5c1699fa9dc774832",
+    "X0.npz": "dddb84333dde08d5afe1bc3fbddd386c9dc47b23e67faf1473a5fc027ad25938",
+    "X1.npz": "be79a015c698be853d1e4c90083de58ab3c60771fca6a7931adaac18562d9218",
+    "y.npy": "bfafb3e09aaa229db2fe589145e0dc767a7d0af44e27776dc28fcbbaa3fe401c"
+  },
+  "independent_saved_output_readback": {
+    "sample_provenance.json": true,
+    "vocabularies.json": true,
+    "idf_values.json": true,
+    "deduplication_exclusions.json": true,
+    "ordered_labels": true,
+    "X0_shape": true,
+    "X0_data": true,
+    "X0_indices": true,
+    "X0_indptr": true,
+    "X1_shape": true,
+    "X1_data": true,
+    "X1_indices": true,
+    "X1_indptr": true
+  },
+  "execution_directory": "Fresh relocated directory containing only data_tools/ and benchmark/ before execution",
+  "command_template": "python -I data_tools/prepare_agnews_mirror.py --archive <external newly downloaded mirror> --output prepared_agnews --verify-against <external historical prepared directory>",
+  "external_data_access": "Only explicit --archive and --verify-against paths; no historical imports or default historical paths",
+  "initial_relocated_files": [
+    "data_tools/prepare_agnews_mirror.py",
+    "data_tools/agnews_mirror_identity.json",
+    "benchmark/prepare_field_corpora.py",
+    "benchmark/FIELD_CORPUS_IDENTITIES.json"
+  ],
+  "checked_date": "2026-11-17"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "error_maxima": {
+    "response_difference": 3.885780586188048e-16,
+    "threshold_equivalence_relative": 1.0076821077068801e-13,
+    "risk_identity": 6.661338147750939e-16,
+    "threshold_crossing": 4.440892098500626e-16
+  },
+  "risk_identity_comparisons": 4509,
+  "old_source_rows_checked": 1503,
+  "old_source_max_error": 0.0,
+  "original_source_sha256": "2d792ae0ce865cb64b05cc156080b50a20880a21392be797b3ebd390eb8d676c",
+  "supplied_two_node_examples": [
+    {
+      "u": 0.5,
+      "frequency": 1.0,
+      "A": 0.125,
+      "B": 0.02,
+      "ratio": 6.25,
+      "threshold": 1.4,
+      "full_mse": 0.02277777777777778,
+      "nocorr_mse": 0.03625
+    },
+    {
+      "u": 0.5,
+      "frequency": 1.0,
+      "A": 0.005,
+      "B": 0.08,
+      "ratio": 0.0625,
+      "threshold": 1.4,
+      "full_mse": 0.03611111111111111,
+      "nocorr_mse": 0.02125
+    }
+  ],
+  "boundaries": "Zero frequency and u=1 agree exactly. u=0 and B=0 excluded from threshold plot. Low positive-frequency divergence and high-frequency limit checked.",
+  "source_rows": 1503,
+  "empirical_observations": 0,
+  "exclusions": 0,
+  "source_sha256": "b32cdff69eb3522bab0219507451d7bd3c2ad6365320be192549a216acff962f",
+  "code_sha256": "e25528636416db1509e7883b62056311e79baf6ef9eb064796a8520da77cc063",
+  "width_mm": 180,
+  "height_mm": 130,
+  "preview_dpi": 300,
+  "alignment_verdict": "PASS"
+}

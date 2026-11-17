@@ -1,0 +1,1500 @@
+[
+  {
+    "outcome": {
+      "condition_id": "Reuters_s23_Q160",
+      "dataset": "Reuters",
+      "seed": 23,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "Reuters_s23_Q400",
+      "dataset": "Reuters",
+      "seed": 23,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "Reuters_s24_Q160",
+      "dataset": "Reuters",
+      "seed": 24,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "Reuters_s24_Q400",
+      "dataset": "Reuters",
+      "seed": 24,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "Reuters_s25_Q160",
+      "dataset": "Reuters",
+      "seed": 25,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "Reuters_s25_Q400",
+      "dataset": "Reuters",
+      "seed": 25,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s41_Q160",
+      "dataset": "20NG",
+      "seed": 41,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s41_Q400",
+      "dataset": "20NG",
+      "seed": 41,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s42_Q160",
+      "dataset": "20NG",
+      "seed": 42,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s42_Q400",
+      "dataset": "20NG",
+      "seed": 42,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s43_Q160",
+      "dataset": "20NG",
+      "seed": 43,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "20NG_s43_Q400",
+      "dataset": "20NG",
+      "seed": 43,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s101_Q160",
+      "dataset": "AGNews",
+      "seed": 101,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s101_Q400",
+      "dataset": "AGNews",
+      "seed": 101,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s102_Q160",
+      "dataset": "AGNews",
+      "seed": 102,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s102_Q400",
+      "dataset": "AGNews",
+      "seed": 102,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s103_Q160",
+      "dataset": "AGNews",
+      "seed": 103,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "condition_id": "AGNews_s103_Q400",
+      "dataset": "AGNews",
+      "seed": 103,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV",
+      "status": "INPUT_UNSUPPORTED",
+      "attempted": false,
+      "eligible": false,
+      "finite_partition_retained": false,
+      "case_id": null,
+      "reason": "native_zero_row_normalization_unsupported"
+    },
+    "source": null,
+    "partition": null
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s23_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "3a0bc3d69e9d1945b8219f3c2c83f5477a36c6551b645a1d3af4fce145e19c94",
+      "condition_id": "3Sources_s23_Q160",
+      "dataset": "3Sources",
+      "seed": 23,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s23_Q160_c1_final",
+      "input_sha256": "2900922422a54c0f88d5c80dec32ab91ba5eae498e1536937e672d7ec3f988c4",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s23_Q160_c1_final.json",
+        "sha256": "3a0bc3d69e9d1945b8219f3c2c83f5477a36c6551b645a1d3af4fce145e19c94",
+        "original_member": "runs/3Sources_s23_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s23_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "6573f5bba566e212b0a42009c596697f4b30be34440980e599003f7d801e4cf0",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s23_Q160_c1_final.npz",
+      "sha256": "913a24eede929c279f9ed9328e9ced08bb619e3a14091b2818eddb45c0784c98",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "9d13b311995230fd0f0e68b9793cecc44f92f4c81cab5fb521ba8562f0af175a"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "9d13b311995230fd0f0e68b9793cecc44f92f4c81cab5fb521ba8562f0af175a"
+      },
+      "npy_member_sha256": "253b71a85b74420b7e90c75e90c236abaa5b58dc5c256736ef4c0d7f24686439",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s23_Q160_c2_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "ce0e56d3a33990e96b4f57f4f74e70d9b78af80deb53a326bd504d2ad6f0d4ac",
+      "condition_id": "BBC_s23_Q160",
+      "dataset": "BBC",
+      "seed": 23,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s23_Q160_c2_final",
+      "input_sha256": "1915dcdb92d7300d5d136d2a06fbedfcf4ead7ed7dfaf1be6b649693a52bc91a",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s23_Q160_c2_final.json",
+        "sha256": "ce0e56d3a33990e96b4f57f4f74e70d9b78af80deb53a326bd504d2ad6f0d4ac",
+        "original_member": "runs/BBC_s23_Q160_c2_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/BBC_s23_Q160_c2_final/repeat1/native_outputs.mat",
+        "sha256": "4af3d2c97ef1fb96c46e3b13e698109ae69693abdd26be1be89db9d2401902e3",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/BBC_s23_Q160_c2_final.npz",
+      "sha256": "635793aca57b3ba62f516ab8f0397dd81e03e210bee67f2a328175b455c8f38b",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "e1722e4c43451cc135e1e80df0775da95cbd54b59e19d47264ff5c73ff52107a"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "e1722e4c43451cc135e1e80df0775da95cbd54b59e19d47264ff5c73ff52107a"
+      },
+      "npy_member_sha256": "8b1a8c0f6c01ab3f021a191fcb56a3a7283e6a4f0d1cf0fe8570d4f102b59b63",
+      "npy_member_byte_length": 2353
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s23_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "76b1b5131b8a464b5f678112eaad32b5a1f3b5fc54c09aee59337074a0f28bd2",
+      "condition_id": "Cora_s23_Q160",
+      "dataset": "Cora",
+      "seed": 23,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s23_Q160_c1_final",
+      "input_sha256": "2864fc4f357fac740753cfd84f1ac860a789d25835c28e29b79394dc6a197720",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s23_Q160_c1_final.json",
+        "sha256": "76b1b5131b8a464b5f678112eaad32b5a1f3b5fc54c09aee59337074a0f28bd2",
+        "original_member": "runs/Cora_s23_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s23_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "5663b9247630f1279ca2834838307346252e4ce0e65b569ba2cab81dac3fb1dd",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s23_Q160_c1_final.npz",
+      "sha256": "8c8b3fab11e711f858a2568ebc15c84b1c18417c6aa08e3c5123d9542c2ecfea",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "93c97d7a0bb3057e5e3849810c5b74bb1b54e2322b2e998df6ad7e4d40f6b9d2"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "93c97d7a0bb3057e5e3849810c5b74bb1b54e2322b2e998df6ad7e4d40f6b9d2"
+      },
+      "npy_member_sha256": "5301b3957ef9f92471f0b71849bfcbf1157aa262de18d331212c0693f5b54411",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s23_Q160_c0_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE_CONTRACT_FAILED",
+      "finite_partition_retained": true,
+      "receipt_sha256": "0617751b6c9e4c841bf767a332cc2501f5706a2207f1ca1b0bab34dd99b976cc",
+      "condition_id": "CiteSeer_s23_Q160",
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s23_Q160_c0_final",
+      "input_sha256": "7669a46c13f09c22bf71447613100c7fa6299f20a3963efc7f9a58cde2659198",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s23_Q160_c0_final.json",
+        "sha256": "0617751b6c9e4c841bf767a332cc2501f5706a2207f1ca1b0bab34dd99b976cc",
+        "original_member": "runs/CiteSeer_s23_Q160_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/CiteSeer_s23_Q160_c0_final/repeat1/native_outputs.mat",
+        "sha256": "c18e07be051bc0203b65cf937234f7e435671b56a52d2a35382ab4f7b908e35c",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/CiteSeer_s23_Q160_c0_final.npz",
+      "sha256": "8191c36454a8524f9d15b589c961ddc40903451926c8088beb09ae8ba2a60f4a",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "0e0e972506a52f33497b4c7251196f2b0841de3427a43cdb01147717cece4b01"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "0e0e972506a52f33497b4c7251196f2b0841de3427a43cdb01147717cece4b01"
+      },
+      "npy_member_sha256": "410622397df5de8b0c4c5585d022f4e3c780e48f2f0968375bd74428693331d7",
+      "npy_member_byte_length": 3440
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s23_Q400_c0_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "c53b2e147a467c10e3ac0c81f8c8b50e0eb91e4fb7c30862b044b3a27f5bc385",
+      "condition_id": "3Sources_s23_Q400",
+      "dataset": "3Sources",
+      "seed": 23,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s23_Q400_c0_final",
+      "input_sha256": "5bdcbf6c1923f9a01fe50c994a0e515063691ac6a6631558fadf73bdeb541801",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s23_Q400_c0_final.json",
+        "sha256": "c53b2e147a467c10e3ac0c81f8c8b50e0eb91e4fb7c30862b044b3a27f5bc385",
+        "original_member": "runs/3Sources_s23_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s23_Q400_c0_final/repeat1/native_outputs.mat",
+        "sha256": "d1fc31d04543851e04eef09a10368c2dd4a4ce9e1e1126d4e920ed2f2a731772",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s23_Q400_c0_final.npz",
+      "sha256": "fcb560a6d1e4fd0cc97b9833038e7ee213265a7c878352aeb29506f23a4f43a9",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "90296559e45a941b1a771d34337a093c1ff1f0184b3bb17f8db8bf2a3d391d8c"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "90296559e45a941b1a771d34337a093c1ff1f0184b3bb17f8db8bf2a3d391d8c"
+      },
+      "npy_member_sha256": "6bc9d4e278bf4646dac7a01c1bb30bfd0846583d4eef6f6e3a3f0bd49a722cba",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s23_Q400_c2_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "cb90b187a12f8f4932dac0a65d287382c99ded173ea36ea36136439edbe414ad",
+      "condition_id": "BBC_s23_Q400",
+      "dataset": "BBC",
+      "seed": 23,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s23_Q400_c2_final",
+      "input_sha256": "f94ea34a91d858d42c591a25535fde99c12c06a5edba47897018d22e807bcb69",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s23_Q400_c2_final.json",
+        "sha256": "cb90b187a12f8f4932dac0a65d287382c99ded173ea36ea36136439edbe414ad",
+        "original_member": "runs/BBC_s23_Q400_c2_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/BBC_s23_Q400_c2_final/repeat1/native_outputs.mat",
+        "sha256": "b3020e6b7627c1637ccc31c78e5dd5e2f17e250e25984afa57e2f699a57fb807",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/BBC_s23_Q400_c2_final.npz",
+      "sha256": "19c63586b6a9912411bd6d082bc415557279e03cd00150ac8bdddbc548d7b03d",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "450a2ad1533bc03cc077eaef6a705cb458cbb23759cb14494b4c0e6ea030b059"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "450a2ad1533bc03cc077eaef6a705cb458cbb23759cb14494b4c0e6ea030b059"
+      },
+      "npy_member_sha256": "a1e4d4e261a1971e21d3bb5e6aff8a04ab48700cfdf3c67b54b5af572dd353ba",
+      "npy_member_byte_length": 2353
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s23_Q400_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "94264a3be38d39b074963679e346ae72361add466c272a62dbf2550d078086fb",
+      "condition_id": "Cora_s23_Q400",
+      "dataset": "Cora",
+      "seed": 23,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s23_Q400_c1_final",
+      "input_sha256": "8b00dcea80a4218b1e9a85d9d06cb5ce12874836b4ade17778c6a2e9e3f5aed5",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s23_Q400_c1_final.json",
+        "sha256": "94264a3be38d39b074963679e346ae72361add466c272a62dbf2550d078086fb",
+        "original_member": "runs/Cora_s23_Q400_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s23_Q400_c1_final/repeat1/native_outputs.mat",
+        "sha256": "d1b2108145214d01999abd11735eba047b2afeafd6776ca55d2f4e3f9fead198",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s23_Q400_c1_final.npz",
+      "sha256": "d216133ab78885a49d84d226915eb4a6d45e337f53057d08703011915038db6e",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "03786270a4fb667e2b3a4b1ebb739c1b9254553d02b64deb3d2be808d8e679bc"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "03786270a4fb667e2b3a4b1ebb739c1b9254553d02b64deb3d2be808d8e679bc"
+      },
+      "npy_member_sha256": "eb41f4e4c66f71f7e24169e241409c289af53481c5897bd9491f0da13ea3d814",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s23_Q400_c0_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "WORKER_ACTIVE_TIME_CAP",
+      "worker_status": null,
+      "finite_partition_retained": false,
+      "receipt_sha256": "e8bbea9d5e8f6ca9edd5791599d9013a37ad43eb2ccfb01cae9fd70d1bc417d2",
+      "condition_id": "CiteSeer_s23_Q400",
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s23_Q400_c0_final",
+      "input_sha256": "a3ee1effed3d8152b3cd2f821a9f4ae54ca9103c3877cc485bb5b29d6a6a75a0",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s23_Q400_c0_final.json",
+        "sha256": "e8bbea9d5e8f6ca9edd5791599d9013a37ad43eb2ccfb01cae9fd70d1bc417d2",
+        "original_member": "runs/CiteSeer_s23_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": null
+    },
+    "partition": null
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s24_Q160_c0_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "2b409d22ccac7639ce52f219b53402d24d2b6cc9ed7307022df0bf3ce1651558",
+      "condition_id": "3Sources_s24_Q160",
+      "dataset": "3Sources",
+      "seed": 24,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s24_Q160_c0_final",
+      "input_sha256": "9a670af46f1adc68b7ed68f580c4396550e20484a11b723df54bae143fbacf42",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s24_Q160_c0_final.json",
+        "sha256": "2b409d22ccac7639ce52f219b53402d24d2b6cc9ed7307022df0bf3ce1651558",
+        "original_member": "runs/3Sources_s24_Q160_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s24_Q160_c0_final/repeat1/native_outputs.mat",
+        "sha256": "357f424b1d5a2d2ba7b26194a5e31ca5ce6e437c8466792022cfec5f36d52ce6",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s24_Q160_c0_final.npz",
+      "sha256": "1382fec46e72a822b934779ae5dd39dce98e5d140de3fd5bcb82157ff2438ca9",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "f5a5a4d55c7d995bcf1efea269ef4faf4e42917cb459cb84616693f02bbc268c"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "f5a5a4d55c7d995bcf1efea269ef4faf4e42917cb459cb84616693f02bbc268c"
+      },
+      "npy_member_sha256": "92eef9a3fde762ca09f067cc79532fc8e5581367dcddb9f90327f6687f255f61",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s24_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "5bd1a22092e57c4b4fff312591f415cbb223007ccd24eaeb9bf8b90da4453f28",
+      "condition_id": "BBC_s24_Q160",
+      "dataset": "BBC",
+      "seed": 24,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s24_Q160_c1_final",
+      "input_sha256": "6c431aafdd6e055d95369d766aae58e45c5046a990e255594e4c37fde9e0e365",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s24_Q160_c1_final.json",
+        "sha256": "5bd1a22092e57c4b4fff312591f415cbb223007ccd24eaeb9bf8b90da4453f28",
+        "original_member": "runs/BBC_s24_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/BBC_s24_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "5e55d4375ce1f66d54c9332f6f080abb28da4cba1ef3eba442f689dd9df35b10",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/BBC_s24_Q160_c1_final.npz",
+      "sha256": "dadffc90543f5de8c2d7c57be376722b831b1ca3afa97dc3f0c039154fdbd642",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "f9e99ef51a5466b4e080d3f1efa1f6c192abbae56f1c8c980ef56bc37107b6d8"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "f9e99ef51a5466b4e080d3f1efa1f6c192abbae56f1c8c980ef56bc37107b6d8"
+      },
+      "npy_member_sha256": "33c8763b6c93f0f53f0ec6ec2e6f1cc3f5ec0a501e3190af7df2a482069177e5",
+      "npy_member_byte_length": 2353
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s24_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "f19b05c2f17cefc61a86c6dc5398b05b7137586dcc506e868e039783981005f3",
+      "condition_id": "Cora_s24_Q160",
+      "dataset": "Cora",
+      "seed": 24,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s24_Q160_c1_final",
+      "input_sha256": "24a0475df3a4627cb816350988cbc8a9f196afde63c935ad8f8eb7ec85ce7eb3",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s24_Q160_c1_final.json",
+        "sha256": "f19b05c2f17cefc61a86c6dc5398b05b7137586dcc506e868e039783981005f3",
+        "original_member": "runs/Cora_s24_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s24_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "a0019e65c1d16c54962e09454ad7890258e9e577c52361889b4156f0a0800ebb",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s24_Q160_c1_final.npz",
+      "sha256": "1cb91aae23e2df7611076f4c2e12e48b53c06198040640e00d255c79fdc5b909",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "b3d09ac7a4063a71e0a295f21250cfceeade07000f07e8901db41c231a30df84"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "b3d09ac7a4063a71e0a295f21250cfceeade07000f07e8901db41c231a30df84"
+      },
+      "npy_member_sha256": "2a5b24fbf273eabd51f75441ed97613c4a81165660f444271f13080beb64a441",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s24_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "d9cfe591346e695ba6737148beec3e96aee08d19c1b732ca6d9e54fc3c97fbc7",
+      "condition_id": "CiteSeer_s24_Q160",
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s24_Q160_c1_final",
+      "input_sha256": "2eb5cde81330c3a9dff9a7c0b067dd9499857c93d405a62abb686ef27ad26430",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s24_Q160_c1_final.json",
+        "sha256": "d9cfe591346e695ba6737148beec3e96aee08d19c1b732ca6d9e54fc3c97fbc7",
+        "original_member": "runs/CiteSeer_s24_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/CiteSeer_s24_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "8e2add90296df8204833953e9d9c79594c688f58c588c8a1927b9ddf58f7d5bd",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/CiteSeer_s24_Q160_c1_final.npz",
+      "sha256": "bdb128dbaeffc714ef88b6b409199cb9f40ddc2de2796b1e97af51eea5cba0e4",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "b0ebc18e7ec5b64f9a18fd29172027105dc5e5d0a8a0c1457c6d42e1cdd24c7b"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "b0ebc18e7ec5b64f9a18fd29172027105dc5e5d0a8a0c1457c6d42e1cdd24c7b"
+      },
+      "npy_member_sha256": "32b4b87c650cb1c8cc08f0b20bd75df39bceeccd3e94c9677933d42b9ad76458",
+      "npy_member_byte_length": 3440
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s24_Q400_c0_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "eeba5280a44dadbbf758220e004965a29ad44bccb34d04c90278ca0483056836",
+      "condition_id": "3Sources_s24_Q400",
+      "dataset": "3Sources",
+      "seed": 24,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s24_Q400_c0_final",
+      "input_sha256": "d82c4b858f7ca6cf4702ac4ab656ab56532b733bc3bdc280c91d52711a2b8061",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s24_Q400_c0_final.json",
+        "sha256": "eeba5280a44dadbbf758220e004965a29ad44bccb34d04c90278ca0483056836",
+        "original_member": "runs/3Sources_s24_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s24_Q400_c0_final/repeat1/native_outputs.mat",
+        "sha256": "ef76865a6353a98b2a5e4de6f39f8d9a50f80130b7c85e600c9859bc1e27326e",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s24_Q400_c0_final.npz",
+      "sha256": "76c224c440617655cd10ba4450cbb4cce7e1562e57feaa37800c8dbe256f5303",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "6d4ce95b4b7e7c4ebb629040f12facef102e666c1ab16c7ca1929cc7a87bf0e4"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "6d4ce95b4b7e7c4ebb629040f12facef102e666c1ab16c7ca1929cc7a87bf0e4"
+      },
+      "npy_member_sha256": "d78f34864fb72715375fae0f9b3de4d674dbe9bfa2cad654ea812a353f6c12c9",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s24_Q400_c0_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "WORKER_ACTIVE_TIME_CAP",
+      "worker_status": null,
+      "finite_partition_retained": false,
+      "receipt_sha256": "92b3e3ae55116d757d4f268c00a13231414f1cebfafcb0eed83555ad43551c76",
+      "condition_id": "BBC_s24_Q400",
+      "dataset": "BBC",
+      "seed": 24,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s24_Q400_c0_final",
+      "input_sha256": "3f5da81c8e1df5c524cb466c3ce6ff65b9d5aa11037921e60d2ccb4a8e4b9f03",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s24_Q400_c0_final.json",
+        "sha256": "92b3e3ae55116d757d4f268c00a13231414f1cebfafcb0eed83555ad43551c76",
+        "original_member": "runs/BBC_s24_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": null
+    },
+    "partition": null
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s24_Q400_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "1dfc770555ba9f43c8f0eceb45400050baf5b3891690ad26f21ffd9cdd501de5",
+      "condition_id": "Cora_s24_Q400",
+      "dataset": "Cora",
+      "seed": 24,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s24_Q400_c1_final",
+      "input_sha256": "222dde35f549ea52cbb118486e61afb3c7cc4ef0a09a6866a477e27ac676b72c",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s24_Q400_c1_final.json",
+        "sha256": "1dfc770555ba9f43c8f0eceb45400050baf5b3891690ad26f21ffd9cdd501de5",
+        "original_member": "runs/Cora_s24_Q400_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s24_Q400_c1_final/repeat1/native_outputs.mat",
+        "sha256": "5285e66f4a25d1a1a701a798455a3e2b1b4cc3b3f76342b5db2ef4af2cc0b6cd",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s24_Q400_c1_final.npz",
+      "sha256": "17f10ab6a9ffc8e732c844cdc84ea27c41f195d98819fc73f99d0fbfcdcf1f93",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "f0b2d95c621e4110d3b786cbd323d875d57659289ebc1e45fa07f79edd482e00"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "f0b2d95c621e4110d3b786cbd323d875d57659289ebc1e45fa07f79edd482e00"
+      },
+      "npy_member_sha256": "13b40cca4a6317aa79f066c334323aa6e6efb163c1e5fc1578bbd55d2c8aa2fd",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s24_Q400_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "e37c372db8023254e38e8e75158de82e05817f5a878d6381ae73eca154476c43",
+      "condition_id": "CiteSeer_s24_Q400",
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s24_Q400_c1_final",
+      "input_sha256": "b2a0be5d760697ac3c11c1eeba15682b32052bafbc9bfacbf7002c59f3c21e48",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s24_Q400_c1_final.json",
+        "sha256": "e37c372db8023254e38e8e75158de82e05817f5a878d6381ae73eca154476c43",
+        "original_member": "runs/CiteSeer_s24_Q400_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/CiteSeer_s24_Q400_c1_final/repeat1/native_outputs.mat",
+        "sha256": "1623a0395cc02f703b7bb80920e50a20e43a3c64f784c2454a933303fe6bc2e3",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/CiteSeer_s24_Q400_c1_final.npz",
+      "sha256": "6ba03b365bc7f8e8ab462ca651f5bba7585cc1c9aaf68f4c9e6d5689ea51e293",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "d9a01fbc0818b7bee469801535ece1f741c6a63a713347a7d1fd9ab4d26a7acf"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "d9a01fbc0818b7bee469801535ece1f741c6a63a713347a7d1fd9ab4d26a7acf"
+      },
+      "npy_member_sha256": "ca6551fac055022f8b9aea58c0581ff127bb979c9f205b538c88302f4a596fdf",
+      "npy_member_byte_length": 3440
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s25_Q160_c1_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE_CONTRACT_FAILED",
+      "finite_partition_retained": true,
+      "receipt_sha256": "a24e81412c637c84a4f5c1c2af5e1c573244aa3b5f9931f03a01b27bba01e4dc",
+      "condition_id": "3Sources_s25_Q160",
+      "dataset": "3Sources",
+      "seed": 25,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s25_Q160_c1_final",
+      "input_sha256": "c9a9c4db21ab43b2a03c155202d115283fca6ffe81aa9368698294c910daecf2",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s25_Q160_c1_final.json",
+        "sha256": "a24e81412c637c84a4f5c1c2af5e1c573244aa3b5f9931f03a01b27bba01e4dc",
+        "original_member": "runs/3Sources_s25_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s25_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "9a170da8479f1f5b8d2e0de3e8bc42a285a1a9f28df307a5002ff10140928228",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s25_Q160_c1_final.npz",
+      "sha256": "c8b27a450dadf55bbc4bdade90f564295d9c5967efd466c11f710716c6c0d0a4",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "68cc8e7bc53f51114bf38882f666917cbbd680715807848da7780b0fb6094e29"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "68cc8e7bc53f51114bf38882f666917cbbd680715807848da7780b0fb6094e29"
+      },
+      "npy_member_sha256": "7bf446678ca360f887d8c29925e23f1a29da23057d2d0a0b63e0ae9c6a46582f",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s25_Q160_c2_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "b8093db46b920255994330d4fc84e4c3d9c002971a8e9c950a9d6edda5085b20",
+      "condition_id": "BBC_s25_Q160",
+      "dataset": "BBC",
+      "seed": 25,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s25_Q160_c2_final",
+      "input_sha256": "d1b2ac9874301ae5afb40651ac506157abd8e4f178caa7cdf55f1ebb3ef7d48c",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s25_Q160_c2_final.json",
+        "sha256": "b8093db46b920255994330d4fc84e4c3d9c002971a8e9c950a9d6edda5085b20",
+        "original_member": "runs/BBC_s25_Q160_c2_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/BBC_s25_Q160_c2_final/repeat1/native_outputs.mat",
+        "sha256": "3891c4e53a71649a7d60d64393fa7aa7d24ee8ba17d39fd35aec00641779bf22",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/BBC_s25_Q160_c2_final.npz",
+      "sha256": "65c23825292323faab06ee08ac35a167e381c7131f09233b4b0bf45ebce9c8b6",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "1b6583458fd7c9fc9e1a43ef0907baccebfa0ceff924ebb35635b8ff45a131d2"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2225,
+          1
+        ],
+        "sha256": "1b6583458fd7c9fc9e1a43ef0907baccebfa0ceff924ebb35635b8ff45a131d2"
+      },
+      "npy_member_sha256": "969e2201928f94c2b25fecae8c8002a331bcbf144bf28d6ce2cade593b05448d",
+      "npy_member_byte_length": 2353
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s25_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "aba937dea3448a95859dcb12414ccb4ee79633c121bb10789f23eed1f0f1487a",
+      "condition_id": "Cora_s25_Q160",
+      "dataset": "Cora",
+      "seed": 25,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s25_Q160_c1_final",
+      "input_sha256": "90052dd38d9fbbf5125eb8846e777050f92b776952223bdfc56ac942431afe65",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s25_Q160_c1_final.json",
+        "sha256": "aba937dea3448a95859dcb12414ccb4ee79633c121bb10789f23eed1f0f1487a",
+        "original_member": "runs/Cora_s25_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s25_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "7853b833e2860ead92c611e31657e3e56d6380ad12e75b539a131e17024e0fa3",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s25_Q160_c1_final.npz",
+      "sha256": "328aac77b0ebad95e9ee4090f608ddb74a815f2e638412f9690dc03d564cac0c",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "f4c741485e8645927b3f6321ff213575444521bc97cf12a905430c1626095bfc"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "f4c741485e8645927b3f6321ff213575444521bc97cf12a905430c1626095bfc"
+      },
+      "npy_member_sha256": "6961817de41b0d55f9d808edb68b252879d9002a44f4eb60e16fd877bfa49078",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s25_Q160_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "030ece6566392589f10f34b61f4a3714cd28dc4e6878962869706e1bb85d4621",
+      "condition_id": "CiteSeer_s25_Q160",
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "Q": 160,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s25_Q160_c1_final",
+      "input_sha256": "51f682642b4fc7f1c4288b3edeb4395e5d361278044cf10c4987c5983230c7e7",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s25_Q160_c1_final.json",
+        "sha256": "030ece6566392589f10f34b61f4a3714cd28dc4e6878962869706e1bb85d4621",
+        "original_member": "runs/CiteSeer_s25_Q160_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/CiteSeer_s25_Q160_c1_final/repeat1/native_outputs.mat",
+        "sha256": "99924ae0e47877b30db56b83d45018d5c06475c08a028ef2dbe7241a81d09ed6",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/CiteSeer_s25_Q160_c1_final.npz",
+      "sha256": "bfef3cf3ba832d5f7cf77e9365eebb1e2dc66bc138b1840f193f5e5b21568e02",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "14873c7c7e77747caab8ac4b5e76a3a5ea0d814725bd727cf1c849a5ca1e441d"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          3312,
+          1
+        ],
+        "sha256": "14873c7c7e77747caab8ac4b5e76a3a5ea0d814725bd727cf1c849a5ca1e441d"
+      },
+      "npy_member_sha256": "8d6a6be8cca5b1e5682263914aeabc80681e06524b2907ad8f1bbcf98e0eb53b",
+      "npy_member_byte_length": 3440
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "3Sources_s25_Q400_c0_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "5028553200d7877ee7849b4315b420615f3b9318c64875e7e379626ba0dbc9bf",
+      "condition_id": "3Sources_s25_Q400",
+      "dataset": "3Sources",
+      "seed": 25,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "3Sources_s25_Q400_c0_final",
+      "input_sha256": "17fc8ceea3067c6015198efefb9ae1769f45b18c950d41524cd2344fcf52d383",
+      "n": 169,
+      "receipt": {
+        "file": "receipts/3Sources_s25_Q400_c0_final.json",
+        "sha256": "5028553200d7877ee7849b4315b420615f3b9318c64875e7e379626ba0dbc9bf",
+        "original_member": "runs/3Sources_s25_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/3Sources_s25_Q400_c0_final/repeat1/native_outputs.mat",
+        "sha256": "53e9fe72bf2d4d18d6b44847db7bb44f91319da6d5777e39c13a04fdfe2b701a",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/3Sources_s25_Q400_c0_final.npz",
+      "sha256": "a98c057eaab7785cb52d2b772a444e47343fd3acb0b32d67dfca4cea97be77c9",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "d299111ef65ebe640ff8c8ec99af456e96cf65c0fb178f6ad51dd32168ad2fba"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          169,
+          1
+        ],
+        "sha256": "d299111ef65ebe640ff8c8ec99af456e96cf65c0fb178f6ad51dd32168ad2fba"
+      },
+      "npy_member_sha256": "e30dedcc29a936d22442904a8c8de46693e81aadacdd7861b94fbb8707618830",
+      "npy_member_byte_length": 297
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "BBC_s25_Q400_c0_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "WORKER_ACTIVE_TIME_CAP",
+      "worker_status": null,
+      "finite_partition_retained": false,
+      "receipt_sha256": "2d06fc0bebaa08c6f058377c5086955ab4dce38791e66fe4dab635697cdbf3be",
+      "condition_id": "BBC_s25_Q400",
+      "dataset": "BBC",
+      "seed": 25,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "BBC_s25_Q400_c0_final",
+      "input_sha256": "f0b6da99361ccfe2c0510eac05a02291b5958116da2352841dc8b2f3d9a34416",
+      "n": 2225,
+      "receipt": {
+        "file": "receipts/BBC_s25_Q400_c0_final.json",
+        "sha256": "2d06fc0bebaa08c6f058377c5086955ab4dce38791e66fe4dab635697cdbf3be",
+        "original_member": "runs/BBC_s25_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": null
+    },
+    "partition": null
+  },
+  {
+    "outcome": {
+      "case_id": "Cora_s25_Q400_c1_final",
+      "attempted": true,
+      "eligible": true,
+      "status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+      "worker_status": "RETURNED_FINITE",
+      "finite_partition_retained": true,
+      "receipt_sha256": "09cb177fba64a44a486ee252d8b957f5099929d6c0f870c8df9713f70f8c4f7f",
+      "condition_id": "Cora_s25_Q400",
+      "dataset": "Cora",
+      "seed": 25,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "Cora_s25_Q400_c1_final",
+      "input_sha256": "d94f20e026707714eecd787dacbe2c49b4701927ac41aa2c6f3e1023a2a5bf1e",
+      "n": 2708,
+      "receipt": {
+        "file": "receipts/Cora_s25_Q400_c1_final.json",
+        "sha256": "09cb177fba64a44a486ee252d8b957f5099929d6c0f870c8df9713f70f8c4f7f",
+        "original_member": "runs/Cora_s25_Q400_c1_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": {
+        "original_member": "runs/Cora_s25_Q400_c1_final/repeat1/native_outputs.mat",
+        "sha256": "9b53f2b42b9c0c713ecb2bcce419b33387cbd0c4e49fdc1dd260475b13fdfbe8",
+        "field": "label"
+      }
+    },
+    "partition": {
+      "file": "partitions/Cora_s25_Q400_c1_final.npz",
+      "sha256": "193f87058a57b359bc5dffb33fe2eb12410021072c5ebd4b63177eae0d2e4812",
+      "member": "partition.npy",
+      "original_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "752cd6ea3a93c2de1bac7c25c8164516a3f50d74ae3146cb3f816b869b1f17f3"
+      },
+      "exported_array": {
+        "dtype": "|u1",
+        "shape": [
+          2708,
+          1
+        ],
+        "sha256": "752cd6ea3a93c2de1bac7c25c8164516a3f50d74ae3146cb3f816b869b1f17f3"
+      },
+      "npy_member_sha256": "b5e374854c7cfc0ee049daa44a617ab10fb6a4cd32ab55245e607f6a86693c6b",
+      "npy_member_byte_length": 2836
+    }
+  },
+  {
+    "outcome": {
+      "case_id": "CiteSeer_s25_Q400_c0_final",
+      "attempted": true,
+      "eligible": false,
+      "status": "WORKER_ACTIVE_TIME_CAP",
+      "worker_status": null,
+      "finite_partition_retained": false,
+      "receipt_sha256": "c36500892f5c4aeca7926bd9ccd9e49770a52086cc359da6ff7ef7481e65dda5",
+      "condition_id": "CiteSeer_s25_Q400",
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "Q": 400,
+      "method": "PCBG-author-limited-anchor-CV"
+    },
+    "source": {
+      "case_id": "CiteSeer_s25_Q400_c0_final",
+      "input_sha256": "e4b222f4f56e5433412b77f37427287e92f4ab4627f5bfa3b5312449170af2ed",
+      "n": 3312,
+      "receipt": {
+        "file": "receipts/CiteSeer_s25_Q400_c0_final.json",
+        "sha256": "c36500892f5c4aeca7926bd9ccd9e49770a52086cc359da6ff7ef7481e65dda5",
+        "original_member": "runs/CiteSeer_s25_Q400_c0_final/repeat1/launcher_receipt.json"
+      },
+      "native_mat": null
+    },
+    "partition": null
+  }
+]

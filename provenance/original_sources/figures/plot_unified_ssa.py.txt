@@ -1,0 +1,352 @@
+"""Six-row supplementary comparison; synthetic QA is isolated from real reports.
+
+The explicit render flag binds the exact root-reviewed comparison manifest.
+No model, oracle, evaluation implementation or training module is imported.
+"""
+import argparse
+import csv
+import hashlib
+import io
+import json
+from pathlib import Path
+import shutil
+import statistics
+import subprocess
+import sys
+import zipfile
+
+sys.dont_write_bytecode = True
+ROOT = Path(__file__).resolve().parent
+MAIN = ROOT.parent.parent
+REPORT = ROOT.parent / 'ssa_grouped_reporting' / 'result_packet'
+ARCHIVE = MAIN / 'SAPN_v10_作者修改与复现包.zip'
+ARCHIVE_SHA = 'd744c7f4a57b71e8338bb1123509235138b1c4a40e46d877d239673e06952013'
+OLD_MEMBERS = {
+    'source': ('evidence/v10/native_pcbg/figure/figure_source_Q400.csv', '6010991668acada8d73bce99e4faca53f215ae3f249ee23398768d1f78f24c2f'),
+    'summary': ('evidence/v10/native_pcbg/figure/figure_summary_Q400.csv', 'f1ab4fe39236aa96b526f2a3ad9701039395bbc48b4eac05e03ff02e4dfc49f0'),
+    'pdf': ('manuscript/figures/fig14_unified_native_Q400.pdf', '7aa1791559706e204aa88648ba767863c969d4b372c13d20db3f961cc20cd110'),
+}
+METRICS = ('ACC', 'NMI', 'ARI')
+COMPARATORS = ('SAPN-EQ', 'CMVNMF', 'MVCHSS', 'FSSMSC', 'PCBG-author', 'SSA-SNMF*')
+DATASETS = ('3Sources', 'BBC', 'Reuters', 'Cora', 'CiteSeer', '20NG', 'AGNews')
+NAMES = {'Reuters': 'Reuters-local', 'AGNews': 'AG News'}
+COLORS = dict(zip(COMPARATORS, ['#D55E00', '#009E73', '#8762A3', '#6A727C', '#0072B2', '#B45A8D']))
+WIDTH_MM = 166
+HEIGHT_MM = 225
+DPI = 600
+QA = Path('C:/Users/LENOVO/.codex/skills/nature-figure/scripts')
+QA_DEPS = MAIN / 'submission_revision_v4/qa_dependencies'
+PREFIX = 'fig14_unified_ssa_Q400'
+POINT_FIELDS = ('dataset,Q,seed,comparison,metric,direction,delta_pp,eligible,plotted,missing_reason,'
+                'full_metric_fraction,comparison_metric_fraction,full_status,comparison_status,source_prediction_identity').split(',')
+GROUP_FIELDS = 'dataset,Q,comparison,metric,planned,eligible,mean_pp,sd_pp,missing_code'.split(',')
+
+
+def need(ok, message):
+    if not ok:
+        raise ValueError(message)
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(2**20), b''):
+            h.update(block)
+    return h.hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+
+
+def dump(path, value):
+    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf8')
+
+
+def rows(raw):
+    return list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
+
+
+def number(value):
+    if value is None or value == '':
+        return None
+    value = float(value)
+    need(__import__('math').isfinite(value), 'Nonfinite plotting value')
+    return value
+
+
+def boolean(value):
+    need(value in [True, False, 'True', 'False', 'true', 'false', '1', '0', 0, 1], 'Invalid boolean')
+    return str(value).lower() in ('true', '1')
+
+
+def close(a, b):
+    return abs(a - b) <= 1e-10 * max(1., abs(a), abs(b))
+
+
+def write_csv(path, records, fields):
+    with Path(path).open('w', newline='', encoding='utf8') as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(records)
+
+
+def legacy():
+    """Read only hash-bound source tables; no historical scoring-chain rerun."""
+    need(sha(ARCHIVE) == ARCHIVE_SHA, 'Archived delivery identity changed')
+    raw = {}
+    with zipfile.ZipFile(ARCHIVE) as archive:
+        for key, (member, expected) in OLD_MEMBERS.items():
+            data = archive.read(member)
+            need(hashlib.sha256(data).hexdigest() == expected, 'Archived figure member changed: ' + key)
+            raw[key] = data
+    points, groups = rows(raw['source']), rows(raw['summary'])
+    need(len(points) == 315 and len(groups) == 105, 'Legacy row counts changed')
+    need({r['comparison'] for r in points} == set(COMPARATORS[:-1]), 'Legacy comparator set changed')
+    need(all(r['direction'] == 'SAPN minus comparator' and int(r['Q']) == 400 for r in points), 'Legacy direction/budget mismatch')
+    cases = cases_from_tables(points, groups)
+    return points, groups, cases, raw
+
+
+def cases_from_tables(points, groups):
+    result = []
+    seen = set()
+    for g in groups:
+        key = (g['comparison'], g['metric'], g['dataset'])
+        need(key not in seen, 'Duplicate figure group')
+        seen.add(key)
+        local = sorted([r for r in points if (r['comparison'], r['metric'], r['dataset']) == key], key=lambda r: int(r['seed']))
+        need(len(local) == 3 and len({int(r['seed']) for r in local}) == 3, 'Three planned seeds required')
+        parsed = [dict(r, seed=int(r['seed']), eligible=boolean(r['eligible']), delta_pp=number(r['delta_pp'])) for r in local]
+        need(int(g['planned']) == 3 and int(g['eligible']) == sum(r['eligible'] for r in parsed), 'Eligibility count mismatch')
+        result.append(dict(dataset=g['dataset'], comparison=g['comparison'], metric=g['metric'],
+            planned=3, eligible=int(g['eligible']), mean_pp=number(g['mean_pp']), sd_pp=number(g['sd_pp']),
+            missing_code=g['missing_code'], points=parsed))
+    need(sum(len(c['points']) for c in result) == len(points), 'Unmatched source point')
+    return result
+
+
+def ssa_tables(seed_rows, group_rows, identity='synthetic only'):
+    """Exactly one sign change: SSA-minus-SAPN fractions -> SAPN-minus-SSA pp."""
+    need(len(seed_rows) == 42 and len(group_rows) == 14, 'Retain both budgets: 42 seed rows and 14 groups')
+    need(len({(r['dataset'], int(r['Q']), int(r['seed'])) for r in seed_rows}) == 42, 'Duplicate SSA seed identity')
+    need({(g['dataset'], int(g['Q'])) for g in group_rows} == {(d, q) for d in DATASETS for q in [160, 400]}, 'SSA corpus/budget coverage changed')
+    points, groups = [], []
+    for g in group_rows:
+        ds, q = g['dataset'], int(g['Q'])
+        local = sorted([r for r in seed_rows if r['dataset'] == ds and int(r['Q']) == q], key=lambda r: int(r['seed']))
+        need(len(local) == 3 and int(g['n_planned']) == 3, 'SSA planned denominator changed')
+        declared_seeds = json.loads(g['seeds']) if isinstance(g['seeds'], str) else g['seeds']
+        need(sorted(declared_seeds) == [int(r['seed']) for r in local], 'SSA declared seed set mismatch')
+        paired = [boolean(r['SSA_eligible']) and boolean(r['SAPN_eligible']) for r in local]
+        complete = boolean(g['paired_primary_complete'])
+        need(complete == all(paired), 'SSA complete-group policy mismatch')
+        need(int(g['SSA_n_eligible']) == sum(boolean(r['SSA_eligible']) for r in local), 'SSA eligibility mismatch')
+        need(int(g['SAPN_n_eligible']) == sum(boolean(r['SAPN_eligible']) for r in local), 'SAPN eligibility mismatch')
+        for metric in METRICS:
+            added = []
+            for r, eligible in zip(local, paired):
+                need(boolean(r['paired_primary_complete']) == complete, 'SSA row/group completeness mismatch')
+                original = number(r['SSA_minus_SAPN_' + metric])
+                a, b = number(r['SAPN_' + metric]), number(r['SSA_' + metric])
+                need((original is not None) == complete, 'Incomplete primary group acquired numeric effect')
+                if complete:
+                    need(a is not None and b is not None and close(original, b-a), 'SSA effect direction/unit mismatch')
+                    lower = -1 if metric == 'ARI' else 0
+                    need(lower <= a <= 1 and lower <= b <= 1, 'Metric fractions expected, not percentage points')
+                delta = None if original is None else -100.0 * original
+                added.append(dict(dataset=ds, Q=q, seed=int(r['seed']), comparison='SSA-SNMF*', metric=metric,
+                    direction='SAPN minus comparator', delta_pp=delta, eligible=eligible, plotted=delta is not None,
+                    missing_reason='' if complete else r['SSA_outcome_category'], full_metric_fraction=a,
+                    comparison_metric_fraction=b, full_status=r.get('SAPN_status', 'frozen primary record'),
+                    comparison_status=r['SSA_status'], source_prediction_identity=identity))
+            mu = number(g['SSA_minus_SAPN_' + metric + '_mean'])
+            sd = number(g['SSA_minus_SAPN_' + metric + '_sample_sd'])
+            need((mu is not None and sd is not None) if complete else (mu is None and sd is None),
+                 'SSA incomplete aggregate must be missing')
+            avg, spread = (None, None) if not complete else (-100.0 * mu, 100.0 * sd)
+            if complete:
+                need(sd >= 0 and close(avg, statistics.mean(r['delta_pp'] for r in added))
+                     and close(spread, statistics.stdev(r['delta_pp'] for r in added)), 'SSA mean/SD transform mismatch')
+            if q == 400:
+                missing = '' if complete else ('U' if all(r['SSA_outcome_category'] == 'input_unsupported' for r in local) else 'N')
+                points.extend(added)
+                groups.append(dict(dataset=ds, Q=q, comparison='SSA-SNMF*', metric=metric, planned=3,
+                    eligible=sum(paired), mean_pp=avg, sd_pp=spread, missing_code=missing))
+    need(len(points) == 63 and len(groups) == 21, 'SSA Q400 coverage mismatch')
+    return points, groups
+
+
+def extent(cases):
+    values = [0.]
+    for c in cases:
+        values.extend(p['delta_pp'] for p in c['points'] if p['delta_pp'] is not None)
+        if c['mean_pp'] is not None:
+            values.extend([c['mean_pp'] - c['sd_pp'], c['mean_pp'] + c['sd_pp']])
+    lo, hi = min(values), max(values)
+    pad = max(1., .09 * (hi-lo))
+    return lo-pad, hi+pad
+
+
+def require_render_memory():
+    import psutil
+    need(psutil.virtual_memory().available >= 4 * 2**30,
+         'Rendering postponed: at least 4 GiB available memory is required while scientific workers are active')
+
+
+def render(cases, output, synthetic=False):
+    require_render_memory()
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+    from matplotlib.text import Text
+    from matplotlib.ticker import MaxNLocator
+    sys.path.insert(0, str(QA))
+    from audit_panel_alignment import require_matplotlib_panel_alignment
+    need(len(cases) == 126, 'Expected six comparators × three metrics × seven corpora')
+    plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
+        'font.size': 8, 'axes.labelsize': 8, 'axes.titlesize': 9, 'xtick.labelsize': 8, 'ytick.labelsize': 8,
+        'legend.fontsize': 8, 'pdf.fonttype': 42, 'svg.fonttype': 'none', 'axes.spines.top': False,
+        'axes.spines.right': False, 'axes.linewidth': .6, 'figure.facecolor': 'white', 'axes.facecolor': 'white'})
+    fig, axes = plt.subplots(6, 3, figsize=(WIDTH_MM/25.4, HEIGHT_MM/25.4))
+    fig.subplots_adjust(left=.205, right=.985, bottom=.07, top=.925, wspace=.18, hspace=.29)
+    handles = [Line2D([], [], marker='o', color='#6A727C', linestyle='none', markersize=3.2, label='Paired seed'),
+               Line2D([], [], marker='D', color='#171A1E', linestyle='-', markersize=4, label='Mean ± sample SD')]
+    has_ineligible = any(not p['eligible'] and p['delta_pp'] is not None for c in cases for p in c['points'])
+    if has_ineligible:
+        handles.append(Line2D([], [], marker='x', color='#777777', linestyle='none', markersize=4, label='Ineligible terminal'))
+    fig.legend(handles=handles, loc='upper center', bbox_to_anchor=(.56, .985), ncol=len(handles), frameon=False,
+        columnspacing=1.2, handlelength=1.5)
+    fig.text(.06, .965, 'Q = 400' + (' (synthetic)' if synthetic else ''), ha='left', fontsize=8)
+    fig.text(.5, .015, 'U = unsupported; N = no complete three-seed primary comparison.', ha='center', fontsize=8)
+    for row, comparator in enumerate(COMPARATORS):
+        for col, metric in enumerate(METRICS):
+            ax = axes[row, col]
+            these = [next(c for c in cases if (c['comparison'], c['metric'], c['dataset']) == (comparator, metric, ds)) for ds in DATASETS]
+            for j, c in enumerate(these):
+                for point, offset in zip(c['points'], (-.19, 0., .19)):
+                    if point['delta_pp'] is None:
+                        continue
+                    ax.scatter([point['delta_pp']], [j+offset], s=10 if point['eligible'] else 15,
+                        marker='o' if point['eligible'] else 'x', color=COLORS[comparator] if point['eligible'] else '#777777',
+                        alpha=.72, linewidths=.6, zorder=3)
+                if c['mean_pp'] is not None:
+                    ax.errorbar(c['mean_pp'], j, xerr=c['sd_pp'], fmt='D', color='#171A1E', markersize=3.7,
+                        markerfacecolor='white', markeredgewidth=.8, elinewidth=.8, capsize=2, barsabove=True, zorder=4)
+            ax.axvline(0, color='#8C949D', linewidth=.6, zorder=0)
+            ax.set_xlim(*extent([c for c in cases if c['metric'] == metric]))
+            ax.set_ylim(6.6, -.6)
+            ax.xaxis.set_major_locator(MaxNLocator(4))
+            labels = [f"{NAMES.get(c['dataset'], c['dataset'])} [{c['eligible']}/3]" +
+                      (' ' + c['missing_code'] if c['missing_code'] else '') for c in these]
+            ax.set_yticks(range(7), labels=labels if col == 0 else ['']*7)
+            ax.grid(axis='x', color='#E0E3E8', linewidth=.35)
+            if row == 0:
+                ax.set_title(metric, pad=8)
+            if row == 5:
+                ax.set_xlabel('Difference (pp)')
+            ax.annotate(chr(97+row*3+col), xy=(0,1), xycoords='axes fraction', xytext=(-19,5),
+                textcoords='offset points', ha='left', va='bottom', fontsize=9, fontweight='bold')
+        box = axes[row,0].get_position()
+        display = {'MVCHSS':'MVCHSS†', 'FSSMSC':'FSSMSC‡'}.get(comparator, comparator)
+        fig.text(.015, (box.y0+box.y1)/2, 'SAPN − '+display, rotation=90, rotation_mode='anchor',
+            ha='center', va='center', fontsize=8)
+    fig.canvas.draw()
+    need(all(t.get_fontsize() >= 8 for t in fig.findobj(Text) if t.get_text()), 'Font below 8 pt')
+    require_matplotlib_panel_alignment(fig, json_out=output/'alignment.json', overlay_svg=output/'alignment.svg',
+        tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True, require_panel_labels=True)
+    for suffix in ['pdf','svg']:
+        fig.savefig(output/(PREFIX+'.'+suffix))
+    fig.savefig(output/(PREFIX+'.png'), dpi=DPI)
+    if not synthetic:
+        fig.savefig(output/(PREFIX+'.tiff'), dpi=DPI, pil_kwargs={'compression':'tiff_lzw'})
+    # Crop rows only for QA inspection; never replace the full-size scientific PDF.
+    renderer = fig.canvas.get_renderer()
+    panels = []
+    for i, ax in enumerate(axes.flat):
+        bbox = ax.get_tightbbox(renderer).transformed(fig.dpi_scale_trans.inverted()).expanded(1.03,1.03)
+        panels.append(dict(panel=chr(97+i), comparator=COMPARATORS[i//3], metric=METRICS[i%3],
+            replicate_unit='paired seed', centre='mean', uncertainty='sample SD, ddof=1', planned=3,
+            minimum_font_pt=8, visual_review='PENDING', synthetic_only=synthetic))
+        if synthetic:
+            fig.savefig(output/('panel_'+chr(97+i)+'.png'), dpi=300, bbox_inches=bbox)
+    dump(output/'PANEL_VISUAL_QA.json', dict(status='PENDING_VISUAL_REVIEW', synthetic_only=synthetic, panels=panels))
+    plt.close(fig)
+    return has_ineligible
+
+
+def qa(output):
+    pdf = output/(PREFIX+'.pdf')
+    commands = [('source', [str(QA/'validate_figure.py'), str(Path(__file__)), '--json']),
+        ('text', [str(QA/'audit_pdf_text.py'), str(pdf), '--min-pt','8','--json']),
+        ('collision', [str(QA/'audit_figure_collisions.py'), str(pdf), '--json-out',str(output/'collision.json'),
+            '--overlay-pdf',str(output/'collision-overlay.pdf')])]
+    for name, argv in commands:
+        bootstrap = 'import runpy,sys;sys.path.insert(0,sys.argv.pop(1));p=sys.argv.pop(1);sys.argv[0]=p;runpy.run_path(p,run_name="__main__")'
+        result = subprocess.run([sys.executable,'-B','-X','utf8','-c',bootstrap,str(QA_DEPS),*argv],
+            capture_output=True,text=True,encoding='utf8',timeout=120)
+        (output/(name+'_stdout.txt')).write_text(result.stdout,encoding='utf8')
+        (output/(name+'_stderr.txt')).write_text(result.stderr,encoding='utf8')
+        need(result.returncode == 0, 'Rendered QA failed: '+name)
+
+
+def admit_report(expected):
+    path = REPORT/'REPORT_MANIFEST.json'
+    need(sha(path) == expected, 'Exact root-reviewed comparison manifest SHA required')
+    m = read(path)
+    need(m['status'] == 'AUDIT_GATED_COMPARISON_REPORT', 'Report was not admitted by post-score audit')
+    need(m.get('batch') == 'SSA_GROUPED_V2' and m.get('prior_S1_results_imported') is False, 'Only the independent S2 report is accepted')
+    need(sha(REPORT.parent/'REPORTING_PROTOCOL.json') == m['reporting_protocol_sha256'], 'S2 reporting protocol changed')
+    need(m['logical_rows'] == 42 and m['corpus_query_groups'] == 14, 'Report counts changed')
+    for key in ['post_score_audit_sha256','global_seal_sha256','evaluation_manifest_sha256','evaluation_sha256',
+                'summary_sha256','protocol_sha256','runtime_protocol_sha256','reporting_protocol_sha256']:
+        need(isinstance(m[key],str) and len(m[key]) == 64, 'Missing report evidence binding: '+key)
+    for name in ['paired_seed_rows.csv','paired_primary_groups.csv']:
+        need(sha(REPORT/name) == m['output_hashes'][name], 'Comparison CSV changed: '+name)
+    return m, rows((REPORT/'paired_seed_rows.csv').read_bytes()), rows((REPORT/'paired_primary_groups.csv').read_bytes())
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--render-report-sha')
+    args = parser.parse_args()
+    if not args.render_report_sha:
+        print(json.dumps(dict(status='PREPARED_NO_FORMAL_FIGURE_RENDERED',comparison_metrics_read=False)))
+        return
+    prep = read(ROOT/'PREPARATION.json')
+    for name, expected in prep['source_files_sha256'].items():
+        need(sha(ROOT/name) == expected, 'Figure preparation source changed: '+name)
+    require_render_memory()
+    m, sr, gr = admit_report(args.render_report_sha)
+    oldp, oldg, oldcases, raw = legacy()
+    newp,newg = ssa_tables(sr,gr,identity=args.render_report_sha)
+    output = ROOT/'rendered_packet'
+    need(not output.exists(), 'Do not overwrite a rendered packet')
+    output.mkdir()
+    write_csv(output/'figure_source_Q400.csv', oldp+newp, POINT_FIELDS)
+    write_csv(output/'figure_summary_Q400.csv', oldg+newg, GROUP_FIELDS)
+    for name in ['paired_seed_rows.csv','paired_primary_groups.csv']:
+        shutil.copyfile(REPORT/name, output/('ssa_all_budgets_'+name))
+    cases = oldcases + cases_from_tables(newp,newg)
+    ineligible = render(cases,output)
+    qa(output)
+    need(rows((output/'figure_source_Q400.csv').read_bytes())[:315] == oldp, 'Legacy source values changed')
+    need(rows((output/'figure_summary_Q400.csv').read_bytes())[:105] == oldg, 'Legacy summary values changed')
+    dump(output/'FIGURE_RENDER_MANIFEST.json', dict(status='AUTOMATED_QA_COMPLETED_VISUAL_REVIEW_REQUIRED',
+        report_manifest_sha256=args.render_report_sha, source_sha256=sha(__file__), archive_sha256=ARCHIVE_SHA,
+        batch='SSA_GROUPED_V2', prior_S1_results_imported=False,
+        figure_preparation_sha256=sha(ROOT/'PREPARATION.json'),
+        reporting_protocol_sha256=m['reporting_protocol_sha256'],
+        protocol_sha256=m['protocol_sha256'], runtime_protocol_sha256=m['runtime_protocol_sha256'],
+        archive_members=OLD_MEMBERS, figure_seed_metric_rows=378, figure_aggregate_rows=126,
+        unchanged_legacy_rows=315, unchanged_legacy_groups=105, planned_ssa_seed_rows=42, planned_ssa_groups=14,
+        source_difference='SSA minus SAPN, fraction', plot_difference='SAPN minus comparator, pp',
+        ssa_sign_flips=1, unit_multiplier=100, missing_replaced_by_zero=False, ineligible_legend=ineligible,
+        width_mm=WIDTH_MM,height_mm=HEIGHT_MM,minimum_font_pt=8,panels=18,
+        visual_review='All 18 panels plus assembled page must be inspected; review every collision WARN.',
+        outputs_sha256={p.name:sha(p) for p in output.iterdir() if p.is_file()}))
+
+
+if __name__ == '__main__':
+    main()

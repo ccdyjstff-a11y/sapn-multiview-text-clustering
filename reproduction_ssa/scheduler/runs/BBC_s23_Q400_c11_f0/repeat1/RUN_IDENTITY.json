@@ -1,0 +1,8 @@
+{
+  "run_id": "9a78e85ccd1548d4a40b28564f52df74",
+  "case_id": "BBC_s23_Q400_c11_f0",
+  "repeat": 1,
+  "input_sha256": "7a0155b09cc88c37425cd07a19706f26504ea868f6f35e85954d4913d4c87000",
+  "scientific_protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_protocol_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d"
+}

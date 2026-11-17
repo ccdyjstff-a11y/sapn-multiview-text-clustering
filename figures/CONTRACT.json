@@ -1,0 +1,70 @@
+{
+  "backend": "Python/Matplotlib",
+  "reuse": "Exact scientific/drawing reuse; only portable paths and QA-helper loading change",
+  "figures": [
+    {
+      "id": "fig21",
+      "claim": "Paired common-allocation ACC contrasts are heterogeneous and often small; show all seeds and both selection policies",
+      "archetype": "quantitative grid with subordinate near-zero details",
+      "source": [
+        "evidence/final/alloc/acc_paired_differences_400.csv",
+        "evidence/final/alloc/acc_paired_directions_40.csv"
+      ],
+      "rows": 400,
+      "groups": 40,
+      "seeds_per_group": 10,
+      "center": "arithmetic mean",
+      "spread": "sample SD ddof=1, not confidence interval",
+      "exclusions": 0,
+      "width_mm": 180,
+      "height_mm": 190,
+      "full_limits_pp": [
+        -22,
+        24
+      ],
+      "zoom_limits_pp": [
+        -2,
+        2
+      ],
+      "zoom": "Only secondary display clipped; all raw values and all summary contributions retained in full range"
+    },
+    {
+      "id": "fig13",
+      "claim": "Analytic spectral retention and per-frequency conditional MSE threshold for an isolated reference penalty, without a full-model ACC guarantee",
+      "archetype": "two response panels plus spanning conditional-risk boundary",
+      "source": [
+        "tables/figures/fig13_reference_filter_source.csv",
+        "evidence/v8/reference_filter/reference_filter_risk_source.csv"
+      ],
+      "positive_frequencies": 501,
+      "strengths": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "rows": 1503,
+      "empirical_observations": 0,
+      "uncertainty": "Inapplicable to deterministic formula evaluations",
+      "width_mm": 180,
+      "height_mm": 130
+    },
+    {
+      "id": "fig22",
+      "claim": "Known-benchmark two-corpus extension; retain unfavorable and favorable paired ACC contrasts",
+      "source": [
+        "evidence/allocation_extension/reporting/paired_values_200.csv",
+        "evidence/allocation_extension/reporting/paired_ACC_8.csv"
+      ],
+      "paired_ACC_points": 40,
+      "groups": 8,
+      "seeds_per_group": 5,
+      "center": "arithmetic mean",
+      "spread": "sample SD ddof=1, not confidence interval",
+      "exclusions": 0,
+      "width_mm": 179.07,
+      "height_mm": 86.36
+    }
+  ],
+  "export": "PDF/SVG and raster previews (300 dpi for figures 13/21, 260 dpi for figure 22); original paper assets untouched",
+  "qa": "Rendered alignment and actual numerical checks; source/PDF text audits; Poppler page-text/bounds comparison. PyMuPDF unavailable, so no claim of a new PyMuPDF stroke-collision audit."
+}

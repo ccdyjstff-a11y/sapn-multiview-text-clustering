@@ -1,0 +1,53 @@
+\begingroup\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrlrrr}
+\caption{全部40项ACC对比的并列规则敏感性。每格首行是百分点差值的均值与样本标准差，次行为十个配对种子的正/零/负计数。差值为Full减控制。C-I/V-I为独立选参的仅共识/仅视图控制，C-F/V-F保留各政策Full所选系数。原默认优先仍为主要结果，差值绝对值不超过$10^{-12}$个百分点记为零。}\label{tab:allocation-tie-sensitivity-counts}\\
+\toprule
+Corpus & $Q$ & Control & Primary & Min $\lambda$ & Max $\lambda$\\
+\midrule\endfirsthead
+\toprule
+Corpus & $Q$ & Control & Primary & Min $\lambda$ & Max $\lambda$\\
+\midrule\endhead
+\bottomrule\endfoot
+3Sources & 160 & C-I & \shortstack{$+6.36\pm6.85$\\{\scriptsize 6/4/0}} & \shortstack{$+6.36\pm6.85$\\{\scriptsize 6/4/0}} & \shortstack{$+6.36\pm6.85$\\{\scriptsize 6/4/0}}\\
+3Sources & 160 & V-I & \shortstack{$+4.58\pm6.47$\\{\scriptsize 6/4/0}} & \shortstack{$+4.58\pm6.47$\\{\scriptsize 6/4/0}} & \shortstack{$+4.58\pm6.47$\\{\scriptsize 6/4/0}}\\
+3Sources & 160 & C-F & \shortstack{$+4.92\pm7.31$\\{\scriptsize 4/6/0}} & \shortstack{$+4.92\pm7.31$\\{\scriptsize 4/6/0}} & \shortstack{$+4.92\pm7.31$\\{\scriptsize 4/6/0}}\\
+3Sources & 160 & V-F & \shortstack{$+3.73\pm4.12$\\{\scriptsize 6/4/0}} & \shortstack{$+3.73\pm4.12$\\{\scriptsize 6/4/0}} & \shortstack{$+3.73\pm4.12$\\{\scriptsize 6/4/0}}\\
+3Sources & 400 & C-I & \shortstack{$+4.58\pm5.57$\\{\scriptsize 7/1/2}} & \shortstack{$+5.00\pm5.50$\\{\scriptsize 7/1/2}} & \shortstack{$+4.58\pm5.57$\\{\scriptsize 7/1/2}}\\
+3Sources & 400 & V-I & \shortstack{$+4.58\pm9.90$\\{\scriptsize 8/1/1}} & \shortstack{$+4.58\pm9.90$\\{\scriptsize 8/1/1}} & \shortstack{$+4.58\pm9.90$\\{\scriptsize 8/1/1}}\\
+3Sources & 400 & C-F & \shortstack{$+5.34\pm5.64$\\{\scriptsize 8/1/1}} & \shortstack{$+5.34\pm5.64$\\{\scriptsize 8/1/1}} & \shortstack{$+5.34\pm5.64$\\{\scriptsize 8/1/1}}\\
+3Sources & 400 & V-F & \shortstack{$+2.12\pm8.06$\\{\scriptsize 7/2/1}} & \shortstack{$+2.12\pm8.06$\\{\scriptsize 7/2/1}} & \shortstack{$+2.12\pm8.06$\\{\scriptsize 7/2/1}}\\
+BBC & 160 & C-I & \shortstack{$+0.11\pm0.41$\\{\scriptsize 6/0/4}} & \shortstack{$+0.48\pm1.32$\\{\scriptsize 6/1/3}} & \shortstack{$-1.18\pm3.51$\\{\scriptsize 2/1/7}}\\
+BBC & 160 & V-I & \shortstack{$+0.24\pm0.75$\\{\scriptsize 5/0/5}} & \shortstack{$+3.28\pm5.75$\\{\scriptsize 7/0/3}} & \shortstack{$-0.01\pm0.43$\\{\scriptsize 6/0/4}}\\
+BBC & 160 & C-F & \shortstack{$-1.00\pm3.57$\\{\scriptsize 5/0/5}} & \shortstack{$-0.62\pm3.91$\\{\scriptsize 5/1/4}} & \shortstack{$-1.16\pm3.52$\\{\scriptsize 3/1/6}}\\
+BBC & 160 & V-F & \shortstack{$+0.22\pm0.72$\\{\scriptsize 6/0/4}} & \shortstack{$+0.67\pm1.33$\\{\scriptsize 8/0/2}} & \shortstack{$+0.01\pm0.42$\\{\scriptsize 6/0/4}}\\
+BBC & 400 & C-I & \shortstack{$+0.06\pm0.74$\\{\scriptsize 4/1/5}} & \shortstack{$-1.20\pm4.67$\\{\scriptsize 4/2/4}} & \shortstack{$+0.15\pm0.71$\\{\scriptsize 5/1/4}}\\
+BBC & 400 & V-I & \shortstack{$+4.73\pm6.36$\\{\scriptsize 8/0/2}} & \shortstack{$+3.43\pm5.77$\\{\scriptsize 7/0/3}} & \shortstack{$+4.45\pm6.44$\\{\scriptsize 8/0/2}}\\
+BBC & 400 & C-F & \shortstack{$+0.08\pm0.48$\\{\scriptsize 5/1/4}} & \shortstack{$+0.21\pm0.37$\\{\scriptsize 6/2/2}} & \shortstack{$+0.04\pm0.57$\\{\scriptsize 5/1/4}}\\
+BBC & 400 & V-F & \shortstack{$+1.44\pm4.08$\\{\scriptsize 7/0/3}} & \shortstack{$+1.45\pm4.08$\\{\scriptsize 6/0/4}} & \shortstack{$+1.45\pm4.08$\\{\scriptsize 6/0/4}}\\
+Reuters-local & 160 & C-I & \shortstack{$+0.10\pm1.18$\\{\scriptsize 7/0/3}} & \shortstack{$+0.17\pm1.38$\\{\scriptsize 6/0/4}} & \shortstack{$-0.07\pm0.62$\\{\scriptsize 6/1/3}}\\
+Reuters-local & 160 & V-I & \shortstack{$+0.94\pm2.14$\\{\scriptsize 6/0/4}} & \shortstack{$+1.01\pm2.14$\\{\scriptsize 7/0/3}} & \shortstack{$+0.77\pm2.23$\\{\scriptsize 4/1/5}}\\
+Reuters-local & 160 & C-F & \shortstack{$+0.43\pm0.82$\\{\scriptsize 9/0/1}} & \shortstack{$+0.45\pm0.97$\\{\scriptsize 7/0/3}} & \shortstack{$+0.01\pm0.62$\\{\scriptsize 8/0/2}}\\
+Reuters-local & 160 & V-F & \shortstack{$+0.98\pm1.96$\\{\scriptsize 7/1/2}} & \shortstack{$+1.02\pm1.94$\\{\scriptsize 7/0/3}} & \shortstack{$+0.82\pm2.06$\\{\scriptsize 5/2/3}}\\
+Reuters-local & 400 & C-I & \shortstack{$+0.73\pm1.43$\\{\scriptsize 7/0/3}} & \shortstack{$+0.73\pm1.43$\\{\scriptsize 7/0/3}} & \shortstack{$+0.64\pm1.46$\\{\scriptsize 6/0/4}}\\
+Reuters-local & 400 & V-I & \shortstack{$+1.86\pm2.42$\\{\scriptsize 7/0/3}} & \shortstack{$+1.65\pm2.47$\\{\scriptsize 7/0/3}} & \shortstack{$+2.19\pm2.40$\\{\scriptsize 7/0/3}}\\
+Reuters-local & 400 & C-F & \shortstack{$+1.38\pm2.02$\\{\scriptsize 7/0/3}} & \shortstack{$+1.38\pm2.02$\\{\scriptsize 7/0/3}} & \shortstack{$+1.30\pm2.07$\\{\scriptsize 6/0/4}}\\
+Reuters-local & 400 & V-F & \shortstack{$+2.10\pm2.28$\\{\scriptsize 9/0/1}} & \shortstack{$+2.10\pm2.28$\\{\scriptsize 9/0/1}} & \shortstack{$+2.06\pm2.32$\\{\scriptsize 8/0/2}}\\
+Cora & 160 & C-I & \shortstack{$+0.45\pm1.33$\\{\scriptsize 6/0/4}} & \shortstack{$+0.06\pm0.91$\\{\scriptsize 6/0/4}} & \shortstack{$+0.11\pm0.96$\\{\scriptsize 7/0/3}}\\
+Cora & 160 & V-I & \shortstack{$-0.09\pm0.98$\\{\scriptsize 6/1/3}} & \shortstack{$-0.25\pm0.99$\\{\scriptsize 4/2/4}} & \shortstack{$-0.21\pm0.79$\\{\scriptsize 5/1/4}}\\
+Cora & 160 & C-F & \shortstack{$+0.64\pm1.02$\\{\scriptsize 7/0/3}} & \shortstack{$+0.25\pm0.52$\\{\scriptsize 7/0/3}} & \shortstack{$+0.23\pm0.60$\\{\scriptsize 6/0/4}}\\
+Cora & 160 & V-F & \shortstack{$+0.24\pm0.35$\\{\scriptsize 7/1/2}} & \shortstack{$+0.07\pm0.39$\\{\scriptsize 5/2/3}} & \shortstack{$+0.12\pm0.46$\\{\scriptsize 6/1/3}}\\
+Cora & 400 & C-I & \shortstack{$+0.99\pm1.27$\\{\scriptsize 9/0/1}} & \shortstack{$+1.03\pm1.35$\\{\scriptsize 9/0/1}} & \shortstack{$+0.85\pm0.96$\\{\scriptsize 9/0/1}}\\
+Cora & 400 & V-I & \shortstack{$+0.15\pm0.54$\\{\scriptsize 4/3/3}} & \shortstack{$+0.40\pm0.89$\\{\scriptsize 5/2/3}} & \shortstack{$+0.16\pm0.54$\\{\scriptsize 4/3/3}}\\
+Cora & 400 & C-F & \shortstack{$+1.36\pm1.38$\\{\scriptsize 9/0/1}} & \shortstack{$+1.36\pm1.38$\\{\scriptsize 9/0/1}} & \shortstack{$+1.36\pm1.38$\\{\scriptsize 9/0/1}}\\
+Cora & 400 & V-F & \shortstack{$+0.31\pm0.96$\\{\scriptsize 5/1/4}} & \shortstack{$+0.31\pm0.96$\\{\scriptsize 5/1/4}} & \shortstack{$+0.31\pm0.96$\\{\scriptsize 5/1/4}}\\
+CiteSeer & 160 & C-I & \shortstack{$+0.18\pm0.32$\\{\scriptsize 7/0/3}} & \shortstack{$+0.08\pm0.22$\\{\scriptsize 6/0/4}} & \shortstack{$+0.11\pm0.43$\\{\scriptsize 4/0/6}}\\
+CiteSeer & 160 & V-I & \shortstack{$+0.11\pm0.34$\\{\scriptsize 6/2/2}} & \shortstack{$+0.05\pm0.18$\\{\scriptsize 6/2/2}} & \shortstack{$+0.22\pm0.47$\\{\scriptsize 6/1/3}}\\
+CiteSeer & 160 & C-F & \shortstack{$+0.18\pm0.32$\\{\scriptsize 7/0/3}} & \shortstack{$+0.08\pm0.22$\\{\scriptsize 6/0/4}} & \shortstack{$+0.06\pm0.31$\\{\scriptsize 4/0/6}}\\
+CiteSeer & 160 & V-F & \shortstack{$+0.11\pm0.34$\\{\scriptsize 5/3/2}} & \shortstack{$+0.04\pm0.19$\\{\scriptsize 5/3/2}} & \shortstack{$+0.22\pm0.47$\\{\scriptsize 6/1/3}}\\
+CiteSeer & 400 & C-I & \shortstack{$+0.10\pm0.66$\\{\scriptsize 6/1/3}} & \shortstack{$+0.05\pm0.66$\\{\scriptsize 5/1/4}} & \shortstack{$+0.06\pm0.61$\\{\scriptsize 5/2/3}}\\
+CiteSeer & 400 & V-I & \shortstack{$+0.28\pm0.88$\\{\scriptsize 5/1/4}} & \shortstack{$+0.22\pm0.94$\\{\scriptsize 5/1/4}} & \shortstack{$+0.28\pm0.89$\\{\scriptsize 5/0/5}}\\
+CiteSeer & 400 & C-F & \shortstack{$+0.49\pm0.88$\\{\scriptsize 6/2/2}} & \shortstack{$+0.45\pm0.90$\\{\scriptsize 5/2/3}} & \shortstack{$+0.43\pm0.92$\\{\scriptsize 5/2/3}}\\
+CiteSeer & 400 & V-F & \shortstack{$+0.29\pm0.94$\\{\scriptsize 6/0/4}} & \shortstack{$+0.31\pm0.94$\\{\scriptsize 6/0/4}} & \shortstack{$+0.27\pm0.95$\\{\scriptsize 5/0/5}}\\
+\end{longtable}
+\endgroup

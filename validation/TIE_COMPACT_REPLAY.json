@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Compact prediction replay; no selection, fitting, or optimizer-state use",
+  "script_sha256": "de3e65ae96423246a53fca8a7986d877d37fba176534952bf072172d1b3e7248",
+  "public_manifest_sha256": "e366e7a107f995fd11eaec44b95a53dc1c64330636d6aae208b3ab726c117837",
+  "labels_sha256": {
+    "3Sources": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1",
+    "BBC": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11",
+    "Reuters": "bb9f5d0f7b29f00d9d940ca9749cb967970e7662be581c7b4ed21405093c0f15",
+    "Cora": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf",
+    "CiteSeer": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6"
+  },
+  "query_protocol_sha256": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+  "unique_predictions": 558,
+  "logical_records": 1500,
+  "paired_points": 6000,
+  "summary_groups": 600,
+  "metric_max_absolute_errors": {
+    "ACC": 0.0,
+    "NMI": 0.0,
+    "ARI": 0.0,
+    "BER_train": 0.0,
+    "BER_unqueried": 0.0
+  },
+  "paired_max_absolute_error_pp": 0.0,
+  "summary_max_absolute_error_pp": 0.0,
+  "all_WTL_counts_identical": true,
+  "new_fits_run": 0
+}

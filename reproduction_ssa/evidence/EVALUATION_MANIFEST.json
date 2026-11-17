@@ -1,0 +1,19 @@
+{
+  "status": "SCORED_PENDING_INDEPENDENT_REVIEW",
+  "global_seal_sha256": "d67fef91b70dab4863db06100f83e54a3daefc12ff1335f5deeda1012f6cc7ad",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "evaluation_sha256": "87c5a16daf1522afa4bc76e1fdaa5f125a7004b7b772edaa1309b620a165d14d",
+  "summary_sha256": "3f78b02d2d5a8b407974f65168506c8b3b0dcdbecf8701d9a9d352b59db35785",
+  "labels_decoded_sha256": {
+    "3Sources": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1",
+    "BBC": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11"
+  },
+  "reporting_source_sha256": {
+    "seal_and_score.py": "6408ad8b1734785248895ce103c957526533efbced4a08936707c8773ca3f555",
+    "metrics_reference.py": "cdce1d2dc130d69314f28194e271302b22990d087403b8d2d6ecd38dccbde5e8",
+    "collect_grouped.py": "341a2269dfa4f838e9844af2a1865368fab52059cd6c6b4b4315daef1f0b08a0",
+    "ledger_validation.py": "7d79a3863c8a907181af2f718219d5b760eea3180c32e9b064a6eeee938674f7"
+  },
+  "comparison_with_SAPN_performed": false,
+  "third_party_source_redistributed": false
+}

@@ -1,0 +1,65 @@
+{
+  "scope": "Portable adapter, executed validation bundle, and compact prediction replay; no new fitting in portability validation",
+  "files": [
+    {
+      "destination": "validation/tie_portable_adapter/run_tie_sensitivity.py",
+      "sha256": "28d2ab9aa95e18d2af09747ee4ebeaeb605e7be5221fb2908a881e6d8b48ca49",
+      "source_relative": "selection_stability/portable_adapter/run_tie_sensitivity.py",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/tie_portable_adapter/README.md",
+      "sha256": "065f82635e7178baefa16b021e88eaf4e7261bfdce95d108af60bc483b06c67a",
+      "source_relative": "selection_stability/portable_adapter/README.md",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/tie_portable_adapter/validate_adapter.py",
+      "sha256": "f97edca33b983b2b311637487e8b38d5cdc755197787ccbe00e7dcee2f5ef3d4",
+      "source_relative": "selection_stability/portable_adapter/validate_adapter.py",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/tie_portable_adapter/VALIDATION_REPORT.json",
+      "sha256": "97a749ac2e452ec9fe5fa85664d85b8cf4889d097e364205c1da14ced5021250",
+      "source_relative": "selection_stability/portable_adapter/VALIDATION_REPORT.json",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/tie_portable_adapter/VALIDATION.md",
+      "sha256": "08b6c527fa4897e1fca8def6705d9bcf017b6b19dab841bceceb33fa2010e1bb",
+      "source_relative": "selection_stability/portable_adapter/VALIDATION.md",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/tie_portable_adapter/SHA256SUMS.json",
+      "sha256": "f801e89eae51fe91f8baaf57c24f871cbde17ff16516a62785733609451dc241",
+      "source_relative": "selection_stability/portable_adapter/SHA256SUMS.json",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "tools/run_tie_sensitivity.py",
+      "sha256": "28d2ab9aa95e18d2af09747ee4ebeaeb605e7be5221fb2908a881e6d8b48ca49",
+      "source_relative": "selection_stability/portable_adapter/run_tie_sensitivity.py",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "tools/validate_adapter.py",
+      "sha256": "f97edca33b983b2b311637487e8b38d5cdc755197787ccbe00e7dcee2f5ef3d4",
+      "source_relative": "selection_stability/portable_adapter/validate_adapter.py",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "docs/TIE_SENSITIVITY.md",
+      "sha256": "065f82635e7178baefa16b021e88eaf4e7261bfdce95d108af60bc483b06c67a",
+      "source_relative": "selection_stability/portable_adapter/README.md",
+      "kind": "byte_identical_copy"
+    },
+    {
+      "destination": "validation/TIE_COMPACT_REPLAY.json",
+      "sha256": "c0d5a1d2689d3d7501e8febb3ce69cf2bc5e1c498a99de6fcbc80566a88ab0ee",
+      "source_relative": "selection_stability/TIE_COMPACT_REPLAY.json",
+      "kind": "byte_identical_copy"
+    }
+  ]
+}

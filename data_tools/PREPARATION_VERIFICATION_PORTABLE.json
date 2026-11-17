@@ -1,0 +1,248 @@
+{
+  "verification_date": "2026-11-17",
+  "scope": "Three datasets, four real relocated preparations with isolated Python; no model training",
+  "fresh_relocated_directory": true,
+  "initial_relocated_contents": [
+    "bbc_citation_identity.json",
+    "prepare_bbc_citation.py"
+  ],
+  "executed_file_sha256": {
+    "prepare_bbc_citation.py": "7708feed0c98929f496a646a68348fce813b1a05c8009b295a3c131c309c7b30",
+    "bbc_citation_identity.json": "9c7b6dce43da7f2cb5ad213da8f8830ee8959a6a13037dc160d29ffa845fd2a0"
+  },
+  "all_passed": true,
+  "datasets": [
+    {
+      "dataset": "BBC",
+      "source_mode": "original_four_files",
+      "exit_code": 0,
+      "runtime": {
+        "python": "3.10.22",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "isolated": true
+      },
+      "persisted_outputs": [
+        {
+          "file": "X0.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        },
+        {
+          "file": "X1.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        }
+      ],
+      "persisted_y_equal": true,
+      "oracle_alias_equal": true,
+      "elementwise_verification": {
+        "labels_equal": true,
+        "views": [
+          {
+            "view": 0,
+            "shape": [
+              2225,
+              4817
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          },
+          {
+            "view": 1,
+            "shape": [
+              2225,
+              4818
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          }
+        ],
+        "passed": true
+      },
+      "prepared_sha256": "bf9d115af2329566c0b65d176f40fdb5e1eeb722b6e28f22a251da432a55480a",
+      "frozen_feature_indices_equal": {
+        "view0": true,
+        "view1": true
+      }
+    },
+    {
+      "dataset": "BBC",
+      "source_mode": "downloaded_zip",
+      "exit_code": 0,
+      "runtime": {
+        "python": "3.10.22",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "isolated": true
+      },
+      "persisted_outputs": [
+        {
+          "file": "X0.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        },
+        {
+          "file": "X1.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        }
+      ],
+      "persisted_y_equal": true,
+      "oracle_alias_equal": true,
+      "elementwise_verification": {
+        "labels_equal": true,
+        "views": [
+          {
+            "view": 0,
+            "shape": [
+              2225,
+              4817
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          },
+          {
+            "view": 1,
+            "shape": [
+              2225,
+              4818
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          }
+        ],
+        "passed": true
+      },
+      "prepared_sha256": "bf9d115af2329566c0b65d176f40fdb5e1eeb722b6e28f22a251da432a55480a",
+      "frozen_feature_indices_equal": {
+        "view0": true,
+        "view1": true
+      }
+    },
+    {
+      "dataset": "Cora",
+      "source_mode": "downloaded_archive",
+      "exit_code": 0,
+      "runtime": {
+        "python": "3.10.22",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "isolated": true
+      },
+      "persisted_outputs": [
+        {
+          "file": "X0.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        },
+        {
+          "file": "X1.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        }
+      ],
+      "persisted_y_equal": true,
+      "oracle_alias_equal": true,
+      "elementwise_verification": {
+        "labels_equal": true,
+        "views": [
+          {
+            "view": 0,
+            "shape": [
+              2708,
+              1433
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          },
+          {
+            "view": 1,
+            "shape": [
+              2708,
+              2708
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          }
+        ],
+        "passed": true
+      },
+      "prepared_sha256": "a0475af8d333c3a43d62a9510bbd437acfdae1ee78c2f482b9392eeb8c730e05"
+    },
+    {
+      "dataset": "CiteSeer",
+      "source_mode": "downloaded_archive",
+      "exit_code": 0,
+      "runtime": {
+        "python": "3.10.22",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "isolated": true
+      },
+      "persisted_outputs": [
+        {
+          "file": "X0.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        },
+        {
+          "file": "X1.npz",
+          "all_ordered_values_equal": true,
+          "maximum_absolute_error": 0.0
+        }
+      ],
+      "persisted_y_equal": true,
+      "oracle_alias_equal": true,
+      "elementwise_verification": {
+        "labels_equal": true,
+        "views": [
+          {
+            "view": 0,
+            "shape": [
+              3312,
+              3703
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          },
+          {
+            "view": 1,
+            "shape": [
+              3312,
+              3312
+            ],
+            "all_ordered_values_equal": true,
+            "maximum_absolute_error": 0.0,
+            "csr_indptr_equal": true,
+            "csr_indices_equal": true,
+            "csr_data_equal": true
+          }
+        ],
+        "passed": true
+      },
+      "prepared_sha256": "d601edd6adde6fcc53acb0e53a98f3d409f9adb3d93af2d8af9ccfe958278ff5"
+    }
+  ]
+}

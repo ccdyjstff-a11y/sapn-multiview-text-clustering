@@ -1,0 +1,1414 @@
+{
+  "checked_utc": "2026-10-12T10:36:08.539781+00:00",
+  "dataset": "3Sources",
+  "rows": [
+    {
+      "method": "SAPN-MV",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6016949152542372,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7288135593220338,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.8305084745762712,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6271186440677966,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7627118644067796,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.8050847457627118,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6016949152542372,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.864406779661017,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "SAPN-MV",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.9152542372881356,
+      "eligibility_definition": "declared stopping checks",
+      "source": "balanced_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.7966101694915254,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.8983050847457628,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.9491525423728814,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.7457627118644068,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7457627118644068,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7288135593220338,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.4491525423728814,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7372881355932204,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "SAPN-EQ",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.9152542372881356,
+      "eligibility_definition": "declared stopping checks",
+      "source": "native_original/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.635593220338983,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6101694915254238,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6186440677966102,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 23,
+      "Q": 160,
+      "eligible": false,
+      "reported_ACC": 0.6101694915254238,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6186440677966102,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.5423728813559322,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6186440677966102,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6610169491525424,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.652542372881356,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6186440677966102,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.576271186440678,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6271186440677966,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6779661016949152,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.652542372881356,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7627118644067796,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "CMVNMF",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "MVCSC",
+      "seed": 25,
+      "Q": 400,
+      "eligible": false,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "declared stopping checks",
+      "source": "published_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.7033898305084746,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.5677966101694916,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.711864406779661,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.4661016949152542,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7372881355932204,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.3474576271186441,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed23/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.7203389830508474,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.5169491525423728,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6694915254237288,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.5169491525423728,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6694915254237288,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.3474576271186441,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed24/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.559322033898305,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7203389830508474,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6016949152542372,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.3813559322033898,
+      "eligibility_definition": "schedule completed",
+      "source": "tsnmf_selection/3Sources/seed25/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.5338983050847458,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.7033898305084746,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7372881355932204,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6610169491525424,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6864406779661016,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.652542372881356,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6101694915254238,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7203389830508474,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "mvchss_author_map_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.5338983050847458,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.4661016949152542,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7457627118644068,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.5677966101694916,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 24,
+      "Q": 160,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 24,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.7203389830508474,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.6016949152542372,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.6440677966101694,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.6016949152542372,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "pcbg_feasible_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 23,
+      "Q": 0,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.3728813559322034,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.3389830508474576,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 24,
+      "Q": 0,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.3305084745762712,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 24,
+      "Q": 400,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 25,
+      "Q": 0,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.4491525423728814,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.4152542372881356,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_stationary_experiment_v1/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 23,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.3050847457627119,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 23,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.3728813559322034,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 23,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.3389830508474576,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 24,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.3220338983050847,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 24,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.3305084745762712,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 24,
+      "Q": 400,
+      "eligible": false,
+      "reported_ACC": null,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 25,
+      "Q": 0,
+      "eligible": true,
+      "reported_ACC": 0.3728813559322034,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 25,
+      "Q": 160,
+      "eligible": true,
+      "reported_ACC": 0.4491525423728814,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "seed": 25,
+      "Q": 400,
+      "eligible": true,
+      "reported_ACC": 0.4152542372881356,
+      "eligibility_definition": "declared adapter checks; see scope",
+      "source": "smgc_inexact_experiment_v2/evaluation.json"
+    }
+  ],
+  "cells": [
+    {
+      "method": "SAPN-MV",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 61.01694915254237,
+      "ACC_sd_percent": 1.4678396674312544
+    },
+    {
+      "method": "SAPN-MV",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 78.53107344632768,
+      "ACC_sd_percent": 7.0564949134445225
+    },
+    {
+      "method": "SAPN-MV",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 85.02824858757062,
+      "ACC_sd_percent": 5.768524818266142
+    },
+    {
+      "method": "SAPN-EQ",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 66.38418079096046,
+      "ACC_sd_percent": 18.765653875980078
+    },
+    {
+      "method": "SAPN-EQ",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 79.37853107344634,
+      "ACC_sd_percent": 9.061590357257312
+    },
+    {
+      "method": "SAPN-EQ",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 86.4406779661017,
+      "ACC_sd_percent": 11.86440677966102
+    },
+    {
+      "method": "CMVNMF",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 62.71186440677966,
+      "ACC_sd_percent": 0.8474576271186418
+    },
+    {
+      "method": "CMVNMF",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 65.2542372881356,
+      "ACC_sd_percent": 3.3898305084745726
+    },
+    {
+      "method": "CMVNMF",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 64.12429378531074,
+      "ACC_sd_percent": 3.914239113150001
+    },
+    {
+      "method": "MVCSC",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 64.97175141242938,
+      "ACC_sd_percent": 3.5282474567222555
+    },
+    {
+      "method": "MVCSC",
+      "Q": 160,
+      "successful_finals": 2,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    },
+    {
+      "method": "MVCSC",
+      "Q": 400,
+      "successful_finals": 2,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 70.33898305084746,
+      "ACC_sd_percent": 1.6949152542372892
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 70.05649717514123,
+      "ACC_sd_percent": 2.7241951302239977
+    },
+    {
+      "method": "TSNMF-MVgraph",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 69.77401129943503,
+      "ACC_sd_percent": 3.5282474567222617
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 54.802259887005654,
+      "ACC_sd_percent": 2.7241951302240017
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 52.824858757062145,
+      "ACC_sd_percent": 6.849918448012509
+    },
+    {
+      "method": "TSNMF-EQheat",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 35.87570621468927,
+      "ACC_sd_percent": 1.9571195565750006
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 61.5819209039548,
+      "ACC_sd_percent": 7.10720091831024
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 66.66666666666666,
+      "ACC_sd_percent": 4.965648539900265
+    },
+    {
+      "method": "MVCHSS-author-map",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 71.46892655367232,
+      "ACC_sd_percent": 2.5890258163592357
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 56.779661016949156,
+      "ACC_sd_percent": 3.3898305084745726
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "Q": 160,
+      "successful_finals": 2,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    },
+    {
+      "method": "PCBG-feasible-adapter",
+      "Q": 400,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 68.92655367231639,
+      "ACC_sd_percent": 7.689637055828364
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "Q": 0,
+      "successful_finals": 0,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 38.4180790960452,
+      "ACC_sd_percent": 6.012371936099652
+    },
+    {
+      "method": "SMGC-stationary-V5",
+      "Q": 400,
+      "successful_finals": 2,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "Q": 0,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 33.33333333333333,
+      "ACC_sd_percent": 3.528247456722259
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "Q": 160,
+      "successful_finals": 3,
+      "planned_finals": 3,
+      "ACC_mean_percent": 38.4180790960452,
+      "ACC_sd_percent": 6.012371936099652
+    },
+    {
+      "method": "SMGC-inexact-V6",
+      "Q": 400,
+      "successful_finals": 2,
+      "planned_finals": 3,
+      "ACC_mean_percent": null,
+      "ACC_sd_percent": null
+    }
+  ],
+  "paired_MV_differences": [
+    {
+      "comparator": "SAPN-EQ",
+      "Q": 0,
+      "deltas_percent_points": [
+        -19.491525423728817,
+        -11.864406779661019,
+        15.254237288135586
+      ],
+      "mean_delta_percent_points": -5.367231638418083,
+      "positive_seeds": 1
+    },
+    {
+      "comparator": "SAPN-EQ",
+      "Q": 160,
+      "deltas_percent_points": [
+        -16.949152542372893,
+        1.6949152542372836,
+        12.711864406779661
+      ],
+      "mean_delta_percent_points": -0.8474576271186495,
+      "positive_seeds": 2
+    },
+    {
+      "comparator": "SAPN-EQ",
+      "Q": 400,
+      "deltas_percent_points": [
+        -11.864406779661019,
+        7.6271186440677985,
+        0.0
+      ],
+      "mean_delta_percent_points": -1.4124293785310735,
+      "positive_seeds": 1
+    },
+    {
+      "comparator": "CMVNMF",
+      "Q": 0,
+      "deltas_percent_points": [
+        -3.3898305084745783,
+        0.8474576271186418,
+        -2.5423728813559365
+      ],
+      "mean_delta_percent_points": -1.694915254237291,
+      "positive_seeds": 1
+    },
+    {
+      "comparator": "CMVNMF",
+      "Q": 160,
+      "deltas_percent_points": [
+        11.016949152542367,
+        7.6271186440677985,
+        21.1864406779661
+      ],
+      "mean_delta_percent_points": 13.276836158192088,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "CMVNMF",
+      "Q": 400,
+      "deltas_percent_points": [
+        21.1864406779661,
+        18.644067796610166,
+        22.881355932203395
+      ],
+      "mean_delta_percent_points": 20.903954802259886,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "MVCSC",
+      "Q": 0,
+      "deltas_percent_points": [
+        -0.8474576271186529,
+        -3.3898305084745783,
+        -7.6271186440677985
+      ],
+      "mean_delta_percent_points": -3.95480225988701,
+      "positive_seeds": 0
+    },
+    {
+      "comparator": "TSNMF-MVgraph",
+      "Q": 0,
+      "deltas_percent_points": [
+        -10.169491525423735,
+        -9.322033898305083,
+        -8.47457627118644
+      ],
+      "mean_delta_percent_points": -9.322033898305085,
+      "positive_seeds": 0
+    },
+    {
+      "comparator": "TSNMF-MVgraph",
+      "Q": 160,
+      "deltas_percent_points": [
+        1.6949152542372836,
+        9.322033898305083,
+        14.406779661016955
+      ],
+      "mean_delta_percent_points": 8.474576271186441,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "TSNMF-MVgraph",
+      "Q": 400,
+      "deltas_percent_points": [
+        9.322033898305083,
+        13.559322033898303,
+        22.881355932203395
+      ],
+      "mean_delta_percent_points": 15.254237288135593,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "TSNMF-EQheat",
+      "Q": 0,
+      "deltas_percent_points": [
+        3.3898305084745672,
+        11.016949152542377,
+        4.23728813559322
+      ],
+      "mean_delta_percent_points": 6.214689265536722,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "TSNMF-EQheat",
+      "Q": 160,
+      "deltas_percent_points": [
+        26.271186440677962,
+        24.576271186440678,
+        26.271186440677972
+      ],
+      "mean_delta_percent_points": 25.70621468926554,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "TSNMF-EQheat",
+      "Q": 400,
+      "deltas_percent_points": [
+        48.30508474576271,
+        45.762711864406775,
+        53.38983050847458
+      ],
+      "mean_delta_percent_points": 49.152542372881356,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "MVCHSS-author-map",
+      "Q": 0,
+      "deltas_percent_points": [
+        6.779661016949145,
+        -3.3898305084745783,
+        -5.084745762711873
+      ],
+      "mean_delta_percent_points": -0.5649717514124354,
+      "positive_seeds": 1
+    },
+    {
+      "comparator": "MVCHSS-author-map",
+      "Q": 160,
+      "deltas_percent_points": [
+        2.5423728813559254,
+        7.6271186440677985,
+        25.423728813559322
+      ],
+      "mean_delta_percent_points": 11.864406779661016,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "MVCHSS-author-map",
+      "Q": 400,
+      "deltas_percent_points": [
+        9.322033898305083,
+        11.864406779661019,
+        19.491525423728817
+      ],
+      "mean_delta_percent_points": 13.559322033898306,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "PCBG-feasible-adapter",
+      "Q": 0,
+      "deltas_percent_points": [
+        6.779661016949145,
+        5.932203389830503,
+        0.0
+      ],
+      "mean_delta_percent_points": 4.237288135593216,
+      "positive_seeds": 2
+    },
+    {
+      "comparator": "PCBG-feasible-adapter",
+      "Q": 400,
+      "deltas_percent_points": [
+        8.47457627118644,
+        8.47457627118644,
+        31.355932203389834
+      ],
+      "mean_delta_percent_points": 16.10169491525424,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "SMGC-stationary-V5",
+      "Q": 160,
+      "deltas_percent_points": [
+        35.593220338983045,
+        43.220338983050844,
+        41.52542372881356
+      ],
+      "mean_delta_percent_points": 40.112994350282484,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "SMGC-inexact-V6",
+      "Q": 0,
+      "deltas_percent_points": [
+        29.661016949152536,
+        30.508474576271187,
+        22.881355932203384
+      ],
+      "mean_delta_percent_points": 27.683615819209034,
+      "positive_seeds": 3
+    },
+    {
+      "comparator": "SMGC-inexact-V6",
+      "Q": 160,
+      "deltas_percent_points": [
+        35.593220338983045,
+        43.220338983050844,
+        41.52542372881356
+      ],
+      "mean_delta_percent_points": 40.112994350282484,
+      "positive_seeds": 3
+    }
+  ],
+  "implementation_scopes": {
+    "SAPN-MV": "\u5df2\u62ab\u9732\u7684\u5f00\u53d1\u5b9e\u73b0\u53ca\u505c\u6b62\u6807\u51c6\uff1bCMVNMF/MVCSC\u4e3a\u542b\u5df2\u6838\u9a8c\u4fee\u6b63\u7684\u8bba\u6587\u91cd\u5b9e\u73b0",
+    "SAPN-EQ": "\u5df2\u62ab\u9732\u7684\u5f00\u53d1\u5b9e\u73b0\u53ca\u505c\u6b62\u6807\u51c6\uff1bCMVNMF/MVCSC\u4e3a\u542b\u5df2\u6838\u9a8c\u4fee\u6b63\u7684\u8bba\u6587\u91cd\u5b9e\u73b0",
+    "CMVNMF": "\u5df2\u62ab\u9732\u7684\u5f00\u53d1\u5b9e\u73b0\u53ca\u505c\u6b62\u6807\u51c6\uff1bCMVNMF/MVCSC\u4e3a\u542b\u5df2\u6838\u9a8c\u4fee\u6b63\u7684\u8bba\u6587\u91cd\u5b9e\u73b0",
+    "MVCSC": "\u5df2\u62ab\u9732\u7684\u5f00\u53d1\u5b9e\u73b0\u53ca\u505c\u6b62\u6807\u51c6\uff1bCMVNMF/MVCSC\u4e3a\u542b\u5df2\u6838\u9a8c\u4fee\u6b63\u7684\u8bba\u6587\u91cd\u5b9e\u73b0",
+    "TSNMF-MVgraph": "\u5355\u56fe\u9002\u914d\uff1b\u5b8c\u6210\u6709\u9650\u65e5\u7a0b\uff0c\u4e0d\u4ee3\u8868\u5b8c\u6574KKT\u8fbe\u6807",
+    "TSNMF-EQheat": "\u5355\u56fe\u9002\u914d\uff1b\u5b8c\u6210\u6709\u9650\u65e5\u7a0b\uff0c\u4e0d\u4ee3\u8868\u5b8c\u6574KKT\u8fbe\u6807",
+    "MVCHSS-author-map": "author row normalization; five objective-selected starts; fixed 1000-step schedule, not KKT",
+    "PCBG-feasible-adapter": "explicit feasible-candidate correction and anchor construction adapter; not unchanged author code",
+    "SMGC-stationary-V5": "explicit stationary-continuation correction; exact-rank and block residual checks",
+    "SMGC-inexact-V6": "\u663e\u5f0f\u4e2d\u95f4\u7cbe\u5ea6\u65e5\u7a0b\u4fee\u6b63\uff0c\u6700\u7ec8\u4e25\u683c\u505c\u6b62\u6807\u51c6\u4e0d\u53d8\uff1b\u4ecd\u6709\u5931\u8d25\uff0c\u4e0d\u662f\u672a\u6539\u52a8\u7684\u4f5c\u8005\u4ee3\u7801"
+  },
+  "source_hashes": {
+    "BALANCED_SELECTION_PROTOCOL.md": "010e35fa68d6571761fa9e5ad5f4d8338e95e209ee389066403d2ab495f4b660",
+    "NATIVE_ORIGINAL_PROTOCOL.md": "bf51e4dd132dc8d2604e4c13807cdf352b19d58cd7367888aa5181da624d64c3",
+    "PUBLISHED_SELECTION_PROTOCOL.md": "ba2acaefbc892aaef58a1b3a1bbaac76bac1015544e03160ab68f922730f92d6",
+    "TSNMF_SELECTION_PROTOCOL.md": "bd2b0c23cff494dcbfaa87ccdd221849664432227aba464ef0d9607a19ae9205",
+    "balanced_selection/3Sources/seed23/PREDICTIONS_SEALED.json": "2fa73ccb55a1014b299e6148ec24f50b88eb9e0073656b20024863aa584099ea",
+    "balanced_selection/3Sources/seed23/PROTOCOL.json": "e9aaf998856ff905e9ab9207586ac57fa83f79274c6fdbe8059db836041e75b6",
+    "balanced_selection/3Sources/seed23/evaluation.json": "168a840e6ac063ba578691b8bd8ebd18fb8b4ae9afe13c94b38b03cc44a0a576",
+    "balanced_selection/3Sources/seed23/inputs.npz": "3cc3080cd11711733234142fecf2df4ced9291c0c27d916e3770c72a2f300c68",
+    "balanced_selection/3Sources/seed24/PREDICTIONS_SEALED.json": "ace506c6433d02824e9d6d9f2bd63c321d06094b3ca81afe599644e29023464c",
+    "balanced_selection/3Sources/seed24/PROTOCOL.json": "ca220bf0507aac1ea1f319cdf8bfba79e03767cb08fe5bc94e6015033a2c542c",
+    "balanced_selection/3Sources/seed24/evaluation.json": "1bd557ac6276029e9fec2cb2cd090ae6314a39ff446793fb50adc46c229e98e0",
+    "balanced_selection/3Sources/seed24/inputs.npz": "b5090a68754590ee1bf46bb45f1edab966b2d3266ecf9980abc5fca721805cfb",
+    "balanced_selection/3Sources/seed25/PREDICTIONS_SEALED.json": "24b6124c004bf9143afc606aaa4511c836e4ca48235dd056481b9ebfc790a8c2",
+    "balanced_selection/3Sources/seed25/PROTOCOL.json": "3dec929a59fec43bfa1b6bac6cad72359d98b4618ec97ee07c2f0c9b855051bc",
+    "balanced_selection/3Sources/seed25/evaluation.json": "3ff7c24aa05f25e71c5f8adc8fdec2b24cc5c7f69734939e5613ac17b175ea8b",
+    "balanced_selection/3Sources/seed25/inputs.npz": "3b5b8c26e66f754e20498f2623c4dc83d6ca04e8abda252fd694473bda50156f",
+    "balanced_selection_experiment.py": "1fdd60f61840cb8f5b8ec84d9d7fc8802c974da68d7a72b9925b2c5d9675c733",
+    "balanced_selection_summary.json": "aa940eabbe1657b0606514685346e19d71a4cf52139ba7d92573abcd6b7dc8af",
+    "balanced_signed.py": "32439839e3def353d8c8c39cc3821610034d85ff7f129d049920ff5ae8fe59fa",
+    "build_crossmethod_3sources_summary.py": "36a6e7dc619b2447da90d3e9f65719f8834af831fa64ebaf77abdc2cf5ef90f7",
+    "cmvnmf_accelerated.py": "7a2d0f912eee9d0beb6ab4bf5aeee687c4bd6fc64e102d4ca01f900bb834866b",
+    "cmvnmf_paper.py": "b403b8c4d79fbf8b5bfd30b8b37ed0a6e8aaf28ce4b229145050b38187a10b0e",
+    "exact_tied.py": "7c3be4e276788adaa7e0a5118d2cfe31d4dcb60958b5b9abba84566b769e1f5d",
+    "mvchss_author_map_experiment_v1.py": "6ceb7b8e396833a94f31d6a5b1ae3bf51f48485f3e97f3328bf5d0f676c29889",
+    "mvchss_author_map_experiment_v1/GLOBAL_PROTOCOL.json": "102cf72ba6f869c7c3a069c262bf4c75c45d45fe0418ea8b30d30c39b73e195f",
+    "mvchss_author_map_experiment_v1/evaluation.json": "ab145223c6cb337c3445c78320536298fe33019aa29e271174f688994712f65f",
+    "mvchss_author_map_experiment_v1/seed23/PREDICTIONS_SEALED.json": "1371aabe36acd9051fec9be237cce76e7ba4844ea36aff2913b7cf00fb6d6344",
+    "mvchss_author_map_experiment_v1/seed24/PREDICTIONS_SEALED.json": "6812e3e1fefbfc340c7e91cbcc23ced236b15888dfdf9da5c880065e1d405e52",
+    "mvchss_author_map_experiment_v1/seed25/PREDICTIONS_SEALED.json": "1f93bf33037e3e1a3e87447615c44d78c0b80d098cb018580a43951410db02e4",
+    "mvchss_author_map_experiment_v1_verification.json": "8fa8b5430f47008a4c8281cb20eef5a5994c680eb5af83301fafaf46672e1760",
+    "mvchss_reimplementation.py": "3b531882a185c1ce14341178aa9707a376f582c43110219b444e782abed100cc",
+    "mvcsc_paper.py": "f3d2e9f61bd21cf9032c23bbbed2545d5bea1d6bf1dee9089287b87aff350971",
+    "native_original/3Sources/seed23/PREDICTIONS_SEALED.json": "3d6e7808fa3678e7348be592d45e957e211a54ec38c69db88fcb87435b7a919f",
+    "native_original/3Sources/seed23/PROTOCOL.json": "791dbbea98b08a895c02ede432a0bc818ca760384a2e5e5b99dff2ea693c0032",
+    "native_original/3Sources/seed23/evaluation.json": "7aef9cfddaa9bf82bd69d47c1d15e12b2f65294d7d17827188bb0b2cf09e96b6",
+    "native_original/3Sources/seed24/PREDICTIONS_SEALED.json": "ccd44b81fff5cee8f2eb3395fbc1e4196246618e1f676eade883bc03ebb94575",
+    "native_original/3Sources/seed24/PROTOCOL.json": "3e0833ea08d9cccee8c60f6a3e967a7d21af10697ec3e760b9e3a5e3af9ae133",
+    "native_original/3Sources/seed24/evaluation.json": "7b9c6ff8c8e19bd74b661f61f0b626f896ce280b2e4224a883744fa1d6bb1e6a",
+    "native_original/3Sources/seed25/PREDICTIONS_SEALED.json": "cd089d65cca90ba2da4762cec5dc2bfe13929f13af88e869f6103adf22147fa9",
+    "native_original/3Sources/seed25/PROTOCOL.json": "8fc55b3d022bce794a426baed268035798601105a8d43728774fe066e105403c",
+    "native_original/3Sources/seed25/evaluation.json": "650f86f6e6ed5a62ea0bde3257f142c69957b070d4cdc75c8db4b0ef57f2db2f",
+    "native_original_experiment.py": "153023329c02222708173a01b2ebcbc2fc35eb65477c8fea121b8f7c3df23baa",
+    "native_original_summary.json": "e4490e9060491fbb36d90cc8a087c886583c9812abe74c772a650c97869de533",
+    "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6",
+    "pcbg_building_blocks_v1.py": "9c6d7604de0fa328550907dc4f14f8cddf01b5e0054ebc58acfdce03e8ed7c15",
+    "pcbg_feasible_experiment_v1.py": "682a0ae5e433afacfac5d5553485e221f7ec38d42f5d426a0c4912d73424d688",
+    "pcbg_feasible_experiment_v1/GLOBAL_PROTOCOL.json": "84a21c14d54022205493c5ae7172753a25b9489a5a2f6a8c45aa47233a8cb697",
+    "pcbg_feasible_experiment_v1/evaluation.json": "b00bebcf4d9d836775ac008aa6c1391ba71c13a8e81dd19a619a82bd7823c7dd",
+    "pcbg_feasible_experiment_v1/seed23/PREDICTIONS_SEALED.json": "f98a34c86f8c91a0b71e698735bc46983fd26e52608a73c2a89fe9cc14410a50",
+    "pcbg_feasible_experiment_v1/seed24/PREDICTIONS_SEALED.json": "ad005c789669444bbf855fe2ff91bd7d4b9b1514eb278382d7a6432f3aae277f",
+    "pcbg_feasible_experiment_v1/seed25/PREDICTIONS_SEALED.json": "f0ab423a45cc8919867689f7d8fec6c9c0279b6b1a271ff3cdfdbec59c40334b",
+    "pcbg_feasible_experiment_v1_verification.json": "e27dc7cede4562c7f8a0b793b2ef1876b34faae3a7f55dfd6b878936d8d91559",
+    "pcbg_feasible_solver_v2.py": "9e385bc8609c6842fcb4badc9a87d9bc32138477e35122463e7f0dfc400f1563",
+    "published_selection/3Sources/seed23/PREDICTIONS_SEALED.json": "fa2c0705e905f6bd31309f423b59a84a90348f5023c4bc24cc198577e304de71",
+    "published_selection/3Sources/seed23/PROTOCOL.json": "d937ad6e39960b83dd11ad81bb979998673263211503df1bfa9927ee97dc4a93",
+    "published_selection/3Sources/seed23/evaluation.json": "cc7a92b7de0c3ba837ca5e9360611e6a7e92bcde98d2fb99fb2b83e18245ef27",
+    "published_selection/3Sources/seed24/PREDICTIONS_SEALED.json": "a801904145a6567ccf1163823e728ce271a322890c79a86f292086b7fae3517e",
+    "published_selection/3Sources/seed24/PROTOCOL.json": "5316a681e648a16feef8f3ba66edae4f10bb7667a7c5688b11bf385371e0606e",
+    "published_selection/3Sources/seed24/evaluation.json": "dddc0abe3d04c5c94401cf61582919b02ae6513b68ef4f824dff804ff6bbf208",
+    "published_selection/3Sources/seed25/PREDICTIONS_SEALED.json": "95271fe8a082640e6f81db626ffdadaf76a19006acdff7a5aecb38d2a1f3e10e",
+    "published_selection/3Sources/seed25/PROTOCOL.json": "509e5a24f7d3671ff4caa004418ae88b77dc8951e8e9b9f8d9c8653244ccc10a",
+    "published_selection/3Sources/seed25/evaluation.json": "26dd1e1443bd360841100f52dabc979458de671f6c8711e415ba0032ed683027",
+    "published_selection_experiment.py": "5c727466199c6372032c8846cf4fa3bba54c7330a4a4e70e3663fca577145eea",
+    "published_selection_summary.json": "56d28e848edbb8b9d303492336cfbb387a2a8783c06253401af8df1525417645",
+    "query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "sapn_shared_candidate.py": "e854f0a56d0d553036728c58cd93198fda33ce0c6ded6aab61eee6368471499a",
+    "score_closest_baselines_3sources_v1.py": "81d47acdbd4bcc2887950beee3aace88ffe9d265ed3ad27c8e56b783d66aa4e9",
+    "score_smgc_inexact_experiment_v2.py": "be5d5979201ea59d71851fe7f103c4d2f47ef103dd435ececeeceac2fc6bdf1b",
+    "score_smgc_stationary_experiment_v1.py": "2d7b8b85555c1feb0a55c5553d9eec241ebcad5d118c829263aab7f7aeddea68",
+    "signed_likelihood.py": "426e484d2a562d27af5a8a82197e640b0dd193464fbdbc3dd2915a390bf808c7",
+    "smgc_corrected_blocks.py": "1887a97518478aa38e0a2af814a1cf3d338da61e26d799a21bde2a4d3213bfaa",
+    "smgc_inexact_continuation_v6.py": "fd548d36d6d1d9d732283da575768af2b89abb31aa72b7a05fe8dfb06987289b",
+    "smgc_inexact_experiment_v2.py": "fbb5e6221117984c6284fd31b55e482ecf700be9e1318f733fea9f7d3e547235",
+    "smgc_inexact_experiment_v2/GLOBAL_PROTOCOL.json": "ac75655683eafbdaec1de01feeb352458093caf78f05f04505c38fb6828347de",
+    "smgc_inexact_experiment_v2/evaluation.json": "4c644ba87a697766ad44ca538e61fc94b294f3c395c6fba1adccd662905a2248",
+    "smgc_inexact_experiment_v2/seed23/PREDICTIONS_SEALED.json": "7bed9b747668a759122a13c2bdb50250d94e61863a6668e638ce282424057feb",
+    "smgc_inexact_experiment_v2/seed24/PREDICTIONS_SEALED.json": "efd72127064ea5e69c9639fcd8cb9850096c16fe50a632470d476bcfef3d3d33",
+    "smgc_inexact_experiment_v2/seed25/PREDICTIONS_SEALED.json": "5d70a276b94eea1797c9c720e248b759c9100dd9f16a168c85628552a8ccda39",
+    "smgc_inexact_experiment_v2_verification.json": "8139d1c2900e1633b2a7518e25dc416102e9ebc7e34f349a7295787ec99c816b",
+    "smgc_stable_blocks_v4.py": "f77a15a1f9c13d3395a4a828698e0bc17e0549435363719582ebdd81e58d6d57",
+    "smgc_stationary_continuation_v5.py": "8d083ac55abcf43e8805b68a6effb3f52e3429c991b108b4183627e7eaa73013",
+    "smgc_stationary_experiment_v1.py": "b15572f4e2831587cd5ba1377df03cd015e1cb75773dbb72bedc62c217704c29",
+    "smgc_stationary_experiment_v1/GLOBAL_PROTOCOL.json": "b837eb454673da7cf77624cd889098a52257b04cf76e35357a14a86795b4394e",
+    "smgc_stationary_experiment_v1/evaluation.json": "28398c24dc6f443301d98bf9965a9c353edfcb93ff6e4e806ecfaea872ac218c",
+    "smgc_stationary_experiment_v1/seed23/PREDICTIONS_SEALED.json": "1aa18751a9074dfe811d7328cf476da26ae64bac69d5861a561fe91ba5d0b4b3",
+    "smgc_stationary_experiment_v1/seed24/PREDICTIONS_SEALED.json": "2a57155ac67f30460c7e05de145084086743d68ac65b94e175581cb51361432a",
+    "smgc_stationary_experiment_v1/seed25/PREDICTIONS_SEALED.json": "6b3dae2d4d6c5dc6e2e6861f65ab4a849f8359c489441abeba9726cf37a82ac5",
+    "smgc_stationary_experiment_v1_verification.json": "beecfd251598581fe5bb720c1bb1317b5aca0e33d3efe8bb17eb1204a24511a8",
+    "tsnmf_graphs.py": "12e84a67ea7c45a47ef8f9e05cbd4b18b99b732c49812f1139fbec28df14914b",
+    "tsnmf_paper.py": "95b33b7653c296a3b229c218b3df90ae0b21603b07a380782ee79717bf7252a8",
+    "tsnmf_selection/3Sources/seed23/PREDICTIONS_SEALED.json": "111dbef6ba8205747a51ee97eb9266cf77addd71c6f00210317fef5d6c413d55",
+    "tsnmf_selection/3Sources/seed23/PROTOCOL.json": "bc39023eebb8505047435055c82c8ef94c51af7003f18f3ad1167664930e95b6",
+    "tsnmf_selection/3Sources/seed23/evaluation.json": "71e52ea3f7d8df5add5ca2d51809be16dbb0f737bf259822aceafaca4e21cf2c",
+    "tsnmf_selection/3Sources/seed24/PREDICTIONS_SEALED.json": "d4344c1814693733b949fa0459654ddf13970841c6601b2a6bffb3c53f27618a",
+    "tsnmf_selection/3Sources/seed24/PROTOCOL.json": "f5d9904da56571af3b6e7343d22093239dc136d2cea36d5a8d5438b6bed76287",
+    "tsnmf_selection/3Sources/seed24/evaluation.json": "99b90d43f9a3bd1b7833f3e634a8cadc54f61d689ee63058a6719291ebf7457b",
+    "tsnmf_selection/3Sources/seed25/PREDICTIONS_SEALED.json": "50408493168fe87246efefca5aa65371d03ce0633ff1585c02fc6f87f027ebf3",
+    "tsnmf_selection/3Sources/seed25/PROTOCOL.json": "4491a015682e2bdd84e6bc5923881e00d1950a1c929feb49654e5cb4eb14f7c3",
+    "tsnmf_selection/3Sources/seed25/evaluation.json": "b0d29745a58ed5f22aac710e553a76f6a5870b752da43e77c23d477bccc30ca2",
+    "tsnmf_selection_experiment.py": "cc71447504afaca5c6d12969054721c561581c12f846636ef6992910bc9c16fe",
+    "tsnmf_selection_summary.json": "8ba711717b00dac33b772821191c965bd02c5a6252565ef670221e98b4caa9df",
+    "verify_closest_baselines_scoring_v1.py": "eee26824bc6d881ea6b6db91d945e3d9c52eca5a5dc43a0258a6bd8c3098a08f",
+    "verify_mvchss_author_map_experiment_v1.py": "412bbaf2f9d83efa40f4465b3bca478c577ac7a83437632b649318426861e025",
+    "verify_pcbg_feasible_experiment_v1.py": "0538146efdb9fc088ef811a3f0aa9c2d0eef0cb7c1c7dbd37fa10b4b193ca035",
+    "verify_smgc_inexact_experiment_v2.py": "df6b1167ce78ca7220dd068cde9facb5026fa956e90e7f671ae44d7957a01e1b",
+    "verify_smgc_inexact_v6_pilot.py": "f4bd5eaa9ad534a3ef83ca4090d5404bed88d01fffde82f9591f560433c4c258",
+    "verify_smgc_stationary_experiment_v1.py": "0120e08a5e4f347f8b4afa838928f4dfe8f2298ef5ab936c3070f8e567d95f36",
+    "verify_smgc_stationary_v5_pilot.py": "ef97df6c804f5d7ef1a8db9223a50df6cdd2e72bea76cb8ad63c458a290bd3cd"
+  },
+  "scope": "Audited development only. Null incomplete groups. Different solver checks explicitly disclosed; finite schedule is not KKT. No live Reuters or BBC scoring, test-based selection or novelty proof."
+}

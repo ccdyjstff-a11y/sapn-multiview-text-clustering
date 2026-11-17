@@ -1,0 +1,7 @@
+﻿policy,branch,planned_contrasts,complete_contrasts,positive_mean,zero_mean,negative_mean,abs_mean_below_1pp,majority_seed_wins,mean_delta_min,mean_delta_max
+primary_default,independent_CV,20,20,19,0,1,14,16,-0.09493670886076,6.3559322033898304
+primary_default,policy_Full_lambda,20,20,19,0,1,11,15,-1.0019267822736022,5.338983050847457
+sensitivity_min,independent_CV,20,20,18,0,2,10,15,-1.2010276172125867,6.3559322033898304
+sensitivity_min,policy_Full_lambda,20,20,19,0,1,11,14,-0.6165703275529855,5.338983050847457
+sensitivity_max,independent_CV,20,20,16,0,4,13,12,-1.1753371868978801,6.3559322033898304
+sensitivity_max,policy_Full_lambda,20,20,19,0,1,11,12,-1.1560693641618491,5.338983050847457

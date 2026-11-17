@@ -1,0 +1,95 @@
+{
+  "scope": "Explicit allowlist of this study's own figure exports, panels and geometry overlays; excludes manuscript full text",
+  "files": [
+    {
+      "file": "figures/generated/fig13_reference_filter_risk.pdf",
+      "sha256": "a9f367ee79df5ff2dd37584f3353e329c32e7cd10210bb6280f2babb2c0f21e2",
+      "bytes": 57357,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig13_reference_filter_risk.png",
+      "sha256": "51a10c44e2c5d65e6b8844f5e1eb2abc447d9af76fe4ba32331d009681cd3c92",
+      "bytes": 263613,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig13_reference_filter_risk.svg",
+      "sha256": "7d403f69bc80ff97cdd37de62cd2008369331fac83658f683e0e3adbb454a5de",
+      "bytes": 61672,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig21_allocation_new10_acc.pdf",
+      "sha256": "871b92e8ca5507832411603db5a0d931e27d8159839e3e1bb98245104b005dd7",
+      "bytes": 85936,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig21_allocation_new10_acc.png",
+      "sha256": "2f3cc8b9338b627d58a19e7afecadf2a4075cb9d5756212f74ec8829b7928290",
+      "bytes": 418589,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig21_allocation_new10_acc.svg",
+      "sha256": "7c5f08bc5ba69ee8f8aff68dea63c7f4ac4d3a7d75c00a228cd6fec8d7c27fdd",
+      "bytes": 297276,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig22_allocation_extension.pdf",
+      "sha256": "b12d3512713eb74f813f97ceb7f635b9c62e880087ebc93e0c9a71a390b55b75",
+      "bytes": 17090,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig22_allocation_extension.png",
+      "sha256": "1463175ef816e97fb4633d9589173b43f0a8651904749da73ba75c30645777af",
+      "bytes": 78675,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/fig22_allocation_extension.svg",
+      "sha256": "e7873f174b4b64a230b9a5d5d49c84836b01c2b28e96bf98bb7785b6e4e255c6",
+      "bytes": 56542,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/generated/qa/alignment.svg",
+      "sha256": "68b011da2c13aaa90baa3898c3badbe4cc2fcd7a30260a405db78447c139ddfc",
+      "bytes": 774,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/qa/fig21/fig21_allocation_new10_acc.alignment.svg",
+      "sha256": "be45a9722074c394fddc7b0080417589ec0ac628eb0c1b29c6630198c133957f",
+      "bytes": 1859,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/qa/fig21/panel_a.png",
+      "sha256": "7a1c070f9a26cfd1959aec35204871b073a6f6e4f64600aa44c8603c85aa49fe",
+      "bytes": 117998,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/qa/fig21/panel_b.png",
+      "sha256": "2210f1294c905f6cb0abd7af4152c8dd201948eb92e7dd22ad3519a643bfb4f6",
+      "bytes": 106755,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/qa/fig21/panel_c.png",
+      "sha256": "a18f8aa27527dac0effe456deb9b9f75ce905360af7eaea2ff39723aa1cb5013",
+      "bytes": 119826,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    },
+    {
+      "file": "figures/qa/fig21/panel_d.png",
+      "sha256": "f9abbf52b86d812cdc8d804a36b7eb74b1351e0f6c1f583e2a7c4e8e3d32fbb9",
+      "bytes": 105679,
+      "role": "Research-owned plot or rendered panel/geometry QA artifact"
+    }
+  ]
+}

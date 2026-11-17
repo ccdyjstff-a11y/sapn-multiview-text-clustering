@@ -1,0 +1,675 @@
+{
+  "original_scientific_protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "bound_files": {
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\adapter_policy.py": "8a524d78c81f14343a493c022057db0e56f270dae7713598d56cceaab0cc9fd9",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\controller_core.py": "9c3f1ae8e7efab9935d4043aa1008a576d15889e20e3c74e2108032a10641b22",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\formal_common.py": "507f0f35b891b74d100a562d132f754cf8b50b63d3eb8209120928bf70dc4f9c",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\owned_processes.py": "bb88287cd283afcdd5bff2d34a50c5d8a100bec872540da0e9d310d941fdde4c",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\phase_clock.py": "69eba419df9e4987f3bae818495b2998a8b467672e55045655b64800b086c853",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\prepare_grouped.py": "ad99b29321f3555a11bf0e82bb0c3437e2541f69554e584ac92795da204c07eb",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\Cost_function.m": "9f737332e11b820134c04cff84d41f44ff65c3159629436ab3a4fac0a6b31019",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\Create_KNNgraph.m": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\normalization.m": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\NormalizationK.m": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\ssa_formal_profile.m": "61eb6b27666dbed835f5aa7efcbcb603d9bc571cc392ebfe01169299a319a908",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\Update_Teta.m": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\Update_V_v.m": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\private_generated\\Update_W_v.m": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\query_protocol.py": "e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\run_clock_qualification.py": "37ba44428260a3505f6be00d059e9da4bebe87437f378ba9335da9369d1ec0ae",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\run_grouped.py": "8ef280649290605627e1915adf2ab1f31a1886b11b9a44e978853fd74dd987b6",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\ssa_clock_bridge.m": "5ad327da9f1af8c5ca56771d129568c52946f9391355ef58ca70572038807300",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\ssa_formal_worker.m": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\successor_gate.py": "88c92949c97d5bf83e46c915616fd2ddaf6075d31f48ac4bc1cf5871f2ad3418",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\test_grouped_policy.py": "915d28905c21ae889fcb414da31c9c4dcdad62f7c05a9444b71b0439a47149bc",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\runtime_transition\\retirement_review\\closure_verifier.py": "b1dabe9a131232b6ef2f05af0d93b51ddb99078f7351cf04ed5252fdacba5b40",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\runtime_transition\\retirement_review\\retirement_evidence.py": "7d986f02f736abcda9e5fdb1c7783c1d6012c73dbf81da48de6095147c74e387"
+  },
+  "bridge_evidence": {
+    "result": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_trace_bridge\\bridge_run\\TRACE_BRIDGE_RESULT.json",
+    "result_sha256": "0515ce8e44449e828adec90f5bc6037ea8188018c5ccebf3efbe0f84cc8d34b8",
+    "receipt": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_trace_bridge\\bridge_run\\EXECUTION_RECEIPT.json",
+    "receipt_sha256": "f2afbc6e4d8b49adf4fa04df12a42dd9f1a694d9129b3747250fb2748d46d5f1"
+  },
+  "global_wall_seconds": 172800,
+  "previous_batch_root": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_formal_v1",
+  "previous_batch_closure": {
+    "verifier_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\runtime_transition\\retirement_review\\closure_verifier.py",
+    "verifier_sha256": "b1dabe9a131232b6ef2f05af0d93b51ddb99078f7351cf04ed5252fdacba5b40",
+    "closure_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\runtime_transition\\retirement_review\\operations\\s1_normal_termination\\CLOSURE.json",
+    "closure_sha256": "d9f7597cec8e28764e5524b4ad295c8b8c07a14bc1eb71c7f775a1ee1da58a6b",
+    "verifier_source_sha256": {
+      "closure_verifier.py": "b1dabe9a131232b6ef2f05af0d93b51ddb99078f7351cf04ed5252fdacba5b40",
+      "retirement_evidence.py": "7d986f02f736abcda9e5fdb1c7783c1d6012c73dbf81da48de6095147c74e387"
+    }
+  },
+  "closure_verifier_status": "REQUIRED_BEFORE_FREEZE_AND_EXECUTION",
+  "closure_check_at_freeze": {
+    "passed": true,
+    "fresh_process_observation": true,
+    "closure_kind": "NORMAL_TERMINATION",
+    "prior_protocol_sha256": "6bbd309596d5ed391c5319e5a02d362d0d6e37adeeaffef3c657e3b255d69edf",
+    "live_previous_batch_processes": 0,
+    "unverified_previous_batch_processes": 0,
+    "scope": "PROCESS_EXIT_ADMISSION_ONLY",
+    "graceful_application_cleanup_certified": false,
+    "scientific_scoring_authorized": false,
+    "errors": [],
+    "live_pids": [],
+    "unresolved": {},
+    "recorded_identity_observations": [
+      {
+        "pid": 39556,
+        "create_time": 1792995078.6272345,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22920,
+        "create_time": 1793038567.588568,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 28344,
+        "create_time": 1793038567.7768683,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 29232,
+        "create_time": 1793038567.6282246,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40548,
+        "create_time": 1792995082.53653,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30252,
+        "create_time": 1792995819.2119172,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 35112,
+        "create_time": 1792995496.5566034,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36192,
+        "create_time": 1792996221.31914,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 35076,
+        "create_time": 1792995535.988511,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 3648,
+        "create_time": 1792996260.0139213,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 38052,
+        "create_time": 1792995576.4390748,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 8932,
+        "create_time": 1792996299.8721082,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 31308,
+        "create_time": 1792995617.3578308,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40436,
+        "create_time": 1792996339.7180073,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9176,
+        "create_time": 1792995657.7599237,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24960,
+        "create_time": 1792996379.5615697,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 11464,
+        "create_time": 1792995700.3752215,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37360,
+        "create_time": 1792996420.547532,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24292,
+        "create_time": 1792995741.4081216,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30048,
+        "create_time": 1792996460.470795,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 12636,
+        "create_time": 1792995780.2855692,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 16212,
+        "create_time": 1792996501.3915598,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 28188,
+        "create_time": 1792995128.7406642,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34372,
+        "create_time": 1792995860.1076071,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34764,
+        "create_time": 1792995172.9649615,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37188,
+        "create_time": 1792995900.602398,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 16424,
+        "create_time": 1792995213.310264,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24852,
+        "create_time": 1792995940.4456635,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37024,
+        "create_time": 1792995254.0304625,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30228,
+        "create_time": 1792995980.883224,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 31400,
+        "create_time": 1792995294.3871484,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 6484,
+        "create_time": 1792996020.7884924,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 32860,
+        "create_time": 1792995332.6853747,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 23712,
+        "create_time": 1792996061.7300723,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22512,
+        "create_time": 1792995373.6595128,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34820,
+        "create_time": 1792996100.500271,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9220,
+        "create_time": 1792995415.2154968,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 10988,
+        "create_time": 1792996139.8730533,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 39028,
+        "create_time": 1792995455.1513965,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 31092,
+        "create_time": 1792996179.195399,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 35388,
+        "create_time": 1792996540.3156073,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36672,
+        "create_time": 1792996580.1731536,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 4112,
+        "create_time": 1793006325.1466825,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 38336,
+        "create_time": 1793003213.2818568,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 18388,
+        "create_time": 1793010418.4935923,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30696,
+        "create_time": 1793003387.382137,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 12100,
+        "create_time": 1793010593.4419851,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 6832,
+        "create_time": 1793003600.7730713,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 5464,
+        "create_time": 1793010806.1604195,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 3212,
+        "create_time": 1793012361.1721501,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 23120,
+        "create_time": 1793003858.5763917,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24700,
+        "create_time": 1793011068.3800125,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 39392,
+        "create_time": 1793004051.839473,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34188,
+        "create_time": 1793011263.6239295,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 39648,
+        "create_time": 1793004223.7525787,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 3660,
+        "create_time": 1793011437.5354762,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22104,
+        "create_time": 1793005854.2699056,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 28408,
+        "create_time": 1793012062.9942214,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37532,
+        "create_time": 1793006200.2339213,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 27104,
+        "create_time": 1793012237.5371013,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 29372,
+        "create_time": 1792996831.7707086,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 5148,
+        "create_time": 1793006551.540874,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 14164,
+        "create_time": 1792997457.1760917,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9424,
+        "create_time": 1793007177.3118513,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 38280,
+        "create_time": 1793000039.203252,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 23100,
+        "create_time": 1793007802.9353673,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40884,
+        "create_time": 1793000765.98168,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 38864,
+        "create_time": 1793008428.721023,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36064,
+        "create_time": 1793001391.5918524,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30284,
+        "create_time": 1793009054.2438605,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22088,
+        "create_time": 1793002017.3512616,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 38024,
+        "create_time": 1793009274.1336296,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 14796,
+        "create_time": 1793002151.3757088,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37840,
+        "create_time": 1793009404.6387367,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9168,
+        "create_time": 1793002303.5627074,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40816,
+        "create_time": 1793009578.6015267,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 15700,
+        "create_time": 1793002588.3697405,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 10020,
+        "create_time": 1793009791.6423755,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 29408,
+        "create_time": 1793035448.7275577,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 10768,
+        "create_time": 1793036075.6094172,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 23740,
+        "create_time": 1793036701.8903587,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 10288,
+        "create_time": 1793040428.1132786,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36688,
+        "create_time": 1793042256.559406,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 29544,
+        "create_time": 1793044157.2686496,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 10512,
+        "create_time": 1793045986.1856654,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40400,
+        "create_time": 1793012621.9148767,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 15240,
+        "create_time": 1793023438.1447384,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40164,
+        "create_time": 1793019974.716364,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 27320,
+        "create_time": 1793028679.0103664,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24292,
+        "create_time": 1793020600.1204116,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 18672,
+        "create_time": 1793029305.2698073,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 39724,
+        "create_time": 1793020829.4110863,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 31160,
+        "create_time": 1793029536.8154955,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 29140,
+        "create_time": 1793021455.573489,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 13748,
+        "create_time": 1793030162.2826793,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37928,
+        "create_time": 1793021725.3324685,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 14488,
+        "create_time": 1793030433.8299909,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 35604,
+        "create_time": 1793035164.611906,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 17656,
+        "create_time": 1793022009.7634816,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 31332,
+        "create_time": 1793030810.0555456,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 25888,
+        "create_time": 1793022634.6148193,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 8320,
+        "create_time": 1793031435.5802839,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 15484,
+        "create_time": 1793022812.1905413,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 24888,
+        "create_time": 1793033323.2356,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36732,
+        "create_time": 1793012856.3244271,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34156,
+        "create_time": 1793023676.443232,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 34084,
+        "create_time": 1793014701.2155468,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 7840,
+        "create_time": 1793024301.989384,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 37944,
+        "create_time": 1793015328.3493943,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9156,
+        "create_time": 1793024927.505236,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 8556,
+        "create_time": 1793015954.232954,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 21092,
+        "create_time": 1793025553.8013368,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 9936,
+        "create_time": 1793018066.6332324,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22804,
+        "create_time": 1793026178.7726705,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 25292,
+        "create_time": 1793018243.5634239,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 36312,
+        "create_time": 1793026384.0604277,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 22816,
+        "create_time": 1793018737.1971016,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 4960,
+        "create_time": 1793027009.880522,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 30116,
+        "create_time": 1793019204.4563897,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 2648,
+        "create_time": 1793027635.3931913,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 18200,
+        "create_time": 1793019361.4413524,
+        "observed_state": "NOT_OBSERVED"
+      },
+      {
+        "pid": 40360,
+        "create_time": 1793027952.8628201,
+        "observed_state": "NOT_OBSERVED"
+      }
+    ],
+    "observed_utc": "2026-10-27T05:00:21.098795+00:00",
+    "registered_identity_count": 122
+  }
+}

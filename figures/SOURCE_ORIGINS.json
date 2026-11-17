@@ -1,0 +1,198 @@
+{
+  "files": [
+    {
+      "file": "provenance/original_sources/figures/build_model_figure.py.txt",
+      "source": "archive:source/historical_v4/build_model_figure.py",
+      "sha256": "6fd3d2a45ffa377cbb54c63f36b86078a7a6aa4f920a88f0f768eeca985662ef",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_model_figure.py",
+      "source": "archive:source/historical_v4/build_model_figure.py",
+      "sha256": "6fd3d2a45ffa377cbb54c63f36b86078a7a6aa4f920a88f0f768eeca985662ef",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_numerics_figure.py.txt",
+      "source": "archive:source/historical_v4/build_numerics_figure.py",
+      "sha256": "05fb5ac1a033035be6024902ec02ffa01a761ff5b2164d345a9f04d55686bf1f",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_numerics_figure.py",
+      "source": "archive:source/historical_v4/build_numerics_figure.py",
+      "sha256": "05fb5ac1a033035be6024902ec02ffa01a761ff5b2164d345a9f04d55686bf1f",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_extension_figures.py.txt",
+      "source": "archive:source/historical_v4/build_extension_figures.py",
+      "sha256": "1388494a18066f9cd5bda4f821b1ac14c2906f5fe4fe29729d3d20723cd6e40a",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_extension_figures.py",
+      "source": "archive:source/historical_v4/build_extension_figures.py",
+      "sha256": "1388494a18066f9cd5bda4f821b1ac14c2906f5fe4fe29729d3d20723cd6e40a",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_extension_results.py.txt",
+      "source": "archive:source/historical_v4/build_extension_results.py",
+      "sha256": "0920e2f66a9321c2bb151fa52232e37deaec66d7e4a3c1e3d98832f95b0d278a",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "provenance/original_sources/figures/plot_mechanisms_v5.py.txt",
+      "source": "archive:source/manuscript_v5/plot_mechanisms_v5.py",
+      "sha256": "c7b0fb0fad57569d764dd760fe77fc19272cdcd0e31afb9df061efc873352f10",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/plot_mechanisms_v5.py",
+      "source": "archive:source/manuscript_v5/plot_mechanisms_v5.py",
+      "sha256": "c7b0fb0fad57569d764dd760fe77fc19272cdcd0e31afb9df061efc873352f10",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/plot_holdout.py.txt",
+      "source": "archive:evidence/v6/multilingual_holdout/plot_holdout.py",
+      "sha256": "efb6fd86cd0ede5c47a0d778769d80d13b094b38dfa94a988a68016f4030aef3",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/plot_holdout.py",
+      "source": "archive:evidence/v6/multilingual_holdout/plot_holdout.py",
+      "sha256": "efb6fd86cd0ede5c47a0d778769d80d13b094b38dfa94a988a68016f4030aef3",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/report_and_plot_mass_transfer.py.txt",
+      "source": "archive:evidence/v6/selection_mass_diagnostic/report_and_plot.py",
+      "sha256": "99dc5378da1c65f02a1c24e9d13d2a4942802b9d2d0bbcbb09592f02ace0366a",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_reference_risk_figure.py.txt",
+      "source": "archive:evidence/v8/reference_filter/build_reference_risk_figure.py",
+      "sha256": "11e03c6c2e406f66cf323e2b39020c7d1798457efce32e47e67f760a4fc0f0c4",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_reference_risk_figure.py",
+      "source": "archive:evidence/v8/reference_filter/build_reference_risk_figure.py",
+      "sha256": "11e03c6c2e406f66cf323e2b39020c7d1798457efce32e47e67f760a4fc0f0c4",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/plot_unified_ssa.py.txt",
+      "source": "archive:evidence/v11/ssa/analysis_source/ssa_grouped_figure_extension/plot_unified_ssa.py",
+      "sha256": "da16fde454978ef0e53a8e20b6b0415365d08c25f1efafc71da2c4fcf2f46a35",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_evidence_figures.py.txt",
+      "source": "submission_revision_v4/figures/build_evidence_figures.py",
+      "sha256": "db1aeb9d2f550c7748763cb57932d07ed0489207c9dd7b6902be1ca43111a462",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_evidence_figures.py",
+      "source": "submission_revision_v4/figures/build_evidence_figures.py",
+      "sha256": "db1aeb9d2f550c7748763cb57932d07ed0489207c9dd7b6902be1ca43111a462",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/build_new_figures.py.txt",
+      "source": "submission_revision_v3/build_new_figures.py",
+      "sha256": "0e0626d05883e71c6c77e583b52e5e9991907666c50e43c19e4260a0ef2b429d",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/build_new_figures.py",
+      "source": "submission_revision_v3/build_new_figures.py",
+      "sha256": "0e0626d05883e71c6c77e583b52e5e9991907666c50e43c19e4260a0ef2b429d",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/evidence_gate.py.txt",
+      "source": "submission_revision_v5/evidence_gate.py",
+      "sha256": "cfa5151a17b60abbdce1dcff1c22f9feb227339d7b5a8a1e112a702bfaf38537",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/evidence_gate.py",
+      "source": "submission_revision_v5/evidence_gate.py",
+      "sha256": "cfa5151a17b60abbdce1dcff1c22f9feb227339d7b5a8a1e112a702bfaf38537",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "provenance/original_sources/figures/plot_allocation_acc.py.txt",
+      "source": "submission_revision_20261117/figure_revision/plot_allocation_acc.py",
+      "sha256": "e6bf6054848860aa0884a427f0b96732b006068695c0dbccf7c6ee606145de6f",
+      "byte_identical": true,
+      "role": "Historical plot-source record, not an active entry"
+    },
+    {
+      "file": "figures/historical/plot_allocation_acc.py",
+      "source": "submission_revision_20261117/figure_revision/plot_allocation_acc.py",
+      "sha256": "e6bf6054848860aa0884a427f0b96732b006068695c0dbccf7c6ee606145de6f",
+      "byte_identical": true,
+      "role": "Historical English plot source; directory/dependency assumptions retained"
+    },
+    {
+      "file": "figures/plot_allocation_acc.py",
+      "source": "submission_revision_20261117/figure_revision/plot_allocation_acc.py",
+      "sha256": "4cc219d34cca49679a0591ad927b247a0e701df6377a0ed1442f88e3e2428c9f",
+      "original_sha256": "e6bf6054848860aa0884a427f0b96732b006068695c0dbccf7c6ee606145de6f",
+      "byte_identical": false,
+      "role": "Portable input/output and alignment-helper loading only; draw_figure AST unchanged",
+      "final_derivation_note": "Default QA helper relocated to the study-authored standalone geometry checker; no plotting/numerical function change"
+    },
+    {
+      "file": "figures/plot_reference_risk.py",
+      "source": "archive:evidence/v8/reference_filter/build_reference_risk_figure.py",
+      "sha256": "e25528636416db1509e7883b62056311e79baf6ef9eb064796a8520da77cc063",
+      "original_sha256": "11e03c6c2e406f66cf323e2b39020c7d1798457efce32e47e67f760a4fc0f0c4",
+      "byte_identical": false,
+      "role": "Portable input/output and helper defaults; response/threshold/numerical_checks AST unchanged; drawing coordinates and styles retained",
+      "final_derivation_note": "Default QA helper relocated to the study-authored standalone geometry checker; no plotting/numerical function change"
+    },
+    {
+      "file": "provenance/original_sources/figures/summarize_extension.py.txt",
+      "source": "summarize_extension.py",
+      "sha256": "73f5357ea416b5531f350ca112ca66a4f65543119d02e821d294ac4be7523f59",
+      "byte_identical": true,
+      "role": "Original executed post-seal analysis and figure source; record only"
+    },
+    {
+      "file": "figures/plot_extension_acc.py",
+      "source": "summarize_extension.py (plot block)",
+      "sha256": "48395a6e094132d86bf9bff83595dae8e552015db2b84a317499adf28c4a1f5b",
+      "original_sha256": "73f5357ea416b5531f350ca112ca66a4f65543119d02e821d294ac4be7523f59",
+      "byte_identical": false,
+      "role": "CSV-only portable plot block; original drawing coordinates/styles retained with an added geometry gate"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "phase": "PRE_SCORE",
+  "independent_auditor": "submission_content_gate",
+  "complete_scope": true,
+  "protocol_sha256": "5dda7be9d18a85df7caf2f1bd0d1c4e626de45425b6e1a949f84a64e959e92ce",
+  "global_seal_sha256": "4b1ddbc35956cbd2073f7466d8e8fceeed5db43f92cef529c95f64a6b0be274a",
+  "all50_blocks_and500_logical_outcomes_checked": true,
+  "all_CV_selections_inputs_sources_terminal_arrays_checked": true,
+  "blocks": 50,
+  "logical_outcomes": 500,
+  "block_status_counts": {
+    "complete": 50
+  },
+  "saved_fit_status_counts": {
+    "verified_success": 2186
+  },
+  "successful_CV_states": 1800,
+  "successful_final_states": 386,
+  "maximum_J_error": 8.326672684688674e-16,
+  "maximum_KKT_error": 2.360308129500943e-16,
+  "eligible_logical": 500,
+  "details_sha256": "38294d236e5ab2cb5623b17af133fd9a04713d0fa348e0ffeafed50de921bad6",
+  "plan_sha256": "4ac143b70acec97cb0363e2d9f8efc131a4455f647a5c60e1d391d882e44cd88",
+  "auditor_calls": {
+    "warm_initialization": 0,
+    "model_reconstruction": 0,
+    "optimization": 0,
+    "oracle_class_read": 0,
+    "benchmark_scoring": 0
+  },
+  "validation_note": "Within-budget queried-answer BER recomputed independently for selection audit; this is not held-out benchmark scoring.",
+  "boundaries": [
+    "Stored H0/Hv0 audited; no new initializations simulated",
+    "Initial basis-derived r_v checked for freezing and cross-configuration consistency, not regenerated",
+    "Old3 never pooled; all failures retained; independent scoring release remains root-owned"
+  ]
+}

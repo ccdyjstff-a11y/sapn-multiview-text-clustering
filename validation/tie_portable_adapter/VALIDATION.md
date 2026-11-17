@@ -1,0 +1,15 @@
+# Adapter validation receipt (2026-11-17)
+
+Status: PASS for planning, relocation, parser gates, training dry-run and scoring of existing sealed states. No real training or new scientific fit was executed during this validation. The original core and original results were unchanged.
+
+- AST parsing and root/plan/train/score help passed. Plan and train rejected `--labels-map`. Score without a complete global final seal was rejected before label loading.
+- Actual selection-only replay covered all 50 historical blocks and 1,800 CV predictions: 900 choices, 1,500 logical targets, 558 distinct final requirements, 386 verified reused finals and 172 missing finals. These counts were observed, not imposed by the adapter.
+- All 900 choice rows matched the original frozen index across 15 common fields (13,500 comparisons). All 1,500 target rows matched across 14 common fields (21,000 comparisons). Absolute historical source directories were intentionally represented as declared-root-relative references. Missing and reused fit-ID sets matched exactly.
+- The adapter and original common package were copied to random directory `relocated_2b4bd1c6e075`, and its data map used relative paths. The second actual selection-only run produced seven plan artifacts byte-identical to the first, including PLAN.json and both complete indices.
+- `train --dry-run` revalidated the complete frozen inputs, reported 172 planned missing finals, and performed zero fits and no sealing. The real training branch was not executed.
+- Scoring replay used 386 original final states plus read-only hard links to the 172 already completed sensitivity finals (793 linked files). The normal adapter terminal validation established a global seal explicitly marked as replay-only before external class-vector loading. The adapter then actually scored all 558 unique finals, 1,500 logical records, 6,000 paired values and 600 summaries.
+- All 7,500 logical metric values matched the frozen sensitivity evaluation exactly (maximum absolute error 0). All 6,000 paired rows and all 600 summary rows matched every common field, including eligibility, mean, sample SD, median, direction and win/tie/loss counts. Source hashes for all linked files were unchanged afterward.
+
+The report binds the adapter, harness, exact common source/software, original completed sensitivity seal, replay seal, evaluation freezes and validation logs by SHA256. It does not claim a fresh historical optimizer rerun with the English release common package, or a newly executed sensitivity training run. Such training is available through the documented adapter command but remains outside this validation's executed scope. No extra statistical tests or independent scientific replications were added.
+
+Package only the six files listed in VALIDATION_REPORT.json. The private local maps and validation trees (including existing-state hard links) are audit working material, not release inputs. SHA256SUMS.json hashes the other five deliverables; its own digest is reported separately to the packager.

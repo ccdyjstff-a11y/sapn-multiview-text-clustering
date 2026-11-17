@@ -1,0 +1,140 @@
+{
+  "post_score_audit_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\POST_SCORE_AUDIT.json",
+  "post_score_audit_sha256": "913a9bef9e8b664c90705d6c5ee0fccb49e7b85e0915311d0785151ca8e49a3d",
+  "global_seal_sha256": "d67fef91b70dab4863db06100f83e54a3daefc12ff1335f5deeda1012f6cc7ad",
+  "evaluation_manifest_sha256": "3a6a87d2e32cc470a0c9b6d468c1f6054c49848a8d8ec0148c16a2198e8be8f7",
+  "evaluation_sha256": "87c5a16daf1522afa4bc76e1fdaa5f125a7004b7b772edaa1309b620a165d14d",
+  "summary_sha256": "3f78b02d2d5a8b407974f65168506c8b3b0dcdbecf8701d9a9d352b59db35785",
+  "status": "AUDIT_GATED_COMPARISON_REPORT",
+  "reporting_protocol_sha256": "debd82aa754e5ff5686a6b0ea6778d79972632994a39dc8868e73313de5cd5e9",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_protocol_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "created_utc": "2026-10-27T12:57:13.936915+00:00",
+  "logical_rows": 42,
+  "corpus_query_groups": 14,
+  "fit_diagnostic_rows": 906,
+  "scheduler_slot_rows": 906,
+  "scheduler_group_rows": 14,
+  "original_seed_map": {
+    "3Sources": [
+      23,
+      24,
+      25
+    ],
+    "BBC": [
+      23,
+      24,
+      25
+    ],
+    "Reuters": [
+      23,
+      24,
+      25
+    ],
+    "Cora": [
+      23,
+      24,
+      25
+    ],
+    "CiteSeer": [
+      23,
+      24,
+      25
+    ],
+    "20NG": [
+      41,
+      42,
+      43
+    ],
+    "AGNews": [
+      101,
+      102,
+      103
+    ]
+  },
+  "historical_evidence_hashes": {
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\FORMAL_COMPARABILITY_REVIEW.json": "30a0fa01891983d85dc2510cc03ecf13368fc7e1a5dc34cf9c1ac50d8bcf3191",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\immutable_packet\\primary_predictions\\MANIFEST.json": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\immutable_packet\\tables\\extension_all_records.csv": "f63c11998d0c6adc6d0d0a8fafa62026c5138e50fa0d05ca46d180b1271548c0",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_revision_v4\\load_verified_evidence.py": "3d7655e7bf49ac4de43146d8e95f01c103284fecefff1c6683cbaf26f07e9920",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_revision_v4\\build_extension_results.py": "0920e2f66a9321c2bb151fa52232e37deaec66d7e4a3c1e3d98832f95b0d278a"
+  },
+  "source_hashes": {
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\report_ssa_comparison.py": "9fe623b991fed82878f9d2866f7b69e59311c768053539bad3084b0702b7187a",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\grouped_comparison_accounting.py": "4c443fe652f9c5d710c36605b1667862d40e62f6fd16b053d561101cf28e8f8d",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\prepare_comparison.py": "23210ba9f41c4b4dc2ae6b18f26435d935a9c068753f95bc8c455dcd5812bd9e",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\test_grouped_comparison.py": "190541b0a9ea868edf56b0a7aac223b2ea0a8eb8fb590bfcce0a08859beccb9b",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\COMPARISON_BINDING_TEMPLATE.json": "c369d6cc6ba2cfb49415e2ad0a58cb5bdd6204d99b806884d4e5a056843b03b2",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\OUTPUT_SCHEMA.json": "14945b98e3f418e1cade17da7a6b796137e29f7ddbd2906c54c61e3b42440853",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_reporting\\COMPARISON_README.md": "d96679d2565b5f209e2426c4b11266fadbaa5d5fb237ae90df694b0ea88c561e",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_formal_reporting\\report_native_comparison_v2.py": "5afca9c1e1f138e79d8de8a75cb690b9aec266cf1ca9c2074e8bc1cc6de52747"
+  },
+  "delta_definition": "SSA minus original SAPN-MV; positive favors SSA for ACC/NMI/ARI; negative favors SSA for BER.",
+  "figure_transform": "To display SAPN minus SSA, negate each raw paired difference exactly once; do not negate its sample SD.",
+  "metric_units": "Fractions in CSV; multiply mean, sample SD and differences by 100 for percent/percentage points.",
+  "primary_policy": "Primary mean/SD and paired differences require both methods eligible for all three fixed seeds; no failed/unsupported case counts as a win.",
+  "diagnostic_policy": "Finite ineligible outputs retain existing scores only as diagnostics. No primary aggregation for incomplete groups.",
+  "replication": "Three paired query/model seeds within each fixed corpus; no independent new-corpus replication or significance test claimed.",
+  "resource_note": "Elapsed values are observed receipt diagnostics. Fit wall can include suspension; active worker time includes preprocessing/output. No speedup or convergence claim.",
+  "batch": "SSA_GROUPED_V2",
+  "prior_S1_results_imported": false,
+  "compute_comparability": "Identical paid query streams and budgets; search spaces, short-circuited attempts, resource policies and realized computation are not matched. No compute-equality, speedup or convergence claim.",
+  "scheduler_accounting": {
+    "batch": "SSA_GROUPED_V2",
+    "logical_CV": 864,
+    "logical_final": 42,
+    "supported_final": 24,
+    "unsupported_final": 18,
+    "supported_fit_opportunities": 888,
+    "logical_slots": 906,
+    "adapter_calls": 334,
+    "launcher_dispatches": 333,
+    "matlab_started": 333,
+    "terminal_attempt_lifecycles": 333,
+    "worker_native_return_reported": 333,
+    "eligible_CV": 324,
+    "primary_eligible_final": 9,
+    "numerical_eligible_attempts": 333,
+    "committed_conditions": 9,
+    "selected_conditions": 9,
+    "complete_three_seed_primary_groups": 3,
+    "slot_disposition_counts": {
+      "launcher_attempted": 333,
+      "pruned_after_terminal_local_failure": 0,
+      "input_unsupported": 18,
+      "predispatch_global_stop": 1,
+      "not_attempted_after_stop": 554
+    },
+    "group_guard_count": 4,
+    "group_guard_ready_count": 3,
+    "resource_cap_attempts": 0,
+    "resource_stop_triggers": 1,
+    "deadline_stop_triggers": 0,
+    "controller_status": "EXECUTION_HALTED",
+    "scheduler_stop_reason": "GROUP_MEMORY_WAIT_CAP",
+    "plan_complete": false,
+    "safe_stop_confirmed": false,
+    "controller_total_wall_seconds": 28267.368099,
+    "time_scope": "Elapsed controller start/end timestamp interval; includes waiting and does not measure CPU time.",
+    "query_budget_comparability": "Same original paid query streams and prefixes.",
+    "compute_comparability": "Search spaces, skipped fits, resource policies and realized compute are not matched.",
+    "prior_S1_results_imported": false,
+    "new_class_metrics_computed": false
+  },
+  "implementation_note": "SSA uses a declared anonymous-pair adapter, two coding repairs, trace cost evaluation and 18-candidate limited budget-only CV; it is not an unchanged author executable or exhaustive tuning. The grouped independent rerun applies explicit terminal-local short-circuiting and resource/commit policies.",
+  "controller_total_wall_seconds": 28267.368099,
+  "oracle_decoded": false,
+  "fitting_performed": false,
+  "new_scores_computed": false,
+  "author_source_redistributed": false,
+  "output_hashes": {
+    "fit_diagnostics.csv": "7eba1761d02366422f931fdae911d1adf1133169c5f37c5ea93693343428e71f",
+    "paired_primary_groups.csv": "c40744b6bc8786828168edb9cbb0dcb3653fbe20dde35f493ae5d7845d7aa867",
+    "paired_seed_rows.csv": "df60ea15bb4c55f0366e6df4823bc57008509bf1106518d3adb02d9f823ca976",
+    "runtime_groups.csv": "f8d5af06a1d3c589c29e99b6c8ebb550636e799ab2ab34d52117bc851a63c003",
+    "scheduler_accounting.json": "049ca68c5b538cd68b6d4668647f9de03a767fea90fdac437554ebb1180ea8f8",
+    "scheduler_groups.csv": "c377c9d51bc86e60b50a501d8fec4dae356680f11273cd2219578b285286e4b7",
+    "scheduler_slots.csv": "69deba9882cceca1d690681243f36671fc5cb1cdf62adf4c33c90e4ed21becde",
+    "ssa_paired_differences.tex": "68419de48fef7902caff4356a9bd045849f64469a32933217416d06db01bb706"
+  }
+}

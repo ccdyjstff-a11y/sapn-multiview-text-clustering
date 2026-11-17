@@ -1,0 +1,165 @@
+"""Frozen allocation extension. Training and scoring are separate processes."""
+from pathlib import Path
+import argparse, datetime, hashlib, json, os, shutil, subprocess, sys, time
+
+ROOT = Path(__file__).resolve().parent
+MAIN = ROOT.parent
+STUDY = ROOT / 'allocation_extension'
+PACKAGE = STUDY / 'solver'
+SEEDS = list(range(1101, 1106))
+DATA = {
+    '20NG': MAIN / 'confirmation_data/prepared_20NG_SubjectBody_2000',
+    'AGNews': MAIN / 'agnews_confirmation_v1/prepared_AGNews_TitleDescription_2000',
+}
+
+def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def read(p): return json.loads(Path(p).read_text(encoding='utf-8'))
+def save(p, x):
+    p = Path(p); p.parent.mkdir(parents=True, exist_ok=True)
+    s = json.dumps(x, ensure_ascii=False, indent=2)
+    if p.exists():
+        assert read(p) == x, f'Immutable record changed: {p}'
+    else: p.write_text(s, encoding='utf-8')
+def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+def setup():
+    assert not (STUDY / 'PROTOCOL.json').exists()
+    src = MAIN / 'review_revision_v9/allocation_repeat/portable_common_draft'
+    PACKAGE.mkdir(parents=True, exist_ok=True)
+    names = ['allocation_core.py','allocation_models.py','CORE_DERIVATION.json',
+             'query_protocol.py','init_warm.py','allocation_io.py','run_allocation.py',
+             'score_allocation.py','SOURCE_PROVENANCE.json']
+    for name in names: shutil.copy2(src/name, PACKAGE/name)
+    inputs = {}
+    for ds, d in DATA.items():
+        meta = read(d/'metadata.json')
+        inputs[ds] = dict(n=meta['n'], k=meta['k'], views=meta['views'],
+            path=str(d), hashes={n:sha(d/n) for n in ['metadata.json','y.npy']+[f'X{i}.npz' for i in range(meta['views'])]})
+    protocol = dict(study='allocation_extension_20261117', frozen_utc=utc(),
+        datasets=list(DATA), seeds=SEEDS, budgets=[400], inputs=inputs,
+        sources={p.name:sha(p) for p in PACKAGE.iterdir() if p.is_file()}, wrapper_sha256=sha(__file__),
+        allocation=[0.,.5,1.], lambdas_default_first=[20.,2.,200.],
+        candidates='common endpoint candidates, unchanged verified portable source',
+        sampling='30% label-blind pool seed+21000; unique uniform unordered query stream seed+31000; no replacement seeds',
+        selection='unchanged two node-disjoint eligible folds; mean BER; default-first ties; training rejects full class vector',
+        primary='Within each corpus, Full-CV minus consensus-only-CV and views-only-CV ACC on non-pool objects; report all five points, mean/sample SD, median and win/tie/loss',
+        secondary='Full-selected lambda controls and NMI, ARI, BER_train, BER_unqueried; all retained irrespective of sign; no inferential p-values',
+        gate='All ten blocks accounted for and sealed before any extension evaluation; failures retained and incomplete conditions not represented by a reduced complete-case mean',
+        boundary='These corpora were previously used in overall model evaluation. This is a prospectively specified allocation extension on known benchmarks, not a never-seen independent dataset test or a new model selection stage.',
+        compute='One worker, one BLAS thread; start a block only with >=3 GiB available RAM; original 200/1000/4000 iteration schedule and tolerances unchanged',
+        completion='Ten planned corpus/seed blocks, 50 logical final records; maximum 180 CV fits and 50 final fits before exact duplicate reuse; no data-dependent extensions')
+    save(STUDY/'PROTOCOL.json', protocol)
+    save(STUDY/'FREEZE_RECEIPT.json', dict(protocol_sha256=sha(STUDY/'PROTOCOL.json'),frozen_utc=utc()))
+    print('FROZEN',sha(STUDY/'PROTOCOL.json'),flush=True)
+
+def check():
+    p = read(STUDY/'PROTOCOL.json')
+    assert sha(STUDY/'PROTOCOL.json') == read(STUDY/'FREEZE_RECEIPT.json')['protocol_sha256']
+    assert sha(__file__) == p['wrapper_sha256']
+    for n,h in p['sources'].items(): assert sha(PACKAGE/n)==h
+    return p
+
+def prepare():
+    p=check()
+    if (STUDY/'INPUTS_SEALED.json').exists():
+        for n,h in read(STUDY/'INPUTS_SEALED.json')['files'].items():assert sha(STUDY/n)==h
+        return
+    import numpy as np
+    sys.path.insert(0,str(PACKAGE))
+    from query_protocol import sample_query_stream, answer_queries
+    for ds, spec in p['inputs'].items():
+        source=Path(spec['path'])
+        for n,h in spec['hashes'].items(): assert sha(source/n)==h
+        dest=STUDY/'prepared'/ds;dest.mkdir(parents=True,exist_ok=True)
+        save(dest/'metadata.json',dict(dataset=ds,n=spec['n'],k=spec['k'],views=spec['views']))
+        for v in range(spec['views']):shutil.copy2(source/f'X{v}.npz',dest/f'X{v}.npz')
+        y=np.load(source/'y.npy',allow_pickle=False).reshape(-1)
+        assert len(y)==spec['n'] and len(np.unique(y))==spec['k']
+        for seed in SEEDS:
+            pool=np.sort(np.random.RandomState(seed+21000).permutation(spec['n'])[:round(.3*spec['n'])])
+            pairs=sample_query_stream(pool,400,seed+31000)
+            q=STUDY/'queries'/ds/f'seed{seed}.npz';q.parent.mkdir(parents=True,exist_ok=True)
+            assert not q.exists()
+            np.savez_compressed(q,pool=pool,pairs=pairs,answers=answer_queries(pairs,y),test=np.setdiff1d(np.arange(spec['n']),pool))
+        del y
+    files={str(x.relative_to(STUDY)):sha(x) for d in ['prepared','queries'] for x in (STUDY/d).rglob('*') if x.is_file()}
+    save(STUDY/'INPUTS_SEALED.json',dict(protocol_sha256=sha(STUDY/'PROTOCOL.json'),files=files))
+    print('INPUTS_PREPARED',len(files),flush=True)
+
+def worker(ds,seed):
+    p=check();assert ds in p['datasets'] and seed in SEEDS
+    forbidden={Path(spec['path'])/'y.npy' for spec in p['inputs'].values()}
+    def guard(event,args):
+        if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
+            path=Path(os.fsdecode(args[0])).resolve()
+            if path in forbidden or path.name in ['y.npy','labels.npy','truth.npy','evaluation.json','summary.json']:
+                raise PermissionError('Training oracle boundary: '+str(path))
+    sys.addaudithook(guard)
+    import runpy
+    out=STUDY/'runs'/ds/f'seed{seed}'
+    assert not out.exists(), 'Do not refit partial block'
+    sys.argv=[str(PACKAGE/'run_allocation.py'),'--data',str(STUDY/'prepared'/ds),
+        '--queries',str(STUDY/'queries'/ds/f'seed{seed}.npz'),'--output',str(out),'--seed',str(seed),'--budgets','400']
+    runpy.run_path(str(PACKAGE/'run_allocation.py'),run_name='__main__')
+
+def dispatch():
+    p=check();prepare()
+    import psutil
+    env=os.environ.copy()
+    for key in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS','NUMEXPR_NUM_THREADS']:env[key]='1'
+    sys.path.insert(0,str(PACKAGE))
+    from allocation_io import validate_seal
+    for ds in p['datasets']:
+        for seed in SEEDS:
+            term=STUDY/'terminals'/f'{ds}_{seed}.json'
+            if term.exists():continue
+            out=STUDY/'runs'/ds/f'seed{seed}'
+            if out.exists():
+                assert (out/'GLOBAL_PREDICTIONS_SEALED.json').exists(), 'Partial block needs explicit inspection, no restart'
+                _,rows=validate_seal(out)
+                save(term,dict(dataset=ds,seed=seed,status='complete',logical_records=len(rows),seal_sha256=sha(out/'GLOBAL_PREDICTIONS_SEALED.json')))
+                continue
+            if psutil.virtual_memory().available < 3*1024**3:
+                print('RESOURCE_WAIT',ds,seed,psutil.virtual_memory().available,flush=True);return
+            log=STUDY/'logs'/f'{ds}_{seed}.log';log.parent.mkdir(exist_ok=True)
+            start=time.monotonic();peak=0
+            with log.open('w',encoding='utf-8') as f:
+                proc=subprocess.Popen([sys.executable,'-X','utf8','-B',str(Path(__file__).resolve()),'worker','--dataset',ds,'--seed',str(seed)],env=env,stdout=f,stderr=subprocess.STDOUT)
+                print('START',ds,seed,'PID',proc.pid,flush=True)
+                while proc.poll() is None:
+                    try:peak=max(peak,psutil.Process(proc.pid).memory_info().rss)
+                    except psutil.Error:pass
+                    time.sleep(1)
+            status='failed';count=0;seal=None
+            if proc.returncode==0:
+                _,rows=validate_seal(out);count=len(rows);assert count==5
+                status='complete';seal=sha(out/'GLOBAL_PREDICTIONS_SEALED.json')
+            save(term,dict(dataset=ds,seed=seed,status=status,logical_records=count,exit_code=proc.returncode,
+                seconds=time.monotonic()-start,peak_rss=peak,seal_sha256=seal,log_sha256=sha(log)))
+            print('DONE',ds,seed,status,round(time.monotonic()-start,1),flush=True)
+    terminals=[read(STUDY/'terminals'/f'{ds}_{s}.json') for ds in p['datasets'] for s in SEEDS]
+    save(STUDY/'GLOBAL_SEAL.json',dict(protocol_sha256=sha(STUDY/'PROTOCOL.json'),terminals=terminals,
+        successful=sum(t['status']=='complete' for t in terminals),expected_blocks=10,
+        terminal_hashes={x.name:sha(x) for x in (STUDY/'terminals').glob('*.json')},sealed_utc=utc()))
+    print('GLOBALLY_SEALED',flush=True)
+
+def score():
+    p=check();seal=read(STUDY/'GLOBAL_SEAL.json');assert len(seal['terminals'])==10
+    for n,h in seal['terminal_hashes'].items():assert sha(STUDY/'terminals'/n)==h
+    sys.path.insert(0,str(PACKAGE))
+    from allocation_io import validate_seal
+    for t in seal['terminals']:
+        if t['status']=='complete':validate_seal(STUDY/'runs'/t['dataset']/f"seed{t['seed']}")
+    from score_allocation import score as score_block
+    rows=[]
+    for t in seal['terminals']:
+        if t['status']=='complete':
+            rows.extend(score_block(STUDY/'runs'/t['dataset']/f"seed{t['seed']}",Path(p['inputs'][t['dataset']]['path'])/'y.npy'))
+    save(STUDY/'evaluation_all.json',rows)
+    print('ALL_SCORED',len(rows),flush=True)
+
+if __name__=='__main__':
+    ap=argparse.ArgumentParser();ap.add_argument('action',choices=['setup','prepare','worker','dispatch','score']);ap.add_argument('--dataset');ap.add_argument('--seed',type=int)
+    a=ap.parse_args()
+    if a.action=='worker':worker(a.dataset,a.seed)
+    else:globals()[a.action]()

@@ -1,0 +1,653 @@
+[
+  {
+    "dataset": "3Sources",
+    "seed": 23,
+    "n": 169,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\3Sources\\seed23\\inputs.npz",
+      "sha256": "3cc3080cd11711733234142fecf2df4ced9291c0c27d916e3770c72a2f300c68"
+    },
+    "projection": {
+      "file": "paid/3Sources_s23.npz",
+      "sha256": "4fcaf38698434e078715ee86de97932f97984695f75a98132d8aaab2dbfd2a46"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "f914dcaebb6e7167e49bdee1048ef98b408525297421aec9ed6cd6a057249a03",
+        "byte_length": 332
+      },
+      "test.npy": {
+        "sha256": "b345b62325ef35c741cc0cadef41d203c8154dcdbcd7639da7a8639a22a492c2",
+        "byte_length": 1072
+      },
+      "pairs.npy": {
+        "sha256": "da113a54f1baf4ac2030b26ab3a00996c14a1f3774f22a2bf095bebfa7acba53",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "a79f99be4384e5e6c285b91fdce3d86b365d89c20c34e6e75218f889c6bffa44",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "3Sources",
+    "seed": 24,
+    "n": 169,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\3Sources\\seed24\\inputs.npz",
+      "sha256": "b5090a68754590ee1bf46bb45f1edab966b2d3266ecf9980abc5fca721805cfb"
+    },
+    "projection": {
+      "file": "paid/3Sources_s24.npz",
+      "sha256": "19facad3644becf6b93f48c8b5e4be128330fd189be1fe6e40aa8542006622db"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "0dddc21a0606644951d0fd72407b7ef9d3a204c525a825b9c9ccd30d42e0e878",
+        "byte_length": 332
+      },
+      "test.npy": {
+        "sha256": "aa53edaa2fc7a6fa0ae8486c128d12a441d39c8fc5822520beca4ab1ceba4f5c",
+        "byte_length": 1072
+      },
+      "pairs.npy": {
+        "sha256": "f862929d4f0f9f559d284302ab896b518d8d4545b156e32aaaa2cece31c5223f",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "05a16abc78b2875e69dcd215c8d1dfcb20b0131f7b854da7dfe8d0adac33030e",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "3Sources",
+    "seed": 25,
+    "n": 169,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\3Sources\\seed25\\inputs.npz",
+      "sha256": "3b5b8c26e66f754e20498f2623c4dc83d6ca04e8abda252fd694473bda50156f"
+    },
+    "projection": {
+      "file": "paid/3Sources_s25.npz",
+      "sha256": "72844b520b414b76249077e16c2dd3ca0ab896be43c2338830d4a6d22dd6f278"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "8ca726de0cfc3cc11479473d62c17d54cdb5292e2d9e0a1c38e4e1ac0955ee77",
+        "byte_length": 332
+      },
+      "test.npy": {
+        "sha256": "6f1b6a22595f4725897209450d7e1a85eae9aedc2d9d0f2c459616d96befce13",
+        "byte_length": 1072
+      },
+      "pairs.npy": {
+        "sha256": "67b8e04db6ece0222b6c49297ba78cacec9a25f6c20c7d1361e65fff3814240d",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "83f8f170816490c2648e52eb781e4238d9626bd16b45af247e53df5119705f93",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "BBC",
+    "seed": 23,
+    "n": 2225,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\BBC\\seed23\\inputs.npz",
+      "sha256": "742fc2009ce4ce2bc69d66afb0933d13e737030bf2923529274f326cd8276203"
+    },
+    "projection": {
+      "file": "paid/BBC_s23.npz",
+      "sha256": "043c8165f87938f1017be9e9b35c0dbaacef8344a4545094b074cc6e9e7ae8e2"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "6f7f19d9f6f966c1c0f79f091274b46f590c376e95d67459058e785160e8fc7e",
+        "byte_length": 2800
+      },
+      "test.npy": {
+        "sha256": "459a8be107b7659a1059fdc57bf483f71ad4f441d65b96899e5ea5f768f1fb87",
+        "byte_length": 12584
+      },
+      "pairs.npy": {
+        "sha256": "a7a4262d0b246752ee17da7c510844663875ff32f07a9c2315dedfd1af2a0c7b",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "c37749c34dd60b2eabbc409df01720abdf4bbaa62f51eb20dc4da731aec6cce1",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "BBC",
+    "seed": 24,
+    "n": 2225,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\BBC\\seed24\\inputs.npz",
+      "sha256": "89b06da42ecfee46e9a077fd4d6dd6fe889c84c7a99a34696e4ff532ef6b78e9"
+    },
+    "projection": {
+      "file": "paid/BBC_s24.npz",
+      "sha256": "bf567d46bbbbedd57cc93d59470e7ff3e201482748d7fa84791c3c357607a2a0"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "b19bdb7b0b8e3b59f3d25c83db76feba69b93a35fd751b1efaf2b49fbf013e0b",
+        "byte_length": 2800
+      },
+      "test.npy": {
+        "sha256": "840973613b817fcb80ed08e7564a06fae82de71a30939640da4609b6b29cccb5",
+        "byte_length": 12584
+      },
+      "pairs.npy": {
+        "sha256": "0d5fd4065d606f1c83f0c3dbaffb26a22d8765fe727d1a36a4a48e8e9b09b579",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "e0d90e324e61a36020a576f04ce5373d6b454044b0d132ba518a585237fb1572",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "BBC",
+    "seed": 25,
+    "n": 2225,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\BBC\\seed25\\inputs.npz",
+      "sha256": "b1653628f18431503fcedb0171833d6e07e015aef360c7bfe70edd2078772f2c"
+    },
+    "projection": {
+      "file": "paid/BBC_s25.npz",
+      "sha256": "5675aa3864154fe6ac1cd3a422db7d2aaceb5443d3732dd40c244d0dfd431d5d"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "aabb3f9865c98619b4eec6091565869db56d0c3def5460722feb0c55d57475e4",
+        "byte_length": 2800
+      },
+      "test.npy": {
+        "sha256": "27eb937b0e3a1adc1257ef545602c94eca39a4300e1c01f678b82c06d0d02796",
+        "byte_length": 12584
+      },
+      "pairs.npy": {
+        "sha256": "9cef538bb6d54d290a17f28e446f7275722a34431622ad76a6ff2567ded643c7",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "cc86d1b07390677ac70f533ae18d81ee1937d2bccd55901fe057f3285a032265",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Reuters",
+    "seed": 23,
+    "n": 1200,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Reuters\\seed23\\inputs.npz",
+      "sha256": "c7aa833120aa23524c479497755a345fd4e46396b68ef36ed9e1b6304663e0aa"
+    },
+    "projection": {
+      "file": "paid/Reuters_s23.npz",
+      "sha256": "b62fb19d7a7f0e07372eedbc21fd2443c4d7b34f6fcf145e3605a2899a26d961"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "22659eb8333270753ce1a2bb0d76250144256ca0fc39432dca09c5e8a8af4b15",
+        "byte_length": 1568
+      },
+      "test.npy": {
+        "sha256": "0c600a47658aeb5b71e1983aa197af599cb79279e0473591c2c8a8c9a3b41b25",
+        "byte_length": 6848
+      },
+      "pairs.npy": {
+        "sha256": "736555b8a8eff31428aab3a7ca95a4b6cafa3a5c432cfaf1d8ce5b259c82e1db",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "678e2360fd934c1bac72e2f0c5a5925bdb01f354716846edc921816bdfb07f63",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Reuters",
+    "seed": 24,
+    "n": 1200,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Reuters\\seed24\\inputs.npz",
+      "sha256": "c86d0d4f3b55a341ee8fd613059fd084a332d8e757c3645404356e55a2ce49ea"
+    },
+    "projection": {
+      "file": "paid/Reuters_s24.npz",
+      "sha256": "54e988d490895adeae1e413eb58dde5b43199b5abb56188b9f07b5c31a92298c"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "acfc2e4288b33e96af3a5339c8e459ef00985570e5806e729f81dd8a6e9952cb",
+        "byte_length": 1568
+      },
+      "test.npy": {
+        "sha256": "cda049bbe6014175df3dcd379f141d3aefecebaff8edf6b64e766cf9bde30efc",
+        "byte_length": 6848
+      },
+      "pairs.npy": {
+        "sha256": "4f1380d261a1ebbd4adf453a90fd93ce40e8a21d8b9af11a2b56411a8a3a41dd",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "1c4ed4a942e636e07d0ab153ba2ec6c6141e85b15c1d0ecf1df2ea8b3cf49f3c",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Reuters",
+    "seed": 25,
+    "n": 1200,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Reuters\\seed25\\inputs.npz",
+      "sha256": "086f2b2e73bbe94e2b5dbf9532baa5ff44eeff9d6a1474a9de880b9da322a4ae"
+    },
+    "projection": {
+      "file": "paid/Reuters_s25.npz",
+      "sha256": "7bd615185e433a30114e95666e698d5a6fe3bd0e10183ba196becea0175316ed"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "f30950aae7dce700d058a0b3786745a2f7096f4146b7c0f37668e629c6d5912c",
+        "byte_length": 1568
+      },
+      "test.npy": {
+        "sha256": "64d899dc0b794c9075fe15ea8ea3bd982a2efa2015363c2cbae5601f9ff3d8c0",
+        "byte_length": 6848
+      },
+      "pairs.npy": {
+        "sha256": "27904a7641a7f2e6febbb666552656328d27df214d854b133ba55b24811f992e",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "0031b1bfb24b3303637e57d1fe058bc6cb517f53af0aba403fcfa1d2e5ba3ee8",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Cora",
+    "seed": 23,
+    "n": 2708,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Cora\\seed23\\inputs.npz",
+      "sha256": "a5145826337880eae5aa095f80cdd4da0c8de0b2fce2cb8ba2c4596deb3415b5"
+    },
+    "projection": {
+      "file": "paid/Cora_s23.npz",
+      "sha256": "45643fac8c8ed28dd7b6fd352a4269e8ac2644565336b01022bafc3cb90a51a8"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "34a0c64e1a84074bacbb6cb1647d39e03f42846ae793b9addcedea798e6a564b",
+        "byte_length": 3376
+      },
+      "test.npy": {
+        "sha256": "57594eb341bb401e6148cfc8bd7003630e6552aa4a55d56ee9634cb42321e218",
+        "byte_length": 15296
+      },
+      "pairs.npy": {
+        "sha256": "0f752e6f0251e47923342012a1d7bac4ee8285cc27caab77dd7f0e5568d81812",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "3e34a80c857520b883475e0647221b90d9e315e534d7b68d0c5914b80a353d64",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Cora",
+    "seed": 24,
+    "n": 2708,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Cora\\seed24\\inputs.npz",
+      "sha256": "f8fe102b73a129a5348be21876657028cf88b4b294b701497877f8296c724716"
+    },
+    "projection": {
+      "file": "paid/Cora_s24.npz",
+      "sha256": "9e4f73c518d74a8e710d6c51a11349edcc20ae24c88ff9521feb1e524598264d"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "1bd0e22763b13facd195c101f31977514fc82846af70f7f58b31e86749a55ab0",
+        "byte_length": 3376
+      },
+      "test.npy": {
+        "sha256": "59519584388c10a611fa76fd8d174bee00b31137bb58e48a47a6699d0935e149",
+        "byte_length": 15296
+      },
+      "pairs.npy": {
+        "sha256": "6628d92e07906902e2c42792b619d12a623ad5bb50ec5b62cb047b96479ce62d",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "0a2b27dc6a155de3a63a8f8ef1234911d709f2c132083a3fa39a7a15eca825fc",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "Cora",
+    "seed": 25,
+    "n": 2708,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\Cora\\seed25\\inputs.npz",
+      "sha256": "d5837ca5cefbb3cdd66e84b3a6458f6bdf6feecd64bc117aba1a89ab028741d7"
+    },
+    "projection": {
+      "file": "paid/Cora_s25.npz",
+      "sha256": "740a2b0ffacbc8b8fd8f297da1b060db5d24bc4809b11c8ece000f2afd56e598"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "6cda1e79227c9719eb990343c86ae7a2cf1af65f4ba09408d8753f2072f5dec2",
+        "byte_length": 3376
+      },
+      "test.npy": {
+        "sha256": "33ef0e6ad8f9f60a118dea47b1bd545ea6d75a8c2d7df64b23b991900555cb90",
+        "byte_length": 15296
+      },
+      "pairs.npy": {
+        "sha256": "e335f9a2a6955648e4b60470f0fd7ae7e32e5e300afbb442ebeed73b756385b4",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "bc928bc113949d09f54b51842c8251422a82ec201c914e52499f2f7cb39c3413",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "CiteSeer",
+    "seed": 23,
+    "n": 3312,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\CiteSeer\\seed23\\inputs.npz",
+      "sha256": "fff4cd1a3fe11d0e8b22dd04df8a18bd7d8bee6e7efda686397e769f3464fc84"
+    },
+    "projection": {
+      "file": "paid/CiteSeer_s23.npz",
+      "sha256": "8156f47cdafcc9528d9664d0fcb8cdbfa6e76974f4b13f9874aa27e5629bf0a3"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "99a3d260a05d4d5f9af8e81b37841362da38a15be4aca1983c05b2b354b166f0",
+        "byte_length": 4104
+      },
+      "test.npy": {
+        "sha256": "2dd85ffefea3f9a89a8893d7fedc5bf8e85ee4443f1b9c490266a2d6141a3f61",
+        "byte_length": 18672
+      },
+      "pairs.npy": {
+        "sha256": "79e9984519ba94764885ab4d0ee5b48ecc761d4b753adb6e1695fe8e6def6432",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "c5a710c7d70ab9a0b34c06ea6c155237583cfaa32cfc103001d121a920f5cf5a",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "CiteSeer",
+    "seed": 24,
+    "n": 3312,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\CiteSeer\\seed24\\inputs.npz",
+      "sha256": "fb2cd8da317e3ddb46721af93dc9418fc0a57fb190fdfc21bf959bba4d6d7ca9"
+    },
+    "projection": {
+      "file": "paid/CiteSeer_s24.npz",
+      "sha256": "943f98c3bd7528f5bd0e4bf00efbde8f23831f1aa28059db3d3fcddf061ffdc2"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "c3d3ef51bcf9fecc08f184bb5ec27054a41b4a630e90a71a8313cbc6f212c211",
+        "byte_length": 4104
+      },
+      "test.npy": {
+        "sha256": "22b9a10dcab914c05631ab9c39843a6ef946c78076d2df24fef1ab065522a4ca",
+        "byte_length": 18672
+      },
+      "pairs.npy": {
+        "sha256": "2779e4573c7e3c4939ed48c489389e1d78af02058f850d129da53b30be617d3a",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "46d203ac274cf725c4febddcafb025ac1b5e9aa4410bdd892438481326d04650",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "CiteSeer",
+    "seed": 25,
+    "n": 3312,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\balanced_selection\\CiteSeer\\seed25\\inputs.npz",
+      "sha256": "7cb522ef9693b2b2fdef97aa2e893df1780e6ec67f30eb6d351443f7d7bad8bc"
+    },
+    "projection": {
+      "file": "paid/CiteSeer_s25.npz",
+      "sha256": "54b05ac34e89533f72ef3cb4b6fb5d639443af3dc759e8c8fe29e6e4d291ef58"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "783b4803f5e8ed598f780d32bb4518a506f016635e59389407f7305fa5f512d2",
+        "byte_length": 4104
+      },
+      "test.npy": {
+        "sha256": "d3dbc29dcd524a193fbf2fdc1ad88501f06707569db10582313b576399acf750",
+        "byte_length": 18672
+      },
+      "pairs.npy": {
+        "sha256": "5bda88000717f84f4672bfcfc5818cb485fb10e619c328a36d852e3a20e325ba",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "d1d102b17aa73f75c894c661cd1221ab4dd75b1a187e61fd6e67dbe41ed61ad3",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 41,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\confirmation_frozen_v1\\seed41\\inputs.npz",
+      "sha256": "fec47178961eabd65bc39e4d6d7865f80074590974c9137feb65abfab4454ba4"
+    },
+    "projection": {
+      "file": "paid/20NG_s41.npz",
+      "sha256": "0ac5011f809ca882878879a83c033b0624f930af00db730b3b6c802cb91abe4a"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "fd9eb9f80de9921d57a713becf5c9a75685b50a7e123ce333bed2a65b474ea10",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "172443d85fe169fc2b11221b998912725323f72f8935147c674b43b459a6d739",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "5c0b3dce376398aad6af3033a5306604206b72123674ba67503256df5082509b",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "dffe5da631fd9abdc3a6ed6a24f22ea98335a4f3d056b44c6584c445b0155196",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 42,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\confirmation_frozen_v1\\seed42\\inputs.npz",
+      "sha256": "bd08b07c3f525fce02229c925c91ced7650f8ec007afe389eb05d9870abd31d3"
+    },
+    "projection": {
+      "file": "paid/20NG_s42.npz",
+      "sha256": "1c26cbc7f64ad4d7d3531191ab0b01d56aafeb4369dc50f6114686e0fcbeaddf"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "c5a3ecb82eab9808a4dea1747e3d668d3e06339e35f7823b7901bd44d00b7ce1",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "48c58008ab4335d95f98db9d29a1c6e162ad4a63a65565d07e4a792b7d73ab6c",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "ff59dd48585190d90bd73f50da675522dc4946007f418c2c1716e071afeb38e6",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "08908823807eba983fbc6b0a59080279d752c737c487e2b7fa4346bf3056cb91",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 43,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\confirmation_frozen_v1\\seed43\\inputs.npz",
+      "sha256": "971da63adb8df25e66683d9682199a93f7b23668b23a1b950fea06398698d544"
+    },
+    "projection": {
+      "file": "paid/20NG_s43.npz",
+      "sha256": "0d08f7bd7b5be9715e857b6ad7c0cda28601ac4a15c8eb8a7e3a0a4ea43a6e00"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "4240292e5d17e2d56cfb9bb3ac1c544ce63324478bc16a8c4dc23066cba83ab2",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "310bc311974e7ef59802ff000b1907fd35514941c04fea0b835995d7fceadc2e",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "e07ce31522a9b1c4da0f20d20f56c8141a85dbe25fb6fc56415f72684c4f296e",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "00562e6080bb259cfb4dc78edb4b95248f2bd7e14d868a403a523d5e33506cee",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 101,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\agnews_confirmation_v1\\seed101\\inputs.npz",
+      "sha256": "371398735d31d27937417ddecf1c0e0cf727cc8afce1e7a0627101b32e08500d"
+    },
+    "projection": {
+      "file": "paid/AGNews_s101.npz",
+      "sha256": "61c41fd5ef55745e984a67a51baa4b4b6ae19d50ed6959796a13158b37b4c9b8"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "f63db838bcf810c2837de0eeb4c6033f5cc89d87034d393bda4692e2c7ee9971",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "2e0166f5735850166874b65c6928618828765d27b7f31c5ea27ce4fd3b15cc65",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "50bc6ff787bcd9547de36bc8bb13cad16c370b167e530b117932b2e72e9580c7",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "edb30871079a3ed163e9480203db83236696870794d046bb092dc657d3118ee7",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 102,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\agnews_confirmation_v1\\seed102\\inputs.npz",
+      "sha256": "b9aa324b8bfd50d0b07650bede3edc83ec2bfc82abc0bcba381a45cd5753cfc3"
+    },
+    "projection": {
+      "file": "paid/AGNews_s102.npz",
+      "sha256": "d2b2cedc2cf6857dd2aee2ea4b2303c4cb1c4c82fd978ddd74a6f317465ae856"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "5839a6450e8ed39306ccd8e28ac971be80fd3732846356e24c1195be37247b5a",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "798c97f963aae6c70356e5aa22c0274c619c38e7d116856d43861eaa6631650e",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "2cb5b227533211a8d2308ffb2d372e81465d7da787f9d77470c5848e92a7031e",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "b1865f4c552398495c4774957bf6efbb5d13b3bf760534a29c20bbc14e6a6587",
+        "byte_length": 3328
+      }
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 103,
+    "n": 2000,
+    "source": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\agnews_confirmation_v1\\seed103\\inputs.npz",
+      "sha256": "4fdc11a18bd55573f30f6cc781d112a35f58f512805822dc353405f51facfb14"
+    },
+    "projection": {
+      "file": "paid/AGNews_s103.npz",
+      "sha256": "f15ae714d7aea13b208690c4108f4a8a0af0cb46df4f5d2c35ba8d8c37496b83"
+    },
+    "members": {
+      "pool.npy": {
+        "sha256": "465efb12d7fbf26562bbe952b60ee9fbc17462e640c9d1c46f661c6a1317eb90",
+        "byte_length": 2528
+      },
+      "test.npy": {
+        "sha256": "c833f26b09f88ff444cf570c5c73ddae68a78523edd0fe9dff50045403a6ce52",
+        "byte_length": 11328
+      },
+      "pairs.npy": {
+        "sha256": "83cf08400d0a2f740923a8f51cd40d8ec3a475dc576ae7e54532c6f0887ebe94",
+        "byte_length": 6528
+      },
+      "answers.npy": {
+        "sha256": "6baaa6c51fff4c4b892fd7c914acdba27b538941cc3a3cc680a902098922e606",
+        "byte_length": 3328
+      }
+    }
+  }
+]

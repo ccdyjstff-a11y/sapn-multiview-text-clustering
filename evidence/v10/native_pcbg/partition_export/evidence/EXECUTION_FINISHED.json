@@ -1,0 +1,21 @@
+{
+  "status": "FINISHED_WITH_COMPLETE_OUTCOME_LEDGER",
+  "protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+  "runtime_sha256": "6d27f2c7f4fb1f06756f98efd9025aa0e8346e240827251d8967f0a74ecba7cf",
+  "fit_calls": 168,
+  "counts": {
+    "controller_attempts": 168,
+    "matlab_started": 168,
+    "worker_native_return_reported": 163,
+    "strict_eligible": 106
+  },
+  "counting_note": "fit_calls means controller attempts, including attempts with no MATLAB start. Native optimization invocation count is not inferred.",
+  "CV_attempts": 144,
+  "final_attempts": 24,
+  "logical_outcomes": 42,
+  "global_stop": null,
+  "elapsed_wall_seconds": 15790.625,
+  "end_overshoot_seconds": 0.0,
+  "oracle_read": false,
+  "scoring_performed": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "field-corpus-public-access-v1",
+  "checked_date": "2026-11-17",
+  "20ng": {
+    "original_archive_new_download_verified": true,
+    "sha256": "8f1b2514ca22a5ade8fbb9cfa5727df95fa587f4c87b786e15c759fa66d95610",
+    "route": "20NG_PUBLIC_ACCESS.json"
+  },
+  "agnews": {
+    "original_archive_new_local_download_verified": false,
+    "author_linked_route_metadata_verified": true,
+    "author_route": "AGNEWS_AUTHOR_ROUTE.json",
+    "mirror_new_download_verified": true,
+    "mirror_sha256": "9a8c300eabb45750237fcc669f61cb8a3448f3ef6f6098e1ce340e444f6872be",
+    "original_and_mirror_containers_identical": false,
+    "all_regular_member_names_sizes_and_bytes_equal": true,
+    "mirror_preparation_verified": true,
+    "scientific_identity_and_full_reference_comparison_equal": true,
+    "adapter": "data_tools/prepare_agnews_mirror.py",
+    "verification": "AGNEWS_MIRROR_PREPARATION_VERIFICATION.json"
+  },
+  "raw_archives_distributed": false,
+  "model_training_performed": false,
+  "limits": "Availability is dated; connector metadata does not prove anonymous download; no redistribution licence is inferred."
+}

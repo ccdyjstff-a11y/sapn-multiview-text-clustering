@@ -1,0 +1,26 @@
+{
+  "actual": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "expected": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "all_versions_match": true,
+  "python": "3.10.22",
+  "python_executable": "D:/MVC/envs/mvc/python.exe",
+  "worker_pid": 4640,
+  "worker_cmdline": [
+    "D:\\MVC\\envs\\mvc\\python.exe",
+    "-I",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\selection_stability\\run_missing_fits.py"
+  ],
+  "worker_RSS_GiB_snapshot": 0.14837646484375,
+  "available_GiB_snapshot": 4.369861602783203,
+  "phase": "Recorded during initial BBC blocks; supplements original immutable software fields"
+}

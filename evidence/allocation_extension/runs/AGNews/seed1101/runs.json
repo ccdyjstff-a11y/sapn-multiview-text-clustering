@@ -1,0 +1,199 @@
+[
+  {
+    "dataset": "AGNews",
+    "seed": 1101,
+    "budget": 400,
+    "method": "full-CV",
+    "selected_lambda": 200.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_full_c2_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.00041627718776171346,
+    "seconds": 46.13005740000153,
+    "identity_sha256": "3829356bdcc27388a5eab5f215b0aa48dbc3b860869ca8e6917012837701441a",
+    "prediction_sha256": "ee934323df6cee90044a1f90698d0540e9ed18bce986ad9841e26f01d390ed68",
+    "state_sha256": "34e8504dfffde3b0a6dc660ee30e2f94c2b2c68209fb4efccac8a3afa11e7a23",
+    "invariants": {
+      "H_ref": "22e76c066e4dd5c6aebd1b102ed9b41bd2224a4e47f6cc94355cc9933067b610",
+      "r_v": "d3f4bf47614070155ca8c1531248ebe5601025785cf4ec1f6c0d837bf0426ed4",
+      "endpoints": "cc3bc5defbcfaa804a3e84e93cdeb610f1767231a0115ab127ca0f17e3f497d2",
+      "endpoint_order": "24e87924418c54e1292bf69e822cf9580853f24a8b9d7f32cc852fa676fc641a",
+      "effective_u": 0.04149999999999998,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "374867e498435efcb2b9ea4d164793f6c2fc1e859ba5b3854bcffcd530a7d590"
+    },
+    "final_a": [
+      0.4820546035595596,
+      0.5179453964404405
+    ],
+    "allocation": {
+      "eta": 0.5,
+      "consensus_coefficient": 0.025,
+      "individual_view_coefficient": 0.0125,
+      "total_positive_coefficient": 0.05,
+      "total_negative_coefficient": 0.05,
+      "target": 0.05
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 1101,
+    "budget": 400,
+    "method": "consensus-only-CV",
+    "selected_lambda": 200.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_consensus-only_c2_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0006952807655343873,
+    "seconds": 40.00245469999936,
+    "identity_sha256": "4a65fbbda13b43e912767e672ea44fba131c81ab1f2684c7f72f4928388d834a",
+    "prediction_sha256": "ffcbd9356c69819b6e3a15625fa4ff15cad7ce22645905fec1ce1a302e33c3c2",
+    "state_sha256": "5d48c98aed9f02b3955df885c953647c2c2c2bb7d38901be4b02657cdf288f52",
+    "invariants": {
+      "H_ref": "22e76c066e4dd5c6aebd1b102ed9b41bd2224a4e47f6cc94355cc9933067b610",
+      "r_v": "d3f4bf47614070155ca8c1531248ebe5601025785cf4ec1f6c0d837bf0426ed4",
+      "endpoints": "cc3bc5defbcfaa804a3e84e93cdeb610f1767231a0115ab127ca0f17e3f497d2",
+      "endpoint_order": "24e87924418c54e1292bf69e822cf9580853f24a8b9d7f32cc852fa676fc641a",
+      "effective_u": 0.04149999999999998,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "374867e498435efcb2b9ea4d164793f6c2fc1e859ba5b3854bcffcd530a7d590"
+    },
+    "final_a": [
+      0.4823853404759396,
+      0.5176146595240604
+    ],
+    "allocation": {
+      "eta": 0.0,
+      "consensus_coefficient": 0.05,
+      "individual_view_coefficient": 0.0,
+      "total_positive_coefficient": 0.05,
+      "total_negative_coefficient": 0.05,
+      "target": 0.05
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 1101,
+    "budget": 400,
+    "method": "views-only-CV",
+    "selected_lambda": 200.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_views-only_c2_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0006710733703886578,
+    "seconds": 39.87235990000045,
+    "identity_sha256": "3eed738b90a9c0af91f4a2a70a65f23f4a570b6142fe23cb52da502931814cc2",
+    "prediction_sha256": "9c2f2a9c8939609342c74b36ca8661f86ccea192f054a289cbcf17dd2bbaf730",
+    "state_sha256": "f118cd3720d2241dc14ff2de8bcb29051b5c06953ef0693214ecae8c06a5d896",
+    "invariants": {
+      "H_ref": "22e76c066e4dd5c6aebd1b102ed9b41bd2224a4e47f6cc94355cc9933067b610",
+      "r_v": "d3f4bf47614070155ca8c1531248ebe5601025785cf4ec1f6c0d837bf0426ed4",
+      "endpoints": "cc3bc5defbcfaa804a3e84e93cdeb610f1767231a0115ab127ca0f17e3f497d2",
+      "endpoint_order": "24e87924418c54e1292bf69e822cf9580853f24a8b9d7f32cc852fa676fc641a",
+      "effective_u": 0.04149999999999998,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "374867e498435efcb2b9ea4d164793f6c2fc1e859ba5b3854bcffcd530a7d590"
+    },
+    "final_a": [
+      0.482499004598523,
+      0.5175009954014771
+    ],
+    "allocation": {
+      "eta": 1.0,
+      "consensus_coefficient": 0.0,
+      "individual_view_coefficient": 0.025,
+      "total_positive_coefficient": 0.05,
+      "total_negative_coefficient": 0.05,
+      "target": 0.05
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 1101,
+    "budget": 400,
+    "method": "consensus-only-at-full-lambda",
+    "selected_lambda": 200.0,
+    "selection_rule": "Full-selected lambda; no additional selection",
+    "eligible_folds": 2,
+    "reused_CV_selected_final": true,
+    "stem": "Q400_consensus-only_c2_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0006952807655343873,
+    "seconds": 40.00245469999936,
+    "identity_sha256": "4a65fbbda13b43e912767e672ea44fba131c81ab1f2684c7f72f4928388d834a",
+    "prediction_sha256": "ffcbd9356c69819b6e3a15625fa4ff15cad7ce22645905fec1ce1a302e33c3c2",
+    "state_sha256": "5d48c98aed9f02b3955df885c953647c2c2c2bb7d38901be4b02657cdf288f52",
+    "invariants": {
+      "H_ref": "22e76c066e4dd5c6aebd1b102ed9b41bd2224a4e47f6cc94355cc9933067b610",
+      "r_v": "d3f4bf47614070155ca8c1531248ebe5601025785cf4ec1f6c0d837bf0426ed4",
+      "endpoints": "cc3bc5defbcfaa804a3e84e93cdeb610f1767231a0115ab127ca0f17e3f497d2",
+      "endpoint_order": "24e87924418c54e1292bf69e822cf9580853f24a8b9d7f32cc852fa676fc641a",
+      "effective_u": 0.04149999999999998,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "374867e498435efcb2b9ea4d164793f6c2fc1e859ba5b3854bcffcd530a7d590"
+    },
+    "final_a": [
+      0.4823853404759396,
+      0.5176146595240604
+    ],
+    "allocation": {
+      "eta": 0.0,
+      "consensus_coefficient": 0.05,
+      "individual_view_coefficient": 0.0,
+      "total_positive_coefficient": 0.05,
+      "total_negative_coefficient": 0.05,
+      "target": 0.05
+    }
+  },
+  {
+    "dataset": "AGNews",
+    "seed": 1101,
+    "budget": 400,
+    "method": "views-only-at-full-lambda",
+    "selected_lambda": 200.0,
+    "selection_rule": "Full-selected lambda; no additional selection",
+    "eligible_folds": 2,
+    "reused_CV_selected_final": true,
+    "stem": "Q400_views-only_c2_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0006710733703886578,
+    "seconds": 39.87235990000045,
+    "identity_sha256": "3eed738b90a9c0af91f4a2a70a65f23f4a570b6142fe23cb52da502931814cc2",
+    "prediction_sha256": "9c2f2a9c8939609342c74b36ca8661f86ccea192f054a289cbcf17dd2bbaf730",
+    "state_sha256": "f118cd3720d2241dc14ff2de8bcb29051b5c06953ef0693214ecae8c06a5d896",
+    "invariants": {
+      "H_ref": "22e76c066e4dd5c6aebd1b102ed9b41bd2224a4e47f6cc94355cc9933067b610",
+      "r_v": "d3f4bf47614070155ca8c1531248ebe5601025785cf4ec1f6c0d837bf0426ed4",
+      "endpoints": "cc3bc5defbcfaa804a3e84e93cdeb610f1767231a0115ab127ca0f17e3f497d2",
+      "endpoint_order": "24e87924418c54e1292bf69e822cf9580853f24a8b9d7f32cc852fa676fc641a",
+      "effective_u": 0.04149999999999998,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "374867e498435efcb2b9ea4d164793f6c2fc1e859ba5b3854bcffcd530a7d590"
+    },
+    "final_a": [
+      0.482499004598523,
+      0.5175009954014771
+    ],
+    "allocation": {
+      "eta": 1.0,
+      "consensus_coefficient": 0.0,
+      "individual_view_coefficient": 0.025,
+      "total_positive_coefficient": 0.05,
+      "total_negative_coefficient": 0.05,
+      "target": 0.05
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "checked_date": "2026-11-17",
+  "scope": "Dated observations from this environment; no claim of permanent unavailability",
+  "attempts": [
+    {
+      "url": "https://qwone.com/~jason/20Newsgroups/20news-bydate.tar.gz",
+      "result": "local connection timeout"
+    },
+    {
+      "url": "http://qwone.com/~jason/20Newsgroups/20news-bydate.tar.gz",
+      "result": "HTTP 200; complete new archive SHA verified"
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/5975967",
+      "result": "HTTP 403"
+    },
+    {
+      "url": "http://goo.gl/JyCnZq",
+      "result": "local direct request timed out; author-linked route identified with web and Drive tools"
+    },
+    {
+      "url": "https://drive.google.com/file/d/0Bz8a_Dbh9QhbUDNpeUdjb0wxRms/view?resourcekey=0-Q5sv-6rQnLTJArwcASJJow",
+      "result": "Connector returned listing and complete-file response metadata; local transfer of provider artifact failed, original SHA not newly verified"
+    },
+    {
+      "url": "https://s3.amazonaws.com/fast-ai-nlp/ag_news_csv.tgz",
+      "result": "HTTP 200; complete new mirror SHA verified; all four members byte-identical to verified historical original"
+    }
+  ],
+  "temporary_signed_urls_included": false,
+  "model_training_performed": false
+}

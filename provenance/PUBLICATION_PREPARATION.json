@@ -1,0 +1,49 @@
+{
+  "kind": "AUTHORIZED_PUBLICATION_PREPARATION",
+  "date": "2026-11-17",
+  "original_release_zip_sha256": "685523823e1af72b452833f2d7382dce5577de57ffb4eb141e179df34e7b7e11",
+  "original_release_file_count": 4969,
+  "original_release_manifest_sha256": "6778858e61f65b50581bfc5398a212342c0646767b8b6503ada6221074b62f46",
+  "remote_status_at_preparation": "Not yet created or uploaded; publication access is verified separately.",
+  "authorization": "The researcher explicitly requested creation of a public GitHub repository and publication of the prepared code/evidence materials. No separate open-source license was specified.",
+  "changed_or_added_documentation": [
+    {
+      "file": "README.md",
+      "original_sha256": "11b45cd75029b77891b21fc77345be5806ce76a84474f9ab6ec49f8428d8716e",
+      "prepared_sha256": "b6789a91a4638d448e16c77b53914434a8fde8ef20a411e938ef32995a8982dd",
+      "reason": "Update current distribution preparation and citation status after explicit publication authorization; retain scientific and execution boundaries."
+    },
+    {
+      "file": "RIGHTS.md",
+      "original_sha256": "db9d87b552e3025485b7132a19a1107541fb32a73d3155bc27855cb477363e24",
+      "prepared_sha256": "5a62e3ebc7c3d3a1ec4a56aeb94529b5318b258b464827e221c95d3f4bd93dcd",
+      "reason": "Record explicit permission to distribute this snapshot without inventing a standard open-source license, owner identity or DOI."
+    },
+    {
+      "file": "PUBLICATION_NOTES.md",
+      "original_sha256": "eaa5b5746f53dc56bd033fe1b0a1b23574e6eefcf0fdb268e48b310674a9a681",
+      "prepared_sha256": "b983b3002b59dfce6d81e9b9ce99e33a3a09a35d7114b2feb717f66d808997f6",
+      "reason": "Distinguish the original local release from the separately prepared public copy and retain frozen-path handling."
+    },
+    {
+      "file": "CITATION.md",
+      "original_sha256": null,
+      "prepared_sha256": "5a7f47a4fe8d9b9858df471530761a8ad42b1387c95ab3e4bb1903ef50f06a44",
+      "reason": "Provide truthful revision-identification guidance without inventing authors, repository URL, accepted-paper status or DOI."
+    },
+    {
+      "file": ".gitattributes",
+      "original_sha256": null,
+      "prepared_sha256": "9ac69a85fd2a2a8fe17783192eb82a88fcda15cfd5319ab7a0e93d37ffdfb640",
+      "reason": "Disable line-ending conversion for frozen source/evidence hashes and mark binary artifacts."
+    },
+    {
+      "file": ".gitignore",
+      "original_sha256": "1700c10f524293fa3e0193f577604737b0331290c5aafbfaf90f2cd0f7223775",
+      "prepared_sha256": "28a56ec6a517301d25d2aadfd30456a871c7a36d8c6356f1536e85332c758afe",
+      "reason": "Limit ignores to generated caches and OS temporary files; do not silently omit scientific or historical files."
+    }
+  ],
+  "scientific_sources_and_historical_evidence": "Retained byte-for-byte; no training, query generation, parameter selection or scoring changes.",
+  "note": "This record has no self-hash; SHA256SUMS records its content hash. Original archive hashes remain historical identities."
+}

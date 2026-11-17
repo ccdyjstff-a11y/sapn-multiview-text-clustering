@@ -1,0 +1,195 @@
+{
+  "3Sources": {
+    "n": 169,
+    "k": 6,
+    "views": 3,
+    "dimensions": [
+      3560,
+      3631,
+      3068
+    ],
+    "prepared_sha256": "c4e509ea89420a0f21d667bff4f4533fb3749adad9c2a2b80d9fb826096dd7f2",
+    "files": {
+      "metadata.json": {
+        "sha256": "1c639d12e41ff4fc670e0127518773feb1d56af3fe78e86f3149f14ce44d4e20",
+        "bytes": 620
+      },
+      "y.npy": {
+        "sha256": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1",
+        "bytes": 1480
+      },
+      "X0.npz": {
+        "sha256": "2b33d42004ddaa2bd85d84c2e3b895683f067fc55f65b21464cdd028d8a31bcc",
+        "bytes": 50864
+      },
+      "X1.npz": {
+        "sha256": "e5317f8c96551de0fcf64a46ef467a72a6fc39410ba3da9009de617ac61cf528",
+        "bytes": 57234
+      },
+      "X2.npz": {
+        "sha256": "aeadc8076f1a0897c1588609b6edfac5491b2383401109132837b91c971cc6b9",
+        "bytes": 45660
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_3Sources"
+  },
+  "BBC": {
+    "n": 2225,
+    "k": 5,
+    "views": 2,
+    "dimensions": [
+      4817,
+      4818
+    ],
+    "prepared_sha256": "bf9d115af2329566c0b65d176f40fdb5e1eeb722b6e28f22a251da432a55480a",
+    "files": {
+      "metadata.json": {
+        "sha256": "46335e179df5e5d1c587c64c6bcfe3a08c16206543e249398996de159b39c544",
+        "bytes": 588
+      },
+      "y.npy": {
+        "sha256": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11",
+        "bytes": 17928
+      },
+      "X0.npz": {
+        "sha256": "de63f206c6cfda0bc8a8fba3920f59cff2848ed42aa91078bcd85c38c04314ad",
+        "bytes": 372058
+      },
+      "X1.npz": {
+        "sha256": "9911d5863649f35492bf9fcf3bddb571e0b8dab6707f728bd097c38268fb93a6",
+        "bytes": 380258
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_BBC"
+  },
+  "Cora": {
+    "n": 2708,
+    "k": 7,
+    "views": 2,
+    "dimensions": [
+      1433,
+      2708
+    ],
+    "prepared_sha256": "a0475af8d333c3a43d62a9510bbd437acfdae1ee78c2f482b9392eeb8c730e05",
+    "files": {
+      "metadata.json": {
+        "sha256": "700cb4836abb865885075872893ae39b52e834d187190cb11d9464df14d90969",
+        "bytes": 704
+      },
+      "y.npy": {
+        "sha256": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf",
+        "bytes": 21792
+      },
+      "X0.npz": {
+        "sha256": "72ec8923797a0a8931742c00abc13ab14eceec24fa4ac8f0aba5b7779092900a",
+        "bytes": 81459
+      },
+      "X1.npz": {
+        "sha256": "1dbddda5fb25dcd9d4d675ddd41b0070ab7408fe649917f2597796b80dc5b16c",
+        "bytes": 25278
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_Cora"
+  },
+  "CiteSeer": {
+    "n": 3312,
+    "k": 6,
+    "views": 2,
+    "dimensions": [
+      3703,
+      3312
+    ],
+    "prepared_sha256": "d601edd6adde6fcc53acb0e53a98f3d409f9adb3d93af2d8af9ccfe958278ff5",
+    "files": {
+      "metadata.json": {
+        "sha256": "5a8458b26cdbd08a0e462a84a207b5ecf5fd5af211f7bb0adf602191d5a91a47",
+        "bytes": 702
+      },
+      "y.npy": {
+        "sha256": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6",
+        "bytes": 26624
+      },
+      "X0.npz": {
+        "sha256": "e49a076506f02dec603bbb58514e3d2de22a8d1dba1eabecd3bf5279b6d63a4e",
+        "bytes": 180471
+      },
+      "X1.npz": {
+        "sha256": "b99365a38904b06217f019bd08fec36e3fbd383f994b2540fed1af21967ddb47",
+        "bytes": 23156
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Text_v4_2_submission\\data\\prepared_CiteSeer"
+  },
+  "20NG_SubjectBody_2000": {
+    "n": 2000,
+    "k": 20,
+    "views": 2,
+    "dimensions": [
+      1265,
+      10000
+    ],
+    "prepared_sha256": "5884a6ebbcb21f13e384f428795ba5677cedc1a48a2d987477fd79fc034b3582",
+    "files": {
+      "metadata.json": {
+        "sha256": "6889034106fc8326e41d695e17365f4eb60a8fcb9d8a9a93e65e3c2accb5d6a9",
+        "bytes": 2536
+      },
+      "y.npy": {
+        "sha256": "c6d84814a3240b7fe873151238c4f562341b040fdd9e900b76f098fa2d74c213",
+        "bytes": 16128
+      },
+      "X0.npz": {
+        "sha256": "41efa61f6dff050ab7b53d69ea2830e97b807a34c710e2ec6dd9a550282ac00d",
+        "bytes": 31064
+      },
+      "X1.npz": {
+        "sha256": "a4d7fc2bbed7c8f59e1a5ecf0a530eb85aa899077a29869c9759efab720ab750",
+        "bytes": 814984
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\confirmation_data\\prepared_20NG_SubjectBody_2000"
+  },
+  "AGNews_TitleDescription_2000": {
+    "n": 2000,
+    "k": 4,
+    "views": 2,
+    "dimensions": [
+      1795,
+      4592
+    ],
+    "prepared_sha256": "c08f8fbacd42a0f3e883d6b39842e4277e2ae0699641d475ff3b7f001e99208a",
+    "files": {
+      "metadata.json": {
+        "sha256": "01c0329c8cece73992ac06f0a523f2855a67900fdec55ee9c1ed95c2dd803f45",
+        "bytes": 2092
+      },
+      "y.npy": {
+        "sha256": "bfafb3e09aaa229db2fe589145e0dc767a7d0af44e27776dc28fcbbaa3fe401c",
+        "bytes": 16128
+      },
+      "X0.npz": {
+        "sha256": "dddb84333dde08d5afe1bc3fbddd386c9dc47b23e67faf1473a5fc027ad25938",
+        "bytes": 63319
+      },
+      "X1.npz": {
+        "sha256": "be79a015c698be853d1e4c90083de58ab3c60771fca6a7931adaac18562d9218",
+        "bytes": 262107
+      }
+    },
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\agnews_confirmation_v1\\prepared_AGNews_TitleDescription_2000"
+  },
+  "Reuters": {
+    "n": 1200,
+    "k": 6,
+    "views": 5,
+    "local_read_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_MVC_v2\\data\\Reuters-1200.mat",
+    "files": {
+      "Reuters-1200.mat": {
+        "sha256": "cf549b72a66d7418a639a940899993c052bab9ec868fd493451cf85cd0d81d14",
+        "bytes": 2611831
+      }
+    },
+    "verified_original": "Grimal ReutersEN sample0",
+    "preprocessing": "per-feature minmax; exact original match certified by ORIGINAL_SOURCE_AUDIT.json"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "kind": "REAL_MAIN_COMPACT_EVIDENCE_REPLAY",
+  "exported_files_verified": 86,
+  "current_source_files_verified": 40,
+  "included_global_seal_members_verified": 73,
+  "omitted_fit_payloads": 25,
+  "historical_logical_predictions_equal": 5,
+  "historical_metric_values_equal": 25,
+  "historical_selections_equal": 3,
+  "reader_fresh_fit_compared": false,
+  "reader_fresh_array_checks": 0,
+  "reader_fresh_diagnostics": 0,
+  "real_training_performed_by_this_command": false,
+  "raw_labels_read": false,
+  "full_state_440_array_equality": "Recorded in VERIFICATION.json; omitted full factors are not independently replayed here"
+}

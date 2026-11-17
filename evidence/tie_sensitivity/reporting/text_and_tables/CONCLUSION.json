@@ -1,0 +1,9 @@
+{
+  "exact_independent_ACC_positive_count_stable": false,
+  "majority_of_independent_ACC_contrast_means_positive_under_all_rules": true,
+  "independent_ACC_sign_reversals_across_two_sensitivity_rules": 4,
+  "all_ACC_sign_reversals_across_two_sensitivity_rules": 4,
+  "interpretation_scope": "Only specified min/max rules within original best-CV tie sets, not all rules or other coefficients.",
+  "no_p_values": true,
+  "not_independent_confirmation": true
+}

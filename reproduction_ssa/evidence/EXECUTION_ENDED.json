@@ -1,0 +1,60 @@
+{
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "status": "EXECUTION_HALTED",
+  "safe_stop_confirmed": false,
+  "plan_complete": false,
+  "scheduler_stop_reason": "GROUP_MEMORY_WAIT_CAP",
+  "counts": {
+    "adapter_calls": 334,
+    "launcher_dispatches": 333,
+    "matlab_started": 333,
+    "terminal_attempt_lifecycles": 333
+  },
+  "logical_counts": {
+    "CV": 864,
+    "final": 42,
+    "selections": 24
+  },
+  "end_utc": "2026-10-27T12:52:21.593370+00:00",
+  "no_class_scoring": true,
+  "condition_commits": {
+    "3Sources_s23_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s23_Q400.json",
+      "sha256": "8dc2b83b71d44e184d2520988a6e979bb9e6ebc965afc1df87148a8863e58b81"
+    },
+    "3Sources_s24_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s24_Q400.json",
+      "sha256": "7d494ce5e4a6505ebf78ba86091d5ac00b8b10bc19738189804f16a58c0ad3cb"
+    },
+    "3Sources_s25_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s25_Q400.json",
+      "sha256": "3bdfe8ee5012a35fd3a935e45cccb3a184eec9248f97285627432023e907361a"
+    },
+    "3Sources_s23_Q160": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s23_Q160.json",
+      "sha256": "382bb24329d7705d7285cba42c17444649630f49172c90ab330e1f67d0b102c0"
+    },
+    "3Sources_s24_Q160": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s24_Q160.json",
+      "sha256": "c89be94304ef249766e534074d1188ab21c34368e104dfd1e25acf40b09c24c1"
+    },
+    "3Sources_s25_Q160": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\3Sources_s25_Q160.json",
+      "sha256": "a02bb99c9e972ae7f3b28a6f1d3bd90f48bc1f5bd881f3553e1c4395ad72e0a6"
+    },
+    "BBC_s23_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\BBC_s23_Q400.json",
+      "sha256": "e64bf91d33684f7dc201e05ba0862d2d11521a1690d3c49a25adb0f824b70513"
+    },
+    "BBC_s24_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\BBC_s24_Q400.json",
+      "sha256": "5d94b060c84c20b800098281e793edfb2f0b6537ac98f68a4682cb3f99e7f67d"
+    },
+    "BBC_s25_Q400": {
+      "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\conditions\\BBC_s25_Q400.json",
+      "sha256": "c175736aca861011ae06c02e7b1928a85a0795ff9036b4d54bbf6d4728f770ce"
+    }
+  }
+}

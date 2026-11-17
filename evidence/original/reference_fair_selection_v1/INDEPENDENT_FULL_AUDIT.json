@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "audit_kind": "full",
+  "scope": "identity, query-only selection, stage policy, saved states, and sealed metrics; no new model fits",
+  "protocol_sha256": "bf60ef3710974cb3a60e99fd767bc332d18aff372b6fdff09faabdab855f62d6",
+  "source_sha256": "c04d27361388920d20ff4dbfce653cda2ac5032caf8777332dda4c90887fd1fe",
+  "historical_coverage_u": [
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "Q": 160,
+      "final_u": 0.023668639053254448
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "Q": 400,
+      "final_u": 0.023668639053254448
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "Q": 160,
+      "final_u": 0.011834319526627168
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "Q": 400,
+      "final_u": 0.011834319526627168
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "Q": 160,
+      "final_u": 0.029585798816568087
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "Q": 400,
+      "final_u": 0.029585798816568087
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "Q": 160,
+      "final_u": 0.2359550561797753
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "Q": 400,
+      "final_u": 0.053932584269662964
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "Q": 160,
+      "final_u": 0.22966292134831456
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "Q": 400,
+      "final_u": 0.06426966292134828
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "Q": 160,
+      "final_u": 0.22292134831460675
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "Q": 400,
+      "final_u": 0.061573033707865155
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "Q": 160,
+      "final_u": 0.125
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "Q": 400,
+      "final_u": 0.0625
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "Q": 160,
+      "final_u": 0.13916666666666666
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "Q": 400,
+      "final_u": 0.06000000000000005
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "Q": 160,
+      "final_u": 0.13416666666666666
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "Q": 400,
+      "final_u": 0.05833333333333335
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "Q": 160,
+      "final_u": 0.3604135893648449
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "Q": 400,
+      "final_u": 0.14032496307237818
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "Q": 160,
+      "final_u": 0.37924667651403254
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "Q": 400,
+      "final_u": 0.14992614475627775
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "Q": 160,
+      "final_u": 0.3670605612998523
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "Q": 400,
+      "final_u": 0.15657311669128504
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "Q": 160,
+      "final_u": 0.446256038647343
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "Q": 400,
+      "final_u": 0.21678743961352653
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "Q": 160,
+      "final_u": 0.4305555555555556
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "Q": 400,
+      "final_u": 0.20048309178743962
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "Q": 160,
+      "final_u": 0.4501811594202898
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "Q": 400,
+      "final_u": 0.19444444444444442
+    }
+  ],
+  "validation_counts": {
+    "rows": 1080,
+    "failed": 0
+  },
+  "final_rows": 120,
+  "evaluation_checked": true,
+  "summary_checked": true,
+  "global_seal_sha256": "2259fdeeb73e969c844c1add890e57ff5f73ac7175c86a7ead0e2578ad9f10ec",
+  "unique_artifacts_checked": 1183
+}

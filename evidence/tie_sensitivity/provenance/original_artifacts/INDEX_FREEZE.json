@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "build_selection_index.py": "8d90a9bc3e6bc92a7694a21427e95983453bb26bfe70ef269e2a21ba4e6cabb4",
+    "candidate_cv_index_900.csv": "a2de46328cc4a59036d38021635f84179f50cf5aee246597877f4ab062266bd5",
+    "INDEX_SUMMARY.json": "421f8788150ca9dfeb60605793e327a758c65efa410846ad08b4ba55ee633161",
+    "logical_final_targets_1500.csv": "54d227431f1648ca6323c3c305ec362b9b5c1312b08ca6383be191b6e8734d86",
+    "missing_fits.csv": "ace61a4848f3e2e89bf361909049fe4e64eac4972d36661274bb8d3b2a11665b",
+    "policy_selection_summary.csv": "ccff8a022b9904677ea5a5fcc5618f25ed4d9ca677ee920bf7e071cdb75891e9",
+    "PROTOCOL.md": "b2782feafd5acb5b8dfeb69f00843d2b1e7f68e38b991622aeffb382747eb5c4",
+    "PROTOCOL_FREEZE.json": "fe211132a29413df70bb6b3be6553a8da09fbb9531ef78b5328faeac580697e1",
+    "runtime_estimate_by_dataset.csv": "0cf94a6ac797d29110d09aa91820388f7bb319093f85f9c2279954f957dd0cce",
+    "selection_policy_index_900.csv": "80e0cfebd9a6128885c2ba4fba37cc571c4973264d98e4809ed6257750c72b79",
+    "SOURCE_BINDINGS.json": "5f72ae83e6a1b68f6c11368dd4a1efb18429b7541d31814365297993c4cf7465",
+    "verified_reuse_fits.csv": "046dcf19f9d2b525b65ee0998973207406e4dbacace5363d9f02ced5a5c21090"
+  },
+  "new_fits_run": 0
+}

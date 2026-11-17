@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\small
+\caption{仅依赖选参记录的并列政策诊断。每行包含五个语料、十个种子的50次原CV选择。全部政策使用容差$10^{-12}$下相同的原最佳BER并列集合。计数不使用测试分数，改变数以原默认优先选择为参照。}\label{tab:tie-policy-selection-counts}
+\begin{tabular}{llrrrrrr}\toprule
+Allocation & Policy & $Q$ & Ties & Changed & $\lambda=2$ & $20$ & $200$\\\midrule
+Full & Default & 160 & 27 & 0 & 10 & 30 & 10\\
+Full & Min & 160 & 27 & 23 & 33 & 7 & 10\\
+Full & Max & 160 & 27 & 24 & 10 & 6 & 34\\
+Full & Default & 400 & 5 & 0 & 17 & 16 & 17\\
+Full & Min & 400 & 5 & 3 & 20 & 13 & 17\\
+Full & Max & 400 & 5 & 4 & 17 & 12 & 21\\
+Consensus & Default & 160 & 31 & 0 & 10 & 36 & 4\\
+Consensus & Min & 160 & 31 & 26 & 36 & 10 & 4\\
+Consensus & Max & 160 & 31 & 30 & 9 & 7 & 34\\
+Consensus & Default & 400 & 10 & 0 & 15 & 13 & 22\\
+Consensus & Min & 400 & 10 & 6 & 21 & 7 & 22\\
+Consensus & Max & 400 & 10 & 6 & 15 & 7 & 28\\
+Views & Default & 160 & 28 & 0 & 7 & 36 & 7\\
+Views & Min & 160 & 28 & 25 & 32 & 11 & 7\\
+Views & Max & 160 & 28 & 27 & 7 & 9 & 34\\
+Views & Default & 400 & 11 & 0 & 20 & 17 & 13\\
+Views & Min & 400 & 11 & 3 & 23 & 14 & 13\\
+Views & Max & 400 & 11 & 9 & 17 & 11 & 22\\
+\bottomrule\end{tabular}
+\end{table}

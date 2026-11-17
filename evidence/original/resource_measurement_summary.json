@@ -1,0 +1,974 @@
+{
+  "results": [
+    {
+      "dataset": "3Sources",
+      "method": "MV",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 169,
+      "k": 6,
+      "features": [
+        3560,
+        3631,
+        3068
+      ],
+      "nnz": [
+        24458,
+        27902,
+        22080
+      ],
+      "graph_nnz": 2091,
+      "data_sha256": "c4e509ea89420a0f21d667bff4f4533fb3749adad9c2a2b80d9fb826096dd7f2",
+      "input_sha256": "3cc3080cd11711733234142fecf2df4ced9291c0c27d916e3770c72a2f300c68",
+      "reference_prediction_sha256": "c38ee216bcca1cc496a75b5b59c385625018ca415ca49efc52703729277fb061",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.02143860000069253,
+        "load_and_adapt_cpu": 0.015625,
+        "graph_wall": 0.10296109999762848,
+        "graph_cpu": 0.109375,
+        "initialization_wall": 0.2832600999972783,
+        "initialization_cpu": 0.28125,
+        "fit_wall": 5.735694599992712,
+        "fit_cpu": 5.53125,
+        "total_measured_wall": 6.146286999995937,
+        "total_measured_cpu": 5.9375
+      },
+      "rss_before": 135348224,
+      "rss_after": 141422592,
+      "peak_working_set": 145571840,
+      "peak_pagefile": 1694224384,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [
+        "Maximum number of iterations 200 reached. Increase it to improve convergence."
+      ],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 2.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 80,
+        "stage2": 20,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "method": "EQ",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 169,
+      "k": 6,
+      "features": [
+        10259
+      ],
+      "nnz": [
+        74440
+      ],
+      "graph_nnz": 1223,
+      "data_sha256": "c4e509ea89420a0f21d667bff4f4533fb3749adad9c2a2b80d9fb826096dd7f2",
+      "input_sha256": "3cc3080cd11711733234142fecf2df4ced9291c0c27d916e3770c72a2f300c68",
+      "reference_prediction_sha256": "df2d664463025eba8c7205a09b3c9ed67ac151549267f5343168294862dbe861",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.02411470000515692,
+        "load_and_adapt_cpu": 0.03125,
+        "graph_wall": 0.10373350000008941,
+        "graph_cpu": 0.109375,
+        "initialization_wall": 0.1731551999982912,
+        "initialization_cpu": 0.171875,
+        "fit_wall": 2.0019133999885526,
+        "fit_cpu": 1.984375,
+        "total_measured_wall": 2.306120099994587,
+        "total_measured_cpu": 2.296875
+      },
+      "rss_before": 134799360,
+      "rss_after": 139735040,
+      "peak_working_set": 147501056,
+      "peak_pagefile": 1696260096,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 20.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 40,
+        "stage2": 20,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "MV",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 2225,
+      "k": 5,
+      "features": [
+        4817,
+        4818
+      ],
+      "nnz": [
+        142165,
+        144609
+      ],
+      "graph_nnz": 28605,
+      "data_sha256": "bf9d115af2329566c0b65d176f40fdb5e1eeb722b6e28f22a251da432a55480a",
+      "input_sha256": "742fc2009ce4ce2bc69d66afb0933d13e737030bf2923529274f326cd8276203",
+      "reference_prediction_sha256": "98a5b7a2e4b0b29566ef22d84efb98139b1d4ad45fd97b26591c5e2b90c88106",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.03278340000542812,
+        "load_and_adapt_cpu": 0.03125,
+        "graph_wall": 1.0327589999942575,
+        "graph_cpu": 1.03125,
+        "initialization_wall": 0.7455712999944808,
+        "initialization_cpu": 0.734375,
+        "fit_wall": 63.59320219999063,
+        "fit_cpu": 62.390625,
+        "total_measured_wall": 65.40972710000642,
+        "total_measured_cpu": 64.1875
+      },
+      "rss_before": 135675904,
+      "rss_after": 146903040,
+      "peak_working_set": 161722368,
+      "peak_pagefile": 1711857664,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 2.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 200,
+        "stage2": 150,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "BBC",
+      "method": "EQ",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 2225,
+      "k": 5,
+      "features": [
+        9635
+      ],
+      "nnz": [
+        286774
+      ],
+      "graph_nnz": 16509,
+      "data_sha256": "bf9d115af2329566c0b65d176f40fdb5e1eeb722b6e28f22a251da432a55480a",
+      "input_sha256": "742fc2009ce4ce2bc69d66afb0933d13e737030bf2923529274f326cd8276203",
+      "reference_prediction_sha256": "123f65acd752274dad9116de09d0eeb88d36a55ff2bf1c408cdb2533f18f3f69",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.03953529999125749,
+        "load_and_adapt_cpu": 0.046875,
+        "graph_wall": 0.7114206999976886,
+        "graph_cpu": 0.6875,
+        "initialization_wall": 0.7651434999861522,
+        "initialization_cpu": 0.765625,
+        "fit_wall": 20.270112199999858,
+        "fit_cpu": 19.765625,
+        "total_measured_wall": 21.791041499993298,
+        "total_measured_cpu": 21.28125
+      },
+      "rss_before": 135163904,
+      "rss_after": 146554880,
+      "peak_working_set": 167428096,
+      "peak_pagefile": 1716301824,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [
+        "Maximum number of iterations 200 reached. Increase it to improve convergence."
+      ],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 200.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 50,
+        "stage2": 100,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "MV",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 1200,
+      "k": 6,
+      "features": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "nnz": [
+        42018,
+        41601,
+        40769,
+        40936,
+        40534
+      ],
+      "graph_nnz": 15332,
+      "data_sha256": "ad4c130a5501b6b720b829dd43cc0dc51f4a320dd0f5e8d984b3c3768619bbf5",
+      "input_sha256": "c7aa833120aa23524c479497755a345fd4e46396b68ef36ed9e1b6304663e0aa",
+      "reference_prediction_sha256": "aabd435221f9dc098c4cd07b123bbfea2d7c310d9f57b1f034af7bc3c4109d25",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.665625399997225,
+        "load_and_adapt_cpu": 0.671875,
+        "graph_wall": 0.7217864999984158,
+        "graph_cpu": 0.6875,
+        "initialization_wall": 0.7075248000037391,
+        "initialization_cpu": 0.6875,
+        "fit_wall": 41.92527580000751,
+        "fit_cpu": 40.96875,
+        "total_measured_wall": 44.0245658000058,
+        "total_measured_cpu": 43.015625
+      },
+      "rss_before": 135000064,
+      "rss_after": 145285120,
+      "peak_working_set": 272535552,
+      "peak_pagefile": 1789014016,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [
+        "Maximum number of iterations 200 reached. Increase it to improve convergence.",
+        "Maximum number of iterations 200 reached. Increase it to improve convergence.",
+        "Maximum number of iterations 200 reached. Increase it to improve convergence."
+      ],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 2.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 90,
+        "stage2": 80,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "method": "EQ",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 1200,
+      "k": 6,
+      "features": [
+        10000
+      ],
+      "nnz": [
+        205858
+      ],
+      "graph_nnz": 7079,
+      "data_sha256": "ad4c130a5501b6b720b829dd43cc0dc51f4a320dd0f5e8d984b3c3768619bbf5",
+      "input_sha256": "c7aa833120aa23524c479497755a345fd4e46396b68ef36ed9e1b6304663e0aa",
+      "reference_prediction_sha256": "0c27910d246a9aaeaada049cc68744eed5b6be46ba663302f3e084f93dc430d1",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.6369307999993907,
+        "load_and_adapt_cpu": 0.640625,
+        "graph_wall": 0.30293869999877643,
+        "graph_cpu": 0.296875,
+        "initialization_wall": 0.14716049999697134,
+        "initialization_cpu": 0.15625,
+        "fit_wall": 9.34635619999608,
+        "fit_cpu": 9.140625,
+        "total_measured_wall": 10.437284400002682,
+        "total_measured_cpu": 10.234375
+      },
+      "rss_before": 135180288,
+      "rss_after": 143548416,
+      "peak_working_set": 272973824,
+      "peak_pagefile": 1789526016,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 2.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 50,
+        "stage2": 40,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "MV",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 2708,
+      "k": 7,
+      "features": [
+        1433,
+        2708
+      ],
+      "nnz": [
+        49216,
+        10556
+      ],
+      "graph_nnz": 28797,
+      "data_sha256": "a0475af8d333c3a43d62a9510bbd437acfdae1ee78c2f482b9392eeb8c730e05",
+      "input_sha256": "a5145826337880eae5aa095f80cdd4da0c8de0b2fce2cb8ba2c4596deb3415b5",
+      "reference_prediction_sha256": "a81bf88fbcf9636d03fbb16929061bbf8c3cbac7c43aaf5d3577281a68953b01",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.0204373000015039,
+        "load_and_adapt_cpu": 0.015625,
+        "graph_wall": 0.7396731000044383,
+        "graph_cpu": 0.71875,
+        "initialization_wall": 0.1292356999911135,
+        "initialization_cpu": 0.125,
+        "fit_wall": 38.414796600001864,
+        "fit_cpu": 37.359375,
+        "total_measured_wall": 39.30973660000018,
+        "total_measured_cpu": 38.234375
+      },
+      "rss_before": 135540736,
+      "rss_after": 145416192,
+      "peak_working_set": 151965696,
+      "peak_pagefile": 1700052992,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 200.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 160,
+        "stage2": 30,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "Cora",
+      "method": "EQ",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 2708,
+      "k": 7,
+      "features": [
+        4141
+      ],
+      "nnz": [
+        59772
+      ],
+      "graph_nnz": 19022,
+      "data_sha256": "a0475af8d333c3a43d62a9510bbd437acfdae1ee78c2f482b9392eeb8c730e05",
+      "input_sha256": "a5145826337880eae5aa095f80cdd4da0c8de0b2fce2cb8ba2c4596deb3415b5",
+      "reference_prediction_sha256": "01b82b2c78906657f67ec2d2b969faeff80a49f1617f342d4fc1fc6034f624c5",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.020028700004331768,
+        "load_and_adapt_cpu": 0.015625,
+        "graph_wall": 0.4931780000042636,
+        "graph_cpu": 0.484375,
+        "initialization_wall": 0.07445089999237098,
+        "initialization_cpu": 0.078125,
+        "fit_wall": 19.92523350000556,
+        "fit_cpu": 19.328125,
+        "total_measured_wall": 20.516433199998573,
+        "total_measured_cpu": 19.90625
+      },
+      "rss_before": 135303168,
+      "rss_after": 144539648,
+      "peak_working_set": 151236608,
+      "peak_pagefile": 1699311616,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 200.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 110,
+        "stage2": 30,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "MV",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 3312,
+      "k": 6,
+      "features": [
+        3703,
+        3312
+      ],
+      "nnz": [
+        105165,
+        9196
+      ],
+      "graph_nnz": 32992,
+      "data_sha256": "d601edd6adde6fcc53acb0e53a98f3d409f9adb3d93af2d8af9ccfe958278ff5",
+      "input_sha256": "fff4cd1a3fe11d0e8b22dd04df8a18bd7d8bee6e7efda686397e769f3464fc84",
+      "reference_prediction_sha256": "94c5bebb0fabb8c662c6db89c93a4f38ad3a89ea2ee2c6588ce37ae33a797cc2",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.01927429999341257,
+        "load_and_adapt_cpu": 0.03125,
+        "graph_wall": 1.1309480000054464,
+        "graph_cpu": 1.09375,
+        "initialization_wall": 0.22781499999109656,
+        "initialization_cpu": 0.234375,
+        "fit_wall": 34.96161420000135,
+        "fit_cpu": 33.984375,
+        "total_measured_wall": 36.346936199988704,
+        "total_measured_cpu": 35.34375
+      },
+      "rss_before": 134778880,
+      "rss_after": 145518592,
+      "peak_working_set": 154505216,
+      "peak_pagefile": 1703239680,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 200.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 120,
+        "stage2": 50,
+        "continuation": 0
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "method": "EQ",
+      "seed": 23,
+      "total_queries": 400,
+      "n": 3312,
+      "k": 6,
+      "features": [
+        7015
+      ],
+      "nnz": [
+        114361
+      ],
+      "graph_nnz": 23709,
+      "data_sha256": "d601edd6adde6fcc53acb0e53a98f3d409f9adb3d93af2d8af9ccfe958278ff5",
+      "input_sha256": "fff4cd1a3fe11d0e8b22dd04df8a18bd7d8bee6e7efda686397e769f3464fc84",
+      "reference_prediction_sha256": "b663032230c7cdac7a0516c3a40648a3cff9f1d22ccbb94bad995c1df465dc09",
+      "source_hashes": {
+        "measure_sapn_resources.py": "1fc193946dce7779b778e959dd4eb5ba6beb50c22d3eea0fa1c40e7f389b2299",
+        "RESOURCE_MEASUREMENT_PROTOCOL.md": "fc003000dd2be9e99950d625af4b46c02bb82002e26de812ff0b1a7eb65c169c",
+        "delivery_research/sapn_text_research.py": "a4e4fb07413fd5585946f6d2f38d7bb0e463aa03764f9d726df8f0744e8a7443",
+        "native_priors_experiment.py": "925313e5d6acff878bd2923821163d39f710398a7b8e6016f95ac955cfae12c6"
+      },
+      "times": {
+        "load_and_adapt_wall": 0.027776000002631918,
+        "load_and_adapt_cpu": 0.015625,
+        "graph_wall": 0.7873304000095231,
+        "graph_cpu": 0.765625,
+        "initialization_wall": 0.48850759999186266,
+        "initialization_cpu": 0.46875,
+        "fit_wall": 13.357654400009778,
+        "fit_cpu": 13.046875,
+        "total_measured_wall": 14.667482000004384,
+        "total_measured_cpu": 14.296875
+      },
+      "rss_before": 135237632,
+      "rss_after": 145653760,
+      "peak_working_set": 155607040,
+      "peak_pagefile": 1704775680,
+      "environment": {
+        "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "logical_cpus": 24,
+        "physical_cpus": 16,
+        "total_memory": 16944848896,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "vcomp",
+            "filepath": "D:\\MVC\\envs\\mvc\\lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+            "version": null
+          }
+        ],
+        "other_python_processes": 1
+      },
+      "initialization_warnings": [
+        "Maximum number of iterations 200 reached. Increase it to improve convergence."
+      ],
+      "verified": true,
+      "graph_max_error": 0.0,
+      "initialization_max_error": 0.0,
+      "final_H_max_error": 0.0,
+      "labels_equal": true,
+      "kkt_error": 0.0,
+      "selected_value": 2.0,
+      "converged": true,
+      "continuation": false,
+      "iterations": {
+        "stage1": 50,
+        "stage2": 40,
+        "continuation": 0
+      }
+    }
+  ],
+  "pending": [],
+  "scope": "Fresh process per dataset/method, one BLAS thread, other experiments concurrent. Prepared-data loading+graph+initialization+final fit; excludes raw preprocessing, imports and parameter search. One timing each, no speed ranking."
+}

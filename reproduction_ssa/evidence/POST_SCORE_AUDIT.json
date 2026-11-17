@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "kind": "POST_SCORE",
+  "completed_utc": "2026-10-27T12:56:43.956086+00:00",
+  "audit_source_sha256": "e4768e3c9c3156a92da6b91059f329575da7ae3e13008382b9171ded5c6aff13",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "global_seal_sha256": "d67fef91b70dab4863db06100f83e54a3daefc12ff1335f5deeda1012f6cc7ad",
+  "evaluation_manifest_sha256": "3a6a87d2e32cc470a0c9b6d468c1f6054c49848a8d8ec0148c16a2198e8be8f7",
+  "evaluation_sha256": "87c5a16daf1522afa4bc76e1fdaa5f125a7004b7b772edaa1309b620a165d14d",
+  "summary_sha256": "3f78b02d2d5a8b407974f65168506c8b3b0dcdbecf8701d9a9d352b59db35785",
+  "all42_rows_checked": true,
+  "all14_groups_checked": true,
+  "finite_predictions_recomputed": 9,
+  "all_CV_and_selection_records_recollected": true,
+  "all_budget_answers_checked_for_decoded_corpora": true,
+  "metric_method": "Independent contingency/entropy/pair-count formulas and direct pair BER; no sklearn metric call",
+  "numerical_tolerance": 2e-12,
+  "maximum_absolute_numeric_error": 3.3306690738754696e-16,
+  "numeric_comparisons": 120,
+  "scoring_contexts": [
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "query_sha256": "3cc3080cd11711733234142fecf2df4ced9291c0c27d916e3770c72a2f300c68",
+      "test_nodes": 118,
+      "test_pairs": 6903,
+      "evaluation_pair_seed": 51023
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "query_sha256": "b5090a68754590ee1bf46bb45f1edab966b2d3266ecf9980abc5fca721805cfb",
+      "test_nodes": 118,
+      "test_pairs": 6903,
+      "evaluation_pair_seed": 51024
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "query_sha256": "3b5b8c26e66f754e20498f2623c4dc83d6ca04e8abda252fd694473bda50156f",
+      "test_nodes": 118,
+      "test_pairs": 6903,
+      "evaluation_pair_seed": 51025
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "query_sha256": "742fc2009ce4ce2bc69d66afb0933d13e737030bf2923529274f326cd8276203",
+      "test_nodes": 1557,
+      "test_pairs": 10000,
+      "evaluation_pair_seed": 51023
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "query_sha256": "89b06da42ecfee46e9a077fd4d6dd6fe889c84c7a99a34696e4ff532ef6b78e9",
+      "test_nodes": 1557,
+      "test_pairs": 10000,
+      "evaluation_pair_seed": 51024
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "query_sha256": "b1653628f18431503fcedb0171833d6e07e015aef360c7bfe70edd2078772f2c",
+      "test_nodes": 1557,
+      "test_pairs": 10000,
+      "evaluation_pair_seed": 51025
+    }
+  ],
+  "labels_decoded_sha256": {
+    "3Sources": "41385d0677a9b933a103ba186cab8ecdf2a453774f67e29f90c9d973507bf3a1",
+    "BBC": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11"
+  },
+  "model_fits": 0,
+  "limitation": "Compact states and diagnostic witnesses checked by sealed collector; unretained dense states are not independently reconstructed."
+}

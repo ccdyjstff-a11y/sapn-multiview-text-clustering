@@ -1,0 +1,6 @@
+﻿dataset,blocks,evaluation_objects,sampled_pairs,positive_min,positive_max,negative_min,negative_max
+3Sources,10,118,6903,1493,1746,5157,5410
+BBC,10,1557,10000,1950,2058,7942,8050
+Reuters,10,840,10000,1613,1698,8302,8387
+Cora,10,1896,10000,1704,1895,8105,8296
+CiteSeer,10,2318,10000,1725,1902,8098,8275

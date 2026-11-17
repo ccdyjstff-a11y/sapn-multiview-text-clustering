@@ -1,0 +1,52 @@
+[
+  {
+    "release_file": "data_tools/prepare_bbc_citation.py",
+    "source_file": "data_preparation/prepare_bbc_citation.py",
+    "sha256": "7708feed0c98929f496a646a68348fce813b1a05c8009b295a3c131c309c7b30"
+  },
+  {
+    "release_file": "data_tools/bbc_citation_identity.json",
+    "source_file": "data_preparation/bbc_citation_identity.json",
+    "sha256": "9c7b6dce43da7f2cb5ad213da8f8830ee8959a6a13037dc160d29ffa845fd2a0"
+  },
+  {
+    "release_file": "data_tools/BBC_CORA_CITESEER_README.md",
+    "source_file": "data_preparation/README.md",
+    "sha256": "8512344b8bc6fae5bbc2f2e4e41313ae3b92ad40ef7fba9057639d019adc876a"
+  },
+  {
+    "release_file": "data_tools/PREPARATION_VERIFICATION_PORTABLE.json",
+    "source_file": "data_preparation/PREPARATION_VERIFICATION_PORTABLE.json",
+    "sha256": "e5e29ee4b8b68fb1f33559605f9c51057eade59aa1fa43147641b0c82b549a7c"
+  },
+  {
+    "release_file": "data_tools/PUBLIC_SOURCE_STATUS.json",
+    "source_file": "data_preparation/PUBLIC_SOURCE_STATUS.json",
+    "sha256": "c007f8182d1e07d6334e6f5370be5519c3b3e777e89e5c417e0dc7a1e2a217a8"
+  },
+  {
+    "release_file": "data_tools/prepare_agnews_mirror.py",
+    "source_file": "data_preparation/agnews_mirror/prepare_agnews_mirror.py",
+    "sha256": "31ac33e8828cb7aa2626efa5b55db8e0f8ce260fced18b3ded82f29b801bb293"
+  },
+  {
+    "release_file": "data_tools/agnews_mirror_identity.json",
+    "source_file": "data_preparation/agnews_mirror/agnews_mirror_identity.json",
+    "sha256": "241108307726c8ca7331faff728a76a63cf1b66905800c88ba094f19e646877d"
+  },
+  {
+    "release_file": "data_tools/AGNEWS_MIRROR_README.md",
+    "source_file": "data_preparation/agnews_mirror/AGNEWS_MIRROR_README.md",
+    "sha256": "351eae1ff76e06490409445de046aa5274133dca301ef8348dd2a9f0b7bba8d0"
+  },
+  {
+    "release_file": "data_tools/AGNEWS_MIRROR_PREPARATION_VERIFICATION.json",
+    "source_file": "data_preparation/agnews_mirror/AGNEWS_MIRROR_PREPARATION_VERIFICATION.json",
+    "sha256": "4c7d687862d1dfe0452ce80f46ab3fcac05637b83a3ce189609ce2ff71f33237"
+  },
+  {
+    "release_file": "data_tools/RELEASE_FILES_SHA256.json",
+    "source_file": "data_preparation/agnews_mirror/RELEASE_FILES_SHA256.json",
+    "sha256": "bfa8c50edbf8ae4431698ae99fc96bf84c305de9051b6665a4ace411e3cca121"
+  }
+]

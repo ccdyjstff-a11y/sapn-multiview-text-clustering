@@ -1,0 +1,21 @@
+{
+  "original_receipt_status": "COMPLETE_ZERO_EXIT_VALID_MARKERS",
+  "launcher_dispatched": true,
+  "matlab_started": true,
+  "terminal_attempt_lifecycle": true,
+  "worker_returned": true,
+  "consecutive_resource_caps": 0,
+  "previous_resource_cap_case": null,
+  "disposition": "ELIGIBLE",
+  "reason": "QUALIFIED_RETURN",
+  "run_id": "d68a2d2908af419cabf1bbe5fe3f70ec",
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "case_id": "BBC_s24_Q400_c12_f1",
+  "receipt_path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v10\\ssa_grouped_v2\\runs\\BBC_s24_Q400_c12_f1\\repeat1\\launcher_receipt.json",
+  "receipt_sha256": "f1e659f80d6e515e4bdb7996e4dcc01c87e3b94901505b3ab262c044c6d0a25f",
+  "finite_partition_retained": true,
+  "validation_BER": 0.471001221001221,
+  "numerical_eligible": true,
+  "decision_utc": "2026-10-27T10:22:57.415201+00:00"
+}

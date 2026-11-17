@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "final_records": 120,
+  "eligible_final_records": 120,
+  "files": {
+    "summary.json": "6d71e09033e41eb7f0bd95a7c40fa77dc9a5cdf86dd0861f1941703e86e55149",
+    "evaluation.json": "2027060dcaa4d1f338fdade073e6a6d997763dac4d8374dff7aa7416f4c1aaa3",
+    "per_run.csv": "74c8f5e70027e134e86cd448b78ab310d3ddd514a17deb0a584348fe3d508174",
+    "INDEPENDENT_ARITHMETIC_AUDIT.json": "fcbe10dcd5d1a76660efb7b5992e22c1b4a9de564147f3fcf35d90550ee85531",
+    "GLOBAL_PROTOCOL.json": "694f6af761bb19150ed4fb75b2d08d3fe42b14e357851a7bf464126dc27f939b",
+    "GLOBAL_PREDICTIONS_SEALED.json": "6793b256472157267ed583444dcb681aaf2db8e7b10bae5d4dfcdd51e564b8cd",
+    "HISTORICAL_REFIT_GATE.json": "0957df379c7715366d2c90ee1c2f86ee9c4c1830759d3081fd42d76c8a496e2d",
+    "SOURCE_AND_DOCUMENT_AUDIT.json": "73cf80269bb4573514e5fefbea7f7082342082ffedecbc88284efdf9587a60e0",
+    "score_audit.py": "0313dd1f567e64beacda0f0ae1892f15ca66a3835524f084e71839e2b96247f7"
+  },
+  "ready_scope": "Genuine historical refit, globally sealed new fits, post-seal score and independent objective/metric/selection arithmetic; failures not discarded."
+}

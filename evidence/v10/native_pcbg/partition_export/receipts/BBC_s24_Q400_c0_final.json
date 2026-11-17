@@ -1,0 +1,132 @@
+{
+  "case_id": "BBC_s24_Q400_c0_final",
+  "repeat": 1,
+  "start_utc": "2026-10-24T12:53:06.295510+00:00",
+  "protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+  "runtime_protocol_sha256": "6d27f2c7f4fb1f06756f98efd9025aa0e8346e240827251d8967f0a74ecba7cf",
+  "input_sha256": "3f5da81c8e1df5c524cb466c3ce6ff65b9d5aa11037921e60d2ccb4a8e4b9f03",
+  "run_id": "a3a4c6afe0dc4bd2809b704b59f0c17a",
+  "status": "WORKER_ACTIVE_TIME_CAP",
+  "matlab_started": true,
+  "events": [],
+  "output_hashes": {
+    "RUN_IDENTITY.json": "2ea994fccbe5f7a5e0614ae413c62b5e7f07156790f7848124f376815c29ab58",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "worker_started.json": "4d7c9b1ef7f698fd1ee4934031ec53ae884895b962155d81308e586f1d643df3"
+  },
+  "resource_start_wait_seconds": 0.0,
+  "argv": [
+    "D:/AxMath/bin/matlab.exe",
+    "-nosplash",
+    "-nodesktop",
+    "-singleCompThread",
+    "-sd",
+    "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_formal_v1\\runs\\BBC_s24_Q400_c0_final\\repeat1",
+    "-batch",
+    "addpath('C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_formal_v1'); pcbg_clock_bridge('C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_formal_v1\\inputs\\BBC_s24_Q400_c0_final.mat','C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_formal_v1\\runs\\BBC_s24_Q400_c0_final\\repeat1','C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\third_party\\PCBG_8e1f97e','a3a4c6afe0dc4bd2809b704b59f0c17a');"
+  ],
+  "runtime_environment": {
+    "MATLAB_PREFDIR": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\baseline_gap\\native_qualification_runtime_v3\\matlab_preferences\\R2025a"
+  },
+  "launched_pid": 7368,
+  "process_create_time": 1792846386.5941591,
+  "cleanup": {
+    "actions": [
+      {
+        "pid": 11664,
+        "create_time": 1792846399.2667432,
+        "action": "kill",
+        "result": "identity_not_live_skipped",
+        "identity_state": "gone",
+        "error": null
+      },
+      {
+        "pid": 35000,
+        "create_time": 1792846399.1960979,
+        "action": "kill",
+        "result": "identity_not_live_skipped",
+        "identity_state": "gone",
+        "error": null
+      },
+      {
+        "pid": 40924,
+        "create_time": 1792846399.1647353,
+        "action": "kill",
+        "result": "identity_not_live_skipped",
+        "identity_state": "gone",
+        "error": null
+      },
+      {
+        "pid": 27836,
+        "create_time": 1792846389.1464276,
+        "action": "kill",
+        "result": "identity_not_live_skipped",
+        "identity_state": "gone",
+        "error": null
+      },
+      {
+        "pid": 29284,
+        "create_time": 1792846388.663102,
+        "action": "kill",
+        "result": "identity_not_live_skipped",
+        "identity_state": "gone",
+        "error": null
+      },
+      {
+        "pid": 38680,
+        "create_time": 1792846387.9613752,
+        "action": "kill",
+        "result": "requested"
+      },
+      {
+        "pid": 36204,
+        "create_time": 1792846386.7320127,
+        "action": "kill",
+        "result": "requested"
+      },
+      {
+        "pid": 35472,
+        "create_time": 1792846386.6091857,
+        "action": "kill",
+        "result": "requested"
+      },
+      {
+        "pid": 7368,
+        "create_time": 1792846386.5941591,
+        "action": "kill",
+        "result": "requested"
+      }
+    ],
+    "unresolved_original_processes": [],
+    "discovery_errors": [],
+    "complete": true
+  },
+  "exit_code": 15,
+  "clock": {
+    "phase": "worker",
+    "status": "WORKER_ACTIVE_TIME_CAP",
+    "phase_wall_seconds": {
+      "startup": 11.98499999998603,
+      "worker": 600.4220000000205,
+      "shutdown": 0.0
+    },
+    "phase_active_seconds": {
+      "startup": 11.98499999998603,
+      "worker": 600.4220000000205,
+      "shutdown": 0.0
+    },
+    "marker_boundary_intervals": {
+      "started": [
+        11.98499999998603,
+        12.5
+      ]
+    },
+    "maximum_observed_poll_gap_seconds": 0.5320000000065193,
+    "worker_boundary_overcharge_upper_seconds": 0.5150000000139698,
+    "startup_wall_upper_seconds": 12.5,
+    "shutdown_wall_upper_seconds": 0,
+    "polling_error": "Worker time conservatively includes both observed boundary intervals; this is whole-worker time, not pure PCBG optimization time.",
+    "marker_error": null
+  },
+  "end_utc": "2026-10-24T13:03:19.467350+00:00"
+}

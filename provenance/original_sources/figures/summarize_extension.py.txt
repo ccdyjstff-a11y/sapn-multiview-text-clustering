@@ -1,0 +1,103 @@
+"""Post-seal independent rescoring, full summaries and a paired scientific figure."""
+from pathlib import Path
+import csv,hashlib,json,os,statistics,sys
+for key in ['OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','OMP_NUM_THREADS']:os.environ[key]='1'
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+from sklearn.metrics import normalized_mutual_info_score,adjusted_rand_score
+ROOT=Path(__file__).resolve().parent;STUDY=ROOT/'allocation_extension'
+OUT=STUDY/'reporting';OUT.mkdir(exist_ok=True)
+def read(p):return json.loads(Path(p).read_text('utf-8'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def writecsv(name,rows):
+ with (OUT/name).open('w',newline='',encoding='utf-8') as f:
+  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+def ber(z,p,a):
+ same=(z[p[:,0]]==z[p[:,1]])
+ if not ((a==1).any() and (a==-1).any()):return None
+ return float(((~same[a==1]).mean()+same[a==-1].mean())/2)
+p=read(STUDY/'PROTOCOL.json');seal=read(STUDY/'GLOBAL_SEAL.json')
+assert seal['protocol_sha256']==sha(STUDY/'PROTOCOL.json')
+assert len(seal['terminals'])==10 and seal['successful']==10
+sys.path.insert(0,str(STUDY/'solver'))
+from allocation_io import validate_seal
+for t in seal['terminals']:validate_seal(STUDY/'runs'/t['dataset']/f"seed{t['seed']}")
+records=read(STUDY/'evaluation_all.json');assert len(records)==50
+metrics=['ACC','NMI','ARI','BER_train','BER_unqueried'];diffs=[];denoms=[]
+for ds in p['datasets']:
+ y=np.load(Path(p['inputs'][ds]['path'])/'y.npy',allow_pickle=False)
+ for seed in p['seeds']:
+  d=STUDY/'runs'/ds/f'seed{seed}'
+  with np.load(d/'inputs.npz',allow_pickle=False) as inp: pool,test,pairs,answers=[inp[k].copy() for k in ['pool','test','pairs','answers']]
+  with np.load(d/'postseal_evaluation_pairs.npz',allow_pickle=False) as ep: epa,ea=[ep[k].copy() for k in ['pairs','answers']]
+  assert not np.intersect1d(test,pool).size and np.array_equal(np.sort(np.r_[test,pool]),np.arange(len(y)))
+  assert np.isin(epa,test).all() and len(np.unique(epa,axis=0))==len(epa)
+  assert np.array_equal(answers,np.where(y[pairs[:,0]]==y[pairs[:,1]],1,-1))
+  assert np.array_equal(ea,np.where(y[epa[:,0]]==y[epa[:,1]],1,-1))
+  denoms.append(dict(dataset=ds,seed=seed,pool=len(pool),evaluation_objects=len(test),queries=len(pairs),query_ML=int(sum(answers==1)),query_CL=int(sum(answers==-1)),evaluation_pairs=len(epa),evaluation_ML=int(sum(ea==1)),evaluation_CL=int(sum(ea==-1)),evaluation_pair_sha256=sha(d/'postseal_evaluation_pairs.npz')))
+  for r in [r for r in records if r['dataset']==ds and r['seed']==seed]:
+   with np.load(d/(r['stem']+'.npz'),allow_pickle=False) as a:z=a['labels'].copy()
+   yt,zt=y[test],z[test];_,yi=np.unique(yt,return_inverse=True);_,zi=np.unique(zt,return_inverse=True)
+   c=np.zeros((yi.max()+1,zi.max()+1),int);np.add.at(c,(yi,zi),1)
+   ii,jj=linear_sum_assignment(-c)
+   direct=dict(ACC=float(c[ii,jj].sum()/len(test)),NMI=normalized_mutual_info_score(yt,zt,average_method='arithmetic'),ARI=adjusted_rand_score(yt,zt),BER_train=ber(z,pairs,answers),BER_unqueried=ber(z,epa,ea))
+   for m in metrics:
+    assert direct[m] is not None and abs(direct[m]-r[m])<=1e-12
+    diffs.append(abs(direct[m]-r[m]))
+writecsv('evaluation_denominators_10.csv',denoms)
+clean=[{k:r[k] for k in ['dataset','seed','budget','method','selected_lambda','selection_rule','eligible_folds','converged','kkt','seconds']+metrics} for r in records]
+writecsv('absolute_runs_50.csv',clean)
+groups=[]
+methods=['full-CV','consensus-only-CV','views-only-CV','consensus-only-at-full-lambda','views-only-at-full-lambda']
+for ds in p['datasets']:
+ for method in methods:
+  rows=[r for r in records if r['dataset']==ds and r['method']==method];assert len(rows)==5
+  eligible=sum(r['converged'] for r in rows)
+  out=dict(dataset=ds,method=method,n_planned=5,n_eligible=eligible)
+  for m in metrics:
+   a=[100*r[m] for r in rows];out[m+'_mean']=statistics.mean(a) if eligible==5 else None;out[m+'_sd']=statistics.stdev(a) if eligible==5 else None
+  groups.append(out)
+writecsv('absolute_summary_10.csv',groups)
+paired=[];summary=[]
+for ds in p['datasets']:
+ for control in methods[1:]:
+  for m in metrics:
+   values=[];n_ok=0
+   for seed in p['seeds']:
+    f=next(r for r in records if r['dataset']==ds and r['seed']==seed and r['method']=='full-CV')
+    c=next(r for r in records if r['dataset']==ds and r['seed']==seed and r['method']==control)
+    delta=100*(f[m]-c[m]);ok=f['converged'] and c['converged'];n_ok+=ok;values.append(delta)
+    paired.append(dict(dataset=ds,control=control,metric=m,seed=seed,eligible=ok,delta_pp=delta))
+   assert len(values)==5
+   summary.append(dict(dataset=ds,control=control,metric=m,n_planned=5,n_eligible=n_ok,mean=statistics.mean(values) if n_ok==5 else None,sd=statistics.stdev(values) if n_ok==5 else None,median=statistics.median(values) if n_ok==5 else None,positive=sum(x>1e-12 for x in values),tie=sum(abs(x)<=1e-12 for x in values),negative=sum(x< -1e-12 for x in values)))
+writecsv('paired_values_200.csv',paired);writecsv('paired_summary_40.csv',summary)
+acc=[r for r in summary if r['metric']=='ACC'];writecsv('paired_ACC_8.csv',acc)
+audit=dict(status='PASS_INDEPENDENT_POST_SEAL_RESCORE',logical_records=len(records),metric_values=len(diffs),maximum_absolute_difference=max(diffs),eligible=sum(r['converged'] for r in records),protocol_sha256=sha(STUDY/'PROTOCOL.json'),global_seal_sha256=sha(STUDY/'GLOBAL_SEAL.json'),evaluation_sha256=sha(STUDY/'evaluation_all.json'),script_sha256=sha(__file__),scope='Independent recomputation from predicted labels and external true categories after all planned blocks were sealed. This verifies scoring, not a separate retraining.')
+(OUT/'INDEPENDENT_RESCORE.json').write_text(json.dumps(audit,indent=2),encoding='utf-8')
+
+import matplotlib;matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.labelsize':9,'axes.titlesize':10,'pdf.fonttype':42,'ps.fonttype':42})
+fig,axes=plt.subplots(1,2,figsize=(7.05,3.4),sharey=True)
+colors={'consensus-only':'#0072B2','views-only':'#D55E00'}
+all_x=[r['delta_pp'] for r in paired if r['metric']=='ACC']
+for row in acc:
+ if row['mean'] is not None:all_x += [row['mean']-row['sd'],row['mean']+row['sd']]
+lo,hi=min(all_x),max(all_x);pad=max((hi-lo)*.08,.3);lo=min(lo-pad,-.2);hi=max(hi+pad,.2)
+for ax,policy,title in zip(axes,['CV','at-full-lambda'],['a  Independent query-only selection','b  Full-selected coefficient controls']):
+ ax.axvline(0,color='.45',lw=.8,zorder=1)
+ for di,ds in enumerate(p['datasets']):
+  for ci,cm in enumerate(['consensus-only','views-only']):
+   control=cm+'-'+policy;ypos=di*2.5+ci
+   row=next(r for r in acc if r['dataset']==ds and r['control']==control)
+   pts=[r for r in paired if r['dataset']==ds and r['control']==control and r['metric']=='ACC']
+   for j,r in enumerate(pts):ax.scatter(r['delta_pp'],ypos+(j-2)*.055,s=20,marker='o' if ci==0 else '^',color=colors[cm],alpha=.55,zorder=3)
+   if row['mean'] is not None:ax.errorbar(row['mean'],ypos,xerr=row['sd'],fmt='D',markersize=4,color=colors[cm],capsize=3,lw=1.25,zorder=4)
+ ax.set_title(title,loc='left',pad=11);ax.set_xlim(lo,hi);ax.set_xlabel('Full − control ACC (percentage points)');ax.grid(axis='x',color='.9',lw=.6);ax.spines[['top','right']].set_visible(False)
+axes[0].set_yticks([0,1,2.5,3.5],['20NG / consensus','20NG / views','AG News / consensus','AG News / views']);axes[0].invert_yaxis()
+fig.subplots_adjust(left=.23,right=.99,bottom=.19,top=.86,wspace=.13)
+figpath=ROOT/'paper/figures/fig22_allocation_extension';fig.savefig(str(figpath)+'.pdf');fig.savefig(str(figpath)+'.png',dpi=260);fig.savefig(str(figpath)+'.svg');plt.close(fig)
+lines=['# Allocation extension results','', 'Known benchmark corpora; five prespecified seeds 1101–1105; Q=400. All planned contrasts are retained. No pooling with the development study.','', '| Corpus | Comparator | Mean ± SD (pp) | Median | +/0/− |','|---|---|---|---|---|']
+for r in acc:lines.append(f"| {r['dataset']} | {r['control']} | {r['mean']:+.4f} ± {r['sd']:.4f} | {r['median']:+.4f} | {r['positive']}/{r['tie']}/{r['negative']} |")
+(OUT/'RESULTS.md').write_text('\n'.join(lines),encoding='utf-8')
+print(json.dumps({'audit':audit,'ACC':acc},indent=2))

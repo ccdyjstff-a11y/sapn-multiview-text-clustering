@@ -1,0 +1,7 @@
+{
+  "frozen_at_utc": "2026-11-17T09:40:19.986306+00:00",
+  "source": "build_maintext_handoff.py",
+  "sha256": "3007bc86a078c83708aba84db79626fbf2dbc44ebec9746b2e3b464df4b1fc7b",
+  "scope": "Display of verified frozen results only; parent requested 40 ACC groups, direction changes and metric counterexamples; no fitting/selection/rescoring",
+  "new_evaluation_not_started": true
+}

@@ -1,0 +1,1138 @@
+{
+  "cells": [
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        200.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 78.53107344632768,
+      "ACC_sd": 7.056494913444522,
+      "ACC_terminal_mean": 78.53107344632768,
+      "NMI_mean": 68.69514510122367,
+      "NMI_sd": 8.517704593292134,
+      "NMI_terminal_mean": 68.69514510122367,
+      "ARI_mean": 69.1811440633076,
+      "ARI_sd": 11.644254626209467,
+      "ARI_terminal_mean": 69.1811440633076
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.05
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        200.0
+      ],
+      "ACC_mean": 74.57627118644068,
+      "ACC_sd": 2.935679334862502,
+      "ACC_terminal_mean": 74.57627118644068,
+      "NMI_mean": 63.67469177653663,
+      "NMI_sd": 3.514840056464847,
+      "NMI_terminal_mean": 63.67469177653663,
+      "ARI_mean": 64.0617945699916,
+      "ARI_sd": 3.665378148609381,
+      "ARI_terminal_mean": 64.0617945699916
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "ACC_mean": 77.40112994350282,
+      "ACC_sd": 1.9571195565750015,
+      "ACC_terminal_mean": 77.40112994350282,
+      "NMI_mean": 66.45049928398055,
+      "NMI_sd": 4.5532343406860125,
+      "NMI_terminal_mean": 66.45049928398055,
+      "ARI_mean": 67.72586407626652,
+      "ARI_sd": 3.9855301966923777,
+      "ARI_terminal_mean": 67.72586407626652
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        20.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 67.51412429378531,
+      "ACC_sd": 8.981984799765339,
+      "ACC_terminal_mean": 67.51412429378531,
+      "NMI_mean": 59.177490216478326,
+      "NMI_sd": 10.480869599941233,
+      "NMI_terminal_mean": 59.177490216478326,
+      "ARI_mean": 55.0901077274782,
+      "ARI_sd": 10.981290873132892,
+      "ARI_terminal_mean": 55.0901077274782
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 85.02824858757062,
+      "ACC_sd": 5.768524818266145,
+      "ACC_terminal_mean": 85.02824858757062,
+      "NMI_mean": 79.44035286044965,
+      "NMI_sd": 2.756162050973038,
+      "NMI_terminal_mean": 79.44035286044965,
+      "ARI_mean": 77.92211195456547,
+      "ARI_sd": 6.1670151981,
+      "ARI_terminal_mean": 77.92211195456547
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 85.31073446327684,
+      "ACC_sd": 5.448390260447997,
+      "ACC_terminal_mean": 85.31073446327684,
+      "NMI_mean": 79.60508505687835,
+      "NMI_sd": 2.497617677620681,
+      "NMI_terminal_mean": 79.60508505687835,
+      "ARI_mean": 78.3690327894182,
+      "ARI_sd": 5.63131612391674,
+      "ARI_terminal_mean": 78.3690327894182
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 85.31073446327684,
+      "ACC_sd": 5.448390260447997,
+      "ACC_terminal_mean": 85.31073446327684,
+      "NMI_mean": 79.60508505687835,
+      "NMI_sd": 2.497617677620681,
+      "NMI_terminal_mean": 79.60508505687835,
+      "ARI_mean": 78.3690327894182,
+      "ARI_sd": 5.63131612391674,
+      "ARI_terminal_mean": 78.3690327894182
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 78.24858757062147,
+      "ACC_sd": 5.17805163271846,
+      "ACC_terminal_mean": 78.24858757062147,
+      "NMI_mean": 67.98522777745605,
+      "NMI_sd": 5.4834028079248585,
+      "NMI_terminal_mean": 67.98522777745605,
+      "ARI_mean": 66.80797458753347,
+      "ARI_sd": 5.263599380947026,
+      "ARI_terminal_mean": 66.80797458753347
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 81.6741597088418,
+      "ACC_sd": 8.39873107462196,
+      "ACC_terminal_mean": 81.6741597088418,
+      "NMI_mean": 68.57723548205551,
+      "NMI_sd": 6.528094000109704,
+      "NMI_terminal_mean": 68.57723548205551,
+      "ARI_mean": 66.88038459051477,
+      "ARI_sd": 10.123753191162027,
+      "ARI_terminal_mean": 66.88038459051477
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.25,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 82.74459430528795,
+      "ACC_sd": 8.478166371768436,
+      "ACC_terminal_mean": 82.74459430528795,
+      "NMI_mean": 69.0001932486977,
+      "NMI_sd": 7.301641267196789,
+      "NMI_terminal_mean": 69.0001932486977,
+      "ARI_mean": 67.87495941794823,
+      "ARI_sd": 10.713914098851582,
+      "ARI_terminal_mean": 67.87495941794823
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 58.21023335474202,
+      "ACC_sd": 9.760321029390468,
+      "ACC_terminal_mean": 58.21023335474202,
+      "NMI_mean": 46.606347595868556,
+      "NMI_sd": 10.981093261847512,
+      "NMI_terminal_mean": 46.606347595868556,
+      "ARI_mean": 34.47342784946304,
+      "ARI_sd": 12.960865193827363,
+      "ARI_terminal_mean": 34.47342784946304
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 82.89445514879041,
+      "ACC_sd": 8.255570248691559,
+      "ACC_terminal_mean": 82.89445514879041,
+      "NMI_mean": 68.42766460091774,
+      "NMI_sd": 7.955050135584143,
+      "NMI_terminal_mean": 68.42766460091774,
+      "ARI_mean": 67.51015365902526,
+      "ARI_sd": 11.155898568433752,
+      "ARI_terminal_mean": 67.51015365902526
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 85.67758509955041,
+      "ACC_sd": 9.023935068323379,
+      "ACC_terminal_mean": 85.67758509955041,
+      "NMI_mean": 73.23582589225596,
+      "NMI_sd": 7.699685261770321,
+      "NMI_terminal_mean": 73.23582589225596,
+      "ARI_mean": 72.61581112546538,
+      "ARI_sd": 12.025563805633768,
+      "ARI_terminal_mean": 72.61581112546538
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.25,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        2.0
+      ],
+      "ACC_mean": 85.48490687219011,
+      "ACC_sd": 6.423570897570241,
+      "ACC_terminal_mean": 85.48490687219011,
+      "NMI_mean": 70.5549334547775,
+      "NMI_sd": 7.786328339393808,
+      "NMI_terminal_mean": 70.5549334547775,
+      "ARI_mean": 70.03624992866916,
+      "ARI_sd": 10.593358299694618,
+      "ARI_terminal_mean": 70.03624992866916
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 84.7356026546778,
+      "ACC_sd": 9.065740569087215,
+      "ACC_terminal_mean": 84.7356026546778,
+      "NMI_mean": 72.401958621261,
+      "NMI_sd": 7.590668306082748,
+      "NMI_terminal_mean": 72.401958621261,
+      "ARI_mean": 70.61430659626868,
+      "ARI_sd": 12.78338861086698,
+      "ARI_terminal_mean": 70.61430659626868
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        2.0
+      ],
+      "ACC_mean": 85.0995504174695,
+      "ACC_sd": 7.0041767488292725,
+      "ACC_terminal_mean": 85.0995504174695,
+      "NMI_mean": 70.31809207573293,
+      "NMI_sd": 8.088604412974446,
+      "NMI_terminal_mean": 70.31809207573293,
+      "ARI_mean": 69.81701708269479,
+      "ARI_sd": 10.89338836929683,
+      "ARI_terminal_mean": 69.81701708269479
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        2.0
+      ],
+      "ACC_mean": 48.41269841269841,
+      "ACC_sd": 3.6154691999660615,
+      "ACC_terminal_mean": 48.41269841269841,
+      "NMI_mean": 32.37336288914959,
+      "NMI_sd": 3.3697382211594107,
+      "NMI_terminal_mean": 32.37336288914959,
+      "ARI_mean": 21.00947355292967,
+      "ARI_sd": 2.8957145159457043,
+      "ARI_terminal_mean": 21.00947355292967
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        1.0,
+        0.1
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 48.611111111111114,
+      "ACC_sd": 2.976984021192231,
+      "ACC_terminal_mean": 48.611111111111114,
+      "NMI_mean": 31.77419663183038,
+      "NMI_sd": 3.662410191722933,
+      "NMI_terminal_mean": 31.77419663183038,
+      "ARI_mean": 21.594154656248094,
+      "ARI_sd": 2.2386701451196265,
+      "ARI_terminal_mean": 21.594154656248094
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 46.9047619047619,
+      "ACC_sd": 6.5993626435881865,
+      "ACC_terminal_mean": 46.9047619047619,
+      "NMI_mean": 32.147381265732285,
+      "NMI_sd": 5.194803735178225,
+      "NMI_terminal_mean": 32.147381265732285,
+      "ARI_mean": 20.42967640567525,
+      "ARI_sd": 5.456978097203291,
+      "ARI_terminal_mean": 20.42967640567525
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        2.0,
+        20.0,
+        2.0
+      ],
+      "ACC_mean": 47.97619047619048,
+      "ACC_sd": 2.0026909334834206,
+      "ACC_terminal_mean": 47.97619047619048,
+      "NMI_mean": 31.303635533060888,
+      "NMI_sd": 2.5251084503729953,
+      "NMI_terminal_mean": 31.303635533060888,
+      "ARI_mean": 21.388864826650064,
+      "ARI_sd": 2.126774735796845,
+      "ARI_terminal_mean": 21.388864826650064
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "ACC_mean": 53.57142857142858,
+      "ACC_sd": 2.2712838128974937,
+      "ACC_terminal_mean": 53.57142857142858,
+      "NMI_mean": 36.09696879140319,
+      "NMI_sd": 1.3276240264652237,
+      "NMI_terminal_mean": 36.09696879140319,
+      "ARI_mean": 26.16258341107138,
+      "ARI_sd": 2.795730219313558,
+      "ARI_terminal_mean": 26.16258341107138
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.1
+      ],
+      "selected_lambda": [
+        2.0,
+        200.0,
+        2.0
+      ],
+      "ACC_mean": 51.11111111111111,
+      "ACC_sd": 4.329035894545812,
+      "ACC_terminal_mean": 51.11111111111111,
+      "NMI_mean": 33.720633336678965,
+      "NMI_sd": 3.8065920894970495,
+      "NMI_terminal_mean": 33.720633336678965,
+      "ARI_mean": 24.283835479855252,
+      "ARI_sd": 3.8807686268981323,
+      "ARI_terminal_mean": 24.283835479855252
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        2.0,
+        20.0
+      ],
+      "ACC_mean": 53.57142857142858,
+      "ACC_sd": 2.442652920081335,
+      "ACC_terminal_mean": 53.57142857142858,
+      "NMI_mean": 36.05989732207078,
+      "NMI_sd": 1.772208629294479,
+      "NMI_terminal_mean": 36.05989732207078,
+      "ARI_mean": 26.312599391315484,
+      "ARI_sd": 2.8729326646565467,
+      "ARI_terminal_mean": 26.312599391315484
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        2.0,
+        200.0,
+        20.0
+      ],
+      "ACC_mean": 49.96031746031746,
+      "ACC_sd": 2.364027144223252,
+      "ACC_terminal_mean": 49.96031746031746,
+      "NMI_mean": 32.65544164932762,
+      "NMI_sd": 1.9942186256142758,
+      "NMI_terminal_mean": 32.65544164932762,
+      "ARI_mean": 23.22101262243726,
+      "ARI_sd": 2.0404102248340057,
+      "ARI_terminal_mean": 23.22101262243726
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        20.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 45.20042194092827,
+      "ACC_sd": 1.5458176044043068,
+      "ACC_terminal_mean": 45.20042194092827,
+      "NMI_mean": 22.677629413691196,
+      "NMI_sd": 0.8923944828559326,
+      "NMI_terminal_mean": 22.677629413691196,
+      "ARI_mean": 17.390100248875786,
+      "ARI_sd": 1.5135407772480027,
+      "ARI_terminal_mean": 17.390100248875786
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.025,
+        0.05,
+        0.25
+      ],
+      "selected_lambda": [
+        200.0,
+        200.0,
+        200.0
+      ],
+      "ACC_mean": 46.554149085794656,
+      "ACC_sd": 1.646324523011179,
+      "ACC_terminal_mean": 46.554149085794656,
+      "NMI_mean": 24.618152816945088,
+      "NMI_sd": 1.3868284514648213,
+      "NMI_terminal_mean": 24.618152816945088,
+      "ARI_mean": 17.448244222945366,
+      "ARI_sd": 0.7854759736687674,
+      "ARI_terminal_mean": 17.448244222945366
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        2.0,
+        20.0
+      ],
+      "ACC_mean": 39.644866385372715,
+      "ACC_sd": 7.5841852326775205,
+      "ACC_terminal_mean": 39.644866385372715,
+      "NMI_mean": 18.809157902578065,
+      "NMI_sd": 8.444548395598579,
+      "NMI_terminal_mean": 18.809157902578065,
+      "ARI_mean": 9.705117107599898,
+      "ARI_sd": 7.413915613306261,
+      "ARI_terminal_mean": 9.705117107599898
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        2.0
+      ],
+      "ACC_mean": 44.21589310829817,
+      "ACC_sd": 2.120445583280553,
+      "ACC_terminal_mean": 44.21589310829817,
+      "NMI_mean": 22.281946356798688,
+      "NMI_sd": 0.6669635141539413,
+      "NMI_terminal_mean": 22.281946356798688,
+      "ARI_mean": 16.87768467044914,
+      "ARI_sd": 1.5852773701807032,
+      "ARI_terminal_mean": 16.87768467044914
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 47.20464135021098,
+      "ACC_sd": 1.2800275421425753,
+      "ACC_terminal_mean": 47.20464135021098,
+      "NMI_mean": 24.911960869371523,
+      "NMI_sd": 0.8955923560261172,
+      "NMI_terminal_mean": 24.911960869371523,
+      "ARI_mean": 19.08186149123337,
+      "ARI_sd": 0.8435703581835391,
+      "ARI_terminal_mean": 19.08186149123337
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        1.0,
+        0.1,
+        0.25
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 45.9915611814346,
+      "ACC_sd": 1.0062649803976236,
+      "ACC_terminal_mean": 45.9915611814346,
+      "NMI_mean": 23.500215561554125,
+      "NMI_sd": 1.5176539433822929,
+      "NMI_terminal_mean": 23.500215561554125,
+      "ARI_mean": 18.467975478171496,
+      "ARI_sd": 0.6770763885374413,
+      "ARI_terminal_mean": 18.467975478171496
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        200.0,
+        200.0
+      ],
+      "ACC_mean": 48.189170182841075,
+      "ACC_sd": 2.1315674495397583,
+      "ACC_terminal_mean": 48.189170182841075,
+      "NMI_mean": 26.382080825680863,
+      "NMI_sd": 0.5822546236468278,
+      "NMI_terminal_mean": 26.382080825680863,
+      "ARI_mean": 19.982815719525657,
+      "ARI_sd": 1.0143264707802642,
+      "ARI_terminal_mean": 19.982815719525657
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 44.60267229254571,
+      "ACC_sd": 1.5657836904509375,
+      "ACC_terminal_mean": 44.60267229254571,
+      "NMI_mean": 22.749858197701315,
+      "NMI_sd": 1.2089416450895878,
+      "NMI_terminal_mean": 22.749858197701315,
+      "ARI_mean": 17.66637612263977,
+      "ARI_sd": 1.303863694365252,
+      "ARI_terminal_mean": 17.66637612263977
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 52.919183203911416,
+      "ACC_sd": 0.8097732657636504,
+      "ACC_terminal_mean": 52.919183203911416,
+      "NMI_mean": 28.225867750224552,
+      "NMI_sd": 1.0376466103133666,
+      "NMI_terminal_mean": 28.225867750224552,
+      "ARI_mean": 25.553370604826853,
+      "ARI_sd": 1.324413360982199,
+      "ARI_terminal_mean": 25.553370604826853
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.25,
+        0.1,
+        0.05
+      ],
+      "selected_lambda": [
+        20.0,
+        2.0,
+        2.0
+      ],
+      "ACC_mean": 45.4127121081392,
+      "ACC_sd": 8.628163646747074,
+      "ACC_terminal_mean": 45.4127121081392,
+      "NMI_mean": 30.35614703843026,
+      "NMI_sd": 4.132197975706391,
+      "NMI_terminal_mean": 30.35614703843026,
+      "ARI_mean": 21.693598688451612,
+      "ARI_sd": 5.335950341626671,
+      "ARI_terminal_mean": 21.693598688451612
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        200.0,
+        200.0
+      ],
+      "ACC_mean": 47.555363819384525,
+      "ACC_sd": 7.153068250072833,
+      "ACC_terminal_mean": 47.555363819384525,
+      "NMI_mean": 31.139909873338826,
+      "NMI_sd": 5.934084969725272,
+      "NMI_terminal_mean": 31.139909873338826,
+      "ARI_mean": 22.717155064376538,
+      "ARI_sd": 9.207749912826891,
+      "ARI_terminal_mean": 22.717155064376538
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        200.0,
+        200.0,
+        20.0
+      ],
+      "ACC_mean": 52.90480299108427,
+      "ACC_sd": 0.7350806971027958,
+      "ACC_terminal_mean": 52.90480299108427,
+      "NMI_mean": 27.737311117648876,
+      "NMI_sd": 1.0912251825861725,
+      "NMI_terminal_mean": 27.737311117648876,
+      "ARI_mean": 25.515163869547152,
+      "ARI_sd": 1.0779016133891361,
+      "ARI_terminal_mean": 25.515163869547152
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_u": [
+        null,
+        null,
+        null
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "ACC_mean": 53.781995973540404,
+      "ACC_sd": 0.9707442526164887,
+      "ACC_terminal_mean": 53.781995973540404,
+      "NMI_mean": 30.235364291977806,
+      "NMI_sd": 0.719206657278205,
+      "NMI_terminal_mean": 30.235364291977806,
+      "ARI_mean": 27.145073780510653,
+      "ARI_sd": 1.0979243308608664,
+      "ARI_terminal_mean": 27.145073780510653
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "fixed-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.1,
+        0.05,
+        0.75
+      ],
+      "selected_lambda": [
+        20.0,
+        2.0,
+        20.0
+      ],
+      "ACC_mean": 52.24331320103537,
+      "ACC_sd": 1.9900884546455233,
+      "ACC_terminal_mean": 52.24331320103537,
+      "NMI_mean": 30.968756202128997,
+      "NMI_sd": 4.7355314506139585,
+      "NMI_terminal_mean": 30.968756202128997,
+      "ARI_mean": 26.928905527255495,
+      "ARI_sd": 2.2215553851109657,
+      "ARI_terminal_mean": 26.928905527255495
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "graph-only-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "ACC_mean": 53.07736554501006,
+      "ACC_sd": 0.3914483056892807,
+      "ACC_terminal_mean": 53.07736554501006,
+      "NMI_mean": 33.41296337322343,
+      "NMI_sd": 1.3715252185715752,
+      "NMI_terminal_mean": 33.41296337322343,
+      "ARI_mean": 28.483934987065982,
+      "ARI_sd": 0.6922764858097162,
+      "ARI_terminal_mean": 28.483934987065982
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "fixed-half-CV",
+      "eligible": 3,
+      "selected_u": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "selected_lambda": [
+        20.0,
+        200.0,
+        20.0
+      ],
+      "ACC_mean": 52.86166235260282,
+      "ACC_sd": 1.4342775541894426,
+      "ACC_terminal_mean": 52.86166235260282,
+      "NMI_mean": 27.131645862418466,
+      "NMI_sd": 1.470415772127489,
+      "NMI_terminal_mean": 27.131645862418466,
+      "ARI_mean": 25.483857861171582,
+      "ARI_sd": 1.3808001925868965,
+      "ARI_terminal_mean": 25.483857861171582
+    }
+  ],
+  "paired": [
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "eligible": true,
+      "deltas_pp": [
+        -3.3898305084745783,
+        0.0,
+        15.254237288135597
+      ],
+      "mean_pp": 3.9548022598870065,
+      "sd_pp": 9.931297079800537,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "eligible": true,
+      "deltas_pp": [
+        0.0,
+        -0.8474576271186529,
+        0.0
+      ],
+      "mean_pp": -0.28248587570621764,
+      "sd_pp": 0.48927988914375575,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "eligible": true,
+      "deltas_pp": [
+        -0.7064868336544627,
+        -1.6056518946692355,
+        -0.8991650610147728
+      ],
+      "mean_pp": -1.070434596446157,
+      "sd_pp": 0.4734177775100832,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "eligible": true,
+      "deltas_pp": [
+        -3.403982016698781,
+        2.633269107257552,
+        1.3487475915221592
+      ],
+      "mean_pp": 0.19267822736031004,
+      "sd_pp": 3.180325858224781,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "eligible": true,
+      "deltas_pp": [
+        2.1428571428571463,
+        -2.1428571428571463,
+        -0.5952380952381042
+      ],
+      "mean_pp": -0.1984126984127014,
+      "sd_pp": 2.1702395101389436,
+      "positive_seeds": 1
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "eligible": true,
+      "deltas_pp": [
+        3.333333333333327,
+        4.166666666666669,
+        -0.11904761904761862
+      ],
+      "mean_pp": 2.460317460317459,
+      "sd_pp": 2.272323540034985,
+      "positive_seeds": 2
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "eligible": true,
+      "deltas_pp": [
+        -1.4240506329113944,
+        -2.162447257383965,
+        -0.47468354430379445
+      ],
+      "mean_pp": -1.3537271448663848,
+      "sd_pp": 0.846076611499014,
+      "positive_seeds": 0
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "eligible": true,
+      "deltas_pp": [
+        2.53164556962025,
+        0.2637130801687759,
+        0.8438818565400852
+      ],
+      "mean_pp": 1.2130801687763701,
+      "sd_pp": 1.1781807966080506,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "eligible": true,
+      "deltas_pp": [
+        0.1294219154443499,
+        15.746333045729077,
+        6.643658326143226
+      ],
+      "mean_pp": 7.506471095772217,
+      "sd_pp": 7.844126000988185,
+      "positive_seeds": 3
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "eligible": true,
+      "deltas_pp": [
+        0.17256255392579245,
+        2.329594477998276,
+        2.1138912855910297
+      ],
+      "mean_pp": 1.5386827725050327,
+      "sd_pp": 1.1880005494577486,
+      "positive_seeds": 3
+    }
+  ],
+  "protocol_sha256": "57bcc5169d45e5ffefe9948ce02e404ebf9418ba5c1eac48954958f831118b43",
+  "evaluation_sha256": "284a099da69cae459434cf26803fd933044e4ae3753077cb83c3e2b476cc1ca6"
+}

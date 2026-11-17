@@ -1,0 +1,30 @@
+[
+  {
+    "dataset": "BBC",
+    "url": "https://mlg.ucd.ie/files/datasets/bbc.zip",
+    "status": "request_failed",
+    "error": "<urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1017)>"
+  },
+  {
+    "dataset": "Cora",
+    "url": "https://lig-membres.imag.fr/grimal/data/Cora.tar.gz",
+    "resolved_url": "https://lig-membres.imag.fr/grimal/data/Cora.tar.gz",
+    "status": "downloaded",
+    "bytes": 237550,
+    "sha256": "52e28f37d39751366b46b859cb2bc0ec3757a222552cc24423763fb38509001c",
+    "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\audit\\public_inputs\\Cora.tar.gz",
+    "checked_utc": "2026-11-17T08:51:29.619559+00:00",
+    "matches_local_original": true
+  },
+  {
+    "dataset": "CiteSeer",
+    "url": "https://lig-membres.imag.fr/grimal/data/CiteSeer.tar.gz",
+    "resolved_url": "https://lig-membres.imag.fr/grimal/data/CiteSeer.tar.gz",
+    "status": "downloaded",
+    "bytes": 413805,
+    "sha256": "a8a73135322e9269d760ede375c4d7ffab8a5f26f88b278381c55d6ef393738a",
+    "path": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\audit\\public_inputs\\CiteSeer.tar.gz",
+    "checked_utc": "2026-11-17T08:51:29.252107+00:00",
+    "matches_local_original": true
+  }
+]

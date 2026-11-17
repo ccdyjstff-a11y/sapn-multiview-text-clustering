@@ -1,0 +1,8 @@
+{
+  "status": "complete_sealed",
+  "planned": 172,
+  "completed": 172,
+  "eligible": 172,
+  "elapsed_minutes": 100.3534,
+  "seal_sha256": "e354d24b19b675625ddcd2a6aba4cf12bc3aaf71bca4efe0530ecdc81d1bf744"
+}

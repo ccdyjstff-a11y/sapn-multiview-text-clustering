@@ -1,0 +1,12 @@
+{
+  "status": "PASS_INDEPENDENT_POST_SEAL_RESCORE",
+  "logical_records": 50,
+  "metric_values": 250,
+  "maximum_absolute_difference": 0.0,
+  "eligible": 50,
+  "protocol_sha256": "5695b7f8538a12e6d198315d53762f4f0caa3592673d857474859b3227124d44",
+  "global_seal_sha256": "b371efcb5461ae59a1b033e1aa99a4eaeefe45d4358cd6d7fdbdcd556266c213",
+  "evaluation_sha256": "0b5849d19010831224734f61cc6f8ce644f0ad09487a05e43c18f40d1bef43e1",
+  "script_sha256": "73f5357ea416b5531f350ca112ca66a4f65543119d02e821d294ac4be7523f59",
+  "scope": "Independent recomputation from predicted labels and external true categories after all planned blocks were sealed. This verifies scoring, not a separate retraining."
+}

@@ -1,0 +1,899 @@
+# -*- coding: utf-8 -*-
+"""SAPN-Text v4.2: nonnegative multi-view factorization with signed pairs and local geometry.
+
+J = sum_v a_v^gamma E_v + b*(1-eta)*D(H)
+    + b*eta/V*sum_v D(Hv) + b*lo*k/n**2*||off(HH.T)||**2
+    + b*geometry_weight/n*((1-u)*tr(H Lgeom H.T)
+        + u*(||H-H_ref||**2+tr((H-H_ref) Lgeom (H-H_ref).T))).
+E_v is the v3 energy without supervision; b=V**(1-gamma).
+Fixed supervision shares do not depend on a. The legacy option restores the v3 shares.
+Endpoint simplexes constrain only queried Hv columns; other columns remain nonnegative.
+True constrains every Hv column when queries exist; False requires eta=0. H is simplex-valued.
+The default geometry weight is 0.1. Unlabeled mutual cosine-neighbor Laplacians are
+normalized by each view's average degree and averaged. Geometry combines consensus
+smoothing with magnitude and graph smoothing of corrections to a frozen reference.
+The reference is passed unchanged between stages. Coverage u is the fraction outside
+queried endpoints and their one-hop neighborhoods; it uses no evaluation labels.
+With no queries u=1. Explicit reference_strength values in [0,1] provide fixed controls.
+Coverage is global, not a per-object hard constraint. Neighbors are not pseudo-labels.
+geometry_graph can reuse a fixed graph. An empty graph removes edge smoothing but
+retains the u-weighted anchor; geometry_weight=0 disables the entire geometry term.
+Graph construction can require quadratic time; core iterations use sparse graphs.
+Bases use exact nonnegative coordinate updates. Representations use spectral steps,
+monotone backtracking, and periodic endpoint descent. Stopping requires both small
+objective change and all relative block residuals below tol_kkt. A small step alone
+does not certify convergence. Diagnostics retain stage reasons, residuals, coverage,
+raw/tangent gradients, and relation satisfaction. Global nonconvex optimality and
+monotone ACC versus budget are not guaranteed. Never select using test labels.
+Xs are nonnegative sample-by-feature matrices; P/N are zero-based unordered pairs;
+k is known. Labels enter only through P/N. Negative losses include overlap and hinge;
+reliability defaults to none. run_sapn_text continues two stages; auto lambda_r is
+calibrated only at initialization and then frozen. legacy_parameter_map only converts
+units. Budget studies must freeze an anchor calibration rather than renormalize by
+the relation count at each budget and call that fixed per-edge strength."""
+
+import numpy as np
+from scipy import sparse
+from scipy.optimize import linear_sum_assignment
+
+
+def legacy_parameter_map(n, views, clusters, positive_pairs, negative_pairs,
+                         mu=.001, lambda_c=.05, lambda_p=20., lambda_n=20.,
+                         lambda_o=.01, gamma=2.):
+    """Convert the old SAPN objective to v2/v3 units at an anchor, not an optimum recommendation.
+Equivalence requires lambda_r=lambda_g=geometry_weight=0, hinge negative loss,
+unit reliability weights, label_to_views=0, private_simplex=False, and
+U_new=sqrt(n)*U_old with Hv/H/a unchanged. This is fixed-factor objective equivalence,
+not a guarantee of identical partitions under different initializers or solvers.
+Rename the returned lambda_o to lo for run_sapn_text. Convert the old basis penalty
+mu*||U_old||**2 to (mu_new/k)*||U_new||**2 as well."""
+    if min(n, views, clusters) < 1 or min(positive_pairs, negative_pairs) < 0 or gamma <= 1:
+        raise ValueError('规模/约束数量/gamma无效')
+    b=views**(1-gamma)
+    return dict(mu=mu*clusters/n, lambda_c=lambda_c*n,
+                lambda_p=lambda_p*n/(b*positive_pairs) if positive_pairs else 0.,
+                lambda_n=lambda_n*n/(b*negative_pairs) if negative_pairs else 0.,
+                lambda_o=lambda_o*n*n/(b*clusters), gamma=gamma,
+                lambda_r=0.,lambda_g=0.,negative_loss='hinge')
+
+
+def _proj_simplex_cols(A):
+    # Columnwise shifts preserve projection and reduce cancellation with large steps.
+    A = A-np.max(A, axis=0, keepdims=True)
+    U = np.sort(A, axis=0)[::-1]
+    cs = U.cumsum(axis=0)-1
+    indices = np.arange(1, len(U)+1)[:, None]
+    rho = np.sum(U-cs/indices > 0, axis=0)
+    theta = cs[rho-1, np.arange(A.shape[1])]/rho
+    return np.maximum(A-theta, 0)
+
+
+def _pairs(value, n):
+    a = np.asarray(value)
+    if a.size == 0:
+        return np.empty((0, 2), dtype=int)
+    if a.ndim != 2 or a.shape[1] != 2 or not np.issubdtype(a.dtype, np.integer):
+        raise ValueError('P/N必须为m×2整数索引数组')
+    a = np.sort(a.astype(int), axis=1)
+    if a.min() < 0 or a.max() >= n or np.any(a[:, 0] == a[:, 1]):
+        raise ValueError('成对索引越界或存在自身关系')
+    if len(np.unique(a, axis=0)) != len(a):
+        raise ValueError('同类关系内有重复无序对；请先去重')
+    return a
+
+
+def _weighted_graph(pairs, weights, n):
+    if not len(pairs):
+        return sparse.csr_matrix((n, n))
+    i, j = pairs.T
+    return sparse.csr_matrix((np.r_[weights, weights],
+                              (np.r_[i, j], np.r_[j, i])), shape=(n, n))
+
+
+def _knn_laplacian(X, neighbors):
+    from sklearn.neighbors import NearestNeighbors
+    from sklearn import config_context
+    n = X.shape[0]
+    q = min(neighbors, n-1)
+    nn = NearestNeighbors(n_neighbors=q+1, metric='cosine', algorithm='brute').fit(X)
+    ids, distances = np.empty((n, q), int), np.empty((n, q))
+    with config_context(working_memory=128):
+        for start in range(0, n, 128):
+            ds, js = nn.kneighbors(X[start:start+128])
+            for row, (dr, jr) in enumerate(zip(ds, js), start):
+                keep = jr != row
+                ids[row], distances[row] = jr[keep][:q], np.maximum(dr[keep][:q], 0)
+    scale = np.maximum(distances[:, -1], 1e-12)
+    weights = np.exp(-distances**2/(scale[:, None]*scale[ids]))
+    W = sparse.csr_matrix((weights.ravel(), (np.repeat(np.arange(n), q), ids.ravel())), shape=(n, n))
+    W = W.maximum(W.T)
+    degree = np.asarray(W.sum(axis=1)).ravel()
+    scale = max(degree.mean(), 1e-12)
+    return (sparse.diags(degree)-W)/scale, float(degree.max()/scale)
+
+
+def _crossfit_weights(Hviews, pairs, targets, seed):
+    """Initial representations must not use query labels. Folds depend only on sorted endpoints and seed."""
+    from sklearn.linear_model import LogisticRegression
+    m = len(pairs)
+    if m < 3:
+        return np.ones(m), {'reason': 'fewer_than_three_pairs'}
+    order = np.lexsort((pairs[:, 1], pairs[:, 0]))
+    p, y = pairs[order], targets[order]
+    fold = np.empty(m, int)
+    fold[np.random.RandomState(seed).permutation(m)] = np.arange(m) % 3
+    prediction = np.zeros((m, len(Hviews)))
+    for v, H in enumerate(Hviews):
+        norms = np.maximum(np.linalg.norm(H, axis=0), 1e-12)
+        cosine = np.sum(H[:, p[:, 0]]*H[:, p[:, 1]], axis=0)/(norms[p[:, 0]]*norms[p[:, 1]])
+        dist = np.sum((H[:, p[:, 0]]-H[:, p[:, 1]])**2, axis=0)
+        features = np.column_stack([cosine, dist])
+        for f in range(3):
+            train, test = fold != f, fold == f
+            if len(np.unique(y[train])) < 2:
+                continue  # Keep neutral unit weights when binary training is impossible.
+            classifier = LogisticRegression(C=1., class_weight='balanced', solver='lbfgs',
+                                            max_iter=300, random_state=seed)
+            classifier.fit(features[train], y[train])
+            prediction[test, v] = classifier.decision_function(features[test])
+    margin = np.median(prediction*y[:, None], axis=1)
+    scale = max(.05, float(np.median(np.abs(margin))))
+    weights = .1+.9*np.exp(-np.maximum(0, -margin)/scale)
+    unsorted = np.empty(m)
+    unsorted[order] = weights
+    return unsorted, {'pairs': p, 'fold': fold, 'prediction': prediction, 'scale': scale}
+
+
+def data_fingerprint(Xs, graph):
+    import hashlib
+    h=hashlib.sha256()
+    for x in list(Xs)+[graph]:
+        if sparse.issparse(x):
+            x=x.tocsr(copy=True);x.sort_indices();x.eliminate_zeros()
+            h.update(str(x.shape).encode());h.update(x.indptr.astype(np.int64).tobytes())
+            h.update(x.indices.astype(np.int64).tobytes());h.update(x.data.tobytes())
+        else:
+            h.update(str(x.shape).encode());h.update(np.ascontiguousarray(x).tobytes())
+    return h.hexdigest()
+
+
+def validate_graph(graph,n):
+    L=sparse.csr_matrix(graph,dtype=float,copy=True);L.sum_duplicates();L.eliminate_zeros()
+    if L.shape!=(n,n) or not np.isfinite(L.data).all(): raise ValueError('图形状或数值错误')
+    diff=L-L.T
+    if np.max(np.abs(diff.data),initial=0)>1e-10 or np.max(np.abs(np.asarray(L.sum(axis=1))),initial=0)>1e-9:
+        raise ValueError('图必须为对称、零行和的Laplacian')
+    off=L-sparse.diags(L.diagonal());off.eliminate_zeros()
+    if np.max(off.data,initial=0)>1e-12 or np.min(L.diagonal(),initial=0)<-1e-12:
+        raise ValueError('Laplacian非对角元须非正')
+    return L
+
+
+def build_multiview_graph(Xs,neighbors=10):
+    """Unlabeled mutual cosine-neighbor graph with isolated zero vectors and average-degree normalization per view."""
+    from sklearn.neighbors import NearestNeighbors
+    n=Xs[0].shape[0];total=sparse.csr_matrix((n,n))
+    for X in Xs:
+        X=sparse.csr_matrix(X,dtype=float)
+        norms=np.sqrt(np.asarray(X.multiply(X).sum(axis=1)).ravel())
+        ids=np.flatnonzero(norms>0)
+        if len(ids)<2: continue
+        Z=X[ids];q=min(neighbors+1,len(ids))
+        nn=NearestNeighbors(n_neighbors=q,metric='cosine',algorithm='brute').fit(Z)
+        rows=[];cols=[];values=[]
+        for start in range(0,len(ids),128):
+            distances,js=nn.kneighbors(Z[start:start+128])
+            for local,(ds,jj) in enumerate(zip(distances,js),start):
+                keep=(jj!=local)&(ds<1-1e-12)
+                targets=jj[keep][:neighbors];ws=np.maximum(1-ds[keep][:neighbors],0)
+                rows.extend([ids[local]]*len(targets));cols.extend(ids[targets]);values.extend(ws)
+        W=sparse.csr_matrix((values,(rows,cols)),shape=(n,n));W=W.minimum(W.T)
+        degree=np.asarray(W.sum(axis=1)).ravel()
+        if degree.sum()>0:
+            total+=(sparse.diags(degree)-W)/degree.mean()/len(Xs)
+    return validate_graph(total,n)
+
+
+class SAPNText:
+    name = 'SAPN-Text-v4.2'
+
+    def __init__(self, seed=0, mu=.001, lambda_c=.05, lambda_g=0.,
+                 lambda_p=20., lambda_n=20., lambda_o=.01, gamma=2.,
+                 lambda_r='auto', n_neighbors=10, max_iter=200, tol_J=1e-5,
+                 lo_warmup=0., verbose=False, negative_loss='overlap',
+                 reliability='none', init_iter=100, endpoint_sweeps=1,
+                 label_to_views=.5, private_simplex='endpoints', geometry_weight=.1,
+                 geometry_graph=None, supervision_weighting='fixed',
+                 endpoint_interval=5, tol_kkt=1e-3, check_interval=10, reference_strength='coverage'):
+        coefficients = [mu, lambda_c, lambda_g, lambda_p, lambda_n, lambda_o]
+        if any(not np.isfinite(x) or x < 0 for x in coefficients) or not np.isfinite(gamma) or gamma <= 1:
+            raise ValueError('系数应非负有限，gamma必须>1')
+        if not (lambda_r == 'auto' or isinstance(lambda_r, (int, float)) and np.isfinite(lambda_r) and lambda_r >= 0):
+            raise ValueError("lambda_r必须为'auto'或非负数")
+        if lo_warmup != 0:
+            raise ValueError('请用run_sapn_text分阶段改变lo；阶段内保持固定目标')
+        if negative_loss not in ('overlap', 'hinge') or reliability not in ('none', 'crossfit'):
+            raise ValueError('未知negative_loss/reliability选项')
+        if any(not isinstance(x, (int, np.integer)) or x < 0 for x in (max_iter, endpoint_sweeps)):
+            raise ValueError('max_iter/endpoint_sweeps必须为非负整数')
+        if any(not isinstance(x, (int, np.integer)) or x < 1 for x in (n_neighbors, init_iter)) or not np.isfinite(tol_J) or tol_J <= 0:
+            raise ValueError('邻域、初始化迭代数、停止阈值必须为正')
+        self.seed, self.mu, self.lc, self.lg = seed, mu, lambda_c, lambda_g
+        self.lp, self.ln, self.lo, self.gamma = lambda_p, lambda_n, lambda_o, gamma
+        self.lr, self.n_neighbors = lambda_r, n_neighbors
+        self.max_iter, self.tol_J, self.verbose = max_iter, tol_J, verbose
+        self.negative_loss, self.reliability = negative_loss, reliability
+        self.init_iter, self.endpoint_sweeps = init_iter, endpoint_sweeps
+        self._cur_lo = lambda_o
+        if not np.isfinite(label_to_views) or not 0 <= label_to_views <= 1:
+            raise ValueError('label_to_views必须在[0,1]内')
+        if label_to_views and not private_simplex:
+            raise ValueError('直接视图标签损失要求Hv在单纯形，避免缩小表示作弊')
+        self.label_to_views, self.private_simplex = label_to_views, private_simplex
+        self._private_requested = private_simplex
+        if private_simplex not in (True,False,'endpoints'):
+            raise ValueError('private_simplex须为True/False/endpoints')
+        if supervision_weighting not in ('fixed','legacy'):
+            raise ValueError('supervision_weighting须为fixed/legacy')
+        if not np.isfinite(geometry_weight) or geometry_weight < 0 or not np.isfinite(tol_kkt) or tol_kkt <= 0:
+            raise ValueError('几何权重非负，KKT阈值为正')
+        if any(not isinstance(x,(int,np.integer)) or x<1 for x in (endpoint_interval,check_interval)):
+            raise ValueError('检查/端点间隔须为正整数')
+        self.geometry_weight,self.geometry_graph=geometry_weight,geometry_graph
+        self.supervision_weighting=supervision_weighting
+        self.endpoint_interval,self.tol_kkt,self.check_interval=endpoint_interval,tol_kkt,check_interval
+        self.reference_strength=reference_strength
+        if reference_strength!='coverage' and (not isinstance(reference_strength,(int,float)) or not np.isfinite(reference_strength) or not 0<=reference_strength<=1):
+            raise ValueError('reference_strength须为coverage或[0,1]数值')
+        self._active_private=None
+        self._spectral={}
+
+
+    def _recon(self, v, H):
+        U, X = self.U[v], self.X[v]
+        return float(self.xnorm[v] + np.sum((U.T@U)*(H@H.T))
+                     - 2*np.sum(U*np.asarray(X@H.T)))
+
+    def _negative(self, H):
+        G = np.zeros_like(H)
+        if not len(self._NA):
+            return 0., G
+        i, j = self._NA.T
+        if self.negative_loss == 'overlap':
+            loss = np.sum(self.wn*np.sum(H[:, i]*H[:, j], axis=0))
+            np.add.at(G.T, i, (H[:, j]*self.wn).T)
+            np.add.at(G.T, j, (H[:, i]*self.wn).T)
+        else:
+            diff = H[:, i]-H[:, j]
+            residual = np.maximum(1-np.sum(diff*diff, axis=0), 0)
+            loss = np.sum(self.wn*residual**2)
+            np.add.at(G.T, i, (-4*self.wn*residual*diff).T)
+            np.add.at(G.T, j, (4*self.wn*residual*diff).T)
+        return float(loss), G
+
+    def _objective(self, H):
+        for v in range(self.V):
+            Hv, U = self.Hv[v], self.U[v]
+            value = self._recon(v, Hv)+self.r_v[v]*self._recon(v, H)
+            value += self.lc*np.sum((Hv-H)**2)
+            if self.lg:
+                value += self.lg*np.sum(Hv*(self.L[v]@Hv.T).T)
+            self.E[v] = value/self.n + self.mu/self.k*np.sum(U*U)
+            if self.label_to_views and self.supervision_weighting=='legacy':
+                self.E[v] += self.vcp*np.sum(Hv*(self.Lp@Hv.T).T)+self.vcn*self._negative(Hv)[0]
+        positive = np.sum(H*(self.Lp@H.T).T)
+        negative, _ = self._negative(H)
+        B = H@H.T
+        off = B-np.diag(np.diag(B))
+        supervision=0.
+        if self.supervision_weighting=='fixed':
+            supervision=self.V**(-self.gamma)*sum(self.vcp*np.sum(h*(self.Lp@h.T).T)+self.vcn*self._negative(h)[0] for h in self.Hv)
+        return float(np.dot(self.a**self.gamma, self.E)
+                     + self.cp*positive+self.cn*negative+self.co*np.sum(off*off)
+                     + supervision+self.cg*((1-self._reference_strength)*np.sum(H*(self.Ggeom@H.T).T)+self._reference_strength*(np.sum((H-self.H_ref)**2)+np.sum((H-self.H_ref)*(self.Ggeom@(H-self.H_ref).T).T))))
+
+    def _basis_terms(self, v):
+        H, Hv, X = self.H_cons, self.Hv[v], self.X[v]
+        C = (Hv@Hv.T+self.r_v[v]*(H@H.T))/self.n + self.mu/self.k*np.eye(self.k)
+        B = (np.asarray(X@Hv.T)+self.r_v[v]*np.asarray(X@H.T))/self.n
+        return C, B
+
+    def _grad_U(self, v):
+        C, B = self._basis_terms(v)
+        return 2*(self.U[v]@C-B)
+
+    def _grad_Hv(self, v, H):
+        U, Hv = self.U[v], self.Hv[v]
+        grad = (U.T@U)@Hv-np.asarray(self.X[v].T@U).T+self.lc*(Hv-H)
+        if self.lg:
+            grad += self.lg*(self.L[v]@Hv.T).T
+        grad *= 2/self.n
+        if self.label_to_views:
+            vcp,vcn=self._view_coefficients(v)
+            grad += 2*vcp*(self.Lp@Hv.T).T+vcn*self._negative(Hv)[1]
+        return grad
+
+    def _h_terms(self):
+        K, T = np.zeros((self.k, self.k)), np.zeros((self.k, self.n))
+        for v in range(self.V):
+            w, U = self.a[v]**self.gamma/self.n, self.U[v]
+            K += w*(self.lc*np.eye(self.k)+self.r_v[v]*(U.T@U))
+            T += w*(self.lc*self.Hv[v]+self.r_v[v]*np.asarray(self.X[v].T@U).T)
+        K+=self.cg*self._reference_strength*np.eye(self.k)
+        T+=self.cg*self._reference_strength*(self.H_ref+(self.Ggeom@self.H_ref.T).T)
+        return K, T
+
+    def _grad_H(self, H):
+        K, T = self._h_terms()
+        _, ng = self._negative(H)
+        B = H@H.T
+        return (2*(K@H-T)+2*self.cp*(self.Lp@H.T).T+self.cn*ng
+                +4*self.co*(B-np.diag(np.diag(B)))@H+2*self.cg*(self.Ggeom@H.T).T)
+
+    def _h_loss(self, H, K, T, coefficients=None, graph=None, graph_scale=0.):
+        cp, cn, co = (self.cp, self.cn, self.co) if coefficients is None else coefficients
+        if graph is None and self._active_private is None:
+            graph,graph_scale=self.Ggeom,self.cg
+        B = H@H.T
+        off = B-np.diag(np.diag(B))
+        neg, _ = self._negative(H)
+        return float(np.sum(H*(K@H))-2*np.sum(T*H)
+                     + cp*np.sum(H*(self.Lp@H.T).T)
+                     + cn*neg+co*np.sum(off*off)
+                     + (graph_scale*np.sum(H*(graph@H.T).T) if graph is not None else 0.))
+
+    def _view_coefficients(self,v):
+        scale=self.V**(-self.gamma)/max(self.a[v]**self.gamma,1e-300) if self.supervision_weighting=='fixed' else 1.
+        return scale*self.vcp,scale*self.vcn
+
+    def _project_private(self,A):
+        if not self.private_simplex: return np.maximum(A,0)
+        if self._private_requested=='endpoints':
+            out=np.maximum(A,0)
+            if len(self._endpoints):out[:,self._endpoints]=_proj_simplex_cols(A[:,self._endpoints])
+            return out
+        return _proj_simplex_cols(A)
+
+    def _project(self,A):
+        return _proj_simplex_cols(A) if self._active_private is None else self._project_private(A)
+
+    def _h_block(self,H,K,T,selected=None,coefficients=None,graph=None,graph_scale=0.):
+        cp,cn,co=(self.cp,self.cn,self.co) if coefficients is None else coefficients
+        if graph is None and self._active_private is None: graph,graph_scale=self.Ggeom,self.cg
+        def grad(Z):
+            B=Z@Z.T
+            G=2*(K@Z-T)+2*cp*(self.Lp@Z.T).T+cn*self._negative(Z)[1]
+            G+=4*co*(B-np.diag(np.diag(B)))@Z
+            if graph is not None:G+=2*graph_scale*(graph@Z.T).T
+            return G
+        G=grad(H)
+        lip=2*np.linalg.norm(K,2)+24*co*np.sum(H*H)
+        if graph is not None:lip+=4*graph_scale*float(graph.diagonal().max())
+        if selected is None:lip+=4*cp*self.p_degree_max+(2 if self.negative_loss=='overlap' else 24)*cn*self.n_degree_max
+        base=1/max(lip,1e-12);key=(self._active_private,selected is not None)
+        step=float(np.clip(self._spectral.get(key,base),base/1000,base*10000))
+        old=self._h_loss(H,K,T,coefficients,graph,graph_scale)
+        for _ in range(60):
+            candidate=self._project(H-step*G)
+            if selected is not None:
+                full=H.copy();full[:,selected]=candidate[:,selected];candidate=full
+            delta=candidate-H
+            value=self._h_loss(candidate,K,T,coefficients,graph,graph_scale)
+            if value<=old+1e-4*np.sum(G*delta)+1e-14*max(1,abs(old)):
+                difference=grad(candidate)-G
+                sy=float(np.sum(delta*difference));ss=float(np.sum(delta*delta))
+                self._spectral[key]=ss/sy if sy>1e-20 and ss>1e-24 else step*1.5
+                return candidate
+            step*=.5
+        self._spectral[key]=base
+        return H
+
+    def stationarity(self,H):
+        """Relative block projected-gradient mapping; zero is a first-order condition, not global optimality."""
+        ru=[];rv=[];old_active=self._active_private
+        for v in range(self.V):
+            C,B=self._basis_terms(v);U=self.U[v];G=2*(U@C-B)
+            R=np.where(U>1e-12,G,np.minimum(G,0))
+            ru.append(float(np.linalg.norm(R)/max(np.linalg.norm(2*B),1e-12)))
+            Hv=self.Hv[v];gv=self._grad_Hv(v,H)
+            cp,cn=self._view_coefficients(v)
+            scale=max(2/self.n*(np.linalg.norm(self.U[v].T@self.U[v],2)+self.lc+2*self.lg*self.dmax[v])+4*cp*self.p_degree_max+24*cn*self.n_degree_max,1e-12)
+            proj=self._project_private(Hv-gv/scale)
+            T=(np.asarray(self.X[v].T@self.U[v]).T+self.lc*H)*2/self.n
+            rv.append(float(scale*np.linalg.norm(Hv-proj)/max(np.linalg.norm(T),np.linalg.norm(gv),1e-12)))
+        K,T=self._h_terms();g=self._grad_H(H)
+        L=max(2*np.linalg.norm(K,2)+4*self.cp*self.p_degree_max+24*self.cn*self.n_degree_max+24*self.co*np.sum(H*H)+4*self.cg*float(self.Ggeom.diagonal().max()),1e-12)
+        rh=float(L*np.linalg.norm(H-_proj_simplex_cols(H-g/L))/max(np.linalg.norm(2*T),np.linalg.norm(g),1e-12))
+        self._objective(H)
+        score=-np.log(np.maximum(self.E,1e-15))/(self.gamma-1);astar=np.exp(score-score.max());astar/=astar.sum()
+        ra=float(np.linalg.norm(self.a-astar)) if getattr(self,'_weights_active',True) else 0.
+        self._active_private=old_active
+        return dict(U=max(ru),Hv=max(rv),H=rh,a=ra,maximum=max(*ru,*rv,rh,ra))
+
+    def gradient_diagnostics(self,H):
+        K,T=self._h_terms();B=H@H.T
+        gradients=dict(data=2*((K-self.cg*self._reference_strength*np.eye(self.k))@H-(T-self.cg*self._reference_strength*(self.H_ref+(self.Ggeom@self.H_ref.T).T))),positive=2*self.cp*(self.Lp@H.T).T,
+                       negative=self.cn*self._negative(H)[1],orthogonal=4*self.co*(B-np.diag(np.diag(B)))@H,
+                       geometry=2*self.cg*((1-self._reference_strength)*(self.Ggeom@H.T).T+self._reference_strength*((H-self.H_ref)+(self.Ggeom@(H-self.H_ref).T).T)))
+        norm={key:float(np.linalg.norm(g-g.mean(axis=0,keepdims=True))) for key,g in gradients.items()}
+        return dict(tangent_norm=norm,query_coverage=float(len(self._endpoints)/self.n),
+                    entropy=float(-np.mean(np.sum(H*np.log(np.maximum(H,1e-300)),axis=0))),
+                    mean_max_probability=float(H.max(axis=0).mean()),
+                    total_pair_coefficient_positive=float(self.cp+sum(self.a[v]**self.gamma*self._view_coefficients(v)[0] for v in range(self.V))),
+                    total_pair_coefficient_negative=float(self.cn+sum(self.a[v]**self.gamma*self._view_coefficients(v)[1] for v in range(self.V))))
+
+    def _endpoint_update(self, H, K, T, coefficients=None, graph=None, graph_scale=0.):
+        """Endpoint Gauss-Seidel with nonincreasing vertex candidates and exact local objective differences."""
+        cp, cn, co = (self.cp, self.cn, self.co) if coefficients is None else coefficients
+        if graph is None and self._active_private is None:
+            graph,graph_scale=self.Ggeom,self.cg
+        B = H@H.T
+        normK = np.linalg.norm(K, 2)
+        for _ in range(self.endpoint_sweeps):
+            for i in self.endpoint_order:
+                p0, p1 = self.Sp.indptr[i:i+2]
+                n0, n1 = self.Sn.indptr[i:i+2]
+                pj, pw = self.Sp.indices[p0:p1], self.Sp.data[p0:p1]
+                nj, nw = self.Sn.indices[n0:n1], self.Sn.data[n0:n1]
+                h = H[:, i].copy()
+                off = B-np.diag(np.diag(B))
+                g = 2*(K@h-T[:, i])+4*co*off@h
+                graph_g, graph_diag = np.zeros(self.k), 0.
+                if graph is not None:
+                    row = graph.getrow(i)
+                    graph_g = 2*graph_scale*(H[:, row.indices]@row.data)
+                    graph_diag = float(graph[i, i])
+                    g += graph_g
+                pd = h[:, None]-H[:, pj]
+                g += 2*cp*np.sum(pd*pw, axis=1)
+                if self.negative_loss == 'overlap':
+                    g += cn*(H[:, nj]@nw)
+                else:
+                    nd = h[:, None]-H[:, nj]
+                    rr = np.maximum(1-np.sum(nd*nd, axis=0), 0)
+                    g -= 4*cn*np.sum(nd*(nw*rr), axis=1)
+                lip = 2*normK+2*cp*pw.sum()+24*co*np.trace(B)+2*graph_scale*graph_diag
+                if self.negative_loss == 'hinge':
+                    lip += 24*cn*nw.sum()
+                else:
+                    lip += cn*nw.sum()  # Use a safe step scale for linear terms, avoiding near-zero division.
+                step = 1/max(lip, 1e-12)
+                def local_change(hn):
+                    delta = hn-h
+                    Bnew = B+np.outer(h, delta)+np.outer(delta, h)+np.outer(delta, delta)
+                    offnew = Bnew-np.diag(np.diag(Bnew))
+                    change = 2*np.dot(K@h-T[:, i], delta)+delta@K@delta
+                    change += cp*np.sum(pw*(2*np.sum(pd*delta[:, None], axis=0)+delta@delta))
+                    if self.negative_loss == 'overlap':
+                        change += cn*np.dot(delta, H[:, nj]@nw)
+                    else:
+                        new_r = np.maximum(1-np.sum((hn[:, None]-H[:, nj])**2, axis=0), 0)
+                        change += cn*np.sum(nw*(new_r**2-rr**2))
+                    change += co*(np.sum(offnew**2)-np.sum(off**2))
+                    change += np.dot(graph_g, delta)+graph_scale*graph_diag*np.dot(delta, delta)
+                    return change, Bnew
+                accepted, accepted_B, best_change = h, B, 0.
+                for _ in range(40):
+                    hn = _proj_simplex_cols((h-step*g)[:, None]).ravel()
+                    delta = hn-h
+                    change, Bnew = local_change(hn)
+                    if change <= 1e-4*np.dot(g, delta):
+                        accepted, accepted_B, best_change = hn, Bnew, change
+                        break
+                    step *= .5
+                # Linear negative terms have flat directions at uniform columns; allow nonincreasing vertices.
+                # Break symmetry only if reconstruction, positive relations, and orthogonality permit it.
+                if True:  # Shared vertex candidates at every queried endpoint.
+                    if self.private_simplex:
+                        # Vectorize exact loss changes for all k vertices instead of k Python calls.
+                        hp = H[:, pj]@pw
+                        scores = np.diag(K)-2*T[:, i]-(h@K@h-2*T[:, i]@h)
+                        scores += cp*((1-h@h)*pw.sum()-2*hp+2*h@hp)
+                        if self.negative_loss == 'overlap':
+                            hn_sum = H[:, nj]@nw
+                            scores += cn*(hn_sum-h@hn_sum)
+                        else:
+                            corner_residual = np.maximum(2*H[:, nj]-np.sum(H[:, nj]**2, axis=0), 0)
+                            scores += cn*((corner_residual**2)@nw-np.dot(nw, rr**2))
+                        Bwithout = B-np.outer(h, h)
+                        off_without = Bwithout-np.diag(np.diag(Bwithout))
+                        scores += co*(np.sum(off_without**2)-np.sum(off**2))
+                        scores += graph_g-np.dot(graph_g, h)+graph_scale*graph_diag*(1+h@h-2*h)
+                        clusters = [int(np.argmin(scores))]
+                    else:
+                        clusters = range(self.k)  # Keep the original update order in the v2 fallback branch.
+                    for cluster in clusters:
+                        corner = np.zeros(self.k)
+                        corner[cluster] = 1.
+                        change, Bnew = local_change(corner)
+                        flat_soft_tie = (abs(change) <= 1e-14 and abs(best_change) <= 1e-14
+                                         and np.linalg.norm(accepted-h) < 1e-12 and h.max() < 1-1e-10)
+                        if change < best_change or flat_soft_tie:
+                            accepted, accepted_B, best_change = corner, Bnew, change
+                H[:, i], B = accepted, accepted_B
+        return H
+
+    def _initialize(self, H_init, Hv_init):
+        rng = np.random.RandomState(self.seed)
+        if H_init is None:
+            from sklearn.decomposition import NMF
+            candidates = []
+            for v, X in enumerate(self.X):
+                W = NMF(n_components=self.k, init='random', solver='mu',
+                        random_state=self.seed+v, max_iter=self.init_iter).fit_transform(X.T)
+                candidates.append(W/np.maximum(W.sum(axis=1, keepdims=True), 1e-12))
+            ref = candidates[0]
+            for v in range(1, self.V):
+                W = candidates[v]
+                corr = (W/np.maximum(np.linalg.norm(W, axis=0), 1e-12)).T @ (ref/np.maximum(np.linalg.norm(ref, axis=0), 1e-12))
+                rows, cols = linear_sum_assignment(-corr)
+                aligned = np.empty_like(W)
+                aligned[:, cols] = W[:, rows]
+                candidates[v] = aligned
+            self.Hv = [W.T.copy() for W in candidates]
+            H = _proj_simplex_cols(np.mean(self.Hv, axis=0))
+        else:
+            H = np.asarray(H_init, float).copy()
+            if H.shape != (self.k, self.n) or not np.isfinite(H).all() or H.min() < 0:
+                raise ValueError('H_init须为非负有限k×n矩阵')
+            H /= np.maximum(H.sum(axis=0, keepdims=True), 1e-12)
+            H = _proj_simplex_cols(H)
+            self.Hv = [H.copy() for _ in self.X]
+        if Hv_init is not None:
+            if len(Hv_init) != self.V:
+                raise ValueError('Hv_init视图数量错误')
+            self.Hv = [np.asarray(h, float).copy() for h in Hv_init]
+            if any(h.shape != H.shape or not np.isfinite(h).all() or h.min() < 0 for h in self.Hv):
+                raise ValueError('Hv_init形状或数值错误')
+        self.U = []
+        if self.private_simplex:
+            self.Hv = [self._project_private(h) for h in self.Hv]
+        for X, Hv in zip(self.X, self.Hv):
+            cross, gram = np.asarray(X@Hv.T), Hv@Hv.T
+            U = np.maximum(cross/np.maximum(Hv.sum(axis=1), 1e-12), 1e-10)
+            U *= 1+1e-4*rng.rand(*U.shape)
+            # Initialize nonnegative bases from the data without randomly resetting given representations.
+            for _ in range(20):
+                U *= cross/np.maximum(U@gram+self.n*self.mu/self.k*U, 1e-12)
+            self.U.append(U)
+        self.a = np.full(self.V, 1/self.V)
+        return H
+
+    def fit_predict(self, Xs, P, N, Lp, k, H_init=None, simplex=True,
+                    update_weights=True, Hv_init=None, state_init=None, pair_weights=None):
+        if not simplex:
+            raise ValueError('本模型要求单纯形共识；不支持simplex=False')
+        if not Xs:
+            raise ValueError('Xs不能为空')
+        self._weights_active=update_weights
+        self.n, self.k, self.V = Xs[0].shape[0], k, len(Xs)
+        if not isinstance(k, (int, np.integer)) or not 2 <= k <= self.n:
+            raise ValueError('k必须是2到n之间的整数')
+        self.X, self.L, self.dmax, self.scales, self.xnorm = [], [], [], [], []
+        for X in Xs:
+            X = sparse.csr_matrix(X, dtype=float, copy=True) if sparse.issparse(X) else np.asarray(X, float)
+            values = X.data if sparse.issparse(X) else X
+            if X.ndim != 2 or X.shape[0] != self.n or X.shape[1] == 0 or not np.isfinite(values).all() or np.any(values < 0):
+                raise ValueError('Xs须为对齐、非负、有限的n×d矩阵列表')
+            if sparse.issparse(X):
+                X.sum_duplicates()
+            energy = float(X.multiply(X).sum()) if sparse.issparse(X) else float(np.sum(X*X))
+            if energy <= 0:
+                raise ValueError('存在全零视图，请在所有比较方法中一致移除')
+            scale = np.sqrt(self.n/energy)
+            X = X*scale
+            self.scales.append(scale)
+            self.X.append(X.T.tocsr() if sparse.issparse(X) else X.T.copy())
+            self.xnorm.append(float(self.n))
+            L, dm = _knn_laplacian(X, self.n_neighbors) if self.lg else (None, 0.)
+            self.L.append(L)
+            self.dmax.append(dm)
+        self._PA, self._NA = _pairs(P, self.n), _pairs(N, self.n)
+        # BEGIN V4 RESUME GUARD
+        if state_init is not None and (not np.array_equal(self._PA, state_init['P']) or not np.array_equal(self._NA, state_init['N'])):
+            raise ValueError('续训要求相同查询及顺序；显式pair_weights不能绕过该检查，请重新拟合新查询')
+        # END V4 RESUME GUARD
+        self.private_simplex = bool(self._private_requested and (len(self._PA)+len(self._NA)>0))
+        self._endpoints=np.unique(np.r_[self._PA.ravel(),self._NA.ravel()])
+        self._active_private=None
+        self._spectral={}
+        self.Ggeom=(build_multiview_graph(Xs,self.n_neighbors) if self.geometry_graph is None else validate_graph(self.geometry_graph,self.n)) if self.geometry_weight else sparse.csr_matrix((self.n,self.n))
+        observed=np.zeros(self.n);observed[self._endpoints]=1
+        adjacency=sparse.diags(self.Ggeom.diagonal())-self.Ggeom
+        covered=(observed>0)|(np.asarray(adjacency@observed).ravel()>0)
+        self.query_neighborhood_coverage=float(covered.mean())
+        self._reference_strength=(1-self.query_neighborhood_coverage if self.reference_strength=='coverage' else float(self.reference_strength))
+        if state_init is not None and state_init.get('reference_strength')!=self.reference_strength:
+            raise ValueError('续训须使用相同参考强度规则')
+        self.cg=self.V**(1-self.gamma)*self.geometry_weight/self.n
+        self._fingerprint=data_fingerprint(self.X,self.Ggeom)
+        if state_init is not None and state_init.get('fingerprint')!=self._fingerprint:
+            raise ValueError('续训数据或几何图与保存状态不同')
+        if state_init is not None and (state_init.get('private_scope')!=self._private_requested or state_init.get('supervision_weighting')!=self.supervision_weighting):
+            raise ValueError('续训表示域或监督份额规则发生改变')
+        if set(map(tuple, self._PA)) & set(map(tuple, self._NA)):
+            raise ValueError('正负对有直接矛盾，请先处理')
+        self.pp, self.pn = max(len(self._PA), 1), max(len(self._NA), 1)
+        self.E = np.zeros(self.V)
+        b = self.V**(1-self.gamma)
+        self.cp, self.cn, self.co = b*self.lp/self.n, b*self.ln/self.n, b*self.lo*self.k/self.n**2
+        self.cp *= 1-self.label_to_views
+        self.cn *= 1-self.label_to_views
+        self.vcp, self.vcn = self.label_to_views*self.lp/self.n, self.label_to_views*self.ln/self.n
+        if state_init is None:
+            H = self._initialize(H_init, Hv_init)
+        else:
+            if H_init is not None or Hv_init is not None:
+                raise ValueError('state_init与H_init/Hv_init不能同时提供')
+            if state_init.get('private_simplex', False) != self.private_simplex or state_init.get('label_to_views', 0.) != self.label_to_views:
+                raise ValueError('state_init须保持相同表示/监督分支，避免跨阶段悄悄改目标')
+            if state_init['n'] != self.n or state_init['k'] != k or not np.allclose(state_init['scales'], self.scales):
+                raise ValueError('state_init只能用于相同数据、类别数和预处理')
+            H = state_init['H'].copy()
+            self.U, self.Hv = [u.copy() for u in state_init['U']], [h.copy() for h in state_init['Hv']]
+            self.a = state_init['a'].copy()
+            if len(self.U) != self.V or any(u.shape != (x.shape[0], k) for u, x in zip(self.U, self.X)):
+                raise ValueError('state_init视图维度错误')
+        self.H_cons = H
+        self.H_ref=state_init['H_ref'].copy() if state_init is not None else H.copy()
+        if self.H_ref.shape!=H.shape or not np.isfinite(self.H_ref).all() or self.H_ref.min()<0 or not np.allclose(self.H_ref.sum(axis=0),1):
+            raise ValueError('无监督参考H_ref须为有限单纯形矩阵')
+        if self.lr == 'auto':
+            self.r_v = (state_init['r_v'].copy() if state_init is not None else
+                        np.array([min(1., self.lc/max(np.linalg.norm(u.T@u, 2), 1e-12)) for u in self.U]))
+        else:
+            self.r_v = np.full(self.V, float(self.lr))
+        self.reliability_info = {'mode': self.reliability}
+        if pair_weights is not None:
+            self.wp, self.wn = [np.asarray(w, float).reshape(-1).copy() for w in pair_weights]
+        elif state_init is not None:
+            if not np.array_equal(self._PA, state_init['P']) or not np.array_equal(self._NA, state_init['N']):
+                raise ValueError('跨阶段续训要求相同查询对和顺序')
+            if state_init['reliability_info']['mode'] != self.reliability:
+                raise ValueError('改变可靠性模式请重新拟合，或显式提供新的pair_weights')
+            self.wp, self.wn = state_init['wp'].copy(), state_init['wn'].copy()
+            self.reliability_info = state_init['reliability_info']
+        elif self.reliability == 'crossfit':
+            all_pairs = np.vstack([self._PA, self._NA])
+            targets = np.r_[np.ones(len(self._PA)), -np.ones(len(self._NA))]
+            weights, diagnostics = _crossfit_weights(self.Hv, all_pairs, targets, self.seed+71000)
+            self.wp, self.wn = weights[:len(self._PA)], weights[len(self._PA):]
+            self.reliability_info.update(diagnostics)
+        else:
+            self.wp, self.wn = np.ones(len(self._PA)), np.ones(len(self._NA))
+        if len(self.wp) != len(self._PA) or len(self.wn) != len(self._NA) or any(not np.isfinite(w).all() or np.any(w < 0) or np.any(w > 1) for w in (self.wp, self.wn)):
+            raise ValueError('关系权重须与P/N等长且在[0,1]内')
+        self.Sp, self.Sn = _weighted_graph(self._PA, self.wp, self.n), _weighted_graph(self._NA, self.wn, self.n)
+        degree = np.asarray(self.Sp.sum(axis=1)).ravel()
+        self.Lp = sparse.diags(degree)-self.Sp
+        self.p_degree_max, self.n_degree_max = float(degree.max()), float(np.asarray(self.Sn.sum(axis=1)).max())
+        endpoints = np.unique(np.r_[self._PA.ravel(), self._NA.ravel()])
+        self.endpoint_order = np.random.RandomState(self.seed+911).permutation(endpoints)
+        uncovered = np.setdiff1d(np.arange(self.n), endpoints)
+        hist, quiet, converged = [self._objective(H)], 0, False
+        kkt_history=[]
+        initial_diagnostics=self.gradient_diagnostics(H)
+        last_kkt=self.stationarity(H)
+        kkt_history.append(dict(iteration=0,**last_kkt))
+        for it in range(self.max_iter):
+            Hbefore = H.copy()
+            max_change = 0.
+            self.H_cons = H  # Always use the current consensus, avoiding the old SAPN+ lagged state.
+            for v in range(self.V):
+                old = self.U[v].copy()
+                C, B = self._basis_terms(v)
+                lip = max(2*np.linalg.norm(C, 2), 1e-12)
+                for _ in range(3):
+                    for column in range(self.k):
+                        if C[column,column]>1e-15:
+                            self.U[v][:,column]=np.maximum(self.U[v][:,column]+(B[:,column]-self.U[v]@C[:,column])/C[column,column],0)
+                max_change = max(max_change, np.linalg.norm(self.U[v]-old)/max(np.linalg.norm(old), 1e-12))
+                old = self.Hv[v].copy()
+                gram, cross = self.U[v].T@self.U[v], np.asarray(self.X[v].T@self.U[v]).T
+                lip = max(2/self.n*(np.linalg.norm(gram, 2)+self.lc+2*self.lg*self.dmax[v]), 1e-12)
+                self._active_private=v
+                if self.private_simplex:
+                    Kv = (gram+self.lc*np.eye(self.k))/self.n
+                    Tv = (cross+self.lc*H)/self.n
+                    args = dict(coefficients=(*self._view_coefficients(v), 0.), graph=self.L[v], graph_scale=self.lg/self.n)
+                    for _ in range(3):
+                        self.Hv[v] = self._h_block(self.Hv[v], Kv, Tv, **args)
+                    if len(uncovered) and len(endpoints):
+                        self.Hv[v] = self._h_block(self.Hv[v], Kv, Tv, uncovered, **args)
+                    if self.endpoint_sweeps and len(endpoints) and it%self.endpoint_interval==0:
+                        self.Hv[v] = self._endpoint_update(self.Hv[v], Kv, Tv, **args)
+                else:
+                    Kv=(gram+self.lc*np.eye(self.k))/self.n
+                    Tv=(cross+self.lc*H)/self.n
+                    for _ in range(3):
+                        self.Hv[v]=self._h_block(self.Hv[v],Kv,Tv,coefficients=(0.,0.,0.),graph=self.L[v],graph_scale=self.lg/self.n)
+                max_change = max(max_change, np.linalg.norm(self.Hv[v]-old)/max(np.linalg.norm(old), 1e-12))
+            self._active_private=None
+            K, T = self._h_terms()
+            for _ in range(3):
+                H = self._h_block(H, K, T)
+            if len(uncovered) and len(endpoints):
+                H = self._h_block(H, K, T, uncovered)
+            if self.endpoint_sweeps and len(endpoints) and it%self.endpoint_interval==0:
+                H = self._endpoint_update(H, K, T)
+            self.H_cons = H
+            self._objective(H)
+            olda = self.a.copy()
+            if update_weights:
+                scores = -np.log(np.maximum(self.E, 1e-15))/(self.gamma-1)
+                self.a = np.exp(scores-scores.max())
+                self.a /= self.a.sum()
+            J = self._objective(H)
+            if not np.isfinite(J) or J > hist[-1]+1e-9*max(1, abs(hist[-1])):
+                raise RuntimeError(f'固定目标上升/非有限: iter={it}, old={hist[-1]}, new={J}')
+            relative = abs(hist[-1]-J)/max(abs(hist[-1]), 1e-12)
+            max_change = max(max_change, np.linalg.norm(H-Hbefore)/max(np.linalg.norm(Hbefore), 1e-12), np.linalg.norm(self.a-olda))
+            hist.append(J)
+            if (it+1)%self.check_interval==0 or it+1==self.max_iter:
+                last_kkt=self.stationarity(H)
+                kkt_history.append(dict(iteration=it+1,**last_kkt))
+                quiet=quiet+1 if relative<self.tol_J and last_kkt['maximum']<=self.tol_kkt else 0
+            if self.verbose and it % 20 == 0:
+                print(f'SAPN-Text iter={it} J={J:.8g} rel={relative:.3g} change={max_change:.3g}')
+            if it >= 9 and quiet >= 2:
+                converged = True
+                break
+        self.H_cons = H
+        labels = np.argmax(H, axis=0)
+        positive_value = self.cp*np.sum(H*(self.Lp@H.T).T)
+        negative_value = self.cn*self._negative(H)[0]
+        B = H@H.T
+        orthogonal_value = self.co*np.sum((B-np.diag(np.diag(B)))**2)
+        info = {'J_hist': hist, 'a': self.a.copy(), 'E': self.E.copy(),
+                'lambda_r_effective': self.r_v.copy(), 'iterations': len(hist)-1,
+                'converged': converged, 'stop_reason': 'objective_and_projected_KKT' if converged else 'max_iter',
+                'kkt_history':kkt_history,'kkt':last_kkt,'tol_kkt':self.tol_kkt,
+                'gradient_initial':initial_diagnostics,'gradient_final':self.gradient_diagnostics(H),
+                'private_scope':self._private_requested,'supervision_weighting':self.supervision_weighting,
+                'geometry_weight':self.geometry_weight,'reference_strength_effective':self._reference_strength,'query_neighborhood_coverage':self.query_neighborhood_coverage,'geometry_edges':int((self.Ggeom.nnz-np.count_nonzero(self.Ggeom.diagonal()))//2),
+                'negative_loss': self.negative_loss, 'normalization': 'view_energy=n; per_edge/n; off*k/n^2',
+                'label_to_views': self.label_to_views, 'private_simplex': self.private_simplex,
+                'view_supervision_term': float(sum(self.a[v]**self.gamma*(self._view_coefficients(v)[0]*np.sum(h*(self.Lp@h.T).T)+self._view_coefficients(v)[1]*self._negative(h)[0]) for v,h in enumerate(self.Hv))),
+                'objective_terms': {'views': float(np.dot(self.a**self.gamma, self.E)),
+                                    'positive': float(positive_value), 'negative': float(negative_value),
+                                    'orthogonal': float(orthogonal_value),'geometry':float(self.cg*((1-self._reference_strength)*np.sum(H*(self.Ggeom@H.T).T)+self._reference_strength*(np.sum((H-self.H_ref)**2)+np.sum((H-self.H_ref)*(self.Ggeom@(H-self.H_ref).T).T))))},
+                'effective_pair_coefficients': {'positive': self.cp, 'negative': self.cn},
+                'labelled_nodes': len(endpoints), 'pairs_per_sample': (len(self._PA)+len(self._NA))/self.n,
+                'occupied_clusters': len(np.unique(labels)),
+                'positive_satisfaction': float(np.mean(labels[self._PA[:, 0]] == labels[self._PA[:, 1]])) if len(self._PA) else np.nan,
+                'negative_satisfaction': float(np.mean(labels[self._NA[:, 0]] != labels[self._NA[:, 1]])) if len(self._NA) else np.nan,
+                'positive_weights': self.wp.copy(), 'negative_weights': self.wn.copy(),
+                'reliability_info': self.reliability_info}
+        return labels, H.copy(), info
+
+    def get_state(self):
+        return {'n': self.n, 'k': self.k, 'scales': np.array(self.scales),
+                'reference_strength':self.reference_strength,'H_ref':self.H_ref.copy(),'fingerprint':self._fingerprint,'private_scope':self._private_requested,'supervision_weighting':self.supervision_weighting,
+                'private_simplex': self.private_simplex, 'label_to_views': self.label_to_views,
+                'H': self.H_cons.copy(), 'U': [u.copy() for u in self.U],
+                'Hv': [h.copy() for h in self.Hv], 'a': self.a.copy(), 'r_v': self.r_v.copy(),
+                'P': self._PA.copy(), 'N': self._NA.copy(), 'wp': self.wp.copy(), 'wn': self.wn.copy(),
+                'reliability_info': self.reliability_info}
+
+
+# Preserve gradient-check aliases for the original verify_solver.py import.
+SAPN = SAPNText
+SAPNPlus = SAPNText
+
+
+def run_sapn_text(Xs, P, N, Lp, k, seed=0, H0=None, Hv0=None, it1=300, it2=1000, lo=.01, **kwargs):
+    """Accept explicit P/N without sampling true y inside the model. Different-stage objectives are separate trajectories."""
+    if any(key in kwargs for key in ('lambda_o', 'max_iter', 'seed')):
+        raise ValueError('用lo/it1/it2/seed指定两阶段设置')
+    first = SAPNText(seed=seed, max_iter=it1, lambda_o=0., **kwargs)
+    _, _, info1 = first.fit_predict(Xs, P, N, Lp, k, H_init=H0,Hv_init=Hv0)
+    second = SAPNText(seed=seed, max_iter=it2, lambda_o=lo, **kwargs)
+    yp, H, info2 = second.fit_predict(Xs, P, N, Lp, k, state_init=first.get_state())
+    info2['stage1_J_hist'] = info1['J_hist']
+    info2['stage1_iterations'] = info1['iterations']
+    info2['stage1_kkt_history']=info1['kkt_history']
+    info2['stage1_converged']=info1['converged']
+    info2['stage1_stop_reason']=info1['stop_reason']
+    return yp, H, info2
+
+
+from sklearn.decomposition import NMF
+
+def _nmf(X, k, seed, max_iter=400):
+    m = NMF(n_components=k, init="random", random_state=seed,
+            max_iter=max_iter)
+    return m.fit_transform(X)
+
+def _align(W, ref):
+    Wn = W / (np.linalg.norm(W, axis=0, keepdims=True) + 1e-12)
+    rn = ref / (np.linalg.norm(ref, axis=0, keepdims=True) + 1e-12)
+    C = Wn.T @ rn                       # C[r,c]: correlation between view cluster r and reference cluster c.
+    row, col = linear_sum_assignment(-C)
+    Wa = np.zeros_like(W)
+    for r, c in zip(row, col):
+        Wa[:, c] = W[:, r]
+    return Wa
+
+def warm_init(Xs, k, seed, also_hv=False, max_iter=400):
+    # Align to the first view NMF, using V fits and avoiding concatenated-feature NMF.
+    ref = _nmf(Xs[0], k, seed, max_iter=max_iter)
+    aligned = [ref]
+    for X in Xs[1:]:
+        aligned.append(_align(_nmf(X, k, seed, max_iter=max_iter), ref))
+    H0 = np.mean(aligned, axis=0)
+    H0 = H0 / (H0.sum(axis=1, keepdims=True) + 1e-12)
+    if also_hv:
+        hv = [(W / (W.sum(axis=1, keepdims=True) + 1e-12)).T
+              for W in aligned]
+        return H0.T, hv
+    return H0.T
+
+__all__ = ['fit_sapn_text', 'equal_energy_concatenation']
+
+
+def equal_energy_concatenation(Xs):
+    """Return one sample-by-feature view; each original view has unit Frobenius norm."""
+    matrices = [sparse.csr_matrix(x, dtype=float) for x in Xs]
+    if not matrices or len({x.shape[0] for x in matrices}) != 1:
+        raise ValueError('Provide aligned, nonempty views')
+    scaled = []
+    for x in matrices:
+        if not np.all(np.isfinite(x.data)) or np.any(x.data < 0):
+            raise ValueError('Views must be finite and nonnegative')
+        energy = float(x.multiply(x).sum())
+        if not np.isfinite(energy) or energy <= 0:
+            raise ValueError('Every view must have positive finite Frobenius energy')
+        scaled.append(x / np.sqrt(energy))
+    return [sparse.hstack(scaled, format='csr')]
+
+
+def fit_sapn_text(Xs, P, N, k, *, pair_strength=20., seed=23,
+                  H0=None, Hv0=None, geometry_graph=None):
+    """Run the retained, fixed SAPN profile with explicit paid positive/negative pairs.
+
+    Xs: aligned nonnegative sample-by-feature matrices, already preprocessed.
+    P/N: zero-based integer arrays of shape (m, 2), without self/duplicate pairs.
+    H0/Hv0: optional saved k-by-n warm starts; provide both or neither.
+    geometry_graph: optional saved symmetric, zero-row-sum n-by-n Laplacian.
+    pair_strength: selected using within-budget relations; no automatic search.
+    Returns labels (n,), H (k,n), diagnostics, and complete solver state.
+    """
+    if not np.isfinite(pair_strength) or pair_strength < 0:
+        raise ValueError('pair_strength must be finite and nonnegative')
+    Xs = [sparse.csr_matrix(x, dtype=float) for x in Xs]
+    if not Xs:
+        raise ValueError('At least one view is required')
+    if (H0 is None) != (Hv0 is None):
+        raise ValueError('Provide H0 and Hv0 together, or neither')
+    if H0 is None:
+        H0, Hv0 = warm_init(Xs, k, seed, also_hv=True, max_iter=200)
+    if geometry_graph is None:
+        geometry_graph = build_multiview_graph(Xs)
+    config = dict(mu=.001, lambda_c=.2, lambda_r='auto', lambda_g=0., gamma=2.,
+        lambda_p=pair_strength, lambda_n=pair_strength, negative_loss='overlap',
+        label_to_views=.5, private_simplex='endpoints', geometry_weight=.1,
+        reference_strength='coverage', supervision_weighting='fixed',
+        reliability='none', endpoint_interval=5, tol_J=1e-5, tol_kkt=1e-3,
+        seed=seed, geometry_graph=geometry_graph)
+    first = SAPNText(**config, max_iter=200, lambda_o=0.)
+    _, _, stage1 = first.fit_predict(Xs, P, N, None, k, H_init=H0,
+                                    Hv_init=Hv0, update_weights=True)
+    model = SAPNText(**config, max_iter=1000, lambda_o=.1)
+    labels, H, stage2 = model.fit_predict(Xs, P, N, None, k,
+                                        state_init=first.get_state(), update_weights=True)
+    continuation = None
+    if not stage2['converged']:
+        resumed = SAPNText(**config, max_iter=4000, lambda_o=.1)
+        labels, H, continuation = resumed.fit_predict(Xs, P, N, None, k,
+                                        state_init=model.get_state(), update_weights=True)
+        if abs(continuation['J_hist'][0]-stage2['J_hist'][-1]) > 1e-9*max(1.,abs(stage2['J_hist'][-1])):
+            raise RuntimeError('Continuation changed its objective')
+        model = resumed
+    final = continuation if continuation is not None else stage2
+    info = dict(profile='retained-SAPN', pair_strength=float(pair_strength),
+        converged=final['converged'], kkt=final['kkt']['maximum'],
+        stage1=stage1, stage2=stage2, continuation=continuation,
+        schedule=dict(NMF=200,stage1=200,stage2=1000,continuation_cap=4000),
+        scope='Fixed retained profile; preprocessing and within-budget parameter selection are external.')
+    return labels, H, info, model.get_state()
+

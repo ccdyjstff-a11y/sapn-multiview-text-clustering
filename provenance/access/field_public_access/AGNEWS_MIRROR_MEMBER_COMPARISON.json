@@ -1,0 +1,60 @@
+{
+  "scope": "Read-only archive member comparison; no extraction, preparation or training",
+  "original_archive_sha256": "4e2fc37d369e6e317a8b62d0d2f11d379f8c3dde60c07c35a46b069a246498ad",
+  "original_archive_bytes": 11784327,
+  "expected_original_sha256": "4e2fc37d369e6e317a8b62d0d2f11d379f8c3dde60c07c35a46b069a246498ad",
+  "mirror_url": "https://s3.amazonaws.com/fast-ai-nlp/ag_news_csv.tgz",
+  "mirror_sha256": "9a8c300eabb45750237fcc669f61cb8a3448f3ef6f6098e1ce340e444f6872be",
+  "mirror_bytes": 11784419,
+  "archive_bytes_identical": false,
+  "uncompressed_tar_bytes_identical": false,
+  "all_regular_member_names_sizes_and_bytes_equal": true,
+  "original_regular_members": [
+    {
+      "name": "ag_news_csv/train.csv",
+      "bytes": 29470338,
+      "sha256": "76a0a2d2f92b286371fe4d4044640910a04a803fdd2538e0f3f29a5c6f6b672e"
+    },
+    {
+      "name": "ag_news_csv/test.csv",
+      "bytes": 1857427,
+      "sha256": "521465c2428ed7f02f8d6db6ffdd4b5447c1c701962353eb2c40d548c3c85699"
+    },
+    {
+      "name": "ag_news_csv/classes.txt",
+      "bytes": 31,
+      "sha256": "612dbfa932f07a6ed837295a7d5746ce7412e7bb4bc32ba919fdb3cda3a1b9b5"
+    },
+    {
+      "name": "ag_news_csv/readme.txt",
+      "bytes": 1795,
+      "sha256": "779c2e6bbf93dd810d9c7b318006daef7a4bfc34062002461d251dc10fb9f58c"
+    }
+  ],
+  "mirror_regular_members": [
+    {
+      "name": "ag_news_csv/train.csv",
+      "bytes": 29470338,
+      "sha256": "76a0a2d2f92b286371fe4d4044640910a04a803fdd2538e0f3f29a5c6f6b672e"
+    },
+    {
+      "name": "ag_news_csv/readme.txt",
+      "bytes": 1795,
+      "sha256": "779c2e6bbf93dd810d9c7b318006daef7a4bfc34062002461d251dc10fb9f58c"
+    },
+    {
+      "name": "ag_news_csv/test.csv",
+      "bytes": 1857427,
+      "sha256": "521465c2428ed7f02f8d6db6ffdd4b5447c1c701962353eb2c40d548c3c85699"
+    },
+    {
+      "name": "ag_news_csv/classes.txt",
+      "bytes": 31,
+      "sha256": "612dbfa932f07a6ed837295a7d5746ce7412e7bb4bc32ba919fdb3cda3a1b9b5"
+    }
+  ],
+  "portable_preparer_accepts_mirror_without_change": false,
+  "boundary": "The original portable preparer still pins the original archive SHA256. A separately verified mirror adapter now validates the different container and exact member identity before calling the unchanged construction function.",
+  "separate_verified_adapter": "data_tools/prepare_agnews_mirror.py",
+  "adapter_scientific_preparation_passed": true
+}

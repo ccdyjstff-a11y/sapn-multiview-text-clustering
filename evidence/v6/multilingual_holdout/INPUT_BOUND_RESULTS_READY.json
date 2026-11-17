@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "files": {
+    "RESULTS_READY.json": "4c1b855d44e27af6c69a563540c5c89604a227ec7b7481d294d6a5ccb3d5a20d",
+    "INITIAL_INPUT_VALIDATION.json": "1c2cfc7c581bc03fbbd80c2fc43114c2d73be261828749c78a4985496b4b5fe9",
+    "POSTSCORE_INPUT_VALIDATION.json": "2426e6c6be3fabf82f5d12d29a814cc8b2a3d311896a55bad8d767cab18833dc",
+    "validate_frozen_inputs.py": "dc728ab97c80aa073977870fde0550919ffc2c3cbb4ed22fcc46b8c0aa6f0856"
+  },
+  "qualification": "Original seal/numerical/statistic gate plus independently authenticated frozen input and label identities.",
+  "order": "Initial check during training before scoring; original queue automatically sealed and scored; second check after scoring. No claim that a new pre-score hook intercepted the frozen queue."
+}

@@ -1,0 +1,22 @@
+"""Wait for this finite authorized run, then score and independently verify."""
+from pathlib import Path
+import json,sys,time,subprocess,psutil,os,hashlib
+ROOT=Path(__file__).resolve().parent
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+last=-1
+while True:
+    p=read(ROOT/'FIT_PROGRESS.json')
+    if p['status']=='complete_sealed':break
+    if not psutil.pid_exists(p['pid']):raise RuntimeError('Authorized fit worker ended before sealing; no automatic retry')
+    if p['completed']//10!=last:
+        print('WAITING_FOR_SEAL',p['completed'],p.get('last_fit'),flush=True);last=p['completed']//10
+    time.sleep(5)
+assert (ROOT/'ALL_FINALS_SEALED.json').exists()
+source_bindings={name:sha(ROOT/name) for name in ['score_frozen_sensitivity.py','verify_and_report_sensitivity.py']}
+(ROOT/'SCORING_SOURCE_BINDINGS.json').write_text(json.dumps(source_bindings,indent=2)+'\n',encoding='utf-8')
+for name in source_bindings:
+    assert sha(ROOT/name)==source_bindings[name]
+    print('START',name,flush=True)
+    subprocess.run([sys.executable,'-I',str(ROOT/name)],check=True)
+print('SENSITIVITY_COMPLETE_VERIFIED',flush=True)

@@ -1,0 +1,199 @@
+{
+  "scope": "13 existing manuscript figures plus the separately sealed field-extension figure",
+  "figures": [
+    {
+      "manuscript_asset": "fig00_model_v4.pdf",
+      "manuscript_asset_sha256": "1174e7c682ffd2c3f594912ef63f640b63561a469906b15a326e9ecfd2d265b5",
+      "plotting_sources": [
+        "figures/historical/build_model_figure.py"
+      ],
+      "data_sources": [],
+      "status": "historical_source",
+      "scope": "Programmatic model dependency schematic. No empirical observations or numeric CSV; historical guard expects manuscript objective text."
+    },
+    {
+      "manuscript_asset": "fig05_second_stage_numerics.pdf",
+      "manuscript_asset_sha256": "fb4ef17dc5a9fd0012dcb5084f2725de43b18fcf62dcaa826a52c580fc0abc95",
+      "plotting_sources": [
+        "figures/historical/build_numerics_figure.py",
+        "figures/historical/build_evidence_figures.py"
+      ],
+      "data_sources": [
+        "figures/source_data/fig05_objectives.csv",
+        "figures/source_data/fig05_residuals.csv",
+        "figures/source_data/fig05_source_data.json"
+      ],
+      "status": "historical_source",
+      "scope": "335 recorded objective points and 38 recorded residual checks; supplied JSON can be passed to the historical --source-data argument with explicit environment paths."
+    },
+    {
+      "manuscript_asset": "fig06_wrong_answer_sensitivity.png",
+      "manuscript_asset_sha256": "47d43c88f65c5b6866802bc6e09e909389dc6454829bfe72a3f21ba571ee2503",
+      "plotting_sources": [
+        "figures/historical/build_evidence_figures.py"
+      ],
+      "data_sources": [
+        "figures/source_data/fig06_paired_changes.csv",
+        "evidence/original/noisy_query_summary.json"
+      ],
+      "status": "historical_source",
+      "scope": "60 paired values flattened from original plotted records; source builder function for wrong-answer sensitivity retains historical layout."
+    },
+    {
+      "manuscript_asset": "fig08_location_control.png",
+      "manuscript_asset_sha256": "0434c96f76f8ee7f301ada612ab7f387ecf696d56bfcf2629dc3c310d4934cc2",
+      "plotting_sources": [
+        "figures/historical/build_new_figures.py"
+      ],
+      "data_sources": [
+        "figures/source_data/fig08_reference_strengths.csv",
+        "figures/source_data/fig08_paired_ACC.csv",
+        "evidence/original/coverage_location_control_v2/summary.json"
+      ],
+      "status": "historical_source",
+      "scope": "30 observed/expected strengths and 30 paired differences; position_in_source_block preserves record order without inventing seed labels."
+    },
+    {
+      "manuscript_asset": "fig13_reference_filter_risk.pdf",
+      "manuscript_asset_sha256": "dee4ad97e933a8899db8fcf6e8edb98c682c1b08fca2eaa56da482d4b47a74f0",
+      "plotting_sources": [
+        "figures/plot_reference_risk.py",
+        "figures/historical/build_reference_risk_figure.py"
+      ],
+      "data_sources": [
+        "tables/figures/fig13_reference_filter_source.csv",
+        "evidence/v8/reference_filter/reference_filter_risk_source.csv"
+      ],
+      "status": "portable_redraw_executed",
+      "scope": "501 frequencies x 3 strengths; analytic formulas and source values checked, not empirical data."
+    },
+    {
+      "manuscript_asset": "fig14_unified_ssa_Q400.pdf",
+      "manuscript_asset_sha256": "fa0605d2f934a1d021a3271ff107f6e62f572a0dab41361a6be1232d4e5c2fde",
+      "plotting_sources": [
+        "provenance/original_sources/figures/plot_unified_ssa.py.txt"
+      ],
+      "data_sources": [
+        "evidence/v11/ssa/figure/figure_source_Q400.csv",
+        "evidence/v11/ssa/figure/figure_summary_Q400.csv",
+        "evidence/v10/native_pcbg/figure/figure_source_Q400.csv",
+        "evidence/v10/native_pcbg/figure/figure_summary_Q400.csv"
+      ],
+      "status": "historical_source",
+      "scope": "Latest SSA extension generator is preserved unchanged as a record. Historical protocol/reporting guards and paths must be reconstructed before execution."
+    },
+    {
+      "manuscript_asset": "fig15_supervision_repetition.pdf",
+      "manuscript_asset_sha256": "dbf59ca22ba6350dc6911e127d0a0c787c81d89e2e14a3401e9178a7dfc36cd7",
+      "plotting_sources": [
+        "figures/historical/build_extension_figures.py",
+        "provenance/original_sources/figures/build_extension_results.py.txt"
+      ],
+      "data_sources": [
+        "tables/figures/fig15_supervision_repetition_source.csv",
+        "tables/figures/fig15_supervision_repetition_summary.csv"
+      ],
+      "status": "historical_source",
+      "scope": "Original builder/aggregation source with historical evidence gates; full seed coordinates and summaries retained."
+    },
+    {
+      "manuscript_asset": "fig16_signed_ablation_repetition.pdf",
+      "manuscript_asset_sha256": "eb095ef9fa85106a77867265ebc3a078d9eebf41bce8a42563107790cfe14436",
+      "plotting_sources": [
+        "figures/historical/build_extension_figures.py",
+        "provenance/original_sources/figures/build_extension_results.py.txt"
+      ],
+      "data_sources": [
+        "tables/figures/fig16_signed_ablation_repetition_source.csv",
+        "tables/figures/fig16_signed_ablation_repetition_summary.csv"
+      ],
+      "status": "historical_source",
+      "scope": "Paired signed-ablation points and summary CSVs; unchanged original source."
+    },
+    {
+      "manuscript_asset": "fig17_reference_repetition.pdf",
+      "manuscript_asset_sha256": "6a90f1df12997f945577053cb50a89f05247cace2ef2786dcfd5483a6132b156",
+      "plotting_sources": [
+        "figures/historical/build_extension_figures.py",
+        "provenance/original_sources/figures/build_extension_results.py.txt"
+      ],
+      "data_sources": [
+        "tables/figures/fig17_reference_repetition_source.csv",
+        "tables/figures/fig17_reference_repetition_summary.csv"
+      ],
+      "status": "historical_source",
+      "scope": "Reference-control paired points and summaries; fixed coefficient and independent selection remain distinct."
+    },
+    {
+      "manuscript_asset": "fig18_mechanism_controls.pdf",
+      "manuscript_asset_sha256": "c5eec787d955797ca9135c34aa265654893c1c73e74be0e824c3b80093119ede",
+      "plotting_sources": [
+        "figures/historical/plot_mechanisms_v5.py",
+        "figures/historical/evidence_gate.py"
+      ],
+      "data_sources": [
+        "evidence/v5/mechanisms/per_run.csv",
+        "evidence/v5/mechanisms/summary.json",
+        "evidence/v5/mechanisms/RESULTS_READY.json"
+      ],
+      "status": "historical_source",
+      "scope": "Original guarded paired mechanism plotting source; no new fitting."
+    },
+    {
+      "manuscript_asset": "fig19_reuters_holdout.pdf",
+      "manuscript_asset_sha256": "febccac5cb6838da6563fc95aa525efc02f6d9b89beac2157eb3bd9a6d587c2b",
+      "plotting_sources": [
+        "figures/historical/plot_holdout.py"
+      ],
+      "data_sources": [
+        "evidence/v6/multilingual_holdout/figures/reuters_holdout_source_data.csv",
+        "evidence/v6/multilingual_holdout/per_run.csv",
+        "evidence/v6/multilingual_holdout/evaluation.json"
+      ],
+      "status": "historical_source",
+      "scope": "Full 4-panel source table; same-source samples, not independent-source validation."
+    },
+    {
+      "manuscript_asset": "fig20_mass_transfer.pdf",
+      "manuscript_asset_sha256": "c2c1bd56006d5bab0a44612a66db7c6b4eb3e64762c0d5f173f63ecdf756b0c1",
+      "plotting_sources": [
+        "provenance/original_sources/figures/report_and_plot_mass_transfer.py.txt"
+      ],
+      "data_sources": [
+        "evidence/v6/selection_mass_diagnostic/figure_delta_source.csv",
+        "evidence/v6/selection_mass_diagnostic/figure_source.csv",
+        "evidence/v6/selection_mass_diagnostic/paired_change_summary.csv"
+      ],
+      "status": "historical_source",
+      "scope": "Original mass-transfer analysis/plotting source retained as a record; exact intervention and eligible paired differences preserved."
+    },
+    {
+      "manuscript_asset": "fig21_allocation_new10_acc.pdf",
+      "manuscript_asset_sha256": "308637d1f8e64e9305b77246286440375e92fa8c4e5ebab8aac419b468698071",
+      "plotting_sources": [
+        "figures/plot_allocation_acc.py",
+        "provenance/original_sources/figures/plot_allocation_acc.py.txt"
+      ],
+      "data_sources": [
+        "evidence/final/alloc/acc_paired_differences_400.csv",
+        "evidence/final/alloc/acc_paired_directions_40.csv"
+      ],
+      "status": "portable_redraw_executed",
+      "scope": "All 400 paired ACC values; 40 groups of 10; mean plus sample SD; full range and subordinate near-zero view."
+    },
+    {
+      "manuscript_asset": "fig22_allocation_extension.pdf",
+      "manuscript_asset_sha256": "e730069fa94f47f602702e642aa373929c6ee12cc7ef73c49f6238b1eaf43e24",
+      "plotting_sources": [
+        "figures/plot_extension_acc.py",
+        "provenance/original_sources/figures/summarize_extension.py.txt"
+      ],
+      "data_sources": [
+        "evidence/allocation_extension/reporting/paired_values_200.csv",
+        "evidence/allocation_extension/reporting/paired_ACC_8.csv"
+      ],
+      "status": "portable_redraw_executed",
+      "scope": "40 ACC pairs in eight groups of five, including negative AG News contrasts. Portable plotting uses sealed CSVs only."
+    }
+  ]
+}

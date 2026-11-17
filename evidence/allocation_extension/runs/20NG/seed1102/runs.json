@@ -1,0 +1,199 @@
+[
+  {
+    "dataset": "20NG",
+    "seed": 1102,
+    "budget": 400,
+    "method": "full-CV",
+    "selected_lambda": 20.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_full_c0_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0006468123056285788,
+    "seconds": 38.29791640000076,
+    "identity_sha256": "53d63ebe298c0a220cd40fdfda2b43b05baca82ef09896d8e7af635c67e69f12",
+    "prediction_sha256": "3f1362932501ce43d147b91eeb3b8e476b9e673b7d2801f11e12ce1146120e85",
+    "state_sha256": "3ca975ce25d6f86f9753dbe4d9d600e040d5bfc79ed519897791a9bbb1400768",
+    "invariants": {
+      "H_ref": "dd65635c81d667c1395200270e5e6d0580fa304e28624baa2797e18da99038bf",
+      "r_v": "a70626d93fbc8ecfe3c01e115dce0d01b5c096ba5a2f7d72d2b3005288cf902f",
+      "endpoints": "0f530ec3feabddbada43efcb4dd4bef71ae499603fe7561b285af8ec70d07dea",
+      "endpoint_order": "7dcfaa1b1573f9a9d5a78a528b35d95420d4f8c047b425125cf794ae0dcb4c2b",
+      "effective_u": 0.10550000000000004,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "cfea6a30d6f705c93165e03ad17d31cdd1896976776a44137f6050a44bd93c2b"
+    },
+    "final_a": [
+      0.5453522655507517,
+      0.4546477344492484
+    ],
+    "allocation": {
+      "eta": 0.5,
+      "consensus_coefficient": 0.0025,
+      "individual_view_coefficient": 0.00125,
+      "total_positive_coefficient": 0.005,
+      "total_negative_coefficient": 0.005,
+      "target": 0.005
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 1102,
+    "budget": 400,
+    "method": "consensus-only-CV",
+    "selected_lambda": 2.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_consensus-only_c1_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0008369233411558993,
+    "seconds": 40.333475100000214,
+    "identity_sha256": "1fe109833fb4b7e69cbeeceb4399611e9d0e784b283fec0fe8ed938f392ce019",
+    "prediction_sha256": "f2dd65931713734804fca761d3481b6a92ef07a9035cff2c110dce844b20e0c2",
+    "state_sha256": "ad497fe2191924bb9d6ec1b0017c93b0aa895a8f0b9bf90f413619296d8b2f00",
+    "invariants": {
+      "H_ref": "dd65635c81d667c1395200270e5e6d0580fa304e28624baa2797e18da99038bf",
+      "r_v": "a70626d93fbc8ecfe3c01e115dce0d01b5c096ba5a2f7d72d2b3005288cf902f",
+      "endpoints": "0f530ec3feabddbada43efcb4dd4bef71ae499603fe7561b285af8ec70d07dea",
+      "endpoint_order": "7dcfaa1b1573f9a9d5a78a528b35d95420d4f8c047b425125cf794ae0dcb4c2b",
+      "effective_u": 0.10550000000000004,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "cfea6a30d6f705c93165e03ad17d31cdd1896976776a44137f6050a44bd93c2b"
+    },
+    "final_a": [
+      0.546001504815017,
+      0.453998495184983
+    ],
+    "allocation": {
+      "eta": 0.0,
+      "consensus_coefficient": 0.0005,
+      "individual_view_coefficient": 0.0,
+      "total_positive_coefficient": 0.0005,
+      "total_negative_coefficient": 0.0005,
+      "target": 0.0005
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 1102,
+    "budget": 400,
+    "method": "views-only-CV",
+    "selected_lambda": 2.0,
+    "selection_rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "stem": "Q400_views-only_c1_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0007312199634009242,
+    "seconds": 36.251535800000056,
+    "identity_sha256": "7847c97772948cd9c97792c184e9df2853125694517a16cd1615eefbd19fe700",
+    "prediction_sha256": "c4dfbe7addec4b12e99452834a5df303917ab03a7e7e68feb1bc439e25f68845",
+    "state_sha256": "fb10be64d5ec3c61fbb0c713abfa28507e6ae2b3232fb3b8a7f21a68169d3273",
+    "invariants": {
+      "H_ref": "dd65635c81d667c1395200270e5e6d0580fa304e28624baa2797e18da99038bf",
+      "r_v": "a70626d93fbc8ecfe3c01e115dce0d01b5c096ba5a2f7d72d2b3005288cf902f",
+      "endpoints": "0f530ec3feabddbada43efcb4dd4bef71ae499603fe7561b285af8ec70d07dea",
+      "endpoint_order": "7dcfaa1b1573f9a9d5a78a528b35d95420d4f8c047b425125cf794ae0dcb4c2b",
+      "effective_u": 0.10550000000000004,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "cfea6a30d6f705c93165e03ad17d31cdd1896976776a44137f6050a44bd93c2b"
+    },
+    "final_a": [
+      0.5459908205843684,
+      0.4540091794156316
+    ],
+    "allocation": {
+      "eta": 1.0,
+      "consensus_coefficient": 0.0,
+      "individual_view_coefficient": 0.00025,
+      "total_positive_coefficient": 0.0005,
+      "total_negative_coefficient": 0.0005,
+      "target": 0.0005
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 1102,
+    "budget": 400,
+    "method": "consensus-only-at-full-lambda",
+    "selected_lambda": 20.0,
+    "selection_rule": "Full-selected lambda; no additional selection",
+    "eligible_folds": 2,
+    "reused_CV_selected_final": false,
+    "stem": "Q400_consensus-only_c0_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.00034413167607454424,
+    "seconds": 48.650919100000465,
+    "identity_sha256": "a3a91bbb8c716b6554444846a1c0876123ed425db62c7b13ac3f1c879c746125",
+    "prediction_sha256": "d176f270a70607d2d00012b9b961ce1a84c5dc71733fbf6654c50c430d77595a",
+    "state_sha256": "ca84890dd536f581d7d1a763ef19cbe0318d4bbb8a830bae96cd1adf889302a6",
+    "invariants": {
+      "H_ref": "dd65635c81d667c1395200270e5e6d0580fa304e28624baa2797e18da99038bf",
+      "r_v": "a70626d93fbc8ecfe3c01e115dce0d01b5c096ba5a2f7d72d2b3005288cf902f",
+      "endpoints": "0f530ec3feabddbada43efcb4dd4bef71ae499603fe7561b285af8ec70d07dea",
+      "endpoint_order": "7dcfaa1b1573f9a9d5a78a528b35d95420d4f8c047b425125cf794ae0dcb4c2b",
+      "effective_u": 0.10550000000000004,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "cfea6a30d6f705c93165e03ad17d31cdd1896976776a44137f6050a44bd93c2b"
+    },
+    "final_a": [
+      0.5461328353591566,
+      0.4538671646408434
+    ],
+    "allocation": {
+      "eta": 0.0,
+      "consensus_coefficient": 0.005,
+      "individual_view_coefficient": 0.0,
+      "total_positive_coefficient": 0.005,
+      "total_negative_coefficient": 0.005,
+      "target": 0.005
+    }
+  },
+  {
+    "dataset": "20NG",
+    "seed": 1102,
+    "budget": 400,
+    "method": "views-only-at-full-lambda",
+    "selected_lambda": 20.0,
+    "selection_rule": "Full-selected lambda; no additional selection",
+    "eligible_folds": 2,
+    "reused_CV_selected_final": false,
+    "stem": "Q400_views-only_c0_final",
+    "status": "ok",
+    "converged": true,
+    "kkt": 0.0005747443716871653,
+    "seconds": 27.84314160000031,
+    "identity_sha256": "eb9dee31e139f96e422ee44db568e4d0e1f29a623ac72c1a235ab2447c135345",
+    "prediction_sha256": "315a14e513f94302b4c3d81c8e18e19859c6781419f0fc09c9ded89af8453f47",
+    "state_sha256": "434df8619435b887a27e802b91453d5f0dd4d644a1726cb0d106b8754adfdaac",
+    "invariants": {
+      "H_ref": "dd65635c81d667c1395200270e5e6d0580fa304e28624baa2797e18da99038bf",
+      "r_v": "a70626d93fbc8ecfe3c01e115dce0d01b5c096ba5a2f7d72d2b3005288cf902f",
+      "endpoints": "0f530ec3feabddbada43efcb4dd4bef71ae499603fe7561b285af8ec70d07dea",
+      "endpoint_order": "7dcfaa1b1573f9a9d5a78a528b35d95420d4f8c047b425125cf794ae0dcb4c2b",
+      "effective_u": 0.10550000000000004,
+      "private_domain": "endpoints",
+      "private_simplex": true,
+      "data_graph_fingerprint": "cfea6a30d6f705c93165e03ad17d31cdd1896976776a44137f6050a44bd93c2b"
+    },
+    "final_a": [
+      0.545790893150936,
+      0.45420910684906396
+    ],
+    "allocation": {
+      "eta": 1.0,
+      "consensus_coefficient": 0.0,
+      "individual_view_coefficient": 0.0025,
+      "total_positive_coefficient": 0.005,
+      "total_negative_coefficient": 0.005,
+      "target": 0.005
+    }
+  }
+]

@@ -1,0 +1,232 @@
+"""Export compact tie-sensitivity evidence without raw data or optimizer states."""
+from pathlib import Path
+from zipfile import ZipFile
+import csv
+import hashlib
+import json
+import shutil
+
+ROOT = Path(__file__).resolve().parent
+RELEASE = ROOT.parent / 'release_repository'
+OUT = ROOT / 'compact_evidence'
+PREFIX = 'evidence/tie_sensitivity'
+ORIGINAL = ROOT.parent.parent / 'review_revision_v9/allocation_repeat'
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+
+
+def rows(path):
+    with Path(path).open(encoding='utf-8-sig', newline='') as stream:
+        return list(csv.DictReader(stream))
+
+
+def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def write_csv(path, records):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('w', encoding='utf-8', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(records[0]))
+        writer.writeheader()
+        writer.writerows(records)
+
+
+def main():
+    OUT.mkdir(exist_ok=True)
+    exports = []
+    copied = {}
+
+    def copy(source, relative):
+        source = Path(source)
+        target = OUT / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+        digest = sha(source)
+        assert sha(target) == digest
+        try:
+            origin = 'selection_stability/' + source.relative_to(ROOT).as_posix()
+        except ValueError:
+            origin = 'allocation_repeat/' + source.relative_to(ORIGINAL).as_posix()
+        exports.append(dict(destination=PREFIX + '/' + relative,
+                            sha256=digest, source_relative=origin, kind='byte_identical_copy'))
+        copied[source.resolve()] = relative
+
+    # Original bytes retain the local provenance trail, including historical paths.
+    for source in sorted(ROOT.iterdir()):
+        if not source.is_file() or source.name == Path(__file__).name:
+            continue
+        if source.suffix == '.py':
+            copy(source, 'provenance/original_sources/' + source.name + '.txt')
+        elif source.suffix in {'.json', '.csv', '.md'}:
+            copy(source, 'provenance/original_artifacts/' + source.name)
+    for directory in ['evaluation', 'verification', 'maintext_handoff',
+                      'reporting_supplements', 'selection_descriptives', 'text_and_tables']:
+        for source in sorted((ROOT / directory).iterdir()):
+            if not source.is_file():
+                continue
+            relative = directory + '/' + source.name
+            if source.suffix == '.py':
+                copy(source, 'provenance/original_sources/' + relative + '.txt')
+            elif source.suffix in {'.json', '.csv', '.md', '.tex'}:
+                copy(source, 'provenance/original_artifacts/' + relative)
+
+    seal = read(ROOT / 'ALL_FINALS_SEALED.json')
+    new_records = read(ROOT / 'NEW_FIT_RECORDS.json')
+    assert len(new_records) == seal['new_fits'] == 172
+    allfit = {}
+    new_public = []
+    for row in new_records:
+        fit = row['fit_id']
+        block = ROOT / 'fits' / row['dataset'] / ('seed' + str(row['seed']))
+        stem = row['stem']
+        record = {k: v for k, v in row.items() if k != 'output_block'}
+        for suffix, key in [('.npz', 'prediction'), ('_identity.json', 'identity'),
+                            ('_diagnostics.json', 'diagnostics')]:
+            source = block / (stem + suffix)
+            relative = 'new_fits/' + fit + suffix
+            copy(source, relative)
+            record[key + '_member'] = PREFIX + '/' + relative
+            record[key + '_sha256'] = sha(source)
+        record['optimizer_state_sha256'] = sha(block / (stem + '_state.npz'))
+        record['optimizer_state_distributed'] = False
+        allfit[fit] = record
+        new_public.append(record)
+    write_json(OUT / 'NEW_FITS_172.json', dict(count=172, records=new_public))
+
+    oldmap = read(RELEASE / 'evidence/v9/allocation_repeat/PREDICTION_MAP.json')
+    bysha = {r['prediction_sha256']: r['prediction_member'] for r in oldmap['records']}
+    reuse = rows(ROOT / 'verified_reuse_fits.csv')
+    assert len(reuse) == 386
+    old_public = []
+    for row in reuse:
+        digest = row['prediction_sha256']
+        member = bysha[digest]
+        assert sha(RELEASE / member) == digest
+        record = {k: v for k, v in row.items()
+                  if k not in {'source_block', 'state_path', 'prediction_path', 'diagnostics_path'}}
+        record.update(prediction_member=member,
+                      regenerated_source_block=row['dataset'] + '/seed' + row['seed'],
+                      optimizer_state_distributed=False)
+        allfit[row['fit_id']] = record
+        old_public.append(record)
+    write_json(OUT / 'REUSED_FINALS_386.json', dict(
+        count=386, external_to_this_subpackage=True,
+        references_relative_to_release_root=True, records=old_public))
+    assert len(allfit) == 558
+
+    # A complete distribution ledger explains every member named by the old byte seal.
+    distribution = []
+    for name, digest in seal['files'].items():
+        source = ROOT / name
+        assert sha(source) == digest, name
+        relative = name.replace('\\', '/')
+        if source.name in {'PROTOCOL.json', 'STABILITY_ORIGIN.json'}:
+            copy(source, 'provenance/block_metadata/' + relative.removeprefix('fits/'))
+        packaged = copied.get(source.resolve())
+        reason = '' if packaged else (
+            'optimizer_full_state_intentionally_omitted' if source.name.endswith('_state.npz')
+            else 'warm_start_inputs_intentionally_omitted' if source.name == 'inputs.npz'
+            else 'graph_intentionally_omitted' if source.name == 'used_graph.npz'
+            else 'unexpected_omission')
+        assert reason != 'unexpected_omission', name
+        distribution.append(dict(sealed_relative_path=relative, sha256=digest,
+                                 distributed=bool(packaged),
+                                 release_member=(PREFIX + '/' + packaged) if packaged else '',
+                                 omission_reason=reason))
+    write_csv(OUT / 'SEALED_MEMBERS_DISTRIBUTION.csv', distribution)
+
+    copy(ROOT / 'PROTOCOL.md', 'PROTOCOL.md')
+    copy(ROOT / 'selection_policy_index_900.csv', 'selection_policy_index_900.csv')
+    copy(ROOT / 'INDEX_SUMMARY.json', 'INDEX_SUMMARY.json')
+    candidates = rows(ROOT / 'candidate_cv_index_900.csv')
+    for row in candidates:
+        row['source_selection'] = 'historical/' + row['dataset'] + '/seed' + row['seed'] + '/' + Path(row['source_selection']).name
+    write_csv(OUT / 'candidate_cv_index_900.csv', candidates)
+    logical = rows(ROOT / 'logical_final_targets_1500.csv')
+    for row in logical:
+        row['source_block'] = 'historical/' + row['dataset'] + '/seed' + row['seed']
+        row['prediction_member'] = allfit[row['fit_id']]['prediction_member']
+        row['prediction_sha256'] = allfit[row['fit_id']]['prediction_sha256']
+    assert len(logical) == 1500
+    write_csv(OUT / 'logical_final_targets_1500.csv', logical)
+
+    for source in sorted((ROOT / 'evaluation').glob('*.csv')):
+        table = rows(source)
+        if table and 'prediction_path' in table[0]:
+            for row in table:
+                row['prediction_path'] = allfit[row['fit_id']]['prediction_member']
+            write_csv(OUT / 'reporting' / source.name, table)
+        else:
+            copy(source, 'reporting/' + source.name)
+    for directory in ['verification', 'maintext_handoff', 'text_and_tables',
+                      'reporting_supplements', 'selection_descriptives']:
+        for source in sorted((ROOT / directory).iterdir()):
+            if source.suffix not in {'.csv', '.json', '.md', '.tex'}:
+                continue
+            relative = 'reporting/' + directory + '/' + source.name
+            if source.name == 'pool_excluded_pair_counts_50.csv':
+                table = rows(source)
+                for row in table:
+                    row['source_npz'] = 'historical/' + row['dataset'] + '/seed' + row['seed'] + '/postseal_evaluation_pairs.npz'
+                write_csv(OUT / relative, table)
+            else:
+                copy(source, relative)
+
+    # Path canonicalization must preserve every metric and every scientific field.
+    checks = {}
+    for filename in ['logical_metrics_1500.csv', 'unique_fit_metrics_558.csv']:
+        original = rows(ROOT / 'evaluation' / filename)
+        public = rows(OUT / 'reporting' / filename)
+        assert len(original) == len(public)
+        for first, second in zip(original, public):
+            assert {k: v for k, v in first.items() if k != 'prediction_path'} == {
+                k: v for k, v in second.items() if k != 'prediction_path'}
+        checks[filename] = len(public)
+    for source in OUT.rglob('*.npz'):
+        with ZipFile(source) as archive:
+            assert set(archive.namelist()) == {'labels.npy', 'H.npy', 'P.npy', 'N.npy'}, source
+    for entry in exports:
+        assert sha(OUT / Path(entry['destination']).relative_to(PREFIX)) == entry['sha256']
+    assert read(ROOT / 'verification/VERIFICATION.json')['pass_all']
+    assert sha(ROOT.parent / 'reviews/R2.md') == 'a1793a496814bf033585ce641d6dee2169649cd6bb1fd749869d34008cc499e4'
+    for name, digest in read(ROOT / 'ANALYSIS_CODE_FREEZE.json')['files'].items():
+        assert sha(ROOT / name) == digest
+    assert read(ROOT / 'ANALYSIS_CODE_FREEZE.json')['files'] == read(ROOT / 'SCORING_SOURCE_BINDINGS.json')
+    write_json(OUT / 'EXPORT_VERIFICATION.json', dict(
+        status='PASS', new_prediction_files=172, reused_prediction_references=386,
+        all_reused_release_predictions_hash_verified=True,
+        unique_final_fits=558, choices=900, logical_records=1500,
+        paired_points=6000, summary_groups=600, canonicalization_checks=checks,
+        raw_features_included=False, full_class_truth_vectors_included=False,
+        full_optimizer_states_included=False,
+        prediction_npz_keys=['labels (predicted cluster IDs)', 'H', 'P (paid positive pairs)', 'N (paid negative pairs)'],
+        original_R2_report_hash_unchanged=True, scoring_code_frozen_before_new_scores_verified=True,
+        final_seal_sha256=sha(ROOT / 'ALL_FINALS_SEALED.json'),
+        evaluation_freeze_sha256=sha(ROOT / 'evaluation/EVALUATION_FREEZE.json'),
+        independent_verification_sha256=sha(ROOT / 'verification/VERIFICATION.json'),
+        omitted_sealed_members=sum(not r['distributed'] for r in distribution),
+        included_sealed_members=sum(r['distributed'] for r in distribution)))
+    copy(Path(__file__), 'provenance/original_sources/' + Path(__file__).name + '.txt')
+    for source in sorted((ROOT / 'public_tools').glob('*.py')):
+        copy(source, 'tools/' + source.name)
+    write_json(OUT / 'SOURCE_EXPORT.json', dict(
+        scope='Byte-identical copied artifacts; generated relative-path tables are additionally covered by PUBLIC_MANIFEST.json.',
+        destination_base='release_root', files=exports))
+    manifest = [dict(file=p.relative_to(OUT).as_posix(), sha256=sha(p), bytes=p.stat().st_size)
+                for p in sorted(OUT.rglob('*')) if p.is_file() and p.name != 'PUBLIC_MANIFEST.json']
+    write_json(OUT / 'PUBLIC_MANIFEST.json', dict(
+        scope='All compact-evidence members except this self-referential manifest.', files=manifest))
+    print(json.dumps(dict(status='PASS', files=len(manifest), bytes=sum(r['bytes'] for r in manifest),
+                          new=172, reused=386, sealed_members=len(distribution))))
+
+
+if __name__ == '__main__':
+    main()

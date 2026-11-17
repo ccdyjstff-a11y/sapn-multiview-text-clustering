@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic one-block study orchestration; no real-corpus training",
+  "launcher_sha256": "f0bbf7c5901911b3d246c511003a3229d2d4c5c63dbfe1de36d638f3329fc90c",
+  "checks": [
+    {
+      "check": "prepare",
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "PREPARED Synthetic 60 2\n",
+      "stderr": ""
+    },
+    {
+      "check": "training_rejects_label_argument",
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 156, in <module>\n    if __name__=='__main__':main()\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 90, in main\n    if a.phase in ['train','plan'] and a.labels_map is not None:raise ValueError('Training and planning do not accept labels')\nValueError: Training and planning do not accept labels\n"
+    },
+    {
+      "check": "oracle",
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "ORACLE 1 paid streams; no fit or evaluation performed\n",
+      "stderr": ""
+    },
+    {
+      "check": "plan",
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "{\n  \"profile\": \"custom\",\n  \"corpora\": [\n    \"Synthetic\"\n  ],\n  \"seeds\": [\n    17\n  ],\n  \"budgets\": [\n    100\n  ],\n  \"expected_blocks\": 1,\n  \"expected_logical_finals\": 5,\n  \"input_sha256\": {\n    \"Synthetic\": {\n      \"metadata.json\": \"bc25feec732b499950b3ecd3c78da1724ce418e4b567df998224149276c69bdc\",\n      \"X0.npz\": \"3f704b6dadfdbdb00d7acb374f0a5e9958fe9e204b65160cc935ea59b67588cb\",\n      \"X1.npz\": \"8c0817e6f37d3198bd7bcc872179b4c32711ec34138404e097fd047163f3c47b\"\n    }\n  },\n  \"paid_query_sha256\": {\n    \"Synthetic/seed17.npz\": \"de939b5d519b3cfb6022ac3ae4d3dbfb488e083b3d1d473922ab99f4490b4221\"\n  },\n  \"common_source_sha256\": {\n    \"allocation_core.py\": \"f62a2b55893d03c17a6f46b3d15982a2054d734eb846671620c5fb795e8c9d46\",\n    \"allocation_io.py\": \"a7ac797d7afe13a430190bbfcd5351eb72a277cebe94d2a3e529ef69ac74e011\",\n    \"allocation_models.py\": \"4c895060a96dd9d08ef18cde4d5581468f894addf8d00d4e300f50e166082ae9\",\n    \"CORE_DERIVATION.json\": \"c11177b758d41b6ebfe9902e7b46079a32bd6a76d60fc1492dc0d9aef8fa3a38\",\n    \"init_warm.py\": \"8c238d3c86594f411ba1d0c8444749817b3fbf61558c302c79628a5ebf764af8\",\n    \"query_protocol.py\": \"e71c83269eeedb0d0521f3b99e8be4a545e15aee4a1f8aad7c40c0f57db2ea47\",\n    \"run_allocation.py\": \"a68839b281286ba52e9e9290f12cd436ca26bccb691283c799be161c686e12b0\",\n    \"score_allocation.py\": \"7247a964d607467dcf8d3e2ecbdab7885d9ed78896e47a488e679865e9fd7f9a\",\n    \"SOURCE_PROVENANCE.json\": \"d0242d24d94b0ac0602e3e13b47e537aeeeca06766376a0f07666645b035a2fb\"\n  },\n  \"launcher_sha256\": \"f0bbf7c5901911b3d246c511003a3229d2d4c5c63dbfe1de36d638f3329fc90c\",\n  \"eta\": [\n    0.0,\n    0.5,\n    1.0\n  ],\n  \"lambda_grid_default_first\": [\n    20.0,\n    2.0,\n    200.0\n  ],\n  \"selection\": \"Original common candidates, eligible node-disjoint two-fold mean BER and default-first ties\",\n  \"gate\": \"Every declared block must seal before any evaluation; incomplete blocks require inspection, not replacement\",\n  \"compute\": \"Sequential workers; one BLAS thread; extension starts only with >=3 GiB available RAM\",\n  \"boundary\": \"Prepared views and paid pair answers enter fitting. Oracle and post-seal labels are separate commands.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "score_before_training_rejected",
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 156, in <module>\n    if __name__=='__main__':main()\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 135, in main\n    if read(protocol)!=plan:raise ValueError('Requested scoring plan/source/input differs from frozen training plan')\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 12, in read\n    def read(p):return json.loads(p.read_text(encoding='utf-8'))\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1134, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\LENOVO\\\\Documents\\\\Codex\\\\2026-10-03\\\\new-chat\\\\outputs\\\\SAPN_Research_Main\\\\submission_completion_20261117\\\\release_repository\\\\.qa_study_v49sa__s\\\\run\\\\STUDY_PROTOCOL.json'\n"
+    },
+    {
+      "check": "train",
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "FIT Q100_full_c0_f0 True 2.3\nFIT Q100_full_c0_f1 True 2.01\nFIT Q100_full_c1_f0 True 1.91\nFIT Q100_full_c1_f1 True 1.97\nFIT Q100_full_c2_f0 True 2.73\nFIT Q100_full_c2_f1 True 1.75\nFIT Q100_full_c0_final True 1.16\nFIT Q100_consensus-only_c0_f0 True 1.49\nFIT Q100_consensus-only_c0_f1 True 1.11\nFIT Q100_consensus-only_c1_f0 True 0.8\nFIT Q100_consensus-only_c1_f1 True 0.95\nFIT Q100_consensus-only_c2_f0 True 0.88\nFIT Q100_consensus-only_c2_f1 True 1.01\nFIT Q100_consensus-only_c0_final True 0.89\nFIT Q100_views-only_c0_f0 True 0.82\nFIT Q100_views-only_c0_f1 True 0.82\nFIT Q100_views-only_c1_f0 True 1.01\nFIT Q100_views-only_c1_f1 True 1.23\nFIT Q100_views-only_c2_f0 True 1.78\nFIT Q100_views-only_c2_f1 True 1.01\nFIT Q100_views-only_c0_final True 0.75\nSEALED 5 requested logical finals; no class vector or evaluation scores read\nSTUDY_SEALED 1 blocks 5 logical finals\n",
+      "stderr": ""
+    },
+    {
+      "check": "block_seals_without_study_seal_rejected",
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 156, in <module>\n    if __name__=='__main__':main()\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 136, in main\n    frozen=read(seal)\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 12, in read\n    def read(p):return json.loads(p.read_text(encoding='utf-8'))\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1134, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\LENOVO\\\\Documents\\\\Codex\\\\2026-10-03\\\\new-chat\\\\outputs\\\\SAPN_Research_Main\\\\submission_completion_20261117\\\\release_repository\\\\.qa_study_v49sa__s\\\\run\\\\STUDY_PREDICTIONS_SEALED.json'\n"
+    },
+    {
+      "check": "changed_roster_rejected",
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 156, in <module>\n    if __name__=='__main__':main()\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 99, in main\n    query_hashes={f'{d}/seed{s}.npz':digest(queries/d/f'seed{s}.npz') for d,s,_ in blocks}\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 99, in <dictcomp>\n    query_hashes={f'{d}/seed{s}.npz':digest(queries/d/f'seed{s}.npz') for d,s,_ in blocks}\n  File \"C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\submission_completion_20261117\\release_repository\\tools\\run_common_study.py\", line 11, in digest\n    def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1126, in read_bytes\n    with self.open(mode='rb') as f:\n  File \"D:\\MVC\\envs\\mvc\\lib\\pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\LENOVO\\\\Documents\\\\Codex\\\\2026-10-03\\\\new-chat\\\\outputs\\\\SAPN_Research_Main\\\\submission_completion_20261117\\\\release_repository\\\\.qa_study_v49sa__s\\\\queries\\\\Synthetic\\\\seed18.npz'\n"
+    },
+    {
+      "check": "score",
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "SCORED 5 sealed logical finals\nSCORED 5 logical finals; existing selections retained\n",
+      "stderr": ""
+    }
+  ],
+  "logical_finals": 5,
+  "independent_full_label_commands": [
+    "oracle",
+    "score"
+  ],
+  "no_evaluation_before_global_seal": true,
+  "eta": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "lambda_grid_default_first": [
+    20.0,
+    2.0,
+    200.0
+  ]
+}

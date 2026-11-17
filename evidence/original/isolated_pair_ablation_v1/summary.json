@@ -1,0 +1,1819 @@
+{
+  "cells": [
+    {
+      "dataset": "3Sources",
+      "mask": "baseline",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 85.02824858757062,
+      "ACC_sd": 5.768524818266145,
+      "ACC_terminal_mean": 85.02824858757062,
+      "NMI_mean": 79.44035286044965,
+      "NMI_sd": 2.756162050973038,
+      "NMI_terminal_mean": 79.44035286044965,
+      "ARI_mean": 77.92211195456547,
+      "ARI_sd": 6.1670151981,
+      "ARI_terminal_mean": 77.92211195456547,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 11.074932282858486,
+      "unqueried_pair_BER_sd": 2.800159921873376,
+      "unqueried_pair_BER_terminal_mean": 11.074932282858486
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_consensus_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 79.37853107344633,
+      "ACC_sd": 6.246707454094914,
+      "ACC_terminal_mean": 79.37853107344633,
+      "NMI_mean": 70.77116924206312,
+      "NMI_sd": 7.361363631292867,
+      "NMI_terminal_mean": 70.77116924206312,
+      "ARI_mean": 69.13802985774083,
+      "ARI_sd": 5.990706374585921,
+      "ARI_terminal_mean": 69.13802985774083,
+      "train_BER_mean": 1.4689141052476955,
+      "train_BER_sd": 1.2756950284010067,
+      "train_BER_terminal_mean": 1.4689141052476955,
+      "unqueried_pair_BER_mean": 16.31568528835786,
+      "unqueried_pair_BER_sd": 3.5165536348323942,
+      "unqueried_pair_BER_terminal_mean": 16.31568528835786
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_private_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 77.96610169491525,
+      "ACC_sd": 4.718444375279677,
+      "ACC_terminal_mean": 77.96610169491525,
+      "NMI_mean": 71.50676809379623,
+      "NMI_sd": 5.929788832867656,
+      "NMI_terminal_mean": 71.50676809379623,
+      "ARI_mean": 69.64462961860325,
+      "ARI_sd": 6.070829895082276,
+      "ARI_terminal_mean": 69.64462961860325,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 15.310597085015923,
+      "unqueried_pair_BER_sd": 3.5963560375872268,
+      "unqueried_pair_BER_terminal_mean": 15.310597085015923
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_all_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 34.463276836158194,
+      "ACC_sd": 2.4463994457187517,
+      "ACC_terminal_mean": 34.463276836158194,
+      "NMI_mean": 1.9256137728626517,
+      "NMI_sd": 0.571531826613434,
+      "NMI_terminal_mean": 1.9256137728626517,
+      "ARI_mean": -0.6273793262225126,
+      "ARI_sd": 0.3546402903475172,
+      "ARI_terminal_mean": -0.6273793262225126,
+      "train_BER_mean": 50.532380652166296,
+      "train_BER_sd": 0.9221103385186825,
+      "train_BER_terminal_mean": 50.532380652166296,
+      "unqueried_pair_BER_mean": 50.64687843663194,
+      "unqueried_pair_BER_sd": 0.37491809456298414,
+      "unqueried_pair_BER_terminal_mean": 50.64687843663194
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_ML",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 73.44632768361582,
+      "ACC_sd": 5.6426509478638955,
+      "ACC_terminal_mean": 73.44632768361582,
+      "NMI_mean": 64.48661528185829,
+      "NMI_sd": 2.98137329056111,
+      "NMI_terminal_mean": 64.48661528185829,
+      "ARI_mean": 63.72364859281788,
+      "ARI_sd": 6.750457025646814,
+      "ARI_terminal_mean": 63.72364859281788,
+      "train_BER_mean": 13.076257570139662,
+      "train_BER_sd": 2.8711301750946348,
+      "train_BER_terminal_mean": 13.076257570139662,
+      "unqueried_pair_BER_mean": 19.14332489606595,
+      "unqueried_pair_BER_sd": 3.9676911991358224,
+      "unqueried_pair_BER_terminal_mean": 19.14332489606595
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_CL",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 64.40677966101696,
+      "ACC_sd": 3.6939821555429497,
+      "ACC_terminal_mean": 64.40677966101696,
+      "NMI_mean": 53.89597410444338,
+      "NMI_sd": 5.162547769968874,
+      "NMI_terminal_mean": 53.89597410444338,
+      "ARI_mean": 41.734505554299865,
+      "ARI_sd": 11.573656877096843,
+      "ARI_terminal_mean": 41.734505554299865,
+      "train_BER_mean": 18.7794208961644,
+      "train_BER_sd": 9.68157350642826,
+      "train_BER_terminal_mean": 18.7794208961644,
+      "unqueried_pair_BER_mean": 22.214647718348573,
+      "unqueried_pair_BER_sd": 4.88699729231364,
+      "unqueried_pair_BER_terminal_mean": 22.214647718348573
+    },
+    {
+      "dataset": "BBC",
+      "mask": "baseline",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 85.67758509955041,
+      "ACC_sd": 9.023935068323379,
+      "ACC_terminal_mean": 85.67758509955041,
+      "NMI_mean": 73.23582589225596,
+      "NMI_sd": 7.699685261770321,
+      "NMI_terminal_mean": 73.23582589225596,
+      "ARI_mean": 72.61581112546538,
+      "ARI_sd": 12.025563805633768,
+      "ARI_terminal_mean": 72.61581112546538,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 12.191874732575885,
+      "unqueried_pair_BER_sd": 4.025559702742465,
+      "unqueried_pair_BER_terminal_mean": 12.191874732575885
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_consensus_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 75.70113466067222,
+      "ACC_sd": 14.830151834375913,
+      "ACC_terminal_mean": 75.70113466067222,
+      "NMI_mean": 64.6231369867432,
+      "NMI_sd": 13.14559038114129,
+      "NMI_terminal_mean": 64.6231369867432,
+      "ARI_mean": 59.64007196692459,
+      "ARI_sd": 20.043840038825316,
+      "ARI_terminal_mean": 59.64007196692459,
+      "train_BER_mean": 4.777199781498845,
+      "train_BER_sd": 3.1710629084475186,
+      "train_BER_terminal_mean": 4.777199781498845,
+      "unqueried_pair_BER_mean": 18.03329348901459,
+      "unqueried_pair_BER_sd": 8.27786842223154,
+      "unqueried_pair_BER_terminal_mean": 18.03329348901459
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_private_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 83.79362020980518,
+      "ACC_sd": 8.991956443402685,
+      "ACC_terminal_mean": 83.79362020980518,
+      "NMI_mean": 70.72321963196559,
+      "NMI_sd": 8.850006490882684,
+      "NMI_terminal_mean": 70.72321963196559,
+      "ARI_mean": 68.65394394607132,
+      "ARI_sd": 13.165634685616569,
+      "ARI_terminal_mean": 68.65394394607132,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 14.138129697044091,
+      "unqueried_pair_BER_sd": 5.1118425033475825,
+      "unqueried_pair_BER_terminal_mean": 14.138129697044091
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_all_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 32.81952472703918,
+      "ACC_sd": 15.685238527117003,
+      "ACC_terminal_mean": 32.81952472703918,
+      "NMI_mean": 15.151978681564353,
+      "NMI_sd": 23.575509177830668,
+      "NMI_terminal_mean": 15.151978681564353,
+      "ARI_mean": 10.685116778987982,
+      "ARI_sd": 18.52168878013817,
+      "ARI_terminal_mean": 10.685116778987982,
+      "train_BER_mean": 43.240893128285244,
+      "train_BER_sd": 12.966504194392476,
+      "train_BER_terminal_mean": 43.240893128285244,
+      "unqueried_pair_BER_mean": 42.39571215648425,
+      "unqueried_pair_BER_sd": 13.361735067606087,
+      "unqueried_pair_BER_terminal_mean": 42.39571215648425
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_ML",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 84.43588096767287,
+      "ACC_sd": 9.216908080768857,
+      "ACC_terminal_mean": 84.43588096767287,
+      "NMI_mean": 70.69403370888863,
+      "NMI_sd": 7.783345690015335,
+      "NMI_terminal_mean": 70.69403370888863,
+      "ARI_mean": 70.00563711931889,
+      "ARI_sd": 12.563003853056395,
+      "ARI_terminal_mean": 70.00563711931889,
+      "train_BER_mean": 12.342997378208645,
+      "train_BER_sd": 2.527895647025839,
+      "train_BER_terminal_mean": 12.342997378208645,
+      "unqueried_pair_BER_mean": 13.52776685531097,
+      "unqueried_pair_BER_sd": 4.519823469553166,
+      "unqueried_pair_BER_terminal_mean": 13.52776685531097
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_CL",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 23.977734960393917,
+      "ACC_sd": 0.4863119970713137,
+      "ACC_terminal_mean": 23.977734960393917,
+      "NMI_mean": 1.3296298731656584,
+      "NMI_sd": 0.31086579566423367,
+      "NMI_terminal_mean": 1.3296298731656584,
+      "ARI_mean": -0.018751585207959953,
+      "ARI_sd": 0.0299249674127005,
+      "ARI_terminal_mean": -0.018751585207959953,
+      "train_BER_mean": 49.42899185149984,
+      "train_BER_sd": 0.7233420389515668,
+      "train_BER_terminal_mean": 49.42899185149984,
+      "unqueried_pair_BER_mean": 50.137478068994334,
+      "unqueried_pair_BER_sd": 0.07424975853068676,
+      "unqueried_pair_BER_terminal_mean": 50.137478068994334
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "baseline",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 53.57142857142858,
+      "ACC_sd": 2.2712838128974937,
+      "ACC_terminal_mean": 53.57142857142858,
+      "NMI_mean": 36.09696879140319,
+      "NMI_sd": 1.3276240264652237,
+      "NMI_terminal_mean": 36.09696879140319,
+      "ARI_mean": 26.16258341107138,
+      "ARI_sd": 2.795730219313558,
+      "ARI_terminal_mean": 26.16258341107138,
+      "train_BER_mean": 0.23148148148148148,
+      "train_BER_sd": 0.4009376869372401,
+      "train_BER_terminal_mean": 0.23148148148148148,
+      "unqueried_pair_BER_mean": 34.48106129267671,
+      "unqueried_pair_BER_sd": 1.4428851121348065,
+      "unqueried_pair_BER_terminal_mean": 34.48106129267671
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_consensus_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 51.54761904761906,
+      "ACC_sd": 4.606081457655502,
+      "ACC_terminal_mean": 51.54761904761906,
+      "NMI_mean": 35.494184785930265,
+      "NMI_sd": 2.565040396972921,
+      "NMI_terminal_mean": 35.494184785930265,
+      "ARI_mean": 24.840150720175927,
+      "ARI_sd": 4.273215240295524,
+      "ARI_terminal_mean": 24.840150720175927,
+      "train_BER_mean": 5.442915512530888,
+      "train_BER_sd": 1.0731356558036418,
+      "train_BER_terminal_mean": 5.442915512530888,
+      "unqueried_pair_BER_mean": 34.81051933336793,
+      "unqueried_pair_BER_sd": 2.14989909657809,
+      "unqueried_pair_BER_terminal_mean": 34.81051933336793
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_private_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 50.11904761904762,
+      "ACC_sd": 6.864620592065952,
+      "ACC_terminal_mean": 50.11904761904762,
+      "NMI_mean": 34.24043674158983,
+      "NMI_sd": 3.255652144134369,
+      "NMI_terminal_mean": 34.24043674158983,
+      "ARI_mean": 23.67455625184436,
+      "ARI_sd": 5.44072997981961,
+      "ARI_terminal_mean": 23.67455625184436,
+      "train_BER_mean": 0.46296296296296297,
+      "train_BER_sd": 0.8018753738744802,
+      "train_BER_terminal_mean": 0.46296296296296297,
+      "unqueried_pair_BER_mean": 35.22200234535184,
+      "unqueried_pair_BER_sd": 2.1950758891442104,
+      "unqueried_pair_BER_terminal_mean": 35.22200234535184
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_all_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 41.70634920634921,
+      "ACC_sd": 1.327438784418868,
+      "ACC_terminal_mean": 41.70634920634921,
+      "NMI_mean": 30.373915890815994,
+      "NMI_sd": 1.98173421525438,
+      "NMI_terminal_mean": 30.373915890815994,
+      "ARI_mean": 16.369039529549177,
+      "ARI_sd": 1.3978657785329243,
+      "ARI_terminal_mean": 16.369039529549177,
+      "train_BER_mean": 37.14342438041307,
+      "train_BER_sd": 1.8461807866644524,
+      "train_BER_terminal_mean": 37.14342438041307,
+      "unqueried_pair_BER_mean": 38.4162429805873,
+      "unqueried_pair_BER_sd": 1.3497223842415762,
+      "unqueried_pair_BER_terminal_mean": 38.4162429805873
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_ML",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 50.952380952380956,
+      "ACC_sd": 3.3184190154205626,
+      "ACC_terminal_mean": 50.952380952380956,
+      "NMI_mean": 34.017261007084265,
+      "NMI_sd": 2.196592336421462,
+      "NMI_terminal_mean": 34.017261007084265,
+      "ARI_mean": 23.398991539522118,
+      "ARI_sd": 2.5043089187669874,
+      "ARI_terminal_mean": 23.398991539522118,
+      "train_BER_mean": 26.915278862000168,
+      "train_BER_sd": 2.2872243223136692,
+      "train_BER_terminal_mean": 26.915278862000168,
+      "unqueried_pair_BER_mean": 35.711363231976556,
+      "unqueried_pair_BER_sd": 1.6009937178350377,
+      "unqueried_pair_BER_terminal_mean": 35.711363231976556
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_CL",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 43.214285714285715,
+      "ACC_sd": 1.6104463402938878,
+      "ACC_terminal_mean": 43.214285714285715,
+      "NMI_mean": 31.416167936854208,
+      "NMI_sd": 1.140149421987036,
+      "NMI_terminal_mean": 31.416167936854208,
+      "ARI_mean": 17.28560424877632,
+      "ARI_sd": 0.5700302762783648,
+      "ARI_terminal_mean": 17.28560424877632,
+      "train_BER_mean": 15.470243402939841,
+      "train_BER_sd": 0.3685113726633221,
+      "train_BER_terminal_mean": 15.470243402939841,
+      "unqueried_pair_BER_mean": 37.31474190751138,
+      "unqueried_pair_BER_sd": 1.0929320461755527,
+      "unqueried_pair_BER_terminal_mean": 37.31474190751138
+    },
+    {
+      "dataset": "Cora",
+      "mask": "baseline",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 47.20464135021098,
+      "ACC_sd": 1.2800275421425753,
+      "ACC_terminal_mean": 47.20464135021098,
+      "NMI_mean": 24.911960869371523,
+      "NMI_sd": 0.8955923560261172,
+      "NMI_terminal_mean": 24.911960869371523,
+      "ARI_mean": 19.08186149123337,
+      "ARI_sd": 0.8435703581835391,
+      "ARI_terminal_mean": 19.08186149123337,
+      "train_BER_mean": 0.26455026455026454,
+      "train_BER_sd": 0.45821449935684583,
+      "train_BER_terminal_mean": 0.26455026455026454,
+      "unqueried_pair_BER_mean": 40.80034854803561,
+      "unqueried_pair_BER_sd": 1.188613910463045,
+      "unqueried_pair_BER_terminal_mean": 40.80034854803561
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_consensus_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 47.274964838255976,
+      "ACC_sd": 1.784177019777545,
+      "ACC_terminal_mean": 47.274964838255976,
+      "NMI_mean": 24.813272368860908,
+      "NMI_sd": 1.4424032819111527,
+      "NMI_terminal_mean": 24.813272368860908,
+      "ARI_mean": 18.495821450629474,
+      "ARI_sd": 1.6252652318783836,
+      "ARI_terminal_mean": 18.495821450629474,
+      "train_BER_mean": 21.86628814110162,
+      "train_BER_sd": 4.734789180247955,
+      "train_BER_terminal_mean": 21.86628814110162,
+      "unqueried_pair_BER_mean": 40.81426508445954,
+      "unqueried_pair_BER_sd": 1.6460054735951146,
+      "unqueried_pair_BER_terminal_mean": 40.81426508445954
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_private_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 45.90365682137834,
+      "ACC_sd": 1.3262784256358866,
+      "ACC_terminal_mean": 45.90365682137834,
+      "NMI_mean": 23.494241961153772,
+      "NMI_sd": 1.4433298618313286,
+      "NMI_terminal_mean": 23.494241961153772,
+      "ARI_mean": 17.36324026406671,
+      "ARI_sd": 1.3284864661571638,
+      "ARI_terminal_mean": 17.36324026406671,
+      "train_BER_mean": 0.5291005291005291,
+      "train_BER_sd": 0.9164289987136917,
+      "train_BER_terminal_mean": 0.5291005291005291,
+      "unqueried_pair_BER_mean": 41.40044822704285,
+      "unqueried_pair_BER_sd": 1.440892037620878,
+      "unqueried_pair_BER_terminal_mean": 41.40044822704285
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_all_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 38.41420534458509,
+      "ACC_sd": 7.887504959479119,
+      "ACC_terminal_mean": 38.41420534458509,
+      "NMI_mean": 14.93669862836611,
+      "NMI_sd": 12.802420288006825,
+      "NMI_terminal_mean": 14.93669862836611,
+      "ARI_mean": 7.412907182518843,
+      "ARI_sd": 6.420560145570189,
+      "ARI_terminal_mean": 7.412907182518843,
+      "train_BER_mean": 46.60266893061336,
+      "train_BER_sd": 3.845047517754046,
+      "train_BER_terminal_mean": 46.60266893061336,
+      "unqueried_pair_BER_mean": 45.82263117460295,
+      "unqueried_pair_BER_sd": 3.688849465182327,
+      "unqueried_pair_BER_terminal_mean": 45.82263117460295
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_ML",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 47.32770745428974,
+      "ACC_sd": 2.7710376844016857,
+      "ACC_terminal_mean": 47.32770745428974,
+      "NMI_mean": 24.473478323634907,
+      "NMI_sd": 1.7238719552440505,
+      "NMI_terminal_mean": 24.473478323634907,
+      "ARI_mean": 18.280987998813668,
+      "ARI_sd": 2.1377961923022255,
+      "ARI_terminal_mean": 18.280987998813668,
+      "train_BER_mean": 31.29263963138071,
+      "train_BER_sd": 3.780988449067757,
+      "train_BER_terminal_mean": 31.29263963138071,
+      "unqueried_pair_BER_mean": 40.91495401916858,
+      "unqueried_pair_BER_sd": 1.7956604206348108,
+      "unqueried_pair_BER_terminal_mean": 40.91495401916858
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_CL",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 39.52180028129395,
+      "ACC_sd": 8.899968087155244,
+      "ACC_terminal_mean": 39.52180028129395,
+      "NMI_mean": 15.257643937576733,
+      "NMI_sd": 13.081491418683704,
+      "NMI_terminal_mean": 15.257643937576733,
+      "ARI_mean": 8.43193731359476,
+      "ARI_sd": 7.34825044818001,
+      "ARI_terminal_mean": 8.43193731359476,
+      "train_BER_mean": 22.558054751211,
+      "train_BER_sd": 23.771296914367895,
+      "train_BER_terminal_mean": 22.558054751211,
+      "unqueried_pair_BER_mean": 45.334843267463306,
+      "unqueried_pair_BER_sd": 4.112266713478442,
+      "unqueried_pair_BER_terminal_mean": 45.334843267463306
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "baseline",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 53.781995973540404,
+      "ACC_sd": 0.9707442526164887,
+      "ACC_terminal_mean": 53.781995973540404,
+      "NMI_mean": 30.235364291977806,
+      "NMI_sd": 0.719206657278205,
+      "NMI_terminal_mean": 30.235364291977806,
+      "ARI_mean": 27.145073780510653,
+      "ARI_sd": 1.0979243308608664,
+      "ARI_terminal_mean": 27.145073780510653,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 33.89483868357723,
+      "unqueried_pair_BER_sd": 0.09770949390466344,
+      "unqueried_pair_BER_terminal_mean": 33.89483868357723
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_consensus_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 53.39373022720736,
+      "ACC_sd": 0.8120683292203315,
+      "ACC_terminal_mean": 53.39373022720736,
+      "NMI_mean": 30.99376686121003,
+      "NMI_sd": 0.42211887207720794,
+      "NMI_terminal_mean": 30.99376686121003,
+      "ARI_mean": 27.11686116889962,
+      "ARI_sd": 0.8766025398045452,
+      "ARI_terminal_mean": 27.11686116889962,
+      "train_BER_mean": 9.131040735461466,
+      "train_BER_sd": 2.1722312147683334,
+      "train_BER_terminal_mean": 9.131040735461466,
+      "unqueried_pair_BER_mean": 33.56737984125943,
+      "unqueried_pair_BER_sd": 0.17485503397806232,
+      "unqueried_pair_BER_terminal_mean": 33.56737984125943
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_private_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 53.494391716997406,
+      "ACC_sd": 0.7848751250500514,
+      "ACC_terminal_mean": 53.494391716997406,
+      "NMI_mean": 31.180501226691018,
+      "NMI_sd": 0.35054745363774487,
+      "NMI_terminal_mean": 31.180501226691018,
+      "ARI_mean": 27.369773198752426,
+      "ARI_sd": 0.6080497264377722,
+      "ARI_terminal_mean": 27.369773198752426,
+      "train_BER_mean": 0.23148148148148148,
+      "train_BER_sd": 0.4009376869372401,
+      "train_BER_terminal_mean": 0.23148148148148148,
+      "unqueried_pair_BER_mean": 33.16910003659939,
+      "unqueried_pair_BER_sd": 0.30369434950818264,
+      "unqueried_pair_BER_terminal_mean": 33.16910003659939
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_all_pair",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 47.13833764739718,
+      "ACC_sd": 7.398881525045831,
+      "ACC_terminal_mean": 47.13833764739718,
+      "NMI_mean": 30.405373601444293,
+      "NMI_sd": 3.18346798150153,
+      "NMI_terminal_mean": 30.405373601444293,
+      "ARI_mean": 23.289517254530576,
+      "ARI_sd": 4.548867913333498,
+      "ARI_terminal_mean": 23.289517254530576,
+      "train_BER_mean": 28.69824112202161,
+      "train_BER_sd": 2.9605425198938464,
+      "train_BER_terminal_mean": 28.69824112202161,
+      "unqueried_pair_BER_mean": 33.260484268677374,
+      "unqueried_pair_BER_sd": 0.8655860893077462,
+      "unqueried_pair_BER_terminal_mean": 33.260484268677374
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_ML",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 52.96232384239286,
+      "ACC_sd": 0.8468468141694243,
+      "ACC_terminal_mean": 52.96232384239286,
+      "NMI_mean": 30.428602792520923,
+      "NMI_sd": 0.7531320431452905,
+      "NMI_terminal_mean": 30.428602792520923,
+      "ARI_mean": 26.641528890116216,
+      "ARI_sd": 1.0336761822871345,
+      "ARI_terminal_mean": 26.641528890116216,
+      "train_BER_mean": 19.166666666666668,
+      "train_BER_sd": 0.7216878364870322,
+      "train_BER_terminal_mean": 19.166666666666668,
+      "unqueried_pair_BER_mean": 33.81523626313082,
+      "unqueried_pair_BER_sd": 0.4339719925879224,
+      "unqueried_pair_BER_terminal_mean": 33.81523626313082
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_CL",
+      "n_runs": 3,
+      "n_predicted": 3,
+      "n_converged": 3,
+      "ACC_mean": 51.998849582973826,
+      "ACC_sd": 0.5462588413351331,
+      "ACC_terminal_mean": 51.998849582973826,
+      "NMI_mean": 33.220106371672266,
+      "NMI_sd": 0.5506080183653221,
+      "NMI_terminal_mean": 33.220106371672266,
+      "ARI_mean": 27.044214227991517,
+      "ARI_sd": 0.8755101706035232,
+      "ARI_terminal_mean": 27.044214227991517,
+      "train_BER_mean": 12.032905272234542,
+      "train_BER_sd": 1.7581942902236478,
+      "train_BER_terminal_mean": 12.032905272234542,
+      "unqueried_pair_BER_mean": 32.15124306338251,
+      "unqueried_pair_BER_sd": 0.43597814888455183,
+      "unqueried_pair_BER_terminal_mean": 32.15124306338251
+    }
+  ],
+  "paired": [
+    {
+      "dataset": "3Sources",
+      "mask": "without_consensus_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        3.3898305084745783,
+        -5.932203389830503,
+        -14.406779661016945
+      ],
+      "ACC_mean_pp": -5.64971751412429,
+      "ACC_sd_pp": 8.9016673766038,
+      "NMI_deltas_pp": [
+        -0.8684521869179118,
+        -11.92704500496845,
+        -13.212053663273181
+      ],
+      "NMI_mean_pp": -8.669183618386514,
+      "NMI_sd_pp": 6.78611597030335,
+      "ARI_deltas_pp": [
+        -0.2672942936085554,
+        -6.200548070448719,
+        -19.884403926416617
+      ],
+      "ARI_mean_pp": -8.784082096824632,
+      "ARI_sd_pp": 10.060503647207941,
+      "train_BER_deltas_pp": [
+        2.2988505747126435,
+        2.107891741030443,
+        0.0
+      ],
+      "train_BER_mean_pp": 1.4689141052476955,
+      "train_BER_sd_pp": 1.2756950284010067,
+      "unqueried_pair_BER_deltas_pp": [
+        0.6160034385840812,
+        3.1611543611880455,
+        11.945101216725998
+      ],
+      "unqueried_pair_BER_mean_pp": 5.240753005499375,
+      "unqueried_pair_BER_sd_pp": 5.943960128377475
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_private_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        0.0,
+        -6.779661016949145,
+        -14.406779661016945
+      ],
+      "ACC_mean_pp": -7.062146892655363,
+      "ACC_sd_pp": 7.207542837385915,
+      "NMI_deltas_pp": [
+        -1.4338237373446527,
+        -8.400087942103518,
+        -13.966842620512065
+      ],
+      "NMI_mean_pp": -7.933584766653412,
+      "NMI_sd_pp": 6.279519049337019,
+      "ARI_deltas_pp": [
+        0.37147541323989675,
+        -6.047702062897875,
+        -19.15622035822866
+      ],
+      "ARI_mean_pp": -8.277482335962212,
+      "ARI_sd_pp": 9.952972700925482,
+      "train_BER_deltas_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "train_BER_mean_pp": 0.0,
+      "train_BER_sd_pp": 0.0,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.58910139555301,
+        2.409320391579542,
+        10.886775410445782
+      ],
+      "unqueried_pair_BER_mean_pp": 4.235664802157438,
+      "unqueried_pair_BER_sd_pp": 5.951939813720574
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_all_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -50.0,
+        -47.45762711864406,
+        -54.23728813559322
+      ],
+      "ACC_mean_pp": -50.56497175141243,
+      "ACC_sd_pp": 3.4249592240062556,
+      "NMI_deltas_pp": [
+        -77.60558609608029,
+        -74.20294598849023,
+        -80.73568517819048
+      ],
+      "NMI_mean_pp": -77.51473908758699,
+      "NMI_sd_pp": 3.267316974885588,
+      "ARI_deltas_pp": [
+        -77.17542451645234,
+        -73.48749012187463,
+        -84.98555920403696
+      ],
+      "ARI_mean_pp": -78.54949128078799,
+      "ARI_sd_pp": 5.870897951692159,
+      "train_BER_deltas_pp": [
+        50.0,
+        50.0,
+        51.597141956498895
+      ],
+      "train_BER_mean_pp": 50.532380652166296,
+      "train_BER_sd_pp": 0.9221103385186825,
+      "unqueried_pair_BER_deltas_pp": [
+        38.778266197621036,
+        37.59424566043699,
+        42.34332660326231
+      ],
+      "unqueried_pair_BER_mean_pp": 39.571946153773446,
+      "unqueried_pair_BER_sd_pp": 2.47202110730779
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_ML",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -11.016949152542377,
+        -0.8474576271186418,
+        -22.881355932203395
+      ],
+      "ACC_mean_pp": -11.581920903954805,
+      "ACC_sd_pp": 11.027808641775785,
+      "NMI_deltas_pp": [
+        -15.809505430046777,
+        -8.837481157547977,
+        -20.214226148179314
+      ],
+      "NMI_mean_pp": -14.953737578591356,
+      "NMI_sd_pp": 5.736447995680975,
+      "ARI_deltas_pp": [
+        -12.223611357112151,
+        -2.4453460481484557,
+        -27.92643267998217
+      ],
+      "ARI_mean_pp": -14.198463361747592,
+      "ARI_sd_pp": 12.854822998194615,
+      "train_BER_deltas_pp": [
+        9.770114942528735,
+        14.942528735632186,
+        14.516129032258066
+      ],
+      "train_BER_mean_pp": 13.076257570139662,
+      "train_BER_sd_pp": 2.8711301750946348,
+      "unqueried_pair_BER_deltas_pp": [
+        6.406953987599148,
+        2.330461777744508,
+        15.467762074278731
+      ],
+      "unqueried_pair_BER_mean_pp": 8.068392613207463,
+      "unqueried_pair_BER_sd_pp": 6.7243920543292965
+    },
+    {
+      "dataset": "3Sources",
+      "mask": "without_CL",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -16.10169491525424,
+        -20.33898305084746,
+        -25.423728813559322
+      ],
+      "ACC_mean_pp": -20.621468926553675,
+      "ACC_sd_pp": 4.667432667191611,
+      "NMI_deltas_pp": [
+        -20.598077230458788,
+        -27.65187644999807,
+        -28.38318258756193
+      ],
+      "NMI_mean_pp": -25.544378756006264,
+      "NMI_sd_pp": 4.299200652788213,
+      "ARI_deltas_pp": [
+        -21.55967440180383,
+        -40.333667579878394,
+        -46.66947721911457
+      ],
+      "ARI_mean_pp": -36.1876064002656,
+      "ARI_sd_pp": 13.058250911200771,
+      "train_BER_deltas_pp": [
+        7.827476038338658,
+        26.198083067092654,
+        22.31270358306189
+      ],
+      "train_BER_mean_pp": 18.7794208961644,
+      "train_BER_sd_pp": 9.68157350642826,
+      "unqueried_pair_BER_deltas_pp": [
+        4.887864968510128,
+        13.650961482479559,
+        14.88031985548058
+      ],
+      "unqueried_pair_BER_mean_pp": 11.13971543549009,
+      "unqueried_pair_BER_sd_pp": 5.4490417688273505
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_consensus_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -12.780989081567117,
+        -15.79961464354529,
+        -1.3487475915221592
+      ],
+      "ACC_mean_pp": -9.976450438878189,
+      "ACC_sd_pp": 7.62272703089672,
+      "NMI_deltas_pp": [
+        -13.345456457683646,
+        -9.83817589795125,
+        -2.654434360903335
+      ],
+      "NMI_mean_pp": -8.612688905512744,
+      "NMI_sd_pp": 5.4498488185396665,
+      "ARI_deltas_pp": [
+        -17.894867840289645,
+        -18.08459669897502,
+        -2.947752936357706
+      ],
+      "ARI_mean_pp": -12.975739158540792,
+      "ARI_sd_pp": 8.685008924242672,
+      "train_BER_deltas_pp": [
+        7.392143460254916,
+        5.68945588424162,
+        1.25
+      ],
+      "train_BER_mean_pp": 4.777199781498845,
+      "train_BER_sd_pp": 3.1710629084475186,
+      "unqueried_pair_BER_deltas_pp": [
+        9.324212860918626,
+        7.098725385473237,
+        1.1013180229242483
+      ],
+      "unqueried_pair_BER_mean_pp": 5.841418756438704,
+      "unqueried_pair_BER_sd_pp": 4.253188785927482
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_private_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -0.9633911368015391,
+        -4.110468850353244,
+        -0.5780346820809301
+      ],
+      "ACC_mean_pp": -1.883964889745238,
+      "ACC_sd_pp": 1.9378118624497742,
+      "NMI_deltas_pp": [
+        -2.0154994857307096,
+        -4.6370842473114955,
+        -0.8852350478288917
+      ],
+      "NMI_mean_pp": -2.5126062602903656,
+      "NMI_sd_pp": 1.9246894458325976,
+      "ARI_deltas_pp": [
+        -2.433877991027378,
+        -8.149751037579488,
+        -1.301972509575322
+      ],
+      "ARI_mean_pp": -3.9618671793940625,
+      "ARI_sd_pp": 3.6707057784536254,
+      "train_BER_deltas_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "train_BER_mean_pp": 0.0,
+      "train_BER_sd_pp": 0.0,
+      "unqueried_pair_BER_deltas_pp": [
+        1.6391890124881126,
+        3.6356010588038226,
+        0.5639748221126852
+      ],
+      "unqueried_pair_BER_mean_pp": 1.946254964468207,
+      "unqueried_pair_BER_sd_pp": 1.5586657943996272
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_all_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -51.95889531149647,
+        -64.22607578676943,
+        -42.38921001926782
+      ],
+      "ACC_mean_pp": -52.85806037251124,
+      "ACC_sd_pp": 10.946165995095413,
+      "NMI_deltas_pp": [
+        -65.45252295922249,
+        -69.38756395183232,
+        -39.411454721019986
+      ],
+      "NMI_mean_pp": -58.0838472106916,
+      "NMI_sd_pp": 16.290022034043986,
+      "ARI_deltas_pp": [
+        -60.72134775921162,
+        -72.37335619883935,
+        -52.697379081381236
+      ],
+      "ARI_mean_pp": -61.930694346477395,
+      "ARI_sd_pp": 9.893579142948337,
+      "train_BER_deltas_pp": [
+        50.18495436452093,
+        51.25647502033478,
+        28.281250000000004
+      ],
+      "train_BER_mean_pp": 43.240893128285244,
+      "train_BER_sd_pp": 12.966504194392476,
+      "unqueried_pair_BER_deltas_pp": [
+        34.684645100960736,
+        36.63180529137268,
+        19.29506187939169
+      ],
+      "unqueried_pair_BER_mean_pp": 30.203837423908368,
+      "unqueried_pair_BER_sd_pp": 9.497309940834043
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_ML",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -1.6698779704560018,
+        -0.3853564547206201,
+        -1.6698779704560018
+      ],
+      "ACC_mean_pp": -1.2417041318775413,
+      "ACC_sd_pp": 0.7416188428896887,
+      "NMI_deltas_pp": [
+        -3.8175287165131966,
+        -0.6148072474462585,
+        -3.193040586142537
+      ],
+      "NMI_mean_pp": -2.5417921833673307,
+      "NMI_sd_pp": 1.6977778310761142,
+      "ARI_deltas_pp": [
+        -4.104701562360525,
+        -0.4937451819928662,
+        -3.232075274086077
+      ],
+      "ARI_mean_pp": -2.610174006146489,
+      "ARI_sd_pp": 1.8840972335652229,
+      "train_BER_deltas_pp": [
+        9.740259740259742,
+        14.788732394366196,
+        12.5
+      ],
+      "train_BER_mean_pp": 12.342997378208645,
+      "train_BER_sd_pp": 2.527895647025839,
+      "unqueried_pair_BER_deltas_pp": [
+        2.550693235711682,
+        0.219632998261185,
+        1.2373501342323858
+      ],
+      "unqueried_pair_BER_mean_pp": 1.3358921227350844,
+      "unqueried_pair_BER_sd_pp": 1.1686502258072093
+    },
+    {
+      "dataset": "BBC",
+      "mask": "without_CL",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -52.08734746307001,
+        -64.22607578676943,
+        -68.78612716763006
+      ],
+      "ACC_mean_pp": -61.6998501391565,
+      "ACC_sd_pp": 8.631261374929487,
+      "NMI_deltas_pp": [
+        -65.73699004060059,
+        -69.38756395183232,
+        -80.59403406483798
+      ],
+      "NMI_mean_pp": -71.9061960190903,
+      "NMI_sd_pp": 7.7421295456868435,
+      "ARI_deltas_pp": [
+        -60.71179980282051,
+        -72.37335619883935,
+        -84.81853213036017
+      ],
+      "ARI_mean_pp": -72.63456271067334,
+      "ARI_sd_pp": 12.05548868811546,
+      "train_BER_deltas_pp": [
+        49.84520123839009,
+        49.848024316109424,
+        48.59375
+      ],
+      "train_BER_mean_pp": 49.42899185149984,
+      "train_BER_sd_pp": 0.7233420389515668,
+      "unqueried_pair_BER_deltas_pp": [
+        34.66879827703723,
+        36.63180529137268,
+        42.53620644084541
+      ],
+      "unqueried_pair_BER_mean_pp": 37.945603336418436,
+      "unqueried_pair_BER_sd_pp": 4.094945272084042
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_consensus_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -4.999999999999993,
+        -0.4761904761904745,
+        -0.5952380952380931
+      ],
+      "ACC_mean_pp": -2.02380952380952,
+      "ACC_sd_pp": 2.5781437890128203,
+      "NMI_deltas_pp": [
+        -2.467276365166554,
+        0.33942628264385655,
+        0.3194980661039182
+      ],
+      "NMI_mean_pp": -0.6027840054729264,
+      "NMI_sd_pp": 1.6147284920290932,
+      "ARI_deltas_pp": [
+        -3.2175592772273385,
+        -0.21763144235494303,
+        -0.5321073531040832
+      ],
+      "ARI_mean_pp": -1.322432690895455,
+      "ARI_sd_pp": 1.648742659809841,
+      "train_BER_deltas_pp": [
+        5.36051066299144,
+        5.860433604336043,
+        4.413357825820734
+      ],
+      "train_BER_mean_pp": 5.211434031049405,
+      "train_BER_sd_pp": 0.7349659576026685,
+      "unqueried_pair_BER_deltas_pp": [
+        1.257145953856298,
+        -0.2279011376411899,
+        -0.040870694141464936
+      ],
+      "unqueried_pair_BER_mean_pp": 0.32945804069121437,
+      "unqueried_pair_BER_sd_pp": 0.8088255342614787
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_private_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -9.047619047619044,
+        -0.8333333333333304,
+        -0.4761904761904745
+      ],
+      "ACC_mean_pp": -3.4523809523809494,
+      "ACC_sd_pp": 4.8489075843848335,
+      "NMI_deltas_pp": [
+        -4.443937606866932,
+        -0.8445927908387663,
+        -0.28106575173439396
+      ],
+      "NMI_mean_pp": -1.856532049813364,
+      "NMI_sd_pp": 2.2584045958273724,
+      "ARI_deltas_pp": [
+        -5.687546764162721,
+        -1.0263481207704317,
+        -0.7501865927479145
+      ],
+      "ARI_mean_pp": -2.488027159227022,
+      "ARI_sd_pp": 2.774303619679333,
+      "train_BER_deltas_pp": [
+        0.0,
+        0.6944444444444444,
+        0.0
+      ],
+      "train_BER_mean_pp": 0.23148148148148148,
+      "train_BER_sd_pp": 0.4009376869372401,
+      "unqueried_pair_BER_deltas_pp": [
+        1.6032161172368442,
+        0.4979767277073721,
+        0.1216303130811558
+      ],
+      "unqueried_pair_BER_mean_pp": 0.740941052675124,
+      "unqueried_pair_BER_sd_pp": 0.770096014256788
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_all_pair",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -10.238095238095235,
+        -12.619047619047619,
+        -12.738095238095237
+      ],
+      "ACC_mean_pp": -11.865079365079362,
+      "ACC_sd_pp": 1.4102663209457837,
+      "NMI_deltas_pp": [
+        -5.442529290828607,
+        -6.660175322457712,
+        -5.066454088475286
+      ],
+      "NMI_mean_pp": -5.723052900587201,
+      "NMI_sd_pp": 0.8330708040950725,
+      "ARI_deltas_pp": [
+        -7.544645461686589,
+        -10.916502487154245,
+        -10.919483695725779
+      ],
+      "ARI_mean_pp": -9.793543881522204,
+      "ARI_sd_pp": 1.9476037325276114,
+      "train_BER_deltas_pp": [
+        39.17500846269162,
+        35.99254742547426,
+        35.56827280862889
+      ],
+      "train_BER_mean_pp": 36.91194289893159,
+      "train_BER_sd_pp": 1.9713197475377264,
+      "unqueried_pair_BER_deltas_pp": [
+        3.5714226122243344,
+        4.374758073706264,
+        3.8593643778011333
+      ],
+      "unqueried_pair_BER_mean_pp": 3.935181687910577,
+      "unqueried_pair_BER_sd_pp": 0.40699897334363133
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_ML",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -4.1666666666666625,
+        -1.4285714285714235,
+        -2.261904761904765
+      ],
+      "ACC_mean_pp": -2.619047619047617,
+      "ACC_sd_pp": 1.4035507288751896,
+      "NMI_deltas_pp": [
+        -3.2766444510718253,
+        -1.704144617749681,
+        -1.2583342841352707
+      ],
+      "NMI_mean_pp": -2.079707784318926,
+      "NMI_sd_pp": 1.060273432446793,
+      "ARI_deltas_pp": [
+        -2.6910642126724533,
+        -2.1679520275501103,
+        -3.4317593744252193
+      ],
+      "ARI_mean_pp": -2.763591871549261,
+      "ARI_sd_pp": 0.6350176757228797,
+      "train_BER_deltas_pp": [
+        27.86885245901639,
+        23.61111111111111,
+        28.57142857142857
+      ],
+      "train_BER_mean_pp": 26.683797380518694,
+      "train_BER_sd_pp": 2.6841113950593507,
+      "unqueried_pair_BER_deltas_pp": [
+        1.5192431566027176,
+        0.917935937593467,
+        1.2537267237033467
+      ],
+      "unqueried_pair_BER_mean_pp": 1.2303019392998438,
+      "unqueried_pair_BER_sd_pp": 0.3013372418096088
+    },
+    {
+      "dataset": "Reuters",
+      "mask": "without_CL",
+      "eligible": true,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -9.761904761904756,
+        -8.45238095238095,
+        -12.857142857142856
+      ],
+      "ACC_mean_pp": -10.357142857142854,
+      "ACC_sd_pp": 2.2619047619047628,
+      "NMI_deltas_pp": [
+        -3.660034746963375,
+        -5.181392509852179,
+        -5.200975306831407
+      ],
+      "NMI_mean_pp": -4.680800854548987,
+      "NMI_sd_pp": 0.8840636042055985,
+      "ARI_deltas_pp": [
+        -6.545450669786335,
+        -9.086384712898646,
+        -10.999102104200203
+      ],
+      "ARI_mean_pp": -8.87697916229506,
+      "ARI_sd_pp": 2.2341980190399124,
+      "train_BER_deltas_pp": [
+        15.863919918758162,
+        14.718834688346885,
+        15.133531157270031
+      ],
+      "train_BER_mean_pp": 15.238761921458357,
+      "train_BER_sd_pp": 0.5797501026522176,
+      "unqueried_pair_BER_deltas_pp": [
+        1.9709596473469426,
+        3.522493629199275,
+        3.0075885679577863
+      ],
+      "unqueried_pair_BER_mean_pp": 2.833680614834668,
+      "unqueried_pair_BER_sd_pp": 0.7902514829661776
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_consensus_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        0.7383966244725759,
+        -0.47468354430379445,
+        -0.052742616033757406
+      ],
+      "ACC_mean_pp": 0.07032348804500803,
+      "ACC_sd_pp": 0.6158326261651544,
+      "NMI_deltas_pp": [
+        0.3078127754669091,
+        -0.8871708167931508,
+        0.2832925397943914
+      ],
+      "NMI_mean_pp": -0.09868850051061677,
+      "NMI_sd_pp": 0.6829557692904142,
+      "ARI_deltas_pp": [
+        0.17028508357008199,
+        -1.3967571152644491,
+        -0.5316480901173121
+      ],
+      "ARI_mean_pp": -0.5860400406038931,
+      "ARI_sd_pp": 0.7849357785451887,
+      "train_BER_deltas_pp": [
+        21.618722360873942,
+        16.466487683104894,
+        26.720003585675222
+      ],
+      "train_BER_mean_pp": 21.60173787655135,
+      "train_BER_sd_pp": 5.126779051763049,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.26495981378380495,
+        0.543954025636062,
+        -0.23724460258045532
+      ],
+      "unqueried_pair_BER_mean_pp": 0.013916536423933904,
+      "unqueried_pair_BER_sd_pp": 0.45923505768912526
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_private_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -0.47468354430379445,
+        -0.7911392405063278,
+        -2.637130801687765
+      ],
+      "ACC_mean_pp": -1.3009845288326292,
+      "ACC_sd_pp": 1.1679046188637414,
+      "NMI_deltas_pp": [
+        -0.7798955482025749,
+        -1.7465713091231323,
+        -1.7266898673275632
+      ],
+      "NMI_mean_pp": -1.4177189082177568,
+      "NMI_sd_pp": 0.5524606744988823,
+      "ARI_deltas_pp": [
+        -1.3365154695757027,
+        -2.2668519936848543,
+        -1.5524962182394102
+      ],
+      "ARI_mean_pp": -1.7186212271666559,
+      "ARI_sd_pp": 0.48690825723762643,
+      "train_BER_deltas_pp": [
+        0.0,
+        0.7936507936507936,
+        0.0
+      ],
+      "train_BER_mean_pp": 0.26455026455026454,
+      "train_BER_sd_pp": 0.45821449935684583,
+      "unqueried_pair_BER_deltas_pp": [
+        0.5048142467650452,
+        0.8876551096705099,
+        0.4078296805861692
+      ],
+      "unqueried_pair_BER_mean_pp": 0.6000996790072414,
+      "unqueried_pair_BER_sd_pp": 0.2537076975520836
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_all_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -4.430379746835439,
+        -3.270042194092826,
+        -18.670886075949365
+      ],
+      "ACC_mean_pp": -8.790436005625876,
+      "ACC_sd_pp": 8.576366713427824,
+      "NMI_deltas_pp": [
+        -2.1855467002928757,
+        -3.423064534806608,
+        -24.317175487916753
+      ],
+      "NMI_mean_pp": -9.975262241005412,
+      "NMI_sd_pp": 12.435864235513876,
+      "ARI_deltas_pp": [
+        -8.131460740904664,
+        -7.64298460818954,
+        -19.232417577049368
+      ],
+      "ARI_mean_pp": -11.668954308714524,
+      "ARI_sd_pp": 6.554703249701384,
+      "train_BER_deltas_pp": [
+        47.379482464205964,
+        41.63487353398333,
+        50.0
+      ],
+      "train_BER_mean_pp": 46.3381186660631,
+      "train_BER_sd_pp": 4.278687195644832,
+      "unqueried_pair_BER_deltas_pp": [
+        2.6291672187525874,
+        2.518640601388711,
+        9.919040059560718
+      ],
+      "unqueried_pair_BER_mean_pp": 5.022282626567339,
+      "unqueried_pair_BER_sd_pp": 4.241076402455915
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_ML",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        2.2679324894514794,
+        -1.107594936708861,
+        -0.7911392405063333
+      ],
+      "ACC_mean_pp": 0.12306610407876166,
+      "ACC_sd_pp": 1.864235744277297,
+      "NMI_deltas_pp": [
+        0.4116048679764339,
+        -1.2979449113989183,
+        -0.42910759378737284
+      ],
+      "NMI_mean_pp": -0.43848254573661904,
+      "NMI_sd_pp": 0.8548134470945207,
+      "ARI_deltas_pp": [
+        0.8283547194841756,
+        -1.6695707551273753,
+        -1.56140444161591
+      ],
+      "ARI_mean_pp": -0.8008734924197033,
+      "ARI_sd_pp": 1.4119891687588464,
+      "train_BER_deltas_pp": [
+        34.05797101449276,
+        26.190476190476186,
+        32.83582089552239
+      ],
+      "train_BER_mean_pp": 31.028089366830443,
+      "train_BER_sd_pp": 4.233826716027957,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.7599038345154907,
+        0.7476301536712748,
+        0.35609009424314997
+      ],
+      "unqueried_pair_BER_mean_pp": 0.11460547113297803,
+      "unqueried_pair_BER_sd_pp": 0.7822408828382534
+    },
+    {
+      "dataset": "Cora",
+      "mask": "without_CL",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -2.162447257383965,
+        -2.215189873417722,
+        -18.670886075949365
+      ],
+      "ACC_mean_pp": -7.682841068917018,
+      "ACC_sd_pp": 9.515962655102893,
+      "NMI_deltas_pp": [
+        -1.6783679474660973,
+        -2.96740736000152,
+        -24.317175487916753
+      ],
+      "NMI_mean_pp": -9.65431693179479,
+      "NMI_sd_pp": 12.714754084503431,
+      "ARI_deltas_pp": [
+        -6.162457021175466,
+        -6.5548979346909855,
+        -19.232417577049368
+      ],
+      "ARI_mean_pp": -10.649924177638606,
+      "ARI_sd_pp": 7.435246948208728,
+      "train_BER_deltas_pp": [
+        9.365558912386707,
+        7.514954547595496,
+        50.0
+      ],
+      "train_BER_mean_pp": 22.293504486660737,
+      "train_BER_sd_pp": 24.012363572788136,
+      "unqueried_pair_BER_deltas_pp": [
+        1.8409473317972325,
+        1.8434967669251456,
+        9.919040059560718
+      ],
+      "unqueried_pair_BER_mean_pp": 4.534494719427698,
+      "unqueried_pair_BER_sd_pp": 4.663153226612442
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_consensus_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -0.5608283002588421,
+        -0.2157031924072461,
+        -0.38826574633304967
+      ],
+      "ACC_mean_pp": -0.38826574633304595,
+      "ACC_sd_pp": 0.172562553925798,
+      "NMI_deltas_pp": [
+        0.7529874658582236,
+        1.058422316878932,
+        0.463797924959497
+      ],
+      "NMI_mean_pp": 0.7584025692322175,
+      "NMI_sd_pp": 0.29734917920653947,
+      "ARI_deltas_pp": [
+        -0.42364778877677645,
+        0.14301822706451195,
+        0.19599172687916333
+      ],
+      "ARI_mean_pp": -0.028212611611033722,
+      "ARI_sd_pp": 0.34347966814024083,
+      "train_BER_deltas_pp": [
+        11.406926406926408,
+        7.079945799457994,
+        8.90625
+      ],
+      "train_BER_mean_pp": 9.131040735461466,
+      "train_BER_sd_pp": 2.1722312147683334,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.11388426567904286,
+        -0.27441069187692513,
+        -0.59408156939742
+      ],
+      "unqueried_pair_BER_mean_pp": -0.327458842317796,
+      "unqueried_pair_BER_sd_pp": 0.24445437677304488
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_private_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -0.5176876617773885,
+        -0.08628127696289623,
+        -0.2588438308886998
+      ],
+      "ACC_mean_pp": -0.2876042565429948,
+      "ACC_sd_pp": 0.2171364519778741,
+      "NMI_deltas_pp": [
+        0.6046114775442979,
+        1.6646783667150056,
+        0.5661209598803119
+      ],
+      "NMI_mean_pp": 0.9451369347132051,
+      "NMI_sd_pp": 0.6234382762254108,
+      "ARI_deltas_pp": [
+        -0.3110022721628025,
+        0.7125833953821936,
+        0.2725171315059227
+      ],
+      "ARI_mean_pp": 0.22469941824177128,
+      "ARI_sd_pp": 0.5134654856728379,
+      "train_BER_deltas_pp": [
+        0.0,
+        0.6944444444444444,
+        0.0
+      ],
+      "train_BER_mean_pp": 0.23148148148148148,
+      "train_BER_sd_pp": 0.4009376869372401,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.35942443496083665,
+        -1.1098375067238653,
+        -0.7079539992488004
+      ],
+      "unqueried_pair_BER_mean_pp": -0.7257386469778341,
+      "unqueried_pair_BER_sd_pp": 0.3755225224128913
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_all_pair",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -2.631578947368418,
+        -1.72562553925798,
+        -15.573770491803279
+      ],
+      "ACC_mean_pp": -6.643658326143226,
+      "ACC_sd_pp": 7.74695845883202,
+      "NMI_deltas_pp": [
+        2.2817701787338773,
+        2.4471794199028674,
+        -4.218921670237302
+      ],
+      "NMI_mean_pp": 0.17000930946648088,
+      "NMI_sd_pp": 3.8018254053439557,
+      "ARI_deltas_pp": [
+        -1.8567813002593747,
+        -0.43908192993003525,
+        -9.27080634775083
+      ],
+      "ARI_mean_pp": -3.8555565259800795,
+      "ARI_sd_pp": 4.743012318168608,
+      "train_BER_deltas_pp": [
+        28.2034632034632,
+        26.01626016260163,
+        31.874999999999996
+      ],
+      "train_BER_mean_pp": 28.69824112202161,
+      "train_BER_sd_pp": 2.9605425198938464,
+      "unqueried_pair_BER_deltas_pp": [
+        -1.0358574034318002,
+        -1.1674915807752928,
+        0.3002857395075331
+      ],
+      "unqueried_pair_BER_mean_pp": -0.6343544148998532,
+      "unqueried_pair_BER_sd_pp": 0.8120936231951473
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_ML",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -1.035375323554788,
+        -0.690250215703192,
+        -0.7333908541846457
+      ],
+      "ACC_mean_pp": -0.8196721311475419,
+      "ACC_sd_pp": 0.1880456835004594,
+      "NMI_deltas_pp": [
+        0.6885123547710814,
+        0.03766910647020061,
+        -0.1464659596119411
+      ],
+      "NMI_mean_pp": 0.19323850054311364,
+      "NMI_sd_pp": 0.43868960969190773,
+      "ARI_deltas_pp": [
+        -0.7634367589225699,
+        -0.5081294652101831,
+        -0.23906844705056107
+      ],
+      "ARI_mean_pp": -0.5035448903944381,
+      "ARI_sd_pp": 0.26221421656454086,
+      "train_BER_deltas_pp": [
+        20.0,
+        18.75,
+        18.75
+      ],
+      "train_BER_mean_pp": 19.166666666666668,
+      "train_BER_sd_pp": 0.7216878364870322,
+      "unqueried_pair_BER_deltas_pp": [
+        -0.4612121853734552,
+        0.04691572925805132,
+        0.17548919477618496
+      ],
+      "unqueried_pair_BER_mean_pp": -0.07960242044640631,
+      "unqueried_pair_BER_sd_pp": 0.3366783235145884
+    },
+    {
+      "dataset": "CiteSeer",
+      "mask": "without_CL",
+      "eligible": true,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "direction": "ablated minus full baseline",
+      "ACC_deltas_pp": [
+        -2.070750647109576,
+        -1.2942191544434878,
+        -1.9844693701466798
+      ],
+      "ACC_mean_pp": -1.7831463905665812,
+      "ACC_sd_pp": 0.4256154324690452,
+      "NMI_deltas_pp": [
+        3.050388249599462,
+        3.1222712443993164,
+        2.7815667450845902
+      ],
+      "NMI_mean_pp": 2.984742079694456,
+      "NMI_sd_pp": 0.1795882893752324,
+      "ARI_deltas_pp": [
+        -0.9136418791065193,
+        0.12353167736425807,
+        0.48753154418483824
+      ],
+      "ARI_mean_pp": -0.10085955251914099,
+      "ARI_sd_pp": 0.72703872563361,
+      "train_BER_deltas_pp": [
+        11.06060606060606,
+        10.975609756097562,
+        14.0625
+      ],
+      "train_BER_mean_pp": 12.032905272234542,
+      "train_BER_sd_pp": 1.7581942902236478,
+      "unqueried_pair_BER_deltas_pp": [
+        -1.591689676656849,
+        -1.3763952925229805,
+        -2.262701891404312
+      ],
+      "unqueried_pair_BER_mean_pp": -1.7435956201947136,
+      "unqueried_pair_BER_sd_pp": 0.4622676806426608
+    }
+  ],
+  "protocol_sha256": "d9ee140924bfb879e649382804f3bd430a9712b85036acb17b7fdad84957cfc1",
+  "global_seal_sha256": "033c2b2afad647bf47082250542ebe464a497c2d4fdec85794c75bc6f0a419f0",
+  "evaluation_sha256": "5be813857c6867df5488fdf2515d1e4859ef9ae1d845f7aadf9817baa86b60c0"
+}

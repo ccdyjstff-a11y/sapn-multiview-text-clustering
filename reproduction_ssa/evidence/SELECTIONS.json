@@ -1,0 +1,1736 @@
+[
+  {
+    "condition_id": "3Sources_s23_Q400",
+    "dataset": "3Sources",
+    "Q": 400,
+    "seed": 23,
+    "status": "SELECTED",
+    "index": 5,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.3023587465922824,
+        "scores": [
+          0.353798375537506,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.31644599206739554,
+        "scores": [
+          0.31533683707596755,
+          0.31755514705882354
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.31048105906242096,
+        "scores": [
+          0.3700430004777831,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.3328100627792923,
+        "scores": [
+          0.3480649784997611,
+          0.31755514705882354
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.26688335242123606,
+        "scores": [
+          0.28284758719541325,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.25051928170933924,
+        "scores": [
+          0.2501194457716197,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.27891191489137457,
+        "scores": [
+          0.29909221213569037,
+          0.2587316176470588
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.2993016813748911,
+        "scores": [
+          0.33205924510272333,
+          0.2665441176470588
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.2914891813748911,
+        "scores": [
+          0.33205924510272333,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.321940497561901,
+        "scores": [
+          0.3263258480649785,
+          0.31755514705882354
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.3023587465922824,
+        "scores": [
+          0.353798375537506,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.3349674422444563,
+        "scores": [
+          0.41901576684185377,
+          0.2509191176470588
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.3271951234507181,
+        "scores": [
+          0.342809364548495,
+          0.3115808823529412
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.2873430517692026,
+        "scores": [
+          0.3375537505972288,
+          0.23713235294117646
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.28777231001096093,
+        "scores": [
+          0.35403726708074534,
+          0.22150735294117646
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.29252873285601866,
+        "scores": [
+          0.3263258480649785,
+          0.2587316176470588
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.30204893412214384,
+        "scores": [
+          0.3375537505972288,
+          0.2665441176470588
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.38651784396869115,
+        "scores": [
+          0.3810320114667941,
+          0.39200367647058826
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "3Sources_s24_Q400",
+    "dataset": "3Sources",
+    "Q": 400,
+    "seed": 24,
+    "status": "SELECTED",
+    "index": 9,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.15179119126487547,
+        "scores": [
+          0.1899460188933873,
+          0.11363636363636363
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.195417356766041,
+        "scores": [
+          0.20276653171390013,
+          0.18806818181818183
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.22317813765182187,
+        "scores": [
+          0.19635627530364372,
+          0.25
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.16539880076064287,
+        "scores": [
+          0.13022941970310392,
+          0.2005681818181818
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.28342457980615876,
+        "scores": [
+          0.2361673414304993,
+          0.3306818181818182
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.22622300944669366,
+        "scores": [
+          0.1899460188933873,
+          0.2625
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.11911115200588884,
+        "scores": [
+          0.1700404858299595,
+          0.06818181818181818
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.15496219788982946,
+        "scores": [
+          0.23549257759784076,
+          0.07443181818181818
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.23814217580664948,
+        "scores": [
+          0.33367071524966263,
+          0.14261363636363636
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.09912549073733284,
+        "scores": [
+          0.1238191632928475,
+          0.07443181818181818
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.12223615200588885,
+        "scores": [
+          0.1700404858299595,
+          0.07443181818181818
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.17127921420684578,
+        "scores": [
+          0.22267206477732793,
+          0.11988636363636364
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.1582014476751319,
+        "scores": [
+          0.20276653171390013,
+          0.11363636363636363
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.24114104097656727,
+        "scores": [
+          0.28171390013495273,
+          0.2005681818181818
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.41867332229174337,
+        "scores": [
+          0.3407557354925776,
+          0.4965909090909091
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.1706213194700037,
+        "scores": [
+          0.19635627530364372,
+          0.14488636363636365
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.13218891853760273,
+        "scores": [
+          0.1899460188933873,
+          0.07443181818181818
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.26558244387191754,
+        "scores": [
+          0.3016194331983806,
+          0.22954545454545455
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "3Sources_s25_Q400",
+    "dataset": "3Sources",
+    "Q": 400,
+    "seed": 25,
+    "status": "SELECTED",
+    "index": 16,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.3132091592617908,
+        "scores": [
+          0.2199248120300752,
+          0.4064935064935065
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.33762246525404416,
+        "scores": [
+          0.2700501253132832,
+          0.40519480519480516
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.3579944178628389,
+        "scores": [
+          0.3549498746867168,
+          0.36103896103896105
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.2635082023239918,
+        "scores": [
+          0.1588345864661654,
+          0.36818181818181817
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.2922049441786284,
+        "scores": [
+          0.22337092731829572,
+          0.36103896103896105
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.37292948279790383,
+        "scores": [
+          0.3549498746867168,
+          0.3909090909090909
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.31668090681248573,
+        "scores": [
+          0.28790726817042606,
+          0.34545454545454546
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.2850706311232627,
+        "scores": [
+          0.23182957393483708,
+          0.33831168831168834
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.32572624743677375,
+        "scores": [
+          0.29041353383458646,
+          0.36103896103896105
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.29036511733880155,
+        "scores": [
+          0.23527568922305764,
+          0.34545454545454546
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.34663078149920257,
+        "scores": [
+          0.3549498746867168,
+          0.33831168831168834
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.30833902939166097,
+        "scores": [
+          0.2556390977443609,
+          0.36103896103896105
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.40389040783777624,
+        "scores": [
+          0.41102756892230574,
+          0.39675324675324675
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.28690191387559805,
+        "scores": [
+          0.1757518796992481,
+          0.39805194805194805
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.37228867623604467,
+        "scores": [
+          0.3991228070175438,
+          0.34545454545454546
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.2790014809751652,
+        "scores": [
+          0.23527568922305764,
+          0.3227272727272727
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.25154932786511736,
+        "scores": [
+          0.16478696741854637,
+          0.33831168831168834
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.29399920255183415,
+        "scores": [
+          0.24968671679197996,
+          0.33831168831168834
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "3Sources_s23_Q160",
+    "dataset": "3Sources",
+    "Q": 160,
+    "seed": 23,
+    "status": "SELECTED",
+    "index": 9,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.26768207282913165,
+        "scores": [
+          0.30718954248366015,
+          0.22817460317460317
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.2325513538748833,
+        "scores": [
+          0.2369281045751634,
+          0.22817460317460317
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.23932072829131654,
+        "scores": [
+          0.32189542483660133,
+          0.15674603174603174
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.19584500466853408,
+        "scores": [
+          0.29248366013071897,
+          0.0992063492063492
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.2394957983193277,
+        "scores": [
+          0.2369281045751634,
+          0.24206349206349204
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.2394957983193277,
+        "scores": [
+          0.2369281045751634,
+          0.24206349206349204
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.2890989729225023,
+        "scores": [
+          0.2369281045751634,
+          0.3412698412698413
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.2389122315592904,
+        "scores": [
+          0.30718954248366015,
+          0.17063492063492064
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.26768207282913165,
+        "scores": [
+          0.30718954248366015,
+          0.22817460317460317
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.18195611577964518,
+        "scores": [
+          0.2369281045751634,
+          0.12698412698412698
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.2389122315592904,
+        "scores": [
+          0.30718954248366015,
+          0.17063492063492064
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.3103408029878618,
+        "scores": [
+          0.30718954248366015,
+          0.3134920634920635
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.2890989729225023,
+        "scores": [
+          0.2369281045751634,
+          0.3412698412698413
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.2389122315592904,
+        "scores": [
+          0.30718954248366015,
+          0.17063492063492064
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.2746265172735761,
+        "scores": [
+          0.30718954248366015,
+          0.24206349206349204
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.2176704014939309,
+        "scores": [
+          0.2369281045751634,
+          0.1984126984126984
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.2389122315592904,
+        "scores": [
+          0.30718954248366015,
+          0.17063492063492064
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.2542016806722689,
+        "scores": [
+          0.26633986928104575,
+          0.24206349206349204
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "3Sources_s24_Q160",
+    "dataset": "3Sources",
+    "Q": 160,
+    "seed": 24,
+    "status": "SELECTED",
+    "index": 13,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.31826298701298705,
+        "scores": [
+          0.35795454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.25576298701298705,
+        "scores": [
+          0.23295454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.22451298701298703,
+        "scores": [
+          0.17045454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.21693722943722943,
+        "scores": [
+          0.1553030303030303,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.22451298701298703,
+        "scores": [
+          0.17045454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.2898538961038961,
+        "scores": [
+          0.2178030303030303,
+          0.3619047619047619
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.2937229437229437,
+        "scores": [
+          0.2803030303030303,
+          0.30714285714285716
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.24147727272727273,
+        "scores": [
+          0.23295454545454547,
+          0.25
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.31826298701298705,
+        "scores": [
+          0.35795454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.24818722943722943,
+        "scores": [
+          0.2178030303030303,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.22451298701298703,
+        "scores": [
+          0.17045454545454547,
+          0.2785714285714286
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.2898538961038961,
+        "scores": [
+          0.2178030303030303,
+          0.3619047619047619
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.185254329004329,
+        "scores": [
+          0.32765151515151514,
+          0.04285714285714286
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.13162878787878787,
+        "scores": [
+          0.26325757575757575,
+          0.0
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.2206439393939394,
+        "scores": [
+          0.35795454545454547,
+          0.08333333333333333
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.2624729437229437,
+        "scores": [
+          0.2178030303030303,
+          0.30714285714285716
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.21022727272727273,
+        "scores": [
+          0.17045454545454547,
+          0.25
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.27943722943722943,
+        "scores": [
+          0.2803030303030303,
+          0.2785714285714286
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "3Sources_s25_Q160",
+    "dataset": "3Sources",
+    "Q": 160,
+    "seed": 25,
+    "status": "SELECTED",
+    "index": 2,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.28113553113553114,
+        "scores": [
+          0.28846153846153844,
+          0.27380952380952384
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.2866300366300366,
+        "scores": [
+          0.21314102564102563,
+          0.3601190476190476
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.2746108058608059,
+        "scores": [
+          0.2516025641025641,
+          0.2976190476190476
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.31043956043956045,
+        "scores": [
+          0.21314102564102563,
+          0.40773809523809523
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.32967032967032966,
+        "scores": [
+          0.2516025641025641,
+          0.40773809523809523
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.35096153846153844,
+        "scores": [
+          0.3269230769230769,
+          0.375
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.3545100732600732,
+        "scores": [
+          0.23878205128205127,
+          0.47023809523809523
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.29945054945054944,
+        "scores": [
+          0.30128205128205127,
+          0.2976190476190476
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.3058608058608059,
+        "scores": [
+          0.2516025641025641,
+          0.3601190476190476
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.36092032967032966,
+        "scores": [
+          0.2516025641025641,
+          0.47023809523809523
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.32967032967032966,
+        "scores": [
+          0.2516025641025641,
+          0.40773809523809523
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.32967032967032966,
+        "scores": [
+          0.2516025641025641,
+          0.40773809523809523
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.29945054945054944,
+        "scores": [
+          0.23878205128205127,
+          0.3601190476190476
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.3178800366300366,
+        "scores": [
+          0.33814102564102566,
+          0.2976190476190476
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.29945054945054944,
+        "scores": [
+          0.30128205128205127,
+          0.2976190476190476
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.3545100732600732,
+        "scores": [
+          0.23878205128205127,
+          0.47023809523809523
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.3058608058608059,
+        "scores": [
+          0.2516025641025641,
+          0.3601190476190476
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.3360805860805861,
+        "scores": [
+          0.2644230769230769,
+          0.40773809523809523
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "BBC_s23_Q400",
+    "dataset": "BBC",
+    "Q": 400,
+    "seed": 23,
+    "status": "SELECTED",
+    "index": 2,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.5194620253164557,
+        "scores": [
+          0.4666666666666667,
+          0.5722573839662447
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.48867791842475383,
+        "scores": [
+          0.42777777777777776,
+          0.54957805907173
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.45263713080168777,
+        "scores": [
+          0.44166666666666665,
+          0.4636075949367089
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.5353551336146273,
+        "scores": [
+          0.5111111111111111,
+          0.5595991561181435
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.4742440225035162,
+        "scores": [
+          0.4305555555555556,
+          0.5179324894514769
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.489521800281294,
+        "scores": [
+          0.41944444444444445,
+          0.5595991561181435
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.5311884669479606,
+        "scores": [
+          0.5027777777777778,
+          0.5595991561181435
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.5405239099859354,
+        "scores": [
+          0.5277777777777778,
+          0.5532700421940928
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.5347398030942334,
+        "scores": [
+          0.49722222222222223,
+          0.5722573839662447
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.5387482419127989,
+        "scores": [
+          0.5305555555555556,
+          0.5469409282700421
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.5198488045007033,
+        "scores": [
+          0.4611111111111111,
+          0.5785864978902954
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.49585091420534455,
+        "scores": [
+          0.4611111111111111,
+          0.5305907172995781
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.5145218002812939,
+        "scores": [
+          0.5111111111111111,
+          0.5179324894514769
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.5135196905766526,
+        "scores": [
+          0.4611111111111111,
+          0.565928270042194
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.5339662447257384,
+        "scores": [
+          0.5083333333333333,
+          0.5595991561181435
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.4933016877637131,
+        "scores": [
+          0.475,
+          0.5116033755274262
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.4867440225035162,
+        "scores": [
+          0.45555555555555555,
+          0.5179324894514769
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.5318037974683545,
+        "scores": [
+          0.5166666666666667,
+          0.5469409282700421
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "BBC_s24_Q400",
+    "dataset": "BBC",
+    "Q": 400,
+    "seed": 24,
+    "status": "SELECTED",
+    "index": 5,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.501984126984127,
+        "scores": [
+          0.5277777777777778,
+          0.47619047619047616
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.5247252747252746,
+        "scores": [
+          0.5396825396825397,
+          0.5097680097680097
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.5033577533577533,
+        "scores": [
+          0.5079365079365079,
+          0.4987789987789988
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.4741300366300366,
+        "scores": [
+          0.4662698412698413,
+          0.481990231990232
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.4438339438339438,
+        "scores": [
+          0.4444444444444444,
+          0.4432234432234432
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.43292124542124544,
+        "scores": [
+          0.4226190476190476,
+          0.4432234432234432
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.5322802197802198,
+        "scores": [
+          0.5496031746031746,
+          0.5149572649572649
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.521596459096459,
+        "scores": [
+          0.5337301587301587,
+          0.5094627594627594
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.501984126984127,
+        "scores": [
+          0.5277777777777778,
+          0.47619047619047616
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.4539835164835165,
+        "scores": [
+          0.44246031746031744,
+          0.4655067155067155
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.49671855921855923,
+        "scores": [
+          0.5337301587301587,
+          0.4597069597069597
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.48282967032967034,
+        "scores": [
+          0.5337301587301587,
+          0.43192918192918195
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.5172466422466422,
+        "scores": [
+          0.5634920634920635,
+          0.471001221001221
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.5177808302808302,
+        "scores": [
+          0.5257936507936508,
+          0.5097680097680097
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.5046550671550671,
+        "scores": [
+          0.5496031746031746,
+          0.4597069597069597
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.5106837606837606,
+        "scores": [
+          0.5674603174603174,
+          0.45390720390720396
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.5049603174603174,
+        "scores": [
+          0.5337301587301587,
+          0.47619047619047616
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.5078601953601953,
+        "scores": [
+          0.5337301587301587,
+          0.481990231990232
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "BBC_s25_Q400",
+    "dataset": "BBC",
+    "Q": 400,
+    "seed": 25,
+    "status": "SELECTED",
+    "index": 4,
+    "rule": "minimum_balanced_pair_error",
+    "valid_candidates": 18,
+    "decided_candidates": 18,
+    "candidates": [
+      {
+        "index": 0,
+        "status": "VALID",
+        "mean_BER": 0.5438400179755083,
+        "scores": [
+          0.5314009661835748,
+          0.5562790697674419
+        ]
+      },
+      {
+        "index": 1,
+        "status": "VALID",
+        "mean_BER": 0.46182339063026623,
+        "scores": [
+          0.4855072463768116,
+          0.4381395348837209
+        ]
+      },
+      {
+        "index": 2,
+        "status": "VALID",
+        "mean_BER": 0.4793775980226941,
+        "scores": [
+          0.4915458937198067,
+          0.4672093023255814
+        ]
+      },
+      {
+        "index": 3,
+        "status": "VALID",
+        "mean_BER": 0.42827378946185823,
+        "scores": [
+          0.40096618357487923,
+          0.45558139534883724
+        ]
+      },
+      {
+        "index": 4,
+        "status": "VALID",
+        "mean_BER": 0.38796708235029775,
+        "scores": [
+          0.3719806763285024,
+          0.40395348837209305
+        ]
+      },
+      {
+        "index": 5,
+        "status": "VALID",
+        "mean_BER": 0.4186518368722616,
+        "scores": [
+          0.427536231884058,
+          0.40976744186046515
+        ]
+      },
+      {
+        "index": 6,
+        "status": "VALID",
+        "mean_BER": 0.5070441523424334,
+        "scores": [
+          0.5036231884057971,
+          0.5104651162790698
+        ]
+      },
+      {
+        "index": 7,
+        "status": "VALID",
+        "mean_BER": 0.5252724412987304,
+        "scores": [
+          0.5458937198067633,
+          0.5046511627906977
+        ]
+      },
+      {
+        "index": 8,
+        "status": "VALID",
+        "mean_BER": 0.5281794180429165,
+        "scores": [
+          0.5458937198067633,
+          0.5104651162790698
+        ]
+      },
+      {
+        "index": 9,
+        "status": "VALID",
+        "mean_BER": 0.4485782496348725,
+        "scores": [
+          0.5048309178743962,
+          0.39232558139534884
+        ]
+      },
+      {
+        "index": 10,
+        "status": "VALID",
+        "mean_BER": 0.5409330412313222,
+        "scores": [
+          0.5314009661835748,
+          0.5504651162790698
+        ]
+      },
+      {
+        "index": 11,
+        "status": "VALID",
+        "mean_BER": 0.5258352994045612,
+        "scores": [
+          0.538647342995169,
+          0.5130232558139535
+        ]
+      },
+      {
+        "index": 12,
+        "status": "VALID",
+        "mean_BER": 0.5019464105156725,
+        "scores": [
+          0.5108695652173914,
+          0.4930232558139535
+        ]
+      },
+      {
+        "index": 13,
+        "status": "VALID",
+        "mean_BER": 0.5395006179081001,
+        "scores": [
+          0.5169082125603864,
+          0.5620930232558139
+        ]
+      },
+      {
+        "index": 14,
+        "status": "VALID",
+        "mean_BER": 0.5570126952027862,
+        "scores": [
+          0.5519323671497585,
+          0.5620930232558139
+        ]
+      },
+      {
+        "index": 15,
+        "status": "VALID",
+        "mean_BER": 0.4624705089315807,
+        "scores": [
+          0.42028985507246375,
+          0.5046511627906977
+        ]
+      },
+      {
+        "index": 16,
+        "status": "VALID",
+        "mean_BER": 0.5503701831254915,
+        "scores": [
+          0.538647342995169,
+          0.5620930232558139
+        ]
+      },
+      {
+        "index": 17,
+        "status": "VALID",
+        "mean_BER": 0.5316492528929333,
+        "scores": [
+          0.538647342995169,
+          0.5246511627906977
+        ]
+      }
+    ],
+    "condition_committed": true
+  },
+  {
+    "condition_id": "BBC_s23_Q160",
+    "dataset": "BBC",
+    "Q": 160,
+    "seed": 23,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "BBC_s24_Q160",
+    "dataset": "BBC",
+    "Q": 160,
+    "seed": 24,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "BBC_s25_Q160",
+    "dataset": "BBC",
+    "Q": 160,
+    "seed": 25,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s23_Q400",
+    "dataset": "Cora",
+    "Q": 400,
+    "seed": 23,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s24_Q400",
+    "dataset": "Cora",
+    "Q": 400,
+    "seed": 24,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s25_Q400",
+    "dataset": "Cora",
+    "Q": 400,
+    "seed": 25,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s23_Q160",
+    "dataset": "Cora",
+    "Q": 160,
+    "seed": 23,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s24_Q160",
+    "dataset": "Cora",
+    "Q": 160,
+    "seed": 24,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "Cora_s25_Q160",
+    "dataset": "Cora",
+    "Q": 160,
+    "seed": 25,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s23_Q400",
+    "dataset": "CiteSeer",
+    "Q": 400,
+    "seed": 23,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s24_Q400",
+    "dataset": "CiteSeer",
+    "Q": 400,
+    "seed": 24,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s25_Q400",
+    "dataset": "CiteSeer",
+    "Q": 400,
+    "seed": 25,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s23_Q160",
+    "dataset": "CiteSeer",
+    "Q": 160,
+    "seed": 23,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s24_Q160",
+    "dataset": "CiteSeer",
+    "Q": 160,
+    "seed": 24,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  },
+  {
+    "condition_id": "CiteSeer_s25_Q160",
+    "dataset": "CiteSeer",
+    "Q": 160,
+    "seed": 25,
+    "status": "NOT_SELECTED_AFTER_GLOBAL_STOP",
+    "index": null,
+    "rule": null,
+    "condition_committed": false
+  }
+]

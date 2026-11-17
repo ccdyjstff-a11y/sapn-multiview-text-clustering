@@ -1,0 +1,10 @@
+{
+  "frozen_at_utc": "2026-11-17T09:00:55.888234+00:00",
+  "files": {
+    "score_frozen_sensitivity.py": "9113c14e83acd12b06ad15434d244d0deff704484cca44b1a1c7b36581341729",
+    "verify_and_report_sensitivity.py": "f24301ed0b6067684d1715ad41b099c7c08dd76d81c59bca615d629f92e15f1b"
+  },
+  "all_new_final_scores_unseen": true,
+  "original_primary_scores_already_known": true,
+  "completed_new_fits_at_freeze": 43
+}

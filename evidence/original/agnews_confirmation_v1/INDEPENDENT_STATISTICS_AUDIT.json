@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "comparisons_checked": 3,
+  "paired_seed_count": 10,
+  "exact_assignments_per_comparison": 1024,
+  "multiplicity": "Holm three-comparison family",
+  "scope": "Prespecified Q400 ACC only; conditional fixed-corpus exchangeability assumption; all other endpoints descriptive.",
+  "independently_recomputed": [
+    {
+      "comparator": "SAPN-EQ",
+      "eligible": true,
+      "mean_pp": 15.842857142857142,
+      "sd_pp": 6.835514833467101,
+      "paired_seed_differences_pp": [
+        22.071428571428577,
+        19.928571428571434,
+        20.85714285714286,
+        11.214285714285715,
+        26.928571428571423,
+        10.71428571428571,
+        10.85714285714286,
+        20.071428571428573,
+        7.642857142857141,
+        8.14285714285714
+      ],
+      "extreme_assignments": 2,
+      "total_assignments": 1024,
+      "raw_p": 0.001953125,
+      "holm_p": 0.005859375,
+      "holm_reject_alpha_05": true
+    },
+    {
+      "comparator": "CMVNMF",
+      "eligible": true,
+      "mean_pp": 1.9071428571428577,
+      "sd_pp": 9.975369326359749,
+      "paired_seed_differences_pp": [
+        14.357142857142863,
+        14.428571428571429,
+        8.857142857142863,
+        -8.928571428571425,
+        6.642857142857139,
+        -10.71428571428572,
+        -1.6428571428571404,
+        7.78571428571429,
+        -11.714285714285722,
+        0.0
+      ],
+      "extreme_assignments": 572,
+      "total_assignments": 1024,
+      "raw_p": 0.55859375,
+      "holm_p": 1.0,
+      "holm_reject_alpha_05": false
+    },
+    {
+      "comparator": "fixed-CV",
+      "eligible": true,
+      "mean_pp": -0.7142857142857144,
+      "sd_pp": 8.835675469240165,
+      "paired_seed_differences_pp": [
+        10.85714285714286,
+        -1.3571428571428568,
+        3.500000000000003,
+        -14.285714285714285,
+        7.214285714285706,
+        -8.857142857142863,
+        3.9285714285714315,
+        3.500000000000003,
+        -14.357142857142858,
+        2.7142857142857135
+      ],
+      "extreme_assignments": 822,
+      "total_assignments": 1024,
+      "raw_p": 0.802734375,
+      "holm_p": 1.0,
+      "holm_reject_alpha_05": false
+    }
+  ],
+  "statistics_sha256": "fee0725fe568c684be36bc13de3504741064324aefc0f24941511fc88711a23b",
+  "declaration_sha256": "31e6f2d62c89b4f4d34913d7f4266f8ae6e4d44a736003c36dbc334600d512ab",
+  "evaluation_sha256": "70c1941b7c4846294acb515fc48a85dd7bec2ced6b790a2a94b65a4de09b2b46",
+  "protocol_sha256": "6ff7d0517b8fae18501b86ff728d45415989d445ebf0fa95dc2d7e830e523b36",
+  "global_seal_sha256": "d454045ea115990b719ab1cbe458878098297f9f4c2beb2431e3ea65f07c5295",
+  "full_audit_sha256": "522ea60a5f4076efaaeb1dc50991af64f237d0d81d0bc4654cc95cd1b330387d",
+  "audit_source_sha256": "54e8f7a5f06b2fd18da7508f420470a3862fc69f170b3801f8514d05d3e9429f"
+}

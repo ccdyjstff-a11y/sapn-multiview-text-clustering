@@ -1,0 +1,381 @@
+{
+  "total_source_rows": 400,
+  "total_full_view_seed_marks": 400,
+  "excluded_rows": 0,
+  "groups": 40,
+  "pairs_per_group": 10,
+  "full_view_limits_pp": [
+    -22,
+    24
+  ],
+  "zoom_view_limits_pp": [
+    -2,
+    2
+  ],
+  "all_full_view_raw_points_and_sd_extents_inside_limits": true,
+  "center": "arithmetic mean of the ten paired differences",
+  "uncertainty": "sample standard deviation, ddof=1; not a confidence interval",
+  "all_40_summaries_match_archived_directions": true,
+  "panels": [
+    {
+      "panel": "a",
+      "dataset": "3Sources",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 4,
+      "mean_pp": 6.35593220338983,
+      "sample_sd_pp": 6.852830209439664
+    },
+    {
+      "panel": "a",
+      "dataset": "3Sources",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 5,
+      "mean_pp": 4.57627118644068,
+      "sample_sd_pp": 6.468864875239478
+    },
+    {
+      "panel": "a",
+      "dataset": "BBC",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.10918432883750717,
+      "sample_sd_pp": 0.40738440057019637
+    },
+    {
+      "panel": "a",
+      "dataset": "BBC",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.2440590879897242,
+      "sample_sd_pp": 0.7549713817475023
+    },
+    {
+      "panel": "a",
+      "dataset": "Reuters",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 0.09523809523809605,
+      "sample_sd_pp": 1.1795797621263002
+    },
+    {
+      "panel": "a",
+      "dataset": "Reuters",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 8,
+      "mean_pp": 0.940476190476191,
+      "sample_sd_pp": 2.1431878051757316
+    },
+    {
+      "panel": "a",
+      "dataset": "Cora",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 8,
+      "mean_pp": 0.4535864978902948,
+      "sample_sd_pp": 1.3266745487547054
+    },
+    {
+      "panel": "a",
+      "dataset": "Cora",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": -0.09493670886076,
+      "sample_sd_pp": 0.9844660417991656
+    },
+    {
+      "panel": "a",
+      "dataset": "CiteSeer",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.18119068162208762,
+      "sample_sd_pp": 0.31818962751657814
+    },
+    {
+      "panel": "a",
+      "dataset": "CiteSeer",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.11216566005176842,
+      "sample_sd_pp": 0.33981145787154127
+    },
+    {
+      "panel": "b",
+      "dataset": "3Sources",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 6,
+      "mean_pp": 4.915254237288137,
+      "sample_sd_pp": 7.309782594185704
+    },
+    {
+      "panel": "b",
+      "dataset": "3Sources",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 5,
+      "mean_pp": 3.7288135593220333,
+      "sample_sd_pp": 4.116934847963091
+    },
+    {
+      "panel": "b",
+      "dataset": "BBC",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": -1.0019267822736022,
+      "sample_sd_pp": 3.5705950136171087
+    },
+    {
+      "panel": "b",
+      "dataset": "BBC",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.21836865767501656,
+      "sample_sd_pp": 0.7204271363835307
+    },
+    {
+      "panel": "b",
+      "dataset": "Reuters",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 0.4285714285714298,
+      "sample_sd_pp": 0.8213423005076361
+    },
+    {
+      "panel": "b",
+      "dataset": "Reuters",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 8,
+      "mean_pp": 0.976190476190476,
+      "sample_sd_pp": 1.9600121862425235
+    },
+    {
+      "panel": "b",
+      "dataset": "Cora",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 0.6381856540084374,
+      "sample_sd_pp": 1.0180068790242098
+    },
+    {
+      "panel": "b",
+      "dataset": "Cora",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.2373417721518983,
+      "sample_sd_pp": 0.3491917029894728
+    },
+    {
+      "panel": "b",
+      "dataset": "CiteSeer",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.18119068162208762,
+      "sample_sd_pp": 0.31818962751657814
+    },
+    {
+      "panel": "b",
+      "dataset": "CiteSeer",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.10785159620362306,
+      "sample_sd_pp": 0.3410566932882189
+    },
+    {
+      "panel": "c",
+      "dataset": "3Sources",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 2,
+      "mean_pp": 4.576271186440676,
+      "sample_sd_pp": 5.567193912350289
+    },
+    {
+      "panel": "c",
+      "dataset": "3Sources",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 2,
+      "mean_pp": 4.576271186440679,
+      "sample_sd_pp": 9.90071688492586
+    },
+    {
+      "panel": "c",
+      "dataset": "BBC",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.06422607578677186,
+      "sample_sd_pp": 0.7416188428896915
+    },
+    {
+      "panel": "c",
+      "dataset": "BBC",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 6,
+      "mean_pp": 4.727039177906232,
+      "sample_sd_pp": 6.35785527420846
+    },
+    {
+      "panel": "c",
+      "dataset": "Reuters",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 7,
+      "mean_pp": 0.7261904761904769,
+      "sample_sd_pp": 1.430168859960954
+    },
+    {
+      "panel": "c",
+      "dataset": "Reuters",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 5,
+      "mean_pp": 1.8571428571428583,
+      "sample_sd_pp": 2.4236904992552986
+    },
+    {
+      "panel": "c",
+      "dataset": "Cora",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 8,
+      "mean_pp": 0.9915611814345988,
+      "sample_sd_pp": 1.2718640024601653
+    },
+    {
+      "panel": "c",
+      "dataset": "Cora",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.15295358649789037,
+      "sample_sd_pp": 0.5364039007905345
+    },
+    {
+      "panel": "c",
+      "dataset": "CiteSeer",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.09922346850733454,
+      "sample_sd_pp": 0.6583719396905832
+    },
+    {
+      "panel": "c",
+      "dataset": "CiteSeer",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.2761000862812768,
+      "sample_sd_pp": 0.8757065535362155
+    },
+    {
+      "panel": "d",
+      "dataset": "3Sources",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 3,
+      "mean_pp": 5.338983050847457,
+      "sample_sd_pp": 5.636283463103423
+    },
+    {
+      "panel": "d",
+      "dataset": "3Sources",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 2,
+      "mean_pp": 2.11864406779661,
+      "sample_sd_pp": 8.061990504423921
+    },
+    {
+      "panel": "d",
+      "dataset": "BBC",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.08349389852280065,
+      "sample_sd_pp": 0.47876077352137036
+    },
+    {
+      "panel": "d",
+      "dataset": "BBC",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 1.4386640976236365,
+      "sample_sd_pp": 4.081285110296048
+    },
+    {
+      "panel": "d",
+      "dataset": "Reuters",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 6,
+      "mean_pp": 1.3809523809523816,
+      "sample_sd_pp": 2.0196814418942846
+    },
+    {
+      "panel": "d",
+      "dataset": "Reuters",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 5,
+      "mean_pp": 2.095238095238097,
+      "sample_sd_pp": 2.281797790993346
+    },
+    {
+      "panel": "d",
+      "dataset": "Cora",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 7,
+      "mean_pp": 1.3554852320675104,
+      "sample_sd_pp": 1.3812010162168404
+    },
+    {
+      "panel": "d",
+      "dataset": "Cora",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 0.31118143459915587,
+      "sample_sd_pp": 0.9576170426217733
+    },
+    {
+      "panel": "d",
+      "dataset": "CiteSeer",
+      "comparator": "consensus-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 9,
+      "mean_pp": 0.491803278688525,
+      "sample_sd_pp": 0.8778292529207763
+    },
+    {
+      "panel": "d",
+      "dataset": "CiteSeer",
+      "comparator": "views-only",
+      "full_view_pairs": 10,
+      "zoom_pairs_within_limits": 10,
+      "mean_pp": 0.2890422778257129,
+      "sample_sd_pp": 0.9385884605708011
+    }
+  ]
+}

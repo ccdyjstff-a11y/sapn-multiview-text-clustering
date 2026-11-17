@@ -1,0 +1,16 @@
+{
+  "verified_summary_sha256": "033ed1d16356f988a3c6f127103cab5923abe5b166e54cbf2637eadc1a9f0618",
+  "verification_sha256": "33f7c93f0760877a1bd05df7e1269172a810c5ad731ffd65e41bc05605079d3d",
+  "display_source_sha256": "3007bc86a078c83708aba84db79626fbf2dbc44ebec9746b2e3b464df4b1fc7b",
+  "files": {
+    "ACC_direction_changes_from_primary.csv": "2c45828039233b7ae9aedd6a2fdb8cdd47930d5cefd721073d78ba5118fc8595",
+    "ACC_positive_mean_counts_6.csv": "ae2f7f54acf41af3ed1d67f5aa20a5f54b85de60bb56f7bff404f04edca3d786",
+    "ACC_rule_comparison_40_en.tex": "a7bc17212ccf30c5ebbb84ac0b3981dcc77dc9e804d435bb82eb10094b455c97",
+    "ACC_rule_comparison_40_wide.csv": "cffb8d2badd4ec6bf5f85aa81ba85692d810635fbc6183acbfce77581c84ad34",
+    "ACC_rule_comparison_40_zh.tex": "4c100817cc4e4f2586e587adf2bfd40c6698b7d024a2adac611192d555c44217",
+    "all_ACC_positive_metric_tradeoffs.csv": "b7d8efd4086c2d2b2627b1b9b0fcd633342f6be3d00713477352ded7b2dc8535",
+    "CiteSeer_Q400_prespecified_counterexample_6.csv": "1d99a141da911c474534f448665dff310b5fa479e07c42af9c38f90dc4ac07ab",
+    "five_metric_means_120_wide.csv": "399d3da772b84a9fc0acdd6088025010720eb086a15710d632969695306e38a5",
+    "MAIN_TEXT_HANDOFF.md": "3a1a1c4c36620413916b606f9aba20b79a67bc9b1e091eaf79d46cfeb1a2862e"
+  }
+}

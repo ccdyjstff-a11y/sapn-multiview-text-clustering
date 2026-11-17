@@ -1,0 +1,11 @@
+{
+  "dataset": "AGNews",
+  "seed": 1102,
+  "status": "complete",
+  "logical_records": 5,
+  "exit_code": 0,
+  "seconds": 397.53100000000086,
+  "peak_rss": 149401600,
+  "seal_sha256": "dc028e8276aafc94937b33e86c125ecb6821769dbc7c07f83f97e144ca84f67f",
+  "log_sha256": "53cae532250d105a88a56acbb32f68d694ea75806bd0f7845cd5e3c0c197e487"
+}

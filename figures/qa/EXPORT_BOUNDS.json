@@ -1,0 +1,44 @@
+{
+  "status": "PASS_TEXT_BOUNDS",
+  "figures": [
+    {
+      "file": "fig13_reference_filter_risk.pdf",
+      "sha256": "a9f367ee79df5ff2dd37584f3353e329c32e7cd10210bb6280f2babb2c0f21e2",
+      "pages": 1,
+      "width_mm": 179.99999983333333,
+      "height_mm": 129.99999999722223,
+      "words": 147,
+      "outside_page_words": 0,
+      "parser_control_codes_replaced": 0,
+      "reference_sha256": "dee4ad97e933a8899db8fcf6e8edb98c682c1b08fca2eaa56da482d4b47a74f0",
+      "reference_word_text_and_bbox_identical": true
+    },
+    {
+      "file": "fig21_allocation_new10_acc.pdf",
+      "sha256": "871b92e8ca5507832411603db5a0d931e27d8159839e3e1bb98245104b005dd7",
+      "pages": 1,
+      "width_mm": 179.99999983333333,
+      "height_mm": 189.99999994166666,
+      "words": 141,
+      "outside_page_words": 0,
+      "parser_control_codes_replaced": 0,
+      "reference_sha256": "308637d1f8e64e9305b77246286440375e92fa8c4e5ebab8aac419b468698071",
+      "reference_word_text_and_bbox_identical": true
+    },
+    {
+      "file": "fig22_allocation_extension.pdf",
+      "sha256": "b12d3512713eb74f813f97ceb7f635b9c62e880087ebc93e0c9a71a390b55b75",
+      "pages": 1,
+      "width_mm": 179.07,
+      "height_mm": 86.36,
+      "words": 40,
+      "outside_page_words": 0,
+      "parser_control_codes_replaced": 0,
+      "reference_sha256": "e730069fa94f47f602702e642aa373929c6ee12cc7ef73c49f6238b1eaf43e24",
+      "reference_word_text_and_bbox_identical": true
+    }
+  ],
+  "backend": "Matplotlib exports; Poppler geometry inspection",
+  "collision_audit": "PyMuPDF unavailable; no new PyMuPDF text-stroke collision pass is claimed",
+  "interpretation": "Unchanged text coordinates plus numerical/render checks support faithful redraw; manually inspect all panels"
+}

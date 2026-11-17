@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "paired_ACC_points": 40,
+  "groups": 8,
+  "seeds_per_group": 5,
+  "exclusions": 0,
+  "source_sha256": {
+    "paired_values_200.csv": "41857463a47b3ef64d50d7b59479fd703657be7a83da2dc828ba24d73b0ba58f",
+    "paired_ACC_8.csv": "6fbf708554b5cd43e2fdf7fdb43caf2decd5cbd63dfe70b897a9f5c18921db81"
+  },
+  "no_training_or_rescoring": true
+}

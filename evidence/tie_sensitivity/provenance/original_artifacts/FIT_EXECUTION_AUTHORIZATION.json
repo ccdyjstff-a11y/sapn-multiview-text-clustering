@@ -1,0 +1,13 @@
+{
+  "new_fits_authorized": true,
+  "maximum_new_fits": 172,
+  "authority": "Parent /root explicit authorization in follow-up message; execute frozen missing complete-query finals only",
+  "authorized_at_utc": "2026-11-17T08:43:36.563841+00:00",
+  "missing_fits_sha256": "ace61a4848f3e2e89bf361909049fe4e64eac4972d36661274bb8d3b2a11665b",
+  "worker_sha256": "dee1360ca575f86d4b262aac118b3aa4d4698e0114a38983b937e999a3ec7a0c",
+  "index_freeze_sha256": "6d9e2309bbdd2a8fe77e8801609f567b1cf97997f737da29809f32e828fef862",
+  "workers": 1,
+  "BLAS_threads": 1,
+  "block_start_available_memory_min_GiB": 3,
+  "no_new_evaluation_until_global_final_seal": true
+}

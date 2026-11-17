@@ -1,0 +1,1328 @@
+{
+  "cells": [
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        2.0,
+        2.0
+      ],
+      "u_actual": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "u_expected": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "ACC_mean": 78.53107344632768,
+      "ACC_sd": 7.056494913444522,
+      "ACC_terminal_mean": 78.53107344632768,
+      "NMI_mean": 68.69514510122367,
+      "NMI_sd": 8.517704593292134,
+      "NMI_terminal_mean": 68.69514510122367,
+      "ARI_mean": 69.1811440633076,
+      "ARI_sd": 11.644254626209467,
+      "ARI_terminal_mean": 69.1811440633076,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 15.667668987290625,
+      "unqueried_pair_BER_sd": 6.665433959909844,
+      "unqueried_pair_BER_terminal_mean": 15.667668987290625
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        2.0,
+        2.0
+      ],
+      "u_actual": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "u_expected": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "ACC_mean": 78.53107344632768,
+      "ACC_sd": 7.056494913444522,
+      "ACC_terminal_mean": 78.53107344632768,
+      "NMI_mean": 68.69514510122367,
+      "NMI_sd": 8.517704593292134,
+      "NMI_terminal_mean": 68.69514510122367,
+      "ARI_mean": 69.1811440633076,
+      "ARI_sd": 11.644254626209467,
+      "ARI_terminal_mean": 69.1811440633076,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 15.667668987290625,
+      "unqueried_pair_BER_sd": 6.665433959909844,
+      "unqueried_pair_BER_terminal_mean": 15.667668987290625
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "u_actual": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "u_expected": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "ACC_mean": 85.02824858757062,
+      "ACC_sd": 5.768524818266145,
+      "ACC_terminal_mean": 85.02824858757062,
+      "NMI_mean": 79.44035286044965,
+      "NMI_sd": 2.756162050973038,
+      "NMI_terminal_mean": 79.44035286044965,
+      "ARI_mean": 77.92211195456547,
+      "ARI_sd": 6.1670151981,
+      "ARI_terminal_mean": 77.92211195456547,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 11.074932282858486,
+      "unqueried_pair_BER_sd": 2.800159921873376,
+      "unqueried_pair_BER_terminal_mean": 11.074932282858486
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "u_actual": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "u_expected": [
+        0.023668639053254448,
+        0.011834319526627168,
+        0.029585798816568087
+      ],
+      "ACC_mean": 85.02824858757062,
+      "ACC_sd": 5.768524818266145,
+      "ACC_terminal_mean": 85.02824858757062,
+      "NMI_mean": 79.44035286044965,
+      "NMI_sd": 2.756162050973038,
+      "NMI_terminal_mean": 79.44035286044965,
+      "ARI_mean": 77.92211195456547,
+      "ARI_sd": 6.1670151981,
+      "ARI_terminal_mean": 77.92211195456547,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 11.074932282858486,
+      "unqueried_pair_BER_sd": 2.800159921873376,
+      "unqueried_pair_BER_terminal_mean": 11.074932282858486
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "u_actual": [
+        0.2359550561797753,
+        0.22966292134831456,
+        0.22292134831460675
+      ],
+      "u_expected": [
+        0.22788437750877533,
+        0.22984705463073252,
+        0.22779542479539233
+      ],
+      "ACC_mean": 81.6741597088418,
+      "ACC_sd": 8.39873107462196,
+      "ACC_terminal_mean": 81.6741597088418,
+      "NMI_mean": 68.57723548205551,
+      "NMI_sd": 6.528094000109704,
+      "NMI_terminal_mean": 68.57723548205551,
+      "ARI_mean": 66.88038459051477,
+      "ARI_sd": 10.123753191162027,
+      "ARI_terminal_mean": 66.88038459051477,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 15.569734624891288,
+      "unqueried_pair_BER_sd": 4.705394028203058,
+      "unqueried_pair_BER_terminal_mean": 15.569734624891288
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        20.0,
+        20.0,
+        20.0
+      ],
+      "u_actual": [
+        0.2359550561797753,
+        0.22966292134831456,
+        0.22292134831460675
+      ],
+      "u_expected": [
+        0.22788437750877533,
+        0.22984705463073252,
+        0.22779542479539233
+      ],
+      "ACC_mean": 82.20937700706487,
+      "ACC_sd": 8.796628053120465,
+      "ACC_terminal_mean": 82.20937700706487,
+      "NMI_mean": 68.95434872011548,
+      "NMI_sd": 6.6524034410082376,
+      "NMI_terminal_mean": 68.95434872011548,
+      "ARI_mean": 67.55908822364891,
+      "ARI_sd": 10.083181827731044,
+      "ARI_terminal_mean": 67.55908822364891,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 15.164212244830358,
+      "unqueried_pair_BER_sd": 4.569330600755966,
+      "unqueried_pair_BER_terminal_mean": 15.164212244830358
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.053932584269662964,
+        0.06426966292134828,
+        0.061573033707865155
+      ],
+      "u_expected": [
+        0.06527973008814336,
+        0.06663855084071968,
+        0.06571979851234559
+      ],
+      "ACC_mean": 85.67758509955041,
+      "ACC_sd": 9.023935068323379,
+      "ACC_terminal_mean": 85.67758509955041,
+      "NMI_mean": 73.23582589225596,
+      "NMI_sd": 7.699685261770321,
+      "NMI_terminal_mean": 73.23582589225596,
+      "ARI_mean": 72.61581112546538,
+      "ARI_sd": 12.025563805633768,
+      "ARI_terminal_mean": 72.61581112546538,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 12.191874732575885,
+      "unqueried_pair_BER_sd": 4.025559702742465,
+      "unqueried_pair_BER_terminal_mean": 12.191874732575885
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.053932584269662964,
+        0.06426966292134828,
+        0.061573033707865155
+      ],
+      "u_expected": [
+        0.06527973008814336,
+        0.06663855084071968,
+        0.06571979851234559
+      ],
+      "ACC_mean": 88.33226289873689,
+      "ACC_sd": 4.7267657437694295,
+      "ACC_terminal_mean": 88.33226289873689,
+      "NMI_mean": 73.13095314857169,
+      "NMI_sd": 7.62697310795103,
+      "NMI_terminal_mean": 73.13095314857169,
+      "ARI_mean": 74.01642748040518,
+      "ARI_sd": 9.724201948479637,
+      "ARI_terminal_mean": 74.01642748040518,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 13.217280334227647,
+      "unqueried_pair_BER_sd": 5.241877728857074,
+      "unqueried_pair_BER_terminal_mean": 13.217280334227647
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        2.0
+      ],
+      "u_actual": [
+        0.125,
+        0.13916666666666666,
+        0.13416666666666666
+      ],
+      "u_expected": [
+        0.12876418074230292,
+        0.12889523456316299,
+        0.13797113069998332
+      ],
+      "ACC_mean": 48.41269841269841,
+      "ACC_sd": 3.6154691999660615,
+      "ACC_terminal_mean": 48.41269841269841,
+      "NMI_mean": 32.37336288914959,
+      "NMI_sd": 3.3697382211594107,
+      "NMI_terminal_mean": 32.37336288914959,
+      "ARI_mean": 21.00947355292967,
+      "ARI_sd": 2.8957145159457043,
+      "ARI_terminal_mean": 21.00947355292967,
+      "train_BER_mean": 0.5555555555555556,
+      "train_BER_sd": 0.9622504486493764,
+      "train_BER_terminal_mean": 0.5555555555555556,
+      "unqueried_pair_BER_mean": 36.89230486392984,
+      "unqueried_pair_BER_sd": 1.7209066059029363,
+      "unqueried_pair_BER_terminal_mean": 36.89230486392984
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        20.0,
+        2.0
+      ],
+      "u_actual": [
+        0.125,
+        0.13916666666666666,
+        0.13416666666666666
+      ],
+      "u_expected": [
+        0.12876418074230292,
+        0.12889523456316299,
+        0.13797113069998332
+      ],
+      "ACC_mean": 48.41269841269841,
+      "ACC_sd": 3.73121396759254,
+      "ACC_terminal_mean": 48.41269841269841,
+      "NMI_mean": 32.44046117830089,
+      "NMI_sd": 3.4939762647086647,
+      "NMI_terminal_mean": 32.44046117830089,
+      "ARI_mean": 21.065220928179343,
+      "ARI_sd": 3.0138487491761787,
+      "ARI_terminal_mean": 21.065220928179343,
+      "train_BER_mean": 0.5555555555555556,
+      "train_BER_sd": 0.9622504486493764,
+      "train_BER_terminal_mean": 0.5555555555555556,
+      "unqueried_pair_BER_mean": 36.83612509793668,
+      "unqueried_pair_BER_sd": 1.7807683173817406,
+      "unqueried_pair_BER_terminal_mean": 36.83612509793668
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "u_actual": [
+        0.0625,
+        0.06000000000000005,
+        0.05833333333333335
+      ],
+      "u_expected": [
+        0.0572253613413634,
+        0.05493269301263104,
+        0.05484819372456885
+      ],
+      "ACC_mean": 53.57142857142858,
+      "ACC_sd": 2.2712838128974937,
+      "ACC_terminal_mean": 53.57142857142858,
+      "NMI_mean": 36.09696879140319,
+      "NMI_sd": 1.3276240264652237,
+      "NMI_terminal_mean": 36.09696879140319,
+      "ARI_mean": 26.16258341107138,
+      "ARI_sd": 2.795730219313558,
+      "ARI_terminal_mean": 26.16258341107138,
+      "train_BER_mean": 0.23148148148148148,
+      "train_BER_sd": 0.4009376869372401,
+      "train_BER_terminal_mean": 0.23148148148148148,
+      "unqueried_pair_BER_mean": 34.48106129267671,
+      "unqueried_pair_BER_sd": 1.4428851121348065,
+      "unqueried_pair_BER_terminal_mean": 34.48106129267671
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        2.0,
+        2.0,
+        20.0
+      ],
+      "u_actual": [
+        0.0625,
+        0.06000000000000005,
+        0.05833333333333335
+      ],
+      "u_expected": [
+        0.0572253613413634,
+        0.05493269301263104,
+        0.05484819372456885
+      ],
+      "ACC_mean": 53.492063492063494,
+      "ACC_sd": 2.147261787058524,
+      "ACC_terminal_mean": 53.492063492063494,
+      "NMI_mean": 36.04930389713356,
+      "NMI_sd": 1.1844816798453575,
+      "NMI_terminal_mean": 36.04930389713356,
+      "ARI_mean": 26.05760097675576,
+      "ARI_sd": 2.6197541552946113,
+      "ARI_terminal_mean": 26.05760097675576,
+      "train_BER_mean": 0.23148148148148148,
+      "train_BER_sd": 0.4009376869372401,
+      "train_BER_terminal_mean": 0.23148148148148148,
+      "unqueried_pair_BER_mean": 34.522986860490285,
+      "unqueried_pair_BER_sd": 1.3445862662057337,
+      "unqueried_pair_BER_terminal_mean": 34.522986860490285
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        20.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.3604135893648449,
+        0.37924667651403254,
+        0.3670605612998523
+      ],
+      "u_expected": [
+        0.36465661893944934,
+        0.3631957981870372,
+        0.3668040639597796
+      ],
+      "ACC_mean": 45.20042194092827,
+      "ACC_sd": 1.5458176044043068,
+      "ACC_terminal_mean": 45.20042194092827,
+      "NMI_mean": 22.677629413691196,
+      "NMI_sd": 0.8923944828559326,
+      "NMI_terminal_mean": 22.677629413691196,
+      "ARI_mean": 17.390100248875786,
+      "ARI_sd": 1.5135407772480027,
+      "ARI_terminal_mean": 17.390100248875786,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 41.442696296437994,
+      "unqueried_pair_BER_sd": 1.1685615927829738,
+      "unqueried_pair_BER_terminal_mean": 41.442696296437994
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        20.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.3604135893648449,
+        0.37924667651403254,
+        0.3670605612998523
+      ],
+      "u_expected": [
+        0.36465661893944934,
+        0.3631957981870372,
+        0.3668040639597796
+      ],
+      "ACC_mean": 45.11251758087201,
+      "ACC_sd": 1.4752226930941013,
+      "ACC_terminal_mean": 45.11251758087201,
+      "NMI_mean": 22.64913092204796,
+      "NMI_sd": 0.8205855888482597,
+      "NMI_terminal_mean": 22.64913092204796,
+      "ARI_mean": 17.284121794695505,
+      "ARI_sd": 1.4243648926409762,
+      "ARI_terminal_mean": 17.284121794695505,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 41.51630720781451,
+      "unqueried_pair_BER_sd": 1.030825128300839,
+      "unqueried_pair_BER_terminal_mean": 41.51630720781451
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.14032496307237818,
+        0.14992614475627775,
+        0.15657311669128504
+      ],
+      "u_expected": [
+        0.14529173680638272,
+        0.15255791262631388,
+        0.1514360140367544
+      ],
+      "ACC_mean": 47.20464135021098,
+      "ACC_sd": 1.2800275421425753,
+      "ACC_terminal_mean": 47.20464135021098,
+      "NMI_mean": 24.911960869371523,
+      "NMI_sd": 0.8955923560261172,
+      "NMI_terminal_mean": 24.911960869371523,
+      "ARI_mean": 19.08186149123337,
+      "ARI_sd": 0.8435703581835391,
+      "ARI_terminal_mean": 19.08186149123337,
+      "train_BER_mean": 0.26455026455026454,
+      "train_BER_sd": 0.45821449935684583,
+      "train_BER_terminal_mean": 0.26455026455026454,
+      "unqueried_pair_BER_mean": 40.80034854803561,
+      "unqueried_pair_BER_sd": 1.188613910463045,
+      "unqueried_pair_BER_terminal_mean": 40.80034854803561
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        2.0,
+        200.0
+      ],
+      "u_actual": [
+        0.14032496307237818,
+        0.14992614475627775,
+        0.15657311669128504
+      ],
+      "u_expected": [
+        0.14529173680638272,
+        0.15255791262631388,
+        0.1514360140367544
+      ],
+      "ACC_mean": 47.485935302391,
+      "ACC_sd": 0.8378166355445745,
+      "ACC_terminal_mean": 47.485935302391,
+      "NMI_mean": 24.665730290407765,
+      "NMI_sd": 1.5062721968395654,
+      "NMI_terminal_mean": 24.665730290407765,
+      "ARI_mean": 18.05373517803434,
+      "ARI_sd": 2.799753387822339,
+      "ARI_terminal_mean": 18.05373517803434,
+      "train_BER_mean": 0.5291005291005291,
+      "train_BER_sd": 0.9164289987136917,
+      "train_BER_terminal_mean": 0.5291005291005291,
+      "unqueried_pair_BER_mean": 40.98862296304001,
+      "unqueried_pair_BER_sd": 1.4520617677186944,
+      "unqueried_pair_BER_terminal_mean": 40.98862296304001
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "u_actual": [
+        0.446256038647343,
+        0.4305555555555556,
+        0.4501811594202898
+      ],
+      "u_expected": [
+        0.44801876300518834,
+        0.4333578891772711,
+        0.456551098937047
+      ],
+      "ACC_mean": 52.919183203911416,
+      "ACC_sd": 0.8097732657636504,
+      "ACC_terminal_mean": 52.919183203911416,
+      "NMI_mean": 28.225867750224552,
+      "NMI_sd": 1.0376466103133666,
+      "NMI_terminal_mean": 28.225867750224552,
+      "ARI_mean": 25.553370604826853,
+      "ARI_sd": 1.324413360982199,
+      "ARI_terminal_mean": 25.553370604826853,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 35.04513181589552,
+      "unqueried_pair_BER_sd": 1.000813521990245,
+      "unqueried_pair_BER_terminal_mean": 35.04513181589552
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        200.0,
+        20.0
+      ],
+      "u_actual": [
+        0.446256038647343,
+        0.4305555555555556,
+        0.4501811594202898
+      ],
+      "u_expected": [
+        0.44801876300518834,
+        0.4333578891772711,
+        0.456551098937047
+      ],
+      "ACC_mean": 53.04860511935576,
+      "ACC_sd": 0.6603947370264565,
+      "ACC_terminal_mean": 53.04860511935576,
+      "NMI_mean": 28.170195380752546,
+      "NMI_sd": 1.015508421330618,
+      "NMI_terminal_mean": 28.170195380752546,
+      "ARI_mean": 25.751391010238123,
+      "ARI_sd": 0.9981930198823021,
+      "ARI_terminal_mean": 25.751391010238123,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 35.19018458192366,
+      "unqueried_pair_BER_sd": 1.096074806047112,
+      "unqueried_pair_BER_terminal_mean": 35.19018458192366
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "coverage",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        20.0
+      ],
+      "u_actual": [
+        0.21678743961352653,
+        0.20048309178743962,
+        0.19444444444444442
+      ],
+      "u_expected": [
+        0.2266664396995174,
+        0.20714320294728314,
+        0.20424324032221666
+      ],
+      "ACC_mean": 53.781995973540404,
+      "ACC_sd": 0.9707442526164887,
+      "ACC_terminal_mean": 53.781995973540404,
+      "NMI_mean": 30.235364291977806,
+      "NMI_sd": 0.719206657278205,
+      "NMI_terminal_mean": 30.235364291977806,
+      "ARI_mean": 27.145073780510653,
+      "ARI_sd": 1.0979243308608664,
+      "ARI_terminal_mean": 27.145073780510653,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 33.89483868357723,
+      "unqueried_pair_BER_sd": 0.09770949390466344,
+      "unqueried_pair_BER_terminal_mean": 33.89483868357723
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "method": "uniform-m-expected",
+      "eligible": 3,
+      "selected_lambda": [
+        200.0,
+        20.0,
+        200.0
+      ],
+      "u_actual": [
+        0.21678743961352653,
+        0.20048309178743962,
+        0.19444444444444442
+      ],
+      "u_expected": [
+        0.2266664396995174,
+        0.20714320294728314,
+        0.20424324032221666
+      ],
+      "ACC_mean": 53.638193845268916,
+      "ACC_sd": 0.7672891326979606,
+      "ACC_terminal_mean": 53.638193845268916,
+      "NMI_mean": 29.953299483264303,
+      "NMI_sd": 0.32884690250965354,
+      "NMI_terminal_mean": 29.953299483264303,
+      "ARI_mean": 27.236585675422514,
+      "ARI_sd": 1.0226242503342384,
+      "ARI_terminal_mean": 27.236585675422514,
+      "train_BER_mean": 0.0,
+      "train_BER_sd": 0.0,
+      "train_BER_terminal_mean": 0.0,
+      "unqueried_pair_BER_mean": 34.074115665769014,
+      "unqueried_pair_BER_sd": 0.541265726650664,
+      "unqueried_pair_BER_terminal_mean": 34.074115665769014
+    }
+  ],
+  "paired": [
+    {
+      "dataset": "3Sources",
+      "Q": 160,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      }
+    },
+    {
+      "dataset": "3Sources",
+      "Q": 400,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      }
+    },
+    {
+      "dataset": "BBC",
+      "Q": 160,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.5780346820809301,
+          -1.9910083493898556,
+          -0.19267822736031004
+        ],
+        "mean_pp": -0.5352172982230785,
+        "sd_pp": 1.3183304918296466,
+        "positive_seeds": 1
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.19429108135029516,
+          -0.9217679631783549,
+          -0.4038628323518534
+        ],
+        "mean_pp": -0.37711323805997105,
+        "sd_pp": 0.5585101640208852,
+        "positive_seeds": 1
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.2961283082958399,
+          -2.03382017423529,
+          -0.29841903346301546
+        ],
+        "mean_pp": -0.6787036331341553,
+        "sd_pp": 1.210630936897186,
+        "positive_seeds": 1
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.04208546561084159,
+          0.9212451160701379,
+          0.25323655850180427
+        ],
+        "mean_pp": 0.40552238006092794,
+        "sd_pp": 0.45893752443538655,
+        "positive_seeds": 3
+      }
+    },
+    {
+      "dataset": "BBC",
+      "Q": 400,
+      "eligible": true,
+      "matched_selected_lambda": [
+        false,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          -8.028259473346179,
+          -0.06422607578676631,
+          0.12845215157354373
+        ],
+        "mean_pp": -2.654677799186467,
+        "sd_pp": 4.654655328966205,
+        "positive_seeds": 1
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.2204331701940787,
+          -0.16544318158312477,
+          0.2596282424418561
+        ],
+        "mean_pp": 0.10487274368427002,
+        "sd_pp": 0.23491932234706225,
+        "positive_seeds": 2
+      },
+      "ARI": {
+        "deltas_pp": [
+          -4.388972897797916,
+          -0.19002395044611653,
+          0.37714778342461397
+        ],
+        "mean_pp": -1.400616354939806,
+        "sd_pp": 2.603483640117149,
+        "positive_seeds": 1
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          -2.914062428728853,
+          0.0,
+          -0.16215437622642964
+        ],
+        "mean_pp": -1.0254056016517608,
+        "sd_pp": 1.6376330383455955,
+        "positive_seeds": 0
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 160,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.0,
+          0.11904761904761862,
+          -0.11904761904761862
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.11904761904761862,
+        "positive_seeds": 1
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.0,
+          0.037707678671639044,
+          -0.2390025461255496
+        ],
+        "mean_pp": -0.06709828915130352,
+        "sd_pp": 0.1500625617271064,
+        "positive_seeds": 1
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.0,
+          0.03556726401233168,
+          -0.202809389761352
+        ],
+        "mean_pp": -0.055747375249673436,
+        "sd_pp": 0.12859504131771798,
+        "positive_seeds": 1
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.0,
+          0.023993761190155283,
+          0.14454553678929782
+        ],
+        "mean_pp": 0.05617976599315103,
+        "sd_pp": 0.07746165006188813,
+        "positive_seeds": 2
+      }
+    },
+    {
+      "dataset": "Reuters",
+      "Q": 400,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.23809523809523725
+        ],
+        "mean_pp": 0.07936507936507908,
+        "sd_pp": 0.13746434980705327,
+        "positive_seeds": 1
+      },
+      "NMI": {
+        "deltas_pp": [
+          -0.06952059522779552,
+          0.0,
+          0.21251527803669568
+        ],
+        "mean_pp": 0.047664894269633384,
+        "sd_pp": 0.14693541118912598,
+        "positive_seeds": 1
+      },
+      "ARI": {
+        "deltas_pp": [
+          -0.024333630301098808,
+          0.0,
+          0.33928093324796516
+        ],
+        "mean_pp": 0.10498243431562211,
+        "sd_pp": 0.20327289869131474,
+        "positive_seeds": 1
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.036273417120569196,
+          0.0,
+          -0.1620501205612801
+        ],
+        "mean_pp": -0.0419255678135703,
+        "sd_pp": 0.10560005363175098,
+        "positive_seeds": 1
+      }
+    },
+    {
+      "dataset": "Cora",
+      "Q": 160,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.15822784810126667,
+          0.0,
+          0.10548523206750926
+        ],
+        "mean_pp": 0.08790436005625864,
+        "sd_pp": 0.08056567677489193,
+        "positive_seeds": 2
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.10735210815920326,
+          -0.03684386938106465,
+          0.014987236151586814
+        ],
+        "mean_pp": 0.028498491643241808,
+        "sd_pp": 0.07304132736621745,
+        "positive_seeds": 2
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.22293862859366076,
+          0.0738436742185905,
+          0.021153059728595824
+        ],
+        "mean_pp": 0.10597845418028236,
+        "sd_pp": 0.10466058003345496,
+        "positive_seeds": 3
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          -0.21740044553074656,
+          0.05810062075398137,
+          -0.06153290935278499
+        ],
+        "mean_pp": -0.07361091137651672,
+        "sd_pp": 0.1381470882091601,
+        "positive_seeds": 1
+      }
+    },
+    {
+      "dataset": "Cora",
+      "Q": 400,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        false,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          -0.10548523206751481,
+          -0.7911392405063278,
+          0.052742616033757406
+        ],
+        "mean_pp": -0.2812939521800284,
+        "sd_pp": 0.4485707040145236,
+        "positive_seeds": 1
+      },
+      "NMI": {
+        "deltas_pp": [
+          -0.2626110705721829,
+          1.0600907108315045,
+          -0.058787903368054395
+        ],
+        "mean_pp": 0.24623057896375575,
+        "sd_pp": 0.712153218454514,
+        "positive_seeds": 1
+      },
+      "ARI": {
+        "deltas_pp": [
+          -0.2388957671501546,
+          3.3075608729858983,
+          0.015713833761341056
+        ],
+        "mean_pp": 1.0281263131990284,
+        "sd_pp": 1.9781488686350552,
+        "positive_seeds": 2
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          -0.7936507936507936,
+          0.0
+        ],
+        "mean_pp": -0.26455026455026454,
+        "sd_pp": 0.45821449935684583,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.1320276509946039,
+          -0.4939505574077019,
+          -0.20290033860008716
+        ],
+        "mean_pp": -0.18827441500439504,
+        "sd_pp": 0.3132452993732075,
+        "positive_seeds": 1
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 160,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        false,
+        true
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.0,
+          -0.345125107851596,
+          -0.043140638481453664
+        ],
+        "mean_pp": -0.1294219154443499,
+        "sd_pp": 0.1880456835004594,
+        "positive_seeds": 0
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.0592443687002453,
+          -0.012931323613751822,
+          0.12070406332952976
+        ],
+        "mean_pp": 0.055672369472007745,
+        "sd_pp": 0.06688926329938943,
+        "positive_seeds": 2
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.06177453295481139,
+          -0.7181822376365776,
+          0.062346488447956316
+        ],
+        "mean_pp": -0.19802040541126997,
+        "sd_pp": 0.45047345156098084,
+        "positive_seeds": 2
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          -0.01817080557238171,
+          -0.317627316051744,
+          -0.09936017646030026
+        ],
+        "mean_pp": -0.145052766028142,
+        "sd_pp": 0.15486900907922324,
+        "positive_seeds": 0
+      }
+    },
+    {
+      "dataset": "CiteSeer",
+      "Q": 400,
+      "eligible": true,
+      "matched_selected_lambda": [
+        true,
+        true,
+        false
+      ],
+      "ACC": {
+        "deltas_pp": [
+          0.17256255392579245,
+          -0.1294219154443499,
+          0.38826574633304967
+        ],
+        "mean_pp": 0.1438021282714974,
+        "sd_pp": 0.2600394207653908,
+        "positive_seeds": 2
+      },
+      "NMI": {
+        "deltas_pp": [
+          0.006586981356637711,
+          -0.06119825646677679,
+          0.9008057012506621
+        ],
+        "mean_pp": 0.28206480871350764,
+        "sd_pp": 0.5369161281708252,
+        "positive_seeds": 2
+      },
+      "ARI": {
+        "deltas_pp": [
+          0.16547121603985304,
+          -0.10157925122738498,
+          -0.33842764954805094
+        ],
+        "mean_pp": -0.09151189491186096,
+        "sd_pp": 0.2521002388586372,
+        "positive_seeds": 1
+      },
+      "train_BER": {
+        "deltas_pp": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_pp": 0.0,
+        "sd_pp": 0.0,
+        "positive_seeds": 0
+      },
+      "unqueried_pair_BER": {
+        "deltas_pp": [
+          0.05800079486427134,
+          0.142189907131951,
+          -0.7380216485715962
+        ],
+        "mean_pp": -0.1792769821917913,
+        "sd_pp": 0.4857145800900099,
+        "positive_seeds": 2
+      }
+    }
+  ],
+  "protocol_sha256": "27287e4064c04fed8dd104e7352779dceef93979011c0574fe598fea2fbdbb7c",
+  "evaluation_sha256": "e86cf46891f6dcc14d75a5e17febfcb177ac42ce5734dc45b2e0cb6034bc9ec3"
+}

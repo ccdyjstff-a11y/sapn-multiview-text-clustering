@@ -1,0 +1,8 @@
+{
+  "run_id": "26d123d915d840439d6c512afa514bce",
+  "case_id": "3Sources_s24_Q400_c9_f0",
+  "repeat": 1,
+  "input_sha256": "a2c2433068f8e6a005242cde0f2c8e3a0cba54486b888d6892ea9ad6b463b3ca",
+  "scientific_protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_protocol_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d"
+}

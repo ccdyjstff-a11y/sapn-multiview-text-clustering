@@ -1,0 +1,47 @@
+{
+  "scope": "Synthetic relocated execution only; no corpus performance claims",
+  "commands": [
+    {
+      "name": "historical_train",
+      "returncode": 0,
+      "stdout": "FIT Q100_full_c0_f0 True 0.76\nFIT Q100_full_c0_f1 True 0.71\nFIT Q100_full_c1_f0 True 0.66\nFIT Q100_full_c1_f1 True 1.14\nFIT Q100_full_c2_f0 True 0.97\nFIT Q100_full_c2_f1 True 0.84\nFIT Q100_full_c0_final True 0.52\nFIT Q100_consensus-only_c0_f0 True 0.98\nFIT Q100_consensus-only_c0_f1 True 0.94\nFIT Q100_consensus-only_c1_f0 True 0.87\nFIT Q100_consensus-only_c1_f1 True 0.93\nFIT Q100_consensus-only_c2_f0 True 0.82\nFIT Q100_consensus-only_c2_f1 True 0.96\nFIT Q100_consensus-only_c0_final True 0.61\nFIT Q100_views-only_c0_f0 True 0.84\nFIT Q100_views-only_c0_f1 True 0.73\nFIT Q100_views-only_c1_f0 True 0.77\nFIT Q100_views-only_c1_f1 True 0.66\nFIT Q100_views-only_c2_f0 True 0.82\nFIT Q100_views-only_c2_f1 True 0.81\nFIT Q100_views-only_c0_final True 0.6\nSEALED 5 requested logical finals; no class vector or evaluation scores read\n",
+      "stderr": "",
+      "isolated": true
+    },
+    {
+      "name": "english_train",
+      "returncode": 0,
+      "stdout": "FIT Q100_full_c0_f0 True 0.82\nFIT Q100_full_c0_f1 True 0.69\nFIT Q100_full_c1_f0 True 0.67\nFIT Q100_full_c1_f1 True 0.66\nFIT Q100_full_c2_f0 True 0.88\nFIT Q100_full_c2_f1 True 0.76\nFIT Q100_full_c0_final True 0.51\nFIT Q100_consensus-only_c0_f0 True 0.81\nFIT Q100_consensus-only_c0_f1 True 0.91\nFIT Q100_consensus-only_c1_f0 True 0.85\nFIT Q100_consensus-only_c1_f1 True 1.03\nFIT Q100_consensus-only_c2_f0 True 0.82\nFIT Q100_consensus-only_c2_f1 True 0.98\nFIT Q100_consensus-only_c0_final True 0.63\nFIT Q100_views-only_c0_f0 True 0.75\nFIT Q100_views-only_c0_f1 True 0.66\nFIT Q100_views-only_c1_f0 True 0.78\nFIT Q100_views-only_c1_f1 True 0.77\nFIT Q100_views-only_c2_f0 True 0.79\nFIT Q100_views-only_c2_f1 True 0.72\nFIT Q100_views-only_c0_final True 0.61\nSEALED 5 requested logical finals; no class vector or evaluation scores read\n",
+      "stderr": "",
+      "isolated": true
+    },
+    {
+      "name": "historical_score",
+      "returncode": 0,
+      "stdout": "SCORED 5 sealed logical finals\n",
+      "stderr": "",
+      "isolated": true
+    },
+    {
+      "name": "english_score",
+      "returncode": 0,
+      "stdout": "SCORED 5 sealed logical finals\n",
+      "stderr": "",
+      "isolated": true
+    }
+  ],
+  "comparisons": [],
+  "status": "PASS",
+  "arrays_bitwise_equal": 392,
+  "numerical_json_equal": 25,
+  "logical_finals": 5,
+  "etas": [
+    0,
+    0.5,
+    1
+  ],
+  "eligible_finals": 5,
+  "changed_fields": "Source/protocol/identity hashes and elapsed seconds are expected to differ; arrays and numerical diagnostics do not.",
+  "original_core_sha256": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+  "english_core_sha256": "f62a2b55893d03c17a6f46b3d15982a2054d734eb846671620c5fb795e8c9d46"
+}

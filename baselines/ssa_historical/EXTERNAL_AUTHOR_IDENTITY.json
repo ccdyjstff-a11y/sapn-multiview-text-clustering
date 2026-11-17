@@ -1,0 +1,64 @@
+{
+  "repository": "https://github.com/kamalberahmand/SSA-SNMF",
+  "commit": "4d37f15621ee7bd9d412ad224408658ad243699c",
+  "files": [
+    {
+      "path": "Cost_function.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/Cost_function.m",
+      "bytes": 401,
+      "sha256": "3998c860cf1a329cb06fb572df8d8af437f710361f8d11bc5b3c07e993197476",
+      "blob_sha": "3f224d7f45033d810343d1b99005333e9bb6fdc3"
+    },
+    {
+      "path": "Create_KNNgraph.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/Create_KNNgraph.m",
+      "bytes": 710,
+      "sha256": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+      "blob_sha": "a4e48a9c693f0aaf1177adb63139e5aec8e88235"
+    },
+    {
+      "path": "NormalizationK.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/NormalizationK.m",
+      "bytes": 158,
+      "sha256": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+      "blob_sha": "bd75dfe310a712b56f0f641f653ebcb5c4252bf7"
+    },
+    {
+      "path": "SSA_SNMF.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/SSA_SNMF.m",
+      "bytes": 5946,
+      "sha256": "fd0fa1e25ba7c4b1f5e6ccd08321e6ce2626205ed69b06408341220737b89883",
+      "blob_sha": "6c4d5bad6048b6940ffdd38c10da59a8cfd6a388"
+    },
+    {
+      "path": "Update_Teta.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/Update_Teta.m",
+      "bytes": 235,
+      "sha256": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+      "blob_sha": "68b1f29d2db672913ff1e3f65042a4844e4ae78d"
+    },
+    {
+      "path": "Update_V_v.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/Update_V_v.m",
+      "bytes": 407,
+      "sha256": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+      "blob_sha": "94ae4cbb5becd441aef351bfa95e376c18684473"
+    },
+    {
+      "path": "Update_W_v.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/Update_W_v.m",
+      "bytes": 355,
+      "sha256": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34",
+      "blob_sha": "e245b2cd9fec139a18e0b8e61aed49152fee83c5"
+    },
+    {
+      "path": "normalization.m",
+      "url": "https://raw.githubusercontent.com/kamalberahmand/SSA-SNMF/4d37f15621ee7bd9d412ad224408658ad243699c/normalization.m",
+      "bytes": 74,
+      "sha256": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641",
+      "blob_sha": "44c7c991b73d148cdd9a435918fd6bb5164a36a2"
+    }
+  ],
+  "redistributed_author_code": false,
+  "generated_author_derivatives_included": false
+}

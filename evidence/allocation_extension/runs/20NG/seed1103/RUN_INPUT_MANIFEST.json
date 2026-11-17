@@ -1,0 +1,8 @@
+{
+  "protocol_sha256": "f593ff89e2d69984fbf281ac599175bd97286f7f2ef291071ba6e3404b7b2893",
+  "inputs_sha256": "ff6ba852f4db2e076129985f4c9045050646c9aac5b8d506ab3c0c4d2819afee",
+  "graph_sha256": "338ed3eb0e196cfa468faef3159e1725751e3797bfa446b543fd53a4899bb6b2",
+  "initialization": "original warm_init, max_iter=200",
+  "warnings": [],
+  "label_vector_stored": false
+}

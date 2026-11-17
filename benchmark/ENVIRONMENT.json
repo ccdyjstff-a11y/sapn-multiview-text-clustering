@@ -1,0 +1,15 @@
+{
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "threadpoolctl": "3.7.0",
+    "psutil": "7.2.2",
+    "h5py": "3.16.0"
+  },
+  "blas_threads": 1,
+  "matlab": "Required only for FSSMSC. Set matlab_executable in train JSON; recorded host version 25.1.0.2973910 (R2025a) Update 1.",
+  "scope": "Version record, not a redistributable environment image. Floating-point equality outside this environment is not promised."
+}

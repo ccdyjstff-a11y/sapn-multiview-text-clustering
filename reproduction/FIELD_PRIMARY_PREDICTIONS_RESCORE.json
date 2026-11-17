@@ -1,0 +1,1395 @@
+{
+  "status": "PASS",
+  "scope": "Historical prediction rescoring with raw-archive-rebuilt labels; no optimizer run in this scoring step.",
+  "predictions": 60,
+  "metric_comparisons": 180,
+  "max_absolute_error": 5.551115123125783e-17,
+  "source_manifest_sha256": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd",
+  "source_sha256": "4f220016ecb475af897b0eda978d01bf2bf10cee14268f876efd71aded613372",
+  "rebuilt_label_sha256": {
+    "20NG_SubjectBody_2000": "c6d84814a3240b7fe873151238c4f562341b040fdd9e900b76f098fa2d74c213",
+    "AGNews_TitleDescription_2000": "bfafb3e09aaa229db2fe589145e0dc767a7d0af44e27776dc28fcbbaa3fe401c"
+  },
+  "records": [
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 41,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.3481340021142738,
+        "ARI": 0.181347140328564
+      },
+      "rescored": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.3481340021142738,
+        "ARI": 0.18134714032856403
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 2.7755575615628914e-17
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 41,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.21714285714285717,
+        "NMI": 0.26252101612879064,
+        "ARI": 0.02465385773908051
+      },
+      "rescored": {
+        "ACC": 0.21714285714285714,
+        "NMI": 0.26252101612879064,
+        "ARI": 0.02465385773908051
+      },
+      "absolute_errors": {
+        "ACC": 2.7755575615628914e-17,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 41,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.27214285714285713,
+        "NMI": 0.3224021894689699,
+        "ARI": 0.07606484363173015
+      },
+      "rescored": {
+        "ACC": 0.27214285714285713,
+        "NMI": 0.3224021894689699,
+        "ARI": 0.07606484363173015
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 41,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.35,
+        "NMI": 0.37239631182344435,
+        "ARI": 0.17791580721643116
+      },
+      "rescored": {
+        "ACC": 0.35,
+        "NMI": 0.37239631182344435,
+        "ARI": 0.17791580721643116
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 41,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.21642857142857147,
+        "NMI": 0.27057987093281427,
+        "ARI": 0.032091605956741376
+      },
+      "rescored": {
+        "ACC": 0.21642857142857144,
+        "NMI": 0.27057987093281427,
+        "ARI": 0.032091605956741376
+      },
+      "absolute_errors": {
+        "ACC": 2.7755575615628914e-17,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 41,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.28285714285714286,
+        "NMI": 0.33071967766335464,
+        "ARI": 0.09831258899175076
+      },
+      "rescored": {
+        "ACC": 0.28285714285714286,
+        "NMI": 0.3307196776633546,
+        "ARI": 0.09831258899175076
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 5.551115123125783e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 42,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.35142857142857137,
+        "NMI": 0.34638273479654397,
+        "ARI": 0.17676443664182812
+      },
+      "rescored": {
+        "ACC": 0.3514285714285714,
+        "NMI": 0.3463827347965439,
+        "ARI": 0.17676443664182812
+      },
+      "absolute_errors": {
+        "ACC": 5.551115123125783e-17,
+        "NMI": 5.551115123125783e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 42,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.25142857142857145,
+        "NMI": 0.2966767695544267,
+        "ARI": 0.0457905207516898
+      },
+      "rescored": {
+        "ACC": 0.25142857142857145,
+        "NMI": 0.2966767695544267,
+        "ARI": 0.0457905207516898
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 42,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.28785714285714287,
+        "NMI": 0.2652826769393839,
+        "ARI": 0.11530917256616961
+      },
+      "rescored": {
+        "ACC": 0.28785714285714287,
+        "NMI": 0.2652826769393839,
+        "ARI": 0.11530917256616961
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 42,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.3462489231600182,
+        "ARI": 0.14831483469881518
+      },
+      "rescored": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.3462489231600182,
+        "ARI": 0.14831483469881518
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 42,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.255,
+        "NMI": 0.2996898903393161,
+        "ARI": 0.04635240512670977
+      },
+      "rescored": {
+        "ACC": 0.255,
+        "NMI": 0.2996898903393161,
+        "ARI": 0.04635240512670976
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 6.938893903907228e-18
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 42,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.29214285714285715,
+        "NMI": 0.2680744295629317,
+        "ARI": 0.11709668716464713
+      },
+      "rescored": {
+        "ACC": 0.29214285714285715,
+        "NMI": 0.2680744295629317,
+        "ARI": 0.11709668716464713
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 43,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3628571428571428,
+        "NMI": 0.3737994931997301,
+        "ARI": 0.2004907369511349
+      },
+      "rescored": {
+        "ACC": 0.3628571428571429,
+        "NMI": 0.37379949319973005,
+        "ARI": 0.2004907369511349
+      },
+      "absolute_errors": {
+        "ACC": 5.551115123125783e-17,
+        "NMI": 5.551115123125783e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 43,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.22857142857142856,
+        "NMI": 0.2709662741350451,
+        "ARI": 0.03448365135205178
+      },
+      "rescored": {
+        "ACC": 0.22857142857142856,
+        "NMI": 0.2709662741350451,
+        "ARI": 0.03448365135205178
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 43,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3,
+        "NMI": 0.25824813492816723,
+        "ARI": 0.1073483182916657
+      },
+      "rescored": {
+        "ACC": 0.3,
+        "NMI": 0.25824813492816723,
+        "ARI": 0.10734831829166569
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 1.3877787807814457e-17
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-MV",
+      "seed": 43,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.36714285714285716,
+        "NMI": 0.3869732631669997,
+        "ARI": 0.20765453484164392
+      },
+      "rescored": {
+        "ACC": 0.36714285714285716,
+        "NMI": 0.3869732631669997,
+        "ARI": 0.20765453484164392
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "SAPN-EQ",
+      "seed": 43,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.22928571428571426,
+        "NMI": 0.27492479103249007,
+        "ARI": 0.0344592411275698
+      },
+      "rescored": {
+        "ACC": 0.2292857142857143,
+        "NMI": 0.27492479103249007,
+        "ARI": 0.0344592411275698
+      },
+      "absolute_errors": {
+        "ACC": 2.7755575615628914e-17,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "CMVNMF",
+      "seed": 43,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.27127184335646953,
+        "ARI": 0.12106356783520185
+      },
+      "rescored": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.27127184335646953,
+        "ARI": 0.12106356783520185
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 101,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.515,
+        "NMI": 0.18705311329155408,
+        "ARI": 0.15180012012578453
+      },
+      "rescored": {
+        "ACC": 0.515,
+        "NMI": 0.18705311329155408,
+        "ARI": 0.15180012012578453
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 101,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.33857142857142863,
+        "NMI": 0.09075596997531095,
+        "ARI": 0.02231190776374169
+      },
+      "rescored": {
+        "ACC": 0.3385714285714286,
+        "NMI": 0.09075596997531095,
+        "ARI": 0.022311907763741694
+      },
+      "absolute_errors": {
+        "ACC": 5.551115123125783e-17,
+        "NMI": 0.0,
+        "ARI": 3.469446951953614e-18
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 101,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.34214285714285714,
+        "NMI": 0.07926960182058093,
+        "ARI": 0.04208853703814014
+      },
+      "rescored": {
+        "ACC": 0.34214285714285714,
+        "NMI": 0.07926960182058093,
+        "ARI": 0.04208853703814014
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 101,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.21317705057149167,
+        "ARI": 0.20432646281705208
+      },
+      "rescored": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.21317705057149167,
+        "ARI": 0.20432646281705205
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 2.7755575615628914e-17
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 101,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.34785714285714286,
+        "NMI": 0.09682192040015672,
+        "ARI": 0.02753958314058299
+      },
+      "rescored": {
+        "ACC": 0.34785714285714286,
+        "NMI": 0.0968219204001567,
+        "ARI": 0.02753958314058299
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 1.3877787807814457e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 101,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.425,
+        "NMI": 0.11459980902848227,
+        "ARI": 0.10699558453173505
+      },
+      "rescored": {
+        "ACC": 0.425,
+        "NMI": 0.11459980902848226,
+        "ARI": 0.10699558453173505
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 1.3877787807814457e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 102,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.45785714285714285,
+        "NMI": 0.16154779145344772,
+        "ARI": 0.1617324441358578
+      },
+      "rescored": {
+        "ACC": 0.45785714285714285,
+        "NMI": 0.16154779145344772,
+        "ARI": 0.16173244413585783
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 2.7755575615628914e-17
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 102,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.09367072584756125,
+        "ARI": 0.018697065495625463
+      },
+      "rescored": {
+        "ACC": 0.33071428571428574,
+        "NMI": 0.09367072584756125,
+        "ARI": 0.018697065495625463
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 102,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.47928571428571426,
+        "NMI": 0.15408635515454547,
+        "ARI": 0.1556841563420062
+      },
+      "rescored": {
+        "ACC": 0.47928571428571426,
+        "NMI": 0.15408635515454547,
+        "ARI": 0.1556841563420062
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 102,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.535,
+        "NMI": 0.22903642006357894,
+        "ARI": 0.23006647624886778
+      },
+      "rescored": {
+        "ACC": 0.535,
+        "NMI": 0.22903642006357894,
+        "ARI": 0.23006647624886778
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 102,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.09860837223934478,
+        "ARI": 0.021951533679777403
+      },
+      "rescored": {
+        "ACC": 0.3357142857142857,
+        "NMI": 0.09860837223934478,
+        "ARI": 0.0219515336797774
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 3.469446951953614e-18
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 102,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3907142857142858,
+        "NMI": 0.12434805379911819,
+        "ARI": 0.04262430606684657
+      },
+      "rescored": {
+        "ACC": 0.39071428571428574,
+        "NMI": 0.12434805379911817,
+        "ARI": 0.04262430606684658
+      },
+      "absolute_errors": {
+        "ACC": 5.551115123125783e-17,
+        "NMI": 1.3877787807814457e-17,
+        "ARI": 6.938893903907228e-18
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 103,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.5221428571428571,
+        "NMI": 0.27686975616949977,
+        "ARI": 0.2380789757929444
+      },
+      "rescored": {
+        "ACC": 0.5221428571428571,
+        "NMI": 0.27686975616949977,
+        "ARI": 0.2380789757929444
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 103,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.34642857142857136,
+        "NMI": 0.09107847924160199,
+        "ARI": 0.021295511098736952
+      },
+      "rescored": {
+        "ACC": 0.3464285714285714,
+        "NMI": 0.09107847924160198,
+        "ARI": 0.021295511098736952
+      },
+      "absolute_errors": {
+        "ACC": 5.551115123125783e-17,
+        "NMI": 1.3877787807814457e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 103,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.48214285714285715,
+        "NMI": 0.18124102128429326,
+        "ARI": 0.16622221913950885
+      },
+      "rescored": {
+        "ACC": 0.48214285714285715,
+        "NMI": 0.18124102128429323,
+        "ARI": 0.16622221913950885
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 2.7755575615628914e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-MV",
+      "seed": 103,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.35378337588831593,
+        "ARI": 0.29005376122203763
+      },
+      "rescored": {
+        "ACC": 0.5685714285714286,
+        "NMI": 0.35378337588831593,
+        "ARI": 0.29005376122203763
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "SAPN-EQ",
+      "seed": 103,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.36,
+        "NMI": 0.10659010118910171,
+        "ARI": 0.028399945937530285
+      },
+      "rescored": {
+        "ACC": 0.36,
+        "NMI": 0.10659010118910171,
+        "ARI": 0.028399945937530285
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "CMVNMF",
+      "seed": 103,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.48,
+        "NMI": 0.18204222698245848,
+        "ARI": 0.16632331682303259
+      },
+      "rescored": {
+        "ACC": 0.48,
+        "NMI": 0.18204222698245845,
+        "ARI": 0.16632331682303259
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 2.7755575615628914e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 41,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.19714285714285715,
+        "NMI": 0.17772557423981128,
+        "ARI": 0.05606159451896012
+      },
+      "rescored": {
+        "ACC": 0.19714285714285715,
+        "NMI": 0.17772557423981128,
+        "ARI": 0.056061594518960124
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 6.938893903907228e-18
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 41,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.2092857142857143,
+        "NMI": 0.19530454168017122,
+        "ARI": 0.06216506192704319
+      },
+      "rescored": {
+        "ACC": 0.2092857142857143,
+        "NMI": 0.19530454168017122,
+        "ARI": 0.06216506192704319
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 42,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.1957142857142857,
+        "NMI": 0.1841908991359421,
+        "ARI": 0.054056456458368894
+      },
+      "rescored": {
+        "ACC": 0.1957142857142857,
+        "NMI": 0.1841908991359421,
+        "ARI": 0.054056456458368894
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 42,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.19214285714285714,
+        "NMI": 0.1867326035209474,
+        "ARI": 0.0548540979883331
+      },
+      "rescored": {
+        "ACC": 0.19214285714285714,
+        "NMI": 0.1867326035209474,
+        "ARI": 0.0548540979883331
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 43,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.20571428571428568,
+        "NMI": 0.18468700043923408,
+        "ARI": 0.05675773767429388
+      },
+      "rescored": {
+        "ACC": 0.2057142857142857,
+        "NMI": 0.18468700043923408,
+        "ARI": 0.05675773767429388
+      },
+      "absolute_errors": {
+        "ACC": 2.7755575615628914e-17,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "MVCHSS",
+      "seed": 43,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.20357142857142857,
+        "NMI": 0.1799182585125865,
+        "ARI": 0.056384931435621635
+      },
+      "rescored": {
+        "ACC": 0.20357142857142857,
+        "NMI": 0.1799182585125865,
+        "ARI": 0.056384931435621635
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 101,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.745,
+        "NMI": 0.4052177204495457,
+        "ARI": 0.44401190225803977
+      },
+      "rescored": {
+        "ACC": 0.745,
+        "NMI": 0.4052177204495457,
+        "ARI": 0.44401190225803977
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 101,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.7521428571428571,
+        "NMI": 0.413069113228525,
+        "ARI": 0.4540908489028579
+      },
+      "rescored": {
+        "ACC": 0.7521428571428571,
+        "NMI": 0.413069113228525,
+        "ARI": 0.4540908489028579
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 102,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.6985714285714286,
+        "NMI": 0.35184274374331936,
+        "ARI": 0.37887735444451515
+      },
+      "rescored": {
+        "ACC": 0.6985714285714286,
+        "NMI": 0.35184274374331936,
+        "ARI": 0.37887735444451515
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 102,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.6914285714285714,
+        "NMI": 0.35449604929735656,
+        "ARI": 0.3784156394487815
+      },
+      "rescored": {
+        "ACC": 0.6914285714285714,
+        "NMI": 0.35449604929735656,
+        "ARI": 0.3784156394487814
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 5.551115123125783e-17
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 103,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.6857142857142857,
+        "NMI": 0.33910886746929614,
+        "ARI": 0.3562486613405549
+      },
+      "rescored": {
+        "ACC": 0.6857142857142857,
+        "NMI": 0.33910886746929614,
+        "ARI": 0.3562486613405549
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "MVCHSS",
+      "seed": 103,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.7107142857142857,
+        "NMI": 0.37028811990696886,
+        "ARI": 0.39560084150206865
+      },
+      "rescored": {
+        "ACC": 0.7107142857142857,
+        "NMI": 0.37028811990696886,
+        "ARI": 0.39560084150206865
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 41,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.17,
+        "NMI": 0.1664963022596214,
+        "ARI": 0.041273846789200166
+      },
+      "rescored": {
+        "ACC": 0.17,
+        "NMI": 0.1664963022596214,
+        "ARI": 0.041273846789200166
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 41,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.09285714285714286,
+        "NMI": 0.10101356931949997,
+        "ARI": 0.001301552733665715
+      },
+      "rescored": {
+        "ACC": 0.09285714285714286,
+        "NMI": 0.10101356931949998,
+        "ARI": 0.001301552733665715
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 1.3877787807814457e-17,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 42,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.15571428571428572,
+        "NMI": 0.14051724555869693,
+        "ARI": 0.017818360179595562
+      },
+      "rescored": {
+        "ACC": 0.15571428571428572,
+        "NMI": 0.14051724555869693,
+        "ARI": 0.017818360179595562
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 42,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.17571428571428568,
+        "NMI": 0.15014675340668576,
+        "ARI": 0.0382365551329433
+      },
+      "rescored": {
+        "ACC": 0.1757142857142857,
+        "NMI": 0.15014675340668576,
+        "ARI": 0.0382365551329433
+      },
+      "absolute_errors": {
+        "ACC": 2.7755575615628914e-17,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 43,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.135,
+        "NMI": 0.13378581097839357,
+        "ARI": 0.011318046484304494
+      },
+      "rescored": {
+        "ACC": 0.135,
+        "NMI": 0.13378581097839357,
+        "ARI": 0.011318046484304494
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "20NG_SubjectBody_2000",
+      "method": "FSSMSC",
+      "seed": 43,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.165,
+        "NMI": 0.15261292651715022,
+        "ARI": 0.033184561474500815
+      },
+      "rescored": {
+        "ACC": 0.165,
+        "NMI": 0.15261292651715022,
+        "ARI": 0.033184561474500815
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 101,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.3057142857142857,
+        "NMI": 0.020838447005192974,
+        "ARI": 0.011679875924323013
+      },
+      "rescored": {
+        "ACC": 0.3057142857142857,
+        "NMI": 0.020838447005192974,
+        "ARI": 0.011679875924323013
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 101,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.2907142857142857,
+        "NMI": 0.008318506715060974,
+        "ARI": 0.004018844024322699
+      },
+      "rescored": {
+        "ACC": 0.2907142857142857,
+        "NMI": 0.008318506715060974,
+        "ARI": 0.004018844024322699
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 102,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.28,
+        "NMI": 0.017743084523568205,
+        "ARI": 0.002696174560777941
+      },
+      "rescored": {
+        "ACC": 0.28,
+        "NMI": 0.017743084523568205,
+        "ARI": 0.002696174560777941
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 102,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.04707983045886575,
+        "ARI": 0.009706779899435641
+      },
+      "rescored": {
+        "ACC": 0.30357142857142855,
+        "NMI": 0.047079830458865754,
+        "ARI": 0.009706779899435641
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 6.938893903907228e-18,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 103,
+      "Q": 160,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.29642857142857143,
+        "NMI": 0.009463337476555573,
+        "ARI": 0.008818893852269177
+      },
+      "rescored": {
+        "ACC": 0.29642857142857143,
+        "NMI": 0.009463337476555573,
+        "ARI": 0.008818893852269177
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 0.0
+      },
+      "match": true
+    },
+    {
+      "dataset": "AGNews_TitleDescription_2000",
+      "method": "FSSMSC",
+      "seed": 103,
+      "Q": 400,
+      "eligible": true,
+      "archived": {
+        "ACC": 0.29,
+        "NMI": 0.008951851379029976,
+        "ARI": 0.005301226729684681
+      },
+      "rescored": {
+        "ACC": 0.29,
+        "NMI": 0.008951851379029976,
+        "ARI": 0.00530122672968468
+      },
+      "absolute_errors": {
+        "ACC": 0.0,
+        "NMI": 0.0,
+        "ARI": 8.673617379884035e-19
+      },
+      "match": true
+    }
+  ]
+}

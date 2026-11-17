@@ -1,0 +1,11 @@
+{
+  "dataset": "20NG",
+  "seed": 1101,
+  "status": "complete",
+  "logical_records": 5,
+  "exit_code": 0,
+  "seconds": 303.1710000000003,
+  "peak_rss": 183701504,
+  "seal_sha256": "c2bbf95fd77a69f4abeaa2782a0b2172bb1c7f9970369701b5c1ac362d3c1e70",
+  "log_sha256": "a43a3c1c274fe5531c442fe8e5dcc2eea60bd316ed0aac0424618036914e97c5"
+}

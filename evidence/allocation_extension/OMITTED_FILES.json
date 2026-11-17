@@ -1,0 +1,2227 @@
+[
+  {
+    "source": "allocation_extension/logs/20NG_1101.log",
+    "bytes": 853,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/20NG_1102.log",
+    "bytes": 943,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/20NG_1103.log",
+    "bytes": 938,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/20NG_1104.log",
+    "bytes": 899,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/20NG_1105.log",
+    "bytes": 956,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/AGNews_1101.log",
+    "bytes": 865,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/AGNews_1102.log",
+    "bytes": 866,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/AGNews_1103.log",
+    "bytes": 950,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/AGNews_1104.log",
+    "bytes": 866,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/logs/AGNews_1105.log",
+    "bytes": 869,
+    "reason": "Historical execution logs are omitted; terminal records preserve their hashes"
+  },
+  {
+    "source": "allocation_extension/prepared/20NG/metadata.json",
+    "bytes": 66,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/prepared/20NG/X0.npz",
+    "bytes": 31064,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/prepared/20NG/X1.npz",
+    "bytes": 814984,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/prepared/AGNews/metadata.json",
+    "bytes": 67,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/prepared/AGNews/X0.npz",
+    "bytes": 63319,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/prepared/AGNews/X1.npz",
+    "bytes": 262107,
+    "reason": "Prepared corpus features are excluded; rebuild separately from verified public inputs"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/inputs.npz",
+    "bytes": 389116,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/postseal_evaluation_pairs.npz",
+    "bytes": 42478,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c0_f0.npz",
+    "bytes": 272132,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 1534118,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c0_f1.npz",
+    "bytes": 271702,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 1542729,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c0_final_state.npz",
+    "bytes": 1547048,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c1_f0.npz",
+    "bytes": 272294,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 1534248,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c1_f1.npz",
+    "bytes": 271798,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 1541905,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c2_f0.npz",
+    "bytes": 272331,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 1534031,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c2_f1.npz",
+    "bytes": 271583,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 1541410,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c0_f0.npz",
+    "bytes": 270874,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c0_f0_state.npz",
+    "bytes": 1521911,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c0_f1.npz",
+    "bytes": 270507,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c0_f1_state.npz",
+    "bytes": 1531308,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c0_final_state.npz",
+    "bytes": 1518980,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c1_f0.npz",
+    "bytes": 271589,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c1_f0_state.npz",
+    "bytes": 1525039,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c1_f1.npz",
+    "bytes": 271099,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c1_f1_state.npz",
+    "bytes": 1532860,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c2_f0.npz",
+    "bytes": 270791,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c2_f0_state.npz",
+    "bytes": 1522016,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c2_f1.npz",
+    "bytes": 269798,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_full_c2_f1_state.npz",
+    "bytes": 1528028,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c0_f0.npz",
+    "bytes": 277689,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c0_f0_state.npz",
+    "bytes": 1528835,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c0_f1.npz",
+    "bytes": 278658,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c0_f1_state.npz",
+    "bytes": 1537041,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c0_final_state.npz",
+    "bytes": 1539294,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c1_f0.npz",
+    "bytes": 277958,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c1_f0_state.npz",
+    "bytes": 1528676,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c1_f1.npz",
+    "bytes": 278945,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c1_f1_state.npz",
+    "bytes": 1538095,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c2_f0.npz",
+    "bytes": 277460,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c2_f0_state.npz",
+    "bytes": 1527915,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c2_f1.npz",
+    "bytes": 278339,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/Q400_views-only_c2_f1_state.npz",
+    "bytes": 1533860,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1101/used_graph.npz",
+    "bytes": 158837,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/inputs.npz",
+    "bytes": 387808,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/postseal_evaluation_pairs.npz",
+    "bytes": 42451,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c0_f0.npz",
+    "bytes": 274616,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 1550183,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c0_f1.npz",
+    "bytes": 273369,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 1548685,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c0_final_state.npz",
+    "bytes": 1560092,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c1_f0.npz",
+    "bytes": 274804,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 1549982,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c1_f1.npz",
+    "bytes": 273575,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 1548945,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c1_final_state.npz",
+    "bytes": 1536409,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c2_f0.npz",
+    "bytes": 274426,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 1549230,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c2_f1.npz",
+    "bytes": 273445,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 1549395,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c0_f0.npz",
+    "bytes": 273422,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c0_f0_state.npz",
+    "bytes": 1542107,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c0_f1.npz",
+    "bytes": 272452,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c0_f1_state.npz",
+    "bytes": 1537375,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c0_final_state.npz",
+    "bytes": 1514723,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c1_f0.npz",
+    "bytes": 273934,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c1_f0_state.npz",
+    "bytes": 1539781,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c1_f1.npz",
+    "bytes": 272562,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c1_f1_state.npz",
+    "bytes": 1537394,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c2_f0.npz",
+    "bytes": 272452,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c2_f0_state.npz",
+    "bytes": 1541487,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c2_f1.npz",
+    "bytes": 271683,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_full_c2_f1_state.npz",
+    "bytes": 1537841,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c0_f0.npz",
+    "bytes": 281154,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c0_f0_state.npz",
+    "bytes": 1547891,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c0_f1.npz",
+    "bytes": 280259,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c0_f1_state.npz",
+    "bytes": 1543242,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c0_final_state.npz",
+    "bytes": 1532033,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c1_f0.npz",
+    "bytes": 281775,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c1_f0_state.npz",
+    "bytes": 1549886,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c1_f1.npz",
+    "bytes": 280688,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c1_f1_state.npz",
+    "bytes": 1542808,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c1_final_state.npz",
+    "bytes": 1531061,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c2_f0.npz",
+    "bytes": 280391,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c2_f0_state.npz",
+    "bytes": 1546708,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c2_f1.npz",
+    "bytes": 279654,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/Q400_views-only_c2_f1_state.npz",
+    "bytes": 1542461,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1102/used_graph.npz",
+    "bytes": 158837,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/inputs.npz",
+    "bytes": 383987,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/postseal_evaluation_pairs.npz",
+    "bytes": 42495,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c0_f0.npz",
+    "bytes": 272341,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 1543402,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c0_f1.npz",
+    "bytes": 272410,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 1550419,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c0_final_state.npz",
+    "bytes": 1543098,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c1_f0.npz",
+    "bytes": 272371,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 1543540,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c1_f1.npz",
+    "bytes": 272386,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 1546658,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c2_f0.npz",
+    "bytes": 272290,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 1543487,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c2_f1.npz",
+    "bytes": 272140,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 1548866,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_consensus-only_c2_final_state.npz",
+    "bytes": 1536170,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c0_f0.npz",
+    "bytes": 270938,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c0_f0_state.npz",
+    "bytes": 1528557,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c0_f1.npz",
+    "bytes": 271108,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c0_f1_state.npz",
+    "bytes": 1540045,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c1_f0.npz",
+    "bytes": 271557,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c1_f0_state.npz",
+    "bytes": 1532216,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c1_f1.npz",
+    "bytes": 271668,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c1_f1_state.npz",
+    "bytes": 1538208,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c2_f0.npz",
+    "bytes": 270420,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c2_f0_state.npz",
+    "bytes": 1528166,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c2_f1.npz",
+    "bytes": 270594,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c2_f1_state.npz",
+    "bytes": 1536926,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_full_c2_final_state.npz",
+    "bytes": 1496799,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c0_f0.npz",
+    "bytes": 278982,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c0_f0_state.npz",
+    "bytes": 1537333,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c0_f1.npz",
+    "bytes": 278350,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c0_f1_state.npz",
+    "bytes": 1542560,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c0_final_state.npz",
+    "bytes": 1528542,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c1_f0.npz",
+    "bytes": 279609,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c1_f0_state.npz",
+    "bytes": 1536069,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c1_f1.npz",
+    "bytes": 278657,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c1_f1_state.npz",
+    "bytes": 1540794,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c2_f0.npz",
+    "bytes": 278619,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c2_f0_state.npz",
+    "bytes": 1537053,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c2_f1.npz",
+    "bytes": 277984,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c2_f1_state.npz",
+    "bytes": 1541218,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/Q400_views-only_c2_final_state.npz",
+    "bytes": 1519652,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1103/used_graph.npz",
+    "bytes": 158837,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/inputs.npz",
+    "bytes": 388938,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/postseal_evaluation_pairs.npz",
+    "bytes": 42514,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c0_f0.npz",
+    "bytes": 275015,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 1561506,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c0_f1.npz",
+    "bytes": 274237,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 1558883,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c1_f0.npz",
+    "bytes": 275080,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 1561689,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c1_f1.npz",
+    "bytes": 274365,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 1558830,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c2_f0.npz",
+    "bytes": 275076,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 1561898,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c2_f1.npz",
+    "bytes": 274065,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 1559613,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_consensus-only_c2_final_state.npz",
+    "bytes": 1551122,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c0_f0.npz",
+    "bytes": 273762,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c0_f0_state.npz",
+    "bytes": 1547725,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c0_f1.npz",
+    "bytes": 272732,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c0_f1_state.npz",
+    "bytes": 1544490,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c1_f0.npz",
+    "bytes": 274154,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c1_f0_state.npz",
+    "bytes": 1550639,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c1_f1.npz",
+    "bytes": 273454,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c1_f1_state.npz",
+    "bytes": 1546620,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c2_f0.npz",
+    "bytes": 273064,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c2_f0_state.npz",
+    "bytes": 1546670,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c2_f1.npz",
+    "bytes": 272264,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c2_f1_state.npz",
+    "bytes": 1543492,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_full_c2_final_state.npz",
+    "bytes": 1510779,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c0_f0.npz",
+    "bytes": 283068,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c0_f0_state.npz",
+    "bytes": 1553310,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c0_f1.npz",
+    "bytes": 281386,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c0_f1_state.npz",
+    "bytes": 1551420,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c0_final_state.npz",
+    "bytes": 1537044,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c1_f0.npz",
+    "bytes": 282952,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c1_f0_state.npz",
+    "bytes": 1555270,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c1_f1.npz",
+    "bytes": 281910,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c1_f1_state.npz",
+    "bytes": 1551541,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c2_f0.npz",
+    "bytes": 282010,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c2_f0_state.npz",
+    "bytes": 1553341,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c2_f1.npz",
+    "bytes": 280687,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c2_f1_state.npz",
+    "bytes": 1549038,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/Q400_views-only_c2_final_state.npz",
+    "bytes": 1529751,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1104/used_graph.npz",
+    "bytes": 158837,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/inputs.npz",
+    "bytes": 393426,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/postseal_evaluation_pairs.npz",
+    "bytes": 42502,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c0_f0.npz",
+    "bytes": 273530,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 1562621,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c0_f1.npz",
+    "bytes": 273997,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 1558358,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c0_final_state.npz",
+    "bytes": 1549119,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c1_f0.npz",
+    "bytes": 273673,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 1562089,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c1_f1.npz",
+    "bytes": 274022,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 1558686,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c2_f0.npz",
+    "bytes": 273485,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 1562493,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c2_f1.npz",
+    "bytes": 273753,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 1558564,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_consensus-only_c2_final_state.npz",
+    "bytes": 1543940,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c0_f0.npz",
+    "bytes": 272126,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c0_f0_state.npz",
+    "bytes": 1547794,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c0_f1.npz",
+    "bytes": 272693,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c0_f1_state.npz",
+    "bytes": 1544086,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c1_f0.npz",
+    "bytes": 272764,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c1_f0_state.npz",
+    "bytes": 1552499,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c1_f1.npz",
+    "bytes": 273010,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c1_f1_state.npz",
+    "bytes": 1546586,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c2_f0.npz",
+    "bytes": 271603,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c2_f0_state.npz",
+    "bytes": 1549061,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c2_f1.npz",
+    "bytes": 271641,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c2_f1_state.npz",
+    "bytes": 1542698,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_full_c2_final_state.npz",
+    "bytes": 1523019,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c0_f0.npz",
+    "bytes": 280453,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c0_f0_state.npz",
+    "bytes": 1553793,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c0_f1.npz",
+    "bytes": 280572,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c0_f1_state.npz",
+    "bytes": 1550281,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c0_final_state.npz",
+    "bytes": 1539813,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c1_f0.npz",
+    "bytes": 280835,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c1_f0_state.npz",
+    "bytes": 1556529,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c1_f1.npz",
+    "bytes": 280766,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c1_f1_state.npz",
+    "bytes": 1552059,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c2_f0.npz",
+    "bytes": 280170,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c2_f0_state.npz",
+    "bytes": 1553776,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c2_f1.npz",
+    "bytes": 280033,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c2_f1_state.npz",
+    "bytes": 1549881,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/Q400_views-only_c2_final_state.npz",
+    "bytes": 1537305,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/20NG/seed1105/used_graph.npz",
+    "bytes": 158837,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/inputs.npz",
+    "bytes": 146201,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/postseal_evaluation_pairs.npz",
+    "bytes": 43880,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c0_f0.npz",
+    "bytes": 51181,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 334313,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c0_f1.npz",
+    "bytes": 50496,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 332258,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c1_f0.npz",
+    "bytes": 50961,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 333411,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c1_f1.npz",
+    "bytes": 50391,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 331290,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c2_f0.npz",
+    "bytes": 51270,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 334551,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c2_f1.npz",
+    "bytes": 50665,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 332870,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_consensus-only_c2_final_state.npz",
+    "bytes": 332500,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c0_f0.npz",
+    "bytes": 51063,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c0_f0_state.npz",
+    "bytes": 332858,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c0_f1.npz",
+    "bytes": 50579,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c0_f1_state.npz",
+    "bytes": 330275,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c1_f0.npz",
+    "bytes": 50920,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c1_f0_state.npz",
+    "bytes": 331085,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c1_f1.npz",
+    "bytes": 50432,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c1_f1_state.npz",
+    "bytes": 329453,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c2_f0.npz",
+    "bytes": 51098,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c2_f0_state.npz",
+    "bytes": 332827,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c2_f1.npz",
+    "bytes": 50603,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c2_f1_state.npz",
+    "bytes": 330548,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_full_c2_final_state.npz",
+    "bytes": 325840,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c0_f0.npz",
+    "bytes": 51664,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c0_f0_state.npz",
+    "bytes": 332230,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c0_f1.npz",
+    "bytes": 51706,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c0_f1_state.npz",
+    "bytes": 330628,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c1_f0.npz",
+    "bytes": 51638,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c1_f0_state.npz",
+    "bytes": 331794,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c1_f1.npz",
+    "bytes": 51553,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c1_f1_state.npz",
+    "bytes": 330197,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c2_f0.npz",
+    "bytes": 51740,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c2_f0_state.npz",
+    "bytes": 332472,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c2_f1.npz",
+    "bytes": 51827,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c2_f1_state.npz",
+    "bytes": 330702,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/Q400_views-only_c2_final_state.npz",
+    "bytes": 326307,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1101/used_graph.npz",
+    "bytes": 219360,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/inputs.npz",
+    "bytes": 144090,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/postseal_evaluation_pairs.npz",
+    "bytes": 43882,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c0_f0.npz",
+    "bytes": 50916,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 328559,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c0_f1.npz",
+    "bytes": 50976,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 328090,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c1_f0.npz",
+    "bytes": 50711,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 326111,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c1_f1.npz",
+    "bytes": 50836,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 326765,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c1_final_state.npz",
+    "bytes": 314017,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c2_f0.npz",
+    "bytes": 51183,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 330390,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c2_f1.npz",
+    "bytes": 51196,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 328963,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c0_f0.npz",
+    "bytes": 50980,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c0_f0_state.npz",
+    "bytes": 327115,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c0_f1.npz",
+    "bytes": 51058,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c0_f1_state.npz",
+    "bytes": 326480,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c1_f0.npz",
+    "bytes": 50810,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c1_f0_state.npz",
+    "bytes": 324371,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c1_f1.npz",
+    "bytes": 50900,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c1_f1_state.npz",
+    "bytes": 324966,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c1_final_state.npz",
+    "bytes": 306134,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c2_f0.npz",
+    "bytes": 51182,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c2_f0_state.npz",
+    "bytes": 329472,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c2_f1.npz",
+    "bytes": 51073,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_full_c2_f1_state.npz",
+    "bytes": 327166,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c0_f0.npz",
+    "bytes": 52018,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c0_f0_state.npz",
+    "bytes": 326574,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c0_f1.npz",
+    "bytes": 52002,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c0_f1_state.npz",
+    "bytes": 326204,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c1_f0.npz",
+    "bytes": 51855,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c1_f0_state.npz",
+    "bytes": 324613,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c1_f1.npz",
+    "bytes": 51796,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c1_f1_state.npz",
+    "bytes": 325275,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c1_final_state.npz",
+    "bytes": 302075,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c2_f0.npz",
+    "bytes": 52259,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c2_f0_state.npz",
+    "bytes": 327939,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c2_f1.npz",
+    "bytes": 52053,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/Q400_views-only_c2_f1_state.npz",
+    "bytes": 326173,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1102/used_graph.npz",
+    "bytes": 219360,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/inputs.npz",
+    "bytes": 146088,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/postseal_evaluation_pairs.npz",
+    "bytes": 43902,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c0_f0.npz",
+    "bytes": 50937,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 332458,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c0_f1.npz",
+    "bytes": 50950,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 332417,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c0_final_state.npz",
+    "bytes": 318307,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c1_f0.npz",
+    "bytes": 50978,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 332873,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c1_f1.npz",
+    "bytes": 50964,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 332533,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c1_final_state.npz",
+    "bytes": 312222,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c2_f0.npz",
+    "bytes": 51019,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 332768,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c2_f1.npz",
+    "bytes": 50932,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 332703,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c0_f0.npz",
+    "bytes": 51095,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c0_f0_state.npz",
+    "bytes": 331207,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c0_f1.npz",
+    "bytes": 50862,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c0_f1_state.npz",
+    "bytes": 330859,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c1_f0.npz",
+    "bytes": 50906,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c1_f0_state.npz",
+    "bytes": 330635,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c1_f1.npz",
+    "bytes": 51041,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c1_f1_state.npz",
+    "bytes": 330777,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c1_final_state.npz",
+    "bytes": 305147,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c2_f0.npz",
+    "bytes": 51148,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c2_f0_state.npz",
+    "bytes": 331905,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c2_f1.npz",
+    "bytes": 50886,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_full_c2_f1_state.npz",
+    "bytes": 331049,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c0_f0.npz",
+    "bytes": 52190,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c0_f0_state.npz",
+    "bytes": 332081,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c0_f1.npz",
+    "bytes": 52005,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c0_f1_state.npz",
+    "bytes": 331842,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c0_final_state.npz",
+    "bytes": 303833,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c1_f0.npz",
+    "bytes": 51995,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c1_f0_state.npz",
+    "bytes": 331670,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c1_f1.npz",
+    "bytes": 51842,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c1_f1_state.npz",
+    "bytes": 331284,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c1_final_state.npz",
+    "bytes": 297956,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c2_f0.npz",
+    "bytes": 52262,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c2_f0_state.npz",
+    "bytes": 331931,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c2_f1.npz",
+    "bytes": 52031,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/Q400_views-only_c2_f1_state.npz",
+    "bytes": 331939,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1103/used_graph.npz",
+    "bytes": 219360,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/inputs.npz",
+    "bytes": 143979,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/postseal_evaluation_pairs.npz",
+    "bytes": 43928,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c0_f0.npz",
+    "bytes": 51180,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 328891,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c0_f1.npz",
+    "bytes": 50709,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 327668,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c1_f0.npz",
+    "bytes": 50933,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 326741,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c1_f1.npz",
+    "bytes": 50676,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 324781,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c1_final_state.npz",
+    "bytes": 312538,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c2_f0.npz",
+    "bytes": 51236,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 331674,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c2_f1.npz",
+    "bytes": 51090,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 330281,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c0_f0.npz",
+    "bytes": 51166,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c0_f0_state.npz",
+    "bytes": 326820,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c0_f1.npz",
+    "bytes": 50712,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c0_f1_state.npz",
+    "bytes": 326741,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c1_f0.npz",
+    "bytes": 50808,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c1_f0_state.npz",
+    "bytes": 324145,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c1_f1.npz",
+    "bytes": 50631,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c1_f1_state.npz",
+    "bytes": 323022,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c1_final_state.npz",
+    "bytes": 304654,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c2_f0.npz",
+    "bytes": 51186,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c2_f0_state.npz",
+    "bytes": 329067,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c2_f1.npz",
+    "bytes": 51000,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_full_c2_f1_state.npz",
+    "bytes": 328569,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c0_f0.npz",
+    "bytes": 51943,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c0_f0_state.npz",
+    "bytes": 326351,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c0_f1.npz",
+    "bytes": 51518,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c0_f1_state.npz",
+    "bytes": 325518,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c1_f0.npz",
+    "bytes": 51921,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c1_f0_state.npz",
+    "bytes": 325091,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c1_f1.npz",
+    "bytes": 51434,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c1_f1_state.npz",
+    "bytes": 323721,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c1_final_state.npz",
+    "bytes": 298516,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c2_f0.npz",
+    "bytes": 52109,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c2_f0_state.npz",
+    "bytes": 327225,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c2_f1.npz",
+    "bytes": 51849,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/Q400_views-only_c2_f1_state.npz",
+    "bytes": 326753,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1104/used_graph.npz",
+    "bytes": 219360,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/inputs.npz",
+    "bytes": 143280,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/postseal_evaluation_pairs.npz",
+    "bytes": 43906,
+    "reason": "Post-seal evaluation-pair arrays are omitted; their identity remains in EVALUATION_MANIFEST.json"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c0_f0.npz",
+    "bytes": 51836,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c0_f0_state.npz",
+    "bytes": 334815,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c0_f1.npz",
+    "bytes": 51436,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c0_f1_state.npz",
+    "bytes": 334743,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c1_f0.npz",
+    "bytes": 51585,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c1_f0_state.npz",
+    "bytes": 334101,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c1_f1.npz",
+    "bytes": 51561,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c1_f1_state.npz",
+    "bytes": 334826,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c1_final_state.npz",
+    "bytes": 321050,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c2_f0.npz",
+    "bytes": 52058,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c2_f0_state.npz",
+    "bytes": 335219,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c2_f1.npz",
+    "bytes": 51662,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_consensus-only_c2_f1_state.npz",
+    "bytes": 335165,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c0_f0.npz",
+    "bytes": 51814,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c0_f0_state.npz",
+    "bytes": 332865,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c0_f1.npz",
+    "bytes": 51324,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c0_f1_state.npz",
+    "bytes": 332412,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c1_f0.npz",
+    "bytes": 51536,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c1_f0_state.npz",
+    "bytes": 331750,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c1_f1.npz",
+    "bytes": 51529,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c1_f1_state.npz",
+    "bytes": 332591,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c1_final_state.npz",
+    "bytes": 313698,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c2_f0.npz",
+    "bytes": 52199,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c2_f0_state.npz",
+    "bytes": 334001,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c2_f1.npz",
+    "bytes": 51479,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_full_c2_f1_state.npz",
+    "bytes": 332950,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c0_f0.npz",
+    "bytes": 52928,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c0_f0_state.npz",
+    "bytes": 333529,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c0_f1.npz",
+    "bytes": 52903,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c0_f1_state.npz",
+    "bytes": 333844,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c1_f0.npz",
+    "bytes": 52710,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c1_f0_state.npz",
+    "bytes": 333122,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c1_f1.npz",
+    "bytes": 52907,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c1_f1_state.npz",
+    "bytes": 333800,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c1_final_state.npz",
+    "bytes": 295736,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c2_f0.npz",
+    "bytes": 53204,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c2_f0_state.npz",
+    "bytes": 334069,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c2_f1.npz",
+    "bytes": 52889,
+    "reason": "Fold-level compact prediction arrays are omitted; selection scores, identities and diagnostics are retained"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/Q400_views-only_c2_f1_state.npz",
+    "bytes": 333863,
+    "reason": "Full optimizer state is excluded from the compact evidence export"
+  },
+  {
+    "source": "allocation_extension/runs/AGNews/seed1105/used_graph.npz",
+    "bytes": 219360,
+    "reason": "Training inputs, initialization and graph arrays are excluded"
+  }
+]

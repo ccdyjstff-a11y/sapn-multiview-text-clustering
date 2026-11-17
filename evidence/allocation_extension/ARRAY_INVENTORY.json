@@ -1,0 +1,1599 @@
+[
+  {
+    "path": "queries/20NG/seed1101.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/20NG/seed1102.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/20NG/seed1103.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/20NG/seed1104.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/20NG/seed1105.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/AGNews/seed1101.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/AGNews/seed1102.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/AGNews/seed1103.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/AGNews/seed1104.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "queries/AGNews/seed1105.npz",
+    "purpose": "Queried pair answers and object indices; no full class vector",
+    "arrays": {
+      "pool": {
+        "dtype": "int32",
+        "shape": [
+          600
+        ]
+      },
+      "pairs": {
+        "dtype": "int64",
+        "shape": [
+          400,
+          2
+        ]
+      },
+      "answers": {
+        "dtype": "int64",
+        "shape": [
+          400
+        ]
+      },
+      "test": {
+        "dtype": "int64",
+        "shape": [
+          1400
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1101/Q400_consensus-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1101/Q400_full_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1101/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1102/Q400_consensus-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1102/Q400_consensus-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1102/Q400_full_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1102/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1102/Q400_views-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1103/Q400_consensus-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          18,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          382,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1103/Q400_consensus-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          18,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          382,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1103/Q400_full_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          18,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          382,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1103/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          18,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          382,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1103/Q400_views-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          18,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          382,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1104/Q400_consensus-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1104/Q400_full_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1104/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1104/Q400_views-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          21,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          379,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1105/Q400_consensus-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1105/Q400_consensus-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1105/Q400_full_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1105/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/20NG/seed1105/Q400_views-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          20,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          16,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          384,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1101/Q400_consensus-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          112,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          288,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1101/Q400_full_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          112,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          288,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1101/Q400_views-only_c2_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          112,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          288,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1102/Q400_consensus-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          90,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          310,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1102/Q400_full_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          90,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          310,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1102/Q400_views-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          90,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          310,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1103/Q400_consensus-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          97,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          303,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1103/Q400_consensus-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          97,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          303,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1103/Q400_full_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          97,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          303,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1103/Q400_views-only_c0_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          97,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          303,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1103/Q400_views-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          97,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          303,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1104/Q400_consensus-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          120,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          280,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1104/Q400_full_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          120,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          280,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1104/Q400_views-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          120,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          280,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1105/Q400_consensus-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          104,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          296,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1105/Q400_full_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          104,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          296,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "path": "runs/AGNews/seed1105/Q400_views-only_c1_final.npz",
+    "purpose": "Predicted cluster assignments, final shared embedding and queried pair endpoints; no true category vector",
+    "arrays": {
+      "labels": {
+        "dtype": "int64",
+        "shape": [
+          2000
+        ]
+      },
+      "H": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          2000
+        ]
+      },
+      "P": {
+        "dtype": "int64",
+        "shape": [
+          104,
+          2
+        ]
+      },
+      "N": {
+        "dtype": "int64",
+        "shape": [
+          296,
+          2
+        ]
+      }
+    }
+  }
+]

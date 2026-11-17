@@ -1,0 +1,18 @@
+{
+  "verified_raw_prediction_fits": 558,
+  "raw_metric_max_absolute_errors": {
+    "ACC": 0.0,
+    "NMI": 5.551115123125783e-16,
+    "ARI": 1.1102230246251565e-16,
+    "BER_train": 0.0,
+    "BER_unqueried": 0.0
+  },
+  "paired_points_verified": 6000,
+  "complete_summaries_verified": 600,
+  "summary_max_error": 0.0,
+  "headline_rows_verified": 6,
+  "evidence_freeze_sha256": "afa67e00b70a94d725d0ba5712630b54966e5af1de0d27c11a5aed2ab2d580dd",
+  "independent_implementation": "Manual contingency MI, entropy, ARI and relation-rate calculations; independent summary reconstruction.",
+  "pass_all": true,
+  "scoring_or_selection_changed": false
+}

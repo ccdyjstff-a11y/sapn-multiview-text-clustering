@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "kind": "POST_SCORE",
+  "phase": "POST_SCORE",
+  "complete_scope": true,
+  "independent_auditor": "/root/submission_content_gate",
+  "utc": "2026-10-24T15:00:23.493405+00:00",
+  "protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+  "runtime_protocol_sha256": "6d27f2c7f4fb1f06756f98efd9025aa0e8346e240827251d8967f0a74ecba7cf",
+  "global_seal_sha256": "b128a99de7c23f8b8f61fde8db2d1283d26926d247485102a9ce519d92075c60",
+  "evaluation_manifest_sha256": "f0a959f70366b1774ab15b2f8b7e1eee5786377c47bc9f86a2789b9ba5a77b02",
+  "evaluation_sha256": "213c535f22ab4fe9ba8290e58ee9a58a807e62203a1a41f31663d4c25719eb18",
+  "summary_sha256": "8daaefdec3a868e8d421c107f7a7efdaeba16789d259907079e79b1748ef59a4",
+  "pre_score_audit_sha256": "3b6b853a8078f8f88aa8b8d984b7c5674cf1f474f5dc6b3284740180db8dfaf9",
+  "details_sha256": "c5975ea60a0a388a48e74cac7eb205d03c603aea6c242663db18a9ee390e30b2",
+  "audit_script_sha256": "18573fd762d2e9ae73809f741244943518a8bc227ab1bffc9c4c471ef2c82a1e",
+  "plan_sha256": "9ca2a02295322a8dfd88f7ff087b34dcfe0e3800936eb29bda6c4cf28e147a77",
+  "all42_logical_outcomes_checked": true,
+  "all14_summary_groups_checked": true,
+  "all5_metrics_recomputed_or_missingness_verified": true,
+  "unsupported_rows": 18,
+  "unsupported_oracles_decoded": 0,
+  "retained_final_predictions_recomputed": 20,
+  "complete_primary_groups": 4,
+  "numeric_max_abs_error": {
+    "metrics": 7.563394355258879e-16,
+    "summary": 7.563394355258879e-16
+  },
+  "all_failure_and_fallback_denominators_preserved": true,
+  "model_or_MATLAB_calls": 0,
+  "new_statistical_tests": 0,
+  "scope": "Independent native PCBG scores only. This gate does not by itself audit a later PCBG-versus-SAPN reporting artifact."
+}

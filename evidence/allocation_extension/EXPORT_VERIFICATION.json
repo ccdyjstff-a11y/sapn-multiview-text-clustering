@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_protocol_and_all_ten_terminals_bound": true,
+  "all_50_evaluation_rows_prediction_and_identity_hashes_verified": true,
+  "all_selected_run_files_in_original_seals_verified": true,
+  "all_10_queries_bound_to_input_seal": true,
+  "copied_files": 621,
+  "all_copies_byte_identical": true,
+  "exported_npz_inventory_count": 49,
+  "compact_predictions": 39,
+  "selections": 30,
+  "omitted_files": 445,
+  "original_wrapper_and_solver_match_protocol": true,
+  "trained_models": 0
+}

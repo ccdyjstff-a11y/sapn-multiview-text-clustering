@@ -1,0 +1,22 @@
+{
+  "status": "PASS_SINGLE_PREDICATE_DERIVATION",
+  "utc": "2026-10-23T13:09:27.249555+00:00",
+  "source": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v8\\allocation_controls\\allocation_core.py",
+  "source_sha256": "86bd88f7d1dacd7711b50b5afea305b972ecaf8fc779581b26125c6bc0e433ac",
+  "derived": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-10-03\\new-chat\\outputs\\SAPN_Research_Main\\review_revision_v9\\common_endpoint_candidates\\allocation_core_common.py",
+  "derived_sha256": "027abe965edb2ba9565efa013146ba169237ea14ee05aa1e142b6d070b47acc8",
+  "old_predicate": "if cn > 0 and len(nj):",
+  "new_predicate": "if True:  # Shared vertex candidates at every queried endpoint.",
+  "byte_inverse_exact": true,
+  "whole_module_AST_only_one_predicate_changed": true,
+  "changed_functions": [
+    "_endpoint_update"
+  ],
+  "unchanged": [
+    "Objective, gradients, initialization, basis/weight updates, endpoint domain/order/schedule, step and backtracking rules, exact vertex energy, tie handling, acceptance and stopping criteria"
+  ],
+  "changed": "All columns reached through endpoint_order can now consider the existing vertex candidates, regardless of cn or local cannot-link degree.",
+  "real_data_training_calls": 0,
+  "benchmark_scores_read": false,
+  "scope": "Diagnostic solver variant only. No replacement of frozen v8 model/results; no empirical superiority claim."
+}

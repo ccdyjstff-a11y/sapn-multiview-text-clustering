@@ -1,0 +1,9 @@
+﻿method,role,attempted,eligible,nonconverged,exceptions
+Full,CV,90,90,0,0
+Full,final,30,30,0,0
+SAPN-EQ,CV,90,90,0,0
+SAPN-EQ,final,30,30,0,0
+CMVNMF,CV,90,90,0,0
+CMVNMF,final,30,30,0,0
+NoCorr,CV,90,90,0,0
+NoCorr,final,30,30,0,0

@@ -1,0 +1,18 @@
+{
+  "archive_name": "SAPN_投稿准备包.zip",
+  "archive_sha256": "3e0e1c75574678d0c0a2026afe98a7b9ab58bc283eac453544e1d3673b044179",
+  "members": {
+    "evidence/final/alloc/acc_paired_differences_400.csv": {
+      "sha256": "0f1e4065640669150c9b5c73ea5db0d6b5d7b085493c29409a2c25535f928543",
+      "bytes": 28544,
+      "local_copy": "source_data/acc_paired_differences_400.csv"
+    },
+    "evidence/final/alloc/acc_paired_directions_40.csv": {
+      "sha256": "6f84fcaf406b01b316066b2dd0ed353ac88257d70be3b0c69b73ec68657aedf0",
+      "bytes": 9111,
+      "local_copy": "source_data/acc_paired_directions_40.csv"
+    }
+  },
+  "original_figure_sha256": "f37f8ffff1fa4aeac59e90b075c3c114f69194a67a4f60731cf1674d9b188dee",
+  "extraction": "Only the two named CSV members were read and copied; no bulk extraction."
+}

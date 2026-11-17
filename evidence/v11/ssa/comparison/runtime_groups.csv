@@ -1,0 +1,15 @@
+dataset,Q,planned_final_outcomes,planned_CV_outcomes,controller_attempts,MATLAB_started,worker_native_return_reported,strict_eligible_CV,strict_eligible_final,final_outer_cap_reached,final_cap_diagnostic_denominator,unqualified_worker_diagnostic_denominator,clearing_diagnostic_denominator,outcome_categories_CV_and_final,worker_active_seconds_sum,worker_active_seconds_denominator,worker_wall_seconds_sum,worker_wall_seconds_denominator,launcher_wall_seconds_sum,launcher_wall_seconds_denominator,native_fit_wall_seconds_sum,native_fit_wall_seconds_denominator,iteration_diagnostic_denominator,iterations_min,iterations_max,stop_reason_counts,S_NaN_cleared_sum,S_Inf_cleared_sum,Stilde_NaN_cleared_sum,Stilde_Inf_cleared_sum,V_NaN_cleared_sum,V_Inf_cleared_sum,W_NaN_cleared_sum,W_Inf_cleared_sum,Theta_NaN_cleared_sum,Theta_Inf_cleared_sum
+20NG,160,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+20NG,400,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+3Sources,160,3,108,111,111,111,108,3,3,3,0,111,"{""strict_eligible"": 111}",610.0780000002123,111,610.0780000002123,111,2572.129167999999,111,174.9736375,111,111,500,500,"{""author_iteration_cap"": 111}",11817000,0,0,0,0,0,0,0,0,0
+3Sources,400,3,108,111,111,111,108,3,3,3,0,111,"{""strict_eligible"": 111}",681.3409999992,111,891.684999999241,111,3074.0006060000005,111,418.396552,111,111,55,500,"{""author_absolute_objective_change"": 3, ""author_iteration_cap"": 108}",27425370,0,0,0,0,0,0,0,0,0
+AGNews,160,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+AGNews,400,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+BBC,160,3,108,0,0,0,0,0,0,0,0,0,"{""not_attempted"": 110, ""predispatch_resource_stop"": 1}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+BBC,400,3,108,111,111,111,108,3,3,3,0,111,"{""strict_eligible"": 111}",18221.46399999957,111,18334.91699999955,111,20568.450554000014,111,17791.474061500005,111,111,29,500,"{""author_absolute_objective_change"": 69, ""author_iteration_cap"": 42}",10301756,0,0,0,0,0,0,0,0,0
+CiteSeer,160,3,108,0,0,0,0,0,0,0,0,0,"{""not_attempted"": 111}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+CiteSeer,400,3,108,0,0,0,0,0,0,0,0,0,"{""not_attempted"": 111}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+Cora,160,3,108,0,0,0,0,0,0,0,0,0,"{""not_attempted"": 111}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+Cora,400,3,108,0,0,0,0,0,0,0,0,0,"{""not_attempted"": 111}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+Reuters,160,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0
+Reuters,400,3,0,0,0,0,0,0,0,0,0,0,"{""input_unsupported"": 3}",0,0,0,0,0,0,0,0,0,,,{},0,0,0,0,0,0,0,0,0,0

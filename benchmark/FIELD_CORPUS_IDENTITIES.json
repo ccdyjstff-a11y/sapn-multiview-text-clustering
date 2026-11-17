@@ -1,0 +1,280 @@
+{
+  "schema": "field-corpus-historical-identities-v1",
+  "purpose": "Frozen scientific identities from original archived study inputs; not generated from rebuilt data. No raw texts, feature arrays or labels are distributed here.",
+  "datasets": {
+    "20ng": {
+      "dataset": "20NG_SubjectBody_2000",
+      "source_archive_sha256": "8f1b2514ca22a5ade8fbb9cfa5727df95fa587f4c87b786e15c759fa66d95610",
+      "scientific_identity": {
+        "prepared_sha256": "5884a6ebbcb21f13e384f428795ba5677cedc1a48a2d987477fd79fc034b3582",
+        "labels": {
+          "shape": [
+            2000
+          ],
+          "dtype": "int64",
+          "sha256": "062e5dfd174559cc1aed10a67838639aea0bb5a828317ebe68a998fe11813577"
+        },
+        "matrices": [
+          {
+            "shape": [
+              2000,
+              1265
+            ],
+            "indptr": {
+              "shape": [
+                2001
+              ],
+              "dtype": "int32",
+              "sha256": "b1e15cf21db24ec2c4d3b0fd84f743b1aadb3059c6eb500a75d466d655484299"
+            },
+            "indices": {
+              "shape": [
+                5472
+              ],
+              "dtype": "int32",
+              "sha256": "fce2e364cf56aaa4cb3386a4219d9a4b628257044709f791b6f813daabc655e8"
+            },
+            "data": {
+              "shape": [
+                5472
+              ],
+              "dtype": "float64",
+              "sha256": "0995bca7780f689eda5c9edfdf860e13407fb246b624bf7fc5355b0de8760e76"
+            }
+          },
+          {
+            "shape": [
+              2000,
+              10000
+            ],
+            "indptr": {
+              "shape": [
+                2001
+              ],
+              "dtype": "int32",
+              "sha256": "529d04fbd298476b47edc2a9f58637adbb4b071dae22227f5566eb39488ad272"
+            },
+            "indices": {
+              "shape": [
+                106751
+              ],
+              "dtype": "int32",
+              "sha256": "3e34b0f464d9ddc8bafe2ec744ff61cf4e18495b489018f715610868657fecbc"
+            },
+            "data": {
+              "shape": [
+                106751
+              ],
+              "dtype": "float64",
+              "sha256": "28238bb67c4afb2c50afd780c731a5a710387339fbd198bff59a840c6ead222f"
+            }
+          }
+        ],
+        "sample_provenance_sha256": "3ce55225ccddff2c2d19c47a20446ef97dec5d800ce5a8459cba82c0fc478e6e",
+        "vocabularies_sha256": "e36fac14866a86199802aa111b61f86b137716d9ea2f2d9e47a6891a0fea8d2f"
+      },
+      "historical_file_sha256": {
+        "metadata.json": "6889034106fc8326e41d695e17365f4eb60a8fcb9d8a9a93e65e3c2accb5d6a9",
+        "X0.npz": "41efa61f6dff050ab7b53d69ea2830e97b807a34c710e2ec6dd9a550282ac00d",
+        "X1.npz": "a4d7fc2bbed7c8f59e1a5ecf0a530eb85aa899077a29869c9759efab720ab750",
+        "y.npy": "c6d84814a3240b7fe873151238c4f562341b040fdd9e900b76f098fa2d74c213",
+        "sample_provenance.json": "5ca5f2a989ff6f3d6b78530de5fcce8d5da38db76c43d1190d92e823c442ee58",
+        "vocabularies.json": "f1c7a3394cf50095f3fb0eccf6fd59b9a0f6a8507ae10908f90deb301a805e61"
+      },
+      "historical_metadata_identity": {
+        "n": 2000,
+        "k": 20,
+        "views": 2,
+        "dimensions": [
+          1265,
+          10000
+        ],
+        "class_counts": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "categories": [
+          "alt.atheism",
+          "comp.graphics",
+          "comp.os.ms-windows.misc",
+          "comp.sys.ibm.pc.hardware",
+          "comp.sys.mac.hardware",
+          "comp.windows.x",
+          "misc.forsale",
+          "rec.autos",
+          "rec.motorcycles",
+          "rec.sport.baseball",
+          "rec.sport.hockey",
+          "sci.crypt",
+          "sci.electronics",
+          "sci.med",
+          "sci.space",
+          "soc.religion.christian",
+          "talk.politics.guns",
+          "talk.politics.mideast",
+          "talk.politics.misc",
+          "talk.religion.misc"
+        ],
+        "zero_rows": [
+          139,
+          4
+        ],
+        "duplicate_cleaned_records_removed": 18,
+        "conflicting_category_duplicate_records": 4,
+        "eligible_per_class": {
+          "alt.atheism": 468,
+          "comp.graphics": 571,
+          "comp.os.ms-windows.misc": 563,
+          "comp.sys.ibm.pc.hardware": 578,
+          "comp.sys.mac.hardware": 557,
+          "comp.windows.x": 587,
+          "misc.forsale": 576,
+          "rec.autos": 562,
+          "rec.motorcycles": 581,
+          "rec.sport.baseball": 575,
+          "rec.sport.hockey": 585,
+          "sci.crypt": 582,
+          "sci.electronics": 572,
+          "sci.med": 578,
+          "sci.space": 577,
+          "soc.religion.christian": 591,
+          "talk.politics.guns": 532,
+          "talk.politics.mideast": 547,
+          "talk.politics.misc": 453,
+          "talk.religion.misc": 361
+        }
+      }
+    },
+    "agnews": {
+      "dataset": "AGNews_TitleDescription_2000",
+      "source_archive_sha256": "4e2fc37d369e6e317a8b62d0d2f11d379f8c3dde60c07c35a46b069a246498ad",
+      "scientific_identity": {
+        "prepared_sha256": "c08f8fbacd42a0f3e883d6b39842e4277e2ae0699641d475ff3b7f001e99208a",
+        "labels": {
+          "shape": [
+            2000
+          ],
+          "dtype": "int64",
+          "sha256": "143cfdb0f701f726c0005f442b1ca9fc1570f4cee6d7d7e416c9746f8d6f014a"
+        },
+        "matrices": [
+          {
+            "shape": [
+              2000,
+              1795
+            ],
+            "indptr": {
+              "shape": [
+                2001
+              ],
+              "dtype": "int32",
+              "sha256": "a37b914b63c26eff665b5815d064cb4e513a045dbc0a568397bdc4961a5e80e8"
+            },
+            "indices": {
+              "shape": [
+                7669
+              ],
+              "dtype": "int32",
+              "sha256": "15f5baf03643eccafcd9c4354de5b096d4222e265f8fb0b0f0f510db8e2a0323"
+            },
+            "data": {
+              "shape": [
+                7669
+              ],
+              "dtype": "float64",
+              "sha256": "7877b61f1f8009d86e68bdc6eac951dc607d7be96d508308be00170560ef4d8c"
+            }
+          },
+          {
+            "shape": [
+              2000,
+              4592
+            ],
+            "indptr": {
+              "shape": [
+                2001
+              ],
+              "dtype": "int32",
+              "sha256": "8ad099e8d0acf64e1a9098ebae9efe3281a4f6daf0beef15150f3bd47a61de29"
+            },
+            "indices": {
+              "shape": [
+                31696
+              ],
+              "dtype": "int32",
+              "sha256": "a013b68efe5ca6bb592c548d35ec795f896c539638a0ec9906b9f81a06b9c281"
+            },
+            "data": {
+              "shape": [
+                31696
+              ],
+              "dtype": "float64",
+              "sha256": "c53d7a53312f029da660dadd54c897d6f34befcd75042f99c8962c574c4d026c"
+            }
+          }
+        ],
+        "sample_provenance_sha256": "09592c43d1aa2535661d9bc9d425e99d66fc2a14b3181737d07c765413c3633c",
+        "vocabularies_sha256": "fbd2c9e853fe801b6288da41a84e84cff01761c1417ccc2f63e8afcc1e371eba"
+      },
+      "historical_file_sha256": {
+        "metadata.json": "01c0329c8cece73992ac06f0a523f2855a67900fdec55ee9c1ed95c2dd803f45",
+        "X0.npz": "dddb84333dde08d5afe1bc3fbddd386c9dc47b23e67faf1473a5fc027ad25938",
+        "X1.npz": "be79a015c698be853d1e4c90083de58ab3c60771fca6a7931adaac18562d9218",
+        "y.npy": "bfafb3e09aaa229db2fe589145e0dc767a7d0af44e27776dc28fcbbaa3fe401c",
+        "sample_provenance.json": "2598739b5a7a9fe10f3637023665300f9c503f2281d360849966b759581283dc",
+        "vocabularies.json": "52bed222dd3f66a6a2836c21fe50e27b56a895f099cc72a5c1699fa9dc774832"
+      },
+      "historical_metadata_identity": {
+        "n": 2000,
+        "k": 4,
+        "views": 2,
+        "dimensions": [
+          1795,
+          4592
+        ],
+        "class_counts": [
+          500,
+          500,
+          500,
+          500
+        ],
+        "categories": [
+          "World",
+          "Sports",
+          "Business",
+          "Sci/Tech"
+        ],
+        "zero_rows": [
+          31,
+          0
+        ],
+        "duplicate_cleaned_records_removed": 151,
+        "conflicting_category_duplicate_records": 22,
+        "eligible_per_class": {
+          "1": 29982,
+          "2": 29977,
+          "3": 29967,
+          "4": 29923
+        }
+      }
+    }
+  }
+}

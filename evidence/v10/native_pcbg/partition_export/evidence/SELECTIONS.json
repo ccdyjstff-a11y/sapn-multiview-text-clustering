@@ -1,0 +1,578 @@
+[
+  {
+    "condition_id": "3Sources_s23_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.38725490196078427,
+        0.2638888888888889
+      ],
+      [
+        0.5098039215686274,
+        0.12698412698412698
+      ],
+      [
+        0.5196078431372549,
+        0.16666666666666666
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "2900922422a54c0f88d5c80dec32ab91ba5eae498e1536937e672d7ec3f988c4"
+  },
+  {
+    "condition_id": "BBC_s23_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.5,
+        0.4827586206896552
+      ],
+      [
+        0.4852941176470588,
+        0.5
+      ],
+      [
+        0.47058823529411764,
+        0.5
+      ]
+    ],
+    "index": 2,
+    "tau": 0.3,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "1915dcdb92d7300d5d136d2a06fbedfcf4ead7ed7dfaf1be6b649693a52bc91a"
+  },
+  {
+    "condition_id": "Cora_s23_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.4411764705882353,
+        0.47039473684210525
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "2864fc4f357fac740753cfd84f1ac860a789d25835c28e29b79394dc6a197720"
+  },
+  {
+    "condition_id": "CiteSeer_s23_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        0.3835978835978836
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "all_validation_fits_failed_default_with_failure_flag",
+    "eligible_folds": 2,
+    "valid_candidates": 0,
+    "final_input_sha256": "7669a46c13f09c22bf71447613100c7fa6299f20a3963efc7f9a58cde2659198"
+  },
+  {
+    "condition_id": "3Sources_s23_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.3119923554706163,
+        0.14659926470588236
+      ],
+      [
+        0.4801720019111324,
+        0.1801470588235294
+      ],
+      [
+        0.44386048733874817,
+        0.125
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "5bdcbf6c1923f9a01fe50c994a0e515063691ac6a6631558fadf73bdeb541801"
+  },
+  {
+    "condition_id": "BBC_s23_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.4888888888888889,
+        null
+      ],
+      [
+        0.48333333333333334,
+        0.4873417721518987
+      ]
+    ],
+    "index": 2,
+    "tau": 0.3,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 2,
+    "final_input_sha256": "f94ea34a91d858d42c591a25535fde99c12c06a5edba47897018d22e807bcb69"
+  },
+  {
+    "condition_id": "Cora_s23_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.5305194805194805,
+        0.47324772605671483
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "8b00dcea80a4218b1e9a85d9d06cb5ce12874836b4ade17778c6a2e9e3f5aed5"
+  },
+  {
+    "condition_id": "CiteSeer_s23_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        0.4525490196078431
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "all_validation_fits_failed_default_with_failure_flag",
+    "eligible_folds": 2,
+    "valid_candidates": 0,
+    "final_input_sha256": "a3ee1effed3d8152b3cd2f821a9f4ae54ca9103c3877cc485bb5b29d6a6a75a0"
+  },
+  {
+    "condition_id": "3Sources_s24_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.25946969696969696,
+        0.22619047619047616
+      ],
+      [
+        0.41666666666666663,
+        0.35
+      ],
+      [
+        0.38257575757575757,
+        0.15714285714285714
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "9a670af46f1adc68b7ed68f580c4396550e20484a11b723df54bae143fbacf42"
+  },
+  {
+    "condition_id": "BBC_s24_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.4861111111111111
+      ],
+      [
+        0.5987394957983193,
+        0.4861111111111111
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "6c431aafdd6e055d95369d766aae58e45c5046a990e255594e4c37fde9e0e365"
+  },
+  {
+    "condition_id": "Cora_s24_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.47058823529411764,
+        0.46875
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "24a0475df3a4627cb816350988cbc8a9f196afde63c935ad8f8eb7ec85ce7eb3"
+  },
+  {
+    "condition_id": "CiteSeer_s24_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.3277777777777778,
+        0.47619047619047616
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "2eb5cde81330c3a9dff9a7c0b067dd9499857c93d405a62abb686ef27ad26430"
+  },
+  {
+    "condition_id": "3Sources_s24_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.16093117408906882,
+        0.20795454545454545
+      ],
+      [
+        0.4355600539811066,
+        0.31534090909090906
+      ],
+      [
+        0.3367071524966262,
+        0.16875
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "d82c4b858f7ca6cf4702ac4ab656ab56532b733bc3bdc280c91d52711a2b8061"
+  },
+  {
+    "condition_id": "BBC_s24_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        0.5
+      ],
+      [
+        null,
+        0.47832722832722835
+      ],
+      [
+        null,
+        0.5445665445665445
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "all_validation_fits_failed_default_with_failure_flag",
+    "eligible_folds": 2,
+    "valid_candidates": 0,
+    "final_input_sha256": "3f5da81c8e1df5c524cb466c3ce6ff65b9d5aa11037921e60d2ccb4a8e4b9f03"
+  },
+  {
+    "condition_id": "Cora_s24_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.4722222222222222,
+        0.4506172839506173
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "222dde35f549ea52cbb118486e61afb3c7cc4ef0a09a6866a477e27ac676b72c"
+  },
+  {
+    "condition_id": "CiteSeer_s24_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.41021671826625383,
+        0.44311145510835914
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "b2a0be5d760697ac3c11c1eeba15682b32052bafbc9bfacbf7002c59f3c21e48"
+  },
+  {
+    "condition_id": "3Sources_s25_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.22916666666666666,
+        0.5357142857142857
+      ],
+      [
+        0.3157051282051282,
+        0.34523809523809523
+      ],
+      [
+        0.3798076923076923,
+        0.4494047619047619
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "c9a9c4db21ab43b2a03c155202d115283fca6ffe81aa9368698294c910daecf2"
+  },
+  {
+    "condition_id": "BBC_s25_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        null,
+        0.4838709677419355
+      ],
+      [
+        0.44642857142857145,
+        0.5
+      ]
+    ],
+    "index": 2,
+    "tau": 0.3,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 2,
+    "final_input_sha256": "d1b2ac9874301ae5afb40651ac506157abd8e4f178caa7cdf55f1ebb3ef7d48c"
+  },
+  {
+    "condition_id": "Cora_s25_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.5196969696969698,
+        0.5459459459459459
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "90052dd38d9fbbf5125eb8846e777050f92b776952223bdfc56ac942431afe65"
+  },
+  {
+    "condition_id": "CiteSeer_s25_Q160",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.6559139784946236,
+        0.40625
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "51f682642b4fc7f1c4288b3edeb4395e5d361278044cf10c4987c5983230c7e7"
+  },
+  {
+    "condition_id": "3Sources_s25_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.22086466165413532,
+        0.13246753246753246
+      ],
+      [
+        0.3320802005012531,
+        0.4168831168831169
+      ],
+      [
+        0.19799498746867167,
+        0.3448051948051948
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "17fc8ceea3067c6015198efefb9ae1769f45b18c950d41524cd2344fcf52d383"
+  },
+  {
+    "condition_id": "BBC_s25_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5060386473429952,
+        0.4941860465116279
+      ],
+      [
+        0.5193236714975845,
+        0.4941860465116279
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 3,
+    "final_input_sha256": "f0b6da99361ccfe2c0510eac05a02291b5958116da2352841dc8b2f3d9a34416"
+  },
+  {
+    "condition_id": "Cora_s25_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        0.5157534246575343,
+        0.46863799283154123
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 1,
+    "tau": 0.1,
+    "rule": "minimum_balanced_pair_error",
+    "eligible_folds": 2,
+    "valid_candidates": 1,
+    "final_input_sha256": "d94f20e026707714eecd787dacbe2c49b4701927ac41aa2c6f3e1023a2a5bf1e"
+  },
+  {
+    "condition_id": "CiteSeer_s25_Q400",
+    "status": "SELECTED",
+    "scores": [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        0.5381016042780749
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    "index": 0,
+    "tau": 0.7,
+    "rule": "all_validation_fits_failed_default_with_failure_flag",
+    "eligible_folds": 2,
+    "valid_candidates": 0,
+    "final_input_sha256": "e4b222f4f56e5433412b77f37427287e92f4ab4627f5bfa3b5312449170af2ed"
+  }
+]

@@ -1,0 +1,250 @@
+{
+  "scores": [
+    [
+      0.2235023041474654,
+      0.24197860962566844
+    ],
+    [
+      0.2235023041474654,
+      0.24197860962566844
+    ],
+    [
+      0.23963133640552994,
+      0.24197860962566844
+    ]
+  ],
+  "cv": [
+    {
+      "candidate": 0,
+      "fold": 0,
+      "raw_BER": 0.2235023041474654,
+      "stem": "Q160_full_c0_f0",
+      "status": "ok",
+      "converged": true,
+      "kkt": 0.00012678233494043734,
+      "seconds": 6.816452500002924,
+      "identity_sha256": "2732a399a06f260737cf61d6103c343cdf4fe7fd167d06343fde798efd86a3c0",
+      "prediction_sha256": "8fc51b91612a109a78e5579ecb49c70f277ec41cacb5396c5ff82238ff726867",
+      "state_sha256": "6a7cd33d1a9a4742b657b14bcd1a54054445b8b50daa2dd134a9eac3f0eec1a6",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "a718782c70cc84d00b487c2a347ce61cdaab5aa4cc6215e7200aee82369b15fd",
+        "endpoints": "39bab013da056120cae0ef7deeb031398a4157f7a57ae696d600dd2fdf7a0a5f",
+        "endpoint_order": "6ca96691c2e7ee327c138df45f0a25d83c407651cfc101935d1fb34129f74573",
+        "effective_u": 0.47750000000000004,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.20539651848849874,
+        0.20392895309188386,
+        0.2056655686583177,
+        0.20292672104064852,
+        0.1820822387206512
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.0016666666666666668,
+        "individual_view_coefficient": 0.0003333333333333333,
+        "total_positive_coefficient": 0.003333333333333333,
+        "total_negative_coefficient": 0.003333333333333333,
+        "target": 0.0033333333333333335
+      }
+    },
+    {
+      "candidate": 0,
+      "fold": 1,
+      "raw_BER": 0.24197860962566844,
+      "stem": "Q160_full_c0_f1",
+      "status": "ok",
+      "converged": true,
+      "kkt": 6.984746581717007e-05,
+      "seconds": 5.580000700021628,
+      "identity_sha256": "5e849537a4e76aad106f08fbd1e8f20d900543c7dda1ee523197e8277b0f7c17",
+      "prediction_sha256": "c4f30d4a33081a151291938da3f66d40684df7ff4f74dacf37a5c1d20aa2f9e6",
+      "state_sha256": "cf659af7f051b375b366072596e5773a2481fcb43e2731b2a1aafd2bc654f956",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "1c3e3ef80129c35b509e788a022b1c2c1334c0d7874793a8b02cb50c4819b8e7",
+        "endpoints": "4e74c4e4da64490ea75e3d03cc90f4310f8c7c402d992e3b889f34e6706d370d",
+        "endpoint_order": "4001df2729a59f318bab4d5826d33b2d4640ec0f1f1c1989c6ab902e3584d0ce",
+        "effective_u": 0.4983333333333333,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.20542500606228106,
+        0.2039856212443174,
+        0.20558744325874512,
+        0.20287047584767368,
+        0.1821314535869828
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.0016666666666666668,
+        "individual_view_coefficient": 0.0003333333333333333,
+        "total_positive_coefficient": 0.0033333333333333335,
+        "total_negative_coefficient": 0.0033333333333333335,
+        "target": 0.0033333333333333335
+      }
+    },
+    {
+      "candidate": 1,
+      "fold": 0,
+      "raw_BER": 0.2235023041474654,
+      "stem": "Q160_full_c1_f0",
+      "status": "ok",
+      "converged": true,
+      "kkt": 8.373005251969325e-05,
+      "seconds": 3.971596499963198,
+      "identity_sha256": "cddd329d438000c38acf7f6b8f62fd069dd858b4eb49000714343ae064610413",
+      "prediction_sha256": "e94fbe1f828a8245245e5a08e9da66d40b1f00bdb25597fd452f8b936520014d",
+      "state_sha256": "93361a3911392dd5247d34880760ce18e9bc1efb73a83f6c54092b15b3d61498",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "a718782c70cc84d00b487c2a347ce61cdaab5aa4cc6215e7200aee82369b15fd",
+        "endpoints": "39bab013da056120cae0ef7deeb031398a4157f7a57ae696d600dd2fdf7a0a5f",
+        "endpoint_order": "6ca96691c2e7ee327c138df45f0a25d83c407651cfc101935d1fb34129f74573",
+        "effective_u": 0.47750000000000004,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.2054034904078925,
+        0.2039834851557538,
+        0.20557976771328737,
+        0.20291639443070486,
+        0.1821168622923616
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.0001666666666666667,
+        "individual_view_coefficient": 3.3333333333333335e-05,
+        "total_positive_coefficient": 0.0003333333333333334,
+        "total_negative_coefficient": 0.0003333333333333334,
+        "target": 0.0003333333333333334
+      }
+    },
+    {
+      "candidate": 1,
+      "fold": 1,
+      "raw_BER": 0.24197860962566844,
+      "stem": "Q160_full_c1_f1",
+      "status": "ok",
+      "converged": true,
+      "kkt": 0.00030574668034326824,
+      "seconds": 3.8506404000218026,
+      "identity_sha256": "239bef6a3b7625e9387a1dc56ab165f17bbca39525bdbc05d90988652b332da1",
+      "prediction_sha256": "3ec9b5e3a0aac36da2a284bd426298ceb50826b538388a62b81313b27a0c8895",
+      "state_sha256": "b0bfb766daef99df876a0aa17687733a1d44982adf09ae609c160126a0311a45",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "1c3e3ef80129c35b509e788a022b1c2c1334c0d7874793a8b02cb50c4819b8e7",
+        "endpoints": "4e74c4e4da64490ea75e3d03cc90f4310f8c7c402d992e3b889f34e6706d370d",
+        "endpoint_order": "4001df2729a59f318bab4d5826d33b2d4640ec0f1f1c1989c6ab902e3584d0ce",
+        "effective_u": 0.4983333333333333,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.2053952910194622,
+        0.20399145695008236,
+        0.20559082313512983,
+        0.2029123971684514,
+        0.1821100317268741
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.0001666666666666667,
+        "individual_view_coefficient": 3.3333333333333335e-05,
+        "total_positive_coefficient": 0.0003333333333333334,
+        "total_negative_coefficient": 0.0003333333333333334,
+        "target": 0.0003333333333333334
+      }
+    },
+    {
+      "candidate": 2,
+      "fold": 0,
+      "raw_BER": 0.23963133640552994,
+      "stem": "Q160_full_c2_f0",
+      "status": "ok",
+      "converged": true,
+      "kkt": 0.00016404159939033494,
+      "seconds": 8.705290899961255,
+      "identity_sha256": "5f94af3531b1ac513b7a05744358f88a789073f5bffeca093023afaf70e40f4e",
+      "prediction_sha256": "be9415ebb0a49a3fa4ca0bb99e662f505137065e2676683659b05ea0b0793814",
+      "state_sha256": "52e25e5c1aa1e19fa784a81a02ff2c548a1a061df79c41ea258af23b7a4505a0",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "a718782c70cc84d00b487c2a347ce61cdaab5aa4cc6215e7200aee82369b15fd",
+        "endpoints": "39bab013da056120cae0ef7deeb031398a4157f7a57ae696d600dd2fdf7a0a5f",
+        "endpoint_order": "6ca96691c2e7ee327c138df45f0a25d83c407651cfc101935d1fb34129f74573",
+        "effective_u": 0.47750000000000004,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.2053223472819308,
+        0.20394124337531924,
+        0.2057615271669337,
+        0.20307832937085268,
+        0.1818965528049636
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.016666666666666666,
+        "individual_view_coefficient": 0.0033333333333333335,
+        "total_positive_coefficient": 0.03333333333333333,
+        "total_negative_coefficient": 0.03333333333333333,
+        "target": 0.03333333333333333
+      }
+    },
+    {
+      "candidate": 2,
+      "fold": 1,
+      "raw_BER": 0.24197860962566844,
+      "stem": "Q160_full_c2_f1",
+      "status": "ok",
+      "converged": true,
+      "kkt": 0.0006271639947945757,
+      "seconds": 5.266528199950699,
+      "identity_sha256": "088d1f5ced05de6e4a4106f1c5a51f8aafa1dfa5215844564ff08cc2842a93df",
+      "prediction_sha256": "0db31b6614997e5621fe41592a3c72a50c62326c8eae6358fd4dd62ea476cba0",
+      "state_sha256": "b2b09f886832996631e35d4f59c463eaf23e36261da61e465cf237dddae2ef20",
+      "invariants": {
+        "H_ref": "1b12399fa0379d876e65ed3411e5f571b67969daaf878af266b635f296c5e728",
+        "r_v": "1c3e3ef80129c35b509e788a022b1c2c1334c0d7874793a8b02cb50c4819b8e7",
+        "endpoints": "4e74c4e4da64490ea75e3d03cc90f4310f8c7c402d992e3b889f34e6706d370d",
+        "endpoint_order": "4001df2729a59f318bab4d5826d33b2d4640ec0f1f1c1989c6ab902e3584d0ce",
+        "effective_u": 0.4983333333333333,
+        "private_domain": "endpoints",
+        "private_simplex": true,
+        "data_graph_fingerprint": "d88bcecd15aab3d917fce995de6bda6e3306db441aa274a3c4c12ef84b2358d1"
+      },
+      "final_a": [
+        0.20547014289805138,
+        0.20386109208856668,
+        0.20569856738762338,
+        0.2028670741379857,
+        0.1821031234877729
+      ],
+      "allocation": {
+        "eta": 0.5,
+        "consensus_coefficient": 0.016666666666666666,
+        "individual_view_coefficient": 0.0033333333333333335,
+        "total_positive_coefficient": 0.03333333333333333,
+        "total_negative_coefficient": 0.03333333333333333,
+        "target": 0.03333333333333333
+      }
+    }
+  ],
+  "index": 0,
+  "value": 20.0,
+  "rule": "minimum_balanced_pair_error",
+  "eligible_folds": 2
+}

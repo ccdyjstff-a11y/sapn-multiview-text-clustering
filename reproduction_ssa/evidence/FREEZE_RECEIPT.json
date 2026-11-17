@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+  "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d",
+  "preflight": {
+    "passed": true,
+    "protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+    "no_matlab_invoked": true,
+    "no_truth_read": true,
+    "scope": "Streaming byte identity and declared mappings; full paid/schema checks run at actual entry.",
+    "draft_runtime_sha256": "01cf771e1d4bcb35777299573fa27acf3bb152264ff5d45ebaefd1cb3f408b7e",
+    "runtime_sha256": "562f8986b69ff988b1991632f150ff2df463d35e7df7c706d58dea09ea2d4d8d"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "verdict": "PASS",
+  "checker": "Study-authored axes/label geometry gate",
+  "scope": "Final plot-area row/column edges, widths, overlap and available panel-label anchors; not PDF stroke collision analysis",
+  "width_pt": 510.236220472441,
+  "height_pt": 368.5039370078741,
+  "tolerance_pt": 1.5,
+  "rectangles_pt": {
+    "a": [
+      53.5748031496063,
+      218.65995238967224,
+      246.57719958918182,
+      315.0708661417323
+    ],
+    "b": [
+      304.4779185210545,
+      218.65995238967224,
+      497.48031496063004,
+      315.0708661417323
+    ],
+    "c": [
+      53.5748031496063,
+      66.3307086614173,
+      497.48031496063004,
+      162.7416224134774
+    ]
+  },
+  "row_groups": [
+    [
+      "a",
+      "b"
+    ]
+  ],
+  "column_groups": [],
+  "declared_exemptions": [],
+  "checks": [
+    {
+      "group": [
+        "a",
+        "b"
+      ],
+      "check": "shared row edges",
+      "coordinate": 1,
+      "range_pt": 0.0
+    },
+    {
+      "group": [
+        "a",
+        "b"
+      ],
+      "check": "shared row edges",
+      "coordinate": 3,
+      "range_pt": 0.0
+    }
+  ],
+  "failures": []
+}
