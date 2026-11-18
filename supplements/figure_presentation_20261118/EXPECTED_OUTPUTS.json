@@ -1,0 +1,111 @@
+{
+  "schema": "sapn-seven-figure-expected-v1",
+  "scope": "Approved presentation assets; PDF byte hashes document identity while drawing/text fingerprints ignore export timestamp metadata",
+  "figures": [
+    {
+      "figure": "fig00_model_v4",
+      "group": "model",
+      "approved_pdf_sha256": "cac201716a105ef50e06db7f87030e0cb720451487e5823a0ce295ac255199f9",
+      "approved_png_sha256": "2dccd2e8fe88b0c9b1d6960314bd88e2e8cc0e62d7fe5037dc39dc5c9b8cabf3",
+      "pdf_drawing_count": 39,
+      "pdf_drawing_fingerprint": "73e452ca12665b7434aebc24c84ca4e906474bc4b5cec4e5bb5b5f211a6433e8",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "590e5857f94f7646fe30b7000debd5f234974b15e78c8db1b9da6f2ce8c51247",
+      "page_size_pt": [
+        510.2362060546875,
+        368.5039367675781
+      ],
+      "model_dependency_fingerprint": "bbef1587cb21c3eb7e799e8f52a2a46d642c946bcd56cdc1f8f67f27f4cbdcea"
+    },
+    {
+      "figure": "fig13_reference_filter_risk",
+      "group": "si",
+      "approved_pdf_sha256": "d1ce329f2b04bc1aa71c13d4462b9ecde89765df7eca753c201c7dbae7e3ea7b",
+      "approved_png_sha256": "f4a15fcc9f71dea26a5414a5b5cd0d7e57a013098ab02b498eb691f76e9db12a",
+      "pdf_drawing_count": 67,
+      "pdf_drawing_fingerprint": "7b69e6719e335d15d6b40e33def7212ca863a8a0686a0b83ffb1cd31438418ca",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "21962eea13295f915ddfc653cf8e8696a3c93ccf70a8bfa77945dbbd7ca5999d",
+      "page_size_pt": [
+        510.2362060546875,
+        368.5039367675781
+      ],
+      "scientific_artist_fingerprint": "007fab4a6a4f50aaaa544789d17c8d82095d4341b27bed13d327835534d94114"
+    },
+    {
+      "figure": "fig15_supervision_repetition",
+      "group": "si",
+      "approved_pdf_sha256": "81c346e57bcda27ba702ef573bcb1d884c6a1c4c90ba91ddf3fe8cef9cfa0b71",
+      "approved_png_sha256": "bb51fc2318fbb3ec761a9544c6d475869cfef9241af5dac126d57ce134d46531",
+      "pdf_drawing_count": 581,
+      "pdf_drawing_fingerprint": "ac5f1e424cb604bdc82baec1ce9739f4f68d625a432f9afb0821ddaa1d5a45d3",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "93a1b2688f96ecb0645b9645a60236f56dd868fec7eb2b8836bd6533b1e40ce6",
+      "page_size_pt": [
+        510.2362060546875,
+        510.2362060546875
+      ],
+      "scientific_artist_fingerprint": "14e4f37313915da77a49a91aac634c625acbc011d56ad24a7a3f3fc817029511"
+    },
+    {
+      "figure": "fig16_signed_ablation_repetition",
+      "group": "si",
+      "approved_pdf_sha256": "90dc5ef2c8e7e7bd4338c9c45aeaaaabf7d473596d0a97610fd357e7048c297e",
+      "approved_png_sha256": "e06820ef1563afb448079a17d9c303fa3f1c846e95dbbbd7a20c696251bfe497",
+      "pdf_drawing_count": 939,
+      "pdf_drawing_fingerprint": "82a35d1dfe31a7ac919303cfc211377787fb3b139eab96ec6d0b5411dd3aec45",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "d196ebee9946f5f3a049dc2b9a5bef1abbfcc65d4bfac12d765ca00ace14e11d",
+      "page_size_pt": [
+        510.2362060546875,
+        617.9527587890625
+      ],
+      "scientific_artist_fingerprint": "3c82780d2f341853408e4a661a34e6f188da08346e74bc94bf1b0b70aef573dd"
+    },
+    {
+      "figure": "fig17_reference_repetition",
+      "group": "si",
+      "approved_pdf_sha256": "6f39578b5b97b8da7db5dc92f84de56cc9650a9e402bf295bea0e353ab1cdc6e",
+      "approved_png_sha256": "3feb413b0e065fb807ce2472cd976a18b04fab2abcbfcff960df6675ccf2cea8",
+      "pdf_drawing_count": 1183,
+      "pdf_drawing_fingerprint": "c377cc36f81534afc230664c27158875d53b907d10e439804fd827fb957a978f",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "57802e1d889dff0959328f0e32cb86ac4917f25a2b33b417afec4c1e41d9b358",
+      "page_size_pt": [
+        510.2362060546875,
+        623.6220703125
+      ],
+      "scientific_artist_fingerprint": "baafb88e185a65fa45aa2fef92f4caa5cbfbd9f68175535f6c1b00a5c92ac301"
+    },
+    {
+      "figure": "fig06_wrong_answer_sensitivity",
+      "group": "raster",
+      "approved_pdf_sha256": "babaca5695698ea262756c1eb9ed4f398f78afb0ee4ca9ee7ca63755b062d4d7",
+      "approved_png_sha256": "a3fdb15492687a23324710986d2e0493e44d317e055bd81fe3cba69fdc73671a",
+      "pdf_drawing_count": 122,
+      "pdf_drawing_fingerprint": "d7f72413ffe067bb9fd61457b60411733b79c14ec1de95cd181f8a258d1e9936",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "0b878dec90d30503e78dcb151671b8d392e12ebe9bccee912f25176664873e06",
+      "page_size_pt": [
+        504.5669250488281,
+        277.7952880859375
+      ],
+      "scientific_artist_fingerprint": "e308d0c32ec1a9327bf138f6016f1f784fd3cfdbf08c081dc27bb1bce6c0ffe1"
+    },
+    {
+      "figure": "fig08_location_control",
+      "group": "raster",
+      "approved_pdf_sha256": "59b98d66b9f5e3d5df1236ac8f798c00ccf94c454111b0ebcdbc83347b240e30",
+      "approved_png_sha256": "81cb33cbdac11724f2c96a304919422ca9f872f453c6e96f6a0ac6ec7386facf",
+      "pdf_drawing_count": 113,
+      "pdf_drawing_fingerprint": "c66254d87e6ba70c179eb8c9bc4fda87da9a2863179d9cc80d5f49e9a69ee06d",
+      "pdf_drawing_precision_pt": 0.001,
+      "text_fingerprint": "a5ca393f9bd1285ab7b8066716c52763b28812ffacb18ed062b7dfe8eaa43ec4",
+      "page_size_pt": [
+        500.1650085449219,
+        232.5811004638672
+      ],
+      "scientific_artist_fingerprint": "0bf6cfd9f702b353e7c21c5f4cb173dfd56d6fe81fc5c7aa5768fbff8a224852"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "sapn-si-font-sources-v1",
+  "inputs": [
+    {
+      "path": "figures/plot_reference_risk.py",
+      "sha256": "da7cde2180e645303a80a871643313119e6b3ef71bc655cfec9b93b3d3ae20c2"
+    },
+    {
+      "path": "figures/historical/build_extension_figures.py",
+      "sha256": "b9993b2ed357efe4bc91ada68099dcf4481d6ea8946317f0eb831b87d34db161"
+    },
+    {
+      "path": "figures/audit_panel_alignment.py",
+      "sha256": "133d4c6297f2f15bc330160ffcdfed8f404a7c841cdbfd4794694af12de553ec"
+    },
+    {
+      "path": "tables/figures/fig13_reference_filter_source.csv",
+      "sha256": "2d792ae0ce865cb64b05cc156080b50a20880a21392be797b3ebd390eb8d676c"
+    },
+    {
+      "path": "tables/figures/fig15_supervision_repetition_source.csv",
+      "sha256": "037c24bcf17b9b599178c4a3030d7176a37d6af539e60f393b843ade821f8a5c"
+    },
+    {
+      "path": "tables/figures/fig15_supervision_repetition_summary.csv",
+      "sha256": "25a24ece1468a5069695276ee62f63c4b27bc60e4fda8edb6daa523a671d22cc"
+    },
+    {
+      "path": "tables/figures/fig16_signed_ablation_repetition_source.csv",
+      "sha256": "cb66392f26eb88fa91cfef2077efc7c112a8dcbfa58ff0d9497bdcd836ed53c8"
+    },
+    {
+      "path": "tables/figures/fig16_signed_ablation_repetition_summary.csv",
+      "sha256": "404ab4bdafef4cf83a8b19b062f0a31608dd176d4349a10de2b13c981ce0f663"
+    },
+    {
+      "path": "tables/figures/fig17_reference_repetition_source.csv",
+      "sha256": "813791ab9cb7881deb7b3ffe509616ae51d2d5b2b03cfb515b8a5df590eff8ed"
+    },
+    {
+      "path": "tables/figures/fig17_reference_repetition_summary.csv",
+      "sha256": "96181bbbad4ca6aee3a1f76443b99d73931cfeb8406f4183dcedaaca9a601330"
+    }
+  ]
+}

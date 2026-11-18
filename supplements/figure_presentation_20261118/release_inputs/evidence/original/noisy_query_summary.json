@@ -1,0 +1,787 @@
+{
+  "results": [
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8305084745762712
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.9491525423728814
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5423728813559322
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.8050847457627118
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.6271186440677966
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7457627118644068
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8050847457627118
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7288135593220338
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.6949152542372882
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.6610169491525424
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.6694915254237288
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.6949152542372882
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.9152542372881356
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.9152542372881356
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.6610169491525424
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.6779661016949152
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.6101694915254238
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4661016949152542
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.7572254335260116
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7630057803468208
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8696210661528581
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7572254335260116
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8355812459858702
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7585099550417469
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8798972382787412
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.798330122029544
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.852922286448298
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7957610789980732
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.8310854206807964
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.7867694283879255
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.9332048811817598
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.9447655748233783
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.9184328837508028
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.9312780989081567
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.9242132305716121
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.9351316634553629
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5142857142857142
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.43333333333333335
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5071428571428571
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4369047619047619
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5154761904761904
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4392857142857143
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5333333333333333
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.569047619047619
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5285714285714286
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5488095238095239
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.49404761904761907
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5630952380952381
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5595238095238095
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5095238095238095
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5654761904761905
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4988095238095238
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5476190476190477
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5011904761904762
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.47890295358649787
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5638185654008439
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.48575949367088606
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5511603375527426
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.48154008438818563
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5611814345991561
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.4572784810126582
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5506329113924051
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.45569620253164556
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5490506329113924
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.4467299578059072
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5379746835443038
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.479957805907173
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5511603375527426
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.45569620253164556
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5511603375527426
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.4699367088607595
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5421940928270043
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5448662640207075
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5012942191544435
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5448662640207075
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.49396031061259704
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.551337359792925
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4900776531492666
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5267471958584987
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4745470232959448
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5245901639344263
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4702329594477998
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5073339085418465
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.4641932700603969
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5418464193270061
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.0,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.50862812769629
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5349439171699741
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.1,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5064710957722174
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-MV",
+      "converged": true,
+      "ACC": 0.5349439171699741
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25,
+      "fraction": 0.2,
+      "method": "SAPN-original-EQ",
+      "converged": true,
+      "ACC": 0.5116479723899914
+    }
+  ],
+  "blocks": [
+    {
+      "dataset": "3Sources",
+      "seed": 23
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 24
+    },
+    {
+      "dataset": "3Sources",
+      "seed": 25
+    },
+    {
+      "dataset": "BBC",
+      "seed": 23
+    },
+    {
+      "dataset": "BBC",
+      "seed": 24
+    },
+    {
+      "dataset": "BBC",
+      "seed": 25
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 23
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 24
+    },
+    {
+      "dataset": "Reuters",
+      "seed": 25
+    },
+    {
+      "dataset": "Cora",
+      "seed": 23
+    },
+    {
+      "dataset": "Cora",
+      "seed": 24
+    },
+    {
+      "dataset": "Cora",
+      "seed": 25
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 23
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 24
+    },
+    {
+      "dataset": "CiteSeer",
+      "seed": 25
+    }
+  ],
+  "pending": []
+}

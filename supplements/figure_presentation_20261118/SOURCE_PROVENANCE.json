@@ -1,0 +1,261 @@
+{
+  "schema": "sapn-seven-figure-origins-v1",
+  "repository": "https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering",
+  "immutable_source_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+  "purpose": "Presentation-only author-owned replay; no raw corpus, class array or third-party implementation",
+  "sources": [
+    {
+      "public_path": "figures/plot_reference_risk.py",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/plot_reference_risk.py",
+      "public_source_sha256": "e25528636416db1509e7883b62056311e79baf6ef9eb064796a8520da77cc063",
+      "packaged_path": "release_inputs/figures/plot_reference_risk.py",
+      "packaged_sha256": "da7cde2180e645303a80a871643313119e6b3ef71bc655cfec9b93b3d3ae20c2",
+      "transformation": {
+        "kind": "Exact function-source extraction; no scientific AST edits",
+        "functions": [
+          "response",
+          "threshold",
+          "numerical_checks",
+          "build"
+        ]
+      }
+    },
+    {
+      "public_path": "figures/historical/build_extension_figures.py",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/historical/build_extension_figures.py",
+      "public_source_sha256": "1388494a18066f9cd5bda4f821b1ac14c2906f5fe4fe29729d3d20723cd6e40a",
+      "packaged_path": "release_inputs/figures/historical/build_extension_figures.py",
+      "packaged_sha256": "b9993b2ed357efe4bc91ada68099dcf4481d6ea8946317f0eb831b87d34db161",
+      "transformation": {
+        "kind": "Exact function-source extraction; no scientific AST edits",
+        "functions": [
+          "setup",
+          "panel_label",
+          "statistics_legend",
+          "record_lookup",
+          "effect_extent",
+          "effect_marks",
+          "effects_source",
+          "draw15",
+          "draw16",
+          "draw17"
+        ]
+      }
+    },
+    {
+      "public_path": "figures/historical/build_evidence_figures.py",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/historical/build_evidence_figures.py",
+      "public_source_sha256": "db1aeb9d2f550c7748763cb57932d07ed0489207c9dd7b6902be1ca43111a462",
+      "packaged_path": "release_inputs/figures/historical/build_evidence_figures.py",
+      "packaged_sha256": "ea81b4942bddc9d4e4aa870e720c85b713b6a68fb00ffe5eb42b6db34c232c1b",
+      "transformation": {
+        "kind": "Exact function-source extraction; no scientific AST edits",
+        "functions": [
+          "one",
+          "style_axes",
+          "name",
+          "wrong_answer_figure"
+        ]
+      }
+    },
+    {
+      "public_path": "figures/historical/build_new_figures.py",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/historical/build_new_figures.py",
+      "public_source_sha256": "0e0626d05883e71c6c77e583b52e5e9991907666c50e43c19e4260a0ef2b429d",
+      "packaged_path": "release_inputs/figures/historical/build_new_figures.py",
+      "packaged_sha256": "f690d1babe67bd28f916da426e0702e9e5d97cd3a7d92411979c0132fa33a933",
+      "transformation": {
+        "kind": "Exact function-source extraction; no scientific AST edits",
+        "functions": [
+          "location"
+        ]
+      }
+    },
+    {
+      "public_path": "figures/audit_panel_alignment.py",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/audit_panel_alignment.py",
+      "public_source_sha256": "133d4c6297f2f15bc330160ffcdfed8f404a7c841cdbfd4794694af12de553ec",
+      "packaged_path": "release_inputs/figures/audit_panel_alignment.py",
+      "packaged_sha256": "133d4c6297f2f15bc330160ffcdfed8f404a7c841cdbfd4794694af12de553ec",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "figures/source_data/fig06_paired_changes.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/source_data/fig06_paired_changes.csv",
+      "public_source_sha256": "139a927498da92d3a2c1cf6e8ed909663ba82d00682ae02db17c6db7e6331231",
+      "packaged_path": "release_inputs/figures/source_data/fig06_paired_changes.csv",
+      "packaged_sha256": "139a927498da92d3a2c1cf6e8ed909663ba82d00682ae02db17c6db7e6331231",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "figures/source_data/fig08_paired_ACC.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/source_data/fig08_paired_ACC.csv",
+      "public_source_sha256": "d86a1cfdde4117facb5a59ea8065648f9fadd7af5759afb3ce7211e72a218225",
+      "packaged_path": "release_inputs/figures/source_data/fig08_paired_ACC.csv",
+      "packaged_sha256": "d86a1cfdde4117facb5a59ea8065648f9fadd7af5759afb3ce7211e72a218225",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "figures/source_data/fig08_reference_strengths.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/source_data/fig08_reference_strengths.csv",
+      "public_source_sha256": "77943ed9f6a35fdabc4d71a1917b5b1a94a0ac4b2a9705331f72d3aae634eacd",
+      "packaged_path": "release_inputs/figures/source_data/fig08_reference_strengths.csv",
+      "packaged_sha256": "77943ed9f6a35fdabc4d71a1917b5b1a94a0ac4b2a9705331f72d3aae634eacd",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig13_reference_filter_source.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig13_reference_filter_source.csv",
+      "public_source_sha256": "2d792ae0ce865cb64b05cc156080b50a20880a21392be797b3ebd390eb8d676c",
+      "packaged_path": "release_inputs/tables/figures/fig13_reference_filter_source.csv",
+      "packaged_sha256": "2d792ae0ce865cb64b05cc156080b50a20880a21392be797b3ebd390eb8d676c",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig15_supervision_repetition_source.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig15_supervision_repetition_source.csv",
+      "public_source_sha256": "037c24bcf17b9b599178c4a3030d7176a37d6af539e60f393b843ade821f8a5c",
+      "packaged_path": "release_inputs/tables/figures/fig15_supervision_repetition_source.csv",
+      "packaged_sha256": "037c24bcf17b9b599178c4a3030d7176a37d6af539e60f393b843ade821f8a5c",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig15_supervision_repetition_summary.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig15_supervision_repetition_summary.csv",
+      "public_source_sha256": "25a24ece1468a5069695276ee62f63c4b27bc60e4fda8edb6daa523a671d22cc",
+      "packaged_path": "release_inputs/tables/figures/fig15_supervision_repetition_summary.csv",
+      "packaged_sha256": "25a24ece1468a5069695276ee62f63c4b27bc60e4fda8edb6daa523a671d22cc",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig16_signed_ablation_repetition_source.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig16_signed_ablation_repetition_source.csv",
+      "public_source_sha256": "cb66392f26eb88fa91cfef2077efc7c112a8dcbfa58ff0d9497bdcd836ed53c8",
+      "packaged_path": "release_inputs/tables/figures/fig16_signed_ablation_repetition_source.csv",
+      "packaged_sha256": "cb66392f26eb88fa91cfef2077efc7c112a8dcbfa58ff0d9497bdcd836ed53c8",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig16_signed_ablation_repetition_summary.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig16_signed_ablation_repetition_summary.csv",
+      "public_source_sha256": "404ab4bdafef4cf83a8b19b062f0a31608dd176d4349a10de2b13c981ce0f663",
+      "packaged_path": "release_inputs/tables/figures/fig16_signed_ablation_repetition_summary.csv",
+      "packaged_sha256": "404ab4bdafef4cf83a8b19b062f0a31608dd176d4349a10de2b13c981ce0f663",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig17_reference_repetition_source.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig17_reference_repetition_source.csv",
+      "public_source_sha256": "813791ab9cb7881deb7b3ffe509616ae51d2d5b2b03cfb515b8a5df590eff8ed",
+      "packaged_path": "release_inputs/tables/figures/fig17_reference_repetition_source.csv",
+      "packaged_sha256": "813791ab9cb7881deb7b3ffe509616ae51d2d5b2b03cfb515b8a5df590eff8ed",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "tables/figures/fig17_reference_repetition_summary.csv",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/tables/figures/fig17_reference_repetition_summary.csv",
+      "public_source_sha256": "96181bbbad4ca6aee3a1f76443b99d73931cfeb8406f4183dcedaaca9a601330",
+      "packaged_path": "release_inputs/tables/figures/fig17_reference_repetition_summary.csv",
+      "packaged_sha256": "96181bbbad4ca6aee3a1f76443b99d73931cfeb8406f4183dcedaaca9a601330",
+      "transformation": "Byte-identical original author-owned source or aggregate CSV"
+    },
+    {
+      "public_path": "evidence/original/noisy_query_summary.json",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/evidence/original/noisy_query_summary.json",
+      "public_source_sha256": "30e2ca3efe4f1e5ea92a20073c40268c44f2403a93215f25518828e806fa6937",
+      "packaged_path": "release_inputs/evidence/original/noisy_query_summary.json",
+      "packaged_sha256": "7d7a14eab08bd64597356072ccc76ac9a9dea6039f110d71954175a19f81d68f",
+      "transformation": {
+        "kind": "Field-whitelisted numeric plotting input; all 90 original result rows and 15 block identities retained",
+        "result_fields": [
+          "dataset",
+          "seed",
+          "fraction",
+          "method",
+          "converged",
+          "ACC"
+        ],
+        "block_fields": [
+          "dataset",
+          "seed"
+        ],
+        "removed": "Artifact paths and unused metrics/optimizer fields"
+      }
+    },
+    {
+      "public_path": "evidence/original/coverage_location_control_v2/summary.json",
+      "public_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+      "download_url": "https://raw.githubusercontent.com/ccdyjstff-a11y/sapn-multiview-text-clustering/df56e6bcc2c5bb82139170e5759523e5ac3936ee/evidence/original/coverage_location_control_v2/summary.json",
+      "public_source_sha256": "4cb390f8f9f51fa4af617f25ed080c6ea290b69afc047e6d42de81939f5a3c65",
+      "packaged_path": "release_inputs/evidence/original/coverage_location_control_v2/summary.json",
+      "packaged_sha256": "098329f30b7f33d92b41c44bd8e187e5dd84439161c10222fc8bc3f23189d43b",
+      "transformation": {
+        "kind": "Field-whitelisted original plotting input; all 20 cells and 10 paired records retained",
+        "cell_fields": [
+          "dataset",
+          "Q",
+          "method",
+          "u_actual",
+          "u_expected"
+        ],
+        "paired_fields": [
+          "dataset",
+          "Q",
+          "ACC.deltas_pp",
+          "ACC.mean_pp"
+        ]
+      }
+    },
+    {
+      "kind": "Model typography generator, author-owned pending public revision",
+      "packaged_path": "build_model_figure.py",
+      "packaged_sha256": "0894611aa86dafdc30423cd697b9c7215bedf171007a363b456e9a9ee71b1ae4",
+      "relation": "Byte-identical to the validated model typography generator; nodes, edges and mapping are bound by EXPECTED_OUTPUTS.json",
+      "public_predecessor": {
+        "commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+        "path": "figures/historical/build_model_figure.py",
+        "url": "https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/blob/df56e6bcc2c5bb82139170e5759523e5ac3936ee/figures/historical/build_model_figure.py"
+      }
+    },
+    {
+      "kind": "New author-owned presentation/replay code, pending public revision",
+      "packaged_path": "plot_si_readable_fonts.py",
+      "packaged_sha256": "8adbd9e9152ef69be3582805abf30530083a3faa44e71245752ac3bf09f1b33e",
+      "scope": "No new scientific method or result; geometry/data are bound by the supplied independent checks"
+    },
+    {
+      "kind": "New author-owned presentation/replay code, pending public revision",
+      "packaged_path": "plot_raster_figures_as_vectors.py",
+      "packaged_sha256": "3004cff2d13a2e461bdd7caec3ea4e891b31b5ba4ae3365710e296f515fcf14b",
+      "scope": "No new scientific method or result; geometry/data are bound by the supplied independent checks"
+    },
+    {
+      "kind": "New author-owned presentation/replay code, pending public revision",
+      "packaged_path": "run_figures.py",
+      "packaged_sha256": "902f095ed33aaeb0aa2a3c1844d486909208d71b4ecb4b540049e13fd7ca3f84",
+      "scope": "No new scientific method or result; geometry/data are bound by the supplied independent checks"
+    },
+    {
+      "kind": "New author-owned presentation/replay code, pending public revision",
+      "packaged_path": "verify_outputs.py",
+      "packaged_sha256": "e557dbad7c2a245224ab1d9531943466463b597233fc5015657427aeb78f950d",
+      "scope": "No new scientific method or result; geometry/data are bound by the supplied independent checks"
+    }
+  ]
+}
