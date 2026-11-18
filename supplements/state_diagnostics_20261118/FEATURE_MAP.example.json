@@ -1,0 +1,48 @@
+{
+  "3Sources": {
+    "views": [
+      "/external/prepared/3Sources/X0.npz",
+      "/external/prepared/3Sources/X1.npz",
+      "/external/prepared/3Sources/X2.npz"
+    ]
+  },
+  "BBC": {
+    "views": [
+      "/external/prepared/BBC/X0.npz",
+      "/external/prepared/BBC/X1.npz"
+    ]
+  },
+  "Reuters": {
+    "views": [
+      "/external/prepared/Reuters/X0.npz",
+      "/external/prepared/Reuters/X1.npz",
+      "/external/prepared/Reuters/X2.npz",
+      "/external/prepared/Reuters/X3.npz",
+      "/external/prepared/Reuters/X4.npz"
+    ]
+  },
+  "Cora": {
+    "views": [
+      "/external/prepared/Cora/X0.npz",
+      "/external/prepared/Cora/X1.npz"
+    ]
+  },
+  "CiteSeer": {
+    "views": [
+      "/external/prepared/CiteSeer/X0.npz",
+      "/external/prepared/CiteSeer/X1.npz"
+    ]
+  },
+  "20NG": {
+    "views": [
+      "/external/prepared/20NG/X0.npz",
+      "/external/prepared/20NG/X1.npz"
+    ]
+  },
+  "AGNews": {
+    "views": [
+      "/external/prepared/AGNews/X0.npz",
+      "/external/prepared/AGNews/X1.npz"
+    ]
+  }
+}

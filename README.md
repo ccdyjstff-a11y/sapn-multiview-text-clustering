@@ -177,3 +177,10 @@ The fitted model, selection rules and historical experimental results are unchan
 - [Portable typography redraws](figures/qa/final_typography/README.md) for four supplementary figures. All 849 scientific PDF paths retain their geometry and style at 0.001 pt precision. Changes improve body-text legibility at manuscript width without changing data or results.
 
 All original failures and incomplete comparison cells remain. New launchers use explicit paths and bounded execution; they do not reproduce the historical memory-suspension scheduler or provide new independent performance observations. Obtain external author code and raw corpora under their original terms. No additional software license is granted by this patch. The immutable v1.0.0 tag remains available for the preceding release.
+
+
+## Additional saved-state diagnostics (18 November 2026)
+
+[Online Resource 3](https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/releases/download/v1.0.1/Online_Resource_3_State_Diagnostics.zip) supplies the factor states and programs for the allocation-disagreement and CMVNMF checkpoint/scale analyses. [Browse the analysis programs](supplements/state_diagnostics_20261118/README.md); [archive identity and scope](supplements/state_diagnostics_20261118/ARCHIVE.json) identify the exact download.
+
+The supplement contains 386 unique allocation states for 500 logical records, 42 CMVNMF conditions, and verified reference outputs. It adds evidence without changing the SAPN model, primary predictions, or the immutable v1.0.1 commit. It excludes external feature matrices, full class vectors and third-party baseline source. It contains no SSA/PCBG completion result. Obtain external data separately through the recorded access routes. The existing rights and reuse boundary remains in force.

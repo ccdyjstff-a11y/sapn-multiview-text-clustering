@@ -1,0 +1,22 @@
+{
+  "schema": "sapn-supplement-archive-v1",
+  "title": "Online Resource 3: saved-state allocation and CMVNMF diagnostics",
+  "url": "https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/releases/download/v1.0.1/Online_Resource_3_State_Diagnostics.zip",
+  "sha256": "6134e9eb5cfd6ddf0f17f6ca45f30686d29349c41f30240dbcf2cdaddf9b99c3",
+  "bytes": 121020226,
+  "manifest_sha256": "ab55c618bc5e29dec45132edb181942dc3df014084a1b2c8bbb44682f99100d8",
+  "base_commit": "df56e6bcc2c5bb82139170e5759523e5ac3936ee",
+  "numeric_states": 428,
+  "files_in_archive": 450,
+  "code_and_document_sha256": {
+    "README.md": "1e6279a2c2332f60be0faec0b021310f6c15e369776c0a8e5d89abcd44847b59",
+    "ACCESS_ROUTES.md": "bb5043324d6f76e67240493788b02472dc0f6d4a9d52d4256546f6d8cd456ec3",
+    "FEATURE_MAP.example.json": "324d2b7ac69b846db2c664086d64bba1a3cfe9045b3c61a176c55840d7790d67",
+    "requirements.txt": "3b73e8b68b00dd189521df4740615a1b91382aeec54718dc469f36b2587b9ae8",
+    "resource_common.py": "e86100605c55755abe43f582c5915e87756c836520e222f4d485ffada34a89bc",
+    "analyze_allocation.py": "501a7ec3c96bbfacce9218a41c2fc21b8666dce71ed39a78ccc5da9b2e9038c5",
+    "analyze_cmvnmf.py": "6f9c0c7e35c8fdf6f872069e7be962ff7e2221cef889a3bb0e4421c92c4e09e6",
+    "score_checkpoints.py": "f4bbe22cc1d6ce7674eefd90da51d912788b2ccad57e79caa9664bd946b33f9f"
+  },
+  "scope": "Generated states, own analysis programs and verified reference CSVs. External features/classes and third-party implementations are excluded. No SSA/PCBG completion outcomes are included."
+}
