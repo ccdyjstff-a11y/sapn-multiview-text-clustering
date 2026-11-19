@@ -1,0 +1,17 @@
+{
+  "schema": "sapn-ijmlc-model-reference-v1",
+  "pdf_fingerprint": {
+    "drawing_fingerprint": "73e452ca12665b7434aebc24c84ca4e906474bc4b5cec4e5bb5b5f211a6433e8",
+    "text_font_position_fingerprint": "6e6595eb4b7fdbbe15f33b9f2166e4e5568cdb39a52ee4720c93858861a316c4",
+    "page_size_pt": [
+      510.2362060546875,
+      368.5039367675781
+    ],
+    "vector_paths": 39,
+    "text_spans": 88,
+    "embedded_fonts": true
+  },
+  "model_dependency_fingerprint": "f8150a93ce0ccff543ba2d5000004f6f37b7e44932d8b0b0bbae01a6dca41fad",
+  "approved_pdf_sha256": "d22bc3f5168f980fd2da0e6ca0a42447cfb98438a30ea869223b42235d3854de",
+  "approved_png_sha256": "2d0a35c755f3619c7b1f66d0c92aa9238a6ecc5316dac703c873c55704fb656a"
+}

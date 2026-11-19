@@ -1,0 +1,89 @@
+{
+  "original_source_sha256": "0894611aa86dafdc30423cd697b9c7215bedf171007a363b456e9a9ee71b1ae4",
+  "derived_source_sha256": "ee7093af6d6e0a9e3a2cb0f53a0a474f2d3a58237fe455c6000a2424c02b0641",
+  "edits": [
+    {
+      "id": "views",
+      "before": "r'$X_1,\\ldots,X_V$'",
+      "after": "r'$\\mathbf{X}_1,\\ldots,\\mathbf{X}_V$'",
+      "occurrences": 2
+    },
+    {
+      "id": "reference_matrix",
+      "before": "r'Frozen reference $R$'",
+      "after": "r'Frozen reference $\\mathbf{R}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "laplacian",
+      "before": "r'Fixed Laplacian $L$'",
+      "after": "r'Fixed Laplacian $\\mathbf{L}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "penalty_argument",
+      "before": "r'$R_u(H)$'",
+      "after": "r'$R_u(\\mathbf{H})$'",
+      "occurrences": 1
+    },
+    {
+      "id": "anchor_matrix",
+      "before": "r'Anchor to $R$'",
+      "after": "r'Anchor to $\\mathbf{R}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "smoothed_matrices",
+      "before": "r'Smooth $H$ and $H-R$'",
+      "after": "r'Smooth $\\mathbf{H}$ and $\\mathbf{H}-\\mathbf{R}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "factor_matrices",
+      "before": "r'$U_v,H_v;\\quad X_v\\approx U_vH_v,\\ U_vH$'",
+      "after": "r'$\\mathbf{U}_v,\\mathbf{H}_v;\\quad \\mathbf{X}_v\\approx \\mathbf{U}_v\\mathbf{H}_v,\\ \\mathbf{U}_v\\mathbf{H}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "view_simplex",
+      "before": "r'Endpoint simplex on $H_v$'",
+      "after": "r'Endpoint simplex on $\\mathbf{H}_v$'",
+      "occurrences": 1
+    },
+    {
+      "id": "consensus_matrix",
+      "before": "r'Simplex columns $H$'",
+      "after": "r'Simplex columns $\\mathbf{H}$'",
+      "occurrences": 1
+    },
+    {
+      "id": "cluster_input",
+      "before": "'Argmax H'",
+      "after": "r'Argmax $\\mathbf{H}$'",
+      "occurrences": 1
+    }
+  ],
+  "matrix_symbols": [
+    "X",
+    "U",
+    "H",
+    "R",
+    "L"
+  ],
+  "unchanged_scalar_function_set_symbols": [
+    "R_u function",
+    "u",
+    "eta",
+    "V",
+    "v indices",
+    "n",
+    "P/N/C/E sets"
+  ],
+  "scientific_scope": "Same dependency schematic, no empirical data or model execution; matrix glyph font style only (bold upright bases via mathbf).",
+  "geometry": "All node, text anchor, edge, color, line width, figure size and font-size specifications unchanged",
+  "schema": "sapn-ijmlc-model-typography-provenance-v1",
+  "original_source_url": "https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/blob/efdd603d7f7d5c01411cd98b7591d277bdfee665/supplements/figure_presentation_20261118/build_model_figure.py",
+  "original_figure_pdf_sha256": "cac201716a105ef50e06db7f87030e0cb720451487e5823a0ce295ac255199f9",
+  "current_variant_pdf_sha256": "d22bc3f5168f980fd2da0e6ca0a42447cfb98438a30ea869223b42235d3854de",
+  "current_variant_png_sha256": "2d0a35c755f3619c7b1f66d0c92aa9238a6ecc5316dac703c873c55704fb656a"
+}

@@ -189,3 +189,8 @@ The supplement contains 386 unique allocation states for 500 logical records, 42
 ## Seven-figure presentation supplement (18 November 2026)
 
 [Browse the replay code and source data](supplements/figure_presentation_20261118/README.md) or [download the verified ZIP](https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/releases/download/v1.0.1/SAPN_Figure_Presentation_Supplement.zip). This supplement reproduces the revised presentation of seven figures from retained numerical sources. Its manifest and output checks bind the data, scientific geometry and model connections; it adds no fitted model or performance result. External fonts and the recorded Python environment are required. Raw corpora, full class vectors and third-party implementations are excluded. The v1.0.1 tag and original scientific files remain unchanged.
+
+
+## IJMLC model-figure typography supplement (19 November 2026)
+
+[Browse the drawing code and provenance](supplements/ijmlc_model_typography_20261119/README.md) or [download the separate ZIP](https://github.com/ccdyjstff-a11y/sapn-multiview-text-clustering/releases/download/v1.0.1/SAPN_IJMLC_Model_Typography_Supplement.zip). This companion reproduces the bold matrix glyphs in the IJMLC-style model schematic. It changes eleven text labels through ten reversible substitutions; the model dependencies, node and edge geometry, and scientific content are unchanged. The original seven-figure supplement above remains a separate fixed version. This addition contains no model fit, new empirical result, manuscript, or third-party implementation. The existing rights and reuse boundary remains in force.

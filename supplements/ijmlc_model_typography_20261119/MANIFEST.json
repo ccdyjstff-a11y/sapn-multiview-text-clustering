@@ -1,0 +1,12 @@
+{
+  "schema": "sapn-ijmlc-model-typography-package-v1",
+  "scope": "One existing model schematic; typography-only reproduction, no experiment inputs",
+  "files": {
+    "build_model_figure_ijmlc.py": "ee7093af6d6e0a9e3a2cb0f53a0a474f2d3a58237fe455c6000a2424c02b0641",
+    "EXPECTED_FIGURE.json": "c4238169e02bf6f137c9368a9c2dfee463f024a7d65b94d30c0ca563e0571f61",
+    "PROVENANCE.json": "ed377e4fdbbf5f3f14049636feebfc255739c86e9fd90243de215fa58ef77a4f",
+    "README.md": "2f3a5b9e34c6da919f3acc67b14b23c10f42f88fb3155be9bb68ae9842022afb",
+    "requirements.txt": "26aa7a62fed12ce4ae82b9ff2834a5156a127fba6abd6707d6fa2313cc3209c0",
+    "run_model.py": "ea78da0623226752cd707301949cd7301990ca0a5ca5c25ad8b00901f95f2dd3"
+  }
+}
