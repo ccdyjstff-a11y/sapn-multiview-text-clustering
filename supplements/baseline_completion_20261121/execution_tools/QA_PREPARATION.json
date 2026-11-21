@@ -1,0 +1,62 @@
+{
+  "status": "READY_FOR_INDEPENDENT_OPTIMIZER_REPLAY_NOT_EXECUTED",
+  "edition": "major_revision_20261118",
+  "own_sources": {
+    "completion_common.py": "bc1ea731b11897ba17acff1a984e6f1120bc7148bd0e64a9d59784f04a37c67d",
+    "prepare_inputs.py": "b52106a05a297d057d0899cf6ff7e7088ad2bc648497ea8de55e4bd6654947a5",
+    "completion_portable.py": "0cbfc3a2b5a296dfcb975114c53006dc0c706d415018da256e6b513998cc7cda",
+    "native_backend.py": "3f8629e88ed1240a2fa747ee7fc7e60914443e5739b6c23cf5c2fa3f5d8a8b1f",
+    "PORTABLE_COMPLETION_SPEC.json": "2a26915bb4ceaa26526076cddc204d395c4e7e88f07ed56f78ea099197ecf8bd",
+    "SSA_RUNTIME_IDENTITY.json": "ea86781d2d837abbd036260c5496990582f53a2469e9ac7fd59bb9b7f65aff20"
+  },
+  "synthetic_tests": {
+    "passed": 19,
+    "exit_code": 0,
+    "log_sha256": "560161c63580ced780dcfc27f3a6fe1c051d5739117a9e1bd7e95493dfdbc7bd"
+  },
+  "real_input_only_checks": {
+    "regenerated_SSA_carriers": 45,
+    "regenerated_PCBG_carriers": 5,
+    "all_50_equal_fields": [
+      "X",
+      "c",
+      "ML",
+      "CL",
+      "seed",
+      "config",
+      "case_id"
+    ],
+    "input_manifest_sha256": "71e9c22c37f9398a4bed0aa653c82ac2a9dbfdaffab5e93ca6c6d47e1fbbff74",
+    "frozen_input_semantic_qa_sha256": "3c72c84b956ae5077a587835625970c6e12911d6181ce5da4332a546dd251af9",
+    "execution_plan_sha256": "4ffe5331ce30d62e441f95b1fd651fb2b6d60aa0928e5f9514024641f3289f2b",
+    "SSA_CV_decisions": 540,
+    "SSA_conditional_finals": 15,
+    "PCBG_conditions": 4,
+    "PCBG_new_fits": 5,
+    "retained_public_PCBG_CV_reverified": 23,
+    "SSA_runtime_files_exact_after_relocation": 9,
+    "SSA_runtime_manifest_sha256": "9424324a5643a44534c4a3a0b28b336c97bc1006d73e63cb96f160e2d4307c1a",
+    "runtime_normalization_rules": [],
+    "tamper_checks": [
+      "Altered private PCBG code rejected even after synchronizing local plan/manifest hashes",
+      "Fractional known-k rejected before integer normalization despite synchronized container hashes"
+    ]
+  },
+  "boundaries": {
+    "MATLAB_started": false,
+    "new_experiment_outputs_read": false,
+    "test_scores_read": false,
+    "full_class_vectors_read": false,
+    "actual_optimizer_replay_validated": false,
+    "existing_frozen_controllers_modified": false,
+    "public_v1_0_1_modified": false,
+    "Resource4_exporter_modified": false
+  },
+  "private_receipts_not_for_distribution": [
+    "public_baseline_execution_validation/private_inputs_v2/FROZEN_INPUT_SEMANTIC_QA.json",
+    "public_baseline_execution_validation/private_inputs_v2/INPUT_MANIFEST.json",
+    "public_baseline_execution_validation/private_inputs_v2/EXECUTION_PLAN.json",
+    "public_baseline_execution_validation/SSA_RUNTIME_RELOCATION_QA.json"
+  ],
+  "windows_runtime_preparation": "Deep manuscript path initially exceeded Windows path limits; new short private path succeeded. No runtime-code normalization."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "sapn-fresh-run-scoring-companion-whitelist-v1",
+  "files": {
+    "baseline_math.py": "e8e97cc332e9e6ca76a08de9125029ee62461b5b2d3d6f0482b53fdc081aa695",
+    "CLASS_IDENTITIES.json": "6bc5d795dff6bec017aa269f7212ac181b2a960e29aec54239bd00520acc895b",
+    "labels_map.example.json": "2ff33815aa7cca212e531c81631585215dc8fd6c3cac3a786c81c34bea9a96a0",
+    "QA_PREPARATION.json": "276d6a5312da2f9008c262ab20de521ead6677ed3b5c1f69e612122866648bee",
+    "README.md": "3d5ac94b408fc12b432180ac9a0ef15d8bbc9e926328d23525269a4d173f586f",
+    "requirements.txt": "85c084e7c02439abe5253ded49e75559a3a6d1463467a784134d298e7db9cca1",
+    "score_fresh_run.py": "9fba47ac691bbddada4b6b528abf59e2d977a9f4f13e05c739ea760914dc35a6",
+    "test_fresh_scoring.py": "d80614343ddf538bc21ca52594b05f1b88081f3d2eab8349d5ec6b561887ba3a"
+  },
+  "runner_manifest_sha256": "47989992a4f98fd581fa7e7342a5814eb83829aa325d6d74a8e0de22a809675d",
+  "contains_categories_or_features_or_predictions": false,
+  "actual_fresh_runs_scored": false
+}

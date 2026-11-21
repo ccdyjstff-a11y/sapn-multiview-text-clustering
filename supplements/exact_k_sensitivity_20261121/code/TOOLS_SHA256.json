@@ -1,0 +1,12 @@
+{
+  "schema": "sapn-exact-k-public-tools-v1",
+  "files": {
+    "non_k_core.py": "f63fe05614e9e4b304223e26a3b01ea3a709f570bb1fa81fb3a0a50c1837a1db",
+    "PROTOCOL.json": "d940ffa84917ca6cd7349dc300c17a793e3f187db6fec75a6c756a27c9e1fef9",
+    "replay_exact_k.py": "db846da1676ba267818dd52571aa2ad407cd865ea3d5a6db6d0c7d362abad8ed",
+    "test_public_replay.py": "1ce2264cdc74f823fca32f6abf49ad16fae84cd31b102aa95eab0a796a738e7d",
+    "README.md": "57b9bda3eadaef3f2c425e0a573854e90709825fa36df3e233cbb21d7d6877d6",
+    "PUBLICATION_PLAN.json": "58457fa4553b1138420f38deaa513687f4b3ea85ed9ba1608da443cf018a2b1a",
+    "PREPARATION_QA.json": "8aa0b8e51bb2ea73a23cc57dafea749775975145abb72e24c4eebeafe60d8298"
+  }
+}

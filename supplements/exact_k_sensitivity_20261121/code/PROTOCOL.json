@@ -1,0 +1,1004 @@
+{
+  "schema": "sapn-exact-k-only-sensitivity-v1",
+  "status": "FROZEN_BEFORE_NEW_COMPLETION_TEST_SCORES",
+  "frozen_utc": "2026-11-18T06:11:11.743711+00:00",
+  "timing_statement": "Frozen after model development and original benchmark scores were known, but before disclosure of this round's newly executed supplementary test scores. This is not original preregistration and does not claim ignorance of all test results.",
+  "freeze_metadata": {
+    "PIPELINE_COMPLETE_absent": true,
+    "supplementary_scores_directory_absent": true,
+    "new_test_scores_read": false
+  },
+  "question": "Sensitivity of fixed selected final outputs to relaxing only the declared native exact-k requirement, with every other worker and execution contract retained.",
+  "primary_and_CV_unchanged": true,
+  "original_two_group_PCBG_analysis_unchanged": true,
+  "old_two_groups_are_overlapping_subset_not_independent_evidence": true,
+  "planned_slots_per_method": 42,
+  "supported_runs_per_method": 24,
+  "supported_groups_per_method": 8,
+  "supported_corpora": [
+    "3Sources",
+    "BBC",
+    "Cora",
+    "CiteSeer"
+  ],
+  "budgets": [
+    160,
+    400
+  ],
+  "metrics": [
+    "ACC",
+    "NMI",
+    "ARI",
+    "training_BER",
+    "unqueried_BER"
+  ],
+  "paired_difference": "baseline minus original SAPN-MV",
+  "group_summary": "For each metric, report mean and sample SD only for all three planned, non-k-qualified pairs with that metric available on both sides; never available-case means. Pair qualification itself does not use metric values.",
+  "admission_categories": [
+    "strict_eligible",
+    "finite_wrong_k"
+  ],
+  "other_categories_retained_but_excluded": true,
+  "missing_or_unknown_metadata": "Exclude from this sensitivity with explicit reason; never infer success from category alone. Changed evidence hashes abort the analysis.",
+  "strict_bool": "Only JSON true/false are accepted as booleans; strings and 0/1 are not booleans.",
+  "numeric_metadata": "Required numeric contract fields must be finite JSON numbers, not bool/null/NaN/inf. Count fields must be integral.",
+  "SSA": {
+    "required_true": [
+      "execution_returned",
+      "finite_partition_retained",
+      "numeric_outputs_finite",
+      "output_shapes_valid",
+      "state_checks.all_finite",
+      "state_checks.all_shapes_valid",
+      "state_checks.nonnegative_where_required",
+      "state_checks.all_membership_rows_positive"
+    ],
+    "required_zero": [
+      "initial_CL_nonzeros: one finite zero per view",
+      "final_CL_max_abs"
+    ],
+    "removed_only": [
+      "strict_c: sample_partition_count==c",
+      "diagnostics.operational_contract: actual_clusters==NC"
+    ],
+    "operational_reconstruction": "numeric_outputs_finite includes finite objective; all_finite and nonnegative state checks cover finite_nonnegative_state; reconstruct exact initial/final CL zero-lock without requiring the k-contaminated operational_contract boolean.",
+    "diagnostics_not_added_as_gates": [
+      "row-sum residuals",
+      "W orthogonality",
+      "Theta normalization",
+      "stationarity",
+      "native finite iteration cap"
+    ]
+  },
+  "PCBG": {
+    "required_true": [
+      "execution_returned",
+      "finite_partition_retained",
+      "numeric_outputs_finite",
+      "output_shapes_valid",
+      "native_label_partition_matches_graph",
+      "initializer_repeated_B_exact"
+    ],
+    "bounds": {
+      "minimum_P_at_least": -1e-12,
+      "minimum_alpha_at_least": -1e-12,
+      "alpha_simplex_residual_at_most": 1e-08
+    },
+    "removed_only": [
+      "strict_c: graph_component_count==c and sample_partition_count==c"
+    ],
+    "diagnostics_not_added_as_gates": [
+      "row_simplex_residual",
+      "harmonic residual",
+      "native finite iteration cap",
+      "stationarity"
+    ]
+  },
+  "runtime_schemas": {
+    "legacy_launcher": "COMPLETE_ZERO_EXIT_VALID_MARKERS, exit_code=0, cleanup.complete=true; embedded worker from exact bound receipt",
+    "ssa_portable": "EXECUTED, matlab_exit_code=0, timed_out=false, failure=null, input_and_runtime_hashes_unchanged=true, class_labels_loaded=false",
+    "pcbg_extension": "PROCESS_EXITED, exit_code=0, both hash-bound phase markers; no runtime cap/exception"
+  },
+  "worker_statuses": [
+    "RETURNED_FINITE",
+    "RETURNED_FINITE_CONTRACT_FAILED"
+  ],
+  "count_consistency": "Store requested c, sample_partition_count, and PCBG graph_component_count; strict_c must agree with these original count predicates. Do not alter counts or predictions.",
+  "output_scope": "84 row CSV/JSON, qualification metadata projection with relative evidence keys and SHA256, 16 supported groups and a 16-row 9-column EN/ZH LaTeX table at 9pt with 3pt tabcolsep; no source edit, fit, selection, category/native-array read, p value or publication.",
+  "source_bindings": {
+    "SSA_worker": {
+      "root": "public",
+      "path": "baselines/ssa_historical/historical_tree/review_revision_v10/ssa_formal_v1/ssa_formal_worker.m",
+      "sha256": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a"
+    },
+    "SSA_profile_preparer": {
+      "root": "public",
+      "path": "baselines/ssa_historical/historical_tree/review_revision_v10/ssa_minimal_qualification/prepare_profile.py",
+      "sha256": "35a5511b6dda3d715a1356ea836241294423b0be47b4bfcd656c1a651e1c8789"
+    },
+    "SSA_formal_preparer": {
+      "root": "public",
+      "path": "baselines/ssa_historical/historical_tree/review_revision_v10/ssa_formal_v1/prepare_worker.py",
+      "sha256": "95ce71634b65265ff33ebc024d76c348fb6563a3d65a45c953066ddf4bffe07d"
+    },
+    "PCBG_worker": {
+      "root": "public",
+      "path": "baselines/portable/pcbg/pcbg_formal_worker.m",
+      "sha256": "46083587398223803bcfc9519eb27742907b52f4022c169509c5b067dcb55fd1"
+    },
+    "export_gate": {
+      "root": "revision",
+      "path": "public_baseline_resource_tools/export_gate.py",
+      "sha256": "bafd17c7230ee7f19f6417d66be9577390c03b47a1ce0721bc75b2615027cfa6"
+    },
+    "baseline_math": {
+      "root": "revision",
+      "path": "public_baseline_resource_tools/baseline_math.py",
+      "sha256": "e8e97cc332e9e6ca76a08de9125029ee62461b5b2d3d6f0482b53fdc081aa695"
+    },
+    "scorer": {
+      "root": "revision",
+      "path": "supplementary_postseal/score_supplement.py",
+      "sha256": "d01d6b00469f5f1784899da842ef97ffd82102d9c2b3cef69e0229bc51dee748"
+    },
+    "reporting_protocol": {
+      "root": "revision",
+      "path": "supplementary_postseal/REPORTING_PROTOCOL.json",
+      "sha256": "d0cced34bef565186623c06500d1f10933ded3356b2b72967588b588f7c1761a"
+    }
+  },
+  "methods": {
+    "PCBG": {
+      "export_root": "evidence/v10/native_pcbg/partition_export",
+      "old_protocol_sha256": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+      "conditions": [
+        {
+          "id": "3Sources_s23_Q160",
+          "dataset": "3Sources",
+          "seed": 23,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s23_Q400",
+          "dataset": "3Sources",
+          "seed": 23,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s24_Q160",
+          "dataset": "3Sources",
+          "seed": 24,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s24_Q400",
+          "dataset": "3Sources",
+          "seed": 24,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s25_Q160",
+          "dataset": "3Sources",
+          "seed": 25,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s25_Q400",
+          "dataset": "3Sources",
+          "seed": 25,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s23_Q160",
+          "dataset": "BBC",
+          "seed": 23,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s23_Q400",
+          "dataset": "BBC",
+          "seed": 23,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s24_Q160",
+          "dataset": "BBC",
+          "seed": 24,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s24_Q400",
+          "dataset": "BBC",
+          "seed": 24,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "BBC_s25_Q160",
+          "dataset": "BBC",
+          "seed": 25,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s25_Q400",
+          "dataset": "BBC",
+          "seed": 25,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Reuters_s23_Q160",
+          "dataset": "Reuters",
+          "seed": 23,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s23_Q400",
+          "dataset": "Reuters",
+          "seed": 23,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s24_Q160",
+          "dataset": "Reuters",
+          "seed": 24,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s24_Q400",
+          "dataset": "Reuters",
+          "seed": 24,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s25_Q160",
+          "dataset": "Reuters",
+          "seed": 25,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s25_Q400",
+          "dataset": "Reuters",
+          "seed": 25,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s23_Q160",
+          "dataset": "Cora",
+          "seed": 23,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s23_Q400",
+          "dataset": "Cora",
+          "seed": 23,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s24_Q160",
+          "dataset": "Cora",
+          "seed": 24,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s24_Q400",
+          "dataset": "Cora",
+          "seed": 24,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s25_Q160",
+          "dataset": "Cora",
+          "seed": 25,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "Cora_s25_Q400",
+          "dataset": "Cora",
+          "seed": 25,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "CiteSeer_s23_Q160",
+          "dataset": "CiteSeer",
+          "seed": 23,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "CiteSeer_s23_Q400",
+          "dataset": "CiteSeer",
+          "seed": 23,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s24_Q160",
+          "dataset": "CiteSeer",
+          "seed": 24,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "CiteSeer_s24_Q400",
+          "dataset": "CiteSeer",
+          "seed": 24,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "CiteSeer_s25_Q160",
+          "dataset": "CiteSeer",
+          "seed": 25,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "CiteSeer_s25_Q400",
+          "dataset": "CiteSeer",
+          "seed": 25,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "20NG_s41_Q160",
+          "dataset": "20NG",
+          "seed": 41,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s41_Q400",
+          "dataset": "20NG",
+          "seed": 41,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s42_Q160",
+          "dataset": "20NG",
+          "seed": 42,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s42_Q400",
+          "dataset": "20NG",
+          "seed": 42,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s43_Q160",
+          "dataset": "20NG",
+          "seed": 43,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s43_Q400",
+          "dataset": "20NG",
+          "seed": 43,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s101_Q160",
+          "dataset": "AGNews",
+          "seed": 101,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s101_Q400",
+          "dataset": "AGNews",
+          "seed": 101,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s102_Q160",
+          "dataset": "AGNews",
+          "seed": 102,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s102_Q400",
+          "dataset": "AGNews",
+          "seed": 102,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s103_Q160",
+          "dataset": "AGNews",
+          "seed": 103,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s103_Q400",
+          "dataset": "AGNews",
+          "seed": 103,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        }
+      ]
+    },
+    "SSA": {
+      "export_root": "reproduction_ssa",
+      "old_protocol_sha256": "ee3869de2b6bedd418e8fa02fd70c111f32b756d1fea4422c9da553fbbc9ffc9",
+      "conditions": [
+        {
+          "id": "3Sources_s23_Q400",
+          "dataset": "3Sources",
+          "seed": 23,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s24_Q400",
+          "dataset": "3Sources",
+          "seed": 24,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s25_Q400",
+          "dataset": "3Sources",
+          "seed": 25,
+          "Q": 400,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s23_Q160",
+          "dataset": "3Sources",
+          "seed": 23,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s24_Q160",
+          "dataset": "3Sources",
+          "seed": 24,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "3Sources_s25_Q160",
+          "dataset": "3Sources",
+          "seed": 25,
+          "Q": 160,
+          "n": 169,
+          "c": 6,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s23_Q400",
+          "dataset": "BBC",
+          "seed": 23,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s24_Q400",
+          "dataset": "BBC",
+          "seed": 24,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s25_Q400",
+          "dataset": "BBC",
+          "seed": 25,
+          "Q": 400,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": false
+        },
+        {
+          "id": "BBC_s23_Q160",
+          "dataset": "BBC",
+          "seed": 23,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "BBC_s24_Q160",
+          "dataset": "BBC",
+          "seed": 24,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "BBC_s25_Q160",
+          "dataset": "BBC",
+          "seed": 25,
+          "Q": 160,
+          "n": 2225,
+          "c": 5,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s23_Q400",
+          "dataset": "Cora",
+          "seed": 23,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s24_Q400",
+          "dataset": "Cora",
+          "seed": 24,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s25_Q400",
+          "dataset": "Cora",
+          "seed": 25,
+          "Q": 400,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s23_Q160",
+          "dataset": "Cora",
+          "seed": 23,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s24_Q160",
+          "dataset": "Cora",
+          "seed": 24,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Cora_s25_Q160",
+          "dataset": "Cora",
+          "seed": 25,
+          "Q": 160,
+          "n": 2708,
+          "c": 7,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s23_Q400",
+          "dataset": "CiteSeer",
+          "seed": 23,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s24_Q400",
+          "dataset": "CiteSeer",
+          "seed": 24,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s25_Q400",
+          "dataset": "CiteSeer",
+          "seed": 25,
+          "Q": 400,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s23_Q160",
+          "dataset": "CiteSeer",
+          "seed": 23,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s24_Q160",
+          "dataset": "CiteSeer",
+          "seed": 24,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "CiteSeer_s25_Q160",
+          "dataset": "CiteSeer",
+          "seed": 25,
+          "Q": 160,
+          "n": 3312,
+          "c": 6,
+          "supported": true,
+          "extension_condition": true
+        },
+        {
+          "id": "Reuters_s23_Q160",
+          "dataset": "Reuters",
+          "seed": 23,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s23_Q400",
+          "dataset": "Reuters",
+          "seed": 23,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s24_Q160",
+          "dataset": "Reuters",
+          "seed": 24,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s24_Q400",
+          "dataset": "Reuters",
+          "seed": 24,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s25_Q160",
+          "dataset": "Reuters",
+          "seed": 25,
+          "Q": 160,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "Reuters_s25_Q400",
+          "dataset": "Reuters",
+          "seed": 25,
+          "Q": 400,
+          "n": 1200,
+          "c": 6,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s41_Q160",
+          "dataset": "20NG",
+          "seed": 41,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s41_Q400",
+          "dataset": "20NG",
+          "seed": 41,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s42_Q160",
+          "dataset": "20NG",
+          "seed": 42,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s42_Q400",
+          "dataset": "20NG",
+          "seed": 42,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s43_Q160",
+          "dataset": "20NG",
+          "seed": 43,
+          "Q": 160,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "20NG_s43_Q400",
+          "dataset": "20NG",
+          "seed": 43,
+          "Q": 400,
+          "n": 2000,
+          "c": 20,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s101_Q160",
+          "dataset": "AGNews",
+          "seed": 101,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s101_Q400",
+          "dataset": "AGNews",
+          "seed": 101,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s102_Q160",
+          "dataset": "AGNews",
+          "seed": 102,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s102_Q400",
+          "dataset": "AGNews",
+          "seed": 102,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s103_Q160",
+          "dataset": "AGNews",
+          "seed": 103,
+          "Q": 160,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        },
+        {
+          "id": "AGNews_s103_Q400",
+          "dataset": "AGNews",
+          "seed": 103,
+          "Q": 400,
+          "n": 2000,
+          "c": 4,
+          "supported": false,
+          "extension_condition": false
+        }
+      ]
+    }
+  }
+}

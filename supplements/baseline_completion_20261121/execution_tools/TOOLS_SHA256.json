@@ -1,0 +1,20 @@
+{
+  "schema": "sapn-portable-execution-tool-whitelist-v1",
+  "files": {
+    "completion_common.py": "bc1ea731b11897ba17acff1a984e6f1120bc7148bd0e64a9d59784f04a37c67d",
+    "completion_portable.py": "0cbfc3a2b5a296dfcb975114c53006dc0c706d415018da256e6b513998cc7cda",
+    "native_backend.py": "3f8629e88ed1240a2fa747ee7fc7e60914443e5739b6c23cf5c2fa3f5d8a8b1f",
+    "PORTABLE_COMPLETION_SPEC.json": "2a26915bb4ceaa26526076cddc204d395c4e7e88f07ed56f78ea099197ecf8bd",
+    "PORTABLE_COMPLETION_SPEC.sha256": "5949bc206892b8ac833f75e9512007fc36b5c223af444e6f7b79f810b450e031",
+    "prepare_inputs.py": "b52106a05a297d057d0899cf6ff7e7088ad2bc648497ea8de55e4bd6654947a5",
+    "prepared_map.example.json": "f8c3cace57b569b428dbeb1ce364928cd7f7ee99d9f04bee47858e20076d95e2",
+    "QA_PREPARATION.json": "a21e1f18739a33dfd0d30f2b907165b2c51c682d1bb0c4503f9a179608dd2aef",
+    "README.md": "839ec5977543fe4d401916e7952730da9664f738a7c4013a8e79c803ea21aacc",
+    "requirements.txt": "39b80401b57bded30a28a9955d1bdbf8c20380aee46df644573331ece97e9f70",
+    "SSA_RUNTIME_IDENTITY.json": "ea86781d2d837abbd036260c5496990582f53a2469e9ac7fd59bb9b7f65aff20",
+    "test_execution_tools.py": "b48851a626d3e1f277e0e401ac43898632bb086c3f52552f67ff6f2bb31d96b0"
+  },
+  "contains_external_features": false,
+  "contains_third_party_source": false,
+  "actual_fits_executed": false
+}

@@ -1,0 +1,41 @@
+{
+  "status": "READY_FOR_FRESH_RUN_POSTSEAL_SCORING_NOT_EXECUTED_ON_REAL_RUNS",
+  "edition": "major_revision_20261118",
+  "synthetic_tests_passed": 16,
+  "synthetic_test_log_sha256": "240385622b1e91c03f5f8837c5eed9fafa8a3305e8d7bce462cca1ee432d31e9",
+  "sources": {
+    "score_fresh_run.py": "9fba47ac691bbddada4b6b528abf59e2d977a9f4f13e05c739ea760914dc35a6",
+    "baseline_math.py": "e8e97cc332e9e6ca76a08de9125029ee62461b5b2d3d6f0482b53fdc081aa695",
+    "CLASS_IDENTITIES.json": "6bc5d795dff6bec017aa269f7212ac181b2a960e29aec54239bd00520acc895b",
+    "test_fresh_scoring.py": "d80614343ddf538bc21ca52594b05f1b88081f3d2eab8349d5ec6b561887ba3a"
+  },
+  "reviewed_runner_manifest_sha256": "47989992a4f98fd581fa7e7342a5814eb83829aa325d6d74a8e0de22a809675d",
+  "runner_whitelist_reverified": true,
+  "public_class_metadata_rederived_without_opening_class_arrays": true,
+  "public_class_metadata_source_hashes": {
+    "evidence/v10/native_pcbg/partition_export/evidence/FROZEN_PROTOCOL.json": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+    "primary_predictions/MANIFEST.json": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd"
+  },
+  "checks": [
+    "full 15 SSA rows and full 4 PCBG rows retained",
+    "ineligible and missing final metrics None, including finite wrong-k",
+    "explicit seal hash and complete method verify before external category arrays",
+    "fixed reviewed verify command only, no run/fit command",
+    "RUN_BINDING to INPUT_MANIFEST to PLAN direct hashes",
+    "trusted ordered class partition, paid answers and test object complement",
+    "known independent ACC/NMI/ARI/training BER/unqueried BER example",
+    "query-pool-excluded evaluation pairs and cross-budget context",
+    "second verification or mid-score label change leaves no output"
+  ],
+  "boundaries": {
+    "actual_models_started": false,
+    "actual_new_native_outputs_read": false,
+    "actual_category_arrays_read": false,
+    "actual_test_scores_read": false,
+    "frozen_runner_modified": false,
+    "historical_84_scores_replaced": false,
+    "new_group_or_inferential_analysis": false,
+    "real_fresh_run_scoring_executed": false
+  },
+  "synthetic_fixture_note": "Temporary synthetic complete-flow tests substitute a test verifier; production invokes the exact independently reviewed runner verify CLI. These tests do not claim actual optimizer/scorer replay."
+}

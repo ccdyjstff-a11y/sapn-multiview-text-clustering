@@ -1,0 +1,42 @@
+{
+  "schema": "sapn-exact-k-public-tools-preparation-qa-v1",
+  "status": "CODE_PREPARED_SYNTHETICALLY_TESTED_REAL_REPLAY_PENDING",
+  "finished_utc": "2026-11-18T06:58:58.411396+00:00",
+  "test_count": 6,
+  "test_failures": 0,
+  "test_errors": 0,
+  "test_duration_seconds": 0.462,
+  "tests_are_temporary_synthetic_fixtures_only": true,
+  "default_preflight": {
+    "status": "FROZEN_PUBLIC_TOOL_PREFLIGHT_PASS",
+    "read_only_audit_guard_passed": true,
+    "tool_read_events": 17,
+    "non_tool_task_reads_forbidden": true,
+    "array_reads_subprocesses_and_writes_forbidden": true
+  },
+  "self_review": {
+    "scope_and_completeness": "Exact84 slots,16 supported groups; identity and duplicate checks; all derived flags/reasons/differences checked; independent fsum/variance calculation.",
+    "missing_values": "None and booleans are type-sensitive; integer/count fields exact; no zero replacement or available-case group mean.",
+    "paths_and_integrity": "Explicit trusted source-manifest SHA before payload parse; exact flat five-file whitelist; no symlink escape; input hashes rechecked before/after writing. Relative evidence keys are validated but never opened.",
+    "privacy": "Exact container/field whitelists; core projection equality rejects unknown dict fields and malformed nested scalar containers; no actual private workspace paths in code package. Test strings are artificial rejection cases.",
+    "claims": "Standalone projection/aggregate replay only. Original worker execution, raw metric rescoring and CV verification remain outside scope. Source manifest provenance does not by itself prove authentic execution.",
+    "publication_boundary": "Code and plan only; no input-data bundle, actual replay, manuscript changes, Resource4 changes or upload."
+  },
+  "copied_frozen_protocol_sha256": "d940ffa84917ca6cd7349dc300c17a793e3f187db6fec75a6c756a27c9e1fef9",
+  "copied_frozen_core_sha256": "f63fe05614e9e4b304223e26a3b01ea3a709f570bb1fa81fb3a0a50c1837a1db",
+  "source_analysis_tools_manifest_sha256": "539ff939c1bfcb30681111191ddaccfab5c21bd28c07f6aebc937ec4ac1fc7e7",
+  "actual_result_files_read": false,
+  "original_class_or_native_arrays_read": false,
+  "actual_public_replay_performed": false,
+  "existing_frozen_tools_changed": false,
+  "waiting_processes_changed": false,
+  "release_performed": false,
+  "remaining_acceptance_plan": "PUBLICATION_PLAN.json",
+  "authorization_wording_correction": {
+    "utc": "2026-11-18T07:03:55.542839+00:00",
+    "supersedes_public_tool_manifest_sha256": "85d7287a7b3e85495e6c87384d2abc51bd2a2125a8c4effef5d979b37d0e2c15",
+    "change": "Separate existing user authorization from publication execution. Publication is already authorized; none was performed during code-only preparation. No new user permission is required.",
+    "implementation_or_scientific_rule_changed": false
+  },
+  "publication_plan_sha256": "58457fa4553b1138420f38deaa513687f4b3ea85ed9ba1608da443cf018a2b1a"
+}

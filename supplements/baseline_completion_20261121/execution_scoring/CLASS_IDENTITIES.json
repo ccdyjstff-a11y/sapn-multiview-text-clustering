@@ -1,0 +1,27 @@
+{
+  "schema": "sapn-fresh-run-class-identities-v1",
+  "provenance": {
+    "evidence/v10/native_pcbg/partition_export/evidence/FROZEN_PROTOCOL.json": "4a334d1319a17b3d8a266962267c6e19cd2d7ecd9bfff2a78c0afea2b608b117",
+    "primary_predictions/MANIFEST.json": "81ee5eca0f4f5c67238d560bb2a8eddf43d6a36ed5d10d4d5ad4609b7448f9cd"
+  },
+  "corpora": {
+    "BBC": {
+      "n": 2225,
+      "k": 5,
+      "original_label_file_sha256": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11",
+      "ordered_partition_sha256": "72c1e49295d015b314b881119f22b823809f1e306dcb02cf22e36d7967901852"
+    },
+    "Cora": {
+      "n": 2708,
+      "k": 7,
+      "original_label_file_sha256": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf",
+      "ordered_partition_sha256": "a406c7cab3a97108da6967180ac12844966e619144b6f95665ff0497d3198b5a"
+    },
+    "CiteSeer": {
+      "n": 3312,
+      "k": 6,
+      "original_label_file_sha256": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6",
+      "ordered_partition_sha256": "cb085a63c2ee30c592e657cca45ddc1728a9ee3ba4e5c5d5d8d8ac00801b67c9"
+    }
+  }
+}

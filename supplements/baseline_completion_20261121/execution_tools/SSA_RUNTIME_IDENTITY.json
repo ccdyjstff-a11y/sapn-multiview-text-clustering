@@ -1,0 +1,35 @@
+{
+  "author_commit": "4d37f15621ee7bd9d412ad224408658ad243699c",
+  "author_sources": {
+    "Cost_function.m": "3998c860cf1a329cb06fb572df8d8af437f710361f8d11bc5b3c07e993197476",
+    "Create_KNNgraph.m": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+    "NormalizationK.m": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+    "SSA_SNMF.m": "fd0fa1e25ba7c4b1f5e6ccd08321e6ce2626205ed69b06408341220737b89883",
+    "Update_Teta.m": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+    "Update_V_v.m": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+    "Update_W_v.m": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34",
+    "normalization.m": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641"
+  },
+  "own_preparers": {
+    "review_revision_v10/ssa_minimal_qualification/prepare_profile.py": "35a5511b6dda3d715a1356ea836241294423b0be47b4bfcd656c1a651e1c8789",
+    "review_revision_v10/ssa_minimal_qualification/run_ssa_synthetic_qualification.m": "c56882104a93861efea7e3afb1c8ef3d335141f6ae94be5260417d7c6384ff3f",
+    "review_revision_v10/ssa_formal_v1/prepare_worker.py": "95ce71634b65265ff33ebc024d76c348fb6563a3d65a45c953066ddf4bffe07d",
+    "review_revision_v10/ssa_formal_v1/ssa_formal_worker.m": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+    "review_revision_v9/baseline_gap/native_formal_v1/pcbg_clock_bridge.m": "1a373677a9a3e03a016c99af3b62bc953b97b39c35d9bcd3d0ba2afeb1e817f8",
+    "review_revision_v6/literature_followup/SSA_download_manifest.json": "03c5ebb2484f7f346576e7b90eb089cb0c11816288390441c14df7e163cd7d92"
+  },
+  "worker": "private_tree/review_revision_v10/ssa_formal_v1/ssa_formal_worker.m",
+  "profile_root": "private_tree/review_revision_v10/ssa_formal_v1/private_generated",
+  "runtime_files": {
+    "private_tree/review_revision_v10/ssa_formal_v1/ssa_formal_worker.m": "ba04182cb254a3a12d5841fb7ad8518658e81d6835a91f06f98333dc61e1526a",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/Cost_function.m": "9f737332e11b820134c04cff84d41f44ff65c3159629436ab3a4fac0a6b31019",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/Create_KNNgraph.m": "d57992a1a614b4c8d26b87efbef671c7566eda27e722c616ebbb93a83096a2ec",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/normalization.m": "058c1902c2fe5416b04bbfebd378f8382552e4aac4a019cee6ed683b5cb64641",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/NormalizationK.m": "f6f32a46d5d5e320fe57c94c75eb84e04b49e8e6c44d4caccde44173785552c8",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/ssa_formal_profile.m": "61eb6b27666dbed835f5aa7efcbcb603d9bc571cc392ebfe01169299a319a908",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/Update_Teta.m": "20a428bf6d8da2f63d14b91068a88ae2c3d1e34951b68d5341e5185734a417a5",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/Update_V_v.m": "e515ee058f7b9757c4516d99f2b996d5ae05ee63f33982ee5460e22d534288e1",
+    "private_tree/review_revision_v10/ssa_formal_v1/private_generated/Update_W_v.m": "02da9f0212268fdde9f106cd37a66101b2f4a77d61eac2cc532f585ca8deeb34"
+  },
+  "scope": "Exact content identities; receipt release_root and JSON serialization may change. No source text is distributed here."
+}

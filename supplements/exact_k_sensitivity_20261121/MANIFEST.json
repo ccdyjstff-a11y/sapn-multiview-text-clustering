@@ -1,0 +1,56 @@
+{
+  "schema": "sapn-exact-k-public-release-v1",
+  "edition": "major_revision_20261118",
+  "resource": "SAPN Exact-k Sensitivity Supplement",
+  "assembled_utc": "2026-11-21T04:02:10.807082+00:00",
+  "assembly_status": "PREPARED_FOR_PUBLICATION",
+  "pipeline_complete_sha256": "39ddab840d110b1f97aa7e8d426dd9dcff1e7b2d18d04240142f7f7425a73dc2",
+  "source_evidence": {
+    "postchecks": {
+      "path": "major_revision_20261118/post_preparation_checks/COMPLETE.json",
+      "sha256": "8cefee9159918977a02c0958723ec3c7074d227a9719694be762a022f1e8a369",
+      "bytes": 2878
+    },
+    "companion_preparation": {
+      "path": "major_revision_20261118/exact_k_companion_preparation/COMPLETE.json",
+      "sha256": "b8bcb8f0fa3840413791afb9883fdd6d0538a0c4554ec26a18bd3022c2dc1c21",
+      "bytes": 3515
+    },
+    "analysis_output_manifest": {
+      "path": "major_revision_20261118/exact_k_sensitivity_results/OUTPUT_SHA256.json",
+      "sha256": "222df1115704543f5752dbd27072bbd9da9210a7b0855670f25e18f432bdb048",
+      "bytes": 779
+    },
+    "public_replay_output_manifest": {
+      "path": "major_revision_20261118/exact_k_companion_replay/OUTPUT_SHA256.json",
+      "sha256": "a14719cd5b2f101371c369108ed7a2b299673d87dfce7b7705b360692b1550e1",
+      "bytes": 480
+    },
+    "section_candidate": {
+      "path": "major_revision_20261118/exact_k_manuscript_candidate/SECTION_CANDIDATE.json",
+      "sha256": "0efb123b46fca6507ba5318c3de925d78084d1fe9ee9efe3fcd1902bdee533f3",
+      "bytes": 2591
+    }
+  },
+  "actual_public_replay_receipt_sha256": "3144c461a908d3aca4c1643278cea016d2ea39dd8aa9f7022770ef795a9b82c7",
+  "files": {
+    "README.md": "7af0dd95814ce7f135b69f6e0ca7f52f6f64dde3e09185ff8589a6468fb6105e",
+    "code/PREPARATION_QA.json": "8aa0b8e51bb2ea73a23cc57dafea749775975145abb72e24c4eebeafe60d8298",
+    "code/PROTOCOL.json": "d940ffa84917ca6cd7349dc300c17a793e3f187db6fec75a6c756a27c9e1fef9",
+    "code/PUBLICATION_PLAN.json": "58457fa4553b1138420f38deaa513687f4b3ea85ed9ba1608da443cf018a2b1a",
+    "code/README.md": "57b9bda3eadaef3f2c425e0a573854e90709825fa36df3e233cbb21d7d6877d6",
+    "code/TOOLS_SHA256.json": "47206a0681204824fb63d24e54d80794778bc0d0348040e8648bcfd973c49b10",
+    "code/TOOLS_SHA256.sha256": "e17f3eb45e09d3e2f307725914ee30d151331fbb460f35a469868c0518565b7f",
+    "code/non_k_core.py": "f63fe05614e9e4b304223e26a3b01ea3a709f570bb1fa81fb3a0a50c1837a1db",
+    "code/replay_exact_k.py": "db846da1676ba267818dd52571aa2ad407cd865ea3d5a6db6d0c7d362abad8ed",
+    "code/test_public_replay.py": "1ce2264cdc74f823fca32f6abf49ad16fae84cd31b102aa95eab0a796a738e7d",
+    "data/ANALYSIS_RECEIPT.json": "97bd55594f155753ba0f164fc297c6c6fd1a973c8421eaae3ce3b8ab821a4534",
+    "data/GROUP_SENSITIVITY.json": "7be904ba4e8baf7c93d005fbcf376b8cdf1514797a1f83300d12326e16f216d2",
+    "data/OUTPUT_SHA256.json": "222df1115704543f5752dbd27072bbd9da9210a7b0855670f25e18f432bdb048",
+    "data/QUALIFICATION_METADATA.json": "78cfed2d9199369fe5e2219c776fdeab3a21898644afc20b50df7e91f884aa14",
+    "data/SEED_SENSITIVITY.json": "0e82cfad117f879a9b0d4cf8d6089f9bf49525346985d3dc0dfa2e4a571aad8c"
+  },
+  "original_code_and_data_bytes_changed": false,
+  "publication_performed_by_assembler": false,
+  "raw_class_vectors_or_features_included": false
+}

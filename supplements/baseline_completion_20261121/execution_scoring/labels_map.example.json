@@ -1,0 +1,14 @@
+{
+  "BBC": {
+    "path": "C:/sapn-data/BBC/y.npy",
+    "sha256": "e5595c818f2ee72647998e0146508289658fc3f7e252ab5fa5f4de2328332d11"
+  },
+  "Cora": {
+    "path": "C:/sapn-data/Cora/y.npy",
+    "sha256": "2c42c5400653023de6aff672f2ef04ba17b7609715afe4b66c5be11a91d30acf"
+  },
+  "CiteSeer": {
+    "path": "C:/sapn-data/CiteSeer/y.npy",
+    "sha256": "458a203a598feecac724d74a3be8d5a1cbb3eebfa5de363f35ee9332df7a28e6"
+  }
+}

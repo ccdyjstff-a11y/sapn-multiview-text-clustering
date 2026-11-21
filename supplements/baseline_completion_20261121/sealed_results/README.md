@@ -1,0 +1,23 @@
+# Sealed baseline partition resource
+
+This resource replays the already sealed SSA and PCBG execution supplements. It retains all 42 planned conditions per method, including unsupported, missing, runtime-failure and finite wrong-cluster-count outcomes. SSA adds 15 conditions; PCBG has four extended final conditions and five prescribed fits. No raw feature matrix, complete class vector, request/native MAT container, MATLAB or private third-party algorithm code is included. No upload, DOI or new third-party licence is asserted by this README.
+
+`PROVENANCE.json` binds the real completed pipeline, native global seals, actual score receipts, output manifests and independent SAPN scalar audits. `reference/` contains byte-identical original five-metric score CSVs and state records. `protocol/REPORTING_PROTOCOL.json` is the frozen original; `EXECUTION_SCOPE.json` preserves the scientific/execution fields of the bound protocols while omitting private machine paths. `PCBG_FIVE_FIT_EXECUTION.json` keeps the five execution decisions, distinct from the four final conditions. Native generated labels were extracted using only the `pred`/`label` variables; private algorithm bodies and feature matrices were not imported or copied.
+
+Each of the 84 NPZ files contains only `SAPN_partition`, optional `baseline_partition`, `pool`, `test`, `paid_pairs` and `paid_answers`. The paid answers reveal only acquired pair relations, not full classes. A missing baseline partition remains missing. A finite ineligible partition is available for diagnostics but cannot enter a qualified paired group.
+
+Use the existing public v1.0.1 `DATA_INPUTS.md` and preparation scripts to obtain external inputs. Supported scored corpora are 3Sources, BBC, Cora and CiteSeer. Original routes include [UCD 3Sources](http://mlg.ucd.ie/datasets/3sources.html), [UCD BBC](http://mlg.ucd.ie/datasets/bbc.html) and the documented [Cora](https://lig-membres.imag.fr/grimal/data/Cora.tar.gz)/[CiteSeer](https://lig-membres.imag.fr/grimal/data/CiteSeer.tar.gz) archives with LINQS provenance. These are recorded access routes, not a fresh availability check. The original prepared object order and representation construction are required; equal dimensions are insufficient.
+
+Use `requirements.txt` for the versions used to validate the prepared replay tooling (Python 3.10.22), then provide an external JSON map as shown in `labels_map.example.json`. Each needed corpus maps to an external NPY path and explicit SHA256. Relative paths resolve against that JSON file. Only datasets with a finite baseline partition need labels. Keep external files outside this resource. The replay records the actual Python/library versions in its QA output.
+
+```text
+python -B rescore.py --expect-manifest-sha256 VERIFIED_MANIFEST_SHA256 --labels-map /external/labels_map.json --output /new/replay-directory
+```
+
+Verify the manifest identity from the delivery record. The replay validates every resource file and prediction/index packet before opening classes, then checks all external byte hashes, object counts, class counts and exact ordered class partitions. A newly serialized NPY may use a different byte hash or class codes only when the caller explicitly pins that file and its ordered partition remains identical. Paid-answer consistency and cross-budget test-index/evaluation-seed consistency are checked before metrics.
+
+The five metrics are Hungarian ACC, arithmetic-normalized NMI, ARI, paid BER (`training_BER`) and unqueried BER. Unqueried pairs use the original fixed RandomState sampling of at most 10,000 unique unordered pairs drawn wholly outside the full paid query pool. Reported deltas are baseline minus original SAPN; higher ACC/NMI/ARI and lower BER are better.
+
+All 84 rows are replayed. Finite but ineligible partitions retain diagnostic metrics with no eligible paired delta. When a baseline partition is absent, both baseline and SAPN score cells remain uncomputed, even though the SAPN partition is preserved. Every method has 14 corpus–budget groups; group means and sample standard deviations require all three planned seeds to be eligible for both methods. Missing/unsupported results are never filled, averaged over available cases or counted as wins. No significance tests, training, cross-validation or test-based selection occurs.
+
+The new row metrics, group statistics and coverage must match the sealed references within absolute tolerance 1e-12, including exact missingness. Outputs go to a new external directory and include `REPLAY_QA.json` and output hashes. Original scores are unchanged. Reproducing partition metrics does not independently certify the private algorithm implementation or reproduce model fitting.

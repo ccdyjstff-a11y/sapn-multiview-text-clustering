@@ -1,0 +1,66 @@
+{
+  "schema": "sapn-exact-k-publication-plan-v1",
+  "status": "CODE_AND_PLAN_ONLY_REAL_ANALYSIS_PENDING",
+  "scientific_definition_changed": false,
+  "protocol_sha256": "d940ffa84917ca6cd7349dc300c17a793e3f187db6fec75a6c756a27c9e1fef9",
+  "core_sha256": "f63fe05614e9e4b304223e26a3b01ea3a709f570bb1fa81fb3a0a50c1837a1db",
+  "source_analysis_tools_manifest_sha256": "539ff939c1bfcb30681111191ddaccfab5c21bd28c07f6aebc937ec4ac1fc7e7",
+  "future_data_file_whitelist": [
+    "QUALIFICATION_METADATA.json",
+    "SEED_SENSITIVITY.json",
+    "GROUP_SENSITIVITY.json",
+    "ANALYSIS_RECEIPT.json",
+    "OUTPUT_SHA256.json"
+  ],
+  "source_manifest_indexed_files_not_needed_for_replay": [
+    "seed_sensitivity.csv",
+    "group_sensitivity.csv",
+    "exact_k_sensitivity_en.tex",
+    "exact_k_sensitivity_zh.tex"
+  ],
+  "claims_supported": [
+    "Standalone qualification replay from the sealed minimal projection",
+    "84-slot completeness and exclusion/difference checks",
+    "Independent arithmetic replay of16 supported group means and sample SDs",
+    "Coverage from the complete planned inventory"
+  ],
+  "claims_not_supported": [
+    "Original algorithm rerun",
+    "Prediction-to-metric rescoring",
+    "CV selection revalidation",
+    "Independent original worker execution/metadata validation",
+    "New primary benchmark or independent evidence from the two overlapping historical groups"
+  ],
+  "acceptance_steps": [
+    {
+      "step": 1,
+      "action": "Wait for the genuine full local pipeline, postscore preparation and exact-k analysis; root reviews actual ANALYSIS_RECEIPT and OUTPUT_SHA256. No current result is read while preparing these tools."
+    },
+    {
+      "step": 2,
+      "action": "Create a fresh candidate data directory containing exactly the five whitelisted files copied byte-for-byte from that admitted analysis. Preserve the original eight-entry output manifest; do not rewrite missing CSV/TEX entries."
+    },
+    {
+      "step": 3,
+      "action": "Copy these code-only tools unchanged to a portable location; supply the root-approved original output-manifest SHA explicitly, and run --replay to a new external directory using only Python standard library."
+    },
+    {
+      "step": 4,
+      "action": "Require all84 rows and16 groups to match, inspect COVERAGE including each original category, wrong-k non-k qualification,3/3 metrics and any historical-overlap exclusion; no row/metric can be dropped or replaced by zero."
+    },
+    {
+      "step": 5,
+      "action": "Run the exact public whitelist/schema/path checks and inspect the candidate archive file list. Only own source, protocol, scalar tables, reduced metadata and hashes are permitted; no features,labels,native arrays,raw worker receipts,private paths or third-party algorithm code."
+    },
+    {
+      "step": 6,
+      "action": "Root reviews the actual replay receipt and any later presentation-only caption/header changes separately; freeze a publication manifest for code and data, then follow the publication workflow under the existing user authorization. Do not alter Resource4 or an existing release silently."
+    },
+    {
+      "step": 7,
+      "action": "After publication, anonymously download the exact candidate and verify the posted archive/input hashes; rerun from the download if requested. No upload or current real replay is part of preparation."
+    }
+  ],
+  "publication_performed": false,
+  "publication_authorization": "Existing user authorization applies; root publishes only after actual evidence acceptance"
+}
